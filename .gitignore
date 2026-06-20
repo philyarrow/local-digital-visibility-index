@@ -1,0 +1,7 @@
+# Pipeline working/intermediate output (raw per-business signals, _ranked.json).
+# Published snapshots live in /data/<index>/<quarter>.json|csv and are NOT ignored.
+pipeline/data/
+
+node_modules/
+.DS_Store
+*.log
