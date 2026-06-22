@@ -1,9 +1,15 @@
 # Bristol — estate agents
 
-Quarterly snapshots of the Bristol estate agent Digital Visibility Index will land here as `q<N>-<year>.json` / `.csv` once the first index is published.
+Quarterly snapshots of the Bristol estate agent Digital Visibility Index.
 
+- Canonical analysis: https://hub.pyc.agency/indices/bristol-estate-agents/
 - Seed list: [`../../pipeline/seeds/bristol-estate-agents.csv`](../../pipeline/seeds/bristol-estate-agents.csv)
-- Canonical analysis: https://hub.pyc.agency/indices/bristol-estate-agents/ (live once published)
 - License: CC BY 4.0 ([`../../LICENSE-DATA`](../../LICENSE-DATA))
 
-_No snapshots published yet._
+## Snapshots
+
+| Quarter | Files | Pillars measured | Notes |
+|---------|-------|------------------|-------|
+| Q2-2026 | [`q2-2026.json`](./q2-2026.json) · [`q2-2026.csv`](./q2-2026.csv) | 2 of 6 (Technical foundation, Content & trust) | **v0.** Speed & CWV, Local presence, Visibility and AI search presence not yet measured; excluded with weights renormalised. Scores will change when added. |
+
+Each snapshot's JSON includes `pillarCoverage` and `effectiveWeights` so the basis of every score is explicit.

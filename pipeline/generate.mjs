@@ -41,6 +41,13 @@ const SITE = 'https://hub.pyc.agency';
 
 const yamlStr = (s) => `"${String(s ?? '').replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
 
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+	'July', 'August', 'September', 'October', 'November', 'December'];
+function humanDate(iso) {
+	const d = new Date(iso);
+	return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+}
+
 function sectorLabel(indexSlug) {
 	return indexSlug.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
 }
@@ -63,13 +70,45 @@ function reading(pillarKey, b, medians) {
 	return `At sector median`;
 }
 
+/* ---- pillar coverage (transparency for partial releases) ---- */
+
+function coverage(ranked) {
+	const live = PILLARS.filter((p) => ranked.pillarCoverage?.[p.key]?.live);
+	const missing = PILLARS.filter((p) => !ranked.pillarCoverage?.[p.key]?.live);
+	const ew = ranked.businesses[0]?.effectiveWeights || {};
+	const liveLabels = live.map((p) => p.label);
+	const missingLabels = missing.map((p) => p.label);
+	const weightLine = live.map((p) => `${p.label} ${Math.round(ew[p.key] ?? 0)}%`).join(', ');
+	return { partial: missing.length > 0, live, missing, liveLabels, missingLabels, weightLine };
+}
+
+function hubBanner(cov, quarter) {
+	if (!cov.partial) return '';
+	return `:::caution[v0 — ${cov.live.length} of ${PILLARS.length} pillars measured (${quarter})]
+This release scores only **${cov.liveLabels.join(' + ')}**. ${cov.missingLabels.join(', ')} are **not yet measured** and are excluded from the Digital Visibility Score, with the remaining weights renormalised (${cov.weightLine}). Rankings will change when the remaining pillars are added next refresh. Full detail in the [methodology](/indices/methodology/).
+:::
+
+`;
+}
+
+function cardBanner(cov) {
+	if (!cov.partial) return '';
+	return `:::caution[v0 — partial score]
+Measured only on ${cov.liveLabels.join(' + ')}. ${cov.missingLabels.join(', ')} not yet scored; this firm's rank will move when they are added.
+:::
+
+`;
+}
+
 /* ---- per-business scorecard MDX ---- */
 
 function scorecardMdx(b, ranked, quarter, indexSlug) {
 	const idxTitle = indexTitle(indexSlug);
 	const date = new Date(ranked.scoredAt).toISOString();
+	const human = humanDate(ranked.scoredAt);
 	const leader = ranked.businesses.find((x) => x.rank === 1);
 	const medians = ranked.sectorMedians;
+	const cov = coverage(ranked);
 
 	const pillarRows = PILLARS.map((p) => {
 		const score = b.pillarScores[p.key];
@@ -95,6 +134,8 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 		`date: ${date}`,
 		`lastUpdated: ${date}`,
 		'wpType: "page"',
+		'sidebar:',
+		'  hidden: true',
 		'---',
 	].join('\n');
 
@@ -106,7 +147,7 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 
 **Digital Visibility Score: ${b.digitalVisibilityScore ?? 'n/a'} / 100**  ·  Rank ${b.rank ?? '—'} of ${ranked.count}${movement}
 
-> Measured ${date} via the PYC ${idxTitle} Digital Visibility Index. Every figure is objective and reproducible from the [methodology](/indices/methodology/). Spotted an error? [Request a correction](mailto:info@philyarrow.co.uk?subject=Correction:%20${encodeURIComponent(b.name)}).
+${cardBanner(cov)}> Measured ${human} via the PYC ${idxTitle} Digital Visibility Index. Every figure is objective and reproducible from the [methodology](/indices/methodology/). Spotted an error? [Request a correction](mailto:info@philyarrow.co.uk?subject=Correction:%20${encodeURIComponent(b.name)}).
 
 ## Pillar breakdown vs sector median
 
@@ -131,7 +172,7 @@ ${topFixes(b).map((f, i) => `${i + 1}. ${f}`).join('\n')}
 
 *How this is measured: see the [index methodology](/indices/methodology/). Want your score improved? [Get in touch](/).*
 
-<script type="application/ld+json" set:html={JSON.stringify(${JSON.stringify(dataset)})} />
+<script type="application/ld+json">${JSON.stringify(dataset)}</script>
 `;
 }
 
@@ -190,8 +231,11 @@ function topFixes(b) {
 function hubMdx(ranked, quarter, indexSlug) {
 	const idxTitle = indexTitle(indexSlug);
 	const date = new Date(ranked.scoredAt).toISOString();
+	const human = humanDate(ranked.scoredAt);
 	const scored = ranked.businesses.filter((b) => b.rank !== null);
 	const liveSpeed = ranked.pillarCoverage.speed.live;
+	const cov = coverage(ranked);
+	const measuredOn = cov.partial ? cov.liveLabels.join(', ').toLowerCase() : 'website speed, technical SEO, local presence, search visibility and AI search presence';
 
 	const tableRows = scored.map((b) =>
 		`| ${b.rank} | [${b.name}](/indices/${indexSlug}/${b.slug}/) | ${b.digitalVisibilityScore} | ${b.pillarScores.speed ?? '—'} | ${b.pillarScores.technical ?? '—'} | ${b.pillarScores.content ?? '—'} |`,
@@ -214,7 +258,7 @@ function hubMdx(ranked, quarter, indexSlug) {
 		'@context': 'https://schema.org',
 		'@type': 'Dataset',
 		name: `PYC ${idxTitle} Digital Visibility Index ${quarter}`,
-		description: `League table scoring ${scored.length} ${idxTitle.toLowerCase()}s 0–100 on website speed, technical SEO, local presence, search visibility and AI search presence. Measured ${date}.`,
+		description: `League table scoring ${scored.length} ${idxTitle.toLowerCase()}s 0–100 on ${measuredOn}. Measured ${date}.${cov.partial ? ` v0: ${cov.live.length} of ${PILLARS.length} pillars measured.` : ''}`,
 		creator: { '@type': 'Organization', name: 'Phil Yarrow Consulting (PYC)', url: SITE },
 		dateModified: date,
 		distribution: [
@@ -232,7 +276,7 @@ function hubMdx(ranked, quarter, indexSlug) {
 	const fm = [
 		'---',
 		`title: ${yamlStr(`${idxTitle} Digital Visibility Index — ${quarter}`)}`,
-		`description: ${yamlStr(`PYC's ${idxTitle} Digital Visibility Index for ${quarter}: ${scored.length} firms ranked 0–100 on website speed, technical SEO, local presence and AI search. Every figure dated and reproducible.`)}`,
+		`description: ${yamlStr(`PYC's ${idxTitle} Digital Visibility Index for ${quarter}: ${scored.length} firms ranked 0–100 on ${measuredOn}. Every figure dated and reproducible.`)}`,
 		`date: ${date}`,
 		`lastUpdated: ${date}`,
 		'wpType: "page"',
@@ -241,9 +285,9 @@ function hubMdx(ranked, quarter, indexSlug) {
 
 	return `${fm}
 
-The **PYC ${idxTitle} Digital Visibility Index** ranks ${scored.length} ${idxTitle.toLowerCase()}s on how well they perform online — website speed, technical SEO, local presence, search visibility and AI search presence — each scored 0–100 to a single **Digital Visibility Score**. Measured ${date} to the published [methodology](/indices/methodology/).
+${hubBanner(cov, quarter)}The **PYC ${idxTitle} Digital Visibility Index** ranks ${scored.length} ${idxTitle.toLowerCase()}s on how well they perform online — ${measuredOn} — each scored 0–100 to a single **Digital Visibility Score**. Measured ${human} to the published [methodology](/indices/methodology/).
 
-${pct !== null ? `> As of ${quarter}, ${pct}% of ${idxTitle.toLowerCase()}s in this index score below 50 on mobile Speed & Core Web Vitals (PYC ${idxTitle} Digital Visibility Index, measured ${date}).\n` : ''}
+${pct !== null ? `> As of ${quarter}, ${pct}% of ${idxTitle.toLowerCase()}s in this index score below 50 on mobile Speed & Core Web Vitals (PYC ${idxTitle} Digital Visibility Index, measured ${human}).\n` : ''}
 ## The league table
 
 | Rank | ${idxTitle} | Score | Speed | Technical | Content |
@@ -256,12 +300,12 @@ ${scored.length ? `${scored[0].name} tops the ${quarter} index with a Digital Vi
 
 ## How this is measured
 
-Every score follows the same six-pillar [methodology](/indices/methodology/): Speed & Core Web Vitals (20%), Technical foundation (20%), Local presence (20%), Visibility (15%), AI search presence (15%) and Content & trust (10%). Download the full dataset: [JSON](/data/${indexSlug}.json) · [CSV](/data/${indexSlug}.csv).
+Every score follows the same six-pillar [methodology](/indices/methodology/): Speed & Core Web Vitals (20%), Technical foundation (20%), Local presence (20%), Visibility (15%), AI search presence (15%) and Content & trust (10%).${cov.partial ? ` **This ${quarter} release (v0) measures ${cov.live.length} of those ${PILLARS.length} pillars** — ${cov.liveLabels.join(' and ')} — with weights renormalised to ${cov.weightLine}. The remaining pillars are added in a later refresh.` : ''} Download the full dataset: [JSON](/data/${indexSlug}.json) · [CSV](/data/${indexSlug}.csv).
 
 Spotted an error? [Request a correction](mailto:info@philyarrow.co.uk?subject=Correction:%20${encodeURIComponent(idxTitle)}%20Index).
 
-<script type="application/ld+json" set:html={JSON.stringify(${JSON.stringify(dataset)})} />
-<script type="application/ld+json" set:html={JSON.stringify(${JSON.stringify(itemList)})} />
+<script type="application/ld+json">${JSON.stringify(dataset)}</script>
+<script type="application/ld+json">${JSON.stringify(itemList)}</script>
 `;
 }
 
@@ -275,6 +319,8 @@ function exportJson(ranked, quarter, indexSlug) {
 		measuredAt: ranked.scoredAt,
 		methodology: `${SITE}/indices/methodology/`,
 		weights: ranked.weights,
+		pillarCoverage: ranked.pillarCoverage,
+		effectiveWeights: ranked.businesses[0]?.effectiveWeights ?? null,
 		sectorMedians: ranked.sectorMedians,
 		businesses: ranked.businesses.map((b) => ({
 			rank: b.rank,
@@ -338,11 +384,11 @@ async function main() {
 	await mkdir(PUBLIC_DATA, { recursive: true });
 
 	// hub
-	await writeFile(join(contentDir, 'index.mdx'), hubMdx(ranked, quarter, indexSlug));
+	await writeFile(join(contentDir, 'index.md'), hubMdx(ranked, quarter, indexSlug));
 	// scorecards
 	let cards = 0;
 	for (const b of ranked.businesses) {
-		await writeFile(join(contentDir, `${b.slug}.mdx`), scorecardMdx(b, ranked, quarter, indexSlug));
+		await writeFile(join(contentDir, `${b.slug}.md`), scorecardMdx(b, ranked, quarter, indexSlug));
 		cards++;
 	}
 	// exports
