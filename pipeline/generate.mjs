@@ -215,7 +215,7 @@ ${cardBanner(cov)}> Measured ${human} via the PYC ${idxTitle} Digital Visibility
 
 ## Pillar breakdown vs sector median
 
-${divergingPillars(b, ranked.sectorMedians, maxDelta(ranked))}
+${divergingPillars(b, ranked.sectorMedians, deltaScale(ranked))}
 
 | Pillar | Score | Sector median | Reading |
 |--------|------:|--------------:|---------|
@@ -335,11 +335,8 @@ const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').
 
 /* Pillar performance as bars diverging from the sector median. The delta IS
    the story; a table of two numbers per row buries it. */
-function divergingPillars(b, medians, maxDelta = 50) {
-	// Scale to the largest delta actually present in this index. A fixed 50-point
-	// cap drew +50 and +100 as identical full bars beside labels saying otherwise
-	// — in the one figure whose entire job is to show the size of the gap.
-	const scale = Math.max(10, maxDelta);
+function divergingPillars(b, medians, scaleTo = 25) {
+	const scale = Math.max(10, scaleTo);
 	const rows = PILLARS.map((p) => {
 		const v = b.pillarScores[p.key];
 		const med = medians[p.key];
@@ -347,9 +344,10 @@ function divergingPillars(b, medians, maxDelta = 50) {
 			return `<tr><th scope="row">${esc(p.label)}</th><td class="pyc-dv-track"><span class="pyc-dv-mid"></span></td><td class="pyc-dv-val pyc-dv-na">not measured</td></tr>`;
 		}
 		const delta = Math.round((v - med) * 10) / 10;
+		const over = Math.abs(delta) > scale;
 		const mag = (Math.min(Math.abs(delta), scale) / scale) * 50;
 		const side = delta >= 0 ? 'pos' : 'neg';
-		const bar = `<span class="pyc-dv-bar pyc-dv-${side}" style="width:${mag.toFixed(1)}%"></span>`;
+		const bar = `<span class="pyc-dv-bar pyc-dv-${side}${over ? ' pyc-dv-over' : ''}" style="width:${mag.toFixed(1)}%"></span>`;
 		// "+0" reads as a rounding artefact; a firm exactly on the median is "0".
 		const label = delta === 0 ? '0' : `${delta > 0 ? '+' : ''}${delta}`;
 		const valCls = delta === 0 ? 'pyc-dv-na' : `pyc-dv-${side}`;
@@ -643,8 +641,20 @@ function reputationScatter(ranked) {
 
 	const revs = pts.map((b) => b.evidence.local.reviewCount);
 	const lo = Math.max(1, Math.min(...revs)), hi = Math.max(...revs);
-	const rats = pts.map((b) => b.evidence.local.avgRating);
-	const rlo = Math.min(...rats) - 0.2, rhi = Math.max(...rats) + 0.2;
+	/* Ratings cluster hard at the top — 15 of 16 Bristol firms sit between 4.07
+	   and 4.9, with one at 1.8. Spanning the full range left a 2.3-star empty
+	   band and squashed everyone who matters into a sliver. The axis covers the
+	   dense band; anything below is pinned to the floor, drawn hollow and named,
+	   so it is visibly off-scale rather than silently rescaling the chart. */
+	const rats = pts.map((b) => b.evidence.local.avgRating).sort((a, b) => a - b);
+	const p10 = rats[Math.floor(rats.length * 0.1)];
+	const top = rats[rats.length - 1];
+	// Sit just under the cluster, but keep at least a 0.8-star span so a sector
+	// where everyone scores alike does not get an absurdly magnified axis.
+	let rlo = Math.max(0, p10 - 0.15);
+	const rhi = top + 0.15;
+	if (rhi - rlo < 0.8) rlo = Math.max(0, rhi - 0.8);
+	const below = pts.filter((b) => b.evidence.local.avgRating < rlo);
 
 	const W = 100, H = 62, PAD = 7;
 	const px = (v) => PAD + ((Math.log10(v) - Math.log10(lo)) / Math.max(0.01, Math.log10(hi) - Math.log10(lo))) * (W - PAD * 2);
@@ -653,7 +663,9 @@ function reputationScatter(ranked) {
 	const dots = pts.map((b) => {
 		const l = b.evidence.local;
 		const r = 1.2 + Math.sqrt(l.reviewCount) / 12;
-		return `<circle class="pyc-r-dot" cx="${px(l.reviewCount).toFixed(2)}" cy="${py(l.avgRating).toFixed(2)}" r="${Math.min(r, 4).toFixed(2)}"><title>${esc(b.name)} — ${l.reviewCount} reviews, ${l.avgRating}★${l.branchCount > 1 ? `, ${l.branchCount} locations` : ''}</title></circle>`;
+		const off = l.avgRating < rlo;
+		const cy = off ? (H - PAD) : py(l.avgRating);
+		return `<circle class="pyc-r-dot${off ? ' pyc-r-off' : ''}" cx="${px(l.reviewCount).toFixed(2)}" cy="${cy.toFixed(2)}" r="${Math.min(r, 4).toFixed(2)}"><title>${esc(b.name)} — ${l.reviewCount} reviews, ${l.avgRating}★${off ? ' (below the plotted range)' : ''}${l.branchCount > 1 ? `, ${l.branchCount} locations` : ''}</title></circle>`;
 	}).join('');
 
 	const maxRev = Math.max(...pts.map((b) => b.evidence.local.reviewCount));
@@ -685,13 +697,11 @@ function reputationScatter(ranked) {
 	const revTicks = [lo, Math.round(Math.sqrt(lo * hi)), hi];
 	const xGrid = revTicks.map((v) => `<text class="pyc-q-tick" x="${px(v).toFixed(2)}" y="${(H - PAD + 3.5).toFixed(2)}" text-anchor="middle">${v}</text>`).join('');
 
-	const worst = pts.reduce((a, b) => b.evidence.local.avgRating < a.evidence.local.avgRating ? b : a);
-	const outlier = worst.evidence.local.avgRating < rlo + (rhi - rlo) * 0.25
-		? `<text class="pyc-q-lab" x="${(px(worst.evidence.local.reviewCount) + 3).toFixed(2)}" y="${(py(worst.evidence.local.avgRating) + 1).toFixed(2)}">${esc(worst.name)}</text>`
-		: '';
+	const outlier = below.map((b) =>
+		`<text class="pyc-q-lab" x="${(px(b.evidence.local.reviewCount) + 3.5).toFixed(2)}" y="${(H - PAD + 1).toFixed(2)}">${esc(b.name)} ${b.evidence.local.avgRating}&#9733;</text>`).join('');
 
 	return `<figure class="pyc-fig">
-<figcaption>Google review volume (log scale) against average rating. Bubble size is review count.</figcaption>
+<figcaption>Google review volume (log scale) against average rating. Bubble size is review count.${below.length ? ` The rating axis starts at ${rlo.toFixed(1)} so the cluster is readable; ${below.length === 1 ? 'one firm rated' : `${below.length} firms rated`} below that ${below.length === 1 ? 'sits' : 'sit'} on the floor, drawn hollow and named.` : ''}</figcaption>
 <svg class="pyc-repscatter" viewBox="0 0 ${W} ${H + 5}" role="img" aria-label="Review volume against average rating for ${pts.length} firms">
 ${yGrid}${xGrid}
 <line class="pyc-q-axis" x1="${PAD}" y1="${H - PAD}" x2="${W - PAD}" y2="${H - PAD}"/>
@@ -893,16 +903,30 @@ function geoGrid(ranked) {
 /* A heading with nothing under it still lands in Starlight's page ToC, so a
    figure that renders nothing must take its heading with it — see section(). */
 
-function maxDelta(ranked) {
-	let m = 0;
+/* Scale the diverging bars to the 90th percentile of deltas, not the maximum.
+
+   Scaling to the max let a single outlier set the scale for the whole index:
+   with a max of 70, a median delta of 10 drew a 1.8% sliver and the typical
+   firm's chart read as six empty rows. The few bars beyond the scale are
+   clipped and flagged rather than allowed to define it. */
+function deltaScale(ranked) {
+	const deltas = [];
 	for (const b of ranked.businesses) {
 		for (const p of PILLARS) {
 			const v = b.pillarScores?.[p.key];
 			const med = ranked.sectorMedians?.[p.key];
-			if (typeof v === 'number' && typeof med === 'number') m = Math.max(m, Math.abs(v - med));
+			if (typeof v === 'number' && typeof med === 'number') deltas.push(Math.abs(v - med));
 		}
 	}
-	return Math.ceil(m);
+	if (!deltas.length) return 25;
+	deltas.sort((a, b) => a - b);
+	// p75, not p90: at p90 the outliers still set the scale and a typical delta
+	// of 10 drew at 15% of half-width. The quarter of bars beyond it are clipped
+	// and notched, and their exact value is printed alongside regardless.
+	const p75 = deltas[Math.floor(deltas.length * 0.75)];
+	// Never smaller than 15: a sector where everyone sits on the median should
+	// not magnify noise into apparently dramatic bars.
+	return Math.max(15, Math.ceil(p75));
 }
 
 function section(heading, body) {
