@@ -87,6 +87,65 @@ const attributionRequired = () => `${LICENCE.holder} — ${WORK}. ${SITE}/indice
 const citationFor = (indexSlug, quarter) =>
 	`${LICENCE.holder} — ${WORK}: ${indexTitle(indexSlug)}, ${quarter}. ${SITE}/indices/${indexSlug}/`;
 
+/* ---- contextual bridges ----
+
+   The index used to be an island: 89 pages linking only to the methodology and
+   the site root, and nothing anywhere on the hub linking out to pyc.agency. So
+   authority flowed into the index and stopped there.
+
+   A pillar is the hinge. Each one is a thing measured here, explained in the
+   knowledge base, computed with a method in the glossary, and fixed by a
+   service on the agency site. Encoding that once means every generated page
+   carries the bridges without anyone hand-editing 89 files.
+
+   This MIRRORS new/src/lib/bridge.ts in the site repo (PILLAR_KB and
+   PILLAR_AGENCY). The site is authoritative — same rule as methodology.md. If
+   you change a mapping, change it there first, then copy it here. A broken KB
+   slug produces a 404 on every scorecard at once, so both halves are checked
+   against the site's content tree by --check-bridges before writing. */
+
+const PILLAR_KB = {
+	speed: 'solving-mobile-seo-problems-a-checklist-for-troubleshooting',
+	technical: 'advanced-technical-seo-best-practices-and-strategies-for-improved-performance',
+	local: 'advanced-local-seo-strategies-for-dominating-local-search-results',
+	visibility: 'advanced-keyword-research-techniques-for-finding-untapped-opportunities',
+	ai: 'the-power-of-big-data-in-seo-leveraging-data-analytics-for-better-insights',
+	content: 'the-role-of-content-in-seo-best-practices-for-creating-seo-friendly-content',
+};
+
+/* Analytical companions, not the scorer. score.mjs computes every pillar with
+   plain arithmetic on purpose; these are the methods for reading the result. */
+const PILLAR_METHOD = {
+	speed: 'time-series-analysis-in-seo-unravelling-patterns-and-trends-over-time',
+	technical: 'coordinate-descent-in-seo-a-mathematical-formula-for-optimisation',
+	local: 'how-is-k-nearest-neighbors-used-in-seo',
+	visibility: 'how-is-regression-analysis-used-in-seo',
+	ai: 'how-is-dempster-shafer-theory-used-in-seo',
+	content: 'breaking-down-kolmogorov-complexity-in-seo',
+};
+
+const AGENCY = 'https://pyc.agency';
+
+/* `speed` is null on purpose: pyc.agency has no performance page, and pointing
+   at an unrelated one to fill the slot is the dilution this map exists to
+   prevent. Add the target when the page exists. */
+const PILLAR_AGENCY = {
+	speed: null,
+	technical: { href: `${AGENCY}/guides/seo-automation/`, label: 'SEO automation',
+		context: 'running these technical checks continuously rather than once a quarter' },
+	local: { href: `${AGENCY}/proof/`, label: 'local case studies',
+		context: 'what moving these signals did for comparable service businesses' },
+	visibility: { href: `${AGENCY}/guides/topical-authority/`, label: 'topical authority',
+		context: 'why ranking breadth across a sector beats chasing single terms' },
+	ai: { href: `${AGENCY}/guides/generative-engine-optimization/`, label: 'generative engine optimisation',
+		context: 'getting named by the answer engines this pillar measures' },
+	content: { href: `${AGENCY}/guides/topical-authority/`, label: 'topical authority',
+		context: 'how depth and coverage compound into citation-worthiness' },
+};
+
+const kbHref = (key) => `/kb/${PILLAR_KB[key]}/`;
+const methodHref = (key) => `/glossary/${PILLAR_METHOD[key]}/`;
+
 /* ---- frontmatter / formatting helpers ---- */
 
 const yamlStr = (s) => `"${String(s ?? '').replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
@@ -195,16 +254,19 @@ Measured only on ${cov.liveLabels.join(' + ')}. ${cov.missingLabels.join(', ')} 
 
 function scorecardMdx(b, ranked, quarter, indexSlug) {
 	const idxTitle = indexTitle(indexSlug);
-	const date = new Date(ranked.scoredAt).toISOString();
-	const human = humanDate(ranked.scoredAt);
+	const date = new Date(ranked.measuredAt ?? ranked.scoredAt).toISOString();
+	const human = humanDate(ranked.measuredAt ?? ranked.scoredAt);
 	const leader = ranked.businesses.find((x) => x.rank === 1);
 	const medians = ranked.sectorMedians;
 	const cov = coverage(ranked);
 
+	/* The pillar name is the anchor text for the KB explainer. Linking the label
+	   rather than appending a bare "read more" keeps the anchor descriptive,
+	   which is the half of an internal link that actually carries meaning. */
 	const pillarRows = PILLARS.map((p) => {
 		const score = b.pillarScores[p.key];
 		const med = medians[p.key];
-		return `| ${p.label} | ${score ?? '—'} | ${med ?? '—'} | ${reading(p.key, b, medians)} |`;
+		return `| [${p.label}](${kbHref(p.key)}) | ${score ?? '—'} | ${med ?? '—'} | ${reading(p.key, b, medians)} |`;
 	}).join('\n');
 
 	const dataset = {
@@ -212,12 +274,18 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 		'@type': 'Dataset',
 		name: `${b.name} — ${idTitleQuarter(idxTitle, quarter)}`,
 		description: `Digital Visibility Score and six-pillar breakdown for ${b.name}, measured ${date} via the PYC ${idxTitle} Digital Visibility Index.`,
-		creator: { '@type': 'Organization', name: 'Phil Yarrow Consulting (PYC)', url: SITE },
+		/* Reference the site-wide Organization node by @id rather than declaring a
+		   second one. The generated pages previously minted an Organization named
+		   "Phil Yarrow Consulting (PYC)" while astro.config.mjs declared one named
+		   "PYC Hub" — two unlinked entities, so the index's authority accrued to
+		   neither. sameAs points at the domain the work is meant to credit. */
+		creator: { '@id': `${SITE}/#org` },
+		publisher: { '@id': `${SITE}/#org` },
 		license: LICENCE.url,
 		usageInfo: LICENCE.terms,
 		isAccessibleForFree: true,
-		copyrightHolder: { '@type': 'Person', name: LICENCE.holder },
-		copyrightYear: new Date(ranked.scoredAt).getUTCFullYear(),
+		copyrightHolder: { '@id': `${SITE}/#phil` },
+		copyrightYear: new Date(ranked.measuredAt ?? ranked.scoredAt).getUTCFullYear(),
 		dateModified: date,
 		isPartOf: { '@type': 'Dataset', name: `PYC ${idxTitle} Digital Visibility Index`, url: `${SITE}/indices/${indexSlug}/` },
 		about: { '@type': 'LocalBusiness', name: b.name, url: b.url },
@@ -271,11 +339,56 @@ ${leader.name} leads the index with ${leader.digitalVisibilityScore}/100. ${gapT
 
 ${topFixes(b, sectorCopy(indexSlug)).map((f, i) => `${i + 1}. ${f}`).join('\n')}
 
+${whereToFix(b)}
 ---
 
-*How this is measured: see the [index methodology](/indices/methodology/). Want your score improved? [Get in touch](/).*
+*How this is measured: see the [index methodology](/indices/methodology/), and the [statistical methods](/glossary/) behind each pillar. This index is published by [PYC](https://pyc.agency/about/); if you want this score moved, [start here](https://pyc.agency/).*
 
 <script type="application/ld+json">${JSON.stringify(dataset)}</script>
+`;
+}
+
+/* The outbound half of the bridge, and the only place the hub leaves itself.
+
+   Driven by the firm's two weakest measured pillars rather than a fixed list,
+   so the link is relevant to the page it sits on: a firm failing on AI
+   presence gets the GEO guide, one failing on local gets the case studies.
+   An irrelevant outbound link would dilute exactly what this is meant to
+   build, so a pillar with no honest target is skipped rather than filled. */
+function whereToFix(b) {
+	const ranked = PILLARS
+		.filter((p) => typeof b.pillarScores[p.key] === 'number')
+		.sort((x, y) => b.pillarScores[x.key] - b.pillarScores[y.key]);
+
+	/* Two pillars can share a target (Visibility and Content both point at
+	   topical authority). Emitting the same URL twice in one block is padding,
+	   so keep the weakest pillar per distinct target. */
+	const seen = new Set();
+	const picks = ranked
+		.map((p) => ({ p, target: PILLAR_AGENCY[p.key] }))
+		.filter((x) => {
+			if (!x.target || seen.has(x.target.href)) return false;
+			seen.add(x.target.href);
+			return true;
+		})
+		.slice(0, 2);
+
+	if (!picks.length) return '';
+
+	const intro = picks.length > 1
+		? `The two weakest measured pillars for ${b.name}, and the work that addresses them:`
+		: `The weakest measured pillar for ${b.name}, and the work that addresses it:`;
+
+	const lines = picks.map(({ p, target }) =>
+		`- **${p.label}** (${b.pillarScores[p.key]}/100) — read [${target.label}](${target.href}) on ${target.context}. ` +
+		`Background on analysing this pillar: [the method notes](${methodHref(p.key)}).`,
+	);
+
+	return `## Where to get this fixed
+
+${intro}
+
+${lines.join('\n')}
 `;
 }
 
@@ -1251,8 +1364,8 @@ function section(heading, body) {
 
 function hubMdx(ranked, quarter, indexSlug, prior = null) {
 	const idxTitle = indexTitle(indexSlug);
-	const date = new Date(ranked.scoredAt).toISOString();
-	const human = humanDate(ranked.scoredAt);
+	const date = new Date(ranked.measuredAt ?? ranked.scoredAt).toISOString();
+	const human = humanDate(ranked.measuredAt ?? ranked.scoredAt);
 	const scored = ranked.businesses.filter((b) => b.rank !== null);
 	const liveSpeed = ranked.pillarCoverage.speed.live;
 	const cov = coverage(ranked);
@@ -1311,12 +1424,18 @@ function hubMdx(ranked, quarter, indexSlug, prior = null) {
 		'@type': 'Dataset',
 		name: `PYC ${idxTitle} Digital Visibility Index ${quarter}`,
 		description: `League table scoring ${scored.length} ${idxTitle.toLowerCase()}s 0–100 on ${measuredOn}. Measured ${date}.${cov.partial ? ` v0: ${cov.live.length} of ${PILLARS.length} pillars measured.` : ''}`,
-		creator: { '@type': 'Organization', name: 'Phil Yarrow Consulting (PYC)', url: SITE },
+		/* Reference the site-wide Organization node by @id rather than declaring a
+		   second one. The generated pages previously minted an Organization named
+		   "Phil Yarrow Consulting (PYC)" while astro.config.mjs declared one named
+		   "PYC Hub" — two unlinked entities, so the index's authority accrued to
+		   neither. sameAs points at the domain the work is meant to credit. */
+		creator: { '@id': `${SITE}/#org` },
+		publisher: { '@id': `${SITE}/#org` },
 		license: LICENCE.url,
 		usageInfo: LICENCE.terms,
 		isAccessibleForFree: true,
-		copyrightHolder: { '@type': 'Person', name: LICENCE.holder },
-		copyrightYear: new Date(ranked.scoredAt).getUTCFullYear(),
+		copyrightHolder: { '@id': `${SITE}/#phil` },
+		copyrightYear: new Date(ranked.measuredAt ?? ranked.scoredAt).getUTCFullYear(),
 		dateModified: date,
 		distribution: [
 			{ '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: `${SITE}/data/${indexSlug}.json` },
@@ -1367,7 +1486,13 @@ ${scored.length ? `${scored[0].name} tops the ${quarter} index with a Digital Vi
 
 ## How this is measured
 
-Every score follows the same six-pillar [methodology](/indices/methodology/): Speed & Core Web Vitals (20%), Technical foundation (20%), Local presence (20%), Visibility (15%), AI search presence (15%) and Content & trust (10%).${cov.partial ? ` **This ${quarter} release (v0) measures ${cov.live.length} of those ${PILLARS.length} pillars** — ${cov.liveLabels.join(' and ')} — with weights renormalised to ${cov.weightLine}. The remaining pillars are added in a later refresh.` : ''} Download the full dataset: [JSON](/data/${indexSlug}.json) · [CSV](/data/${indexSlug}.csv).
+Every score follows the same six-pillar [methodology](/indices/methodology/): [Speed & Core Web Vitals](${kbHref('speed')}) (20%), [Technical foundation](${kbHref('technical')}) (20%), [Local presence](${kbHref('local')}) (20%), [Visibility](${kbHref('visibility')}) (15%), [AI search presence](${kbHref('ai')}) (15%) and [Content & trust](${kbHref('content')}) (10%). Each pillar links to the knowledge-base article that explains what it measures; the [statistical methods](/glossary/) behind the scoring are written up separately.${cov.partial ? ` **This ${quarter} release (v0) measures ${cov.live.length} of those ${PILLARS.length} pillars** — ${cov.liveLabels.join(' and ')} — with weights renormalised to ${cov.weightLine}. The remaining pillars are added in a later refresh.` : ''} Download the full dataset: [JSON](/data/${indexSlug}.json) · [CSV](/data/${indexSlug}.csv).
+
+## Who publishes this
+
+The index is compiled and published by [PYC](https://pyc.agency/), a search consultancy run by [Phil Yarrow](https://pyc.agency/about/). It exists because the questions it answers — who is actually visible in a local market, and by how much — were being answered with opinion. The collection and scoring code is [open source](https://github.com/philyarrow/local-digital-visibility-index), so any figure here can be recomputed rather than taken on trust.
+
+Related reading on the practice behind the measurements: [topical authority](https://pyc.agency/guides/topical-authority/), [generative engine optimisation](https://pyc.agency/guides/generative-engine-optimization/), and [case studies](https://pyc.agency/proof/) from comparable service businesses.
 
 ## Using this data
 
@@ -1396,7 +1521,11 @@ function exportJson(ranked, quarter, indexSlug) {
 		index: indexSlug,
 		title: `PYC ${indexTitle(indexSlug)} Digital Visibility Index`,
 		quarter,
-		measuredAt: ranked.scoredAt,
+		/* measuredAt only. scoredAt is wall-clock at the scoring run, so
+		   publishing it would churn the dated snapshot on every no-op
+		   regeneration — the same defect in miniature. It stays in the
+		   internal _ranked.json for provenance. */
+		measuredAt: ranked.measuredAt ?? ranked.scoredAt,
 		methodology: `${SITE}/indices/methodology/`,
 		license: { name: LICENCE.name, url: LICENCE.url, terms: LICENCE.terms },
 		attribution: attributionRequired(),

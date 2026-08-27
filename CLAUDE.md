@@ -157,3 +157,27 @@ the code that produced it.
 
 Tabs. Node ESM. Block comments explaining *why*, not what. Every network call
 gets a timeout; one bad site never aborts a run.
+
+## Contextual bridges — mirrored, not owned
+
+`generate.mjs` holds `PILLAR_KB`, `PILLAR_METHOD` and `PILLAR_AGENCY`. These are
+**mirrors** of `new/src/lib/bridge.ts` in the site repo, which is authoritative
+— the same rule as `methodology.md`. Change the mapping there first, then copy
+it here.
+
+Why it matters: those maps become links on every generated page. A stale KB slug
+404s on all 79 scorecards simultaneously, and the site build will not catch it
+because the link is syntactically fine.
+
+`PILLAR_AGENCY.speed` is deliberately `null` — pyc.agency has no performance
+page, and a filler link to an unrelated one dilutes the outbound signal the map
+exists to build. `whereToFix()` skips nulls and de-duplicates targets, so two
+pillars sharing a guide produce one link, not two.
+
+## Do not claim the glossary computes the score
+
+The scorers in `score.mjs` are plain arithmetic on purpose: ratios, weighted
+sums, a clamp. That is what makes a published figure recomputable from the open
+dataset. Generated copy must never describe the statistical glossary as the
+scoring method — it is the toolkit for analysing results, and the distinction is
+the difference between an auditable index and a black box.

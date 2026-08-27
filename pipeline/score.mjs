@@ -284,10 +284,29 @@ async function main() {
 		if (e.code !== 'ENOENT') throw e;
 	}
 
+	/* When the data was actually MEASURED, as distinct from when it was scored.
+	   These were conflated: scoredAt was wall-clock at scoring time and every
+	   published "Measured <date>" line, every frontmatter date and the
+	   measuredAt field in the open dataset were derived from it. Re-running the
+	   scorer over unchanged collected data therefore rewrote the measurement
+	   date on 79 scorecards and mutated an already-tagged dated snapshot — so
+	   the snapshot stopped being a receipt, and the site claimed a measurement
+	   that never happened.
+
+	   Scoring is a pure function of collected data, so the honest timestamp is
+	   the latest collection in the cohort. Falls back to scoring time only if
+	   no record carries one. */
+	const collectionTimes = businesses
+		.map((b) => b.collectedAt)
+		.filter((t) => typeof t === 'string' && !Number.isNaN(Date.parse(t)))
+		.sort();
+	const scoredAt = new Date().toISOString();
+
 	const out = {
 		schemaVersion: 2,
 		index: indexSlug,
-		scoredAt: new Date().toISOString(),
+		measuredAt: collectionTimes.length ? collectionTimes[collectionTimes.length - 1] : scoredAt,
+		scoredAt,
 		weights: Object.fromEntries(PILLARS.map((p) => [p.key, p.weight])),
 		pillarLabels: Object.fromEntries(PILLARS.map((p) => [p.key, p.label])),
 		stubNote:
