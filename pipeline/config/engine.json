@@ -17,10 +17,12 @@
 	},
 
 	"local": {
+		"listingsLimit": 100,
+		"profileFallback": true,
 		"reviewVelocity": true,
 		"reviewDepth": 20,
 		"velocityWindowDays": 90,
-		"_note": "my_business_info gives the headline rating and count; reviews (newest-first) is the only source for the 90-day velocity the methodology asks for. $0.0015 each, per business."
+		"_note": "Two sources, because neither alone is adequate. business_listings/search is ONE call per index, aggregates a firm's branches, and is priced per result returned (~$0.00048/result, so ~$0.048 at limit 100). my_business_info is per business ($0.0015) and unreliable for multi-branch chains - it resolved 7 of 18 Bristol firms where the listings sweep resolved 10, and they fail on DIFFERENT firms. The sweep runs first; profileFallback then fills the gaps. reviews (newest-first) is the only source for the 90-day velocity, and is keyed by place_id from whichever source matched."
 	},
 
 	"keywordsPerIndex": 12,

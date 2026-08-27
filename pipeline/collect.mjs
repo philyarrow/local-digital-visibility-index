@@ -12,7 +12,8 @@
      - Speed & Core Web Vitals  -> Google PageSpeed Insights API (free)
      - Technical foundation     -> live HTTP fetch + parse (free)
      - Content & trust          -> live homepage parse (free)
-     - Local presence           -> DataForSEO my_business_info + reviews
+     - Local presence           -> DataForSEO business_listings sweep (per index)
+                                   + my_business_info fallback + reviews
      - Visibility               -> DataForSEO SERP, standard queue
      - AI search presence       -> DataForSEO llm_responses (Perplexity sonar)
 
@@ -20,9 +21,11 @@
    Visibility and AI presence are bought ONCE PER INDEX and read for every
    business in it: one geo-located SERP response holds every firm's position,
    and one AI answer names whichever firms it names. Those costs divide across
-   the seed. Local presence is bought PER BUSINESS and multiplies. Collecting
-   the shared signals per-business instead would multiply the index's cost by
-   the number of businesses in it for identical data.
+   the seed. Local presence is mostly shared too: one business_listings sweep
+   covers the whole index and aggregates each firm's branches, with a
+   per-business profile lookup only for what the sweep misses. Collecting the
+   shared signals per-business instead would multiply the index's cost by the
+   number of businesses in it for identical data.
 
    Settings live in config/engine.json; keyword and prompt baskets are derived
    from config/sectors.json + config/indices.json.
@@ -52,6 +55,8 @@ import {
 	llmText,
 	myBusinessInfoBatch,
 	reviewsBatch,
+	businessListings,
+	spendSince,
 } from './lib/dataforseo.mjs';
 import { loadConfig, resolveIndex, buildKeywords, buildPrompts } from './lib/basket.mjs';
 import { findOrganicPosition, inLocalPack, matchReason, domainsMatch } from './lib/match.mjs';
@@ -308,31 +313,81 @@ function napConsistency(item, business) {
 	return domainsMatch(item.url, business.url);
 }
 
-function buildLocal(business, gbpItem, reviewsResult, cfg) {
+/* Find every listing belonging to one seed business. Domain is authoritative;
+   name matching is the fallback for firms whose listing carries no website.
+   Returns ALL matches, because a chain's branches are separate listings. */
+export function matchListings(listings, business) {
+	const byDomain = listings.filter((i) => i.domain && domainsMatch(i.domain, business.url));
+	if (byDomain.length) return { items: byDomain, matchedBy: 'domain' };
+	const byName = listings.filter((i) => i.title && matchReason(i.title, business));
+	return byName.length ? { items: byName, matchedBy: 'name' } : { items: [], matchedBy: null };
+}
+
+/* Aggregate a firm's branches into one local-presence record.
+
+   Ratings are weighted by review count, not averaged flat — a 4.9 with 3
+   reviews must not outweigh a 4.2 with 500. Review counts are summed, which
+   does advantage multi-branch chains; that is a real difference in local
+   presence, and branchCount + placeIds are recorded so the effect is visible
+   and auditable rather than hidden in a single number. */
+function aggregateBranches(items) {
+	const rated = items.filter((i) => typeof i.rating?.votes_count === 'number' && i.rating.votes_count > 0);
+	const reviewCount = rated.reduce((s, i) => s + i.rating.votes_count, 0);
+	const weighted = rated.reduce((s, i) => s + (i.rating.value || 0) * i.rating.votes_count, 0);
+
+	return {
+		reviewCount: items.length ? reviewCount : null,
+		avgRating: reviewCount ? Number((weighted / reviewCount).toFixed(2)) : null,
+		// Best profile in the group: a chain is judged on its strongest presence.
+		profileCompleteness: items.length
+			? Math.max(...items.map((i) => profileCompleteness(i) ?? 0))
+			: null,
+		branchCount: items.length,
+		placeIds: items.map((i) => i.place_id || i.cid).filter(Boolean),
+		claimed: items.some((i) => i.is_claimed === true) || null,
+	};
+}
+
+function buildLocal(business, matched, gbpItem, reviewsResult, cfg) {
+	const usingListings = matched && matched.items.length > 0;
 	const out = {
-		source: 'DataForSEO business_data/google/my_business_info' +
-			(cfg.local.reviewVelocity ? ' + reviews' : ''),
+		source: usingListings
+			? 'DataForSEO business_data/business_listings/search'
+			: 'DataForSEO business_data/google/my_business_info (fallback)',
+		matchedBy: usingListings ? matched.matchedBy : (gbpItem ? 'query' : null),
 		query: business.gbpQuery || null,
-		found: Boolean(gbpItem),
+		found: Boolean(usingListings || gbpItem),
 		reviewCount: null,
 		avgRating: null,
 		reviewsLast90d: null,
 		profileCompleteness: null,
 		napConsistent: null,
 		placeId: null,
+		branchCount: null,
+		claimed: null,
 		error: null,
 	};
 
-	if (!gbpItem) {
-		out.error = 'no Google Business Profile matched this query';
+	if (usingListings) {
+		const agg = aggregateBranches(matched.items);
+		out.reviewCount = agg.reviewCount;
+		out.avgRating = agg.avgRating;
+		out.profileCompleteness = agg.profileCompleteness;
+		out.branchCount = agg.branchCount;
+		out.claimed = agg.claimed;
+		out.placeId = agg.placeIds[0] || null;
+		out.napConsistent = napConsistency(matched.items[0], business);
+	} else if (gbpItem) {
+		out.placeId = gbpItem.place_id || gbpItem.cid || null;
+		out.avgRating = typeof gbpItem.rating?.value === 'number' ? gbpItem.rating.value : null;
+		out.reviewCount = typeof gbpItem.rating?.votes_count === 'number' ? gbpItem.rating.votes_count : null;
+		out.profileCompleteness = profileCompleteness(gbpItem);
+		out.napConsistent = napConsistency(gbpItem, business);
+		out.branchCount = 1;
+	} else {
+		out.error = 'no Google Business Profile found by listings sweep or direct lookup';
 		return out;
 	}
-
-	out.placeId = gbpItem.place_id || gbpItem.cid || null;
-	out.avgRating = typeof gbpItem.rating?.value === 'number' ? gbpItem.rating.value : null;
-	out.reviewCount = typeof gbpItem.rating?.votes_count === 'number' ? gbpItem.rating.votes_count : null;
-	out.profileCompleteness = profileCompleteness(gbpItem);
-	out.napConsistent = napConsistency(gbpItem, business);
 
 	if (cfg.local.reviewVelocity) {
 		out.reviewsLast90d = countRecentReviews(reviewsResult, cfg.local.velocityWindowDays || 90);
@@ -475,6 +530,7 @@ async function collectBusiness(biz, indexSlug, shared, cfg) {
 	const gbpKey = shared.gbpKeyFor(biz);
 	record.pillars.local = buildLocal(
 		business,
+		shared.listingMatches.get(gbpKey) || null,
 		shared.gbpByQuery.get(gbpKey) || null,
 		shared.reviewsByQuery.get(gbpKey) || null,
 		cfg
@@ -537,10 +593,13 @@ async function main() {
 	// Cost forecast from the measured unit prices, before spending anything.
 	const SERP_UNIT = { 10: 0.0006, 20: 0.00105, 100: 0.00465 };
 	const AI_UNIT = { perplexity: 0.005912, gemini: 0.067472, chat_gpt: 0.10205 };
+	const LISTING_UNIT = 0.00048; // priced per result returned
 	const forecast =
 		keywords.length * (SERP_UNIT[engine.serp.depth] ?? 0.00465) +
 		prompts.length * (AI_UNIT[engine.ai.engine] ?? 0.00591) +
-		businesses.length * (0.0015 + (engine.local.reviewVelocity ? 0.0015 : 0));
+		(indexCfg.coordinate ? (engine.local.listingsLimit || 100) * LISTING_UNIT : 0) +
+		businesses.length * (engine.local.profileFallback ? 0.0015 : 0) +
+		businesses.length * (engine.local.reviewVelocity ? 0.0015 : 0);
 
 	console.log(`Index:      ${indexSlug}`);
 	console.log(`Sector:     ${sector.label} — ${indexCfg.town} (${indexCfg.locationName})`);
@@ -560,6 +619,7 @@ async function main() {
 		return;
 	}
 
+	const runStartedAt = Date.now();
 	const before = await balance();
 	console.log(`Balance:    $${before.balance?.toFixed(4) ?? '?'}\n`);
 
@@ -650,28 +710,72 @@ async function main() {
 
 	/* ---- Phase 2: per-business Google Business Profile, batched ---- */
 
-	console.log(`[3/3] Local presence — ${businesses.length} profile(s)${engine.local.reviewVelocity ? ' + reviews' : ''}`);
+	console.log(`[3/3] Local presence — ${businesses.length} business(es)`);
 
 	const gbpKeyFor = (biz) => biz.gbp_query || `${biz.name} ${indexCfg.town}`;
-	const gbpQueries = businesses.map((biz) => ({
-		keyword: gbpKeyFor(biz),
-		location_name: indexCfg.locationName,
-	}));
 
-	const gbpByQuery = await myBusinessInfoBatch(gbpQueries, { log: (m) => console.log(m) });
-	console.log(`    ${[...gbpByQuery.values()].filter(Boolean).length}/${businesses.length} profile(s) matched`);
+	/* 3a. One listings sweep for the whole index. Primary source: it aggregates
+	   a firm's branches and resolves the multi-branch chains that a per-business
+	   profile lookup cannot. */
+	const listingMatches = new Map();
+	if (indexCfg.coordinate && sector.dfsCategories?.length) {
+		const sweep = await businessListings(sector.dfsCategories, indexCfg.coordinate, {
+			limit: engine.local.listingsLimit || 100,
+		});
+		console.log(`    sweep: ${sweep.returned} listing(s) of ${sweep.totalCount} in ${indexCfg.coordinate.split(',')[2]}km`);
+		for (const biz of businesses) {
+			const m = matchListings(sweep.items, { name: biz.name, url: biz.url });
+			if (m.items.length) listingMatches.set(gbpKeyFor(biz), m);
+		}
+		console.log(`    matched ${listingMatches.size}/${businesses.length} via listings sweep`);
+	} else {
+		console.log('    ! no coordinate or dfsCategories configured — skipping sweep');
+	}
 
+	/* 3b. Fall back to a direct profile lookup for whatever the sweep missed.
+	   The two sources fail on different firms, so the union beats either. */
+	let gbpByQuery = new Map();
+	const unmatched = businesses.filter((b) => !listingMatches.has(gbpKeyFor(b)));
+	if (engine.local.profileFallback && unmatched.length) {
+		console.log(`    fallback: direct lookup for ${unmatched.length} unmatched`);
+		gbpByQuery = await myBusinessInfoBatch(
+			unmatched.map((biz) => ({
+				key: gbpKeyFor(biz),
+				keyword: gbpKeyFor(biz),
+				location_name: indexCfg.locationName,
+			})),
+			{ log: (m) => console.log(m) }
+		);
+		console.log(`    fallback resolved ${[...gbpByQuery.values()].filter(Boolean).length}/${unmatched.length}`);
+	}
+
+	const foundCount = businesses.filter((b) => {
+		const k = gbpKeyFor(b);
+		return listingMatches.has(k) || gbpByQuery.get(k);
+	}).length;
+	console.log(`    LOCAL PRESENCE FOUND: ${foundCount}/${businesses.length}`);
+
+	/* 3c. Reviews, keyed by place_id wherever one was resolved. */
 	let reviewsByQuery = new Map();
 	if (engine.local.reviewVelocity) {
-		reviewsByQuery = await reviewsBatch(gbpQueries, {
+		const reviewQueries = businesses.map((biz) => {
+			const key = gbpKeyFor(biz);
+			const m = listingMatches.get(key);
+			const placeId = m?.items?.[0]?.place_id
+				|| gbpByQuery.get(key)?.place_id
+				|| null;
+			return { key, place_id: placeId, keyword: key, location_name: indexCfg.locationName };
+		});
+		reviewsByQuery = await reviewsBatch(reviewQueries, {
 			depth: engine.local.reviewDepth,
 			log: (m) => console.log(m),
 		});
-		console.log(`    ${[...reviewsByQuery.values()].filter(Boolean).length}/${businesses.length} review set(s) returned`);
+		const viaPlaceId = reviewQueries.filter((q) => q.place_id).length;
+		console.log(`    ${[...reviewsByQuery.values()].filter(Boolean).length}/${businesses.length} review set(s) (${viaPlaceId} via place_id)`);
 	}
 	console.log('');
 
-	const shared = { keywords, serpByKeyword, aiAnswers, gbpByQuery, reviewsByQuery, gbpKeyFor };
+	const shared = { keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor };
 
 	/* ---- Phase 3: per-business assembly ---- */
 
@@ -697,17 +801,46 @@ async function main() {
 	/* ---- Cost ledger ---- */
 
 	const after = await balance();
+
+	/* Reconcile against DataForSEO's per-task billing record rather than the
+	   balance delta. The delta is NOT this run's spend — a concurrent run, or a
+	   task posted by an earlier crashed run, settles inside the same window.
+	   That is exactly how a $0.084 run once appeared to cost $1.53. The delta is
+	   still recorded, clearly labelled as "not attributable to this run". */
+	const reconciled = await spendSince(runStartedAt, { log: (m) => console.log(m) });
+	const fxRate = engine.budget?.fxGbpUsd || 1.36;
+
 	const costRecord = {
 		index: indexSlug,
 		collectedAt: new Date().toISOString(),
 		businesses: businesses.length,
 		keywords: keywords.length,
 		prompts: prompts.length,
+
 		forecastUsd: Number(forecast.toFixed(5)),
-		actualUsd: Number(ledger.total.toFixed(5)),
-		actualGbp: Number((ledger.total / (engine.budget?.fxGbpUsd || 1.36)).toFixed(5)),
-		balanceBefore: before.balance,
-		balanceAfter: after.balance,
+		ledgerUsd: Number(ledger.total.toFixed(5)),
+		ledgerGbp: Number((ledger.total / fxRate).toFixed(5)),
+
+		/* Per-task truth for the APIs that expose id_list. */
+		reconciled: {
+			window: { from: reconciled.from, to: reconciled.to },
+			byApi: reconciled.byApi,
+			attributedUsd: reconciled.attributed,
+			note: 'serp + business_data only — ai_optimization exposes no id_list, '
+				+ 'so AI spend is from the in-process ledger and is unverified.',
+		},
+
+		/* Recorded for completeness, NOT as this run's cost. */
+		accountBalance: {
+			before: before.balance,
+			after: after.balance,
+			deltaUsd: before.balance !== null && after.balance !== null
+				? Number((before.balance - after.balance).toFixed(5))
+				: null,
+			note: 'Includes any concurrent or previously-posted task settling in '
+				+ 'this window. Not attributable to this run — use reconciled/ledger.',
+		},
+
 		breakdown: ledger.entries.map((e) => ({
 			label: e.label,
 			calls: e.calls,
@@ -716,12 +849,14 @@ async function main() {
 	};
 	await writeFile(join(outDir, '_cost.json'), JSON.stringify(costRecord, null, 2) + '\n');
 
-	const fx = engine.budget?.fxGbpUsd || 1.36;
 	console.log(`\nDone. Wrote ${ok}/${businesses.length} business records to ${outDir}`);
 	console.log(`\nCost this run:`);
 	console.log(ledger.report());
-	console.log(`\n    forecast $${forecast.toFixed(5)}  |  actual $${ledger.total.toFixed(5)} (£${(ledger.total / fx).toFixed(4)})`);
-	console.log(`    balance  $${before.balance?.toFixed(4)} -> $${after.balance?.toFixed(4)}`);
+	console.log(`\n    forecast   $${forecast.toFixed(5)}`);
+	console.log(`    ledger     $${ledger.total.toFixed(5)} (£${(ledger.total / fxRate).toFixed(4)})`);
+	console.log(`    reconciled $${reconciled.attributed.toFixed(5)} (serp + business_data, per-task via id_list)`);
+	const delta = (before.balance ?? 0) - (after.balance ?? 0);
+	console.log(`    balance moved $${delta.toFixed(5)} — includes anything else billing in this window, not just this run`);
 	console.log('\nNext: node score.mjs ' + indexSlug);
 }
 

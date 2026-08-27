@@ -1,10 +1,8 @@
 {
-	"_comment": "Per-sector keyword and AI-prompt templates. Placeholders: {town}, {area}, {sector}. The generator fills these, dedupes, and truncates to engine.keywordsPerIndex. dfsCategory is for business_listings/search seed discovery.",
-
+	"_comment": "Per-sector keyword and AI-prompt templates. Placeholders: {town}, {area}, {sector}. dfsCategories is a LIST because a single Google category is too sparse to find a seed reliably - law_firm alone returned 32 businesses for Cheltenham and matched 3 of 8 firms.",
 	"estate-agents": {
 		"label": "estate agents",
 		"singular": "estate agent",
-		"dfsCategory": "real_estate_agency",
 		"keywords": [
 			"estate agents {town}",
 			"best estate agents {town}",
@@ -26,13 +24,17 @@
 			"Top rated letting agents in {town}",
 			"I am looking for an estate agent in {town} - who should I contact?",
 			"Best estate agents in {area}, {town}"
+		],
+		"dfsCategories": [
+			"real_estate_agency",
+			"real_estate_agents",
+			"letting_agents",
+			"property_management_company"
 		]
 	},
-
 	"solicitors": {
 		"label": "solicitors",
 		"singular": "solicitor",
-		"dfsCategory": "law_firm",
 		"keywords": [
 			"solicitors {town}",
 			"best solicitors {town}",
@@ -54,13 +56,17 @@
 			"Top rated family law solicitors in {town}",
 			"I need a solicitor in {town} - who should I contact?",
 			"Best solicitors in {area}, {town}"
+		],
+		"dfsCategories": [
+			"law_firm",
+			"legal_services",
+			"solicitor",
+			"conveyancer"
 		]
 	},
-
 	"law-firms": {
 		"label": "law firms",
 		"singular": "law firm",
-		"dfsCategory": "law_firm",
 		"keywords": [
 			"law firms {town}",
 			"best law firm {town}",
@@ -82,13 +88,17 @@
 			"Top rated employment law solicitors in {town}",
 			"I need a commercial solicitor in {town} - who should I contact?",
 			"Best law firms in {area}, {town}"
+		],
+		"dfsCategories": [
+			"law_firm",
+			"legal_services",
+			"solicitor",
+			"corporate_office"
 		]
 	},
-
 	"dentists": {
 		"label": "dentists",
 		"singular": "dentist",
-		"dfsCategory": "dentist",
 		"keywords": [
 			"dentist {town}",
 			"best dentist {town}",
@@ -110,13 +120,17 @@
 			"Top rated private dentists in {town}",
 			"I need to register with a dentist in {town} - who should I contact?",
 			"Best dentist in {area}, {town}"
+		],
+		"dfsCategories": [
+			"dentist",
+			"dental_clinic",
+			"cosmetic_dentist",
+			"orthodontist"
 		]
 	},
-
 	"construction": {
 		"label": "construction firms",
 		"singular": "construction firm",
-		"dfsCategory": "general_contractor",
 		"keywords": [
 			"builders {town}",
 			"construction companies {town}",
@@ -138,6 +152,12 @@
 			"Top rated building contractors in {town}",
 			"I need a builder in {town} - who should I contact?",
 			"Best construction firms in {area}, {town}"
+		],
+		"dfsCategories": [
+			"general_contractor",
+			"construction_company",
+			"builder",
+			"home_builder"
 		]
 	}
 }

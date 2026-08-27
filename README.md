@@ -81,7 +81,8 @@ after, and writes `pipeline/data/<index>/_cost.json`.
 |---|---|---|
 | SERP keyword (standard queue, depth 100) | per index | $0.00465 |
 | AI prompt (Perplexity `sonar`) | per index | $0.00591 |
-| Google Business Profile | per business | $0.00150 |
+| Business listings sweep | per index | ~$0.00048/result (~$0.048 at limit 100) |
+| Google Business Profile (fallback) | per unmatched business | $0.00150 |
 | Reviews (90-day velocity) | per business | $0.00150 |
 | Speed, technical, content | per business | free |
 
