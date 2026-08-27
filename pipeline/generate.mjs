@@ -922,7 +922,13 @@ function focusScript(ranked, indexSlug) {
 			el.classList.toggle('pyc-on', on);
 		});
 		chips.querySelectorAll('button').forEach(function (b) {
-			b.setAttribute('aria-pressed', String(b.dataset.slug === (slug || '')));
+			var on = b.dataset.slug === (slug || '');
+			b.setAttribute('aria-pressed', String(on));
+			// In a single scrolling row the active chip can be off-screen, which
+			// is confusing when the firm was restored from the URL.
+			if (on && slug && b.scrollIntoView) {
+				b.scrollIntoView({ block: 'nearest', inline: 'center' });
+			}
 		});
 		if (push && window.history && history.replaceState) {
 			var u = new URL(location.href);
@@ -1049,6 +1055,17 @@ function intentMix(ranked) {
 </figure>`;
 }
 
+
+/* Distances are collected and computed in kilometres — the latitude/longitude
+   maths needs them — but this is a UK site read by UK businesses, so every
+   figure a reader sees is in miles. One conversion, at the display layer. */
+const MILES_PER_KM = 0.621371;
+const miles = (km, dp = 1) => {
+	const m = km * MILES_PER_KM;
+	// Whole numbers read better than "4.0 miles".
+	return Number.isInteger(Number(m.toFixed(dp))) ? String(Math.round(m)) : m.toFixed(dp);
+};
+
 /* Local-pack coverage across the city. Answers a question no other figure can:
    where can people actually find these firms.
 
@@ -1073,29 +1090,55 @@ function geoGrid(ranked) {
 	   figure. When no indexed firm holds a slot anywhere, say that in a sentence
 	   — it is a stronger finding than the grid would have been. */
 	if (!covered) {
-		return `<p class="pyc-geo-null">Searching &ldquo;${esc(g.keyword)}&rdquo; from ${g.points.length} points across a ${g.radiusKm * 2}km square, <strong>not one of the ${ranked.businesses.length} firms in this index appeared in the local 3-pack at any location</strong>. The pack was held entirely by businesses outside the index.</p>`;
+		return `<p class="pyc-geo-null">Searching &ldquo;${esc(g.keyword)}&rdquo; from ${g.points.length} points across a ${miles(g.radiusKm * 2)}-mile square, <strong>not one of the ${ranked.businesses.length} firms in this index appeared in the local 3-pack at any location</strong>. The pack was held entirely by businesses outside the index.</p>`;
 	}
+
+	/* The figure says "across the city" but rendered nine anonymous squares: a
+	   reader could not tell which cell was Clifton and which was Brislington.
+	   The coordinates were collected all along, so each cell now carries its
+	   compass position and its actual lat/lng, and the figure gets a north
+	   marker and a scale bar. That is what makes it a map — not tiles, which
+	   would need client JS and put the data out of reach of the crawlers this
+	   index is written for. */
+	const compass = (r, c, size) => {
+		if (size === 1) return 'centre';
+		const ns = r === 0 ? 'north' : r === size - 1 ? 'south' : '';
+		const ew = c === 0 ? 'west' : c === size - 1 ? 'east' : '';
+		if (!ns && !ew) return 'centre';
+		if (!ns) return ew;
+		if (!ew) return ns;
+		return `${ns}-${ew}`;
+	};
+	const abbrev = { 'north-west': 'NW', north: 'N', 'north-east': 'NE', west: 'W', centre: '·', east: 'E', 'south-west': 'SW', south: 'S', 'south-east': 'SE' };
 
 	const cells = [];
 	for (let r = 0; r < n; r++) {
 		const row = [];
 		for (let c = 0; c < n; c++) {
 			const firms = firmsAt.get(`${r}:${c}`);
+			const pt = g.points.find((p) => p.row === r && p.col === c);
+			const where = compass(r, c, n);
 			const cls = firms === null ? 'x' : String(Math.min(firms.length, 3));
-			const title = firms === null
+			const coords = pt ? `${pt.lat.toFixed(3)}, ${pt.lng.toFixed(3)}` : '';
+			const who = firms === null
 				? 'no result at this point'
-				: firms.length
-					? firms.map((f) => f.name).join(', ')
-					: 'no indexed firm in the pack here';
-			row.push(`<td class="pyc-geo-${cls}" title="${esc(title)}">${firms && firms.length ? firms.length : ''}</td>`);
+				: firms.length ? firms.map((f) => f.name).join(', ') : 'no indexed firm in the pack here';
+			row.push(`<td class="pyc-geo-${cls}" title="${esc(where)} (${esc(coords)}) — ${esc(who)}">`
+				+ `<span class="pyc-geo-n">${firms && firms.length ? firms.length : ''}</span>`
+				+ `<span class="pyc-geo-where">${esc(abbrev[where] || where)}</span>`
+				+ `</td>`);
 		}
 		cells.push(`<tr>${row.join('')}</tr>`);
 	}
 
 	const distinct = new Set([...firmsAt.values()].filter(Boolean).flat().map((f) => f.name));
 	return `<figure class="pyc-fig">
-<figcaption>Local 3-pack for &ldquo;${esc(g.keyword)}&rdquo; searched from ${g.points.length} points across a ${g.radiusKm * 2}km square. Each cell counts how many indexed firms hold a pack slot at that location; a chain counts wherever any of its branches appears. ${covered} of ${g.points.length} points contain at least one indexed firm, and ${distinct.size} of the ${ranked.businesses.length} indexed firms appear somewhere on the grid.</figcaption>
+<figcaption>Local 3-pack for &ldquo;${esc(g.keyword)}&rdquo; searched from ${g.points.length} points on a ${n}&times;${n} grid across a ${miles(g.radiusKm * 2)}-mile square centred on ${g.centre ? `${g.centre.lat.toFixed(3)}, ${g.centre.lng.toFixed(3)}` : 'the city'}. North is up; hover a cell for its coordinates and the firms found there. Each cell counts how many indexed firms hold a pack slot at that location; a chain counts wherever any of its branches appears. ${covered} of ${g.points.length} points contain at least one indexed firm, and ${distinct.size} of the ${ranked.businesses.length} indexed firms appear somewhere on the grid.</figcaption>
+<div class="pyc-geo-wrap">
+<span class="pyc-geo-north" aria-hidden="true">N &uarr;</span>
 <table class="pyc-geo"><caption class="pyc-sr">Indexed firms holding a local pack slot, by grid position from north-west to south-east</caption>${cells.join('')}</table>
+<span class="pyc-geo-scale" aria-hidden="true"><i></i>${miles(g.radiusKm)} miles</span>
+</div>
 <p class="pyc-key"><span class="pyc-sw pyc-geo-0"></span> none <span class="pyc-sw pyc-geo-1"></span> 1 firm <span class="pyc-sw pyc-geo-2"></span> 2 <span class="pyc-sw pyc-geo-3"></span> 3 of the pack</p>
 </figure>`;
 }
