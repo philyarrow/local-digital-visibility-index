@@ -222,6 +222,8 @@ ${divergingPillars(b, ranked.sectorMedians, maxDelta(ranked))}
 ${pillarRows}
 
 ${section('Where this firm ranks', keywordTable(b))}
+${section('The gap to the leader', gapDumbbell(b, ranked))}
+${section('Closest to the first page', nearMisses(ranked, { slug: b.slug }))}
 ${section('AI search presence', aiCitations(b))}
 ${section('Local presence', localCard(b))}
 ## Key findings
@@ -453,7 +455,8 @@ function shareOfVoice(ranked) {
 </div>
 <p class="pyc-sov-key"><span class="pyc-sw pyc-sw-us"></span> this index (${heldBySeed}) &nbsp; <span class="pyc-sw pyc-sw-them"></span> directories, national chains and firms not indexed (${others})</p>
 ${gaps ? `<p class="pyc-gapnote">Ranking well but not currently indexed:</p><ul class="pyc-gaps">${gaps}</ul>` : ''}
-</figure>`;
+</figure>
+${takeaway(`<strong>${(100 - seedSharePct).toFixed(1)}% of the first page</strong> belongs to businesses outside this index &mdash; directories, national chains and local firms not tracked here. These firms are not mainly competing with each other.`)}`;
 }
 
 /* Keyword x firm position matrix. Dense, and the only view that shows both
@@ -498,9 +501,234 @@ function positionHeatmap(ranked) {
 <figcaption>Every firm against every keyword, shaded by position. Darker is stronger; blank means outside the top 100. Read down a column for a contested term, across a row for a firm's reach.</figcaption>
 <div class="pyc-scroll"><table class="pyc-heat">${head}${body}</table></div>
 <p class="pyc-key"><span class="pyc-sw pyc-hm-4"></span> 1&ndash;3 <span class="pyc-sw pyc-hm-3"></span> 4&ndash;10 <span class="pyc-sw pyc-hm-2"></span> 11&ndash;20 <span class="pyc-sw pyc-hm-1"></span> 21+ <span class="pyc-sw pyc-hm-0"></span> absent</p>
-</figure>`;
+</figure>
+${(() => {
+	// The emptiest column is uncontested ground, and a league table cannot show it.
+	const counts = kws.map((k) => ({ k, n: scored.filter((b) => { const p = b.evidence.positions?.[k]; return p && p <= 10; }).length }));
+	const open = counts.filter((c) => c.n === 0);
+	if (!open.length) return '';
+	// Escape the keyword only — escaping the whole string would escape the
+	// ampersands of the quote entities and print them as literal text.
+	const quoted = open.slice(0, 3).map((c) => `&ldquo;${esc(c.k)}&rdquo;`).join(', ');
+	return takeaway(`No firm in this index reaches the first page for <strong>${quoted}</strong>${open.length > 3 ? ` and ${open.length - 3} other keyword${open.length - 3 === 1 ? '' : 's'}` : ''}. That is uncontested ground, and it is invisible in a league table.`);
+})()}`;
 }
 
+
+
+/* A stated conclusion, not a description. The difference between a chart and an
+   argument is that the argument tells you what it means — and it must be
+   computed from the data, never templated, or it will eventually be wrong. */
+function takeaway(html) {
+	return html ? `<p class="pyc-takeaway">${html}</p>` : '';
+}
+
+/* Visibility against AI presence. Two pillars that ought to correlate; where a
+   firm sits off the diagonal is the whole point. */
+function visibilityAiQuadrant(ranked) {
+	const pts = ranked.businesses.filter((b) => b.rank !== null
+		&& typeof b.pillarScores.visibility === 'number'
+		&& typeof b.pillarScores.ai === 'number');
+	if (pts.length < 3) return '';
+
+	const W = 100, H = 74, PAD = 3;
+	const px = (v) => PAD + (v / 100) * (W - PAD * 2);
+	const py = (v) => (H - PAD) - (v / 100) * (H - PAD * 2);
+
+	const dots = pts.map((b) => {
+		const x = px(b.pillarScores.visibility), y = py(b.pillarScores.ai);
+		return `<circle class="pyc-q-dot" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="1.6"><title>${esc(b.name)} — visibility ${b.pillarScores.visibility}, AI ${b.pillarScores.ai}</title></circle>`;
+	}).join('');
+
+	// Label only the extremes; a label on every dot is unreadable at this size.
+	const notable = [...pts].sort((a, c) =>
+		Math.abs(c.pillarScores.visibility - c.pillarScores.ai) - Math.abs(a.pillarScores.visibility - a.pillarScores.ai)
+	).slice(0, 3);
+	const labels = notable.map((b) => {
+		const x = px(b.pillarScores.visibility), y = py(b.pillarScores.ai);
+		const anchor = x > W * 0.6 ? 'end' : 'start';
+		const dx = anchor === 'end' ? -2.4 : 2.4;
+		return `<text class="pyc-q-lab" x="${(x + dx).toFixed(2)}" y="${(y + 1).toFixed(2)}" text-anchor="${anchor}">${esc(b.name)}</text>`;
+	}).join('');
+
+	const offDiag = notable[0];
+	const gap = offDiag ? offDiag.pillarScores.ai - offDiag.pillarScores.visibility : 0;
+	/* The wording has to match the chart. Describing visibility 52 as "barely
+	   ranking" contradicted a dot plotted right of the midline, so the strong
+	   phrasing is gated on the absolute value as well as the gap. */
+	const vis = offDiag?.pillarScores.visibility ?? 0;
+	const ai = offDiag?.pillarScores.ai ?? 0;
+	const weak = (v) => v < 40;
+	const insight = offDiag && Math.abs(gap) >= 20
+		? `<strong>${esc(offDiag.name)}</strong> is the widest split: ${gap > 0
+			? `AI engines name it far more readily than search surfaces it (AI ${ai}, visibility ${vis})${weak(vis) ? '&nbsp;&mdash; brand without search' : ''}`
+			: `search surfaces it far more readily than AI engines name it (visibility ${vis}, AI ${ai})${weak(ai) ? '&nbsp;&mdash; search without brand' : ''}`}. Those are different problems behind a similar overall score.`
+		: '';
+
+	return `<figure class="pyc-fig">
+<figcaption>Search visibility against AI search presence. The dashed diagonal is parity; a firm far from it is strong in one channel and weak in the other.</figcaption>
+<svg class="pyc-quad" viewBox="0 0 ${W} ${H}" role="img" aria-label="Scatter plot of search visibility against AI presence for ${pts.length} firms">
+<line class="pyc-q-axis" x1="${PAD}" y1="${H - PAD}" x2="${W - PAD}" y2="${H - PAD}"/>
+<line class="pyc-q-axis" x1="${PAD}" y1="${PAD}" x2="${PAD}" y2="${H - PAD}"/>
+<line class="pyc-q-mid" x1="${px(50).toFixed(2)}" y1="${PAD}" x2="${px(50).toFixed(2)}" y2="${H - PAD}"/>
+<line class="pyc-q-mid" x1="${PAD}" y1="${py(50).toFixed(2)}" x2="${W - PAD}" y2="${py(50).toFixed(2)}"/>
+<line class="pyc-q-diag" x1="${px(0).toFixed(2)}" y1="${py(0).toFixed(2)}" x2="${px(100).toFixed(2)}" y2="${py(100).toFixed(2)}"/>
+${dots}${labels}
+</svg>
+<p class="pyc-key"><span class="pyc-q-axname">horizontal: search visibility &rarr;</span> &nbsp; <span class="pyc-q-axname">vertical: AI presence &uarr;</span></p>
+</figure>
+${takeaway(insight)}`;
+}
+
+/* Firm-keyword pairs sitting just off the first page. The most directly useful
+   thing the dataset produces, and it costs nothing extra to derive. */
+function nearMisses(ranked, opts = {}) {
+	const only = opts.slug || null;
+	const rows = [];
+	for (const b of ranked.businesses) {
+		if (b.rank === null || !b.evidence?.positions) continue;
+		if (only && b.slug !== only) continue;
+		for (const [kw, pos] of Object.entries(b.evidence.positions)) {
+			if (typeof pos === 'number' && pos >= 11 && pos <= 20) rows.push({ name: b.name, kw, pos });
+		}
+	}
+	if (!rows.length) return '';
+	rows.sort((a, b) => a.pos - b.pos);
+	const shown = rows.slice(0, only ? 12 : 10);
+
+	const body = shown.map((r) => `<tr>`
+		+ (only ? '' : `<th scope="row" class="pyc-nm-firm">${esc(r.name)}</th>`)
+		+ `<td class="pyc-nm-kw"><span class="pyc-nm-firm-inline">${only ? '' : esc(r.name) + ' &mdash; '}</span>${esc(r.kw)}</td>`
+		+ `<td class="pyc-nm-track"><span class="pyc-nm-bar" style="width:${(((21 - r.pos) / 10) * 100).toFixed(0)}%"></span></td>`
+		+ `<td class="pyc-nm-pos">#${r.pos}</td></tr>`).join('');
+
+	// Counted over every qualifying row, not the truncated display list —
+	// pairing a truncated firm count with the full position count understated it.
+	const firms = new Set(rows.map((r) => r.name)).size;
+	const insight = only
+		? `<strong>${rows.length} position${rows.length === 1 ? '' : 's'}</strong> sit${rows.length === 1 ? 's' : ''} between #11 and #20 &mdash; one page away, and the cheapest ranking work available to this firm.`
+		: `<strong>${rows.length} winnable position${rows.length === 1 ? '' : 's'}</strong> across ${firms} firm${firms === 1 ? '' : 's'} sit between #11 and #20 &mdash; one page off, and closer than any keyword the index does not already measure.`;
+
+	return `<figure class="pyc-fig">
+<figcaption>Ranked between #11 and #20 &mdash; one page from the first, ordered by how close.</figcaption>
+<table class="pyc-nearmiss"><tbody>${body}</tbody></table>
+</figure>
+${takeaway(insight)}`;
+}
+
+/* Reputation: review volume against rating. The Local pillar compresses a 6x
+   spread in reviews into a 12-point score; the raw figures do not. */
+function reputationScatter(ranked) {
+	const pts = ranked.businesses.filter((b) => b.rank !== null
+		&& typeof b.evidence?.local?.reviewCount === 'number' && b.evidence.local.reviewCount > 0
+		&& typeof b.evidence.local.avgRating === 'number');
+	if (pts.length < 3) return '';
+
+	const revs = pts.map((b) => b.evidence.local.reviewCount);
+	const lo = Math.max(1, Math.min(...revs)), hi = Math.max(...revs);
+	const rats = pts.map((b) => b.evidence.local.avgRating);
+	const rlo = Math.min(...rats) - 0.2, rhi = Math.max(...rats) + 0.2;
+
+	const W = 100, H = 62, PAD = 4;
+	const px = (v) => PAD + ((Math.log10(v) - Math.log10(lo)) / Math.max(0.01, Math.log10(hi) - Math.log10(lo))) * (W - PAD * 2);
+	const py = (v) => (H - PAD) - ((v - rlo) / Math.max(0.01, rhi - rlo)) * (H - PAD * 2);
+
+	const dots = pts.map((b) => {
+		const l = b.evidence.local;
+		const r = 1.2 + Math.sqrt(l.reviewCount) / 12;
+		return `<circle class="pyc-r-dot" cx="${px(l.reviewCount).toFixed(2)}" cy="${py(l.avgRating).toFixed(2)}" r="${Math.min(r, 4).toFixed(2)}"><title>${esc(b.name)} — ${l.reviewCount} reviews, ${l.avgRating}★${l.branchCount > 1 ? `, ${l.branchCount} locations` : ''}</title></circle>`;
+	}).join('');
+
+	const maxRev = Math.max(...pts.map((b) => b.evidence.local.reviewCount));
+	const maxRat = Math.max(...pts.map((b) => b.evidence.local.avgRating));
+	const mostAll = pts.filter((b) => b.evidence.local.reviewCount === maxRev);
+	const bestAll = pts.filter((b) => b.evidence.local.avgRating === maxRat);
+	const most = mostAll[0], best = bestAll[0];
+	/* Naming one firm out of several tied at 5.0 reads as a fact and is not one. */
+	const nameOrTie = (all, value, unit) => all.length === 1
+		? `${esc(all[0].name)} (${value}${unit})`
+		: `${all.length} firms tied at ${value}${unit}`;
+	const localScores = pts.map((b) => b.pillarScores.local).filter((v) => typeof v === 'number');
+	const spread = localScores.length ? Math.max(...localScores) - Math.min(...localScores) : null;
+
+	const insight = `Review volume spans <strong>${lo} to ${hi}</strong> and ratings <strong>${Math.min(...rats)} to ${Math.max(...rats)}</strong>`
+		+ (spread !== null ? `, yet the Local pillar separates these firms by only <strong>${spread} points</strong>&nbsp;— the raw figures discriminate where the score does not.` : '.')
+		+ (mostAll.length === 1 && bestAll.length === 1 && most.slug === best.slug
+			? ` ${esc(most.name)} leads on both, with ${maxRev} reviews at ${maxRat}.`
+			: ` Most reviews: ${nameOrTie(mostAll, maxRev, '')}. Highest rating: ${nameOrTie(bestAll, maxRat, '')}.`);
+
+	return `<figure class="pyc-fig">
+<figcaption>Google review volume (log scale) against average rating. Bubble size is review count.</figcaption>
+<svg class="pyc-repscatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="Review volume against average rating for ${pts.length} firms">
+<line class="pyc-q-axis" x1="${PAD}" y1="${H - PAD}" x2="${W - PAD}" y2="${H - PAD}"/>
+<line class="pyc-q-axis" x1="${PAD}" y1="${PAD}" x2="${PAD}" y2="${H - PAD}"/>
+${dots}
+</svg>
+<p class="pyc-key"><span class="pyc-q-axname">horizontal: reviews (log) &rarr;</span> &nbsp; <span class="pyc-q-axname">vertical: rating &uarr;</span></p>
+</figure>
+${takeaway(insight)}`;
+}
+
+/* This firm against the sector median and the category leader, per pillar. The
+   chart a marketing agency would actually act on. */
+function gapDumbbell(b, ranked) {
+	const leader = ranked.businesses.find((x) => x.rank === 1);
+	if (!leader || leader.slug === b.slug) return '';
+
+	const rows = PILLARS.map((p) => {
+		const me = b.pillarScores[p.key];
+		const them = leader.pillarScores[p.key];
+		const med = ranked.sectorMedians?.[p.key];
+		if (typeof me !== 'number' || typeof them !== 'number') return '';
+		/* Markers are centred on their position, so a score of 0 or 100 would hang
+		   half outside the track — over the row label at one end and into the
+		   value column at the other. 206 markers sat at an extreme. Insetting the
+		   scale keeps every marker inside its own track. */
+		const INSET = 4;
+		const pos = (v) => (INSET + (v / 100) * (100 - INSET * 2)).toFixed(2);
+		const loV = Math.min(me, them), hiV = Math.max(me, them);
+		return `<tr><th scope="row">${esc(p.label)}</th>`
+			+ `<td class="pyc-db-track">`
+			+ `<span class="pyc-db-rail"></span>`
+			+ `<span class="pyc-db-span" style="left:${pos(loV)}%;width:${(Number(pos(hiV)) - Number(pos(loV))).toFixed(2)}%"></span>`
+			+ (typeof med === 'number' ? `<span class="pyc-db-med" style="left:${pos(med)}%" title="sector median ${med}"></span>` : '')
+			+ `<span class="pyc-db-lead" style="left:${pos(them)}%" title="leader ${them}"></span>`
+			+ `<span class="pyc-db-self" style="left:${pos(me)}%" title="this firm ${me}"></span>`
+			+ `</td><td class="pyc-db-val">${me}</td></tr>`;
+	}).filter(Boolean).join('');
+	if (!rows) return '';
+
+	const gaps = PILLARS.map((p) => ({
+		label: p.label,
+		gap: (typeof leader.pillarScores[p.key] === 'number' && typeof b.pillarScores[p.key] === 'number')
+			? leader.pillarScores[p.key] - b.pillarScores[p.key] : null,
+	})).filter((g) => typeof g.gap === 'number' && g.gap > 0).sort((a, c) => c.gap - a.gap);
+
+	const ahead = PILLARS.filter((p) => typeof b.pillarScores[p.key] === 'number'
+		&& typeof leader.pillarScores[p.key] === 'number'
+		&& b.pillarScores[p.key] >= leader.pillarScores[p.key]).map((p) => p.label);
+
+	/* "The entire deficit is X and Y" was false wherever a third pillar also
+	   trailed — most pages. State the total, then what dominates it. */
+	const totalGap = gaps.reduce((n, g) => n + g.gap, 0);
+	const top2 = gaps.slice(0, 2);
+	const top2Sum = top2.reduce((n, g) => n + g.gap, 0);
+	const share = totalGap ? Math.round((top2Sum / totalGap) * 100) : 0;
+
+	const insight = top2.length
+		? (gaps.length <= 2
+			? `The whole deficit to ${esc(leader.name)} is <strong>${esc(top2.map((g) => g.label).join(' and '))}</strong> &mdash; <strong>${totalGap} points</strong>.`
+			: `${esc(b.name)} trails ${esc(leader.name)} by <strong>${totalGap} points</strong> across ${gaps.length} pillars, but <strong>${share}% of that</strong> is <strong>${esc(top2.map((g) => g.label).join(' and '))}</strong> alone.`)
+			+ (ahead.length ? ` It already matches or beats the leader on ${esc(ahead.join(', '))}.` : '')
+		: '';
+
+	return `<figure class="pyc-fig">
+<figcaption>This firm against the sector median and the index leader, ${esc(leader.name)}, on every pillar.</figcaption>
+<table class="pyc-dumbbell"><tbody>${rows}</tbody></table>
+<p class="pyc-key"><span class="pyc-sw pyc-db-k-self"></span> this firm <span class="pyc-sw pyc-db-k-med"></span> sector median <span class="pyc-sw pyc-db-k-lead"></span> leader</p>
+</figure>
+${takeaway(insight)}`;
+}
 
 /* A heading with nothing under it still lands in Starlight's page ToC, so a
    figure that renders nothing must take its heading with it. */
@@ -544,7 +772,10 @@ ${cell('Local pack only', region(false, true, false))}
 ${cell('AI only', region(false, false, true))}
 ${cell('None of the three', none)}
 </tbody></table>
-</figure>`;
+</figure>
+${takeaway(all3.length === 0
+	? `<strong>Not one firm</strong> in this index is visible in all three channels at once.`
+	: `<strong>${all3.length} of ${scored.length} firms</strong> are visible in all three channels.${none.length ? ` ${none.length} appear${none.length === 1 ? 's' : ''} in none of them.` : ''}`)}`;
 }
 
 /* What the keyword basket is actually asking. A basket that is all one intent
@@ -624,6 +855,7 @@ function geoGrid(ranked) {
 
 /* Largest absolute pillar-vs-median delta anywhere in the index, so every
    scorecard's bars share one scale and are comparable between firms. */
+
 /* A heading with nothing under it still lands in Starlight's page ToC, so a
    figure that renders nothing must take its heading with it — see section(). */
 
@@ -677,11 +909,15 @@ function hubMdx(ranked, quarter, indexSlug) {
 		+ PILLARS.map((p) => `<th scope="col" class="pyc-lg-p"><abbr title="${esc(p.label)}">${esc(SHORT[p.key] || p.label)}</abbr></th>`).join('')
 		+ '</tr>';
 
+	/* data-label carries the column name onto each cell so the table can restack
+	   as cards on a phone without JavaScript and without losing what each number
+	   means. Nine columns cannot fit 340px of content width, and dropping the
+	   pillars that discriminate most would be the wrong half to lose. */
 	const leagueBody = scored.map((b) => '<tr>'
-		+ `<td class="pyc-lg-rank">${b.rank}</td>`
+		+ `<td class="pyc-lg-rank" data-label="Rank">${b.rank}</td>`
 		+ `<th scope="row" class="pyc-lg-name"><a href="/indices/${esc(indexSlug)}/${esc(b.slug)}/">${esc(b.name)}</a></th>`
-		+ `<td class="pyc-lg-score">${cell(b.digitalVisibilityScore)}</td>`
-		+ PILLARS.map((p) => `<td class="pyc-lg-p">${cell(b.pillarScores[p.key])}</td>`).join('')
+		+ `<td class="pyc-lg-score" data-label="Score">${cell(b.digitalVisibilityScore)}</td>`
+		+ PILLARS.map((p) => `<td class="pyc-lg-p" data-label="${esc(SHORT[p.key] || p.label)}">${cell(b.pillarScores[p.key])}</td>`).join('')
 		+ '</tr>').join('');
 
 	const leagueTable = `<table class="pyc-league"><thead>${leagueHead}</thead><tbody>${leagueBody}</tbody></table>`;
@@ -743,6 +979,9 @@ ${leagueTable}
 
 ${section('Which keywords are contested, and which are open?', positionHeatmap(ranked))}
 ${section('Where each firm is visible', channelVenn(ranked))}
+${section('Search visibility against AI presence', visibilityAiQuadrant(ranked))}
+${section('Closest to the first page', nearMisses(ranked))}
+${section('Reputation: reviews against rating', reputationScatter(ranked))}
 ${section('What the keyword basket is asking', intentMix(ranked))}
 ${section('Local pack coverage across the city', geoGrid(ranked))}
 ## Which ${idxTitle.toLowerCase()} has the best website?
