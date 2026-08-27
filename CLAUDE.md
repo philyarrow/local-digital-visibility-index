@@ -86,6 +86,27 @@ not outweigh a 4.2 from 500. Summing branch reviews favours chains, which is a
 real difference in local presence; `branchCount` and `placeIds` are recorded so
 that effect stays visible.
 
+## Keep the whole SERP, not just the seed's rows
+
+Every organic result and every ad in a SERP response is data already paid for.
+`_landscape.json` (written each run, no extra cost) records:
+
+- **domainShare** — every domain seen, its top-10/top-20 slot counts and best
+  position, flagged `inSeed` or not
+- **seedGaps** — untracked domains holding 2+ top-10 slots, or any single top-5
+  placement. Some are portals and always will be; others are local firms the
+  seed simply missed, which makes the index audit its own completeness. On one
+  Bristol keyword the seed held only **4 of the top 10**.
+- **paidAdvertisers** — advertiser domains when Google served ads
+
+Ad inventory varies by auction, device and time, so an empty `paidAdvertisers`
+means "none served in this sample", never "nobody advertises here". Do not
+phrase it as a census anywhere it reaches a reader.
+
+For estimated ad *spend*, `labs/domain_rank_overview` returns
+`metrics.paid.estimated_paid_traffic_cost` at $0.0121/domain — per-domain, so
+run it on the top competitors, not the whole landscape.
+
 ## Cost shape — why collect.mjs is ordered as it is
 
 Visibility (SERP) and AI presence are bought **once per index** and read for

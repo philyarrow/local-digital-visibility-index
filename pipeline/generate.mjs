@@ -94,23 +94,64 @@ function reading(pillarKey, b, medians) {
 
 /* ---- pillar coverage (transparency for partial releases) ---- */
 
+/* Two different states, previously conflated:
+
+     missing    — the pillar has NO data for anyone (source not wired)
+     incomplete — the pillar has data for some firms but not all
+
+   `live` was `scored > 0`, so a single measured business made a pillar live
+   index-wide and the partial-score banner vanished — while firms with gaps
+   still had their weights renormalised, quietly ranking them above firms
+   measured on everything. Missing data must never be silently advantageous. */
 function coverage(ranked) {
-	const live = PILLARS.filter((p) => ranked.pillarCoverage?.[p.key]?.live);
-	const missing = PILLARS.filter((p) => !ranked.pillarCoverage?.[p.key]?.live);
-	const ew = ranked.businesses[0]?.effectiveWeights || {};
-	const liveLabels = live.map((p) => p.label);
-	const missingLabels = missing.map((p) => p.label);
-	const weightLine = live.map((p) => `${p.label} ${Math.round(ew[p.key] ?? 0)}%`).join(', ');
-	return { partial: missing.length > 0, live, missing, liveLabels, missingLabels, weightLine };
+	const cov = (key) => ranked.pillarCoverage?.[key] || { scored: 0, total: 0 };
+	const live = PILLARS.filter((p) => cov(p.key).scored > 0);
+	const missing = PILLARS.filter((p) => cov(p.key).scored === 0);
+	const incomplete = PILLARS.filter((p) => {
+		const c = cov(p.key);
+		return c.scored > 0 && c.scored < c.total;
+	});
+
+	const affected = ranked.businesses.filter((b) => (b.excludedPillars || []).length > 0);
+
+	return {
+		partial: missing.length > 0,
+		incomplete,
+		incompleteLabels: incomplete.map((p) => `${p.label} (${cov(p.key).scored} of ${cov(p.key).total})`),
+		affectedCount: affected.length,
+		affectedNames: affected.map((b) => b.name),
+		live,
+		missing,
+		liveLabels: live.map((p) => p.label),
+		missingLabels: missing.map((p) => p.label),
+		// Weight line only means anything when the gap is index-wide.
+		weightLine: missing.length
+			? live.map((p) => `${p.label} ${Math.round((ranked.weights?.[p.key] ?? 0) / live.reduce((s, x) => s + (ranked.weights?.[x.key] ?? 0), 0) * 100)}%`).join(', ')
+			: null,
+	};
 }
 
 function hubBanner(cov, quarter) {
-	if (!cov.partial) return '';
-	return `:::caution[v0 — ${cov.live.length} of ${PILLARS.length} pillars measured (${quarter})]
+	if (cov.partial) {
+		return `:::caution[v0 — ${cov.live.length} of ${PILLARS.length} pillars measured (${quarter})]
 This release scores only **${cov.liveLabels.join(' + ')}**. ${cov.missingLabels.join(', ')} are **not yet measured** and are excluded from the Digital Visibility Score, with the remaining weights renormalised (${cov.weightLine}). Rankings will change when the remaining pillars are added next refresh. Full detail in the [methodology](/indices/methodology/).
 :::
 
 `;
+	}
+
+	/* All six pillars have data for someone, but not necessarily for everyone.
+	   A firm we could not measure on a pillar has its weights renormalised
+	   across the rest — which can lift it above a firm measured on all six.
+	   That has to be stated on the page, not left in the dataset. */
+	if (cov.incomplete.length) {
+		return `:::note[Not every firm could be measured on every pillar (${quarter})]
+${cov.affectedCount} of the firms below are missing at least one pillar: ${cov.incompleteLabels.join(', ')}. Where a pillar could not be measured for a firm it is **excluded from that firm's score** and its remaining weights are renormalised, rather than scored zero — so those firms are ranked on less evidence than the rest, and their position should be read with that in mind. Affected: ${cov.affectedNames.join(', ')}. See the [methodology](/indices/methodology/).
+:::
+
+`;
+	}
+	return '';
 }
 
 function cardBanner(cov) {
@@ -188,7 +229,7 @@ ${leader.name} leads the index with ${leader.digitalVisibilityScore}/100. ${gapT
 
 ## Top fixes (ranked by impact)
 
-${topFixes(b).map((f, i) => `${i + 1}. ${f}`).join('\n')}
+${topFixes(b, sectorCopy(indexSlug)).map((f, i) => `${i + 1}. ${f}`).join('\n')}
 
 ---
 
@@ -222,23 +263,48 @@ function gapToLeader(b, leader) {
 		const me = b.pillarScores[p.key];
 		const them = leader.pillarScores[p.key];
 		if (me === null || them === null) continue;
-		if (them - me >= 10) gaps.push(`${p.label} (${me} vs ${them})`);
+		if (them - me >= 10) gaps.push({ label: p.label, me, them, gap: them - me });
 	}
-	return gaps.length
-		? `The largest gaps are: ${gaps.join('; ')}.`
+	// "Largest gaps" must actually be the largest, and only the largest few.
+	gaps.sort((a, b) => b.gap - a.gap);
+	const top = gaps.slice(0, 3).map((g) => `${g.label} (${g.me} vs ${g.them})`);
+	return top.length
+		? `The largest gaps are: ${top.join('; ')}.`
 		: 'The gap to the leader is small and spread evenly across pillars.';
 }
 
-function topFixes(b) {
+
+/* Per-sector wording for the fix tips. Anything not listed falls back to
+   sector-neutral copy rather than borrowing another sector's professional
+   bodies. */
+const SECTOR_COPY = {
+	'estate-agents': { schemaType: 'RealEstateAgent', credentials: 'Propertymark, NAEA, The Property Ombudsman' },
+	'solicitors': { schemaType: 'LegalService', credentials: 'SRA, Law Society' },
+	'law-firms': { schemaType: 'LegalService', credentials: 'SRA, Law Society' },
+	'dentists': { schemaType: 'Dentist', credentials: 'GDC registration, CQC rating' },
+	'construction': { schemaType: 'GeneralContractor', credentials: 'FMB, TrustMark, NHBC' },
+};
+
+function sectorCopy(indexSlug) {
+	for (const key of Object.keys(SECTOR_COPY)) {
+		if (indexSlug.endsWith(key)) return SECTOR_COPY[key];
+	}
+	return { schemaType: null, credentials: null };
+}
+
+function topFixes(b, { schemaType = null, credentials = null } = {}) {
 	const fixes = [];
 	const order = [...PILLARS].sort((a, c) => (b.pillarScores[a.key] ?? 101) - (b.pillarScores[c.key] ?? 101));
+	/* Sector-neutral by default. The estate-agent wording that used to be
+	   hardcoded here told dental practices to display Propertymark and RICS
+	   credentials, and builders to add RealEstateAgent schema. */
 	const tips = {
 		speed: 'Cut mobile LCP below 2.5s (optimise images and remove render-blocking resources) — the biggest score and ranking lever.',
-		technical: 'Add valid LocalBusiness/RealEstateAgent schema, fix indexability, and ensure a fresh XML sitemap is referenced in robots.txt.',
+		technical: `Add valid LocalBusiness${schemaType ? `/${schemaType}` : ''} schema, fix indexability, and ensure a fresh XML sitemap is referenced in robots.txt.`,
 		local: 'Restart Google review generation and complete the Business Profile to close the local-pack gap.',
 		visibility: 'Build local landing pages for the core keyword basket to lift organic and local-pack appearance.',
 		ai: 'Publish structured, citable content and entity schema so AI engines surface the business for core local queries.',
-		content: 'Add about/team/credentials pages (Propertymark, RICS, Ombudsman) and refresh stale content.',
+		content: `Add about/team pages${credentials ? ` and the credentials that matter in this sector (${credentials})` : ''}, and refresh stale content.`,
 	};
 	for (const p of order) {
 		if (b.pillarScores[p.key] === null) continue;
@@ -257,10 +323,17 @@ function hubMdx(ranked, quarter, indexSlug) {
 	const scored = ranked.businesses.filter((b) => b.rank !== null);
 	const liveSpeed = ranked.pillarCoverage.speed.live;
 	const cov = coverage(ranked);
-	const measuredOn = cov.partial ? cov.liveLabels.join(', ').toLowerCase() : 'website speed, technical SEO, local presence, search visibility and AI search presence';
+	const measuredOn = cov.partial
+		? cov.liveLabels.join(', ').toLowerCase()
+		: 'website speed, technical SEO, local presence, search visibility, AI search presence and content & trust';
 
+	/* Every pillar gets a column. Showing three of six while the hidden three
+	   carry half the weight made the published rank unreconcilable from the
+	   page — on a site whose premise is that every figure is reproducible. */
+	const cell = (v) => (v === null || v === undefined ? '—' : v);
 	const tableRows = scored.map((b) =>
-		`| ${b.rank} | [${b.name}](/indices/${indexSlug}/${b.slug}/) | ${b.digitalVisibilityScore} | ${b.pillarScores.speed ?? '—'} | ${b.pillarScores.technical ?? '—'} | ${b.pillarScores.content ?? '—'} |`,
+		`| ${b.rank} | [${b.name}](/indices/${indexSlug}/${b.slug}/) | ${b.digitalVisibilityScore} | `
+		+ PILLARS.map((p) => cell(b.pillarScores[p.key])).join(' | ') + ' |',
 	).join('\n');
 
 	const itemList = {
@@ -289,11 +362,14 @@ function hubMdx(ranked, quarter, indexSlug) {
 		],
 	};
 
-	const failMobile = liveSpeed
-		? scored.filter((b) => (b.pillarScores.speed ?? 100) < 50).length
-		: null;
-	const pct = (failMobile !== null && scored.length)
-		? Math.round((failMobile / scored.length) * 100) : null;
+	/* Denominator is firms actually MEASURED on speed. Defaulting an unmeasured
+	   firm to 100 counted it as passing and inflated the denominator, so the
+	   published percentage understated the problem and implied full coverage. */
+	const speedMeasured = scored.filter((b) => typeof b.pillarScores.speed === 'number');
+	const failMobile = liveSpeed ? speedMeasured.filter((b) => b.pillarScores.speed < 50).length : null;
+	const pct = (failMobile !== null && speedMeasured.length)
+		? Math.round((failMobile / speedMeasured.length) * 100) : null;
+	const speedDenom = speedMeasured.length;
 
 	const fm = [
 		'---',
@@ -309,11 +385,11 @@ function hubMdx(ranked, quarter, indexSlug) {
 
 ${hubBanner(cov, quarter)}The **PYC ${idxTitle} Digital Visibility Index** ranks ${scored.length} ${idxTitle.toLowerCase()}s on how well they perform online — ${measuredOn} — each scored 0–100 to a single **Digital Visibility Score**. Measured ${human} to the published [methodology](/indices/methodology/).
 
-${pct !== null ? `> As of ${quarter}, ${pct}% of ${idxTitle.toLowerCase()}s in this index score below 50 on mobile Speed & Core Web Vitals (PYC ${idxTitle} Digital Visibility Index, measured ${human}).\n` : ''}
+${pct !== null ? `> As of ${quarter}, ${pct}% of the ${speedDenom} ${idxTitle.toLowerCase()}s measured on Speed & Core Web Vitals score below 50 on mobile (PYC ${idxTitle} Digital Visibility Index, measured ${human}).\n` : ''}
 ## The league table
 
-| Rank | ${idxTitle} | Score | Speed | Technical | Content |
-|-----:|-------------|------:|------:|----------:|--------:|
+| Rank | ${idxTitle} | Score | Speed | Technical | Local | Visibility | AI | Content |
+|-----:|-------------|------:|------:|----------:|------:|-----------:|---:|--------:|
 ${tableRows}
 
 ## Which ${idxTitle.toLowerCase()} has the best website?
@@ -342,7 +418,14 @@ function exportJson(ranked, quarter, indexSlug) {
 		methodology: `${SITE}/indices/methodology/`,
 		weights: ranked.weights,
 		pillarCoverage: ranked.pillarCoverage,
-		effectiveWeights: ranked.businesses[0]?.effectiveWeights ?? null,
+		overallMedian: ranked.overallMedian ?? null,
+		/* Weights are renormalised PER BUSINESS around whatever that business
+		   could be measured on, so there is no single index-level set. Publishing
+		   businesses[0]'s as if there were made the dataset unreproducible for
+		   every row with a different coverage shape. */
+		effectiveWeightsNote:
+			'Weights are renormalised per business around its measured pillars. '
+			+ 'See each business\'s effectiveWeights; there is no index-level set.',
 		sectorMedians: ranked.sectorMedians,
 		businesses: ranked.businesses.map((b) => ({
 			rank: b.rank,
@@ -350,6 +433,9 @@ function exportJson(ranked, quarter, indexSlug) {
 			url: b.url,
 			digitalVisibilityScore: b.digitalVisibilityScore,
 			pillarScores: b.pillarScores,
+			includedPillars: b.includedPillars,
+			excludedPillars: b.excludedPillars,
+			effectiveWeights: b.effectiveWeights,
 		})),
 	};
 }

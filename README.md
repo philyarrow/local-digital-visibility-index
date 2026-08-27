@@ -89,6 +89,7 @@ against DataForSEO's per-task billing record, written to
 | Google Business Profile (fallback) | per unmatched business | $0.00150 |
 | Reviews (90-day velocity) | per business | $0.00150 |
 | Speed, technical, content | per business | free |
+| Competitive landscape (`_landscape.json`) | per index | free — extracted from SERPs already bought |
 
 A 12-keyword, 5-prompt index of 8 businesses costs about **$0.15**. Prices
 measured 27 August 2026 by reading DataForSEO's own `cost` field and reconciling

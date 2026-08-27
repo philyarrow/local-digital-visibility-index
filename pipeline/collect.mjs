@@ -30,6 +30,12 @@
    Settings live in config/engine.json; keyword and prompt baskets are derived
    from config/sectors.json + config/indices.json.
 
+   Alongside the per-business records, each run writes _landscape.json: every
+   organic domain and paid advertiser seen across the index's SERPs, page-one
+   share split between seed and non-seed, and the untracked domains that rank
+   well enough to belong in the seed. All of it is extracted from responses
+   already bought, so it adds nothing to the bill.
+
    Resilience: every business is wrapped in try/catch; every network call has a
    timeout; one bad site never aborts the run. A keyword whose SERP task fails
    is excluded from that index's basket size rather than counted as a miss, so
@@ -56,10 +62,11 @@ import {
 	myBusinessInfoBatch,
 	reviewsBatch,
 	businessListings,
+	businessListingsByTitle,
 	spendSince,
 } from './lib/dataforseo.mjs';
 import { loadConfig, resolveIndex, buildKeywords, buildPrompts } from './lib/basket.mjs';
-import { findOrganicPosition, inLocalPack, matchReason, domainsMatch } from './lib/match.mjs';
+import { findOrganicPosition, inLocalPack, matchReason, domainsMatch, buildLandscape, matchTargeted, searchNeedle } from './lib/match.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA_ROOT = join(HERE, 'data');
@@ -348,7 +355,7 @@ function aggregateBranches(items) {
 	};
 }
 
-function buildLocal(business, matched, gbpItem, reviewsResult, cfg) {
+function buildLocal(business, matched, gbpItem, reviewsResult, cfg, lookupError = null) {
 	const usingListings = matched && matched.items.length > 0;
 	const out = {
 		source: usingListings
@@ -385,7 +392,12 @@ function buildLocal(business, matched, gbpItem, reviewsResult, cfg) {
 		out.napConsistent = napConsistency(gbpItem, business);
 		out.branchCount = 1;
 	} else {
-		out.error = 'no Google Business Profile found by listings sweep or direct lookup';
+		/* Distinguish "we looked and it isn't there" from "the lookup failed" —
+		   publishing the second as the first is a false absence. */
+		out.error = lookupError
+			? `Google Business Profile not determined — ${lookupError}`
+			: 'no Google Business Profile found by listings sweep, direct lookup, or targeted title search';
+		out.lookupFailed = Boolean(lookupError);
 		return out;
 	}
 
@@ -533,7 +545,8 @@ async function collectBusiness(biz, indexSlug, shared, cfg) {
 		shared.listingMatches.get(gbpKey) || null,
 		shared.gbpByQuery.get(gbpKey) || null,
 		shared.reviewsByQuery.get(gbpKey) || null,
-		cfg
+		cfg,
+		shared.targetedErrors?.get(gbpKey) || null
 	);
 	record.pillars.visibility = buildVisibility(business, shared.keywords, shared.serpByKeyword, cfg);
 	record.pillars.ai = buildAiPresence(business, shared.aiAnswers, cfg);
@@ -599,6 +612,9 @@ async function main() {
 		prompts.length * (AI_UNIT[engine.ai.engine] ?? 0.00591) +
 		(indexCfg.coordinate ? (engine.local.listingsLimit || 100) * LISTING_UNIT : 0) +
 		businesses.length * (engine.local.profileFallback ? 0.0015 : 0) +
+		// targeted title lookups only run for the residual, and only when the
+		// sweep is configured; assume a third of businesses fall through
+		(indexCfg.coordinate && sector.dfsCategories?.length ? Math.ceil(businesses.length / 3) * 0.0127 : 0) +
 		businesses.length * (engine.local.reviewVelocity ? 0.0015 : 0);
 
 	console.log(`Index:      ${indexSlug}`);
@@ -693,6 +709,45 @@ async function main() {
 	if (allHarvested) await writeStore(true);
 	console.log(`    ${[...serpByKeyword.values()].filter(Boolean).length}/${keywords.length} keyword(s) returned\n`);
 
+	/* ---- The wider landscape, extracted from SERPs already paid for ----
+
+	   Every organic result and every ad in these responses is data we have
+	   bought. Keeping only the seed's own positions throws away the competitive
+	   set, the directory share, and — most usefully — evidence that the seed
+	   itself is incomplete. This costs nothing per run. */
+	let landscape = null;
+	try {
+		landscape = buildLandscape(serpByKeyword, businesses.map((b) => b.url));
+	} catch (e) {
+		console.log(`    ! landscape extraction failed: ${e.message} (SERP data is unaffected)`);
+	}
+	if (landscape) {
+		await writeFile(
+			join(outDir, '_landscape.json'),
+			JSON.stringify({ index: indexSlug, collectedAt: new Date().toISOString(), ...landscape }, null, 2) + '\n'
+		);
+
+		const ls = landscape.summary;
+		if (!landscape.measuredKeywords) {
+			console.log('    no SERPs harvested — landscape not computed');
+		} else {
+			console.log(`    page-1 share: seed holds ${ls.heldBySeed}/${ls.slotsAvailable} top-10 slots (${ls.seedSharePct}%), ${ls.distinctDomains} distinct domains seen`);
+			if (landscape.seedGaps.length) {
+				console.log(`    ! ${landscape.seedGaps.length} untracked domain(s) rank top-10 repeatedly or place top-5 — candidates the seed is missing:`);
+				landscape.seedGaps.slice(0, 6).forEach((d) =>
+					console.log(`        ${d.domain} (${d.top10Slots} top-10 slot(s), best #${d.bestPosition ?? 'n/a'})`));
+			}
+			if (ls.paidSlotsSeen) {
+				const extra = ls.paidSlotsUnresolvedDomain ? `, ${ls.paidSlotsUnresolvedDomain} with an unparseable domain` : '';
+				console.log(`    ${ls.paidSlotsSeen} paid slot(s) seen from ${landscape.paidAdvertisers.length} advertiser(s)${extra}: `
+					+ landscape.paidAdvertisers.slice(0, 5).map((a) => a.domain).join(', '));
+			} else {
+				console.log('    no paid slots served in this sample (ad inventory varies by auction — a sample, not a census)');
+			}
+		}
+		console.log('');
+	}
+
 	console.log(`[2/3] AI presence — ${prompts.length} prompt(s) via ${engine.ai.engine}/${engine.ai.model}`);
 	const aiAnswers = [];
 	for (const prompt of prompts) {
@@ -749,13 +804,59 @@ async function main() {
 		console.log(`    fallback resolved ${[...gbpByQuery.values()].filter(Boolean).length}/${unmatched.length}`);
 	}
 
+	/* 3c. Targeted title lookup for whatever the sweep and the direct lookup
+	   both missed. The sweep truncates (100 of 535 available for Bristol), so a
+	   firm can be absent from it purely by truncation. This tier is the most
+	   expensive per business (~$0.0127 flat) which is why it runs last, on the
+	   smallest residual. */
+	const targetedErrors = new Map();
+	const stillMissing = businesses.filter((b) => {
+		const k = gbpKeyFor(b);
+		return !listingMatches.has(k) && !gbpByQuery.get(k);
+	});
+
+	if (stillMissing.length && indexCfg.coordinate && sector.dfsCategories?.length) {
+		console.log(`    targeted: title lookup for ${stillMissing.length} still unmatched`);
+		for (const biz of stillMissing) {
+			const needle = searchNeedle(biz.name);
+			if (!needle) {
+				console.log(`        ${biz.name}: no distinctive name to search on — skipped`);
+				continue;
+			}
+			try {
+				const { items, totalCount } = await businessListingsByTitle(needle, indexCfg.coordinate);
+				if (totalCount !== null && totalCount > items.length) {
+					console.log(`        · ${biz.name}: ${items.length} of ${totalCount} candidates retrieved for "${needle}"`);
+				}
+				const m = matchTargeted(items, { name: biz.name, url: biz.url }, sector.dfsCategories);
+				if (m.items.length) {
+					listingMatches.set(gbpKeyFor(biz), m);
+					const note = m.matchedBy === 'name-category'
+						? ` (matched on name + category — its profile lists ${m.items[0].domain || 'no website'}, not ${biz.url})`
+						: '';
+					console.log(`        ✓ ${biz.name} — ${m.items.length} listing(s)${note}`);
+				} else if (m.ambiguous) {
+					targetedErrors.set(gbpKeyFor(biz), `ambiguous: "${needle}" matched several unrelated businesses (${m.ambiguous.join(', ')})`);
+					console.log(`        ? ${biz.name} — ambiguous, "${needle}" matched ${m.ambiguous.length} unrelated domains; not attributed`);
+				} else {
+					console.log(`        ✗ ${biz.name} — no listing found for "${needle}"`);
+				}
+			} catch (e) {
+				/* A lookup that ERRORED is not a firm with no profile. Recorded so
+				   the published record cannot assert an absence we never tested. */
+				targetedErrors.set(gbpKeyFor(biz), `targeted lookup failed: ${e.message}`);
+				console.log(`        ! ${biz.name} — targeted lookup failed: ${e.message}`);
+			}
+		}
+	}
+
 	const foundCount = businesses.filter((b) => {
 		const k = gbpKeyFor(b);
 		return listingMatches.has(k) || gbpByQuery.get(k);
 	}).length;
 	console.log(`    LOCAL PRESENCE FOUND: ${foundCount}/${businesses.length}`);
 
-	/* 3c. Reviews, keyed by place_id wherever one was resolved. */
+	/* 3d. Reviews, keyed by place_id wherever one was resolved. */
 	let reviewsByQuery = new Map();
 	if (engine.local.reviewVelocity) {
 		const reviewQueries = businesses.map((biz) => {
@@ -775,7 +876,7 @@ async function main() {
 	}
 	console.log('');
 
-	const shared = { keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor };
+	const shared = { keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor, targetedErrors };
 
 	/* ---- Phase 3: per-business assembly ---- */
 
