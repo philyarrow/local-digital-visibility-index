@@ -90,8 +90,9 @@ that effect stays visible.
 
 Visibility (SERP) and AI presence are bought **once per index** and read for
 every business in it: one geo-located SERP response holds every firm's position,
-one AI answer names whichever firms it names. Local presence is bought **per
-business** and multiplies.
+one AI answer names whichever firms it names. Local presence is mostly shared
+too — one listings sweep covers the index — with only the profile fallback and
+reviews priced per business.
 
 Collecting the shared signals per-business would multiply an index's cost by its
 business count for identical data. Preserve that structure.
@@ -104,7 +105,7 @@ Adding an index is a config entry plus a seed CSV — never a code change.
 |---|---|
 | `pipeline/config/engine.json` | SERP depth/mode, AI engine + model, prompts and keywords per index, cadence, budget |
 | `pipeline/config/sectors.json` | Keyword and AI-prompt templates per sector, with `{town}` / `{area}` placeholders |
-| `pipeline/config/indices.json` | Index registry: slug → sector, town, DataForSEO `locationName`, areas |
+| `pipeline/config/indices.json` | Index registry: slug → sector, town, DataForSEO `locationName`, `coordinate` (for the listings sweep), areas |
 
 The seed CSV filename must match the `indices.json` key.
 
