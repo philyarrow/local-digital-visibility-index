@@ -355,7 +355,7 @@ function aggregateBranches(items) {
 	};
 }
 
-function buildLocal(business, matched, gbpItem, reviewsResult, cfg) {
+function buildLocal(business, matched, gbpItem, reviewsResult, cfg, lookupError = null) {
 	const usingListings = matched && matched.items.length > 0;
 	const out = {
 		source: usingListings
@@ -392,7 +392,12 @@ function buildLocal(business, matched, gbpItem, reviewsResult, cfg) {
 		out.napConsistent = napConsistency(gbpItem, business);
 		out.branchCount = 1;
 	} else {
-		out.error = 'no Google Business Profile found by listings sweep or direct lookup';
+		/* Distinguish "we looked and it isn't there" from "the lookup failed" —
+		   publishing the second as the first is a false absence. */
+		out.error = lookupError
+			? `Google Business Profile not determined — ${lookupError}`
+			: 'no Google Business Profile found by listings sweep, direct lookup, or targeted title search';
+		out.lookupFailed = Boolean(lookupError);
 		return out;
 	}
 
@@ -540,7 +545,8 @@ async function collectBusiness(biz, indexSlug, shared, cfg) {
 		shared.listingMatches.get(gbpKey) || null,
 		shared.gbpByQuery.get(gbpKey) || null,
 		shared.reviewsByQuery.get(gbpKey) || null,
-		cfg
+		cfg,
+		shared.targetedErrors?.get(gbpKey) || null
 	);
 	record.pillars.visibility = buildVisibility(business, shared.keywords, shared.serpByKeyword, cfg);
 	record.pillars.ai = buildAiPresence(business, shared.aiAnswers, cfg);
@@ -606,8 +612,9 @@ async function main() {
 		prompts.length * (AI_UNIT[engine.ai.engine] ?? 0.00591) +
 		(indexCfg.coordinate ? (engine.local.listingsLimit || 100) * LISTING_UNIT : 0) +
 		businesses.length * (engine.local.profileFallback ? 0.0015 : 0) +
-		// targeted title lookups only run for the residual; assume a third
-		Math.ceil(businesses.length / 3) * 0.0127 +
+		// targeted title lookups only run for the residual, and only when the
+		// sweep is configured; assume a third of businesses fall through
+		(indexCfg.coordinate && sector.dfsCategories?.length ? Math.ceil(businesses.length / 3) * 0.0127 : 0) +
 		businesses.length * (engine.local.reviewVelocity ? 0.0015 : 0);
 
 	console.log(`Index:      ${indexSlug}`);
@@ -802,12 +809,13 @@ async function main() {
 	   firm can be absent from it purely by truncation. This tier is the most
 	   expensive per business (~$0.0127 flat) which is why it runs last, on the
 	   smallest residual. */
+	const targetedErrors = new Map();
 	const stillMissing = businesses.filter((b) => {
 		const k = gbpKeyFor(b);
 		return !listingMatches.has(k) && !gbpByQuery.get(k);
 	});
 
-	if (stillMissing.length && indexCfg.coordinate) {
+	if (stillMissing.length && indexCfg.coordinate && sector.dfsCategories?.length) {
 		console.log(`    targeted: title lookup for ${stillMissing.length} still unmatched`);
 		for (const biz of stillMissing) {
 			const needle = searchNeedle(biz.name);
@@ -816,7 +824,10 @@ async function main() {
 				continue;
 			}
 			try {
-				const items = await businessListingsByTitle(needle, indexCfg.coordinate);
+				const { items, totalCount } = await businessListingsByTitle(needle, indexCfg.coordinate);
+				if (totalCount !== null && totalCount > items.length) {
+					console.log(`        · ${biz.name}: ${items.length} of ${totalCount} candidates retrieved for "${needle}"`);
+				}
 				const m = matchTargeted(items, { name: biz.name, url: biz.url }, sector.dfsCategories);
 				if (m.items.length) {
 					listingMatches.set(gbpKeyFor(biz), m);
@@ -824,10 +835,16 @@ async function main() {
 						? ` (matched on name + category — its profile lists ${m.items[0].domain || 'no website'}, not ${biz.url})`
 						: '';
 					console.log(`        ✓ ${biz.name} — ${m.items.length} listing(s)${note}`);
+				} else if (m.ambiguous) {
+					targetedErrors.set(gbpKeyFor(biz), `ambiguous: "${needle}" matched several unrelated businesses (${m.ambiguous.join(', ')})`);
+					console.log(`        ? ${biz.name} — ambiguous, "${needle}" matched ${m.ambiguous.length} unrelated domains; not attributed`);
 				} else {
 					console.log(`        ✗ ${biz.name} — no listing found for "${needle}"`);
 				}
 			} catch (e) {
+				/* A lookup that ERRORED is not a firm with no profile. Recorded so
+				   the published record cannot assert an absence we never tested. */
+				targetedErrors.set(gbpKeyFor(biz), `targeted lookup failed: ${e.message}`);
 				console.log(`        ! ${biz.name} — targeted lookup failed: ${e.message}`);
 			}
 		}
@@ -859,7 +876,7 @@ async function main() {
 	}
 	console.log('');
 
-	const shared = { keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor };
+	const shared = { keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor, targetedErrors };
 
 	/* ---- Phase 3: per-business assembly ---- */
 

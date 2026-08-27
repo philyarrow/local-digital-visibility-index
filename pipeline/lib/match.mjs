@@ -315,9 +315,21 @@ export function matchTargeted(items, business, sectorCategories = []) {
 		const labels = [i.category, ...(i.additional_categories || [])].map(flat);
 		return [...cats].some((c) => labels.includes(flat(c)));
 	});
-	return byName.length
-		? { items: byName, matchedBy: 'name-category' }
-		: { items: [], matchedBy: null };
+	if (!byName.length) return { items: [], matchedBy: null };
+
+	/* A title search casts wide enough to catch a same-sector NAMESAKE, which
+	   the category test cannot see: searchNeedle("Ocean Estate Agents") is
+	   "ocean", and every "Ocean …" agency in the radius is a real estate agency.
+	   aggregateBranches would then sum a stranger's reviews into this firm.
+
+	   Branches of one business share a website; unrelated namesakes do not. So
+	   accept only when the candidates resolve to a single domain. If they span
+	   several, the match is ambiguous and no local data is better than another
+	   firm's. */
+	const domains = new Set(byName.map((i) => registrableDomain(i.domain)).filter(Boolean));
+	if (domains.size > 1) return { items: [], matchedBy: null, ambiguous: [...domains] };
+
+	return { items: byName, matchedBy: 'name-category' };
 }
 
 /* A needle for an `ilike` title filter.

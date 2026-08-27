@@ -346,14 +346,26 @@ export async function businessListings(categories, coordinate, { limit = 100 } =
    `ilike` matters: `like` is case-sensitive, and a lowercased needle against
    title-cased listings silently returns nothing. Priced by a flat base fee
    (~$0.0127) rather than by results, so `limit` is not a cost lever here. */
-export async function businessListingsByTitle(needle, coordinate, { limit = 10 } = {}) {
-	if (!needle) return [];
+export async function businessListingsByTitle(needle, coordinate, { limit = 30 } = {}) {
+	if (!needle) return { items: [], totalCount: 0 };
 	const d = await post('business_data/business_listings/search/live', [{
 		location_coordinate: coordinate,
 		limit,
 		filters: [['title', 'ilike', `%${needle}%`]],
 	}], { label: 'business_data/business_listings/search (targeted)' });
-	return d.tasks?.[0]?.result?.[0]?.items || [];
+
+	/* request() throws only on the TOP-LEVEL status. A per-task failure leaves
+	   result null, which would otherwise read as an empty result set — i.e. a
+	   lookup error published as "this firm has no Google presence". */
+	const task = d.tasks?.[0];
+	if (task && task.status_code !== 20000) {
+		throw new Error(`business_listings (targeted): ${task.status_code} ${task.status_message}`);
+	}
+
+	const result = task?.result?.[0];
+	// totalCount is returned so the caller can tell truncation from completeness
+	// — the same silent truncation this tier exists to work around.
+	return { items: result?.items || [], totalCount: result?.total_count ?? null };
 }
 
 /* my_business_info is queue-only. Post a batch, poll for each. */
