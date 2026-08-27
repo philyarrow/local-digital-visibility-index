@@ -270,6 +270,11 @@ async function main() {
 	/* The competitive landscape is collected per index and lives beside the
 	   business records; surface it here so the hub page can show who really
 	   owns page one rather than only how the seed ranks against itself. */
+	const sidecar = async (name) => {
+		try { return JSON.parse(await readFile(join(dir, name), 'utf8')); }
+		catch (e) { if (e.code !== 'ENOENT') throw e; return null; }
+	};
+
 	let landscape = null;
 	try {
 		landscape = JSON.parse(await readFile(join(dir, '_landscape.json'), 'utf8'));
@@ -291,6 +296,8 @@ async function main() {
 		overallMedian,
 		sectorMedians,
 		pillarCoverage,
+		intent: await sidecar('_intent.json'),
+		geoGrid: await sidecar('_geogrid.json'),
 		landscape: landscape ? {
 			measuredKeywords: landscape.measuredKeywords,
 			summary: landscape.summary,

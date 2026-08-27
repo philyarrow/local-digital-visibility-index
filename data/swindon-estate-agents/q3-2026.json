@@ -2,7 +2,7 @@
   "index": "swindon-estate-agents",
   "title": "PYC Swindon Estate Agent Digital Visibility Index",
   "quarter": "Q3-2026",
-  "measuredAt": "2026-08-27T16:53:59.873Z",
+  "measuredAt": "2026-08-27T17:57:13.339Z",
   "methodology": "https://hub.pyc.agency/indices/methodology/",
   "weights": {
     "speed": 20,
@@ -24,7 +24,7 @@
       "live": true
     },
     "local": {
-      "scored": 7,
+      "scored": 8,
       "total": 8,
       "live": true
     },
@@ -44,14 +44,14 @@
       "live": true
     }
   },
-  "overallMedian": 67,
+  "overallMedian": 68.5,
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
-    "speed": 63.5,
+    "speed": 65,
     "technical": 88,
     "local": 78,
-    "visibility": 47.5,
-    "ai": 20,
+    "visibility": 49,
+    "ai": 40,
     "content": 100
   },
   "businesses": [
@@ -61,10 +61,10 @@
       "url": "https://www.charles-harding.co.uk/",
       "digitalVisibilityScore": 85,
       "pillarScores": {
-        "speed": 73,
+        "speed": 71,
         "technical": 100,
         "local": 78,
-        "visibility": 63,
+        "visibility": 65,
         "ai": 100,
         "content": 100
       },
@@ -92,7 +92,7 @@
       "url": "https://www.chappells.uk.com/",
       "digitalVisibilityScore": 73,
       "pillarScores": {
-        "speed": 69,
+        "speed": 68,
         "technical": 75,
         "local": 79,
         "visibility": 45,
@@ -121,13 +121,13 @@
       "rank": 3,
       "name": "McFarlane",
       "url": "https://www.mcfarlaneproperty.com/",
-      "digitalVisibilityScore": 70,
+      "digitalVisibilityScore": 73,
       "pillarScores": {
         "speed": 75,
         "technical": 88,
         "local": 78,
         "visibility": 58,
-        "ai": 20,
+        "ai": 40,
         "content": 100
       },
       "includedPillars": [
@@ -152,13 +152,13 @@
       "rank": 4,
       "name": "Connells Swindon Old Town",
       "url": "https://www.connells.co.uk/estate-agents/swindon-old-town",
-      "digitalVisibilityScore": 68,
+      "digitalVisibilityScore": 69,
       "pillarScores": {
-        "speed": 61,
+        "speed": 58,
         "technical": 88,
         "local": 79,
-        "visibility": 65,
-        "ai": 20,
+        "visibility": 52,
+        "ai": 40,
         "content": 100
       },
       "includedPillars": [
@@ -183,12 +183,12 @@
       "rank": 5,
       "name": "Richard James",
       "url": "https://richardjames.uk/",
-      "digitalVisibilityScore": 66,
+      "digitalVisibilityScore": 68,
       "pillarScores": {
-        "speed": 37,
+        "speed": 44,
         "technical": 88,
         "local": 79,
-        "visibility": 43,
+        "visibility": 52,
         "ai": 100,
         "content": 33
       },
@@ -214,44 +214,43 @@
       "rank": 6,
       "name": "Location Real Estate",
       "url": "https://locationrealestate.co.uk/",
-      "digitalVisibilityScore": 61,
+      "digitalVisibilityScore": 63,
       "pillarScores": {
-        "speed": 66,
+        "speed": 62,
         "technical": 100,
-        "local": null,
-        "visibility": 38,
+        "local": 75,
+        "visibility": 34,
         "ai": 0,
         "content": 100
       },
       "includedPillars": [
         "speed",
         "technical",
+        "local",
         "visibility",
         "ai",
         "content"
       ],
-      "excludedPillars": [
-        "local"
-      ],
+      "excludedPillars": [],
       "effectiveWeights": {
-        "speed": 25,
-        "technical": 25,
-        "local": 0,
-        "visibility": 18.75,
-        "ai": 18.75,
-        "content": 12.5
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
       }
     },
     {
       "rank": 7,
       "name": "Taylors Swindon",
       "url": "https://www.taylorsestateagents.co.uk/branch/estate-agents/swindon",
-      "digitalVisibilityScore": 56,
+      "digitalVisibilityScore": 57,
       "pillarScores": {
-        "speed": 60,
+        "speed": 69,
         "technical": 88,
         "local": 77,
-        "visibility": 50,
+        "visibility": 46,
         "ai": 0,
         "content": 33
       },
@@ -277,13 +276,13 @@
       "rank": 8,
       "name": "Atwell Martin Swindon",
       "url": "https://swindon.atwellmartin.co.uk/",
-      "digitalVisibilityScore": 44,
+      "digitalVisibilityScore": 47,
       "pillarScores": {
         "speed": 52,
         "technical": 100,
         "local": 68,
         "visibility": 0,
-        "ai": 0,
+        "ai": 20,
         "content": 0
       },
       "includedPillars": [

@@ -2,7 +2,7 @@
   "index": "bristol-estate-agents",
   "title": "PYC Bristol Estate Agent Digital Visibility Index",
   "quarter": "Q3-2026",
-  "measuredAt": "2026-08-27T16:53:59.359Z",
+  "measuredAt": "2026-08-27T17:57:12.760Z",
   "methodology": "https://hub.pyc.agency/indices/methodology/",
   "weights": {
     "speed": 20,
@@ -47,11 +47,11 @@
   "overallMedian": 57.5,
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
-    "speed": 69,
+    "speed": 71.5,
     "technical": 88,
     "local": 79,
-    "visibility": 28.5,
-    "ai": 20,
+    "visibility": 29,
+    "ai": 10,
     "content": 67
   },
   "businesses": [
@@ -61,11 +61,11 @@
       "url": "https://www.cjhole.co.uk/",
       "digitalVisibilityScore": 78,
       "pillarScores": {
-        "speed": 65,
+        "speed": 77,
         "technical": 100,
         "local": 79,
         "visibility": 52,
-        "ai": 100,
+        "ai": 80,
         "content": 67
       },
       "includedPillars": [
@@ -90,12 +90,12 @@
       "rank": 2,
       "name": "Ocean Estate Agents",
       "url": "https://www.oceanhome.co.uk/",
-      "digitalVisibilityScore": 71,
+      "digitalVisibilityScore": 70,
       "pillarScores": {
-        "speed": 74,
+        "speed": 71,
         "technical": 63,
         "local": 79,
-        "visibility": 60,
+        "visibility": 61,
         "ai": 80,
         "content": 67
       },
@@ -119,15 +119,15 @@
     },
     {
       "rank": 3,
-      "name": "Hollis Morgan",
-      "url": "https://www.hollismorgan.co.uk/",
+      "name": "Andrews Property Group",
+      "url": "https://www.andrewsonline.co.uk/",
       "digitalVisibilityScore": 64,
       "pillarScores": {
-        "speed": 90,
-        "technical": 75,
-        "local": 79,
-        "visibility": 14,
-        "ai": 20,
+        "speed": 69,
+        "technical": 88,
+        "local": 60,
+        "visibility": 33,
+        "ai": 40,
         "content": 100
       },
       "includedPillars": [
@@ -152,12 +152,12 @@
       "rank": 4,
       "name": "Allen & Harris",
       "url": "https://www.allenandharris.co.uk/",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 63,
       "pillarScores": {
-        "speed": 69,
+        "speed": 74,
         "technical": 88,
         "local": 78,
-        "visibility": 35,
+        "visibility": 37,
         "ai": 20,
         "content": 67
       },
@@ -181,76 +181,14 @@
     },
     {
       "rank": 5,
-      "name": "Andrews Property Group",
-      "url": "https://www.andrewsonline.co.uk/",
-      "digitalVisibilityScore": 62,
-      "pillarScores": {
-        "speed": 69,
-        "technical": 88,
-        "local": 60,
-        "visibility": 38,
-        "ai": 20,
-        "content": 100
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      }
-    },
-    {
-      "rank": 6,
       "name": "Boardwalk Property",
       "url": "https://www.boardwalkpropertyco.com/",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 60,
       "pillarScores": {
-        "speed": 69,
+        "speed": 73,
         "technical": 75,
         "local": 80,
-        "visibility": 35,
-        "ai": 60,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      }
-    },
-    {
-      "rank": 7,
-      "name": "Elephant Estate Agents",
-      "url": "https://www.elephantlovesbristol.co.uk/",
-      "digitalVisibilityScore": 62,
-      "pillarScores": {
-        "speed": 77,
-        "technical": 88,
-        "local": 80,
-        "visibility": 24,
+        "visibility": 36,
         "ai": 40,
         "content": 33
       },
@@ -273,15 +211,46 @@
       }
     },
     {
-      "rank": 8,
+      "rank": 6,
+      "name": "Elephant Estate Agents",
+      "url": "https://www.elephantlovesbristol.co.uk/",
+      "digitalVisibilityScore": 59,
+      "pillarScores": {
+        "speed": 77,
+        "technical": 88,
+        "local": 80,
+        "visibility": 26,
+        "ai": 20,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      }
+    },
+    {
+      "rank": 7,
       "name": "Knight Frank Bristol",
       "url": "https://www.knightfrank.co.uk/offices/bristol-estate-agents",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 59,
       "pillarScores": {
-        "speed": 55,
+        "speed": 45,
         "technical": 88,
         "local": 78,
-        "visibility": 38,
+        "visibility": 32,
         "ai": 60,
         "content": 33
       },
@@ -304,15 +273,15 @@
       }
     },
     {
-      "rank": 9,
+      "rank": 8,
       "name": "Richard Harding",
       "url": "https://www.richardharding.co.uk/",
       "digitalVisibilityScore": 59,
       "pillarScores": {
-        "speed": 67,
+        "speed": 63,
         "technical": 88,
         "local": 80,
-        "visibility": 17,
+        "visibility": 18,
         "ai": 20,
         "content": 67
       },
@@ -335,15 +304,15 @@
       }
     },
     {
-      "rank": 10,
+      "rank": 9,
       "name": "Chappell & Matthews",
       "url": "https://www.chappellandmatthews.co.uk/",
-      "digitalVisibilityScore": 56,
+      "digitalVisibilityScore": 58,
       "pillarScores": {
-        "speed": 69,
+        "speed": 77,
         "technical": 88,
         "local": 79,
-        "visibility": 35,
+        "visibility": 41,
         "ai": 0,
         "content": 33
       },
@@ -366,15 +335,46 @@
       }
     },
     {
-      "rank": 11,
-      "name": "Besley Hill",
-      "url": "https://www.besleyhill.co.uk/",
-      "digitalVisibilityScore": 53,
+      "rank": 10,
+      "name": "Hollis Morgan",
+      "url": "https://www.hollismorgan.co.uk/",
+      "digitalVisibilityScore": 57,
       "pillarScores": {
-        "speed": 81,
-        "technical": 88,
-        "local": 61,
-        "visibility": 0,
+        "speed": 72,
+        "technical": 75,
+        "local": 79,
+        "visibility": 14,
+        "ai": 0,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      }
+    },
+    {
+      "rank": 11,
+      "name": "Maggs & Allen",
+      "url": "https://www.maggsandallen.co.uk/",
+      "digitalVisibilityScore": 54,
+      "pillarScores": {
+        "speed": 67,
+        "technical": 75,
+        "local": 79,
+        "visibility": 18,
         "ai": 0,
         "content": 67
       },
@@ -398,14 +398,14 @@
     },
     {
       "rank": 12,
-      "name": "Maggs & Allen",
-      "url": "https://www.maggsandallen.co.uk/",
+      "name": "Besley Hill",
+      "url": "https://www.besleyhill.co.uk/",
       "digitalVisibilityScore": 53,
       "pillarScores": {
-        "speed": 64,
-        "technical": 75,
-        "local": 79,
-        "visibility": 18,
+        "speed": 84,
+        "technical": 88,
+        "local": 61,
+        "visibility": 0,
         "ai": 0,
         "content": 67
       },
@@ -433,7 +433,7 @@
       "url": "https://www.leeseandnagle.co.uk/",
       "digitalVisibilityScore": 52,
       "pillarScores": {
-        "speed": 57,
+        "speed": 58,
         "technical": 100,
         "local": 67,
         "visibility": 0,
@@ -464,7 +464,7 @@
       "url": "https://www.hydes.co.uk/",
       "digitalVisibilityScore": 49,
       "pillarScores": {
-        "speed": 52,
+        "speed": 51,
         "technical": 100,
         "local": 22,
         "visibility": 33,
@@ -493,9 +493,9 @@
       "rank": 15,
       "name": "Goodman & Lilley",
       "url": "https://goodmanlilley.co.uk/",
-      "digitalVisibilityScore": 44,
+      "digitalVisibilityScore": 45,
       "pillarScores": {
-        "speed": 74,
+        "speed": 78,
         "technical": 50,
         "local": 79,
         "visibility": 21,
@@ -524,9 +524,9 @@
       "rank": 16,
       "name": "Connells Bristol",
       "url": "https://www.connells.co.uk/estate-agents/bristol",
-      "digitalVisibilityScore": 41,
+      "digitalVisibilityScore": 42,
       "pillarScores": {
-        "speed": 39,
+        "speed": 41,
         "technical": 50,
         "local": 76,
         "visibility": 33,
@@ -555,9 +555,9 @@
       "rank": 17,
       "name": "Edison Ford",
       "url": "https://www.edisonford.co.uk/",
-      "digitalVisibilityScore": 38,
+      "digitalVisibilityScore": 40,
       "pillarScores": {
-        "speed": 49,
+        "speed": 59,
         "technical": 75,
         "local": 68,
         "visibility": 0,

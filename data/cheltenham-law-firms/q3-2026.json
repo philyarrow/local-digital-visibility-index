@@ -2,7 +2,7 @@
   "index": "cheltenham-law-firms",
   "title": "PYC Cheltenham Law Firm Digital Visibility Index",
   "quarter": "Q3-2026",
-  "measuredAt": "2026-08-27T16:53:59.622Z",
+  "measuredAt": "2026-08-27T17:57:13.065Z",
   "methodology": "https://hub.pyc.agency/indices/methodology/",
   "weights": {
     "speed": 20,
@@ -44,27 +44,58 @@
       "live": true
     }
   },
-  "overallMedian": 61.5,
+  "overallMedian": 61,
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
-    "speed": 75.5,
+    "speed": 77,
     "technical": 75.5,
-    "local": 95,
-    "visibility": 39.5,
+    "local": 76,
+    "visibility": 38,
     "ai": 30,
     "content": 50
   },
   "businesses": [
     {
       "rank": 1,
+      "name": "BPE Solicitors",
+      "url": "https://www.bpe.co.uk/",
+      "digitalVisibilityScore": 70,
+      "pillarScores": {
+        "speed": 66,
+        "technical": 88,
+        "local": 73,
+        "visibility": 58,
+        "ai": 60,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      }
+    },
+    {
+      "rank": 2,
       "name": "Willans",
       "url": "https://www.willans.co.uk/",
-      "digitalVisibilityScore": 74,
+      "digitalVisibilityScore": 69,
       "pillarScores": {
-        "speed": 80,
+        "speed": 79,
         "technical": 33,
-        "local": 97,
-        "visibility": 82,
+        "local": 78,
+        "visibility": 80,
         "ai": 80,
         "content": null
       },
@@ -88,77 +119,15 @@
       }
     },
     {
-      "rank": 2,
-      "name": "BPE Solicitors",
-      "url": "https://www.bpe.co.uk/",
-      "digitalVisibilityScore": 72,
-      "pillarScores": {
-        "speed": 74,
-        "technical": 88,
-        "local": 91,
-        "visibility": 58,
-        "ai": 40,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      }
-    },
-    {
       "rank": 3,
-      "name": "Pembridge Solicitors",
-      "url": "https://pembridgesolicitors.co.uk/",
-      "digitalVisibilityScore": 66,
-      "pillarScores": {
-        "speed": 59,
-        "technical": 100,
-        "local": 95,
-        "visibility": 42,
-        "ai": 40,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      }
-    },
-    {
-      "rank": 4,
       "name": "Setfords Cheltenham",
       "url": "https://www.setfords.co.uk/locations/gloucestershire/solicitors-in-cheltenham/",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 66,
       "pillarScores": {
-        "speed": 76,
+        "speed": 94,
         "technical": 100,
         "local": null,
-        "visibility": 33,
+        "visibility": 29,
         "ai": 20,
         "content": 67
       },
@@ -182,15 +151,46 @@
       }
     },
     {
+      "rank": 4,
+      "name": "Pembridge Solicitors",
+      "url": "https://pembridgesolicitors.co.uk/",
+      "digitalVisibilityScore": 63,
+      "pillarScores": {
+        "speed": 59,
+        "technical": 100,
+        "local": 76,
+        "visibility": 46,
+        "ai": 40,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      }
+    },
+    {
       "rank": 5,
       "name": "Hine Solicitors",
       "url": "https://www.hinesolicitors.com/",
-      "digitalVisibilityScore": 61,
+      "digitalVisibilityScore": 59,
       "pillarScores": {
         "speed": 81,
         "technical": 100,
-        "local": 90,
-        "visibility": 21,
+        "local": 72,
+        "visibility": 33,
         "ai": 0,
         "content": 33
       },
@@ -218,11 +218,11 @@
       "url": "https://www.converselaw.com/",
       "digitalVisibilityScore": 56,
       "pillarScores": {
-        "speed": 59,
+        "speed": 67,
         "technical": 63,
-        "local": 95,
+        "local": 76,
         "visibility": 37,
-        "ai": 0,
+        "ai": 20,
         "content": 67
       },
       "includedPillars": [
@@ -247,11 +247,11 @@
       "rank": 7,
       "name": "HCR Law",
       "url": "https://www.hcrlaw.com/",
-      "digitalVisibilityScore": 52,
+      "digitalVisibilityScore": 50,
       "pillarScores": {
-        "speed": 87,
+        "speed": 95,
         "technical": 33,
-        "local": 86,
+        "local": 69,
         "visibility": 0,
         "ai": 40,
         "content": null
@@ -279,12 +279,12 @@
       "rank": 8,
       "name": "Davis Gregory",
       "url": "https://www.cheltenhamsolicitors.co.uk/",
-      "digitalVisibilityScore": 51,
+      "digitalVisibilityScore": 46,
       "pillarScores": {
         "speed": 75,
         "technical": 50,
-        "local": 98,
-        "visibility": 43,
+        "local": 78,
+        "visibility": 39,
         "ai": 0,
         "content": 0
       },

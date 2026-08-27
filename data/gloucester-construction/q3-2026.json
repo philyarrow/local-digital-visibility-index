@@ -2,7 +2,7 @@
   "index": "gloucester-construction",
   "title": "PYC Gloucester Construction Digital Visibility Index",
   "quarter": "Q3-2026",
-  "measuredAt": "2026-08-27T16:53:59.789Z",
+  "measuredAt": "2026-08-27T17:57:13.247Z",
   "methodology": "https://hub.pyc.agency/indices/methodology/",
   "weights": {
     "speed": 20,
@@ -44,10 +44,10 @@
       "live": true
     }
   },
-  "overallMedian": 47,
+  "overallMedian": 46,
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
-    "speed": 63.5,
+    "speed": 58.5,
     "technical": 75,
     "local": 63,
     "visibility": 29,
@@ -57,11 +57,42 @@
   "businesses": [
     {
       "rank": 1,
+      "name": "Guardian Builders Gloucester",
+      "url": "https://www.guardianbuildersgloucester.co.uk/",
+      "digitalVisibilityScore": 58,
+      "pillarScores": {
+        "speed": 73,
+        "technical": 75,
+        "local": 63,
+        "visibility": 42,
+        "ai": 40,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      }
+    },
+    {
+      "rank": 2,
       "name": "Builder Gloucestershire",
       "url": "https://buildergloucestershire.co.uk/",
-      "digitalVisibilityScore": 64,
+      "digitalVisibilityScore": 56,
       "pillarScores": {
-        "speed": 100,
+        "speed": 62,
         "technical": 100,
         "local": 22,
         "visibility": 8,
@@ -87,46 +118,15 @@
       }
     },
     {
-      "rank": 2,
-      "name": "Guardian Builders Gloucester",
-      "url": "https://www.guardianbuildersgloucester.co.uk/",
-      "digitalVisibilityScore": 58,
-      "pillarScores": {
-        "speed": 72,
-        "technical": 75,
-        "local": 63,
-        "visibility": 42,
-        "ai": 40,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      }
-    },
-    {
       "rank": 3,
       "name": "Buildex Construction",
       "url": "https://buildexuk.com/",
-      "digitalVisibilityScore": 56,
+      "digitalVisibilityScore": 51,
       "pillarScores": {
-        "speed": 67,
+        "speed": 41,
         "technical": 75,
         "local": 63,
-        "visibility": 13,
+        "visibility": 17,
         "ai": 40,
         "content": 67
       },
@@ -150,45 +150,14 @@
     },
     {
       "rank": 4,
-      "name": "Longlevens Building",
-      "url": "http://www.longlevensbuilding.com/",
-      "digitalVisibilityScore": 50,
-      "pillarScores": {
-        "speed": 58,
-        "technical": 75,
-        "local": 65,
-        "visibility": 29,
-        "ai": 20,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      }
-    },
-    {
-      "rank": 5,
       "name": "RPM Building Services",
       "url": "https://www.rpmbuildingservices.co.uk/",
-      "digitalVisibilityScore": 50,
+      "digitalVisibilityScore": 49,
       "pillarScores": {
-        "speed": 56,
+        "speed": 55,
         "technical": 100,
         "local": 63,
-        "visibility": 38,
+        "visibility": 33,
         "ai": 0,
         "content": 0
       },
@@ -211,15 +180,15 @@
       }
     },
     {
-      "rank": 6,
-      "name": "Carma UK Construction",
-      "url": "https://www.carmaukconstruction.co.uk/",
-      "digitalVisibilityScore": 49,
+      "rank": 5,
+      "name": "Longlevens Building",
+      "url": "http://www.longlevensbuilding.com/",
+      "digitalVisibilityScore": 47,
       "pillarScores": {
-        "speed": 56,
-        "technical": 100,
-        "local": 68,
-        "visibility": 4,
+        "speed": 57,
+        "technical": 75,
+        "local": 65,
+        "visibility": 29,
         "ai": 0,
         "content": 33
       },
@@ -242,12 +211,12 @@
       }
     },
     {
-      "rank": 7,
+      "rank": 6,
       "name": "AJ Build",
       "url": "https://ajbuildltd.com/",
-      "digitalVisibilityScore": 47,
+      "digitalVisibilityScore": 46,
       "pillarScores": {
-        "speed": 67,
+        "speed": 66,
         "technical": 100,
         "local": null,
         "visibility": 4,
@@ -274,43 +243,12 @@
       }
     },
     {
-      "rank": 8,
-      "name": "Halford Builders",
-      "url": "https://www.halfordbuilders.co.uk/",
-      "digitalVisibilityScore": 47,
-      "pillarScores": {
-        "speed": 62,
-        "technical": 75,
-        "local": 56,
-        "visibility": 33,
-        "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      }
-    },
-    {
-      "rank": 9,
+      "rank": 7,
       "name": "Cotswold Construction",
       "url": "https://www.cotswold-construction.co.uk/",
       "digitalVisibilityScore": 46,
       "pillarScores": {
-        "speed": 65,
+        "speed": 62,
         "technical": 50,
         "local": 50,
         "visibility": 29,
@@ -336,44 +274,74 @@
       }
     },
     {
-      "rank": 10,
-      "name": "L & W Building Contractors",
-      "url": "https://landwbuilders.com/",
-      "digitalVisibilityScore": 45,
+      "rank": 8,
+      "name": "Halford Builders",
+      "url": "https://www.halfordbuilders.co.uk/",
+      "digitalVisibilityScore": 46,
       "pillarScores": {
-        "speed": 59,
-        "technical": 88,
-        "local": null,
-        "visibility": 42,
+        "speed": 60,
+        "technical": 75,
+        "local": 56,
+        "visibility": 29,
         "ai": 0,
-        "content": 0
+        "content": 33
       },
       "includedPillars": [
         "speed",
         "technical",
+        "local",
         "visibility",
         "ai",
         "content"
       ],
-      "excludedPillars": [
-        "local"
-      ],
+      "excludedPillars": [],
       "effectiveWeights": {
-        "speed": 25,
-        "technical": 25,
-        "local": 0,
-        "visibility": 18.75,
-        "ai": 18.75,
-        "content": 12.5
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
       }
     },
     {
-      "rank": 11,
+      "rank": 9,
+      "name": "Carma UK Construction",
+      "url": "https://www.carmaukconstruction.co.uk/",
+      "digitalVisibilityScore": 44,
+      "pillarScores": {
+        "speed": 32,
+        "technical": 100,
+        "local": 68,
+        "visibility": 4,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      }
+    },
+    {
+      "rank": 10,
       "name": "A.R.D. Developments",
       "url": "https://www.arddevelopmentsltd.co.uk/",
       "digitalVisibilityScore": 43,
       "pillarScores": {
-        "speed": 44,
+        "speed": 48,
         "technical": 63,
         "local": 65,
         "visibility": 33,
@@ -399,15 +367,15 @@
       }
     },
     {
-      "rank": 12,
+      "rank": 11,
       "name": "King Builders",
       "url": "https://www.kingbuildersglosltd.co.uk/",
       "digitalVisibilityScore": 40,
       "pillarScores": {
-        "speed": 65,
+        "speed": 61,
         "technical": 50,
         "local": 65,
-        "visibility": 27,
+        "visibility": 31,
         "ai": 0,
         "content": 0
       },
@@ -427,6 +395,38 @@
         "visibility": 15,
         "ai": 15,
         "content": 10
+      }
+    },
+    {
+      "rank": 12,
+      "name": "L & W Building Contractors",
+      "url": "https://landwbuilders.com/",
+      "digitalVisibilityScore": 37,
+      "pillarScores": {
+        "speed": 32,
+        "technical": 88,
+        "local": null,
+        "visibility": 38,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [
+        "local"
+      ],
+      "effectiveWeights": {
+        "speed": 25,
+        "technical": 25,
+        "local": 0,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
       }
     },
     {

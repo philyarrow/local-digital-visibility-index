@@ -498,3 +498,111 @@ export async function reviewsBatch(queries, { depth = 20, pollMs = 15000, maxWai
 	}
 	return out;
 }
+
+/* ---- search intent ------------------------------------------------------ */
+
+/* Intent classification for the whole keyword basket — one call per index,
+   ~$0.0134 for twelve keywords.
+
+   Worth publishing even when the answer is monotone: every Cheltenham keyword
+   came back "commercial", which means the Visibility pillar measures one slice
+   of the funnel and calls it visibility. That is a methodology finding the
+   chart exists to expose, not decoration. */
+export async function searchIntent(keywords, { languageCode = 'en' } = {}) {
+	if (!keywords?.length) return [];
+	const d = await post('dataforseo_labs/google/search_intent/live', [{
+		keywords,
+		language_code: languageCode,
+	}], { label: 'labs/search_intent' });
+
+	const task = d.tasks?.[0];
+	if (task && task.status_code !== 20000) {
+		throw new Error(`search_intent: ${task.status_code} ${task.status_message}`);
+	}
+	return (task?.result?.[0]?.items || []).map((i) => ({
+		keyword: i.keyword,
+		intent: i.keyword_intent?.label ?? null,
+		probability: i.keyword_intent?.probability ?? null,
+		secondary: (i.secondary_keyword_intents || []).map((x) => x.label).filter(Boolean),
+	}));
+}
+
+/* ---- local-pack geo grid ------------------------------------------------ */
+
+/* The same query issued from a grid of points across a city.
+
+   Verified: "estate agents near me" from two Bristol points 6km apart returns
+   almost entirely different 3-packs — only one chain appeared in both, via
+   different branches. A firm can look strong in the index and be invisible
+   three miles from its own office, and no other figure here can show that.
+
+   Live rather than queued: a grid is small, and queueing 9-25 tasks to wait 20
+   minutes for a single figure is a poor trade. Depth 20 is enough — the local
+   pack sits at the top. */
+export async function localPackGrid(keyword, points, {
+	depth = 20, radius = 1000, languageCode = 'en', device = 'mobile', log = () => {},
+} = {}) {
+	/* location_coordinate is "latitude,longitude,radius" and DataForSEO
+	   documents radius as 199..199999. An out-of-range value is not honoured, so
+	   this is validated rather than trusted — an earlier revision passed a Maps
+	   "zoom" of 14 here, below the documented minimum. */
+	if (radius < 199 || radius > 199999) {
+		throw new Error(`geo grid radius ${radius} is outside DataForSEO's documented range 199-199999`);
+	}
+
+	const out = [];
+	for (const pt of points) {
+		try {
+			const d = await post('serp/google/organic/live/advanced', [{
+				keyword,
+				location_coordinate: `${pt.lat},${pt.lng},${radius}`,
+				language_code: languageCode,
+				device,
+				depth,
+			}], { label: 'serp/organic/live (geo grid)' });
+
+			const task = d.tasks?.[0];
+			if (task && task.status_code !== 20000) {
+				log(`      ! grid point ${pt.lat},${pt.lng}: ${task.status_message}`);
+				out.push({ ...pt, pack: null, organic: null, error: task.status_message });
+				continue;
+			}
+			const items = task?.result?.[0]?.items || [];
+			out.push({
+				...pt,
+				pack: items.filter((i) => i.type === 'local_pack')
+					.map((i) => ({ title: i.title || null, domain: i.domain || null })),
+				organic: items.filter((i) => i.type === 'organic')
+					.map((i) => ({ domain: i.domain || null, position: i.rank_group ?? null })),
+				error: null,
+			});
+		} catch (e) {
+			log(`      ! grid point ${pt.lat},${pt.lng} failed: ${e.message}`);
+			out.push({ ...pt, pack: null, organic: null, error: e.message });
+		}
+	}
+	return out;
+}
+
+/* Build an n x n grid of lat/lng around a centre, spanning `radiusKm`.
+   Longitude degrees shrink with latitude, so the correction matters at UK
+   latitudes — without it a "square" grid is ~40% too wide. */
+export function buildGrid(centreLat, centreLng, radiusKm, n = 3) {
+	const kmPerDegLat = 110.574;
+	const kmPerDegLng = 111.320 * Math.cos((centreLat * Math.PI) / 180);
+	const points = [];
+	const step = n === 1 ? 0 : (2 * radiusKm) / (n - 1);
+	for (let r = 0; r < n; r++) {
+		for (let c = 0; c < n; c++) {
+			const dy = n === 1 ? 0 : radiusKm - r * step;
+			const dx = n === 1 ? 0 : -radiusKm + c * step;
+			points.push({
+				row: r,
+				col: c,
+				lat: Number((centreLat + dy / kmPerDegLat).toFixed(5)),
+				lng: Number((centreLng + dx / kmPerDegLng).toFixed(5)),
+			});
+		}
+	}
+	return points;
+}

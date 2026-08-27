@@ -349,3 +349,33 @@ export function searchNeedle(name) {
 	const tokens = residue.split(' ').filter((t) => t !== 'and' && t !== 'of' && t !== 'the');
 	return tokens.slice(0, 2).join('%') || null;
 }
+
+/* Which indexed firms hold a local-pack slot in one result set.
+
+   Returns DISTINCT firms, not pack entries: a chain listing two of its offices
+   in one pack is one firm being findable there, and counting entries inflated
+   a Swindon cell to 2 when only one indexed firm was present.
+
+   Matches on domain OR name, because DataForSEO reports `www.google.com` as the
+   domain for a profile with no website link — Wollens Solicitors is an indexed
+   Exeter firm and was being missed on domain alone.
+
+   A chain's other branch counts toward that chain. "Allen and Harris Corsham"
+   appearing near Bath is the brand being findable there, which is what a
+   coverage map measures; the caption says so rather than implying the exact
+   indexed office. */
+export function packFirms(pack, businesses) {
+	const found = new Map();
+	for (const entry of pack || []) {
+		for (const b of businesses) {
+			if (found.has(b.slug || b.name)) continue;
+			const domainHit = entry.domain && domainsMatch(entry.domain, b.url);
+			const nameHit = entry.title && textNamesBusiness(entry.title, { name: b.name, url: null });
+			if (domainHit || nameHit) {
+				found.set(b.slug || b.name, { name: b.name, via: domainHit ? 'domain' : 'name', entry: entry.title || null });
+				break;
+			}
+		}
+	}
+	return [...found.values()];
+}

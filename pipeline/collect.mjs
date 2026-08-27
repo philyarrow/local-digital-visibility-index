@@ -63,6 +63,9 @@ import {
 	reviewsBatch,
 	businessListings,
 	businessListingsByTitle,
+	searchIntent,
+	localPackGrid,
+	buildGrid,
 	spendSince,
 } from './lib/dataforseo.mjs';
 import { loadConfig, resolveIndex, buildKeywords, buildPrompts } from './lib/basket.mjs';
@@ -615,6 +618,9 @@ async function main() {
 		// targeted title lookups only run for the residual, and only when the
 		// sweep is configured; assume a third of businesses fall through
 		(indexCfg.coordinate && sector.dfsCategories?.length ? Math.ceil(businesses.length / 3) * 0.0127 : 0) +
+		(engine.intent?.enabled ? 0.0134 : 0) +
+		(engine.geoGrid?.enabled && indexCfg.coordinate && sector.geoKeyword
+			? Math.pow(engine.geoGrid.size || 3, 2) * 0.0035 : 0) +
 		businesses.length * (engine.local.reviewVelocity ? 0.0015 : 0);
 
 	console.log(`Index:      ${indexSlug}`);
@@ -642,7 +648,7 @@ async function main() {
 	/* ---- Phase 1: shared per-index signals (bought once) ---- */
 
 	const modeLabel = engine.serp.mode === 'queue' ? 'standard queue' : 'live';
-	console.log(`[1/3] SERP — ${keywords.length} keyword(s), ${modeLabel}, depth ${engine.serp.depth}`);
+	console.log(`[serp] SERP — ${keywords.length} keyword(s), ${modeLabel}, depth ${engine.serp.depth}`);
 
 	await mkdir(outDir, { recursive: true });
 
@@ -748,7 +754,7 @@ async function main() {
 		console.log('');
 	}
 
-	console.log(`[2/3] AI presence — ${prompts.length} prompt(s) via ${engine.ai.engine}/${engine.ai.model}`);
+	console.log(`[ai]   AI presence — ${prompts.length} prompt(s) via ${engine.ai.engine}/${engine.ai.model}`);
 	const aiAnswers = [];
 	for (const prompt of prompts) {
 		try {
@@ -765,7 +771,7 @@ async function main() {
 
 	/* ---- Phase 2: per-business Google Business Profile, batched ---- */
 
-	console.log(`[3/3] Local presence — ${businesses.length} business(es)`);
+	console.log(`[local] Local presence — ${businesses.length} business(es)`);
 
 	const gbpKeyFor = (biz) => biz.gbp_query || `${biz.name} ${indexCfg.town}`;
 
@@ -875,6 +881,64 @@ async function main() {
 		console.log(`    ${[...reviewsByQuery.values()].filter(Boolean).length}/${businesses.length} review set(s) (${viaPlaceId} via place_id)`);
 	}
 	console.log('');
+
+	/* ---- Phase 4: index-level context (intent + geo grid) ----
+
+	   Both are per-index, not per-business, and both are cheap. They answer
+	   questions the pillar scores cannot: what the basket is actually asking,
+	   and where in the city a firm can be found at all. */
+
+	if (engine.intent?.enabled) {
+		console.log(`[intent] Search intent — ${keywords.length} keyword(s)`);
+		try {
+			const items = await searchIntent(keywords);
+			const mix = {};
+			items.forEach((i) => { if (i.intent) mix[i.intent] = (mix[i.intent] || 0) + 1; });
+			await writeFile(join(outDir, '_intent.json'),
+				JSON.stringify({ index: indexSlug, collectedAt: new Date().toISOString(), mix, keywords: items }, null, 2) + '\n');
+			const summary = Object.entries(mix).sort((a, b) => b[1] - a[1])
+				.map(([k, n]) => `${k} ${n}`).join(', ');
+			console.log(`    ${items.length} classified: ${summary || 'none'}`);
+			if (Object.keys(mix).length === 1 && items.length > 1) {
+				console.log(`    ! the whole basket is "${Object.keys(mix)[0]}" intent — the Visibility pillar measures one slice of the funnel`);
+			}
+		} catch (e) {
+			console.log(`    ! intent classification failed: ${e.message}`);
+		}
+		console.log('');
+	}
+
+	if (engine.geoGrid?.enabled && indexCfg.coordinate && sector.geoKeyword) {
+		const [lat, lng] = indexCfg.coordinate.split(',').map(Number);
+		const n = engine.geoGrid.size || 3;
+		/* One default, used for the grid, the log and the record alike. Applying
+		   it only at buildGrid() left the sidecar with an undefined radiusKm,
+		   which JSON.stringify drops and the page then rendered as "NaNkm". */
+		const radiusKm = engine.geoGrid.radiusKm || 6;
+		const pts = buildGrid(lat, lng, radiusKm, n);
+		console.log(`[geo] Local-pack grid — "${sector.geoKeyword}" from ${pts.length} points (${n}x${n}, ${radiusKm}km radius)`);
+		try {
+			const grid = await localPackGrid(sector.geoKeyword, pts, {
+				depth: engine.geoGrid.depth || 20,
+				radius: engine.geoGrid.radiusM || 1000,
+				languageCode: engine.serp.languageCode,
+				device: engine.serp.device,
+				log: (m) => console.log(m),
+			});
+			await writeFile(join(outDir, '_geogrid.json'),
+				JSON.stringify({
+					index: indexSlug, collectedAt: new Date().toISOString(),
+					keyword: sector.geoKeyword, size: n, radiusKm,
+					centre: { lat, lng }, points: grid,
+				}, null, 2) + '\n');
+			const ok = grid.filter((g) => g.pack).length;
+			const distinct = new Set(grid.flatMap((g) => (g.pack || []).map((p) => p.title))).size;
+			console.log(`    ${ok}/${pts.length} points returned a 3-pack, ${distinct} distinct businesses across the grid`);
+		} catch (e) {
+			console.log(`    ! geo grid failed: ${e.message}`);
+		}
+		console.log('');
+	}
 
 	const shared = { keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor, targetedErrors };
 
