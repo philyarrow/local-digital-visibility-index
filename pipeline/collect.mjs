@@ -62,10 +62,11 @@ import {
 	myBusinessInfoBatch,
 	reviewsBatch,
 	businessListings,
+	businessListingsByTitle,
 	spendSince,
 } from './lib/dataforseo.mjs';
 import { loadConfig, resolveIndex, buildKeywords, buildPrompts } from './lib/basket.mjs';
-import { findOrganicPosition, inLocalPack, matchReason, domainsMatch, buildLandscape } from './lib/match.mjs';
+import { findOrganicPosition, inLocalPack, matchReason, domainsMatch, buildLandscape, matchTargeted, searchNeedle } from './lib/match.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA_ROOT = join(HERE, 'data');
@@ -605,6 +606,8 @@ async function main() {
 		prompts.length * (AI_UNIT[engine.ai.engine] ?? 0.00591) +
 		(indexCfg.coordinate ? (engine.local.listingsLimit || 100) * LISTING_UNIT : 0) +
 		businesses.length * (engine.local.profileFallback ? 0.0015 : 0) +
+		// targeted title lookups only run for the residual; assume a third
+		Math.ceil(businesses.length / 3) * 0.0127 +
 		businesses.length * (engine.local.reviewVelocity ? 0.0015 : 0);
 
 	console.log(`Index:      ${indexSlug}`);
@@ -794,13 +797,49 @@ async function main() {
 		console.log(`    fallback resolved ${[...gbpByQuery.values()].filter(Boolean).length}/${unmatched.length}`);
 	}
 
+	/* 3c. Targeted title lookup for whatever the sweep and the direct lookup
+	   both missed. The sweep truncates (100 of 535 available for Bristol), so a
+	   firm can be absent from it purely by truncation. This tier is the most
+	   expensive per business (~$0.0127 flat) which is why it runs last, on the
+	   smallest residual. */
+	const stillMissing = businesses.filter((b) => {
+		const k = gbpKeyFor(b);
+		return !listingMatches.has(k) && !gbpByQuery.get(k);
+	});
+
+	if (stillMissing.length && indexCfg.coordinate) {
+		console.log(`    targeted: title lookup for ${stillMissing.length} still unmatched`);
+		for (const biz of stillMissing) {
+			const needle = searchNeedle(biz.name);
+			if (!needle) {
+				console.log(`        ${biz.name}: no distinctive name to search on — skipped`);
+				continue;
+			}
+			try {
+				const items = await businessListingsByTitle(needle, indexCfg.coordinate);
+				const m = matchTargeted(items, { name: biz.name, url: biz.url }, sector.dfsCategories);
+				if (m.items.length) {
+					listingMatches.set(gbpKeyFor(biz), m);
+					const note = m.matchedBy === 'name-category'
+						? ` (matched on name + category — its profile lists ${m.items[0].domain || 'no website'}, not ${biz.url})`
+						: '';
+					console.log(`        ✓ ${biz.name} — ${m.items.length} listing(s)${note}`);
+				} else {
+					console.log(`        ✗ ${biz.name} — no listing found for "${needle}"`);
+				}
+			} catch (e) {
+				console.log(`        ! ${biz.name} — targeted lookup failed: ${e.message}`);
+			}
+		}
+	}
+
 	const foundCount = businesses.filter((b) => {
 		const k = gbpKeyFor(b);
 		return listingMatches.has(k) || gbpByQuery.get(k);
 	}).length;
 	console.log(`    LOCAL PRESENCE FOUND: ${foundCount}/${businesses.length}`);
 
-	/* 3c. Reviews, keyed by place_id wherever one was resolved. */
+	/* 3d. Reviews, keyed by place_id wherever one was resolved. */
 	let reviewsByQuery = new Map();
 	if (engine.local.reviewVelocity) {
 		const reviewQueries = businesses.map((biz) => {

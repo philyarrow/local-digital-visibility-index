@@ -279,3 +279,61 @@ export function buildLandscape(serpByKeyword, seedUrls) {
 		perKeyword,
 	};
 }
+
+/* Match a targeted title search back to the seed business.
+
+   Stricter than the area sweep, because a title filter casts wide: searching
+   "saunders" near Bristol returns a doctor, a music teacher and an unrelated
+   solutions company, all of which contain the distinctive name. Two ways to
+   accept:
+
+     domain  — the listing's website is the seed's domain. Authoritative.
+     name    — the name matches AND the listing sits in one of the sector's
+               Google categories. Without the category test, "Saunders Dr P"
+               is indistinguishable from "Saunders Estate Agents".
+
+   A name-only match is reported as such so a published score can show which
+   evidence it rests on. It is also how a genuine NAP inconsistency surfaces:
+   Elephant Estate Agents' profile points at elephantlovesbristol.co.uk, not
+   the domain in the seed. */
+export function matchTargeted(items, business, sectorCategories = []) {
+	const cats = new Set((sectorCategories || []).map((c) => String(c).toLowerCase()));
+
+	const byDomain = items.filter((i) => i.domain && domainsMatch(i.domain, business.url));
+	if (byDomain.length) return { items: byDomain, matchedBy: 'domain' };
+
+	/* Categories live in `category_ids` as slugs (["real_estate_agents"]).
+	   `category` is a human label ("Estate agent") and will never equal a
+	   configured slug — testing it silently rejected every name-only match. */
+	const byName = items.filter((i) => {
+		if (!i.title || !textNamesBusiness(i.title, { name: business.name, url: null })) return false;
+		if (!cats.size) return false;
+		const ids = (i.category_ids || []).map((c) => String(c).toLowerCase());
+		if (ids.some((c) => cats.has(c))) return true;
+		// Fall back to the human label with separators normalised.
+		const flat = (v) => String(v || '').toLowerCase().replace(/[\s_-]+/g, '');
+		const labels = [i.category, ...(i.additional_categories || [])].map(flat);
+		return [...cats].some((c) => labels.includes(flat(c)));
+	});
+	return byName.length
+		? { items: byName, matchedBy: 'name-category' }
+		: { items: [], matchedBy: null };
+}
+
+/* A needle for an `ilike` title filter.
+
+   NOT distinctiveName(): that expands "&" to "and", so the needle "leese and
+   nagle" never matches a listing titled "Leese & Nagle" and the firm reads as
+   having no Google presence at all. Joining the distinctive tokens with the
+   SQL wildcard sidesteps every connective and punctuation difference —
+   "leese%nagle" matches "Leese & Nagle", "Leese and Nagle" and "Leese-Nagle"
+   alike.
+
+   Capped at two tokens: more makes the pattern brittle against listings that
+   append a branch or service ("Boardwalk Property Co. - Easton Office"). */
+export function searchNeedle(name) {
+	const residue = distinctiveName(name);
+	if (!residue) return null;
+	const tokens = residue.split(' ').filter((t) => t !== 'and' && t !== 'of' && t !== 'the');
+	return tokens.slice(0, 2).join('%') || null;
+}

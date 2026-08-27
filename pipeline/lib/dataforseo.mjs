@@ -336,6 +336,26 @@ export async function businessListings(categories, coordinate, { limit = 100 } =
 	};
 }
 
+/* Targeted lookup for one business the area sweep missed.
+
+   The sweep returns at most `limit` of what may be hundreds of listings — 100
+   of 535 for Bristol estate agents — so a firm can be absent from it purely by
+   truncation, not because it has no profile. This filters by title instead of
+   paging through the whole area.
+
+   `ilike` matters: `like` is case-sensitive, and a lowercased needle against
+   title-cased listings silently returns nothing. Priced by a flat base fee
+   (~$0.0127) rather than by results, so `limit` is not a cost lever here. */
+export async function businessListingsByTitle(needle, coordinate, { limit = 10 } = {}) {
+	if (!needle) return [];
+	const d = await post('business_data/business_listings/search/live', [{
+		location_coordinate: coordinate,
+		limit,
+		filters: [['title', 'ilike', `%${needle}%`]],
+	}], { label: 'business_data/business_listings/search (targeted)' });
+	return d.tasks?.[0]?.result?.[0]?.items || [];
+}
+
 /* my_business_info is queue-only. Post a batch, poll for each. */
 export async function myBusinessInfoBatch(queries, { pollMs = 10000, maxWaitMs = 300000, log = () => {} } = {}) {
 	if (!queries.length) return new Map();
