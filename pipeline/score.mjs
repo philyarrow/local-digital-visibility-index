@@ -284,6 +284,11 @@ async function main() {
 		if (e.code !== 'ENOENT') throw e;
 	}
 
+	/* Loaded here rather than inline in `out` because measuredAt below has to
+	   see their timestamps. */
+	const intent = await sidecar('_intent.json');
+	const geoGrid = await sidecar('_geogrid.json');
+
 	/* When the data was actually MEASURED, as distinct from when it was scored.
 	   These were conflated: scoredAt was wall-clock at scoring time and every
 	   published "Measured <date>" line, every frontmatter date and the
@@ -294,10 +299,23 @@ async function main() {
 	   that never happened.
 
 	   Scoring is a pure function of collected data, so the honest timestamp is
-	   the latest collection in the cohort. Falls back to scoring time only if
-	   no record carries one. */
-	const collectionTimes = businesses
-		.map((b) => b.collectedAt)
+	   the latest collection in the cohort.
+
+	   That must include the index-level sidecars, not just the per-business
+	   records. The geo grid, intent set and landscape are collected AFTER the
+	   business sweep and feed the Local and Visibility figures — Exeter's grid
+	   was 18 minutes newer than the date the site published. Taking only the
+	   business max meant a geo-grid-only re-collection changed a snapshot's
+	   contents while its stated measurement date stood still: the same
+	   receipt-that-isn't-a-receipt defect, inverted.
+
+	   Falls back to scoring time only if nothing carries a timestamp. */
+	const collectionTimes = [
+		...businesses.map((b) => b.collectedAt),
+		intent?.collectedAt,
+		geoGrid?.collectedAt,
+		landscape?.collectedAt,
+	]
 		.filter((t) => typeof t === 'string' && !Number.isNaN(Date.parse(t)))
 		.sort();
 	const scoredAt = new Date().toISOString();
@@ -315,8 +333,8 @@ async function main() {
 		overallMedian,
 		sectorMedians,
 		pillarCoverage,
-		intent: await sidecar('_intent.json'),
-		geoGrid: await sidecar('_geogrid.json'),
+		intent,
+		geoGrid,
 		landscape: landscape ? {
 			measuredKeywords: landscape.measuredKeywords,
 			summary: landscape.summary,

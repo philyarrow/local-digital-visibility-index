@@ -350,43 +350,55 @@ ${whereToFix(b)}
 
 /* The outbound half of the bridge, and the only place the hub leaves itself.
 
-   Driven by the firm's two weakest measured pillars rather than a fixed list,
-   so the link is relevant to the page it sits on: a firm failing on AI
-   presence gets the GEO guide, one failing on local gets the case studies.
-   An irrelevant outbound link would dilute exactly what this is meant to
-   build, so a pillar with no honest target is skipped rather than filled. */
+   Driven by the firm's own lowest-scoring pillars so the link is relevant to
+   the page it sits on. Two filters apply and BOTH used to be invisible in the
+   copy: a pillar with no honest agency target is skipped (speed), and two
+   pillars can share one target (visibility and content both point at topical
+   authority).
+
+   The first version de-duplicated by href and then still called the survivors
+   "the two weakest", which published a falsehood: Amicus Law's weakest are
+   Content 33 and Visibility 46, but Visibility was dropped as a duplicate and
+   Local presence 78 — the firm's second-STRONGEST pillar — was named in its
+   place and recommended for remediation.
+
+   So: take the two genuinely lowest-scoring pillars that have a target, and
+   group them by target instead of discarding one. A shared target yields one
+   link naming both pillars. The heading states the filter rather than
+   implying there is none. */
 function whereToFix(b) {
 	const ranked = PILLARS
-		.filter((p) => typeof b.pillarScores[p.key] === 'number')
-		.sort((x, y) => b.pillarScores[x.key] - b.pillarScores[y.key]);
-
-	/* Two pillars can share a target (Visibility and Content both point at
-	   topical authority). Emitting the same URL twice in one block is padding,
-	   so keep the weakest pillar per distinct target. */
-	const seen = new Set();
-	const picks = ranked
-		.map((p) => ({ p, target: PILLAR_AGENCY[p.key] }))
-		.filter((x) => {
-			if (!x.target || seen.has(x.target.href)) return false;
-			seen.add(x.target.href);
-			return true;
-		})
+		.filter((p) => typeof b.pillarScores[p.key] === 'number' && PILLAR_AGENCY[p.key])
+		.sort((x, y) => b.pillarScores[x.key] - b.pillarScores[y.key])
 		.slice(0, 2);
 
-	if (!picks.length) return '';
+	if (!ranked.length) return '';
 
-	const intro = picks.length > 1
-		? `The two weakest measured pillars for ${b.name}, and the work that addresses them:`
-		: `The weakest measured pillar for ${b.name}, and the work that addresses it:`;
+	/* Group the picks by target so a shared guide is linked once, without any
+	   pillar silently vanishing from the list. */
+	const groups = [];
+	for (const p of ranked) {
+		const target = PILLAR_AGENCY[p.key];
+		const existing = groups.find((g) => g.target.href === target.href);
+		if (existing) existing.pillars.push(p);
+		else groups.push({ target, pillars: [p] });
+	}
 
-	const lines = picks.map(({ p, target }) =>
-		`- **${p.label}** (${b.pillarScores[p.key]}/100) — read [${target.label}](${target.href}) on ${target.context}. ` +
-		`Background on analysing this pillar: [the method notes](${methodHref(p.key)}).`,
-	);
+	const lines = groups.map(({ target, pillars }) => {
+		const named = pillars
+			.map((p) => `**${p.label}** (${b.pillarScores[p.key]}/100)`)
+			.join(' and ');
+		const methods = pillars
+			.map((p) => `[${p.label.toLowerCase()}](${methodHref(p.key)})`)
+			.join(', ');
+		return `- ${named} — read [${target.label}](${target.href}) on ${target.context}. `
+			+ `Background on analysing ${pillars.length > 1 ? 'these pillars' : 'this pillar'}: ${methods}.`;
+	});
 
+	const noun = ranked.length > 1 ? 'pillars' : 'pillar';
 	return `## Where to get this fixed
 
-${intro}
+${b.name}'s lowest-scoring ${noun} among those we publish remediation guidance for:
 
 ${lines.join('\n')}
 `;
@@ -1577,13 +1589,20 @@ function exportCsv(ranked) {
    written before the slug. */
 const VALUE_FLAGS = new Set(['--quarter', '--site-root']);
 
+/* An unrecognised --flag used to be swallowed, so a typo'd or imagined flag
+   ran a full generation while the operator believed something else happened.
+   Fail loudly instead. */
 function parseArgs(argv) {
 	const args = { indexSlug: null, quarter: null };
 	for (let i = 2; i < argv.length; i++) {
 		const a = argv[i];
 		if (a === '--quarter') args.quarter = argv[++i];
 		else if (VALUE_FLAGS.has(a)) i++; // consumed elsewhere; skip its value
-		else if (a.startsWith('--')) continue;
+		else if (a === '--check-bridges') continue; // handled in main(), before this
+		else if (a.startsWith('--')) {
+			console.error(`Unknown flag: ${a}`);
+			process.exit(1);
+		}
 		else if (!args.indexSlug) args.indexSlug = a;
 	}
 	return args;
@@ -1595,7 +1614,47 @@ function defaultQuarter() {
 	return `Q${q}-${now.getFullYear()}`;
 }
 
+/* Validate every bridge slug against the site's content tree. Exits non-zero on
+   the first missing target. Writes nothing — safe to run before a real
+   generation, and the only thing standing between a renamed KB article and 79
+   simultaneous 404s. */
+async function checkBridges(siteRoot) {
+	const docs = join(siteRoot, 'new', 'src', 'content', 'docs');
+	const targets = [
+		...Object.entries(PILLAR_KB).map(([k, slug]) => [k, join(docs, 'kb', `${slug}.md`), `/kb/${slug}/`]),
+		...Object.entries(PILLAR_METHOD).map(([k, slug]) => [k, join(docs, 'glossary', `${slug}.md`), `/glossary/${slug}/`]),
+	];
+
+	const missing = [];
+	for (const [pillar, file, href] of targets) {
+		try {
+			await readFile(file);
+		} catch {
+			missing.push(`  ${pillar.padEnd(11)} ${href}`);
+		}
+	}
+
+	const noTarget = Object.entries(PILLAR_AGENCY).filter(([, v]) => !v).map(([k]) => k);
+	if (noTarget.length) console.log(`no agency target (intentional): ${noTarget.join(', ')}`);
+
+	if (missing.length) {
+		console.error(`${missing.length} bridge target(s) missing from ${docs}:`);
+		console.error(missing.join('\n'));
+		process.exitCode = 1;
+		return false;
+	}
+	console.log(`all ${targets.length} bridge targets resolve under ${docs}`);
+	return true;
+}
+
 async function main() {
+	/* Validation mode: check the bridge maps and exit without writing. Placed
+	   before the index-slug requirement so it can be run on its own. */
+	if (process.argv.includes('--check-bridges')) {
+		await checkBridges(SITE_ROOT);
+		return;
+	}
+
 	const { indexSlug, quarter: qArg } = parseArgs(process.argv);
 	if (!indexSlug) {
 		console.error('Usage: node generate.mjs <index-slug> [--quarter Q2-2026]');
