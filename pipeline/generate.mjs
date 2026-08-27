@@ -660,11 +660,31 @@ function hubMdx(ranked, quarter, indexSlug) {
 	/* Every pillar gets a column. Showing three of six while the hidden three
 	   carry half the weight made the published rank unreconcilable from the
 	   page — on a site whose premise is that every figure is reproducible. */
-	const cell = (v) => (v === null || v === undefined ? '—' : v);
-	const tableRows = scored.map((b) =>
-		`| ${b.rank} | [${b.name}](/indices/${indexSlug}/${b.slug}/) | ${b.digitalVisibilityScore} | `
-		+ PILLARS.map((p) => cell(b.pillarScores[p.key])).join(' | ') + ' |',
-	).join('\n');
+	/* Emitted as HTML rather than a markdown table so the column widths can be
+	   controlled. Nine columns under Starlight's default table padding overflow
+	   the content column: the page gained a horizontal scrollbar while firm
+	   names wrapped onto three lines beside half-empty number columns.
+
+	   Headers are abbreviated with the full pillar name in a title, so the
+	   numeric columns can be narrow without losing meaning. */
+	const cell = (v) => (v === null || v === undefined ? '<span class="pyc-lg-na">&mdash;</span>' : v);
+	const SHORT = { speed: 'Spd', technical: 'Tech', local: 'Local', visibility: 'Vis', ai: 'AI', content: 'Cont' };
+
+	const leagueHead = '<tr>'
+		+ '<th scope="col" class="pyc-lg-rank">#</th>'
+		+ `<th scope="col" class="pyc-lg-name">${esc(idxTitle)}</th>`
+		+ '<th scope="col" class="pyc-lg-score" title="Digital Visibility Score">Score</th>'
+		+ PILLARS.map((p) => `<th scope="col" class="pyc-lg-p"><abbr title="${esc(p.label)}">${esc(SHORT[p.key] || p.label)}</abbr></th>`).join('')
+		+ '</tr>';
+
+	const leagueBody = scored.map((b) => '<tr>'
+		+ `<td class="pyc-lg-rank">${b.rank}</td>`
+		+ `<th scope="row" class="pyc-lg-name"><a href="/indices/${esc(indexSlug)}/${esc(b.slug)}/">${esc(b.name)}</a></th>`
+		+ `<td class="pyc-lg-score">${cell(b.digitalVisibilityScore)}</td>`
+		+ PILLARS.map((p) => `<td class="pyc-lg-p">${cell(b.pillarScores[p.key])}</td>`).join('')
+		+ '</tr>').join('');
+
+	const leagueTable = `<table class="pyc-league"><thead>${leagueHead}</thead><tbody>${leagueBody}</tbody></table>`;
 
 	const itemList = {
 		'@context': 'https://schema.org',
@@ -719,9 +739,7 @@ ${pct !== null ? `> As of ${quarter}, ${pct}% of the ${speedDenom} ${idxTitle.to
 ${section('Who owns the first page', shareOfVoice(ranked))}
 ## The league table
 
-| Rank | ${idxTitle} | Score | Speed | Technical | Local | Visibility | AI | Content |
-|-----:|-------------|------:|------:|----------:|------:|-----------:|---:|--------:|
-${tableRows}
+${leagueTable}
 
 ${section('Which keywords are contested, and which are open?', positionHeatmap(ranked))}
 ${section('Where each firm is visible', channelVenn(ranked))}
