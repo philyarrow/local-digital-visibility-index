@@ -30,6 +30,12 @@
    Settings live in config/engine.json; keyword and prompt baskets are derived
    from config/sectors.json + config/indices.json.
 
+   Alongside the per-business records, each run writes _landscape.json: every
+   organic domain and paid advertiser seen across the index's SERPs, page-one
+   share split between seed and non-seed, and the untracked domains that rank
+   well enough to belong in the seed. All of it is extracted from responses
+   already bought, so it adds nothing to the bill.
+
    Resilience: every business is wrapped in try/catch; every network call has a
    timeout; one bad site never aborts the run. A keyword whose SERP task fails
    is excluded from that index's basket size rather than counted as a miss, so
@@ -59,7 +65,7 @@ import {
 	spendSince,
 } from './lib/dataforseo.mjs';
 import { loadConfig, resolveIndex, buildKeywords, buildPrompts } from './lib/basket.mjs';
-import { findOrganicPosition, inLocalPack, matchReason, domainsMatch } from './lib/match.mjs';
+import { findOrganicPosition, inLocalPack, matchReason, domainsMatch, buildLandscape } from './lib/match.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA_ROOT = join(HERE, 'data');
@@ -692,6 +698,45 @@ async function main() {
 	const allHarvested = keywords.every((k) => serpByKeyword.get(k));
 	if (allHarvested) await writeStore(true);
 	console.log(`    ${[...serpByKeyword.values()].filter(Boolean).length}/${keywords.length} keyword(s) returned\n`);
+
+	/* ---- The wider landscape, extracted from SERPs already paid for ----
+
+	   Every organic result and every ad in these responses is data we have
+	   bought. Keeping only the seed's own positions throws away the competitive
+	   set, the directory share, and — most usefully — evidence that the seed
+	   itself is incomplete. This costs nothing per run. */
+	let landscape = null;
+	try {
+		landscape = buildLandscape(serpByKeyword, businesses.map((b) => b.url));
+	} catch (e) {
+		console.log(`    ! landscape extraction failed: ${e.message} (SERP data is unaffected)`);
+	}
+	if (landscape) {
+		await writeFile(
+			join(outDir, '_landscape.json'),
+			JSON.stringify({ index: indexSlug, collectedAt: new Date().toISOString(), ...landscape }, null, 2) + '\n'
+		);
+
+		const ls = landscape.summary;
+		if (!landscape.measuredKeywords) {
+			console.log('    no SERPs harvested — landscape not computed');
+		} else {
+			console.log(`    page-1 share: seed holds ${ls.heldBySeed}/${ls.slotsAvailable} top-10 slots (${ls.seedSharePct}%), ${ls.distinctDomains} distinct domains seen`);
+			if (landscape.seedGaps.length) {
+				console.log(`    ! ${landscape.seedGaps.length} untracked domain(s) rank top-10 repeatedly or place top-5 — candidates the seed is missing:`);
+				landscape.seedGaps.slice(0, 6).forEach((d) =>
+					console.log(`        ${d.domain} (${d.top10Slots} top-10 slot(s), best #${d.bestPosition ?? 'n/a'})`));
+			}
+			if (ls.paidSlotsSeen) {
+				const extra = ls.paidSlotsUnresolvedDomain ? `, ${ls.paidSlotsUnresolvedDomain} with an unparseable domain` : '';
+				console.log(`    ${ls.paidSlotsSeen} paid slot(s) seen from ${landscape.paidAdvertisers.length} advertiser(s)${extra}: `
+					+ landscape.paidAdvertisers.slice(0, 5).map((a) => a.domain).join(', '));
+			} else {
+				console.log('    no paid slots served in this sample (ad inventory varies by auction — a sample, not a census)');
+			}
+		}
+		console.log('');
+	}
 
 	console.log(`[2/3] AI presence — ${prompts.length} prompt(s) via ${engine.ai.engine}/${engine.ai.model}`);
 	const aiAnswers = [];

@@ -147,3 +147,135 @@ export function inLocalPack(serpResult, business) {
 	}
 	return false;
 }
+
+/* ---- the wider landscape ------------------------------------------------ */
+
+/* Every organic result in a SERP, not just the seed's.
+
+   The seed businesses are a handful of the domains on any results page. The
+   rest — directories, national chains, local firms nobody put in the seed —
+   are the actual competitive set, and they arrive free in a response already
+   paid for. Discarding them (as this pipeline did until now) means the "share
+   of page one" figure can only ever be a residual with no names behind it. */
+export function extractOrganic(serpResult, limit = 20) {
+	const out = [];
+	for (const item of serpResult?.items || []) {
+		if (item.type !== 'organic') continue;
+		const domain = registrableDomain(item.domain || item.url);
+		if (!domain) continue;
+		out.push({ domain, position: item.rank_group ?? null, url: item.url || null });
+		if (out.length >= limit) break;
+	}
+	return out;
+}
+
+/* Paid slots, when Google served any. Ad inventory varies by auction, device
+   and time of day, so an empty array means "none served in this sample" — not
+   "nobody advertises on this term". Treat it as a sample, never a census. */
+export function extractPaid(serpResult) {
+	const out = [];
+	for (const item of serpResult?.items || []) {
+		if (item.type !== 'paid') continue;
+		const domain = registrableDomain(item.domain || item.url);
+		out.push({
+			domain: domain || null,
+			position: item.rank_group ?? null,
+			title: item.title || null,
+			url: item.url || null,
+		});
+	}
+	return out;
+}
+
+/* Aggregate a whole index's SERPs into a domain-level picture.
+
+   serpByKeyword : Map<keyword, serpResult|null>
+   seedUrls      : the seed businesses' urls, to mark which domains are tracked */
+export function buildLandscape(serpByKeyword, seedUrls) {
+	const seed = new Set(seedUrls.map(registrableDomain).filter(Boolean));
+	const domains = new Map();
+	const perKeyword = {};
+	let measuredKeywords = 0;
+
+	for (const [keyword, result] of serpByKeyword) {
+		if (!result) continue;
+		measuredKeywords++;
+		const organic = extractOrganic(result, 20);
+		const paid = extractPaid(result);
+		perKeyword[keyword] = { organic, paid, paidCount: paid.length };
+
+		for (const row of organic) {
+			if (!domains.has(row.domain)) {
+				domains.set(row.domain, {
+					domain: row.domain,
+					inSeed: seed.has(row.domain),
+					top10Slots: 0,
+					top20Slots: 0,
+					bestPosition: null,
+					keywords: [],
+				});
+			}
+			const d = domains.get(row.domain);
+			d.top20Slots++;
+			if (row.position !== null && row.position <= 10) d.top10Slots++;
+			if (d.bestPosition === null || (row.position !== null && row.position < d.bestPosition)) {
+				d.bestPosition = row.position;
+			}
+			d.keywords.push({ keyword, position: row.position });
+		}
+	}
+
+	// null bestPosition coerces to 0 in a subtraction, sorting an unranked
+	// domain ahead of a genuine #1. Push nulls to the end explicitly.
+	const rank = (v) => (v === null || v === undefined ? Number.POSITIVE_INFINITY : v);
+	const all = [...domains.values()].sort((a, b) =>
+		b.top10Slots - a.top10Slots || rank(a.bestPosition) - rank(b.bestPosition));
+
+	const heldBySeed = all.filter((d) => d.inSeed).reduce((s, d) => s + d.top10Slots, 0);
+	const heldByOthers = all.filter((d) => !d.inSeed).reduce((s, d) => s + d.top10Slots, 0);
+	const available = measuredKeywords * 10;
+
+	/* Domains ranking top-10 that the seed does not track. Some are directories
+	   and always will be; others are local firms the seed simply missed, which
+	   makes this the index auditing its own completeness.
+
+	   Two ways in: repeated presence (2+ top-10 slots), or a single very strong
+	   placement (top 5). Requiring repetition alone would miss a domain sitting
+	   at #3 for the head term whenever the basket is small. */
+	const seedGaps = all.filter((d) =>
+		!d.inSeed && (d.top10Slots >= 2 || (d.bestPosition !== null && d.bestPosition <= 5)));
+
+	/* Count ALL paid slots, including any whose domain did not parse. Counting
+	   only resolvable domains meant a page full of ads could report zero and
+	   print "no paid slots served" — the false-absence claim this file exists
+	   to avoid. Unresolved ones are tracked separately so the total is honest. */
+	const paidDomains = new Map();
+	let paidSlots = 0;
+	let paidUnresolved = 0;
+	for (const k of Object.keys(perKeyword)) {
+		for (const ad of perKeyword[k].paid) {
+			paidSlots++;
+			if (!ad.domain) { paidUnresolved++; continue; }
+			paidDomains.set(ad.domain, (paidDomains.get(ad.domain) || 0) + 1);
+		}
+	}
+
+	return {
+		measuredKeywords,
+		summary: {
+			slotsAvailable: available,
+			heldBySeed,
+			heldByOthers,
+			seedSharePct: available ? Number(((heldBySeed / available) * 100).toFixed(1)) : null,
+			distinctDomains: all.length,
+			paidSlotsSeen: paidSlots,
+			paidSlotsUnresolvedDomain: paidUnresolved,
+		},
+		domainShare: all,
+		seedGaps,
+		paidAdvertisers: [...paidDomains.entries()]
+			.map(([domain, slots]) => ({ domain, slots }))
+			.sort((a, b) => b.slots - a.slots),
+		perKeyword,
+	};
+}
