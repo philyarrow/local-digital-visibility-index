@@ -24,7 +24,7 @@
        question-shaped H2s, JSON/CSV exports.
 */
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { join, dirname, isAbsolute, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PILLARS, toCsv } from './lib/common.mjs';
@@ -488,7 +488,7 @@ function positionHeatmap(ranked) {
 	};
 	const head = `<tr><th scope="col" class="pyc-hm-corner"></th>`
 		+ kws.map((k) => `<th scope="col" title="${esc(k)}"><span>${esc(shortKw(k))}</span></th>`).join('') + '</tr>';
-	const body = scored.map((b) => `<tr><th scope="row">${esc(b.name)}</th>`
+	const body = scored.map((b) => `<tr data-pyc-firm="|${esc(b.slug)}|"><th scope="row">${esc(b.name)}</th>`
 		+ kws.map((k) => {
 			const p = b.evidence.positions?.[k];
 			const lvl = band(p);
@@ -559,7 +559,7 @@ function visibilityAiQuadrant(ranked) {
 
 	const dots = pts.map((b) => {
 		const x = px(b.pillarScores.visibility), y = py(b.pillarScores.ai);
-		return `<circle class="pyc-q-dot" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="1.6"><title>${esc(b.name)} — visibility ${b.pillarScores.visibility}, AI ${b.pillarScores.ai}</title></circle>`;
+		return `<circle class="pyc-q-dot" data-pyc-firm="|${esc(b.slug)}|" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="1.6"><title>${esc(b.name)} — visibility ${b.pillarScores.visibility}, AI ${b.pillarScores.ai}</title></circle>`;
 	}).join('');
 
 	/* Label only the extremes, and only where a label will not collide. Three
@@ -583,7 +583,7 @@ function visibilityAiQuadrant(ranked) {
 	const labels = placed.map(({ b, x, y }) => {
 		const dy = y < PAD + 6 ? 4 : -3; // nudge below if it would clip the top
 		const pos = placeLabel(b.name, x, y + dy, { width: W, radius: 1.6 });
-		return pos ? `<text class="pyc-q-lab" x="${pos.x}" y="${pos.y}" text-anchor="${pos.anchor}">${esc(b.name)}</text>` : '';
+		return pos ? `<text class="pyc-q-lab" data-pyc-firm="|${esc(b.slug)}|" x="${pos.x}" y="${pos.y}" text-anchor="${pos.anchor}">${esc(b.name)}</text>` : '';
 	}).filter(Boolean).join('');
 
 	// The named firm must be one that is actually labelled on the chart, so the
@@ -626,14 +626,14 @@ function nearMisses(ranked, opts = {}) {
 		if (b.rank === null || !b.evidence?.positions) continue;
 		if (only && b.slug !== only) continue;
 		for (const [kw, pos] of Object.entries(b.evidence.positions)) {
-			if (typeof pos === 'number' && pos >= 11 && pos <= 20) rows.push({ name: b.name, kw, pos });
+			if (typeof pos === 'number' && pos >= 11 && pos <= 20) rows.push({ name: b.name, slug: b.slug, kw, pos });
 		}
 	}
 	if (!rows.length) return '';
 	rows.sort((a, b) => a.pos - b.pos);
 	const shown = rows.slice(0, only ? 12 : 10);
 
-	const body = shown.map((r) => `<tr>`
+	const body = shown.map((r) => `<tr data-pyc-firm="|${esc(r.slug)}|">`
 		+ (only ? '' : `<th scope="row" class="pyc-nm-firm">${esc(r.name)}</th>`)
 		+ `<td class="pyc-nm-kw"><span class="pyc-nm-firm-inline">${only ? '' : esc(r.name) + ' &mdash; '}</span>${esc(r.kw)}</td>`
 		+ `<td class="pyc-nm-track"><span class="pyc-nm-bar" style="width:${(((21 - r.pos) / 10) * 100).toFixed(0)}%"></span></td>`
@@ -689,7 +689,7 @@ function reputationScatter(ranked) {
 		const r = 1.2 + Math.sqrt(l.reviewCount) / 12;
 		const off = l.avgRating < rlo;
 		const cy = off ? (H - PAD) : py(l.avgRating);
-		return `<circle class="pyc-r-dot${off ? ' pyc-r-off' : ''}" cx="${px(l.reviewCount).toFixed(2)}" cy="${cy.toFixed(2)}" r="${Math.min(r, 4).toFixed(2)}"><title>${esc(b.name)} — ${l.reviewCount} reviews, ${l.avgRating}★${off ? ' (below the plotted range)' : ''}${l.branchCount > 1 ? `, ${l.branchCount} locations` : ''}</title></circle>`;
+		return `<circle class="pyc-r-dot${off ? ' pyc-r-off' : ''}" data-pyc-firm="|${esc(b.slug)}|" cx="${px(l.reviewCount).toFixed(2)}" cy="${cy.toFixed(2)}" r="${Math.min(r, 4).toFixed(2)}"><title>${esc(b.name)} — ${l.reviewCount} reviews, ${l.avgRating}★${off ? ' (below the plotted range)' : ''}${l.branchCount > 1 ? `, ${l.branchCount} locations` : ''}</title></circle>`;
 	}).join('');
 
 	const maxRev = Math.max(...pts.map((b) => b.evidence.local.reviewCount));
@@ -831,12 +831,34 @@ function channelVenn(ranked) {
 	const none = region(false, false, false);
 	if (!scored.some(inOrganic) && !scored.some(inPack) && !scored.some(inAi)) return '';
 
+	/* The diagram carries the shape at a glance; the table beneath carries the
+	   names, stays readable at any set count, and is what a screen reader gets.
+	   Neither alone was right — circles without names say little, a table alone
+	   was the visual downgrade. */
+	const R = { all3, organicPack: region(true, true, false), organicAi: region(true, false, true),
+		packAi: region(false, true, true), organicOnly: region(true, false, false),
+		packOnly: region(false, true, false), aiOnly: region(false, false, true) };
+	const vn = (x, y, k, cls = '') => (R[k]?.length
+		? `<text class="pyc-venn-n-svg ${cls}" x="${x}" y="${y}" text-anchor="middle">${R[k].length}</text>` : '');
+	const diagram = `<svg class="pyc-venn-svg" viewBox="0 0 100 94" role="img" aria-label="Venn diagram of channel visibility; the table below names every firm">
+<circle class="pyc-vc pyc-vc-a" cx="37" cy="35" r="26"/>
+<circle class="pyc-vc pyc-vc-b" cx="63" cy="35" r="26"/>
+<circle class="pyc-vc pyc-vc-c" cx="50" cy="58" r="26"/>
+<text class="pyc-venn-lab" x="6" y="10">Organic top 10</text>
+<text class="pyc-venn-lab" x="94" y="10" text-anchor="end">Local 3-pack</text>
+<text class="pyc-venn-lab" x="50" y="92" text-anchor="middle">Named by AI</text>
+${vn(24, 30, 'organicOnly')}${vn(76, 30, 'packOnly')}${vn(50, 80, 'aiOnly')}
+${vn(50, 25, 'organicPack')}${vn(31, 55, 'organicAi')}${vn(69, 55, 'packAi')}
+${vn(50, 46, 'all3', 'pyc-venn-hero')}
+</svg>`;
+
 	const cell = (label, arr) => arr.length
-		? `<tr><th scope="row">${esc(label)}</th><td class="pyc-venn-n">${arr.length}</td><td>${esc(names(arr))}</td></tr>`
+		? `<tr data-pyc-firm="|${arr.map((b) => esc(b.slug)).join('|')}|"><th scope="row">${esc(label)}</th><td class="pyc-venn-n">${arr.length}</td><td>${esc(names(arr))}</td></tr>`
 		: `<tr class="pyc-venn-empty"><th scope="row">${esc(label)}</th><td class="pyc-venn-n">0</td><td>&mdash;</td></tr>`;
 
 	return `<figure class="pyc-fig">
 <figcaption>Where each firm is visible: ranked in the organic top 10 for at least one keyword, present in the local 3-pack, or named in at least one AI answer. ${all3.length} of ${scored.length} appear in all three.${unmeasured.length ? ` ${unmeasured.length} firm${unmeasured.length === 1 ? '' : 's'} could not be measured on these channels and ${unmeasured.length === 1 ? 'is' : 'are'} excluded.` : ''}</figcaption>
+${diagram}
 <table class="pyc-venn"><thead><tr><th scope="col">Visible in</th><th scope="col">Firms</th><th scope="col">Which</th></tr></thead><tbody>
 ${cell('All three channels', all3)}
 ${cell('Organic + local pack', region(true, true, false))}
@@ -851,6 +873,156 @@ ${cell('None of the three', none)}
 ${takeaway(all3.length === 0
 	? `<strong>Not one firm</strong> in this index is visible in all three channels at once.`
 	: `<strong>${all3.length} of ${scored.length} firms</strong> are visible in all three channels.${none.length ? ` ${none.length} appear${none.length === 1 ? 's' : ''} in none of them.` : ''}`)}`;
+}
+
+
+/* Firm focus — progressive enhancement.
+
+   Every figure is already complete in the markup: this only adds the ability to
+   pick a firm and have the page recede around it. Without JavaScript nothing is
+   lost, which matters because the index exists to be read by crawlers and AI
+   engines as much as by people, and a chart assembled in the browser is
+   invisible to both.
+
+   The control is written by the script rather than shipped in the HTML, so a
+   reader without JS never sees a dead widget. */
+function focusScript(ranked, indexSlug) {
+	const firms = ranked.businesses
+		.filter((b) => b.rank !== null)
+		.map((b) => ({ n: b.name, s: b.slug }));
+	if (firms.length < 3) return '';
+
+	return `<script type="application/json" id="pyc-firms">${JSON.stringify(firms)}</script>
+<script>
+(function () {
+	var data = document.getElementById('pyc-firms');
+	if (!data) return;
+	var firms;
+	try { firms = JSON.parse(data.textContent); } catch (e) { return; }
+
+	var main = document.querySelector('.sl-markdown-content');
+	if (!main) return;
+
+	// No text matching: the generator stamps data-pyc-firm on every element that
+	// belongs to a firm, delimited on both sides so "setfords" cannot match
+	// "setfords-cheltenham". The browser only toggles a class.
+	var bar = document.createElement('div');
+	bar.className = 'pyc-focus';
+	bar.innerHTML = '<span class="pyc-focus-label">Focus a firm</span>';
+	var chips = document.createElement('div');
+	chips.className = 'pyc-focus-chips';
+	bar.appendChild(chips);
+
+	var current = null;
+	function apply(slug, push) {
+		current = slug;
+		document.body.classList.toggle('pyc-focusing', !!slug);
+		main.querySelectorAll('[data-pyc-firm]').forEach(function (el) {
+			var on = !!slug && el.getAttribute('data-pyc-firm').indexOf('|' + slug + '|') !== -1;
+			el.classList.toggle('pyc-on', on);
+		});
+		chips.querySelectorAll('button').forEach(function (b) {
+			b.setAttribute('aria-pressed', String(b.dataset.slug === (slug || '')));
+		});
+		if (push && window.history && history.replaceState) {
+			var u = new URL(location.href);
+			if (slug) u.searchParams.set('firm', slug); else u.searchParams.delete('firm');
+			history.replaceState(null, '', u);
+		}
+	}
+
+	[{ n: 'All firms', s: '' }].concat(firms).forEach(function (f) {
+		var b = document.createElement('button');
+		b.type = 'button';
+		b.className = 'pyc-chip';
+		b.dataset.slug = f.s;
+		b.textContent = f.n;
+		b.setAttribute('aria-pressed', 'false');
+		b.addEventListener('click', function () { apply(f.s || null, true); });
+		chips.appendChild(b);
+	});
+
+	var firstFig = main.querySelector('.pyc-fig, .pyc-league');
+	if (firstFig && firstFig.parentNode) firstFig.parentNode.insertBefore(bar, firstFig);
+	else main.insertBefore(bar, main.firstChild);
+
+	var want = new URL(location.href).searchParams.get('firm');
+	apply(firms.some(function (f) { return f.s === want; }) ? want : null, false);
+})();
+</script>`;
+}
+
+/* Movement since the previous snapshot, restricted to pillars measured in BOTH
+   quarters.
+
+   Q2 scored two of six pillars; Q3 scores all six. Plotting the headline score
+   across that boundary would render a methodology change as a trend, which is
+   the one thing a time series must never do. So only the comparable pillars are
+   charted, the scope is stated, and unchanged readings are counted rather than
+   drawn — eighteen flat lines is not a chart. */
+function quarterMovement(ranked, prior, quarter) {
+	if (!prior?.businesses?.length) return '';
+
+	const liveIn = (snap) => new Set(Object.entries(snap.pillarCoverage || {})
+		.filter(([, v]) => v.scored > 0).map(([k]) => k));
+	const shared = [...liveIn(prior)].filter((k) => liveIn(ranked).has(k));
+	if (!shared.length) return '';
+
+	const was = new Map(prior.businesses.map((b) => [b.name, b]));
+	const rows = [];
+	for (const b of ranked.businesses) {
+		const p = was.get(b.name);
+		if (!p) continue;
+		for (const key of shared) {
+			const from = p.pillarScores?.[key], to = b.pillarScores?.[key];
+			if (typeof from !== 'number' || typeof to !== 'number') continue;
+			rows.push({ name: b.name, slug: b.slug, key, from, to, delta: to - from });
+		}
+	}
+	if (!rows.length) return '';
+
+	const moved = rows.filter((r) => r.delta !== 0).sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta));
+	const flat = rows.length - moved.length;
+	const labels = Object.fromEntries(PILLARS.map((p) => [p.key, p.label]));
+	const scope = shared.map((k) => labels[k]).join(' and ');
+
+	if (!moved.length) {
+		return `<p class="pyc-geo-null">Nothing measurable changed between ${esc(prior.quarter)} and ${esc(quarter)} on the pillars measured in both: ${esc(scope)}. All ${rows.length} readings are identical.</p>`;
+	}
+
+	const show = moved.slice(0, 12);
+
+	/* Built as HTML, not SVG. The SVG version placed labels at fixed viewBox
+	   coordinates and both ends clipped: "-67 Content & trust" ran past 100 on
+	   the right, "Andrews Property Group" past 0 on the left. HTML wraps and
+	   ellipsises on its own, matches the other figures, and lets the marks carry
+	   the firm attribute so focus dims the whole row rather than only its text. */
+	const rows_ = show.map((r) => {
+		const up = r.delta > 0;
+		const dir = up ? 'pyc-mv-up' : 'pyc-mv-down';
+		const lo_ = Math.min(r.from, r.to), hi_ = Math.max(r.from, r.to);
+		return `<tr data-pyc-firm="|${esc(r.slug)}|">`
+			+ `<th scope="row" class="pyc-mv-name">${esc(r.name)}</th>`
+			+ `<td class="pyc-mv-track">`
+			+ `<span class="pyc-mv-rail"></span>`
+			+ `<span class="pyc-mv-span ${dir}" style="left:${lo_}%;width:${hi_ - lo_}%"></span>`
+			+ `<span class="pyc-mv-from" style="left:${r.from}%" title="${esc(prior.quarter)}: ${r.from}"></span>`
+			+ `<span class="pyc-mv-to ${dir}" style="left:${r.to}%" title="${esc(quarter)}: ${r.to}"></span>`
+			+ `</td>`
+			+ `<td class="pyc-mv-val ${dir}">${up ? '+' : ''}${r.delta}</td>`
+			+ `<td class="pyc-mv-pillar">${esc(labels[r.key])}</td>`
+			+ `</tr>`;
+	}).join('');
+
+	// Rows are firm x pillar, so a firm can appear twice; count distinct firms.
+	const firmsMoved = new Set(show.map((r) => r.name)).size;
+	const big = moved[0];
+	return `<figure class="pyc-fig">
+<figcaption>Change between ${esc(prior.quarter)} and ${esc(quarter)} on the ${shared.length === 1 ? 'one pillar' : `${shared.length} pillars`} measured in both quarters &mdash; ${esc(scope)}. The other pillars were not measured in ${esc(prior.quarter)}, so no comparison is possible and none is drawn.</figcaption>
+<table class="pyc-movement"><tbody>${rows_}</tbody></table>
+<p class="pyc-key">Hollow mark is ${esc(prior.quarter)}, solid is ${esc(quarter)}.${moved.length > show.length ? ` Showing the ${show.length} largest of ${moved.length} changes.` : ''} ${flat} reading${flat === 1 ? '' : 's'} unchanged and not drawn, across ${firmsMoved} firm${firmsMoved === 1 ? '' : 's'} that moved.</p>
+</figure>
+${takeaway(`<strong>${esc(big.name)}</strong> moved furthest: ${esc(labels[big.key])} ${big.delta > 0 ? 'up' : 'down'} <strong>${Math.abs(big.delta)} points</strong> since ${esc(prior.quarter)}. ${moved.length} of ${rows.length} comparable readings changed at all &mdash; which is what a quarter of movement actually looks like.`)}`;
 }
 
 /* What the keyword basket is actually asking. A basket that is all one intent
@@ -967,7 +1139,7 @@ function section(heading, body) {
 
 /* ---- index hub MDX ---- */
 
-function hubMdx(ranked, quarter, indexSlug) {
+function hubMdx(ranked, quarter, indexSlug, prior = null) {
 	const idxTitle = indexTitle(indexSlug);
 	const date = new Date(ranked.scoredAt).toISOString();
 	const human = humanDate(ranked.scoredAt);
@@ -1002,7 +1174,7 @@ function hubMdx(ranked, quarter, indexSlug) {
 	   as cards on a phone without JavaScript and without losing what each number
 	   means. Nine columns cannot fit 340px of content width, and dropping the
 	   pillars that discriminate most would be the wrong half to lose. */
-	const leagueBody = scored.map((b) => '<tr>'
+	const leagueBody = scored.map((b) => `<tr data-pyc-firm="|${esc(b.slug)}|">`
 		+ `<td class="pyc-lg-rank" data-label="Rank">${b.rank}</td>`
 		+ `<th scope="row" class="pyc-lg-name"><a href="/indices/${esc(indexSlug)}/${esc(b.slug)}/">${esc(b.name)}</a></th>`
 		+ `<td class="pyc-lg-score" data-label="Score">${cell(b.digitalVisibilityScore)}</td>`
@@ -1073,6 +1245,7 @@ ${section('Closest to the first page', nearMisses(ranked))}
 ${section('Reputation: reviews against rating', reputationScatter(ranked))}
 ${section('What the keyword basket is asking', intentMix(ranked))}
 ${section('Local pack coverage across the city', geoGrid(ranked))}
+${section('What changed since last quarter', quarterMovement(ranked, prior, quarter))}
 ## Which ${idxTitle.toLowerCase()} has the best website?
 
 ${scored.length ? `${scored[0].name} tops the ${quarter} index with a Digital Visibility Score of ${scored[0].digitalVisibilityScore}/100.` : ''} Each firm has a full diagnostic scorecard linked from the table above.
@@ -1085,6 +1258,7 @@ Spotted an error? [Request a correction](mailto:info@philyarrow.co.uk?subject=Co
 
 <script type="application/ld+json">${JSON.stringify(dataset)}</script>
 <script type="application/ld+json">${JSON.stringify(itemList)}</script>
+${focusScript(ranked, indexSlug)}
 `;
 }
 
@@ -1176,12 +1350,41 @@ async function main() {
 		process.exit(1);
 	}
 
+	/* The previous quarter's published snapshot, if one exists. Read from this
+	   repo's own data/ — the site copy is overwritten each quarter. */
+	/* Filenames sort lexicographically, which puts quarter before year:
+	   [q1-2027, q3-2026, q4-2026] would pick q4-2026 as "latest". Parse and sort
+	   numerically, and only consider snapshots BEFORE the quarter being
+	   generated so regenerating an old quarter cannot pick a future one. */
+	let prior = null;
+	const ord = (q, y) => Number(y) * 4 + Number(q);
+	const cur = quarter.match(/^Q(\d)-(\d{4})$/);
+	try {
+		const files = (await readdir(join(SNAPSHOT_ROOT, indexSlug)))
+			.map((f) => {
+				const m = f.match(/^q(\d)-(\d{4})\.json$/);
+				return m ? { file: f, ord: ord(m[1], m[2]) } : null;
+			})
+			.filter(Boolean)
+			.filter((x) => !cur || x.ord < ord(cur[1], cur[2]))
+			.sort((a, b) => a.ord - b.ord);
+		if (files.length) {
+			const pick = files[files.length - 1].file;
+			// Parse OUTSIDE the ENOENT guard: a malformed snapshot must not be
+			// indistinguishable from "no prior snapshot", which would silently
+			// drop the whole section from the published page.
+			prior = JSON.parse(await readFile(join(SNAPSHOT_ROOT, indexSlug, pick), 'utf8'));
+		}
+	} catch (e) {
+		if (e.code !== 'ENOENT') throw e;
+	}
+
 	const contentDir = join(CONTENT_ROOT, indexSlug);
 	await mkdir(contentDir, { recursive: true });
 	await mkdir(PUBLIC_DATA, { recursive: true });
 
 	// hub
-	await writeFile(join(contentDir, 'index.md'), hubMdx(ranked, quarter, indexSlug));
+	await writeFile(join(contentDir, 'index.md'), hubMdx(ranked, quarter, indexSlug, prior));
 	// scorecards
 	let cards = 0;
 	for (const b of ranked.businesses) {
