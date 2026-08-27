@@ -215,11 +215,11 @@ ${cardBanner(cov)}> Measured ${human} via the PYC ${idxTitle} Digital Visibility
 
 ## Pillar breakdown vs sector median
 
-${divergingPillars(b, ranked.sectorMedians, deltaScale(ranked))}
-
 | Pillar | Score | Sector median | Reading |
 |--------|------:|--------------:|---------|
 ${pillarRows}
+
+${divergingPillars(b, ranked.sectorMedians, deltaScale(ranked))}
 
 ${section('Where this firm ranks', keywordTable(b))}
 ${section('The gap to the leader', gapDumbbell(b, ranked))}
@@ -580,10 +580,31 @@ function visibilityAiQuadrant(ranked) {
 		placed.push({ b, x, y });
 	}
 
+	/* Attach the label to its OWN mark.
+
+	   Side-placing put "CJ Hole" (visibility 52) directly above Ocean Estate
+	   Agents' dot (visibility 61, identical AI score), so the chart appeared to
+	   name the wrong firm — the focus highlight was right and the label was not.
+
+	   Centring the label over its own dot removes the ambiguity where there is
+	   horizontal room, and a hairline leader ties label to mark either way. */
 	const labels = placed.map(({ b, x, y }) => {
-		const dy = y < PAD + 6 ? 4 : -3; // nudge below if it would clip the top
-		const pos = placeLabel(b.name, x, y + dy, { width: W, radius: 1.6 });
-		return pos ? `<text class="pyc-q-lab" data-pyc-firm="|${esc(b.slug)}|" x="${pos.x}" y="${pos.y}" text-anchor="${pos.anchor}">${esc(b.name)}</text>` : '';
+		const half = (b.name.length * 3.6 * 0.5) / 2;
+		const above = y > PAD + 8;
+		const ly = above ? y - 4.5 : y + 6;
+
+		let el, lx;
+		if (x - half >= 1 && x + half <= W - 1) {
+			lx = x;
+			el = `<text class="pyc-q-lab" data-pyc-firm="|${esc(b.slug)}|" x="${x.toFixed(2)}" y="${ly.toFixed(2)}" text-anchor="middle">${esc(b.name)}</text>`;
+		} else {
+			const pos = placeLabel(b.name, x, ly, { width: W, radius: 1.6 });
+			if (!pos) return '';
+			lx = pos.x;
+			el = `<text class="pyc-q-lab" data-pyc-firm="|${esc(b.slug)}|" x="${pos.x}" y="${pos.y}" text-anchor="${pos.anchor}">${esc(b.name)}</text>`;
+		}
+		const leader = `<line class="pyc-q-leader" data-pyc-firm="|${esc(b.slug)}|" x1="${x.toFixed(2)}" y1="${(above ? y - 2 : y + 2).toFixed(2)}" x2="${lx.toFixed(2)}" y2="${(above ? ly + 1.2 : ly - 3).toFixed(2)}"/>`;
+		return leader + el;
 	}).filter(Boolean).join('');
 
 	// The named firm must be one that is actually labelled on the chart, so the
@@ -914,7 +935,7 @@ function focusScript(ranked, indexSlug) {
 	bar.appendChild(chips);
 
 	var current = null;
-	function apply(slug, push) {
+	function apply(slug, push, restoring) {
 		current = slug;
 		document.body.classList.toggle('pyc-focusing', !!slug);
 		main.querySelectorAll('[data-pyc-firm]').forEach(function (el) {
@@ -924,10 +945,13 @@ function focusScript(ranked, indexSlug) {
 		chips.querySelectorAll('button').forEach(function (b) {
 			var on = b.dataset.slug === (slug || '');
 			b.setAttribute('aria-pressed', String(on));
-			// In a single scrolling row the active chip can be off-screen, which
-			// is confusing when the firm was restored from the URL.
-			if (on && slug && b.scrollIntoView) {
-				b.scrollIntoView({ block: 'nearest', inline: 'center' });
+			// Scroll the chip row only. scrollIntoView walks every scrollable
+			// ancestor including the viewport, so restoring a firm from the URL
+			// scrolled the page past its own title. Only on restore, never on a
+			// click — yanking the row under the cursor that just clicked is
+			// disorienting.
+			if (on && slug && restoring) {
+				chips.scrollLeft = b.offsetLeft - (chips.clientWidth - b.offsetWidth) / 2;
 			}
 		});
 		if (push && window.history && history.replaceState) {
@@ -953,7 +977,7 @@ function focusScript(ranked, indexSlug) {
 	else main.insertBefore(bar, main.firstChild);
 
 	var want = new URL(location.href).searchParams.get('firm');
-	apply(firms.some(function (f) { return f.s === want; }) ? want : null, false);
+	apply(firms.some(function (f) { return f.s === want; }) ? want : null, false, true);
 })();
 </script>`;
 }
@@ -1100,16 +1124,23 @@ function geoGrid(ranked) {
 	   marker and a scale bar. That is what makes it a map — not tiles, which
 	   would need client JS and put the data out of reach of the crawlers this
 	   index is written for. */
-	const compass = (r, c, size) => {
-		if (size === 1) return 'centre';
-		const ns = r === 0 ? 'north' : r === size - 1 ? 'south' : '';
-		const ew = c === 0 ? 'west' : c === size - 1 ? 'east' : '';
+	/* Compass names only work on a 3x3, where every cell is an edge or the
+	   middle. At the documented size 5 the nine names collapse — sixteen of
+	   twenty-five cells would read "centre" or share an edge name — so anything
+	   larger falls back to a grid reference, which stays unique at any size. */
+	const useCompass = n === 3;
+	const compass = (r, c) => {
+		const ns = r === 0 ? 'north' : r === n - 1 ? 'south' : '';
+		const ew = c === 0 ? 'west' : c === n - 1 ? 'east' : '';
 		if (!ns && !ew) return 'centre';
 		if (!ns) return ew;
 		if (!ew) return ns;
 		return `${ns}-${ew}`;
 	};
 	const abbrev = { 'north-west': 'NW', north: 'N', 'north-east': 'NE', west: 'W', centre: '·', east: 'E', 'south-west': 'SW', south: 'S', 'south-east': 'SE' };
+	const ref = (r, c) => `${String.fromCharCode(65 + c)}${r + 1}`;
+	const where = (r, c) => useCompass ? compass(r, c) : ref(r, c);
+	const shortWhere = (r, c) => useCompass ? (abbrev[compass(r, c)] || compass(r, c)) : ref(r, c);
 
 	const cells = [];
 	for (let r = 0; r < n; r++) {
@@ -1117,15 +1148,19 @@ function geoGrid(ranked) {
 		for (let c = 0; c < n; c++) {
 			const firms = firmsAt.get(`${r}:${c}`);
 			const pt = g.points.find((p) => p.row === r && p.col === c);
-			const where = compass(r, c, n);
+			const place = where(r, c);
 			const cls = firms === null ? 'x' : String(Math.min(firms.length, 3));
 			const coords = pt ? `${pt.lat.toFixed(3)}, ${pt.lng.toFixed(3)}` : '';
 			const who = firms === null
 				? 'no result at this point'
 				: firms.length ? firms.map((f) => f.name).join(', ') : 'no indexed firm in the pack here';
-			row.push(`<td class="pyc-geo-${cls}" title="${esc(where)} (${esc(coords)}) — ${esc(who)}">`
+			/* title is invisible on touch and unreachable by keyboard, and the
+			   coordinates are the one thing with no other route to them — so the
+			   full reading also goes in visually-hidden text inside the cell. */
+			row.push(`<td class="pyc-geo-${cls}" title="${esc(place)} (${esc(coords)}) — ${esc(who)}">`
 				+ `<span class="pyc-geo-n">${firms && firms.length ? firms.length : ''}</span>`
-				+ `<span class="pyc-geo-where">${esc(abbrev[where] || where)}</span>`
+				+ `<span class="pyc-geo-where">${esc(shortWhere(r, c))}</span>`
+				+ `<span class="pyc-sr">${esc(place)}${coords ? `, ${esc(coords)}` : ''} — ${esc(who)}</span>`
 				+ `</td>`);
 		}
 		cells.push(`<tr>${row.join('')}</tr>`);
@@ -1133,11 +1168,11 @@ function geoGrid(ranked) {
 
 	const distinct = new Set([...firmsAt.values()].filter(Boolean).flat().map((f) => f.name));
 	return `<figure class="pyc-fig">
-<figcaption>Local 3-pack for &ldquo;${esc(g.keyword)}&rdquo; searched from ${g.points.length} points on a ${n}&times;${n} grid across a ${miles(g.radiusKm * 2)}-mile square centred on ${g.centre ? `${g.centre.lat.toFixed(3)}, ${g.centre.lng.toFixed(3)}` : 'the city'}. North is up; hover a cell for its coordinates and the firms found there. Each cell counts how many indexed firms hold a pack slot at that location; a chain counts wherever any of its branches appears. ${covered} of ${g.points.length} points contain at least one indexed firm, and ${distinct.size} of the ${ranked.businesses.length} indexed firms appear somewhere on the grid.</figcaption>
+<figcaption>Local 3-pack for &ldquo;${esc(g.keyword)}&rdquo; searched from ${g.points.length} points on a ${n}&times;${n} grid across a ${miles(g.radiusKm * 2)}-mile square centred on ${g.centre ? `${g.centre.lat.toFixed(3)}, ${g.centre.lng.toFixed(3)}` : 'the city'}. North is up; each cell names its position and carries its coordinates and the firms found there. Each cell counts how many indexed firms hold a pack slot at that location; a chain counts wherever any of its branches appears. ${covered} of ${g.points.length} points contain at least one indexed firm, and ${distinct.size} of the ${ranked.businesses.length} indexed firms appear somewhere on the grid.</figcaption>
 <div class="pyc-geo-wrap">
 <span class="pyc-geo-north" aria-hidden="true">N &uarr;</span>
 <table class="pyc-geo"><caption class="pyc-sr">Indexed firms holding a local pack slot, by grid position from north-west to south-east</caption>${cells.join('')}</table>
-<span class="pyc-geo-scale" aria-hidden="true"><i></i>${miles(g.radiusKm)} miles</span>
+<span class="pyc-geo-scale" aria-hidden="true"><i></i>${miles((2 * g.radiusKm) / Math.max(1, n - 1))} miles between points</span>
 </div>
 <p class="pyc-key"><span class="pyc-sw pyc-geo-0"></span> none <span class="pyc-sw pyc-geo-1"></span> 1 firm <span class="pyc-sw pyc-geo-2"></span> 2 <span class="pyc-sw pyc-geo-3"></span> 3 of the pack</p>
 </figure>`;
