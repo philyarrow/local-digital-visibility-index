@@ -168,6 +168,37 @@ function computeBusiness(record) {
 		includedPillars: included,
 		excludedPillars: PILLARS.map((p) => p.key).filter((k) => !included.includes(k)),
 		effectiveWeights,
+
+		/* Raw evidence carried through for the published diagrams.
+
+		   The scores answer "how well"; these answer "on what". A keyword
+		   position table and the AI answers that named a firm are the most
+		   compelling thing the pipeline produces, and they were previously
+		   stranded in the per-business files where nothing downstream read them. */
+		evidence: {
+			positions: record.pillars?.visibility?.positions || {},
+			keywordBasket: record.pillars?.visibility?.keywordBasket || [],
+			rankedKeywords: record.pillars?.visibility?.rankedKeywords ?? null,
+			avgPosition: record.pillars?.visibility?.avgPosition ?? null,
+			localPackAppearances: record.pillars?.visibility?.localPackAppearances ?? null,
+			aiCitedQueries: record.pillars?.ai?.citedQueries || [],
+			aiQueryBasket: record.pillars?.ai?.queryBasket || [],
+			aiBasketSize: record.pillars?.ai?.basketSize ?? null,
+			local: {
+				reviewCount: record.pillars?.local?.reviewCount ?? null,
+				avgRating: record.pillars?.local?.avgRating ?? null,
+				branchCount: record.pillars?.local?.branchCount ?? null,
+				reviewsLast90d: record.pillars?.local?.reviewsLast90d ?? null,
+				napConsistent: record.pillars?.local?.napConsistent ?? null,
+				matchedBy: record.pillars?.local?.matchedBy ?? null,
+			},
+			speed: {
+				lcpMs: record.pillars?.speed?.lcpMs ?? null,
+				inpMs: record.pillars?.speed?.inpMs ?? null,
+				cls: record.pillars?.speed?.cls ?? null,
+				crux: record.pillars?.speed?.crux ?? null,
+			},
+		},
 		errors: record.errors || [],
 	};
 }
@@ -236,8 +267,20 @@ async function main() {
 		pillarCoverage[key] = { scored, total: businesses.length, live: scored > 0 };
 	}
 
+	/* The competitive landscape is collected per index and lives beside the
+	   business records; surface it here so the hub page can show who really
+	   owns page one rather than only how the seed ranks against itself. */
+	let landscape = null;
+	try {
+		landscape = JSON.parse(await readFile(join(dir, '_landscape.json'), 'utf8'));
+	} catch (e) {
+		// Absent is fine — the page omits the figure. Anything else (malformed
+		// JSON, permissions) must not masquerade as "not collected yet".
+		if (e.code !== 'ENOENT') throw e;
+	}
+
 	const out = {
-		schemaVersion: 1,
+		schemaVersion: 2,
 		index: indexSlug,
 		scoredAt: new Date().toISOString(),
 		weights: Object.fromEntries(PILLARS.map((p) => [p.key, p.weight])),
@@ -248,6 +291,12 @@ async function main() {
 		overallMedian,
 		sectorMedians,
 		pillarCoverage,
+		landscape: landscape ? {
+			measuredKeywords: landscape.measuredKeywords,
+			summary: landscape.summary,
+			topDomains: (landscape.domainShare || []).slice(0, 12),
+			seedGaps: (landscape.seedGaps || []).slice(0, 8),
+		} : null,
 		businesses,
 	};
 
