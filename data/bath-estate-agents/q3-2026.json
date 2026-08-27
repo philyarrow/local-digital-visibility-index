@@ -2,7 +2,7 @@
   "index": "bath-estate-agents",
   "title": "PYC Bath Estate Agent Digital Visibility Index",
   "quarter": "Q3-2026",
-  "measuredAt": "2026-08-27T16:53:59.451Z",
+  "measuredAt": "2026-08-27T17:57:12.859Z",
   "methodology": "https://hub.pyc.agency/indices/methodology/",
   "weights": {
     "speed": 20,
@@ -44,28 +44,28 @@
       "live": true
     }
   },
-  "overallMedian": 65,
+  "overallMedian": 64,
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
-    "speed": 65,
+    "speed": 69,
     "technical": 88,
     "local": 78,
-    "visibility": 38,
+    "visibility": 42,
     "ai": 40,
     "content": 67
   },
   "businesses": [
     {
       "rank": 1,
-      "name": "Savills Bath",
-      "url": "https://www.savills.co.uk/estate-agents/south-west-england/somerset/savills-bath.aspx",
-      "digitalVisibilityScore": 74,
+      "name": "Zest Sales & Lettings",
+      "url": "https://www.zestlovesproperty.com/",
+      "digitalVisibilityScore": 82,
       "pillarScores": {
-        "speed": 72,
-        "technical": 63,
-        "local": 80,
-        "visibility": 38,
-        "ai": 100,
+        "speed": 81,
+        "technical": 100,
+        "local": 78,
+        "visibility": 53,
+        "ai": 80,
         "content": 100
       },
       "includedPillars": [
@@ -88,42 +88,11 @@
     },
     {
       "rank": 2,
-      "name": "Zest Sales & Lettings",
-      "url": "https://www.zestlovesproperty.com/",
-      "digitalVisibilityScore": 73,
-      "pillarScores": {
-        "speed": 71,
-        "technical": 100,
-        "local": 78,
-        "visibility": 51,
-        "ai": 40,
-        "content": 100
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      }
-    },
-    {
-      "rank": 3,
       "name": "Allen & Harris Bath",
       "url": "https://www.allenandharris.co.uk/estate-agents/bath",
-      "digitalVisibilityScore": 71,
+      "digitalVisibilityScore": 73,
       "pillarScores": {
-        "speed": 47,
+        "speed": 55,
         "technical": 88,
         "local": 78,
         "visibility": 42,
@@ -149,15 +118,46 @@
       }
     },
     {
+      "rank": 3,
+      "name": "Savills Bath",
+      "url": "https://www.savills.co.uk/estate-agents/south-west-england/somerset/savills-bath.aspx",
+      "digitalVisibilityScore": 73,
+      "pillarScores": {
+        "speed": 69,
+        "technical": 63,
+        "local": 80,
+        "visibility": 38,
+        "ai": 100,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      }
+    },
+    {
       "rank": 4,
-      "name": "Cobb Farr",
-      "url": "https://www.cobbfarr.com/",
+      "name": "Madison Oakley",
+      "url": "https://www.madisonoakley.co.uk/",
       "digitalVisibilityScore": 70,
       "pillarScores": {
-        "speed": 71,
-        "technical": 100,
-        "local": 79,
-        "visibility": 28,
+        "speed": 75,
+        "technical": 88,
+        "local": 78,
+        "visibility": 38,
         "ai": 60,
         "content": 67
       },
@@ -183,12 +183,12 @@
       "rank": 5,
       "name": "Martin & Co Bath",
       "url": "https://www.martinco.com/estate-agents-and-letting-agents/branch/bath/",
-      "digitalVisibilityScore": 69,
+      "digitalVisibilityScore": 70,
       "pillarScores": {
-        "speed": 52,
+        "speed": 56,
         "technical": 100,
         "local": 79,
-        "visibility": 42,
+        "visibility": 46,
         "ai": 40,
         "content": 100
       },
@@ -212,15 +212,15 @@
     },
     {
       "rank": 6,
-      "name": "Madison Oakley",
-      "url": "https://www.madisonoakley.co.uk/",
-      "digitalVisibilityScore": 67,
+      "name": "Cobb Farr",
+      "url": "https://www.cobbfarr.com/",
+      "digitalVisibilityScore": 68,
       "pillarScores": {
-        "speed": 75,
-        "technical": 88,
-        "local": 78,
-        "visibility": 38,
-        "ai": 40,
+        "speed": 68,
+        "technical": 100,
+        "local": 79,
+        "visibility": 21,
+        "ai": 60,
         "content": 67
       },
       "includedPillars": [
@@ -245,12 +245,12 @@
       "rank": 7,
       "name": "Strattons and Partners",
       "url": "https://www.strattonsandpartners.com/",
-      "digitalVisibilityScore": 66,
+      "digitalVisibilityScore": 67,
       "pillarScores": {
-        "speed": 75,
+        "speed": 76,
         "technical": 63,
         "local": 78,
-        "visibility": 27,
+        "visibility": 31,
         "ai": 60,
         "content": 100
       },
@@ -276,9 +276,9 @@
       "rank": 8,
       "name": "Bath Stone Property",
       "url": "https://www.bathstoneproperty.com/",
-      "digitalVisibilityScore": 65,
+      "digitalVisibilityScore": 64,
       "pillarScores": {
-        "speed": 80,
+        "speed": 76,
         "technical": 100,
         "local": 78,
         "visibility": 46,
@@ -309,10 +309,10 @@
       "url": "https://www.winkworth.co.uk/estate-agents/bath",
       "digitalVisibilityScore": 64,
       "pillarScores": {
-        "speed": 72,
+        "speed": 69,
         "technical": 88,
         "local": 77,
-        "visibility": 46,
+        "visibility": 50,
         "ai": 0,
         "content": 100
       },
@@ -336,16 +336,16 @@
     },
     {
       "rank": 10,
-      "name": "Justin Hunter",
-      "url": "https://www.justin-hunter.co.uk/",
+      "name": "Whiteley Helyar",
+      "url": "https://whiteleyhelyar.co.uk/",
       "digitalVisibilityScore": 63,
       "pillarScores": {
-        "speed": 59,
-        "technical": 63,
+        "speed": 77,
+        "technical": 100,
         "local": 80,
-        "visibility": 47,
-        "ai": 60,
-        "content": 67
+        "visibility": 37,
+        "ai": 20,
+        "content": 33
       },
       "includedPillars": [
         "speed",
@@ -367,16 +367,16 @@
     },
     {
       "rank": 11,
-      "name": "Whiteley Helyar",
-      "url": "https://whiteleyhelyar.co.uk/",
-      "digitalVisibilityScore": 60,
+      "name": "Aspire To Move",
+      "url": "https://aspiretomove.co.uk/",
+      "digitalVisibilityScore": 61,
       "pillarScores": {
-        "speed": 63,
-        "technical": 100,
+        "speed": 73,
+        "technical": 75,
         "local": 80,
-        "visibility": 36,
+        "visibility": 38,
         "ai": 20,
-        "content": 33
+        "content": 67
       },
       "includedPillars": [
         "speed",
@@ -400,12 +400,12 @@
       "rank": 12,
       "name": "Fine & Country Bath",
       "url": "https://www.fineandcountry.co.uk/bath-estate-agents",
-      "digitalVisibilityScore": 59,
+      "digitalVisibilityScore": 58,
       "pillarScores": {
-        "speed": 62,
+        "speed": 55,
         "technical": 88,
         "local": 68,
-        "visibility": 38,
+        "visibility": 42,
         "ai": 40,
         "content": 33
       },
@@ -429,11 +429,42 @@
     },
     {
       "rank": 13,
+      "name": "Justin Hunter",
+      "url": "https://www.justin-hunter.co.uk/",
+      "digitalVisibilityScore": 58,
+      "pillarScores": {
+        "speed": 32,
+        "technical": 63,
+        "local": 80,
+        "visibility": 51,
+        "ai": 60,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      }
+    },
+    {
+      "rank": 14,
       "name": "Crisp Cowley",
       "url": "https://www.crispcowley.co.uk/",
-      "digitalVisibilityScore": 57,
+      "digitalVisibilityScore": 56,
       "pillarScores": {
-        "speed": 65,
+        "speed": 64,
         "technical": 75,
         "local": 78,
         "visibility": 42,
@@ -459,43 +490,12 @@
       }
     },
     {
-      "rank": 14,
-      "name": "Aspire To Move",
-      "url": "https://aspiretomove.co.uk/",
-      "digitalVisibilityScore": 55,
-      "pillarScores": {
-        "speed": 60,
-        "technical": 75,
-        "local": 80,
-        "visibility": 34,
-        "ai": 0,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      }
-    },
-    {
       "rank": 15,
       "name": "Nash & Co",
       "url": "http://www.nashandcobath.co.uk/",
-      "digitalVisibilityScore": 49,
+      "digitalVisibilityScore": 48,
       "pillarScores": {
-        "speed": 65,
+        "speed": 62,
         "technical": 63,
         "local": 80,
         "visibility": 26,

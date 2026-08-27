@@ -28,6 +28,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { join, dirname, isAbsolute, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PILLARS, toCsv } from './lib/common.mjs';
+import { packFirms } from './lib/match.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA_ROOT = join(HERE, 'data');
@@ -503,8 +504,129 @@ function positionHeatmap(ranked) {
 
 /* A heading with nothing under it still lands in Starlight's page ToC, so a
    figure that renders nothing must take its heading with it. */
+
+/* Channel overlap. Three sets, few items, membership is the question — the one
+   shape a Venn is genuinely right for. Past three sets it stops working and an
+   UpSet plot is the correct replacement. */
+function channelVenn(ranked) {
+	/* A firm whose visibility pillar was never collected is unmeasured, not
+	   absent. Bucketing it as "not in the local pack" on a public page asserts
+	   something we did not test. */
+	const scored = ranked.businesses.filter((b) => b.rank !== null && b.evidence
+		&& b.evidence.localPackAppearances !== null && b.evidence.positions);
+	const unmeasured = ranked.businesses.filter((b) => b.rank !== null
+		&& (!b.evidence || b.evidence.localPackAppearances === null || !b.evidence.positions));
+	if (scored.length < 3) return '';
+
+	const inOrganic = (b) => Object.values(b.evidence.positions || {}).some((p) => p && p <= 10);
+	const inPack = (b) => (b.evidence.localPackAppearances || 0) > 0;
+	const inAi = (b) => (b.evidence.aiCitedQueries || []).length > 0;
+
+	const region = (o, p, a) => scored.filter((b) => inOrganic(b) === o && inPack(b) === p && inAi(b) === a);
+	const names = (arr) => arr.map((b) => b.name).join(', ');
+	const all3 = region(true, true, true);
+	const none = region(false, false, false);
+	if (!scored.some(inOrganic) && !scored.some(inPack) && !scored.some(inAi)) return '';
+
+	const cell = (label, arr) => arr.length
+		? `<tr><th scope="row">${esc(label)}</th><td class="pyc-venn-n">${arr.length}</td><td>${esc(names(arr))}</td></tr>`
+		: `<tr class="pyc-venn-empty"><th scope="row">${esc(label)}</th><td class="pyc-venn-n">0</td><td>&mdash;</td></tr>`;
+
+	return `<figure class="pyc-fig">
+<figcaption>Where each firm is visible: ranked in the organic top 10 for at least one keyword, present in the local 3-pack, or named in at least one AI answer. ${all3.length} of ${scored.length} appear in all three.${unmeasured.length ? ` ${unmeasured.length} firm${unmeasured.length === 1 ? '' : 's'} could not be measured on these channels and ${unmeasured.length === 1 ? 'is' : 'are'} excluded.` : ''}</figcaption>
+<table class="pyc-venn"><thead><tr><th scope="col">Visible in</th><th scope="col">Firms</th><th scope="col">Which</th></tr></thead><tbody>
+${cell('All three channels', all3)}
+${cell('Organic + local pack', region(true, true, false))}
+${cell('Organic + AI', region(true, false, true))}
+${cell('Local pack + AI', region(false, true, true))}
+${cell('Organic only', region(true, false, false))}
+${cell('Local pack only', region(false, true, false))}
+${cell('AI only', region(false, false, true))}
+${cell('None of the three', none)}
+</tbody></table>
+</figure>`;
+}
+
+/* What the keyword basket is actually asking. A basket that is all one intent
+   measures one slice of the funnel, which this figure exists to expose. */
+function intentMix(ranked) {
+	const it = ranked.intent;
+	if (!it || !it.keywords?.length) return '';
+	const total = it.keywords.length;
+	const mix = Object.entries(it.mix || {}).sort((a, b) => b[1] - a[1]);
+	if (!mix.length) return '';
+
+	const bars = mix.map(([label, n]) => `<tr><th scope="row">${esc(label)}</th>`
+		+ `<td class="pyc-int-track"><span class="pyc-int-bar" style="width:${((n / total) * 100).toFixed(1)}%"></span></td>`
+		+ `<td class="pyc-int-n">${n} of ${total}</td></tr>`).join('');
+
+	const classified = mix.reduce((n, [, c]) => n + c, 0);
+	const monotone = mix.length === 1 && classified === total && total > 1
+		? ` Every keyword in the basket carries the same intent, so this pillar measures one slice of the funnel rather than the whole journey.`
+		: '';
+
+	return `<figure class="pyc-fig">
+<figcaption>Search intent across the measured keyword basket, classified by DataForSEO.${esc(monotone)}</figcaption>
+<table class="pyc-intent"><tbody>${bars}</tbody></table>
+</figure>`;
+}
+
+/* Local-pack coverage across the city. Answers a question no other figure can:
+   where can people actually find these firms.
+
+   Cells count DISTINCT indexed firms, not pack entries — a chain listing two
+   offices in one pack is one firm being findable there. A chain's other branch
+   counts toward that chain, which the caption states rather than implying the
+   exact indexed office. */
+function geoGrid(ranked) {
+	const g = ranked.geoGrid;
+	if (!g || !g.points?.length) return '';
+	const n = g.size || 3;
+	if (!g.points.some((p) => p.pack?.length)) return '';
+
+	const firmsAt = new Map();
+	for (const pt of g.points) {
+		firmsAt.set(`${pt.row}:${pt.col}`, pt.pack ? packFirms(pt.pack, ranked.businesses) : null);
+	}
+	const counts = [...firmsAt.values()].filter(Boolean).map((f) => f.length);
+	const covered = counts.filter((c) => c > 0).length;
+
+	/* Nine identical blank cells under a caption about counting firms is not a
+	   figure. When no indexed firm holds a slot anywhere, say that in a sentence
+	   — it is a stronger finding than the grid would have been. */
+	if (!covered) {
+		return `<p class="pyc-geo-null">Searching &ldquo;${esc(g.keyword)}&rdquo; from ${g.points.length} points across a ${g.radiusKm * 2}km square, <strong>not one of the ${ranked.businesses.length} firms in this index appeared in the local 3-pack at any location</strong>. The pack was held entirely by businesses outside the index.</p>`;
+	}
+
+	const cells = [];
+	for (let r = 0; r < n; r++) {
+		const row = [];
+		for (let c = 0; c < n; c++) {
+			const firms = firmsAt.get(`${r}:${c}`);
+			const cls = firms === null ? 'x' : String(Math.min(firms.length, 3));
+			const title = firms === null
+				? 'no result at this point'
+				: firms.length
+					? firms.map((f) => f.name).join(', ')
+					: 'no indexed firm in the pack here';
+			row.push(`<td class="pyc-geo-${cls}" title="${esc(title)}">${firms && firms.length ? firms.length : ''}</td>`);
+		}
+		cells.push(`<tr>${row.join('')}</tr>`);
+	}
+
+	const distinct = new Set([...firmsAt.values()].filter(Boolean).flat().map((f) => f.name));
+	return `<figure class="pyc-fig">
+<figcaption>Local 3-pack for &ldquo;${esc(g.keyword)}&rdquo; searched from ${g.points.length} points across a ${g.radiusKm * 2}km square. Each cell counts how many indexed firms hold a pack slot at that location; a chain counts wherever any of its branches appears. ${covered} of ${g.points.length} points contain at least one indexed firm, and ${distinct.size} of the ${ranked.businesses.length} indexed firms appear somewhere on the grid.</figcaption>
+<table class="pyc-geo"><caption class="pyc-sr">Indexed firms holding a local pack slot, by grid position from north-west to south-east</caption>${cells.join('')}</table>
+<p class="pyc-key"><span class="pyc-sw pyc-geo-0"></span> none <span class="pyc-sw pyc-geo-1"></span> 1 firm <span class="pyc-sw pyc-geo-2"></span> 2 <span class="pyc-sw pyc-geo-3"></span> 3 of the pack</p>
+</figure>`;
+}
+
 /* Largest absolute pillar-vs-median delta anywhere in the index, so every
    scorecard's bars share one scale and are comparable between firms. */
+/* A heading with nothing under it still lands in Starlight's page ToC, so a
+   figure that renders nothing must take its heading with it — see section(). */
+
 function maxDelta(ranked) {
 	let m = 0;
 	for (const b of ranked.businesses) {
@@ -602,6 +724,9 @@ ${section('Who owns the first page', shareOfVoice(ranked))}
 ${tableRows}
 
 ${section('Which keywords are contested, and which are open?', positionHeatmap(ranked))}
+${section('Where each firm is visible', channelVenn(ranked))}
+${section('What the keyword basket is asking', intentMix(ranked))}
+${section('Local pack coverage across the city', geoGrid(ranked))}
 ## Which ${idxTitle.toLowerCase()} has the best website?
 
 ${scored.length ? `${scored[0].name} tops the ${quarter} index with a Digital Visibility Score of ${scored[0].digitalVisibilityScore}/100.` : ''} Each firm has a full diagnostic scorecard linked from the table above.
