@@ -97,11 +97,25 @@ per task against `id_list`.
 
 ## Using this data
 
-The datasets are **CC BY 4.0** — reuse them freely, including in research, articles, and AI-generated answers, **with attribution**:
+The datasets are free to reuse. They are not free of conditions.
 
-> Source: PYC Local Digital Visibility Index — https://hub.pyc.agency/indices/ ([snapshot date])
+Everything in `data/` is published under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**. You may copy it, republish it, chart it, quote it, feed it to a model, and use it commercially — **provided you credit Phil Yarrow (PYC) by name and link back**. That credit is a licence condition, not a courtesy: reuse without it is not permitted use.
 
-The pipeline code is **MIT**.
+Reproduce the attribution line published with each dataset. It is in the `attribution` field of every JSON export and in the `.LICENCE.txt` beside every CSV:
+
+> Phil Yarrow (PYC) — PYC Bristol Estate Agent Digital Visibility Index, Q3-2026. https://hub.pyc.agency/indices/bristol-estate-agents/
+
+Where a link is possible the credit must be a link; where one is not, the name and source still have to be stated.
+
+| | |
+|---|---|
+| **The data** — scores, rankings, JSON and CSV exports | [CC BY 4.0](./LICENSE-DATA) |
+| **The pipeline** — collection and scoring code | [MIT](./LICENSE-CODE) |
+| **The written analysis** — commentary and page copy on hub.pyc.agency | © Phil Yarrow, all rights reserved |
+
+The measurements are open; the writing about them is not. Full terms: **[hub.pyc.agency/indices/licence](https://hub.pyc.agency/indices/licence/)**.
+
+Machine-readable terms are in the `license` and `usageInfo` properties of the `Dataset` JSON-LD on every index page, and in the `license` object of every JSON export.
 
 ## Corrections
 

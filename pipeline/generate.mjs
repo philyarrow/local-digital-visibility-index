@@ -60,6 +60,23 @@ const PUBLIC_DATA = join(SITE_ROOT, 'new', 'public', 'data');
 /* Dated open-data snapshots live in THIS repo, not the site's. */
 const SNAPSHOT_ROOT = join(HERE, '..', 'data');
 
+
+/* ---- licence ----
+   The data is CC BY 4.0: free to reuse, including commercially and in AI
+   answers, on the condition of a named credit and a link. That condition only
+   binds anyone if they can find it, and it was stated in the repo alone — not
+   on the site, not in the downloads, and not in the Dataset JSON-LD that
+   machine consumers and AI engines actually read. */
+const LICENCE = {
+	name: 'CC BY 4.0',
+	url: 'https://creativecommons.org/licenses/by/4.0/',
+	holder: 'Phil Yarrow (PYC)',
+	terms: `${SITE}/indices/licence/`,
+};
+
+const attributionFor = (indexSlug, quarter) =>
+	`${LICENCE.holder} — PYC ${indexTitle(indexSlug)} Digital Visibility Index, ${quarter}. ${SITE}/indices/${indexSlug}/`;
+
 /* ---- frontmatter / formatting helpers ---- */
 
 const yamlStr = (s) => `"${String(s ?? '').replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
@@ -186,6 +203,11 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 		name: `${b.name} — ${idTitleQuarter(idxTitle, quarter)}`,
 		description: `Digital Visibility Score and six-pillar breakdown for ${b.name}, measured ${date} via the PYC ${idxTitle} Digital Visibility Index.`,
 		creator: { '@type': 'Organization', name: 'Phil Yarrow Consulting (PYC)', url: SITE },
+		license: LICENCE.url,
+		usageInfo: LICENCE.terms,
+		isAccessibleForFree: true,
+		copyrightHolder: { '@type': 'Person', name: LICENCE.holder },
+		copyrightYear: new Date(ranked.scoredAt).getUTCFullYear(),
 		dateModified: date,
 		isPartOf: { '@type': 'Dataset', name: `PYC ${idxTitle} Digital Visibility Index`, url: `${SITE}/indices/${indexSlug}/` },
 		about: { '@type': 'LocalBusiness', name: b.name, url: b.url },
@@ -1280,6 +1302,11 @@ function hubMdx(ranked, quarter, indexSlug, prior = null) {
 		name: `PYC ${idxTitle} Digital Visibility Index ${quarter}`,
 		description: `League table scoring ${scored.length} ${idxTitle.toLowerCase()}s 0–100 on ${measuredOn}. Measured ${date}.${cov.partial ? ` v0: ${cov.live.length} of ${PILLARS.length} pillars measured.` : ''}`,
 		creator: { '@type': 'Organization', name: 'Phil Yarrow Consulting (PYC)', url: SITE },
+		license: LICENCE.url,
+		usageInfo: LICENCE.terms,
+		isAccessibleForFree: true,
+		copyrightHolder: { '@type': 'Person', name: LICENCE.holder },
+		copyrightYear: new Date(ranked.scoredAt).getUTCFullYear(),
 		dateModified: date,
 		distribution: [
 			{ '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: `${SITE}/data/${indexSlug}.json` },
@@ -1332,6 +1359,14 @@ ${scored.length ? `${scored[0].name} tops the ${quarter} index with a Digital Vi
 
 Every score follows the same six-pillar [methodology](/indices/methodology/): Speed & Core Web Vitals (20%), Technical foundation (20%), Local presence (20%), Visibility (15%), AI search presence (15%) and Content & trust (10%).${cov.partial ? ` **This ${quarter} release (v0) measures ${cov.live.length} of those ${PILLARS.length} pillars** — ${cov.liveLabels.join(' and ')} — with weights renormalised to ${cov.weightLine}. The remaining pillars are added in a later refresh.` : ''} Download the full dataset: [JSON](/data/${indexSlug}.json) · [CSV](/data/${indexSlug}.csv).
 
+## Using this data
+
+This dataset is published under [${LICENCE.name}](${LICENCE.url}). You may reuse it, including commercially and in AI-generated answers, **provided you credit ${LICENCE.holder} by name and link back**. That credit is a condition of use, not a courtesy.
+
+> ${attributionFor(indexSlug, quarter)}
+
+Full terms: [licence and attribution](/indices/licence/).
+
 Spotted an error? [Request a correction](mailto:info@philyarrow.co.uk?subject=Correction:%20${encodeURIComponent(idxTitle)}%20Index).
 
 <script type="application/ld+json">${JSON.stringify(dataset)}</script>
@@ -1349,6 +1384,10 @@ function exportJson(ranked, quarter, indexSlug) {
 		quarter,
 		measuredAt: ranked.scoredAt,
 		methodology: `${SITE}/indices/methodology/`,
+		license: { name: LICENCE.name, url: LICENCE.url, terms: LICENCE.terms },
+		attribution: attributionFor(indexSlug, quarter),
+		attributionNote: 'Reuse is permitted, including commercially and in AI-generated answers, '
+			+ 'provided this attribution is reproduced and linked.',
 		weights: ranked.weights,
 		pillarCoverage: ranked.pillarCoverage,
 		overallMedian: ranked.overallMedian ?? null,
@@ -1474,6 +1513,14 @@ async function main() {
 	const csv = exportCsv(ranked);
 	await writeFile(join(PUBLIC_DATA, `${indexSlug}.json`), json);
 	await writeFile(join(PUBLIC_DATA, `${indexSlug}.csv`), csv);
+	/* The CSV stays strictly parseable — a comment line would break strict
+	   readers — so the terms travel beside it rather than inside it. */
+	await writeFile(join(PUBLIC_DATA, `${indexSlug}.LICENCE.txt`),
+		`${attributionFor(indexSlug, quarter)}\n\n`
+		+ `Licence: ${LICENCE.name} — ${LICENCE.url}\n`
+		+ `Terms:   ${LICENCE.terms}\n\n`
+		+ `Reuse is permitted, including commercially and in AI-generated answers,\n`
+		+ `provided the attribution above is reproduced and linked.\n`);
 
 	/* Dated open-data snapshot, written into THIS repo's data/ directory.
 	   Published snapshots are the audit trail — the site's copy is replaced
