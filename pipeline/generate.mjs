@@ -24,7 +24,7 @@
        question-shaped H2s, JSON/CSV exports.
 */
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { join, dirname, isAbsolute, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PILLARS, toCsv } from './lib/common.mjs';
@@ -831,12 +831,34 @@ function channelVenn(ranked) {
 	const none = region(false, false, false);
 	if (!scored.some(inOrganic) && !scored.some(inPack) && !scored.some(inAi)) return '';
 
+	/* The diagram carries the shape at a glance; the table beneath carries the
+	   names, stays readable at any set count, and is what a screen reader gets.
+	   Neither alone was right — circles without names say little, a table alone
+	   was the visual downgrade. */
+	const R = { all3, organicPack: region(true, true, false), organicAi: region(true, false, true),
+		packAi: region(false, true, true), organicOnly: region(true, false, false),
+		packOnly: region(false, true, false), aiOnly: region(false, false, true) };
+	const vn = (x, y, k, cls = '') => (R[k]?.length
+		? `<text class="pyc-venn-n-svg ${cls}" x="${x}" y="${y}" text-anchor="middle">${R[k].length}</text>` : '');
+	const diagram = `<svg class="pyc-venn-svg" viewBox="0 0 100 94" role="img" aria-label="Venn diagram of channel visibility; the table below names every firm">
+<circle class="pyc-vc pyc-vc-a" cx="37" cy="35" r="26"/>
+<circle class="pyc-vc pyc-vc-b" cx="63" cy="35" r="26"/>
+<circle class="pyc-vc pyc-vc-c" cx="50" cy="58" r="26"/>
+<text class="pyc-venn-lab" x="6" y="10">Organic top 10</text>
+<text class="pyc-venn-lab" x="94" y="10" text-anchor="end">Local 3-pack</text>
+<text class="pyc-venn-lab" x="50" y="92" text-anchor="middle">Named by AI</text>
+${vn(24, 30, 'organicOnly')}${vn(76, 30, 'packOnly')}${vn(50, 80, 'aiOnly')}
+${vn(50, 25, 'organicPack')}${vn(31, 55, 'organicAi')}${vn(69, 55, 'packAi')}
+${vn(50, 46, 'all3', 'pyc-venn-hero')}
+</svg>`;
+
 	const cell = (label, arr) => arr.length
 		? `<tr><th scope="row">${esc(label)}</th><td class="pyc-venn-n">${arr.length}</td><td>${esc(names(arr))}</td></tr>`
 		: `<tr class="pyc-venn-empty"><th scope="row">${esc(label)}</th><td class="pyc-venn-n">0</td><td>&mdash;</td></tr>`;
 
 	return `<figure class="pyc-fig">
 <figcaption>Where each firm is visible: ranked in the organic top 10 for at least one keyword, present in the local 3-pack, or named in at least one AI answer. ${all3.length} of ${scored.length} appear in all three.${unmeasured.length ? ` ${unmeasured.length} firm${unmeasured.length === 1 ? '' : 's'} could not be measured on these channels and ${unmeasured.length === 1 ? 'is' : 'are'} excluded.` : ''}</figcaption>
+${diagram}
 <table class="pyc-venn"><thead><tr><th scope="col">Visible in</th><th scope="col">Firms</th><th scope="col">Which</th></tr></thead><tbody>
 ${cell('All three channels', all3)}
 ${cell('Organic + local pack', region(true, true, false))}
@@ -851,6 +873,155 @@ ${cell('None of the three', none)}
 ${takeaway(all3.length === 0
 	? `<strong>Not one firm</strong> in this index is visible in all three channels at once.`
 	: `<strong>${all3.length} of ${scored.length} firms</strong> are visible in all three channels.${none.length ? ` ${none.length} appear${none.length === 1 ? 's' : ''} in none of them.` : ''}`)}`;
+}
+
+
+/* Firm focus — progressive enhancement.
+
+   Every figure is already complete in the markup: this only adds the ability to
+   pick a firm and have the page recede around it. Without JavaScript nothing is
+   lost, which matters because the index exists to be read by crawlers and AI
+   engines as much as by people, and a chart assembled in the browser is
+   invisible to both.
+
+   The control is written by the script rather than shipped in the HTML, so a
+   reader without JS never sees a dead widget. */
+function focusScript(ranked, indexSlug) {
+	const firms = ranked.businesses
+		.filter((b) => b.rank !== null)
+		.map((b) => ({ n: b.name, s: b.slug }));
+	if (firms.length < 3) return '';
+
+	return `<script type="application/json" id="pyc-firms">${JSON.stringify(firms)}</script>
+<script>
+(function () {
+	var data = document.getElementById('pyc-firms');
+	if (!data) return;
+	var firms;
+	try { firms = JSON.parse(data.textContent); } catch (e) { return; }
+
+	var main = document.querySelector('.sl-markdown-content');
+	if (!main) return;
+
+	// Tag every element that names a firm, once, so focusing is a class toggle.
+	firms.forEach(function (f) {
+		var needle = f.n.toLowerCase();
+		main.querySelectorAll('tr, .pyc-nm-kw, text, li, circle').forEach(function (el) {
+			var t = (el.textContent || '') + ' ' + (el.getAttribute('title') || '');
+			if (t.toLowerCase().indexOf(needle) !== -1) {
+				el.setAttribute('data-pyc-firm', (el.getAttribute('data-pyc-firm') || '') + '|' + f.s);
+			}
+		});
+	});
+
+	var bar = document.createElement('div');
+	bar.className = 'pyc-focus';
+	bar.innerHTML = '<span class="pyc-focus-label">Focus a firm</span>';
+	var chips = document.createElement('div');
+	chips.className = 'pyc-focus-chips';
+	bar.appendChild(chips);
+
+	var current = null;
+	function apply(slug, push) {
+		current = slug;
+		document.body.classList.toggle('pyc-focusing', !!slug);
+		main.querySelectorAll('[data-pyc-firm]').forEach(function (el) {
+			var on = !!slug && el.getAttribute('data-pyc-firm').indexOf('|' + slug) !== -1;
+			el.classList.toggle('pyc-on', on);
+		});
+		chips.querySelectorAll('button').forEach(function (b) {
+			b.setAttribute('aria-pressed', String(b.dataset.slug === (slug || '')));
+		});
+		if (push && window.history && history.replaceState) {
+			var u = new URL(location.href);
+			if (slug) u.searchParams.set('firm', slug); else u.searchParams.delete('firm');
+			history.replaceState(null, '', u);
+		}
+	}
+
+	[{ n: 'All firms', s: '' }].concat(firms).forEach(function (f) {
+		var b = document.createElement('button');
+		b.type = 'button';
+		b.className = 'pyc-chip';
+		b.dataset.slug = f.s;
+		b.textContent = f.n;
+		b.setAttribute('aria-pressed', 'false');
+		b.addEventListener('click', function () { apply(f.s || null, true); });
+		chips.appendChild(b);
+	});
+
+	var firstFig = main.querySelector('.pyc-fig, .pyc-league');
+	if (firstFig && firstFig.parentNode) firstFig.parentNode.insertBefore(bar, firstFig);
+	else main.insertBefore(bar, main.firstChild);
+
+	var want = new URL(location.href).searchParams.get('firm');
+	apply(firms.some(function (f) { return f.s === want; }) ? want : null, false);
+})();
+</script>`;
+}
+
+/* Movement since the previous snapshot, restricted to pillars measured in BOTH
+   quarters.
+
+   Q2 scored two of six pillars; Q3 scores all six. Plotting the headline score
+   across that boundary would render a methodology change as a trend, which is
+   the one thing a time series must never do. So only the comparable pillars are
+   charted, the scope is stated, and unchanged readings are counted rather than
+   drawn — eighteen flat lines is not a chart. */
+function quarterMovement(ranked, prior, quarter) {
+	if (!prior?.businesses?.length) return '';
+
+	const liveIn = (snap) => new Set(Object.entries(snap.pillarCoverage || {})
+		.filter(([, v]) => v.scored > 0).map(([k]) => k));
+	const shared = [...liveIn(prior)].filter((k) => liveIn(ranked).has(k));
+	if (!shared.length) return '';
+
+	const was = new Map(prior.businesses.map((b) => [b.name, b]));
+	const rows = [];
+	for (const b of ranked.businesses) {
+		const p = was.get(b.name);
+		if (!p) continue;
+		for (const key of shared) {
+			const from = p.pillarScores?.[key], to = b.pillarScores?.[key];
+			if (typeof from !== 'number' || typeof to !== 'number') continue;
+			rows.push({ name: b.name, key, from, to, delta: to - from });
+		}
+	}
+	if (!rows.length) return '';
+
+	const moved = rows.filter((r) => r.delta !== 0).sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta));
+	const flat = rows.length - moved.length;
+	const labels = Object.fromEntries(PILLARS.map((p) => [p.key, p.label]));
+	const scope = shared.map((k) => labels[k]).join(' and ');
+
+	if (!moved.length) {
+		return `<p class="pyc-geo-null">Nothing measurable changed between ${esc(prior.quarter)} and ${esc(quarter)} on the pillars measured in both: ${esc(scope)}. All ${rows.length} readings are identical.</p>`;
+	}
+
+	const show = moved.slice(0, 12);
+	const H = 12 + show.length * 15;
+	const lines = show.map((r, i) => {
+		const yy = 12 + i * 15;
+		const up = r.delta > 0;
+		const x1 = 30 + (r.from / 100) * 42;
+		const x2 = 30 + (r.to / 100) * 42;
+		const dir = up ? 'pyc-mv-up' : 'pyc-mv-down';
+		return `<line class="pyc-mv-line ${dir}" x1="${x1.toFixed(1)}" y1="${yy}" x2="${x2.toFixed(1)}" y2="${yy}"/>`
+			+ `<circle class="pyc-mv-from" cx="${x1.toFixed(1)}" cy="${yy}" r="1.5"/>`
+			+ `<circle class="pyc-mv-to ${dir}" cx="${x2.toFixed(1)}" cy="${yy}" r="2.1"/>`
+			+ `<text class="pyc-mv-name" x="28" y="${yy + 1.3}" text-anchor="end">${esc(r.name)}</text>`
+			+ `<text class="pyc-mv-val ${dir}" x="75" y="${yy + 1.3}">${up ? '+' : ''}${r.delta} ${esc(labels[r.key])}</text>`;
+	}).join('');
+
+	const big = moved[0];
+	return `<figure class="pyc-fig">
+<figcaption>Change between ${esc(prior.quarter)} and ${esc(quarter)} on the ${shared.length === 1 ? 'one pillar' : `${shared.length} pillars`} measured in both quarters &mdash; ${esc(scope)}. The other pillars were not measured in ${esc(prior.quarter)}, so no comparison is possible and none is drawn.</figcaption>
+<svg class="pyc-movement" viewBox="0 0 100 ${H}" role="img" aria-label="Pillar score changes between quarters for ${show.length} firms">
+${lines}
+</svg>
+<p class="pyc-key">Hollow mark is ${esc(prior.quarter)}, solid is ${esc(quarter)}.${moved.length > show.length ? ` Showing the ${show.length} largest of ${moved.length} changes.` : ''} ${flat} reading${flat === 1 ? '' : 's'} unchanged and not drawn.</p>
+</figure>
+${takeaway(`<strong>${esc(big.name)}</strong> moved furthest: ${esc(labels[big.key])} ${big.delta > 0 ? 'up' : 'down'} <strong>${Math.abs(big.delta)} points</strong> since ${esc(prior.quarter)}. ${moved.length} of ${rows.length} comparable readings changed at all &mdash; which is what a quarter of movement actually looks like.`)}`;
 }
 
 /* What the keyword basket is actually asking. A basket that is all one intent
@@ -967,7 +1138,7 @@ function section(heading, body) {
 
 /* ---- index hub MDX ---- */
 
-function hubMdx(ranked, quarter, indexSlug) {
+function hubMdx(ranked, quarter, indexSlug, prior = null) {
 	const idxTitle = indexTitle(indexSlug);
 	const date = new Date(ranked.scoredAt).toISOString();
 	const human = humanDate(ranked.scoredAt);
@@ -1073,6 +1244,7 @@ ${section('Closest to the first page', nearMisses(ranked))}
 ${section('Reputation: reviews against rating', reputationScatter(ranked))}
 ${section('What the keyword basket is asking', intentMix(ranked))}
 ${section('Local pack coverage across the city', geoGrid(ranked))}
+${section('What changed since last quarter', quarterMovement(ranked, prior, quarter))}
 ## Which ${idxTitle.toLowerCase()} has the best website?
 
 ${scored.length ? `${scored[0].name} tops the ${quarter} index with a Digital Visibility Score of ${scored[0].digitalVisibilityScore}/100.` : ''} Each firm has a full diagnostic scorecard linked from the table above.
@@ -1085,6 +1257,7 @@ Spotted an error? [Request a correction](mailto:info@philyarrow.co.uk?subject=Co
 
 <script type="application/ld+json">${JSON.stringify(dataset)}</script>
 <script type="application/ld+json">${JSON.stringify(itemList)}</script>
+${focusScript(ranked, indexSlug)}
 `;
 }
 
@@ -1176,12 +1349,24 @@ async function main() {
 		process.exit(1);
 	}
 
+	/* The previous quarter's published snapshot, if one exists. Read from this
+	   repo's own data/ — the site copy is overwritten each quarter. */
+	let prior = null;
+	try {
+		const files = (await readdir(join(SNAPSHOT_ROOT, indexSlug)))
+			.filter((f) => /^q\d-\d{4}\.json$/.test(f) && f !== `${quarter.toLowerCase()}.json`)
+			.sort();
+		if (files.length) prior = JSON.parse(await readFile(join(SNAPSHOT_ROOT, indexSlug, files[files.length - 1]), 'utf8'));
+	} catch {
+		// no prior snapshot — the movement figure simply does not render
+	}
+
 	const contentDir = join(CONTENT_ROOT, indexSlug);
 	await mkdir(contentDir, { recursive: true });
 	await mkdir(PUBLIC_DATA, { recursive: true });
 
 	// hub
-	await writeFile(join(contentDir, 'index.md'), hubMdx(ranked, quarter, indexSlug));
+	await writeFile(join(contentDir, 'index.md'), hubMdx(ranked, quarter, indexSlug, prior));
 	// scorecards
 	let cards = 0;
 	for (const b of ranked.businesses) {
