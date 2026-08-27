@@ -354,6 +354,12 @@ function aggregateBranches(items) {
 			: null,
 		branchCount: items.length,
 		placeIds: items.map((i) => i.place_id || i.cid).filter(Boolean),
+		/* business_listings returns latitude/longitude in a response already paid
+		   for. Storing it now means a later version can plot a firm's offices
+		   against its local-pack coverage without another collection. */
+		coordinates: items
+			.filter((i) => typeof i.latitude === 'number' && typeof i.longitude === 'number')
+			.map((i) => ({ lat: i.latitude, lng: i.longitude })),
 		claimed: items.some((i) => i.is_claimed === true) || null,
 	};
 }
