@@ -147,7 +147,7 @@ This release scores only **${cov.liveLabels.join(' + ')}**. ${cov.missingLabels.
 	   That has to be stated on the page, not left in the dataset. */
 	if (cov.incomplete.length) {
 		return `:::note[Not every firm could be measured on every pillar (${quarter})]
-${cov.affectedCount === 1 ? 'One firm below is' : `${cov.affectedCount} of the firms below are`} missing at least one pillar: ${cov.incompleteLabels.join(', ')}. Where a pillar could not be measured for a firm it is **excluded from that firm's score** and its remaining weights are renormalised, rather than scored zero — so ${cov.affectedCount === 1 ? 'it is' : 'those firms are'} ranked on less evidence than the rest, and ${cov.affectedCount === 1 ? 'its' : 'their'} position should be read with that in mind. ${cov.affectedCount === 1 ? 'Affected' : 'Affected'}: ${cov.affectedNames.join(', ')}. See the [methodology](/indices/methodology/).
+${cov.affectedCount === 1 ? 'One firm below is' : `${cov.affectedCount} of the firms below are`} missing at least one pillar: ${cov.incompleteLabels.join(', ')}. Where a pillar could not be measured for a firm it is **excluded from that firm's score** and its remaining weights are renormalised, rather than scored zero — so ${cov.affectedCount === 1 ? 'it is' : 'those firms are'} ranked on less evidence than the rest, and ${cov.affectedCount === 1 ? 'its' : 'their'} position should be read with that in mind. Affected: ${cov.affectedNames.join(', ')}. See the [methodology](/indices/methodology/).
 :::
 
 `;
@@ -521,6 +521,30 @@ function takeaway(html) {
 	return html ? `<p class="pyc-takeaway">${html}</p>` : '';
 }
 
+
+/* Place a label beside a point without letting it run off the viewBox.
+
+   Anchoring on dot position alone was not enough: a long name on a dot just
+   left of the threshold still overflowed ("Redland Road Dental Practice" needs
+   ~51 units at the mobile type size and was clipped). This estimates the text
+   width and flips the anchor when the label would not fit, offsetting by the
+   mark's radius rather than a flat gap so a large bubble does not sit under
+   its own label. */
+function placeLabel(name, x, y, { width = 100, radius = 2, fontUnits = 3.6 } = {}) {
+	// ~0.5em per character is a good enough proxy for a proportional face.
+	const textUnits = name.length * fontUnits * 0.5;
+	const gap = radius + 1.5;
+	const fitsRight = x + gap + textUnits <= width - 1;
+	const fitsLeft = x - gap - textUnits >= 1;
+	// A long name on a central dot fits neither side. Forcing it clips the name
+	// either way, so it is dropped: the hover title still carries it, and the
+	// takeaway names the firm that matters.
+	if (!fitsRight && !fitsLeft) return null;
+	const anchor = fitsRight ? 'start' : 'end';
+	const tx = fitsRight ? x + gap : x - gap;
+	return { anchor, x: Number(tx.toFixed(2)), y: Number(y.toFixed(2)) };
+}
+
 /* Visibility against AI presence. Two pillars that ought to correlate; where a
    firm sits off the diagonal is the whole point. */
 function visibilityAiQuadrant(ranked) {
@@ -557,12 +581,10 @@ function visibilityAiQuadrant(ranked) {
 	}
 
 	const labels = placed.map(({ b, x, y }) => {
-		// Anchor away from the nearer edge so the text stays inside the plot.
-		const anchor = x > W * 0.55 ? 'end' : 'start';
-		const dx = anchor === 'end' ? -3 : 3;
 		const dy = y < PAD + 6 ? 4 : -3; // nudge below if it would clip the top
-		return `<text class="pyc-q-lab" x="${(x + dx).toFixed(2)}" y="${(y + dy).toFixed(2)}" text-anchor="${anchor}">${esc(b.name)}</text>`;
-	}).join('');
+		const pos = placeLabel(b.name, x, y + dy, { width: W, radius: 1.6 });
+		return pos ? `<text class="pyc-q-lab" x="${pos.x}" y="${pos.y}" text-anchor="${pos.anchor}">${esc(b.name)}</text>` : '';
+	}).filter(Boolean).join('');
 
 	// The named firm must be one that is actually labelled on the chart, so the
 	// sentence and the picture agree.
@@ -656,9 +678,11 @@ function reputationScatter(ranked) {
 	if (rhi - rlo < 0.8) rlo = Math.max(0, rhi - 0.8);
 	const below = pts.filter((b) => b.evidence.local.avgRating < rlo);
 
-	const W = 100, H = 62, PAD = 7;
-	const px = (v) => PAD + ((Math.log10(v) - Math.log10(lo)) / Math.max(0.01, Math.log10(hi) - Math.log10(lo))) * (W - PAD * 2);
-	const py = (v) => (H - PAD) - ((v - rlo) / Math.max(0.01, rhi - rlo)) * (H - PAD * 2);
+	/* Marks are inset by the largest bubble radius so an extreme point sits
+	   inside the axis frame rather than overhanging it. */
+	const W = 100, H = 62, PAD = 7, R_MAX = 4;
+	const px = (v) => PAD + R_MAX + ((Math.log10(v) - Math.log10(lo)) / Math.max(0.01, Math.log10(hi) - Math.log10(lo))) * (W - PAD * 2 - R_MAX * 2);
+	const py = (v) => (H - PAD - R_MAX) - ((v - rlo) / Math.max(0.01, rhi - rlo)) * (H - PAD * 2 - R_MAX * 2);
 
 	const dots = pts.map((b) => {
 		const l = b.evidence.local;
@@ -690,15 +714,22 @@ function reputationScatter(ranked) {
 	   an empty field. Ticks and gridlines make the gap mean something, and the
 	   outlier is named so the void is a finding rather than a rendering fault. */
 	const ratTicks = [];
-	for (let v = Math.ceil(rlo * 2) / 2; v <= rhi; v += 0.5) ratTicks.push(Number(v.toFixed(1)));
+	// 4.7 - 0.2 is fractionally above 4.5 in binary, which silently dropped the
+	// 4.5 gridline; round before the ceil.
+	for (let v = Math.ceil(Number(rlo.toFixed(6)) * 2) / 2; v <= rhi; v += 0.5) ratTicks.push(Number(v.toFixed(1)));
 	const yGrid = ratTicks.map((v) => `<line class="pyc-q-grid" x1="${PAD}" y1="${py(v).toFixed(2)}" x2="${W - PAD}" y2="${py(v).toFixed(2)}"/>`
 		+ `<text class="pyc-q-tick" x="${(PAD - 1).toFixed(2)}" y="${(py(v) + 1).toFixed(2)}" text-anchor="end">${v}</text>`).join('');
 
-	const revTicks = [lo, Math.round(Math.sqrt(lo * hi)), hi];
+	// On a narrow range the geometric mean rounds onto an endpoint, painting two
+	// identical labels at the same x.
+	const revTicks = [...new Set([lo, Math.round(Math.sqrt(lo * hi)), hi])];
 	const xGrid = revTicks.map((v) => `<text class="pyc-q-tick" x="${px(v).toFixed(2)}" y="${(H - PAD + 3.5).toFixed(2)}" text-anchor="middle">${v}</text>`).join('');
 
-	const outlier = below.map((b) =>
-		`<text class="pyc-q-lab" x="${(px(b.evidence.local.reviewCount) + 3.5).toFixed(2)}" y="${(H - PAD + 1).toFixed(2)}">${esc(b.name)} ${b.evidence.local.avgRating}&#9733;</text>`).join('');
+	const outlier = below.map((b) => {
+		const label = `${b.name} ${b.evidence.local.avgRating}\u2605`;
+		const pos = placeLabel(label, px(b.evidence.local.reviewCount), H - PAD + 1, { width: W, radius: 3 });
+		return pos ? `<text class="pyc-q-lab" x="${pos.x}" y="${pos.y}" text-anchor="${pos.anchor}">${esc(label)}</text>` : '';
+	}).filter(Boolean).join('');
 
 	return `<figure class="pyc-fig">
 <figcaption>Google review volume (log scale) against average rating. Bubble size is review count.${below.length ? ` The rating axis starts at ${rlo.toFixed(1)} so the cluster is readable; ${below.length === 1 ? 'one firm rated' : `${below.length} firms rated`} below that ${below.length === 1 ? 'sits' : 'sit'} on the floor, drawn hollow and named.` : ''}</figcaption>
