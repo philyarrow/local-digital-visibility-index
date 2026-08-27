@@ -531,7 +531,7 @@ export async function searchIntent(keywords, { languageCode = 'en' } = {}) {
 
 /* The same query issued from a grid of points across a city.
 
-   Verified: "estate agents near me" from two Bristol points 6km apart returns
+   Verified: "estate agents near me" from two Bristol points 4 miles apart returns
    almost entirely different 3-packs — only one chain appeared in both, via
    different branches. A firm can look strong in the index and be invisible
    three miles from its own office, and no other figure here can show that.

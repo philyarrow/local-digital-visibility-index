@@ -36,9 +36,10 @@
 		"enabled": true,
 		"size": 3,
 		"radiusKm": 6,
+		"_radiusNote": "Kilometres because the lat/lng maths needs them; every figure a reader sees converts to miles. 6km is a 7.5-mile square.",
 		"radiusM": 1000,
 		"depth": 20,
-		"_note": "Local-pack coverage across a city. radiusM is the third component of DataForSEO location_coordinate and must sit in 199-199999; it is validated, not trusted. The same query 6km apart returns almost entirely different 3-packs, so a firm can look strong in the index and be invisible near its own office. size x size live SERP calls at ~$0.0035 each: 9 points = $0.032 per index. Raise size to 5 ($0.088) for a finer map."
+		"_note": "Local-pack coverage across a city. radiusM is the third component of DataForSEO location_coordinate and must sit in 199-199999; it is validated, not trusted. The same query 4 miles apart returns almost entirely different 3-packs, so a firm can look strong in the index and be invisible near its own office. size x size live SERP calls at ~$0.0035 each: 9 points = $0.032 per index. Raise size to 5 ($0.088) for a finer map."
 	},
 
 	"cadence": {

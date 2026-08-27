@@ -1055,6 +1055,17 @@ function intentMix(ranked) {
 </figure>`;
 }
 
+
+/* Distances are collected and computed in kilometres — the latitude/longitude
+   maths needs them — but this is a UK site read by UK businesses, so every
+   figure a reader sees is in miles. One conversion, at the display layer. */
+const MILES_PER_KM = 0.621371;
+const miles = (km, dp = 1) => {
+	const m = km * MILES_PER_KM;
+	// Whole numbers read better than "4.0 miles".
+	return Number.isInteger(Number(m.toFixed(dp))) ? String(Math.round(m)) : m.toFixed(dp);
+};
+
 /* Local-pack coverage across the city. Answers a question no other figure can:
    where can people actually find these firms.
 
@@ -1079,7 +1090,7 @@ function geoGrid(ranked) {
 	   figure. When no indexed firm holds a slot anywhere, say that in a sentence
 	   — it is a stronger finding than the grid would have been. */
 	if (!covered) {
-		return `<p class="pyc-geo-null">Searching &ldquo;${esc(g.keyword)}&rdquo; from ${g.points.length} points across a ${g.radiusKm * 2}km square, <strong>not one of the ${ranked.businesses.length} firms in this index appeared in the local 3-pack at any location</strong>. The pack was held entirely by businesses outside the index.</p>`;
+		return `<p class="pyc-geo-null">Searching &ldquo;${esc(g.keyword)}&rdquo; from ${g.points.length} points across a ${miles(g.radiusKm * 2)}-mile square, <strong>not one of the ${ranked.businesses.length} firms in this index appeared in the local 3-pack at any location</strong>. The pack was held entirely by businesses outside the index.</p>`;
 	}
 
 	/* The figure says "across the city" but rendered nine anonymous squares: a
@@ -1122,11 +1133,11 @@ function geoGrid(ranked) {
 
 	const distinct = new Set([...firmsAt.values()].filter(Boolean).flat().map((f) => f.name));
 	return `<figure class="pyc-fig">
-<figcaption>Local 3-pack for &ldquo;${esc(g.keyword)}&rdquo; searched from ${g.points.length} points on a ${n}&times;${n} grid across a ${g.radiusKm * 2}km square centred on ${g.centre ? `${g.centre.lat.toFixed(3)}, ${g.centre.lng.toFixed(3)}` : 'the city'}. North is up; hover a cell for its coordinates and the firms found there. Each cell counts how many indexed firms hold a pack slot at that location; a chain counts wherever any of its branches appears. ${covered} of ${g.points.length} points contain at least one indexed firm, and ${distinct.size} of the ${ranked.businesses.length} indexed firms appear somewhere on the grid.</figcaption>
+<figcaption>Local 3-pack for &ldquo;${esc(g.keyword)}&rdquo; searched from ${g.points.length} points on a ${n}&times;${n} grid across a ${miles(g.radiusKm * 2)}-mile square centred on ${g.centre ? `${g.centre.lat.toFixed(3)}, ${g.centre.lng.toFixed(3)}` : 'the city'}. North is up; hover a cell for its coordinates and the firms found there. Each cell counts how many indexed firms hold a pack slot at that location; a chain counts wherever any of its branches appears. ${covered} of ${g.points.length} points contain at least one indexed firm, and ${distinct.size} of the ${ranked.businesses.length} indexed firms appear somewhere on the grid.</figcaption>
 <div class="pyc-geo-wrap">
 <span class="pyc-geo-north" aria-hidden="true">N &uarr;</span>
 <table class="pyc-geo"><caption class="pyc-sr">Indexed firms holding a local pack slot, by grid position from north-west to south-east</caption>${cells.join('')}</table>
-<span class="pyc-geo-scale" aria-hidden="true"><i></i>${g.radiusKm} km</span>
+<span class="pyc-geo-scale" aria-hidden="true"><i></i>${miles(g.radiusKm)} miles</span>
 </div>
 <p class="pyc-key"><span class="pyc-sw pyc-geo-0"></span> none <span class="pyc-sw pyc-geo-1"></span> 1 firm <span class="pyc-sw pyc-geo-2"></span> 2 <span class="pyc-sw pyc-geo-3"></span> 3 of the pack</p>
 </figure>`;
