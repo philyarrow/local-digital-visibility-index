@@ -74,8 +74,18 @@ const LICENCE = {
 	terms: `${SITE}/indices/licence/`,
 };
 
-const attributionFor = (indexSlug, quarter) =>
-	`${LICENCE.holder} — PYC ${indexTitle(indexSlug)} Digital Visibility Index, ${quarter}. ${SITE}/indices/${indexSlug}/`;
+/* Two levels, because a per-dataset line was too narrow: it credited one index
+   in one quarter, so anyone drawing on several indices, on the methodology, or
+   on the body of work as a whole had no credit that actually covered what they
+   used.
+
+   The REQUIRED credit names the work and its author and covers every dataset on
+   the site. The CITATION adds which index and quarter a specific figure came
+   from, for anyone quoting one precisely. */
+const WORK = 'Local Digital Visibility Index';
+const attributionRequired = () => `${LICENCE.holder} — ${WORK}. ${SITE}/indices/`;
+const citationFor = (indexSlug, quarter) =>
+	`${LICENCE.holder} — ${WORK}: ${indexTitle(indexSlug)}, ${quarter}. ${SITE}/indices/${indexSlug}/`;
 
 /* ---- frontmatter / formatting helpers ---- */
 
@@ -1363,7 +1373,11 @@ Every score follows the same six-pillar [methodology](/indices/methodology/): Sp
 
 This dataset is published under [${LICENCE.name}](${LICENCE.url}). You may reuse it, including commercially and in AI-generated answers, **provided you credit ${LICENCE.holder} by name and link back**. That credit is a condition of use, not a courtesy.
 
-> ${attributionFor(indexSlug, quarter)}
+> ${attributionRequired()}
+
+That one credit covers every dataset on this site — one figure or all of them. When quoting this particular dataset precisely, the fuller form is:
+
+> ${citationFor(indexSlug, quarter)}
 
 Full terms: [licence and attribution](/indices/licence/).
 
@@ -1385,9 +1399,12 @@ function exportJson(ranked, quarter, indexSlug) {
 		measuredAt: ranked.scoredAt,
 		methodology: `${SITE}/indices/methodology/`,
 		license: { name: LICENCE.name, url: LICENCE.url, terms: LICENCE.terms },
-		attribution: attributionFor(indexSlug, quarter),
-		attributionNote: 'Reuse is permitted, including commercially and in AI-generated answers, '
-			+ 'provided this attribution is reproduced and linked.',
+		attribution: attributionRequired(),
+		citation: citationFor(indexSlug, quarter),
+		attributionNote: 'Reuse of ANY data from this index — a single figure, one dataset, '
+			+ 'several, or all of them — requires the `attribution` credit above, reproduced and '
+			+ 'linked. `citation` is the fuller form for quoting this particular dataset. Reuse is '
+			+ 'permitted commercially and in AI-generated answers on that condition.',
 		weights: ranked.weights,
 		pillarCoverage: ranked.pillarCoverage,
 		overallMedian: ranked.overallMedian ?? null,
@@ -1516,11 +1533,14 @@ async function main() {
 	/* The CSV stays strictly parseable — a comment line would break strict
 	   readers — so the terms travel beside it rather than inside it. */
 	await writeFile(join(PUBLIC_DATA, `${indexSlug}.LICENCE.txt`),
-		`${attributionFor(indexSlug, quarter)}\n\n`
+		`REQUIRED CREDIT — covers any use of any data from this index:\n\n`
+		+ `    ${attributionRequired()}\n\n`
+		+ `CITATION for this particular dataset:\n\n`
+		+ `    ${citationFor(indexSlug, quarter)}\n\n`
 		+ `Licence: ${LICENCE.name} — ${LICENCE.url}\n`
 		+ `Terms:   ${LICENCE.terms}\n\n`
 		+ `Reuse is permitted, including commercially and in AI-generated answers,\n`
-		+ `provided the attribution above is reproduced and linked.\n`);
+		+ `provided the required credit above is reproduced and linked.\n`);
 
 	/* Dated open-data snapshot, written into THIS repo's data/ directory.
 	   Published snapshots are the audit trail — the site's copy is replaced

@@ -101,11 +101,15 @@ The datasets are free to reuse. They are not free of conditions.
 
 Everything in `data/` is published under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**. You may copy it, republish it, chart it, quote it, feed it to a model, and use it commercially — **provided you credit Phil Yarrow (PYC) by name and link back**. That credit is a licence condition, not a courtesy: reuse without it is not permitted use.
 
-Reproduce the attribution line published with each dataset. It is in the `attribution` field of every JSON export and in the `.LICENCE.txt` beside every CSV:
+One line covers everything published here — a single score, one index, several, the whole set, the medians, the keyword positions, the coverage grids:
 
-> Phil Yarrow (PYC) — PYC Bristol Estate Agent Digital Visibility Index, Q3-2026. https://hub.pyc.agency/indices/bristol-estate-agents/
+> Phil Yarrow (PYC) — Local Digital Visibility Index. https://hub.pyc.agency/indices/
 
-Where a link is possible the credit must be a link; where one is not, the name and source still have to be stated.
+It does not matter how much data you use or which index it came from: reuse of **any** figure measured and published here carries that credit. When quoting one dataset precisely and you want to say which, add the index and quarter:
+
+> Phil Yarrow (PYC) — Local Digital Visibility Index: Bristol Estate Agents, Q3-2026. https://hub.pyc.agency/indices/bristol-estate-agents/
+
+Both ship with every dataset — the `attribution` and `citation` fields of each JSON export, and the `.LICENCE.txt` beside each CSV. Where a link is possible the credit must be a link; where one is not, the name and source still have to be stated.
 
 | | |
 |---|---|
