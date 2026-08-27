@@ -117,6 +117,57 @@ export async function balance() {
 	return { balance: money?.balance ?? null, currency: money?.currency ?? 'USD' };
 }
 
+/* ---- spend reconciliation ---------------------------------------------- */
+
+/* DataForSEO timestamps are "YYYY-MM-DD HH:MM:SS +00:00" and the API rejects a
+   datetime_to at or after its own clock, so the window closes slightly in the
+   past. */
+function dfsTime(date) {
+	return new Date(date).toISOString().replace('T', ' ').slice(0, 19) + ' +00:00';
+}
+
+/* What was actually charged in a time window, per task, from DataForSEO's own
+   billing record.
+
+   This exists because a balance delta is NOT a measure of one run's spend: any
+   concurrent run, or a task posted by an earlier crashed run, lands inside the
+   same window. That mistake made a $0.084 run look like $1.53. id_list
+   attributes cost per task and is immune to concurrency.
+
+   Caveat, reported honestly rather than hidden: only `serp` and `business_data`
+   expose id_list. AI (`ai_optimization`) has no equivalent, so its spend is
+   taken from the in-process ledger and flagged as unverified. */
+export async function spendSince(startedAt, { log = () => {} } = {}) {
+	const from = dfsTime(startedAt);
+	// Close the window just short of now — the API refuses a future datetime_to.
+	const to = dfsTime(Date.now() - 60000);
+
+	const out = { from, to, byApi: {}, attributed: 0, verifiable: true };
+
+	for (const api of ['serp', 'business_data']) {
+		try {
+			const d = await post(`${api}/id_list`, [{
+				datetime_from: from,
+				datetime_to: to,
+				limit: 1000,
+				sort: 'desc',
+			}], { label: `${api}/id_list`, free: true });
+
+			const rows = d.tasks?.[0]?.result || [];
+			const cost = rows.reduce((s, r) => s + (Number(r.cost) || 0), 0);
+			out.byApi[api] = { tasks: rows.length, cost: Number(cost.toFixed(5)) };
+			out.attributed += cost;
+		} catch (e) {
+			log(`    ! could not reconcile ${api} spend: ${e.message}`);
+			out.byApi[api] = { tasks: null, cost: null, error: e.message };
+			out.verifiable = false;
+		}
+	}
+
+	out.attributed = Number(out.attributed.toFixed(5));
+	return out;
+}
+
 /* ---- queued SERP -------------------------------------------------------- */
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -260,6 +311,31 @@ export function llmText(result) {
 
 /* ---- Google Business Profile ------------------------------------------- */
 
+/* One live sweep of every listing in a category set within a radius. This is
+   the primary source for Local presence: it is a single call per index, it
+   returns a firm's branches (so multi-branch chains can be aggregated), and it
+   resolves chains that my_business_info cannot.
+
+   Priced per result RETURNED, not per call — ~$0.00048 each, so limit is a real
+   cost lever (~$0.048 at 100). Categories must be a list; a single Google
+   category is too sparse to find a seed reliably.
+
+   coordinate: "lat,lng,radiusKm" */
+export async function businessListings(categories, coordinate, { limit = 100 } = {}) {
+	const d = await post('business_data/business_listings/search/live', [{
+		categories,
+		location_coordinate: coordinate,
+		limit,
+	}], { label: 'business_data/business_listings/search' });
+
+	const result = d.tasks?.[0]?.result?.[0];
+	return {
+		items: result?.items || [],
+		totalCount: result?.total_count ?? null,
+		returned: result?.items?.length ?? 0,
+	};
+}
+
 /* my_business_info is queue-only. Post a batch, poll for each. */
 export async function myBusinessInfoBatch(queries, { pollMs = 10000, maxWaitMs = 300000, log = () => {} } = {}) {
 	if (!queries.length) return new Map();
@@ -275,13 +351,14 @@ export async function myBusinessInfoBatch(queries, { pollMs = 10000, maxWaitMs =
 	);
 
 	const pending = new Map();
-	for (const t of posted.tasks || []) {
+	(posted.tasks || []).forEach((t, i) => {
+		const key = queries[i]?.key ?? queries[i]?.keyword;
 		if (t.status_code !== 20100 && t.status_code !== 20000) {
-			log(`    ! GBP task rejected for "${t.data?.keyword}": ${t.status_message}`);
-			continue;
+			log(`    ! GBP task rejected for "${key}": ${t.status_message}`);
+			return;
 		}
-		pending.set(t.id, t.data?.keyword);
-	}
+		pending.set(t.id, key);
+	});
 
 	const out = new Map();
 	const started = Date.now();
@@ -320,26 +397,43 @@ export async function myBusinessInfoBatch(queries, { pollMs = 10000, maxWaitMs =
 export async function reviewsBatch(queries, { depth = 20, pollMs = 15000, maxWaitMs = 420000, log = () => {} } = {}) {
 	if (!queries.length) return new Map();
 
+	/* Prefer place_id when a listing matched — a keyword search re-runs the same
+	   ambiguous lookup that fails for multi-branch chains, whereas place_id
+	   addresses one profile exactly.
+
+	   location_name is ALWAYS required, even alongside place_id: omitting it
+	   returns 40501 "Invalid Field: 'location_name'" (their wording for a
+	   missing required field), which silently zeroes review velocity for every
+	   business. Verified against the live endpoint. */
 	const posted = await post(
 		'business_data/google/reviews/task_post',
-		queries.map((q) => ({
-			keyword: q.keyword,
-			location_name: q.location_name,
-			language_code: 'en',
-			depth,
-			sort_by: 'newest',
-		})),
+		queries.map((q) => {
+			const task = {
+				location_name: q.location_name,
+				language_code: 'en',
+				depth,
+				sort_by: 'newest',
+			};
+			if (q.place_id) task.place_id = q.place_id;
+			else task.keyword = q.keyword;
+			return task;
+		}),
 		{ label: 'business_data/reviews/task_post' }
 	);
 
+	/* Results are keyed by the caller's own key, not by data.keyword — a
+	   place_id task carries no keyword, so echoing the request field would drop
+	   every chain we successfully resolved. DataForSEO returns tasks in the
+	   order posted, so index maps back to the query. */
 	const pending = new Map();
-	for (const t of posted.tasks || []) {
+	(posted.tasks || []).forEach((t, i) => {
+		const key = queries[i]?.key ?? queries[i]?.keyword;
 		if (t.status_code !== 20100 && t.status_code !== 20000) {
-			log(`    ! reviews task rejected for "${t.data?.keyword}": ${t.status_message}`);
-			continue;
+			log(`    ! reviews task rejected for "${key}": ${t.status_message}`);
+			return;
 		}
-		pending.set(t.id, t.data?.keyword);
-	}
+		pending.set(t.id, key);
+	});
 
 	const out = new Map();
 	const started = Date.now();

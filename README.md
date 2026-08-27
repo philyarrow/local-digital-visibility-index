@@ -72,22 +72,27 @@ is an explicit argument rather than a relative path it guesses.
 
 ## Cost
 
-The pipeline calls paid APIs. Visibility and AI presence are bought **once per
-index** and read for every business in it; Local presence is bought **per
-business**. Every run prints a forecast before spending and a reconciled ledger
-after, and writes `pipeline/data/<index>/_cost.json`.
+The pipeline calls paid APIs. Most signals are bought **once per index** and read
+for every business in it — one geo-located SERP response holds every firm's
+position, one AI answer names whichever firms it names, one listings sweep covers
+the whole sector. Only the profile fallback and reviews are per business.
+
+Every run prints a forecast before spending, and afterwards a ledger reconciled
+against DataForSEO's per-task billing record, written to
+`pipeline/data/<index>/_cost.json`.
 
 | Signal | Unit | Cost |
 |---|---|---|
 | SERP keyword (standard queue, depth 100) | per index | $0.00465 |
 | AI prompt (Perplexity `sonar`) | per index | $0.00591 |
-| Google Business Profile | per business | $0.00150 |
+| Business listings sweep | per index | ~$0.00048/result (~$0.048 at limit 100) |
+| Google Business Profile (fallback) | per unmatched business | $0.00150 |
 | Reviews (90-day velocity) | per business | $0.00150 |
 | Speed, technical, content | per business | free |
 
-A 12-keyword, 5-prompt index of 8 businesses costs about **$0.11**. Prices
+A 12-keyword, 5-prompt index of 8 businesses costs about **$0.15**. Prices
 measured 27 August 2026 by reading DataForSEO's own `cost` field and reconciling
-against the account balance.
+per task against `id_list`.
 
 ## Using this data
 

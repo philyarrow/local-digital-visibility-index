@@ -1,46 +1,73 @@
 {
-	"_comment": "Index registry: slug -> sector + location. The slug must match the seed CSV filename in seeds/. Adding an index is one entry here plus a seed CSV (generate one with business_listings/search rather than by hand). locationName must be a DataForSEO location string - 'Town,Region,Country'. areas are the named neighbourhoods used for the area-specific keywords and the fifth AI prompt.",
-
+	"_comment": "Index registry: slug -> sector + location. The slug must match the seed CSV filename in seeds/. Adding an index is one entry here plus a seed CSV (generate one with business_listings/search rather than by hand). locationName must be a DataForSEO location string - 'Town,Region,Country'. areas are the named neighbourhoods used for the area-specific keywords and the fifth AI prompt. coordinate is 'lat,lng,radiusKm' for the business_listings sweep that powers Local presence.",
 	"bristol-estate-agents": {
 		"sector": "estate-agents",
 		"town": "Bristol",
 		"locationName": "Bristol,England,United Kingdom",
-		"areas": ["Clifton", "Redland"]
+		"areas": [
+			"Clifton",
+			"Redland"
+		],
+		"coordinate": "51.4545,-2.5879,12"
 	},
 	"bath-estate-agents": {
 		"sector": "estate-agents",
 		"town": "Bath",
 		"locationName": "Bath,England,United Kingdom",
-		"areas": ["Widcombe", "Lansdown"]
+		"areas": [
+			"Widcombe",
+			"Lansdown"
+		],
+		"coordinate": "51.3811,-2.3590,10"
 	},
 	"swindon-estate-agents": {
 		"sector": "estate-agents",
 		"town": "Swindon",
 		"locationName": "Swindon,England,United Kingdom",
-		"areas": ["Old Town", "Wroughton"]
+		"areas": [
+			"Old Town",
+			"Wroughton"
+		],
+		"coordinate": "51.5558,-1.7797,10"
 	},
 	"exeter-solicitors": {
 		"sector": "solicitors",
 		"town": "Exeter",
 		"locationName": "Exeter,England,United Kingdom",
-		"areas": ["St Leonards", "Heavitree"]
+		"areas": [
+			"St Leonards",
+			"Heavitree"
+		],
+		"coordinate": "50.7184,-3.5339,10"
 	},
 	"cheltenham-law-firms": {
 		"sector": "law-firms",
 		"town": "Cheltenham",
 		"locationName": "Cheltenham,England,United Kingdom",
-		"areas": ["Montpellier", "Pittville"]
+		"areas": [
+			"Montpellier",
+			"Pittville"
+		],
+		"coordinate": "51.9000,-2.0800,10"
 	},
 	"bristol-dentists": {
 		"sector": "dentists",
 		"town": "Bristol",
 		"locationName": "Bristol,England,United Kingdom",
-		"areas": ["Clifton", "Bishopston"]
+		"areas": [
+			"Clifton",
+			"Bishopston"
+		],
+		"coordinate": "51.4545,-2.5879,12"
 	},
 	"gloucester-construction": {
 		"sector": "construction",
 		"town": "Gloucester",
 		"locationName": "Gloucester,England,United Kingdom",
-		"areas": ["Quedgeley", "Hucclecote"]
+		"areas": [
+			"Quedgeley",
+			"Hucclecote"
+		],
+		"coordinate": "51.8642,-2.2380,10"
 	}
 }

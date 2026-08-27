@@ -59,13 +59,40 @@ were learned the expensive way:
   contaminate them. For per-task attribution use the `id_list` endpoint, which
   is immune to concurrency.
 - **Never retry a charged call silently.** Report the failure instead.
+- **`location_name` is required by `business_data/google/reviews` even when
+  addressing by `place_id`.** Omitting it returns 40501 "Invalid Field:
+  'location_name'" — their wording for a *missing* required field — which
+  silently zeroes review velocity for the whole index while still charging.
+
+## Local presence uses two sources on purpose
+
+Neither source is adequate alone, and they fail on *different* firms:
+
+| Source | Scope | Cheltenham | Bristol |
+|---|---|---|---|
+| `business_listings/search` | one sweep per index | 3/8 | 10/18 |
+| `my_business_info` | per business | 7/8 | 7/18 |
+
+Coverage depends on how densely populated the Google category is —
+`real_estate_agency` is dense, `law_firm` is sparse. So the sweep runs first
+(it also aggregates a firm's branches, which a per-business lookup cannot), and
+`profileFallback` fills the gaps. Do not "simplify" this back to one source.
+
+`dfsCategories` is a list for the same reason: a single category missed most of
+a seed.
+
+Branch aggregation weights ratings by review count — a 4.9 from 3 reviews must
+not outweigh a 4.2 from 500. Summing branch reviews favours chains, which is a
+real difference in local presence; `branchCount` and `placeIds` are recorded so
+that effect stays visible.
 
 ## Cost shape — why collect.mjs is ordered as it is
 
 Visibility (SERP) and AI presence are bought **once per index** and read for
 every business in it: one geo-located SERP response holds every firm's position,
-one AI answer names whichever firms it names. Local presence is bought **per
-business** and multiplies.
+one AI answer names whichever firms it names. Local presence is mostly shared
+too — one listings sweep covers the index — with only the profile fallback and
+reviews priced per business.
 
 Collecting the shared signals per-business would multiply an index's cost by its
 business count for identical data. Preserve that structure.
@@ -78,7 +105,7 @@ Adding an index is a config entry plus a seed CSV — never a code change.
 |---|---|
 | `pipeline/config/engine.json` | SERP depth/mode, AI engine + model, prompts and keywords per index, cadence, budget |
 | `pipeline/config/sectors.json` | Keyword and AI-prompt templates per sector, with `{town}` / `{area}` placeholders |
-| `pipeline/config/indices.json` | Index registry: slug → sector, town, DataForSEO `locationName`, areas |
+| `pipeline/config/indices.json` | Index registry: slug → sector, town, DataForSEO `locationName`, `coordinate` (for the listings sweep), areas |
 
 The seed CSV filename must match the `indices.json` key.
 
