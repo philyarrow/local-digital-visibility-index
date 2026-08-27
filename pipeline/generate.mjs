@@ -1,6 +1,7 @@
 /* generate.mjs — Local Digital Visibility Index generator.
 
-   Reads scripts/index/data/<index-slug>/_ranked.json and produces:
+   Reads pipeline/data/<index-slug>/_ranked.json and produces, inside the SITE
+   repository (a separate checkout — see --site-root):
      (a) the index hub MDX + one scorecard MDX per business under
          new/src/content/docs/indices/<index-slug>/
      (b) machine-readable exports:
@@ -8,13 +9,11 @@
          new/public/data/<index-slug>.csv
 
    Usage:
-     node generate.mjs <index-slug> [--quarter Q2-2026]
-     node generate.mjs bristol-estate-agents --quarter Q2-2026
+     node generate.mjs <index-slug> --quarter Q3-2026 --site-root ../../hub.philyarrow.co.uk
 
-   !! DO NOT RUN WITHOUT REAL DATA. With pillars stubbed, the generated pages
-      would publish null/placeholder scores and break the production build with
-      meaningless content. Run collect.mjs + score.mjs with live data sources
-      first, then run this. This file is intentionally kept ready-but-unrun.
+   This pipeline is canonical in local-digital-visibility-index; the site that
+   publishes it is a separate repo. generate.mjs is the one step that reaches
+   across that boundary, so the destination is explicit rather than inferred.
 
    Conventions matched:
      - Starlight frontmatter (title, description, date, lastUpdated, wpType)
@@ -26,16 +25,39 @@
 */
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { join, dirname } from 'node:path';
+import { join, dirname, isAbsolute, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PILLARS, toCsv } from './lib/common.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const REPO = join(HERE, '..', '..');
 const DATA_ROOT = join(HERE, 'data');
-const CONTENT_ROOT = join(REPO, 'new', 'src', 'content', 'docs', 'indices');
-const PUBLIC_DATA = join(REPO, 'new', 'public', 'data');
 const SITE = 'https://hub.pyc.agency';
+
+/* The site lives in a separate repository, so its location is passed in rather
+   than inferred from this file's path. Nothing is written outside this root. */
+function resolveSiteRoot() {
+	const flagIndex = process.argv.indexOf('--site-root');
+	const fromFlag = flagIndex !== -1 ? process.argv[flagIndex + 1] : null;
+	const root = fromFlag || process.env.INDEX_SITE_ROOT;
+	if (!root) {
+		console.error(
+			'Missing --site-root.\n\n' +
+			'generate.mjs writes Astro content into the site repo, which is a separate\n' +
+			'checkout from this pipeline. Point it at that checkout:\n\n' +
+			'  node generate.mjs <index-slug> --quarter Q3-2026 --site-root ../../hub.philyarrow.co.uk\n' +
+			'  INDEX_SITE_ROOT=../../hub.philyarrow.co.uk node generate.mjs <index-slug> --quarter Q3-2026\n'
+		);
+		process.exit(1);
+	}
+	return isAbsolute(root) ? root : resolve(process.cwd(), root);
+}
+
+const SITE_ROOT = resolveSiteRoot();
+const CONTENT_ROOT = join(SITE_ROOT, 'new', 'src', 'content', 'docs', 'indices');
+const PUBLIC_DATA = join(SITE_ROOT, 'new', 'public', 'data');
+
+/* Dated open-data snapshots live in THIS repo, not the site's. */
+const SNAPSHOT_ROOT = join(HERE, '..', 'data');
 
 /* ---- frontmatter / formatting helpers ---- */
 
@@ -346,11 +368,19 @@ function exportCsv(ranked) {
 
 /* ---- main ---- */
 
+/* Flags that consume the following argument. Without this list a value like
+   the --site-root path is mistaken for the index slug whenever the flag is
+   written before the slug. */
+const VALUE_FLAGS = new Set(['--quarter', '--site-root']);
+
 function parseArgs(argv) {
 	const args = { indexSlug: null, quarter: null };
 	for (let i = 2; i < argv.length; i++) {
-		if (argv[i] === '--quarter') args.quarter = argv[++i];
-		else if (!args.indexSlug) args.indexSlug = argv[i];
+		const a = argv[i];
+		if (a === '--quarter') args.quarter = argv[++i];
+		else if (VALUE_FLAGS.has(a)) i++; // consumed elsewhere; skip its value
+		else if (a.startsWith('--')) continue;
+		else if (!args.indexSlug) args.indexSlug = a;
 	}
 	return args;
 }
@@ -391,12 +421,28 @@ async function main() {
 		await writeFile(join(contentDir, `${b.slug}.md`), scorecardMdx(b, ranked, quarter, indexSlug));
 		cards++;
 	}
-	// exports
-	await writeFile(join(PUBLIC_DATA, `${indexSlug}.json`), JSON.stringify(exportJson(ranked, quarter, indexSlug), null, 2) + '\n');
-	await writeFile(join(PUBLIC_DATA, `${indexSlug}.csv`), exportCsv(ranked));
+	// exports — the site's "latest" copy, overwritten each quarter
+	const json = JSON.stringify(exportJson(ranked, quarter, indexSlug), null, 2) + '\n';
+	const csv = exportCsv(ranked);
+	await writeFile(join(PUBLIC_DATA, `${indexSlug}.json`), json);
+	await writeFile(join(PUBLIC_DATA, `${indexSlug}.csv`), csv);
+
+	/* Dated open-data snapshot, written into THIS repo's data/ directory.
+	   Published snapshots are the audit trail — the site's copy is replaced
+	   every quarter, these are kept forever so movement over time stays
+	   verifiable. Writing them here, in the same step that generates the pages,
+	   is deliberate: when this was a separate export script it was possible to
+	   publish an index to the site and forget the receipt. */
+	const q = quarter.toLowerCase();
+	const snapshotDir = join(SNAPSHOT_ROOT, indexSlug);
+	await mkdir(snapshotDir, { recursive: true });
+	await writeFile(join(snapshotDir, `${q}.json`), json);
+	await writeFile(join(snapshotDir, `${q}.csv`), csv);
 
 	console.log(`Generated hub + ${cards} scorecards in ${contentDir}`);
-	console.log(`Wrote exports to ${PUBLIC_DATA}/${indexSlug}.{json,csv}`);
+	console.log(`Wrote site exports to  ${PUBLIC_DATA}/${indexSlug}.{json,csv}`);
+	console.log(`Wrote open snapshot to data/${indexSlug}/${q}.{json,csv}`);
+	console.log(`\nNext: commit the generated pages in the site repo, and commit + tag the snapshot here.`);
 }
 
 main().catch((e) => {

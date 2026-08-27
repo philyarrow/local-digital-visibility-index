@@ -1,0 +1,143 @@
+{
+	"_comment": "Per-sector keyword and AI-prompt templates. Placeholders: {town}, {area}, {sector}. The generator fills these, dedupes, and truncates to engine.keywordsPerIndex. dfsCategory is for business_listings/search seed discovery.",
+
+	"estate-agents": {
+		"label": "estate agents",
+		"singular": "estate agent",
+		"dfsCategory": "real_estate_agency",
+		"keywords": [
+			"estate agents {town}",
+			"best estate agents {town}",
+			"top estate agents {town}",
+			"letting agents {town}",
+			"sell my house {town}",
+			"house valuation {town}",
+			"property for sale {town}",
+			"estate agent fees {town}",
+			"rental properties {town}"
+		],
+		"areaKeywords": [
+			"estate agents {area}",
+			"letting agents {area}"
+		],
+		"prompts": [
+			"Who are the best estate agents in {town}?",
+			"Which estate agent in {town} would you recommend for selling a house?",
+			"Top rated letting agents in {town}",
+			"I am looking for an estate agent in {town} - who should I contact?",
+			"Best estate agents in {area}, {town}"
+		]
+	},
+
+	"solicitors": {
+		"label": "solicitors",
+		"singular": "solicitor",
+		"dfsCategory": "law_firm",
+		"keywords": [
+			"solicitors {town}",
+			"best solicitors {town}",
+			"conveyancing solicitors {town}",
+			"family law solicitors {town}",
+			"employment solicitors {town}",
+			"wills and probate {town}",
+			"personal injury solicitors {town}",
+			"divorce solicitors {town}",
+			"legal advice {town}"
+		],
+		"areaKeywords": [
+			"solicitors {area}",
+			"conveyancing {area}"
+		],
+		"prompts": [
+			"Who are the best solicitors in {town}?",
+			"Which law firm in {town} would you recommend for conveyancing?",
+			"Top rated family law solicitors in {town}",
+			"I need a solicitor in {town} - who should I contact?",
+			"Best solicitors in {area}, {town}"
+		]
+	},
+
+	"law-firms": {
+		"label": "law firms",
+		"singular": "law firm",
+		"dfsCategory": "law_firm",
+		"keywords": [
+			"law firms {town}",
+			"best law firm {town}",
+			"commercial solicitors {town}",
+			"corporate law {town}",
+			"employment law {town}",
+			"dispute resolution {town}",
+			"commercial property solicitors {town}",
+			"litigation solicitors {town}",
+			"business legal advice {town}"
+		],
+		"areaKeywords": [
+			"law firms {area}",
+			"solicitors {area}"
+		],
+		"prompts": [
+			"Who are the best law firms in {town}?",
+			"Which law firm in {town} would you recommend for commercial work?",
+			"Top rated employment law solicitors in {town}",
+			"I need a commercial solicitor in {town} - who should I contact?",
+			"Best law firms in {area}, {town}"
+		]
+	},
+
+	"dentists": {
+		"label": "dentists",
+		"singular": "dentist",
+		"dfsCategory": "dentist",
+		"keywords": [
+			"dentist {town}",
+			"best dentist {town}",
+			"private dentist {town}",
+			"NHS dentist {town}",
+			"emergency dentist {town}",
+			"cosmetic dentistry {town}",
+			"dental implants {town}",
+			"teeth whitening {town}",
+			"invisalign {town}"
+		],
+		"areaKeywords": [
+			"dentist {area}",
+			"dental practice {area}"
+		],
+		"prompts": [
+			"Who are the best dentists in {town}?",
+			"Which dental practice in {town} would you recommend?",
+			"Top rated private dentists in {town}",
+			"I need to register with a dentist in {town} - who should I contact?",
+			"Best dentist in {area}, {town}"
+		]
+	},
+
+	"construction": {
+		"label": "construction firms",
+		"singular": "construction firm",
+		"dfsCategory": "general_contractor",
+		"keywords": [
+			"builders {town}",
+			"construction companies {town}",
+			"best builders {town}",
+			"house extensions {town}",
+			"loft conversions {town}",
+			"new build developers {town}",
+			"commercial construction {town}",
+			"groundworks contractors {town}",
+			"renovation builders {town}"
+		],
+		"areaKeywords": [
+			"builders {area}",
+			"construction {area}"
+		],
+		"prompts": [
+			"Who are the best builders in {town}?",
+			"Which construction company in {town} would you recommend for an extension?",
+			"Top rated building contractors in {town}",
+			"I need a builder in {town} - who should I contact?",
+			"Best construction firms in {area}, {town}"
+		]
+	}
+}

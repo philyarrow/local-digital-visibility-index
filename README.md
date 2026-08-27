@@ -27,17 +27,67 @@ LICENSE-DATA          CC BY 4.0 — the datasets
 The pipeline is Node ESM with **no npm dependencies** (Node 20+ recommended). From `pipeline/`:
 
 ```bash
-# 1. Collect raw signals for an index (uses a free PageSpeed key if set)
-PAGESPEED_API_KEY=... node collect.mjs seeds/bristol-estate-agents.csv
+cp pipeline/.env.example .env        # then add your DATAFORSEO_AUTH
+
+cd pipeline
+
+# 0. Check the generated keyword basket and cost forecast — fetches nothing
+node collect.mjs seeds/bristol-estate-agents.csv --dry-run
+
+# 1. Collect raw signals for an index
+node collect.mjs seeds/bristol-estate-agents.csv
 
 # 2. Score + rank, compute sector medians
 node score.mjs bristol-estate-agents
 
-# 3. Generate the published artifacts (snapshot JSON/CSV)
-node generate.mjs bristol-estate-agents --quarter Q2-2026
+# 3. Generate the published pages + snapshot JSON/CSV into the site repo
+node generate.mjs bristol-estate-agents --quarter Q3-2026 \
+  --site-root ../../hub.philyarrow.co.uk
 ```
 
-See [`pipeline/README.md`](./pipeline/README.md) for what each pillar measures, which signals are live vs. require an external data source, and the exact data flow.
+See [`pipeline/README.md`](./pipeline/README.md) for what each pillar measures, the configuration files, per-call costs, and the exact data flow.
+
+## Where the code lives
+
+**This repository is the canonical home of the measurement pipeline.** It is not
+a mirror or an export — `pipeline/` is the only copy, and it is where changes
+are made.
+
+The site that publishes the indices, [hub.pyc.agency](https://hub.pyc.agency/indices/),
+is a **separate repository** (`hub.philyarrow`). It holds presentation only: the
+Astro pages and the generated snapshots. It contains no pipeline code.
+
+```
+local-digital-visibility-index  (this repo)   measurement + open data — CANONICAL
+        │
+        │  generate.mjs --site-root ../../hub.philyarrow.co.uk
+        ▼
+hub.philyarrow                                presentation — generated content only
+```
+
+The boundary exists so the numbers can be audited independently of the site that
+publishes them, and so there is exactly one copy of the code that produces them.
+`generate.mjs` is the single step that crosses it, which is why its destination
+is an explicit argument rather than a relative path it guesses.
+
+## Cost
+
+The pipeline calls paid APIs. Visibility and AI presence are bought **once per
+index** and read for every business in it; Local presence is bought **per
+business**. Every run prints a forecast before spending and a reconciled ledger
+after, and writes `pipeline/data/<index>/_cost.json`.
+
+| Signal | Unit | Cost |
+|---|---|---|
+| SERP keyword (standard queue, depth 100) | per index | $0.00465 |
+| AI prompt (Perplexity `sonar`) | per index | $0.00591 |
+| Google Business Profile | per business | $0.00150 |
+| Reviews (90-day velocity) | per business | $0.00150 |
+| Speed, technical, content | per business | free |
+
+A 12-keyword, 5-prompt index of 8 businesses costs about **$0.11**. Prices
+measured 27 August 2026 by reading DataForSEO's own `cost` field and reconciling
+against the account balance.
 
 ## Using this data
 

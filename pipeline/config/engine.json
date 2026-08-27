@@ -1,0 +1,39 @@
+{
+	"_comment": "Engine settings from the budget planner. £7.47/week at 30 indices x 15 businesses (£389/yr, $10.16/wk at £1=$1.36). Unit prices measured 27 Aug 2026 against the live account.",
+
+	"serp": {
+		"mode": "queue",
+		"depth": 100,
+		"device": "mobile",
+		"languageCode": "en",
+		"_note": "Standard queue is 3.3x cheaper than live and a batch job never needs live. Depth 100 is the only setting that scores firms ranking below 20 - the laggards an index exists to measure. $0.00465/keyword."
+	},
+
+	"ai": {
+		"engine": "perplexity",
+		"model": "sonar",
+		"promptsPerIndex": 5,
+		"_note": "Perplexity sonar named real Bristol firms in testing at 1/17th the price of ChatGPT ($0.00591 vs $0.10205). Cross-validate against chat_gpt/gpt-5.6-sol quarterly, not weekly."
+	},
+
+	"local": {
+		"reviewVelocity": true,
+		"reviewDepth": 20,
+		"velocityWindowDays": 90,
+		"_note": "my_business_info gives the headline rating and count; reviews (newest-first) is the only source for the 90-day velocity the methodology asks for. $0.0015 each, per business."
+	},
+
+	"keywordsPerIndex": 12,
+
+	"cadence": {
+		"core": "weekly",
+		"enrichment": "monthly",
+		"_note": "Enrichment (backlinks, ranked keywords, domain rank) is $0.060/domain - 20x the core. None of it moves week to week, so it runs on its own slower cycle."
+	},
+
+	"budget": {
+		"weeklyGbp": 10,
+		"fxGbpUsd": 1.36,
+		"_note": "Soft ceiling. collect.mjs prints actual spend per run from the DataForSEO cost field; it does not enforce."
+	}
+}

@@ -5,3 +5,8 @@ pipeline/data/
 node_modules/
 .DS_Store
 *.log
+
+# Secrets — DATAFORSEO_AUTH etc. Never commit.
+.env
+.env.*
+!.env.example

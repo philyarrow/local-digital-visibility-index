@@ -2,25 +2,35 @@
 
    Reads a seed CSV (name,url,gbp_query), gathers the six-pillar RAW signals
    for each business, and writes one JSON per business to
-   scripts/index/data/<index-slug>/<business-slug>.json
+   pipeline/data/<index-slug>/<business-slug>.json
 
    Usage:
      node collect.mjs seeds/bristol-estate-agents.csv
-     PAGESPEED_API_KEY=xxxx node collect.mjs seeds/bristol-estate-agents.csv
+     node collect.mjs seeds/bristol-estate-agents.csv --dry-run
 
-   What is REAL here:
-     - Speed & Core Web Vitals  -> Google PageSpeed Insights API (live)
-     - Technical foundation     -> live HTTP fetch + parse of homepage / robots / sitemap
-     - Content & trust          -> live homepage parse for about/team/credentials links
-   What is STUBBED (needs data sources not available in this environment):
-     - Local presence           -> Google Places / GBP API
-     - Visibility               -> a SERP data source (rank tracker / SERP API)
-     - AI search presence       -> programmatic querying of AI engines
-   Stubs return null/placeholder values with a documented shape so the
-   pipeline runs end-to-end and the scorer can renormalise around them.
+   All six pillars are live:
+     - Speed & Core Web Vitals  -> Google PageSpeed Insights API (free)
+     - Technical foundation     -> live HTTP fetch + parse (free)
+     - Content & trust          -> live homepage parse (free)
+     - Local presence           -> DataForSEO my_business_info + reviews
+     - Visibility               -> DataForSEO SERP, standard queue
+     - AI search presence       -> DataForSEO llm_responses (Perplexity sonar)
+
+   COST SHAPE — this is why the collector is ordered the way it is.
+   Visibility and AI presence are bought ONCE PER INDEX and read for every
+   business in it: one geo-located SERP response holds every firm's position,
+   and one AI answer names whichever firms it names. Those costs divide across
+   the seed. Local presence is bought PER BUSINESS and multiplies. Collecting
+   the shared signals per-business instead would multiply the index's cost by
+   the number of businesses in it for identical data.
+
+   Settings live in config/engine.json; keyword and prompt baskets are derived
+   from config/sectors.json + config/indices.json.
 
    Resilience: every business is wrapped in try/catch; every network call has a
-   timeout; one bad site never aborts the run.
+   timeout; one bad site never aborts the run. A keyword whose SERP task fails
+   is excluded from that index's basket size rather than counted as a miss, so
+   an API failure never silently depresses everyone's coverage score.
 */
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
@@ -32,6 +42,19 @@ import {
 	indexSlugFromSeed,
 	fetchWithTimeout,
 } from './lib/common.mjs';
+import {
+	loadEnv,
+	ledger,
+	balance,
+	serpPost,
+	serpHarvest,
+	llmResponse,
+	llmText,
+	myBusinessInfoBatch,
+	reviewsBatch,
+} from './lib/dataforseo.mjs';
+import { loadConfig, resolveIndex, buildKeywords, buildPrompts } from './lib/basket.mjs';
+import { findOrganicPosition, inLocalPack, matchReason, domainsMatch } from './lib/match.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA_ROOT = join(HERE, 'data');
@@ -39,7 +62,7 @@ const PSI_ENDPOINT = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed
 const UA = 'PYC-Digital-Visibility-Index/1.0 (+https://hub.pyc.agency/indices/methodology/)';
 
 /* -------------------------------------------------------------------------- */
-/* Pillar 1 — Speed & Core Web Vitals (REAL: PageSpeed Insights API)          */
+/* Pillar 1 — Speed & Core Web Vitals (PageSpeed Insights API)                */
 /* -------------------------------------------------------------------------- */
 
 /* Returns: { source, mobilePerformanceScore (0-100|null), lcpMs, inpMs, cls,
@@ -96,7 +119,7 @@ async function collectSpeed(url) {
 }
 
 /* -------------------------------------------------------------------------- */
-/* Pillar 2 — Technical foundation (REAL: HTTP fetch + parse)                  */
+/* Pillar 2 — Technical foundation (HTTP fetch + parse)                        */
 /* -------------------------------------------------------------------------- */
 
 /* Returns flags about HTTPS, schema, sitemap, robots, viewport, indexability */
@@ -205,7 +228,7 @@ function safeOrigin(u) {
 }
 
 /* -------------------------------------------------------------------------- */
-/* Pillar 6 — Content & trust (REAL where cheap; indexed-count STUBBED)        */
+/* Pillar 6 — Content & trust (indexed-count still stubbed)                    */
 /* -------------------------------------------------------------------------- */
 
 async function collectContent(url) {
@@ -239,30 +262,58 @@ async function collectContent(url) {
 }
 
 /* -------------------------------------------------------------------------- */
-/* Pillar 3 — Local presence (STUB: Google Places / GBP API)                  */
+/* Pillar 3 — Local presence (DataForSEO my_business_info + reviews)          */
 /* -------------------------------------------------------------------------- */
 
-/* INTERFACE
-   input : gbp_query string (e.g. "CJ Hole Estate Agents Bristol")
-   output: {
-     source, found:boolean|null, reviewCount:number|null, avgRating:number|null,
-     reviewsLast90d:number|null, profileCompleteness:number|null (0-1),
-     napConsistent:boolean|null, placeId:string|null, error|null
-   }
-   TODO: Implement with Google Places API:
-     1. Places Text Search (gbp_query) -> place_id
-     2. Place Details (place_id, fields: rating,user_ratings_total,reviews,...)
-     3. Review velocity: count reviews with time within 90d (Places only returns
-        up to 5 reviews; full velocity needs the Business Profile API or a
-        review-aggregation source).
-     4. NAP consistency: compare name/address/phone vs the seed + the homepage.
-   Requires GOOGLE_PLACES_API_KEY (billable). Returns nulls until implemented. */
-async function collectLocal(gbpQuery) {
-	return {
-		source: 'STUB — Google Places / Business Profile API (not yet wired)',
-		stub: true,
-		query: gbpQuery || null,
-		found: null,
+/* Fields that together make a Google Business Profile "complete". Weighted
+   equally; the fraction present becomes profileCompleteness (0-1). */
+const GBP_COMPLETENESS_FIELDS = [
+	'title', 'address', 'phone', 'url', 'work_time',
+	'category', 'description', 'main_image', 'latitude',
+];
+
+function profileCompleteness(item) {
+	if (!item) return null;
+	let present = 0;
+	for (const f of GBP_COMPLETENESS_FIELDS) {
+		const v = item[f];
+		if (v !== null && v !== undefined && v !== '' && !(Array.isArray(v) && !v.length)) present++;
+	}
+	return Number((present / GBP_COMPLETENESS_FIELDS.length).toFixed(3));
+}
+
+/* Reviews newer than the configured window. DataForSEO returns `timestamp` as
+   an ISO-ish string; anything unparseable is skipped rather than counted. */
+function countRecentReviews(reviewsResult, windowDays) {
+	if (!reviewsResult) return null;
+	const items = reviewsResult.items || [];
+	if (!items.length) return 0;
+	const cutoff = Date.now() - windowDays * 24 * 60 * 60 * 1000;
+	let n = 0;
+	for (const r of items) {
+		const raw = r.timestamp || r.time_ago_iso || null;
+		if (!raw) continue;
+		const t = Date.parse(String(raw).replace(' ', 'T'));
+		if (Number.isNaN(t)) continue;
+		if (t >= cutoff) n++;
+	}
+	return n;
+}
+
+/* NAP consistency, checkable slice: does the website Google has on the profile
+   resolve to the same registrable domain as the seed URL? A mismatch is a real
+   consistency failure (stale profile, wrong site, franchise page). */
+function napConsistency(item, business) {
+	if (!item || !item.url) return null;
+	return domainsMatch(item.url, business.url);
+}
+
+function buildLocal(business, gbpItem, reviewsResult, cfg) {
+	const out = {
+		source: 'DataForSEO business_data/google/my_business_info' +
+			(cfg.local.reviewVelocity ? ' + reviews' : ''),
+		query: business.gbpQuery || null,
+		found: Boolean(gbpItem),
 		reviewCount: null,
 		avgRating: null,
 		reviewsLast90d: null,
@@ -271,104 +322,142 @@ async function collectLocal(gbpQuery) {
 		placeId: null,
 		error: null,
 	};
+
+	if (!gbpItem) {
+		out.error = 'no Google Business Profile matched this query';
+		return out;
+	}
+
+	out.placeId = gbpItem.place_id || gbpItem.cid || null;
+	out.avgRating = typeof gbpItem.rating?.value === 'number' ? gbpItem.rating.value : null;
+	out.reviewCount = typeof gbpItem.rating?.votes_count === 'number' ? gbpItem.rating.votes_count : null;
+	out.profileCompleteness = profileCompleteness(gbpItem);
+	out.napConsistent = napConsistency(gbpItem, business);
+
+	if (cfg.local.reviewVelocity) {
+		out.reviewsLast90d = countRecentReviews(reviewsResult, cfg.local.velocityWindowDays || 90);
+		if (out.reviewsLast90d === null) out.error = 'review velocity unavailable (reviews task failed)';
+	}
+
+	return out;
 }
 
 /* -------------------------------------------------------------------------- */
-/* Pillar 4 — Visibility (STUB: SERP data source)                             */
+/* Pillar 4 — Visibility (DataForSEO SERP, read from the shared index pull)   */
 /* -------------------------------------------------------------------------- */
 
-/* INTERFACE
-   input : { name, keywordBasket: string[] }  (basket lives in methodology)
-   output: {
-     source, keywordBasket:string[], rankedKeywords:number|null,
-     avgPosition:number|null, localPackAppearances:number|null,
-     basketSize:number|null, error|null
-   }
-   TODO: Implement against a SERP API (e.g. a rank-tracker / SERP provider) with
-   geo-located Bristol queries. For each keyword in the basket, record the
-   business's organic position and whether it appears in the local 3-pack.
-   Requires a SERP_API_KEY. Returns nulls until implemented. */
-async function collectVisibility(name) {
-	const keywordBasket = [
-		'estate agents Bristol',
-		'estate agents Clifton',
-		'estate agents Redland',
-		'sell my house Bristol',
-		'letting agents Bristol',
-		'best estate agent Bristol',
-	];
-	return {
-		source: 'STUB — SERP data source (not yet wired)',
-		stub: true,
-		business: name || null,
-		keywordBasket,
-		basketSize: keywordBasket.length,
+/* basketSize counts only the keywords whose SERP task actually returned. A
+   failed keyword is excluded from the denominator rather than scored as a miss
+   — otherwise one API failure quietly depresses every business in the index. */
+function buildVisibility(business, keywords, serpByKeyword, cfg) {
+	const out = {
+		source: `DataForSEO SERP google/organic (${cfg.serp.mode}, depth ${cfg.serp.depth})`,
+		keywordBasket: keywords,
+		basketSize: null,
 		rankedKeywords: null,
 		avgPosition: null,
 		localPackAppearances: null,
+		positions: {},
 		error: null,
 	};
+
+	let measured = 0;
+	let ranked = 0;
+	let packs = 0;
+	const positions = [];
+
+	for (const kw of keywords) {
+		const result = serpByKeyword.get(kw);
+		if (!result) continue;
+		measured++;
+		const hit = findOrganicPosition(result, business);
+		if (hit && typeof hit.position === 'number') {
+			ranked++;
+			positions.push(hit.position);
+			out.positions[kw] = hit.position;
+		}
+		if (inLocalPack(result, business)) packs++;
+	}
+
+	if (!measured) {
+		out.error = 'no SERP results available for this index';
+		return out;
+	}
+
+	out.basketSize = measured;
+	out.rankedKeywords = ranked;
+	out.localPackAppearances = packs;
+	out.avgPosition = positions.length
+		? Number((positions.reduce((a, b) => a + b, 0) / positions.length).toFixed(1))
+		: null;
+
+	return out;
 }
 
 /* -------------------------------------------------------------------------- */
-/* Pillar 5 — AI search presence (STUB: AI-engine querying)                   */
+/* Pillar 5 — AI search presence (DataForSEO llm_responses, shared per index) */
 /* -------------------------------------------------------------------------- */
 
-/* INTERFACE
-   input : { name, queryBasket: string[] }
-   output: {
-     source, queryBasket:string[], basketSize:number|null,
-     enginesChecked:string[], citationsByEngine:{[engine]:number}|null,
-     citedQueryCount:number|null, error|null
-   }
-   TODO: For each core local query, query AI Overviews / ChatGPT search /
-   Perplexity / Gemini and detect whether `name` is named or cited. Score =
-   % of (engine x query) cells where the business appears. Needs per-engine
-   API access or an AI-SERP source. Returns nulls until implemented. */
-async function collectAiPresence(name) {
-	const queryBasket = [
-		'estate agents Bristol',
-		'best estate agent Clifton Bristol',
-		'who are the top estate agents in Bristol',
-		'recommended estate agent Redland Bristol',
-	];
-	return {
-		source: 'STUB — AI-engine querying (not yet wired)',
-		stub: true,
-		business: name || null,
-		queryBasket,
-		basketSize: queryBasket.length,
-		enginesChecked: ['AI Overviews', 'ChatGPT search', 'Perplexity', 'Gemini'],
+function buildAiPresence(business, aiAnswers, cfg) {
+	const engine = cfg.ai.engine;
+	const out = {
+		source: `DataForSEO ai_optimization/${engine}/llm_responses (${cfg.ai.model})`,
+		queryBasket: aiAnswers.map((a) => a.prompt),
+		basketSize: null,
+		enginesChecked: [engine],
 		citationsByEngine: null,
 		citedQueryCount: null,
+		citedQueries: [],
 		error: null,
 	};
+
+	const usable = aiAnswers.filter((a) => a.text);
+	if (!usable.length) {
+		out.error = 'no AI answers available for this index';
+		return out;
+	}
+
+	let cited = 0;
+	for (const a of usable) {
+		const via = matchReason(a.text, business);
+		if (via) {
+			cited++;
+			// Record how it matched: a domain citation is stronger evidence than a
+			// bare name mention, and a published score should be auditable.
+			out.citedQueries.push({ prompt: a.prompt, matchedBy: via });
+		}
+	}
+
+	out.basketSize = usable.length;
+	out.citedQueryCount = cited;
+	out.citationsByEngine = { [engine]: cited };
+	return out;
 }
 
 /* -------------------------------------------------------------------------- */
 /* Per-business orchestration                                                  */
 /* -------------------------------------------------------------------------- */
 
-async function collectBusiness(biz, indexSlug) {
+async function collectBusiness(biz, indexSlug, shared, cfg) {
 	const slug = slugify(biz.name);
+	const business = { name: biz.name, url: biz.url, gbpQuery: biz.gbp_query || null };
+
 	const record = {
-		schemaVersion: 1,
+		schemaVersion: 2,
 		index: indexSlug,
 		slug,
 		name: biz.name,
 		url: biz.url,
-		gbpQuery: biz.gbp_query || null,
+		gbpQuery: business.gbpQuery,
 		collectedAt: new Date().toISOString(),
 		pillars: {},
 		errors: [],
 	};
 
+	// Free, per-business network calls.
 	const steps = [
 		['speed', () => collectSpeed(biz.url)],
 		['technical', () => collectTechnical(biz.url)],
-		['local', () => collectLocal(biz.gbp_query)],
-		['visibility', () => collectVisibility(biz.name)],
-		['ai', () => collectAiPresence(biz.name)],
 		['content', () => collectContent(biz.url)],
 	];
 
@@ -382,6 +471,21 @@ async function collectBusiness(biz, indexSlug) {
 		}
 	}
 
+	// Derived from data already bought — no further API cost.
+	const gbpKey = shared.gbpKeyFor(biz);
+	record.pillars.local = buildLocal(
+		business,
+		shared.gbpByQuery.get(gbpKey) || null,
+		shared.reviewsByQuery.get(gbpKey) || null,
+		cfg
+	);
+	record.pillars.visibility = buildVisibility(business, shared.keywords, shared.serpByKeyword, cfg);
+	record.pillars.ai = buildAiPresence(business, shared.aiAnswers, cfg);
+
+	for (const key of ['local', 'visibility', 'ai']) {
+		if (record.pillars[key]?.error) record.errors.push(`${key}: ${record.pillars[key].error}`);
+	}
+
 	return record;
 }
 
@@ -390,15 +494,30 @@ async function collectBusiness(biz, indexSlug) {
 /* -------------------------------------------------------------------------- */
 
 async function main() {
-	const seedArg = process.argv[2];
+	loadEnv();
+
+	const args = process.argv.slice(2);
+	const dryRun = args.includes('--dry-run');
+	const seedArg = args.find((a) => !a.startsWith('--'));
+
 	if (!seedArg) {
-		console.error('Usage: node collect.mjs <seed.csv>');
+		console.error('Usage: node collect.mjs <seed.csv> [--dry-run]');
 		console.error('Example: node collect.mjs seeds/bristol-estate-agents.csv');
 		process.exit(1);
 	}
+
 	const seedPath = isAbsolute(seedArg) ? seedArg : resolve(process.cwd(), seedArg);
 	const indexSlug = indexSlugFromSeed(seedPath);
 	const outDir = join(DATA_ROOT, indexSlug);
+
+	const config = loadConfig();
+	let indexCfg, sector, engine;
+	try {
+		({ index: indexCfg, sector, engine } = resolveIndex(indexSlug, config));
+	} catch (e) {
+		console.error(e.message);
+		process.exit(1);
+	}
 
 	let businesses;
 	try {
@@ -412,20 +531,162 @@ async function main() {
 		process.exit(1);
 	}
 
-	await mkdir(outDir, { recursive: true });
-	console.log(`Index: ${indexSlug}`);
+	const keywords = buildKeywords(indexSlug, config);
+	const prompts = buildPrompts(indexSlug, config);
+
+	// Cost forecast from the measured unit prices, before spending anything.
+	const SERP_UNIT = { 10: 0.0006, 20: 0.00105, 100: 0.00465 };
+	const AI_UNIT = { perplexity: 0.005912, gemini: 0.067472, chat_gpt: 0.10205 };
+	const forecast =
+		keywords.length * (SERP_UNIT[engine.serp.depth] ?? 0.00465) +
+		prompts.length * (AI_UNIT[engine.ai.engine] ?? 0.00591) +
+		businesses.length * (0.0015 + (engine.local.reviewVelocity ? 0.0015 : 0));
+
+	console.log(`Index:      ${indexSlug}`);
+	console.log(`Sector:     ${sector.label} — ${indexCfg.town} (${indexCfg.locationName})`);
 	console.log(`Businesses: ${businesses.length}`);
-	console.log(`PageSpeed API key: ${process.env.PAGESPEED_API_KEY ? 'set' : 'NOT set (keyless low-rate mode)'}`);
-	console.log(`Output: ${outDir}\n`);
+	console.log(`Keywords:   ${keywords.length} (shared across the index)`);
+	console.log(`AI prompts: ${prompts.length} × ${engine.ai.engine}/${engine.ai.model} (shared)`);
+	console.log(`PageSpeed:  ${process.env.PAGESPEED_API_KEY ? 'keyed' : 'keyless low-rate mode'}`);
+	console.log(`Forecast:   $${forecast.toFixed(4)} (£${(forecast / (engine.budget?.fxGbpUsd || 1.36)).toFixed(4)})`);
+	console.log(`Output:     ${outDir}\n`);
+
+	if (dryRun) {
+		console.log('Keyword basket:');
+		keywords.forEach((k, i) => console.log(`  ${String(i + 1).padStart(2)}. ${k}`));
+		console.log('\nAI prompts:');
+		prompts.forEach((p, i) => console.log(`  ${String(i + 1).padStart(2)}. ${p}`));
+		console.log('\n--dry-run: nothing was fetched and nothing was charged.');
+		return;
+	}
+
+	const before = await balance();
+	console.log(`Balance:    $${before.balance?.toFixed(4) ?? '?'}\n`);
+
+	/* ---- Phase 1: shared per-index signals (bought once) ---- */
+
+	const modeLabel = engine.serp.mode === 'queue' ? 'standard queue' : 'live';
+	console.log(`[1/3] SERP — ${keywords.length} keyword(s), ${modeLabel}, depth ${engine.serp.depth}`);
+
+	await mkdir(outDir, { recursive: true });
+
+	/* A posted SERP task is already charged and stays retrievable for days, so
+	   the ids are persisted before harvesting. If a previous run posted this
+	   exact basket and died before collecting, resume it rather than paying
+	   again. */
+	const taskStorePath = join(outDir, '_serp-tasks.json');
+	const idToKeyword = new Map();
+
+	try {
+		const store = JSON.parse(await readFile(taskStorePath, 'utf8'));
+		if (store.harvested === false && store.tasks) {
+			// Reuse only the tasks whose keyword is still in the current basket —
+			// an edited basket must not resurrect keywords that were dropped.
+			const wanted = new Set(keywords);
+			for (const [id, kw] of Object.entries(store.tasks)) {
+				if (wanted.has(kw)) idToKeyword.set(id, kw);
+			}
+			if (idToKeyword.size) {
+				const age = Math.round((Date.now() - Date.parse(store.postedAt)) / 60000);
+				console.log(`    resuming ${idToKeyword.size} task(s) posted ${age} min ago — not re-posting, not re-charging`);
+			}
+		}
+	} catch {
+		// no store, or unreadable — everything gets posted below
+	}
+
+	// Post whatever the store did not already cover. On a clean run that is the
+	// whole basket; on a resume it is only the gap.
+	const covered = new Set(idToKeyword.values());
+	const toPost = keywords.filter((k) => !covered.has(k));
+
+	if (toPost.length) {
+		const fresh = await serpPost(
+			toPost.map((keyword) => ({
+				keyword,
+				location_name: indexCfg.locationName,
+				language_code: engine.serp.languageCode,
+				device: engine.serp.device,
+				depth: engine.serp.depth,
+			})),
+			{ log: (m) => console.log(m) }
+		);
+		for (const [id, kw] of fresh) idToKeyword.set(id, kw);
+		console.log(`    posted ${fresh.size} new task(s)${covered.size ? ` (topping up the resumed ${covered.size})` : ''}`);
+	}
+
+	const writeStore = (harvested) => writeFile(taskStorePath, JSON.stringify({
+		postedAt: new Date().toISOString(),
+		keywords,
+		harvested,
+		tasks: Object.fromEntries(idToKeyword),
+	}, null, 2) + '\n');
+
+	// Persist ids BEFORE harvesting: they are charged the moment they are posted.
+	await writeStore(false);
+
+	const serpByKeyword = await serpHarvest(idToKeyword, { log: (m) => console.log(m) });
+
+	// Only mark harvested once every task has actually been collected; a partial
+	// harvest must stay resumable.
+	const allHarvested = keywords.every((k) => serpByKeyword.get(k));
+	if (allHarvested) await writeStore(true);
+	console.log(`    ${[...serpByKeyword.values()].filter(Boolean).length}/${keywords.length} keyword(s) returned\n`);
+
+	console.log(`[2/3] AI presence — ${prompts.length} prompt(s) via ${engine.ai.engine}/${engine.ai.model}`);
+	const aiAnswers = [];
+	for (const prompt of prompts) {
+		try {
+			const result = await llmResponse(engine.ai.engine, prompt, { model: engine.ai.model });
+			const text = llmText(result);
+			aiAnswers.push({ prompt, text });
+			console.log(`    ✓ ${prompt.slice(0, 62)}${prompt.length > 62 ? '…' : ''} (${text.length} chars)`);
+		} catch (e) {
+			aiAnswers.push({ prompt, text: '' });
+			console.log(`    ! ${prompt.slice(0, 62)} — ${e.message}`);
+		}
+	}
+	console.log('');
+
+	/* ---- Phase 2: per-business Google Business Profile, batched ---- */
+
+	console.log(`[3/3] Local presence — ${businesses.length} profile(s)${engine.local.reviewVelocity ? ' + reviews' : ''}`);
+
+	const gbpKeyFor = (biz) => biz.gbp_query || `${biz.name} ${indexCfg.town}`;
+	const gbpQueries = businesses.map((biz) => ({
+		keyword: gbpKeyFor(biz),
+		location_name: indexCfg.locationName,
+	}));
+
+	const gbpByQuery = await myBusinessInfoBatch(gbpQueries, { log: (m) => console.log(m) });
+	console.log(`    ${[...gbpByQuery.values()].filter(Boolean).length}/${businesses.length} profile(s) matched`);
+
+	let reviewsByQuery = new Map();
+	if (engine.local.reviewVelocity) {
+		reviewsByQuery = await reviewsBatch(gbpQueries, {
+			depth: engine.local.reviewDepth,
+			log: (m) => console.log(m),
+		});
+		console.log(`    ${[...reviewsByQuery.values()].filter(Boolean).length}/${businesses.length} review set(s) returned`);
+	}
+	console.log('');
+
+	const shared = { keywords, serpByKeyword, aiAnswers, gbpByQuery, reviewsByQuery, gbpKeyFor };
+
+	/* ---- Phase 3: per-business assembly ---- */
 
 	let ok = 0;
 	for (const biz of businesses) {
 		try {
-			const record = await collectBusiness(biz, indexSlug);
+			const record = await collectBusiness(biz, indexSlug, shared, engine);
 			const file = join(outDir, `${record.slug}.json`);
 			await writeFile(file, JSON.stringify(record, null, 2) + '\n');
 			const errs = record.errors.length ? ` (${record.errors.length} signal error(s))` : '';
-			console.log(`  ✓ ${biz.name} -> ${record.slug}.json${errs}`);
+			const vis = record.pillars.visibility;
+			const rank = vis?.rankedKeywords !== null && vis?.basketSize
+				? ` [${vis.rankedKeywords}/${vis.basketSize} kw, AI ${record.pillars.ai?.citedQueryCount ?? '-'}/${record.pillars.ai?.basketSize ?? '-'}]`
+				: '';
+			console.log(`  ✓ ${biz.name} -> ${record.slug}.json${rank}${errs}`);
 			ok++;
 		} catch (e) {
 			// last-resort guard: one business never aborts the run
@@ -433,8 +694,35 @@ async function main() {
 		}
 	}
 
+	/* ---- Cost ledger ---- */
+
+	const after = await balance();
+	const costRecord = {
+		index: indexSlug,
+		collectedAt: new Date().toISOString(),
+		businesses: businesses.length,
+		keywords: keywords.length,
+		prompts: prompts.length,
+		forecastUsd: Number(forecast.toFixed(5)),
+		actualUsd: Number(ledger.total.toFixed(5)),
+		actualGbp: Number((ledger.total / (engine.budget?.fxGbpUsd || 1.36)).toFixed(5)),
+		balanceBefore: before.balance,
+		balanceAfter: after.balance,
+		breakdown: ledger.entries.map((e) => ({
+			label: e.label,
+			calls: e.calls,
+			cost: Number(e.cost.toFixed(5)),
+		})),
+	};
+	await writeFile(join(outDir, '_cost.json'), JSON.stringify(costRecord, null, 2) + '\n');
+
+	const fx = engine.budget?.fxGbpUsd || 1.36;
 	console.log(`\nDone. Wrote ${ok}/${businesses.length} business records to ${outDir}`);
-	console.log('Next: node score.mjs ' + indexSlug);
+	console.log(`\nCost this run:`);
+	console.log(ledger.report());
+	console.log(`\n    forecast $${forecast.toFixed(5)}  |  actual $${ledger.total.toFixed(5)} (£${(ledger.total / fx).toFixed(4)})`);
+	console.log(`    balance  $${before.balance?.toFixed(4)} -> $${after.balance?.toFixed(4)}`);
+	console.log('\nNext: node score.mjs ' + indexSlug);
 }
 
 main().catch((e) => {
