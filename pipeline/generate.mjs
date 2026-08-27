@@ -147,7 +147,7 @@ This release scores only **${cov.liveLabels.join(' + ')}**. ${cov.missingLabels.
 	   That has to be stated on the page, not left in the dataset. */
 	if (cov.incomplete.length) {
 		return `:::note[Not every firm could be measured on every pillar (${quarter})]
-${cov.affectedCount} of the firms below are missing at least one pillar: ${cov.incompleteLabels.join(', ')}. Where a pillar could not be measured for a firm it is **excluded from that firm's score** and its remaining weights are renormalised, rather than scored zero — so those firms are ranked on less evidence than the rest, and their position should be read with that in mind. Affected: ${cov.affectedNames.join(', ')}. See the [methodology](/indices/methodology/).
+${cov.affectedCount === 1 ? 'One firm below is' : `${cov.affectedCount} of the firms below are`} missing at least one pillar: ${cov.incompleteLabels.join(', ')}. Where a pillar could not be measured for a firm it is **excluded from that firm's score** and its remaining weights are renormalised, rather than scored zero — so ${cov.affectedCount === 1 ? 'it is' : 'those firms are'} ranked on less evidence than the rest, and ${cov.affectedCount === 1 ? 'its' : 'their'} position should be read with that in mind. ${cov.affectedCount === 1 ? 'Affected' : 'Affected'}: ${cov.affectedNames.join(', ')}. See the [methodology](/indices/methodology/).
 :::
 
 `;
@@ -540,18 +540,35 @@ function visibilityAiQuadrant(ranked) {
 		return `<circle class="pyc-q-dot" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="1.6"><title>${esc(b.name)} — visibility ${b.pillarScores.visibility}, AI ${b.pillarScores.ai}</title></circle>`;
 	}).join('');
 
-	// Label only the extremes; a label on every dot is unreadable at this size.
-	const notable = [...pts].sort((a, c) =>
-		Math.abs(c.pillarScores.visibility - c.pillarScores.ai) - Math.abs(a.pillarScores.visibility - a.pillarScores.ai)
-	).slice(0, 3);
-	const labels = notable.map((b) => {
+	/* Label only the extremes, and only where a label will not collide. Three
+	   labels placed blind overlapped into unreadable mush on a phone
+	   ("ConCellapBeilst&Matthews" — two firms sharing the same baseline). Each
+	   candidate is now rejected if it lands near one already placed. */
+	const ranked_ = [...pts].sort((a, c) =>
+		Math.abs(c.pillarScores.visibility - c.pillarScores.ai) - Math.abs(a.pillarScores.visibility - a.pillarScores.ai));
+
+	const placed = [];
+	for (const b of ranked_) {
+		if (placed.length >= 3) break;
 		const x = px(b.pillarScores.visibility), y = py(b.pillarScores.ai);
-		const anchor = x > W * 0.6 ? 'end' : 'start';
-		const dx = anchor === 'end' ? -2.4 : 2.4;
-		return `<text class="pyc-q-lab" x="${(x + dx).toFixed(2)}" y="${(y + 1).toFixed(2)}" text-anchor="${anchor}">${esc(b.name)}</text>`;
+		// A label is roughly 3 units tall and as wide as its text; keep generous
+		// clearance vertically since that is where the collisions happened.
+		const clashes = placed.some((q) => Math.abs(q.y - y) < 6 && Math.abs(q.x - x) < 46);
+		if (clashes) continue;
+		placed.push({ b, x, y });
+	}
+
+	const labels = placed.map(({ b, x, y }) => {
+		// Anchor away from the nearer edge so the text stays inside the plot.
+		const anchor = x > W * 0.55 ? 'end' : 'start';
+		const dx = anchor === 'end' ? -3 : 3;
+		const dy = y < PAD + 6 ? 4 : -3; // nudge below if it would clip the top
+		return `<text class="pyc-q-lab" x="${(x + dx).toFixed(2)}" y="${(y + dy).toFixed(2)}" text-anchor="${anchor}">${esc(b.name)}</text>`;
 	}).join('');
 
-	const offDiag = notable[0];
+	// The named firm must be one that is actually labelled on the chart, so the
+	// sentence and the picture agree.
+	const offDiag = (placed[0] && placed[0].b) || ranked_[0];
 	const gap = offDiag ? offDiag.pillarScores.ai - offDiag.pillarScores.visibility : 0;
 	/* The wording has to match the chart. Describing visibility 52 as "barely
 	   ranking" contradicted a dot plotted right of the midline, so the strong
@@ -629,7 +646,7 @@ function reputationScatter(ranked) {
 	const rats = pts.map((b) => b.evidence.local.avgRating);
 	const rlo = Math.min(...rats) - 0.2, rhi = Math.max(...rats) + 0.2;
 
-	const W = 100, H = 62, PAD = 4;
+	const W = 100, H = 62, PAD = 7;
 	const px = (v) => PAD + ((Math.log10(v) - Math.log10(lo)) / Math.max(0.01, Math.log10(hi) - Math.log10(lo))) * (W - PAD * 2);
 	const py = (v) => (H - PAD) - ((v - rlo) / Math.max(0.01, rhi - rlo)) * (H - PAD * 2);
 
@@ -657,12 +674,29 @@ function reputationScatter(ranked) {
 			? ` ${esc(most.name)} leads on both, with ${maxRev} reviews at ${maxRat}.`
 			: ` Most reviews: ${nameOrTie(mostAll, maxRev, '')}. Highest rating: ${nameOrTie(bestAll, maxRat, '')}.`);
 
+	/* Without a scale the plot read as a cluster at the top and one lonely dot in
+	   an empty field. Ticks and gridlines make the gap mean something, and the
+	   outlier is named so the void is a finding rather than a rendering fault. */
+	const ratTicks = [];
+	for (let v = Math.ceil(rlo * 2) / 2; v <= rhi; v += 0.5) ratTicks.push(Number(v.toFixed(1)));
+	const yGrid = ratTicks.map((v) => `<line class="pyc-q-grid" x1="${PAD}" y1="${py(v).toFixed(2)}" x2="${W - PAD}" y2="${py(v).toFixed(2)}"/>`
+		+ `<text class="pyc-q-tick" x="${(PAD - 1).toFixed(2)}" y="${(py(v) + 1).toFixed(2)}" text-anchor="end">${v}</text>`).join('');
+
+	const revTicks = [lo, Math.round(Math.sqrt(lo * hi)), hi];
+	const xGrid = revTicks.map((v) => `<text class="pyc-q-tick" x="${px(v).toFixed(2)}" y="${(H - PAD + 3.5).toFixed(2)}" text-anchor="middle">${v}</text>`).join('');
+
+	const worst = pts.reduce((a, b) => b.evidence.local.avgRating < a.evidence.local.avgRating ? b : a);
+	const outlier = worst.evidence.local.avgRating < rlo + (rhi - rlo) * 0.25
+		? `<text class="pyc-q-lab" x="${(px(worst.evidence.local.reviewCount) + 3).toFixed(2)}" y="${(py(worst.evidence.local.avgRating) + 1).toFixed(2)}">${esc(worst.name)}</text>`
+		: '';
+
 	return `<figure class="pyc-fig">
 <figcaption>Google review volume (log scale) against average rating. Bubble size is review count.</figcaption>
-<svg class="pyc-repscatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="Review volume against average rating for ${pts.length} firms">
+<svg class="pyc-repscatter" viewBox="0 0 ${W} ${H + 5}" role="img" aria-label="Review volume against average rating for ${pts.length} firms">
+${yGrid}${xGrid}
 <line class="pyc-q-axis" x1="${PAD}" y1="${H - PAD}" x2="${W - PAD}" y2="${H - PAD}"/>
 <line class="pyc-q-axis" x1="${PAD}" y1="${PAD}" x2="${PAD}" y2="${H - PAD}"/>
-${dots}
+${dots}${outlier}
 </svg>
 <p class="pyc-key"><span class="pyc-q-axname">horizontal: reviews (log) &rarr;</span> &nbsp; <span class="pyc-q-axname">vertical: rating &uarr;</span></p>
 </figure>
