@@ -214,10 +214,15 @@ ${cardBanner(cov)}> Measured ${human} via the PYC ${idxTitle} Digital Visibility
 
 ## Pillar breakdown vs sector median
 
+${divergingPillars(b, ranked.sectorMedians, maxDelta(ranked))}
+
 | Pillar | Score | Sector median | Reading |
 |--------|------:|--------------:|---------|
 ${pillarRows}
 
+${section('Where this firm ranks', keywordTable(b))}
+${section('AI search presence', aiCitations(b))}
+${section('Local presence', localCard(b))}
 ## Key findings
 
 ${keyFindings(b, ranked).map((f) => `- ${f}`).join('\n')}
@@ -314,6 +319,209 @@ function topFixes(b, { schemaType = null, credentials = null } = {}) {
 	return fixes.length ? fixes : ['Re-run collection once live data sources are wired.'];
 }
 
+
+/* -------------------------------------------------------------------------- */
+/* Diagrams — inline SVG/HTML, rendered at build time.                        */
+/*                                                                            */
+/* No client JS by design. Every number stays in the markup, because the       */
+/* index's whole purpose is being read and cited — by people and by crawlers.  */
+/* A chart drawn in the browser is invisible to both.                          */
+/* -------------------------------------------------------------------------- */
+
+const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+/* Pillar performance as bars diverging from the sector median. The delta IS
+   the story; a table of two numbers per row buries it. */
+function divergingPillars(b, medians, maxDelta = 50) {
+	// Scale to the largest delta actually present in this index. A fixed 50-point
+	// cap drew +50 and +100 as identical full bars beside labels saying otherwise
+	// — in the one figure whose entire job is to show the size of the gap.
+	const scale = Math.max(10, maxDelta);
+	const rows = PILLARS.map((p) => {
+		const v = b.pillarScores[p.key];
+		const med = medians[p.key];
+		if (v === null || v === undefined || med === null || med === undefined) {
+			return `<tr><th scope="row">${esc(p.label)}</th><td class="pyc-dv-track"><span class="pyc-dv-mid"></span></td><td class="pyc-dv-val pyc-dv-na">not measured</td></tr>`;
+		}
+		const delta = Math.round((v - med) * 10) / 10;
+		const mag = (Math.min(Math.abs(delta), scale) / scale) * 50;
+		const side = delta >= 0 ? 'pos' : 'neg';
+		const bar = `<span class="pyc-dv-bar pyc-dv-${side}" style="width:${mag.toFixed(1)}%"></span>`;
+		// "+0" reads as a rounding artefact; a firm exactly on the median is "0".
+		const label = delta === 0 ? '0' : `${delta > 0 ? '+' : ''}${delta}`;
+		const valCls = delta === 0 ? 'pyc-dv-na' : `pyc-dv-${side}`;
+		return `<tr><th scope="row">${esc(p.label)}</th>`
+			+ `<td class="pyc-dv-track"><span class="pyc-dv-mid"></span>${bar}</td>`
+			+ `<td class="pyc-dv-val ${valCls}">${label}</td></tr>`;
+	}).join('');
+
+	return `<figure class="pyc-fig">
+<figcaption>Pillar performance against the sector median. Bars right of centre are above the median, left are below.</figcaption>
+<table class="pyc-diverge"><tbody>${rows}</tbody></table>
+</figure>`;
+}
+
+/* Every keyword this firm was measured on, with its live position. The single
+   most useful thing the pipeline produces, and previously unpublished. */
+function keywordTable(b) {
+	const ev = b.evidence;
+	if (!ev || !ev.keywordBasket?.length) return '';
+	const rows = ev.keywordBasket.map((kw) => {
+		const pos = ev.positions?.[kw];
+		const cls = pos === undefined || pos === null ? 'pyc-kw-none' : pos <= 3 ? 'pyc-kw-top' : pos <= 10 ? 'pyc-kw-page1' : 'pyc-kw-back';
+		const label = pos === undefined || pos === null ? 'not in top 100' : `#${pos}`;
+		return `<tr><td>${esc(kw)}</td><td class="pyc-kw-pos ${cls}">${label}</td></tr>`;
+	}).join('');
+	const summary = ev.rankedKeywords !== null
+		? `Ranks for ${ev.rankedKeywords} of ${ev.keywordBasket.length} keywords`
+		+ (ev.avgPosition !== null ? `, average position ${ev.avgPosition}` : '')
+		+ (ev.localPackAppearances !== null
+			? `, in the local 3-pack for ${ev.localPackAppearances} ${ev.localPackAppearances === 1 ? 'keyword' : 'keywords'}`
+			: '') + '.'
+		: '';
+	return `<figure class="pyc-fig">
+<figcaption>${esc(summary)}</figcaption>
+<table class="pyc-kw"><thead><tr><th scope="col">Keyword</th><th scope="col">Position</th></tr></thead><tbody>${rows}</tbody></table>
+</figure>`;
+}
+
+/* Which AI answers named this firm, and on what evidence. A domain citation is
+   stronger than a bare name mention, so the distinction is shown. */
+function aiCitations(b) {
+	const ev = b.evidence;
+	if (!ev || !ev.aiQueryBasket?.length) return '';
+	const cited = new Map((ev.aiCitedQueries || []).map((c) =>
+		typeof c === 'string' ? [c, 'name'] : [c.prompt, c.matchedBy || 'name']));
+	const rows = ev.aiQueryBasket.map((q) => {
+		const how = cited.get(q);
+		return `<tr><td class="pyc-ai-mark ${how ? 'pyc-ai-yes' : 'pyc-ai-no'}">${how ? '&#10003;' : '&#10007;'}</td>`
+			+ `<td>${esc(q)}</td>`
+			+ `<td class="pyc-ai-how">${how ? esc(how === 'domain' ? 'cited by domain' : 'named') : ''}</td></tr>`;
+	}).join('');
+	return `<figure class="pyc-fig">
+<figcaption>Named in ${cited.size} of ${ev.aiQueryBasket.length} AI answers. A domain citation is stronger evidence than a name mention.</figcaption>
+<table class="pyc-ai"><tbody>${rows}</tbody></table>
+</figure>`;
+}
+
+/* Google Business Profile, in raw numbers rather than a compressed pillar
+   score. The Local pillar spans 86-98 across a sector whose review counts span
+   6x — the underlying figures discriminate where the score does not. */
+function localCard(b) {
+	const l = b.evidence?.local;
+	// A card needs at least one figure that distinguishes this firm. Reviews 0
+	// with no rating tells a reader nothing and reads as a broken card.
+	if (!l) return '';
+	if (l.avgRating === null && !l.reviewCount) return '';
+	/* Joined without newlines: a blank line inside a raw HTML block terminates
+	   it in CommonMark, which would break the table under any processor that
+	   wraps loose lines in <p>. */
+	const rows = (pairs) => pairs
+		.filter(([, v]) => v !== null && v !== undefined)
+		.map(([k, v]) => `<tr><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`)
+		.join('');
+	return `<figure class="pyc-fig">
+<figcaption>Google Business Profile${l.matchedBy === 'name-category' ? ' — matched on name and category; the profile lists a different website to the one indexed' : ''}.</figcaption>
+<table class="pyc-kv"><tbody>${rows([
+	['Rating', l.avgRating !== null ? `${l.avgRating} / 5` : null],
+	['Reviews', l.reviewCount],
+	['Locations', l.branchCount],
+	['Reviews in last 90 days', l.reviewsLast90d],
+	['Address matches website', l.napConsistent === null ? null : (l.napConsistent ? 'yes' : 'no')],
+])}</tbody></table>
+</figure>`;
+}
+
+/* Who actually owns page one. The seed competes with directories and national
+   chains, not only with itself, and that is invisible in a league table. */
+function shareOfVoice(ranked) {
+	const ls = ranked.landscape;
+	if (!ls || !ls.summary || !ls.summary.slotsAvailable) return '';
+	const { heldBySeed, slotsAvailable, seedSharePct, distinctDomains } = ls.summary;
+	const others = slotsAvailable - heldBySeed;
+	const seedPct = (heldBySeed / slotsAvailable) * 100;
+
+	const gaps = (ls.seedGaps || []).slice(0, 5)
+		.map((d) => `<li><span class="pyc-dom">${esc(d.domain)}</span> — ${d.top10Slots} top-10 slot${d.top10Slots === 1 ? '' : 's'}, best #${d.bestPosition ?? 'n/a'}</li>`)
+		.join('');
+
+	return `<figure class="pyc-fig">
+<figcaption>Across ${ls.measuredKeywords} keywords there are ${slotsAvailable} first-page organic slots. The firms in this index hold ${heldBySeed} of them (${seedSharePct}%); ${distinctDomains} distinct domains appear in total.</figcaption>
+<div class="pyc-sov" role="img" aria-label="Indexed firms hold ${heldBySeed} of ${slotsAvailable} first-page slots">
+<span class="pyc-sov-us" style="width:${seedPct.toFixed(1)}%"></span><span class="pyc-sov-them" style="width:${(100 - seedPct).toFixed(1)}%"></span>
+</div>
+<p class="pyc-sov-key"><span class="pyc-sw pyc-sw-us"></span> this index (${heldBySeed}) &nbsp; <span class="pyc-sw pyc-sw-them"></span> directories, national chains and firms not indexed (${others})</p>
+${gaps ? `<p class="pyc-gapnote">Ranking well but not currently indexed:</p><ul class="pyc-gaps">${gaps}</ul>` : ''}
+</figure>`;
+}
+
+/* Keyword x firm position matrix. Dense, and the only view that shows both
+   contested terms and uncontested ground. */
+function positionHeatmap(ranked) {
+	const scored = ranked.businesses.filter((b) => b.rank !== null && b.evidence?.keywordBasket?.length);
+	if (scored.length < 2) return '';
+	const kws = scored[0].evidence.keywordBasket;
+	if (!kws.length) return '';
+
+	/* Columns come from one firm's basket and every other firm is looked up by
+	   those keys. Baskets are index-wide today, but a divergent one would render
+	   as blank cells indistinguishable from "not ranked" — so say so instead. */
+	const divergent = scored.filter((b) =>
+		b.evidence.keywordBasket.length !== kws.length
+		|| b.evidence.keywordBasket.some((k, i) => k !== kws[i]));
+	if (divergent.length) {
+		console.warn(`  ! heatmap skipped: ${divergent.length} business(es) have a different keyword basket `
+			+ `(${divergent.slice(0, 3).map((b) => b.name).join(', ')})`);
+		return '';
+	}
+
+	const band = (p) => p === undefined || p === null ? 0 : p <= 3 ? 4 : p <= 10 ? 3 : p <= 20 ? 2 : 1;
+	/* The town repeats in every keyword and is already in the page title, so it
+	   is dropped from the column label. Without this the longest label runs to
+	   41 characters and overflows the header. Full text stays in the cell title. */
+	const town = (indexTitle(ranked.index || '') || '').split(' ')[0];
+	const shortKw = (k) => {
+		const trimmed = town ? k.replace(new RegExp(`\\s*\\b${town}\\b\\s*`, 'i'), ' ').trim() : k;
+		return trimmed.length > 28 ? trimmed.slice(0, 27) + '\u2026' : (trimmed || k);
+	};
+	const head = `<tr><th scope="col" class="pyc-hm-corner"></th>`
+		+ kws.map((k) => `<th scope="col" title="${esc(k)}"><span>${esc(shortKw(k))}</span></th>`).join('') + '</tr>';
+	const body = scored.map((b) => `<tr><th scope="row">${esc(b.name)}</th>`
+		+ kws.map((k) => {
+			const p = b.evidence.positions?.[k];
+			const lvl = band(p);
+			return `<td class="pyc-hm-${lvl}" title="${esc(b.name)} — ${esc(k)} — ${p ? '#' + p : 'not in top 100'}">${p ? p : ''}</td>`;
+		}).join('') + '</tr>').join('');
+
+	return `<figure class="pyc-fig pyc-fig-wide">
+<figcaption>Every firm against every keyword, shaded by position. Darker is stronger; blank means outside the top 100. Read down a column for a contested term, across a row for a firm's reach.</figcaption>
+<div class="pyc-scroll"><table class="pyc-heat">${head}${body}</table></div>
+<p class="pyc-key"><span class="pyc-sw pyc-hm-4"></span> 1&ndash;3 <span class="pyc-sw pyc-hm-3"></span> 4&ndash;10 <span class="pyc-sw pyc-hm-2"></span> 11&ndash;20 <span class="pyc-sw pyc-hm-1"></span> 21+ <span class="pyc-sw pyc-hm-0"></span> absent</p>
+</figure>`;
+}
+
+
+/* A heading with nothing under it still lands in Starlight's page ToC, so a
+   figure that renders nothing must take its heading with it. */
+/* Largest absolute pillar-vs-median delta anywhere in the index, so every
+   scorecard's bars share one scale and are comparable between firms. */
+function maxDelta(ranked) {
+	let m = 0;
+	for (const b of ranked.businesses) {
+		for (const p of PILLARS) {
+			const v = b.pillarScores?.[p.key];
+			const med = ranked.sectorMedians?.[p.key];
+			if (typeof v === 'number' && typeof med === 'number') m = Math.max(m, Math.abs(v - med));
+		}
+	}
+	return Math.ceil(m);
+}
+
+function section(heading, body) {
+	const content = (body || '').trim();
+	return content ? `## ${heading}\n\n${content}\n` : '';
+}
+
 /* ---- index hub MDX ---- */
 
 function hubMdx(ranked, quarter, indexSlug) {
@@ -386,12 +594,14 @@ function hubMdx(ranked, quarter, indexSlug) {
 ${hubBanner(cov, quarter)}The **PYC ${idxTitle} Digital Visibility Index** ranks ${scored.length} ${idxTitle.toLowerCase()}s on how well they perform online — ${measuredOn} — each scored 0–100 to a single **Digital Visibility Score**. Measured ${human} to the published [methodology](/indices/methodology/).
 
 ${pct !== null ? `> As of ${quarter}, ${pct}% of the ${speedDenom} ${idxTitle.toLowerCase()}s measured on Speed & Core Web Vitals score below 50 on mobile (PYC ${idxTitle} Digital Visibility Index, measured ${human}).\n` : ''}
+${section('Who owns the first page', shareOfVoice(ranked))}
 ## The league table
 
 | Rank | ${idxTitle} | Score | Speed | Technical | Local | Visibility | AI | Content |
 |-----:|-------------|------:|------:|----------:|------:|-----------:|---:|--------:|
 ${tableRows}
 
+${section('Which keywords are contested, and which are open?', positionHeatmap(ranked))}
 ## Which ${idxTitle.toLowerCase()} has the best website?
 
 ${scored.length ? `${scored[0].name} tops the ${quarter} index with a Digital Visibility Score of ${scored[0].digitalVisibilityScore}/100.` : ''} Each firm has a full diagnostic scorecard linked from the table above.
