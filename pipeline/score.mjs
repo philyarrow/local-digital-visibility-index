@@ -5,7 +5,7 @@
    the published methodology, computes the weighted Digital Visibility Score,
    ranks the businesses, and computes sector medians per pillar.
 
-   Writes: scripts/index/data/<index-slug>/_ranked.json
+   Writes: pipeline/data/<index-slug>/_ranked.json
 
    Usage:
      node score.mjs <index-slug>

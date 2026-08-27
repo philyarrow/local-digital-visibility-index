@@ -1,0 +1,46 @@
+{
+	"_comment": "Index registry: slug -> sector + location. The slug must match the seed CSV filename in seeds/. Adding an index is one entry here plus a seed CSV (generate one with business_listings/search rather than by hand). locationName must be a DataForSEO location string - 'Town,Region,Country'. areas are the named neighbourhoods used for the area-specific keywords and the fifth AI prompt.",
+
+	"bristol-estate-agents": {
+		"sector": "estate-agents",
+		"town": "Bristol",
+		"locationName": "Bristol,England,United Kingdom",
+		"areas": ["Clifton", "Redland"]
+	},
+	"bath-estate-agents": {
+		"sector": "estate-agents",
+		"town": "Bath",
+		"locationName": "Bath,England,United Kingdom",
+		"areas": ["Widcombe", "Lansdown"]
+	},
+	"swindon-estate-agents": {
+		"sector": "estate-agents",
+		"town": "Swindon",
+		"locationName": "Swindon,England,United Kingdom",
+		"areas": ["Old Town", "Wroughton"]
+	},
+	"exeter-solicitors": {
+		"sector": "solicitors",
+		"town": "Exeter",
+		"locationName": "Exeter,England,United Kingdom",
+		"areas": ["St Leonards", "Heavitree"]
+	},
+	"cheltenham-law-firms": {
+		"sector": "law-firms",
+		"town": "Cheltenham",
+		"locationName": "Cheltenham,England,United Kingdom",
+		"areas": ["Montpellier", "Pittville"]
+	},
+	"bristol-dentists": {
+		"sector": "dentists",
+		"town": "Bristol",
+		"locationName": "Bristol,England,United Kingdom",
+		"areas": ["Clifton", "Bishopston"]
+	},
+	"gloucester-construction": {
+		"sector": "construction",
+		"town": "Gloucester",
+		"locationName": "Gloucester,England,United Kingdom",
+		"areas": ["Quedgeley", "Hucclecote"]
+	}
+}
