@@ -336,6 +336,8 @@ ${leader.name} leads the index with ${leader.digitalVisibilityScore}/100. ${gapT
 ${topFixes(b, sectorCopy(indexSlug)).map((f, i) => `${i + 1}. ${f}`).join('\n')}
 
 ${whereToFix(b)}
+${pager(b, ranked, indexSlug)}
+
 ---
 
 *How this is measured: see the [index methodology](/indices/methodology/), and the [statistical methods](/glossary/) behind each pillar. This index is published by [PYC](https://pyc.agency/about/); if you want this score moved, [start here](https://pyc.agency/).*
@@ -440,6 +442,43 @@ function pillarTable(b, medians) {
 <figcaption>Each pillar scored 0–100 against the sector median for this index. The final column is this firm's distance from that median.</figcaption>
 <table class="pyc-pillars"><thead><tr><th scope="col">Pillar</th><th scope="col" class="pyc-pl-n">Score</th><th scope="col" class="pyc-pl-n">Median</th><th scope="col" class="pyc-pl-d">vs median</th></tr></thead><tbody>${rows}</tbody></table>
 </figure>`;
+}
+
+/* Rank-aware pagination.
+   
+   Scorecards set `sidebar: hidden`, which suppresses Starlight's prev/next, so
+   79 scorecards had no navigation at all — the only way from one firm to
+   another was back to the league table. On a ranked index the ordering is the
+   navigation: the interesting neighbour of a firm is the firm one place above
+   or below it, and moving through the table in rank order is how anyone reads
+   a league.
+   
+   Static HTML, no script. It also puts ~158 contextual links into the index
+   cluster, each one carrying a rank and a score as its own context. */
+function pager(b, ranked, indexSlug) {
+	if (b.rank === null || b.rank === undefined) return '';
+	const byRank = ranked.businesses
+		.filter((x) => x.rank !== null && x.rank !== undefined)
+		.sort((x, y) => x.rank - y.rank);
+	if (byRank.length < 2) return '';
+
+	const i = byRank.findIndex((x) => x.slug === b.slug);
+	const prev = i > 0 ? byRank[i - 1] : null;             // ranked above
+	const next = i >= 0 && i < byRank.length - 1 ? byRank[i + 1] : null;
+
+	const link = (firm, dir) => firm
+		? `<a class="pyc-pg pyc-pg-${dir}" href="/indices/${esc(indexSlug)}/${esc(firm.slug)}/">`
+			+ `<span class="pyc-pg-dir">${dir === 'prev' ? '↑ Ranked above' : '↓ Ranked below'}</span>`
+			+ `<span class="pyc-pg-firm">${esc(firm.name)}</span>`
+			+ `<span class="pyc-pg-meta">#${firm.rank} · ${firm.digitalVisibilityScore}/100</span></a>`
+		: `<span class="pyc-pg pyc-pg-${dir} pyc-pg-end">`
+			+ `<span class="pyc-pg-dir">${dir === 'prev' ? 'Top of the index' : 'Bottom of the index'}</span></span>`;
+
+	return `<nav class="pyc-pager" aria-label="Move through the ranking">
+${link(prev, 'prev')}
+<a class="pyc-pg pyc-pg-up" href="/indices/${esc(indexSlug)}/"><span class="pyc-pg-dir">Full index</span><span class="pyc-pg-firm">All ${byRank.length} firms</span></a>
+${link(next, 'next')}
+</nav>`;
 }
 
 function idTitleQuarter(idxTitle, quarter) {
@@ -1177,6 +1216,221 @@ function focusScript(ranked, indexSlug) {
 </script>`;
 }
 
+/* Sortable league table.
+
+   "Who is actually best at AI search?" is the question this table exists to
+   answer and could not: the reader had to scan 18 rows of one column by eye.
+   Sorting is the interaction the data asks for.
+
+   Same contract as focusScript: the server renders the table in rank order,
+   which is the ordering that matters most and the one a crawler or an answer
+   engine sees. The script only upgrades the existing <th> into a button, so
+   without JavaScript there is no dead control — just a table already sorted
+   the right way.
+
+   Two rules the sort must not break:
+     - A firm with no score for a pillar sorts LAST in both directions, never
+       as a zero. Missing data is not a bad score; the weighting already
+       refuses to treat it as one, and the table must agree.
+     - The rank badge keeps showing overall rank when sorted by a pillar. That
+       is the point: seeing #14 at the top of the AI column is the finding. */
+function sortScript() {
+	return `<script>
+(function () {
+	var table = document.querySelector('.pyc-league');
+	if (!table || !table.tBodies.length) return;
+	var tbody = table.tBodies[0];
+	var heads = Array.prototype.slice.call(table.querySelectorAll('th[data-sort]'));
+	if (!heads.length) return;
+
+	var rows = Array.prototype.slice.call(tbody.rows);
+	var active = 'rank', dir = 1;
+	var _sync = null;
+	var status = null;
+
+	// Column index per sort key, resolved once. Body rows and the header row
+	// have the same cell count, so a header's position is its column.
+	var colOf = {};
+	heads.forEach(function (h) {
+		colOf[h.dataset.sort] = Array.prototype.indexOf.call(h.parentNode.cells, h);
+	});
+
+	function valueAt(row, key) {
+		var c = row.cells[colOf[key]];
+		if (!c) return null;
+		var v = c.getAttribute('data-v');
+		return v === null ? null : Number(v);
+	}
+
+	function apply(key, direction, push) {
+		active = key; dir = direction;
+		var sorted;
+		if (key === 'rank' && direction === 1) {
+			sorted = rows.slice();
+		} else {
+			sorted = rows.slice().sort(function (a, b) {
+				var av = valueAt(a, key), bv = valueAt(b, key);
+				// Unmeasured always last, whichever way the column is pointing.
+				if (av === null && bv === null) return 0;
+				if (av === null) return 1;
+				if (bv === null) return -1;
+				return (av - bv) * direction;
+			});
+		}
+		sorted.forEach(function (r) { tbody.appendChild(r); });
+
+		heads.forEach(function (h) {
+			var on = h.dataset.sort === key;
+			h.setAttribute('aria-sort', on ? (direction === 1 ? 'ascending' : 'descending') : 'none');
+			h.classList.toggle('pyc-lg-sorted', on);
+			var btn = h.querySelector('button');
+			if (btn) btn.dataset.dir = on ? (direction === 1 ? 'up' : 'down') : '';
+		});
+
+		if (_sync) _sync(key, direction);
+		/* Below 46rem the table is restacked with display:block, which drops the
+		   implicit table roles and removes the headers from the a11y tree — so
+		   aria-sort conveys nothing exactly where the select is the only
+		   control. A live region states the sort in words instead. */
+		if (status) {
+			var hName = '';
+			heads.forEach(function (h) {
+				if (h.dataset.sort !== key) return;
+				var a = h.querySelector('abbr');
+				hName = (a && a.getAttribute('title')) || h.getAttribute('title') || h.textContent.trim();
+			});
+			status.textContent = key === 'rank' && direction === 1
+				? 'Sorted by rank, best first.'
+				: 'Sorted by ' + hName + ', ' + (direction === 1 ? 'lowest' : 'highest') + ' first.';
+		}
+
+		if (push && window.history && history.replaceState) {
+			var u = new URL(location.href);
+			// Always explicit. A bare key used to mean "ascending" on write and
+			// "descending" on read, so sorting a column ascending and sharing
+			// the URL handed someone the opposite order.
+			if (key === 'rank' && direction === 1) u.searchParams.delete('sort');
+			else u.searchParams.set('sort', key + (direction === 1 ? '.asc' : '.desc'));
+			history.replaceState(null, '', u);
+		}
+	}
+
+	heads.forEach(function (h) {
+		var key = h.dataset.sort;
+		var abbr = h.querySelector('abbr');
+		var label = (abbr && abbr.getAttribute('title')) || h.getAttribute('title') || h.textContent.trim();
+		var btn = document.createElement('button');
+		btn.type = 'button';
+		btn.className = 'pyc-lg-sort';
+		// Keep the abbr (and its title) rather than flattening to text.
+		while (h.firstChild) btn.appendChild(h.firstChild);
+		btn.setAttribute('aria-label', 'Sort by ' + label);
+		h.appendChild(btn);
+		btn.addEventListener('click', function () {
+			// Scores read best high-to-low; rank reads best low-to-high.
+			var firstDir = key === 'rank' ? 1 : -1;
+			apply(key, active === key ? -dir : firstDir, true);
+		});
+	});
+
+	/* On a phone the table restacks as cards and <thead> is display:none, so the
+	   header buttons disappear exactly where scanning a column by eye is
+	   hardest.
+
+	   A second chip row was the obvious answer and the wrong one: this page
+	   already has one (focus a firm), and two rows of identical chips a figure
+	   apart, doing different things, is a puzzle rather than a control. A
+	   native select is unmistakably not the focus chips, opens the platform
+	   picker, and costs no layout.
+
+	   It sorts descending only. Direction toggling is a desktop refinement; on
+	   a phone the question is "who is best at this", and one tap answers it. */
+	var bar = document.createElement('div');
+	bar.className = 'pyc-sortbar';
+	// One league table per page, so a fixed id is unique by construction and
+	// avoids a generated one that would differ between renders.
+	var id = 'pyc-sort-select';
+	var lab = document.createElement('label');
+	lab.className = 'pyc-sortbar-label';
+	lab.setAttribute('for', id);
+	lab.textContent = 'Sort by';
+	var sel = document.createElement('select');
+	sel.className = 'pyc-sortsel';
+	sel.id = id;
+
+	/* Both directions, in two groups.
+
+	   A single "highest first" option per column could not express a table the
+	   desktop headers had put in ascending order, so narrowing the window left
+	   the select describing the opposite of what was on screen — and re-picking
+	   the same option fires no change event, so there was no way back except
+	   Rank. Every state the table can hold is now selectable.
+
+	   Ascending is not filler here: "who is weakest on AI" is the view that
+	   says who needs the work. */
+	function nameOf(h) {
+		var a = h.querySelector('abbr');
+		return (a && a.getAttribute('title')) || h.getAttribute('title') || h.textContent.trim();
+	}
+	var rankHead = null;
+	heads.forEach(function (h) { if (h.dataset.sort === 'rank') rankHead = h; });
+	if (rankHead) {
+		var ro = document.createElement('option');
+		ro.value = 'rank.asc';
+		ro.textContent = 'Rank (default)';
+		sel.appendChild(ro);
+	}
+	[['desc', 'Highest first'], ['asc', 'Lowest first']].forEach(function (pair) {
+		var g = document.createElement('optgroup');
+		g.label = pair[1];
+		heads.forEach(function (h) {
+			if (h.dataset.sort === 'rank') return;
+			var o = document.createElement('option');
+			o.value = h.dataset.sort + '.' + pair[0];
+			o.textContent = nameOf(h);
+			g.appendChild(o);
+		});
+		sel.appendChild(g);
+	});
+	sel.addEventListener('change', function () {
+		var p = sel.value.split('.');
+		apply(p[0], p[1] === 'asc' ? 1 : -1, true);
+	});
+	bar.appendChild(lab);
+	bar.appendChild(sel);
+	table.parentNode.insertBefore(bar, table);
+
+	status = document.createElement('p');
+	status.className = 'pyc-sr';
+	status.setAttribute('role', 'status');
+	status.setAttribute('aria-live', 'polite');
+	table.parentNode.insertBefore(status, table);
+
+	_sync = function (key, direction) {
+		sel.value = key + (direction === 1 ? '.asc' : '.desc');
+	};
+
+	table.classList.add('pyc-league-sortable');
+
+	var want = new URL(location.href).searchParams.get('sort');
+	var restored = false;
+	if (want) {
+		var parts = want.split('.');
+		if (heads.some(function (h) { return h.dataset.sort === parts[0]; })) {
+			// Unsuffixed keys are still honoured for links shared before the
+			// suffix existed: fall back to each column's natural direction.
+			var d = parts[1] === 'asc' ? 1 : parts[1] === 'desc' ? -1 : (parts[0] === 'rank' ? 1 : -1);
+			apply(parts[0], d, false);
+			restored = true;
+		}
+	}
+	// Without this the rank column is the active sort but carries no accent or
+	// caret, while the select already reads "Rank". Both now agree on load.
+	if (!restored) apply('rank', 1, false);
+})();
+</script>`;
+}
+
 /* Movement since the previous snapshot, restricted to pillars measured in BOTH
    quarters.
 
@@ -1436,22 +1690,31 @@ function hubMdx(ranked, quarter, indexSlug, prior = null) {
 	const cell = (v) => (v === null || v === undefined ? '<span class="pyc-lg-na">&mdash;</span>' : v);
 	const SHORT = { speed: 'Spd', technical: 'Tech', local: 'Local', visibility: 'Vis', ai: 'AI', content: 'Cont' };
 
+	/* data-sort marks a column as sortable and names it. The header stays a
+	   plain <th> in the HTML — the script upgrades it to a button, so without
+	   JavaScript there is no dead control, only a table already ordered by
+	   rank, which is the order that matters most. */
 	const leagueHead = '<tr>'
-		+ '<th scope="col" class="pyc-lg-rank">#</th>'
+		+ '<th scope="col" class="pyc-lg-rank" data-sort="rank" title="Rank" aria-sort="ascending">#</th>'
 		+ `<th scope="col" class="pyc-lg-name">${esc(idxTitle)}</th>`
-		+ '<th scope="col" class="pyc-lg-score" title="Digital Visibility Score">Score</th>'
-		+ PILLARS.map((p) => `<th scope="col" class="pyc-lg-p"><abbr title="${esc(p.label)}">${esc(SHORT[p.key] || p.label)}</abbr></th>`).join('')
+		+ '<th scope="col" class="pyc-lg-score" data-sort="score" title="Digital Visibility Score">Score</th>'
+		+ PILLARS.map((p) => `<th scope="col" class="pyc-lg-p" data-sort="${esc(p.key)}"><abbr title="${esc(p.label)}">${esc(SHORT[p.key] || p.label)}</abbr></th>`).join('')
 		+ '</tr>';
 
 	/* data-label carries the column name onto each cell so the table can restack
 	   as cards on a phone without JavaScript and without losing what each number
 	   means. Nine columns cannot fit 340px of content width, and dropping the
-	   pillars that discriminate most would be the wrong half to lose. */
+	   pillars that discriminate most would be the wrong half to lose.
+
+	   data-v carries the numeric value for sorting. A missing pillar gets no
+	   data-v at all rather than a zero: an unmeasured firm must never sort as
+	   though it scored nothing, which is the same rule the weighting follows. */
+	const sortAttr = (v) => (typeof v === 'number' ? ` data-v="${v}"` : '');
 	const leagueBody = scored.map((b) => `<tr data-pyc-firm="|${esc(b.slug)}|">`
-		+ `<td class="pyc-lg-rank" data-label="Rank">${b.rank}</td>`
+		+ `<td class="pyc-lg-rank" data-label="Rank" data-v="${b.rank}">${b.rank}</td>`
 		+ `<th scope="row" class="pyc-lg-name"><a href="/indices/${esc(indexSlug)}/${esc(b.slug)}/">${esc(b.name)}</a></th>`
-		+ `<td class="pyc-lg-score" data-label="Score">${cell(b.digitalVisibilityScore)}</td>`
-		+ PILLARS.map((p) => `<td class="pyc-lg-p" data-label="${esc(SHORT[p.key] || p.label)}">${cell(b.pillarScores[p.key])}</td>`).join('')
+		+ `<td class="pyc-lg-score" data-label="Score"${sortAttr(b.digitalVisibilityScore)}>${cell(b.digitalVisibilityScore)}</td>`
+		+ PILLARS.map((p) => `<td class="pyc-lg-p" data-label="${esc(SHORT[p.key] || p.label)}"${sortAttr(b.pillarScores[p.key])}>${cell(b.pillarScores[p.key])}</td>`).join('')
 		+ '</tr>').join('');
 
 	const leagueTable = `<table class="pyc-league"><thead>${leagueHead}</thead><tbody>${leagueBody}</tbody></table>`;
@@ -1561,6 +1824,7 @@ Spotted an error? [Request a correction](mailto:info@philyarrow.co.uk?subject=Co
 <script type="application/ld+json">${JSON.stringify(dataset)}</script>
 <script type="application/ld+json">${JSON.stringify(itemList)}</script>
 ${focusScript(ranked, indexSlug)}
+${sortScript()}
 `;
 }
 
