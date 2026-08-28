@@ -70,6 +70,8 @@ import {
 } from './lib/dataforseo.mjs';
 import { loadConfig, resolveIndex, buildKeywords, buildPrompts } from './lib/basket.mjs';
 import { findOrganicPosition, inLocalPack, matchReason, domainsMatch, buildLandscape, matchTargeted, searchNeedle } from './lib/match.mjs';
+import { crawlSite } from './lib/crawl.mjs';
+import { collectCrux, collectCompaniesHouse } from './lib/enrich.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA_ROOT = join(HERE, 'data');
@@ -530,11 +532,30 @@ async function collectBusiness(biz, indexSlug, shared, cfg) {
 		errors: [],
 	};
 
-	// Free, per-business network calls.
+	/* Free, per-business network calls.
+
+	   crawl, crux and companies are enrichment, not pillars: they carry no
+	   weight in the Digital Visibility Score and cannot move a ranking. That is
+	   deliberate — a published score must not change because a third party
+	   enabled an API key. They exist to make the score harder to argue with
+	   (CrUX is field data against our lab speed number), to let the index
+	   segment fairly (company age and size answer "you are comparing a
+	   three-person firm to a fifty-person one"), and to turn three boolean
+	   homepage checks into a real internal-linking measurement.
+
+	   Each degrades to nulls without its key or on any error, and a null is
+	   excluded rather than scored as zero — the rule the whole pipeline
+	   follows. */
 	const steps = [
 		['speed', () => collectSpeed(biz.url)],
 		['technical', () => collectTechnical(biz.url)],
 		['content', () => collectContent(biz.url)],
+	];
+
+	const enrichers = [
+		['crawl', () => crawlSite(biz.url, { maxPages: 25, maxDepth: 2, totalBudgetMs: 60000 })],
+		['crux', () => collectCrux(biz.url)],
+		['companies', () => collectCompaniesHouse(biz.name)],
 	];
 
 	for (const [key, fn] of steps) {
@@ -545,6 +566,19 @@ async function collectBusiness(biz, indexSlug, shared, cfg) {
 			record.pillars[key] = { error: String(e?.message || e) };
 			record.errors.push(`${key}: ${e?.message || e}`);
 		}
+	}
+
+	record.enrichment = {};
+	for (const [key, fn] of enrichers) {
+		try {
+			record.enrichment[key] = await fn();
+		} catch (e) {
+			/* Enrichment never fails a business. A crawler timeout or a missing
+			   API key must not cost us a scored record. */
+			record.enrichment[key] = { error: String(e?.message || e) };
+		}
+		const err = record.enrichment[key]?.error;
+		if (err && err !== 'no API key') record.errors.push(`${key}: ${err}`);
 	}
 
 	// Derived from data already bought — no further API cost.

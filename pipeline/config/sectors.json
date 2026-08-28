@@ -164,5 +164,302 @@
 			"home_builder"
 		],
 		"geoKeyword": "builders near me"
+	},
+	"restaurants": {
+		"_note": "FSA food hygiene ratings are an open API with no key, so this sector supports a rating-vs-visibility cross-check no competitor publishes.",
+		"label": "restaurants",
+		"singular": "restaurant",
+		"keywords": [
+			"restaurants {town}",
+			"best restaurants {town}",
+			"places to eat {town}",
+			"restaurants near me {town}",
+			"fine dining {town}",
+			"family restaurants {town}",
+			"sunday lunch {town}",
+			"book a table {town}",
+			"top rated restaurants {town}"
+		],
+		"areaKeywords": [
+			"restaurants {area}",
+			"places to eat {area}"
+		],
+		"prompts": [
+			"What are the best restaurants in {town}?",
+			"Where should I eat in {town} tonight?",
+			"Top rated restaurants in {town}",
+			"I want a nice meal in {town} - where should I book?",
+			"Best places to eat in {area}, {town}"
+		],
+		"dfsCategories": [
+			"restaurant",
+			"fine_dining_restaurant",
+			"family_restaurant",
+			"gastropub"
+		],
+		"geoKeyword": "restaurants near me"
+	},
+	"care-homes": {
+		"_note": "CQC ratings exist but their public API now requires a subscription key — verify access before promising the cross-check.",
+		"label": "care homes",
+		"singular": "care home",
+		"keywords": [
+			"care homes {town}",
+			"nursing homes {town}",
+			"residential care {town}",
+			"best care homes {town}",
+			"dementia care {town}",
+			"respite care {town}",
+			"elderly care {town}",
+			"care home fees {town}",
+			"assisted living {town}"
+		],
+		"areaKeywords": [
+			"care homes {area}",
+			"nursing homes {area}"
+		],
+		"prompts": [
+			"What are the best care homes in {town}?",
+			"Which care home in {town} would you recommend for dementia care?",
+			"Top rated nursing homes in {town}",
+			"I need residential care for a relative in {town} - where should I look?",
+			"Best care homes in {area}, {town}"
+		],
+		"dfsCategories": [
+			"nursing_home",
+			"retirement_home",
+			"assisted_living_facility",
+			"elder_care_service"
+		],
+		"geoKeyword": "care homes near me"
+	},
+	"schools": {
+		"_note": "Ofsted and DfE Get Information About Schools publish open data suitable for a rating cross-check.",
+		"label": "independent schools",
+		"singular": "independent school",
+		"keywords": [
+			"independent schools {town}",
+			"private schools {town}",
+			"best schools {town}",
+			"prep schools {town}",
+			"nurseries {town}",
+			"school open day {town}",
+			"school fees {town}",
+			"secondary schools {town}",
+			"sixth form {town}"
+		],
+		"areaKeywords": [
+			"schools {area}",
+			"nurseries {area}"
+		],
+		"prompts": [
+			"What are the best independent schools in {town}?",
+			"Which private school in {town} should I consider?",
+			"Top rated prep schools in {town}",
+			"I am choosing a school in {town} - what are my options?",
+			"Best schools in {area}, {town}"
+		],
+		"dfsCategories": [
+			"private_school",
+			"preparatory_school",
+			"nursery_school",
+			"secondary_school"
+		],
+		"geoKeyword": "independent schools near me"
+	},
+	"accountants": {
+		"label": "accountants",
+		"singular": "accountant",
+		"keywords": [
+			"accountants {town}",
+			"chartered accountants {town}",
+			"best accountants {town}",
+			"small business accountant {town}",
+			"tax advisor {town}",
+			"bookkeeping {town}",
+			"self assessment help {town}",
+			"company accounts {town}",
+			"payroll services {town}"
+		],
+		"areaKeywords": [
+			"accountants {area}",
+			"bookkeeping {area}"
+		],
+		"prompts": [
+			"Who are the best accountants in {town}?",
+			"Which accountant in {town} would you recommend for a small business?",
+			"Top rated chartered accountants in {town}",
+			"I need an accountant in {town} - who should I contact?",
+			"Best accountants in {area}, {town}"
+		],
+		"dfsCategories": [
+			"accountant",
+			"certified_public_accountant",
+			"tax_consultant",
+			"bookkeeping_service"
+		],
+		"geoKeyword": "accountants near me"
+	},
+	"vets": {
+		"label": "veterinary practices",
+		"singular": "veterinary practice",
+		"keywords": [
+			"vets {town}",
+			"veterinary practice {town}",
+			"best vets {town}",
+			"emergency vet {town}",
+			"cat vet {town}",
+			"dog vet {town}",
+			"24 hour vet {town}",
+			"vet costs {town}",
+			"animal hospital {town}"
+		],
+		"areaKeywords": [
+			"vets {area}",
+			"veterinary {area}"
+		],
+		"prompts": [
+			"Who are the best vets in {town}?",
+			"Which veterinary practice in {town} would you recommend?",
+			"Top rated vets in {town}",
+			"My pet is unwell in {town} - which vet should I call?",
+			"Best vets in {area}, {town}"
+		],
+		"dfsCategories": [
+			"veterinarian",
+			"veterinary_care",
+			"animal_hospital",
+			"emergency_veterinarian_service"
+		],
+		"geoKeyword": "vets near me"
+	},
+	"physiotherapy": {
+		"label": "physiotherapy clinics",
+		"singular": "physiotherapy clinic",
+		"keywords": [
+			"physiotherapy {town}",
+			"physio {town}",
+			"best physiotherapist {town}",
+			"sports injury clinic {town}",
+			"back pain treatment {town}",
+			"chiropractor {town}",
+			"osteopath {town}",
+			"private physio {town}",
+			"rehabilitation clinic {town}"
+		],
+		"areaKeywords": [
+			"physiotherapy {area}",
+			"physio {area}"
+		],
+		"prompts": [
+			"Who are the best physiotherapists in {town}?",
+			"Which physio clinic in {town} would you recommend for a sports injury?",
+			"Top rated physiotherapy in {town}",
+			"I have back pain and live in {town} - who should I see?",
+			"Best physiotherapy in {area}, {town}"
+		],
+		"dfsCategories": [
+			"physiotherapist",
+			"sports_medicine_clinic",
+			"chiropractor",
+			"osteopath"
+		],
+		"geoKeyword": "physiotherapy near me"
+	},
+	"roofers": {
+		"label": "roofing contractors",
+		"singular": "roofing contractor",
+		"keywords": [
+			"roofers {town}",
+			"roofing contractors {town}",
+			"roof repair {town}",
+			"best roofers {town}",
+			"flat roof repair {town}",
+			"emergency roof repair {town}",
+			"new roof cost {town}",
+			"roof replacement {town}",
+			"chimney repair {town}"
+		],
+		"areaKeywords": [
+			"roofers {area}",
+			"roof repair {area}"
+		],
+		"prompts": [
+			"Who are the best roofers in {town}?",
+			"Which roofing company in {town} would you recommend?",
+			"Top rated roof repair in {town}",
+			"My roof is leaking in {town} - who should I call?",
+			"Best roofers in {area}, {town}"
+		],
+		"dfsCategories": [
+			"roofing_contractor",
+			"roofing_service"
+		],
+		"geoKeyword": "roofers near me"
+	},
+	"heating-engineers": {
+		"label": "heating engineers",
+		"singular": "heating engineer",
+		"keywords": [
+			"heating engineers {town}",
+			"boiler repair {town}",
+			"plumbers {town}",
+			"boiler installation {town}",
+			"emergency plumber {town}",
+			"central heating {town}",
+			"boiler service {town}",
+			"gas engineer {town}",
+			"heat pump installation {town}"
+		],
+		"areaKeywords": [
+			"plumbers {area}",
+			"boiler repair {area}"
+		],
+		"prompts": [
+			"Who are the best heating engineers in {town}?",
+			"Which plumber in {town} would you recommend for a boiler?",
+			"Top rated boiler repair in {town}",
+			"My boiler has broken in {town} - who should I call?",
+			"Best heating engineers in {area}, {town}"
+		],
+		"dfsCategories": [
+			"hvac_contractor",
+			"plumber",
+			"heating_contractor",
+			"boiler_supplier"
+		],
+		"geoKeyword": "heating engineers near me"
+	},
+	"removals": {
+		"label": "removal companies",
+		"singular": "removal company",
+		"keywords": [
+			"removals {town}",
+			"removal companies {town}",
+			"house movers {town}",
+			"best removals {town}",
+			"man and van {town}",
+			"storage {town}",
+			"office removals {town}",
+			"removal costs {town}",
+			"packing services {town}"
+		],
+		"areaKeywords": [
+			"removals {area}",
+			"man and van {area}"
+		],
+		"prompts": [
+			"Who are the best removal companies in {town}?",
+			"Which removals firm in {town} would you recommend?",
+			"Top rated house movers in {town}",
+			"I am moving house in {town} - who should I book?",
+			"Best removals in {area}, {town}"
+		],
+		"dfsCategories": [
+			"moving_company",
+			"mover",
+			"storage_facility"
+		],
+		"geoKeyword": "removals near me"
 	}
 }
