@@ -80,15 +80,18 @@ jobs:
         run: |
           set -euo pipefail
 
-          if [ -z "${DATAFORSEO_AUTH:-}" ]; then
-            echo "::error::DATAFORSEO_AUTH is not set. Add it under Settings → Secrets → Actions."
-            exit 1
-          fi
-
           DRY=""
           if [ "${{ inputs.dry_run }}" = "true" ]; then
             DRY="--dry-run"
             echo "::notice::Dry run — nothing will be fetched or charged."
+          fi
+
+          # Checked only for real runs: collect.mjs --dry-run makes no API calls
+          # and needs no credential, so a dry run is a way to validate this
+          # workflow BEFORE the secret exists.
+          if [ -z "$DRY" ] && [ -z "${DATAFORSEO_AUTH:-}" ]; then
+            echo "::error::DATAFORSEO_AUTH is not set. Add it under Settings → Secrets and variables → Actions, or re-run with dry_run enabled."
+            exit 1
           fi
 
           # Sequential on purpose. See the concurrency note above: parallel
