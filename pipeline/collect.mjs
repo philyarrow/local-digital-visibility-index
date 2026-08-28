@@ -571,6 +571,15 @@ async function collectBusiness(biz, indexSlug, shared, cfg) {
 /* Main                                                                        */
 /* -------------------------------------------------------------------------- */
 
+/* The absolute account balance is business financial information, and this
+   repo is public — Actions logs on a public repository are readable by anyone.
+   Suppressed under CI, where it has no operational value anyway: the run still
+   reports forecast, ledger and reconciled spend, which is what the open-data
+   transparency story needs. Locally it prints as before. */
+const PUBLIC_LOG = !!process.env.CI;
+const redactBalance = (v) =>
+	PUBLIC_LOG ? '(hidden in CI)' : `$${v?.toFixed(4) ?? '?'}`;
+
 async function main() {
 	loadEnv();
 
@@ -649,7 +658,7 @@ async function main() {
 
 	const runStartedAt = Date.now();
 	const before = await balance();
-	console.log(`Balance:    $${before.balance?.toFixed(4) ?? '?'}\n`);
+	console.log(`Balance:    ${redactBalance(before.balance)}\n`);
 
 	/* ---- Phase 1: shared per-index signals (bought once) ---- */
 
@@ -1026,6 +1035,8 @@ async function main() {
 	console.log(`\n    forecast   $${forecast.toFixed(5)}`);
 	console.log(`    ledger     $${ledger.total.toFixed(5)} (£${(ledger.total / fxRate).toFixed(4)})`);
 	console.log(`    reconciled $${reconciled.attributed.toFixed(5)} (serp + business_data, per-task via id_list)`);
+	/* The delta is spend, not the balance, so it stays — it is the number that
+	   makes the cost claims auditable. The absolute figures do not. */
 	const delta = (before.balance ?? 0) - (after.balance ?? 0);
 	console.log(`    balance moved $${delta.toFixed(5)} — includes anything else billing in this window, not just this run`);
 	console.log('\nNext: node score.mjs ' + indexSlug);
