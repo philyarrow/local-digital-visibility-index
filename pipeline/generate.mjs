@@ -267,15 +267,6 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 	const medians = ranked.sectorMedians;
 	const cov = coverage(ranked);
 
-	/* The pillar name is the anchor text for the KB explainer. Linking the label
-	   rather than appending a bare "read more" keeps the anchor descriptive,
-	   which is the half of an internal link that actually carries meaning. */
-	const pillarRows = PILLARS.map((p) => {
-		const score = b.pillarScores[p.key];
-		const med = medians[p.key];
-		return `| [${p.label}](${kbHref(p.key)}) | ${score ?? '—'} | ${med ?? '—'} | ${reading(p.key, b, medians)} |`;
-	}).join('\n');
-
 	const dataset = {
 		'@context': 'https://schema.org',
 		'@type': 'Dataset',
@@ -322,9 +313,7 @@ ${cardBanner(cov)}> Measured ${human} via the PYC ${idxTitle} Digital Visibility
 
 ## Pillar breakdown vs sector median
 
-| Pillar | Score | Sector median | Reading |
-|--------|------:|--------------:|---------|
-${pillarRows}
+${pillarTable(b, ranked.sectorMedians)}
 
 ${divergingPillars(b, ranked.sectorMedians, deltaScale(ranked))}
 
@@ -409,6 +398,48 @@ ${b.name}'s lowest-scoring ${noun} among those we publish remediation guidance f
 
 ${lines.join('\n')}
 `;
+}
+
+/* The pillar breakdown — the first thing on every scorecard, and the only
+   table here that was still plain markdown. That meant it inherited Starlight's
+   `table { display:block; overflow:auto }` fallback while every other figure had
+   been given a real table layout, so the most important table on the page was
+   the one that scrolled sideways on a phone: its four columns need ~544px and a
+   414px phone offers ~340px.
+
+   The "Reading" column was the cause — "Above sector median" is 19 characters
+   restating a comparison the reader can already see. Replaced with the signed
+   delta, which is the same comparison quantified, in a third of the width. The
+   median stays the reference on every figure on this site; here the table does
+   the subtraction rather than asking the reader to. */
+function pillarTable(b, medians) {
+	const rows = PILLARS.map((p) => {
+		const score = b.pillarScores[p.key];
+		const med = medians[p.key];
+		const label = `<a href="${kbHref(p.key)}">${esc(p.label)}</a>`;
+
+		if (score === null || score === undefined) {
+			return `<tr><th scope="row">${label}</th>`
+				+ `<td class="pyc-pl-n" data-label="Score">—</td>`
+				+ `<td class="pyc-pl-n pyc-pl-med" data-label="Median">${med ?? '—'}</td>`
+				+ `<td class="pyc-pl-d pyc-pl-na" data-label="vs median">not measured</td></tr>`;
+		}
+
+		const d = med === null || med === undefined ? null : Math.round((score - med) * 10) / 10;
+		/* The sign carries direction, so the reading never depends on colour. */
+		const dTxt = d === null ? '—' : d > 0 ? `+${d}` : d < 0 ? `−${Math.abs(d)}` : 'level';
+		const dCls = d === null ? '' : d >= 5 ? ' pyc-pl-up' : d <= -5 ? ' pyc-pl-down' : ' pyc-pl-level';
+
+		return `<tr><th scope="row">${label}</th>`
+			+ `<td class="pyc-pl-n" data-label="Score">${score}</td>`
+			+ `<td class="pyc-pl-n pyc-pl-med" data-label="Median">${med ?? '—'}</td>`
+			+ `<td class="pyc-pl-d${dCls}" data-label="vs median">${dTxt}</td></tr>`;
+	}).join('');
+
+	return `<figure class="pyc-fig">
+<figcaption>Each pillar scored 0–100 against the sector median for this index. The final column is this firm's distance from that median.</figcaption>
+<table class="pyc-pillars"><thead><tr><th scope="col">Pillar</th><th scope="col" class="pyc-pl-n">Score</th><th scope="col" class="pyc-pl-n">Median</th><th scope="col" class="pyc-pl-d">vs median</th></tr></thead><tbody>${rows}</tbody></table>
+</figure>`;
 }
 
 function idTitleQuarter(idxTitle, quarter) {
