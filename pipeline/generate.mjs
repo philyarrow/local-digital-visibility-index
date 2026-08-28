@@ -335,6 +335,7 @@ ${leader.name} leads the index with ${leader.digitalVisibilityScore}/100. ${gapT
 
 ${topFixes(b, sectorCopy(indexSlug)).map((f, i) => `${i + 1}. ${f}`).join('\n')}
 
+${contextCard(b)}
 ${whereToFix(b)}
 ${pager(b, ranked, indexSlug)}
 
@@ -479,6 +480,65 @@ ${link(prev, 'prev')}
 <a class="pyc-pg pyc-pg-up" href="/indices/${esc(indexSlug)}/"><span class="pyc-pg-dir">Full index</span><span class="pyc-pg-firm">All ${byRank.length} firms</span></a>
 ${link(next, 'next')}
 </nav>`;
+}
+
+/* Context block — recorded, never scored.
+
+   Kept visually and verbally separate from the pillars because none of it
+   carries weight. The heading says so, and each row names its source, so a
+   reader can never mistake a company age or a field-speed reading for
+   something that moved the ranking. */
+function contextCard(b) {
+	const e = b.enrichment;
+	if (!e) return '';
+	const rows = [];
+
+	const ch = e.companies;
+	if (ch && ch.matched) {
+		const bits = [`Company ${esc(ch.companyNumber)}`];
+		if (ch.ageYears !== null && ch.ageYears !== undefined) bits.push(`${ch.ageYears} years old`);
+		if (ch.companyStatus) bits.push(esc(ch.companyStatus));
+		if (ch.sicCodes?.length) bits.push(`SIC ${ch.sicCodes.map(esc).join(', ')}`);
+		rows.push(['Companies House', bits.join(' · ')]);
+	} else if (ch && ch.matched === false) {
+		rows.push(['Companies House', 'No confident match on the registered name']);
+	}
+
+	const cx = e.crux;
+	if (cx && cx.available) {
+		const p = [];
+		if (cx.lcpMs !== null) p.push(`LCP ${cx.lcpMs}ms`);
+		if (cx.inpMs !== null) p.push(`INP ${cx.inpMs}ms`);
+		if (cx.cls !== null) p.push(`CLS ${cx.cls}`);
+		if (cx.passesCwv !== null) p.push(cx.passesCwv ? 'passes Core Web Vitals' : 'does not pass Core Web Vitals');
+		rows.push(['Real-user speed (CrUX)', p.join(' · ')]);
+	} else if (cx && cx.available === false) {
+		rows.push(['Real-user speed (CrUX)', 'Too little traffic to appear in Chrome\u2019s public dataset']);
+	}
+
+	const cr = e.crawl;
+	if (cr && cr.pagesCrawled) {
+		const p = [`${cr.pagesCrawled} pages crawled`];
+		if (cr.avgInternalLinksPerPage !== null) p.push(`${cr.avgInternalLinksPerPage} internal links per page`);
+		const d = cr.keyPageDepth || {};
+		const depths = Object.entries(d).filter(([, v]) => v !== null).map(([k, v]) => `${k} ${v} click${v === 1 ? '' : 's'}`);
+		if (depths.length) p.push(`reachable in: ${depths.join(', ')}`);
+		if (cr.genericAnchorRatio !== null) p.push(`${Math.round(cr.genericAnchorRatio * 100)}% of links use a generic anchor`);
+		if (cr.orphanCandidates !== null) p.push(`${cr.orphanCandidates} sitemap pages not reachable by following links`);
+		rows.push(['Site structure', p.join(' · ')]);
+	} else if (cr && cr.robotsDisallowedAll) {
+		rows.push(['Site structure', 'robots.txt asks crawlers not to read this site, so it was not crawled']);
+	}
+
+	if (!rows.length) return '';
+
+	return `## Context (not scored)
+
+<figure class="pyc-fig">
+<figcaption>Recorded alongside the measurement to make it easier to judge, but carrying no weight in the Digital Visibility Score. See the <a href="/indices/methodology/">methodology</a>.</figcaption>
+<table class="pyc-kv"><tbody>${rows.map(([k, v]) => `<tr><th scope="row">${k}</th><td>${v}</td></tr>`).join('')}</tbody></table>
+</figure>
+`;
 }
 
 function idTitleQuarter(idxTitle, quarter) {

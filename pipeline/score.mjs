@@ -163,6 +163,10 @@ function computeBusiness(record) {
 		name: record.name,
 		url: record.url,
 		collectedAt: record.collectedAt,
+		/* Context data, carried through unscored. It was being collected and
+		   then dropped here, which is the worst of both: the cost of gathering
+		   it with none of the benefit. */
+		enrichment: record.enrichment ?? null,
 		digitalVisibilityScore: score,
 		pillarScores,
 		includedPillars: included,

@@ -54,27 +54,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  measure:
-    # Forks inherit the workflow file but must never run it on a schedule.
+  # One index per job, run one at a time.
+  #
+  # A single job is capped at 6 hours by GitHub. Eleven indices at roughly 90
+  # minutes each — the SERP standard queue alone can take 45 — is about 16
+  # hours, so the old single-job design would have been killed halfway through
+  # the first scheduled run, after spending the money.
+  #
+  # max-parallel: 1 keeps them strictly sequential, which the cost model
+  # requires: DataForSEO spend is reconciled by time window via id_list, so two
+  # concurrent collections land in each other's ledger.
+  plan:
     if: github.repository == 'philyarrow/local-digital-visibility-index'
     runs-on: ubuntu-latest
-    # One index took 25 minutes in the first real run (SERP standard-queue
-    # polling dominates), and indices run sequentially — so a full seven-index
-    # pass is ~2.5-3 hours. 60 minutes would have killed the first scheduled
-    # run partway through, after spending the money. 300 leaves headroom
-    # without letting a genuinely stuck run bill for six hours.
-    timeout-minutes: 300
-
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
     steps:
       - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      # No dependency install: the pipeline imports only Node builtins.
-
-      - name: Resolve which indices to run
-        id: plan
+      - id: plan
         run: |
           if [ -n "${{ inputs.indices }}" ]; then
             SLUGS="${{ inputs.indices }}"
@@ -84,8 +81,35 @@ jobs:
               console.log(Object.keys(c).filter(k => !k.startsWith('_')).join(' '));
             ")
           fi
-          echo "slugs=$SLUGS" >> "$GITHUB_OUTPUT"
+          MATRIX=$(node -e "
+            const s = process.argv[1].trim().split(/\s+/).filter(Boolean);
+            console.log(JSON.stringify({ slug: s }));
+          " "$SLUGS")
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
           echo "Indices: $SLUGS" >> "$GITHUB_STEP_SUMMARY"
+
+  measure:
+    # Forks inherit the workflow file but must never run it on a schedule.
+    if: github.repository == 'philyarrow/local-digital-visibility-index'
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    # Per INDEX, not per run: each matrix job collects one index. The SERP
+    # standard queue alone can take 45 minutes and a 41-firm cohort adds ~60s
+    # per business for the crawl, so ~90 minutes is normal and 330 leaves
+    # headroom while staying under GitHub's 6-hour job cap.
+    timeout-minutes: 330
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # No dependency install: the pipeline imports only Node builtins.
 
       - name: Collect, score, archive
         working-directory: pipeline
@@ -111,15 +135,16 @@ jobs:
 
           # Sequential on purpose. See the concurrency note above: parallel
           # collection breaks per-run cost attribution.
-          for slug in ${{ steps.plan.outputs.slugs }}; do
-            echo "::group::$slug"
-            node collect.mjs "seeds/$slug.csv" $DRY
-            if [ -z "$DRY" ]; then
-              node score.mjs "$slug"
-              node generate.mjs "$slug" --archive-only
-            fi
-            echo "::endgroup::"
-          done
+          slug='${{ matrix.slug }}'
+          if [ ! -f "seeds/$slug.csv" ]; then
+            echo "::error::seeds/$slug.csv is missing. An index must have a reviewed seed before it is collected."
+            exit 1
+          fi
+          node collect.mjs "seeds/$slug.csv" $DRY
+          if [ -z "$DRY" ]; then
+            node score.mjs "$slug"
+            node generate.mjs "$slug" --archive-only
+          fi
 
       - name: Summarise spend
         if: inputs.dry_run != true
@@ -159,6 +184,8 @@ jobs:
 
           # `git add data` is safe because the guard above already proved
           # nothing outside data/*/history changed.
+          # Another matrix job may have pushed since checkout.
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
           git add data
           if git diff --cached --quiet; then
             echo "No change to commit." >> "$GITHUB_STEP_SUMMARY"
