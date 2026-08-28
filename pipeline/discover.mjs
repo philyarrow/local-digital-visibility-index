@@ -37,6 +37,27 @@ const NOT_A_LOCAL_BUSINESS = [
 	'deliveroo.co.uk', 'ubereats.com', 'indeed.com', 'linkedin.com', 'instagram.com',
 ];
 
+/* National chains and housebuilders. A branch of a chain has a page on the
+   chain's site, not a site of its own — scoring it measures the chain's central
+   web team, not a local business, and it would beat every independent in the
+   cohort on signals the branch does not control. The same rule that excludes a
+   franchise landing page excludes these.
+
+   Restaurants are where this matters most: an unfiltered Gloucester restaurant
+   sweep returned ten chain location pages in the top of the list. */
+const NATIONAL_CHAIN = [
+	// pub and restaurant groups
+	'tobycarvery.co.uk', 'vintageinn.co.uk', 'chefandbrewer.com', 'emberinns.co.uk',
+	'zizzi.co.uk', 'tgifridays.co.uk', 'pizzaexpress.com', 'nandos.co.uk', 'wagamama.com',
+	'greeneking-pubs.co.uk', 'marstons.co.uk', 'harvester.co.uk', 'millerandcarter.co.uk',
+	'beefeater.co.uk', 'brewersfayre.co.uk', 'premierinn.com', 'mcdonalds.com', 'kfc.co.uk',
+	'subway.com', 'costa.co.uk', 'starbucks.co.uk', 'greggs.co.uk', 'wetherspoon.co.uk',
+	// national housebuilders
+	'redrow.co.uk', 'barratthomes.co.uk', 'bloorhomes.com', 'persimmonhomes.com',
+	'taylorwimpey.co.uk', 'bellway.co.uk', 'davidwilsonhomes.co.uk', 'cala.co.uk',
+	'crest-nicholson.com', 'vistry.co.uk', 'lovell.co.uk',
+];
+
 function csvCell(s) {
 	const v = String(s ?? '').replace(/\r?\n/g, ' ').trim();
 	return /[",]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v;
@@ -104,7 +125,7 @@ async function main() {
 
 	const seen = new Set();
 	const rows = [];
-	const rejected = { noSite: 0, aggregator: 0, duplicateDomain: 0 };
+	const rejected = { noSite: 0, aggregator: 0, chain: 0, duplicateDomain: 0 };
 
 	for (const it of items) {
 		const name = it.title;
@@ -115,6 +136,7 @@ async function main() {
 		const domain = registrableDomain(url);
 		if (!domain) { rejected.noSite++; continue; }
 		if (NOT_A_LOCAL_BUSINESS.some((d) => domain === d || domain.endsWith(`.${d}`))) { rejected.aggregator++; continue; }
+		if (NATIONAL_CHAIN.some((d) => domain === d || domain.endsWith(`.${d}`))) { rejected.chain++; continue; }
 		if (seen.has(domain)) { rejected.duplicateDomain++; continue; }
 		seen.add(domain);
 
@@ -134,6 +156,7 @@ async function main() {
 	console.log(`Kept ${rows.length} businesses with their own website.`);
 	console.log(`  no website / unparseable  ${rejected.noSite}`);
 	console.log(`  directory or marketplace  ${rejected.aggregator}`);
+	console.log(`  national chain / builder  ${rejected.chain}`);
 	console.log(`  duplicate domain (chains) ${rejected.duplicateDomain}\n`);
 
 	rows.slice(0, 15).forEach((r, i) => {

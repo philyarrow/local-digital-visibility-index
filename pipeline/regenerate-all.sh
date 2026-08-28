@@ -19,8 +19,15 @@ while IFS= read -r line; do SLUGS+=("$line"); done < <(node -e "
 ")
 
 fail=0
+skipped=0
 for slug in "${SLUGS[@]}"; do
   printf '  %-28s' "$slug"
+  # An index can be configured with a reviewed seed before it has ever been
+  # collected. That is a normal intermediate state, not a failure, and it must
+  # not stop the other six from regenerating.
+  if [ ! -d "data/$slug" ]; then
+    echo "not collected yet - skipped"; skipped=$((skipped+1)); continue
+  fi
   if node score.mjs "$slug" >/dev/null && node generate.mjs "$slug" --quarter "$QUARTER" --site-root "$SITE_ROOT" >/dev/null; then
     echo "ok"
   else
@@ -29,4 +36,4 @@ for slug in "${SLUGS[@]}"; do
 done
 
 [ "$fail" -eq 0 ] || { echo "one or more indices failed to generate" >&2; exit 1; }
-echo "All ${#SLUGS[@]} indices regenerated into $SITE_ROOT"
+echo "Regenerated $(( ${#SLUGS[@]} - skipped )) of ${#SLUGS[@]} indices into $SITE_ROOT${skipped:+ ($skipped not collected yet)}"
