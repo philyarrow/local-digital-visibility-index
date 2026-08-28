@@ -27,6 +27,20 @@ A signal is only used in a published index when it is:
 2. **Machine-measured** — produced by a documented tool or API, not a human judgement.
 3. **Dated** — every index carries its snapshot date and names the source.
 
+## Context data that is recorded but never scored
+
+Three further sources are collected alongside the pillars. **None of them carries any weight in the Digital Visibility Score, and none can move a ranking.** That separation is deliberate: a published score must never change because a third party enabled an API key, or because a business is small enough to be absent from someone else's dataset.
+
+**A first-party crawl.** Each site is crawled from its homepage — obeying `robots.txt`, one page at a time with a delay, capped by page count, depth and total time, identifying itself as `PYCLocalIndexBot` with a link to this page. It records click depth to key pages, internal links per page, the share of anchors that name nothing ("click here", "read more"), and pages listed in the sitemap that were never reached by following links. Orphan counts are only reported when a crawl finished naturally: a crawl stopped by the page cap has unvisited pages by construction, and calling those orphans would be false.
+
+**Chrome UX Report (CrUX).** The Speed pillar uses PageSpeed lab data — a synthetic run on Google's hardware. CrUX is the field equivalent: real Chrome users, 28-day p75. Where both exist, the index publishes both.
+
+CrUX has a coverage limit that matters here. Google only reports origins with enough traffic to be statistically meaningful, and most small local firms do not reach it — of the first twelve Gloucester accountancy practices tested, **none** had CrUX data, while a Bristol estate agency with far more traffic did. Absence therefore correlates with being small. Scoring on it would systematically penalise exactly the businesses least able to change it, which is why it is context and not a pillar.
+
+**Companies House.** Company number, incorporation date, status and SIC code, matched on an exact normalised name against an active company — anything less confident records no match rather than guessing. This gives each business an official registry identifier rather than a name we matched on, and lets a cohort be read with company age and size in view, which is the fairest answer to "you are comparing a three-person firm with a fifty-person one". The SIC code also states, from an authoritative source, what a company is registered to do.
+
+Professional-regulator registers (SRA, Gas Safe, Propertymark) are **not** used. Their published crawl policies disallow the register search endpoints, and this project will not take data it has been asked not to take. Where an official rating is genuinely open — the FSA's food hygiene ratings, for example — it may be used and will be named.
+
 ## What this method will not do
 
 - No subjective quality or trustworthiness claims about the businesses. It measures digital presence, never service quality.
