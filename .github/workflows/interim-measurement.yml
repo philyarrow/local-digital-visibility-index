@@ -17,11 +17,21 @@
 name: Monthly interim measurement
 
 on:
+  # NOTE: GitHub disables scheduled workflows on a repository after 60 days
+  # with no activity. A monthly run that commits keeps the repo inside that
+  # window, but if the schedule ever stops firing, that is the first thing to
+  # check — re-enable it on the Actions tab.
+  #
   # DELIBERATELY only these two triggers. Never add pull_request or
   # pull_request_target: this workflow holds a credential that spends money,
   # and in a public repo a forked PR must never be able to reach it.
   schedule:
-    - cron: '0 3 1 * *' # 03:00 UTC on the 1st of each month
+    # 03:37 UTC on the 1st. The odd minute is deliberate: GitHub delays
+    # scheduled runs under load, and load peaks on the hour — a job set to
+    # :00 on the 1st of the month queues behind everyone else's monthly cron.
+    # Nothing here is time-critical, but an offset makes it start sooner and
+    # reduces the chance of being dropped outright.
+    - cron: '37 3 1 * *'
   workflow_dispatch:
     inputs:
       dry_run:
