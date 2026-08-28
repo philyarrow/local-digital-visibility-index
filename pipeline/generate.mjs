@@ -36,10 +36,17 @@ const SITE = 'https://hub.pyc.agency';
 
 /* The site lives in a separate repository, so its location is passed in rather
    than inferred from this file's path. Nothing is written outside this root. */
-function resolveSiteRoot() {
+/* `--archive-only` writes a dated measurement into THIS repo and touches the
+   site not at all, so it must not demand a checkout of a repo it will never
+   write to. That matters for CI: the site repo is private, the pipeline repo
+   is public, and the scheduled collection runs in the public one. */
+const ARCHIVE_ONLY = process.argv.includes('--archive-only');
+
+function resolveSiteRoot({ required = true } = {}) {
 	const flagIndex = process.argv.indexOf('--site-root');
 	const fromFlag = flagIndex !== -1 ? process.argv[flagIndex + 1] : null;
 	const root = fromFlag || process.env.INDEX_SITE_ROOT;
+	if (!root && !required) return null;
 	if (!root) {
 		console.error(
 			'Missing --site-root.\n\n' +
@@ -53,9 +60,9 @@ function resolveSiteRoot() {
 	return isAbsolute(root) ? root : resolve(process.cwd(), root);
 }
 
-const SITE_ROOT = resolveSiteRoot();
-const CONTENT_ROOT = join(SITE_ROOT, 'new', 'src', 'content', 'docs', 'indices');
-const PUBLIC_DATA = join(SITE_ROOT, 'new', 'public', 'data');
+const SITE_ROOT = resolveSiteRoot({ required: !ARCHIVE_ONLY });
+const CONTENT_ROOT = SITE_ROOT ? join(SITE_ROOT, 'new', 'src', 'content', 'docs', 'indices') : null;
+const PUBLIC_DATA = SITE_ROOT ? join(SITE_ROOT, 'new', 'public', 'data') : null;
 
 /* Dated open-data snapshots live in THIS repo, not the site's. */
 const SNAPSHOT_ROOT = join(HERE, '..', 'data');
@@ -1598,7 +1605,7 @@ function parseArgs(argv) {
 		const a = argv[i];
 		if (a === '--quarter') args.quarter = argv[++i];
 		else if (VALUE_FLAGS.has(a)) i++; // consumed elsewhere; skip its value
-		else if (a === '--check-bridges') continue; // handled in main(), before this
+		else if (a === '--check-bridges' || a === '--archive-only') continue; // handled in main()
 		else if (a.startsWith('--')) {
 			console.error(`Unknown flag: ${a}`);
 			process.exit(1);
@@ -1670,6 +1677,37 @@ async function main() {
 		console.error(`Cannot read ${rankedFile}: ${e.message}`);
 		console.error('Run score.mjs first: node score.mjs ' + indexSlug);
 		process.exit(1);
+	}
+
+	/* Archive mode: write a dated interim measurement and stop.
+
+	   Monthly collection exists to build the time series that quarter-on-quarter
+	   comparison and the statistical methods in the glossary actually need — you
+	   cannot run ANOVA on one data point. But a monthly measurement is NOT a
+	   published ranking, and it must never overwrite `<quarter>.json`: that file
+	   is the receipt for what the site published, and freezing it is the whole
+	   reason it exists.
+
+	   So interim runs land in data/<index>/history/<YYYY-MM>.json, carry
+	   status: "interim", and say in the file that they are not the ranking. */
+	if (ARCHIVE_ONLY) {
+		const period = new Date(ranked.measuredAt ?? ranked.scoredAt).toISOString().slice(0, 7);
+		const payload = {
+			...exportJson(ranked, quarter, indexSlug),
+			status: 'interim',
+			period,
+			statusNote:
+				'Interim monthly measurement, not a published ranking. The published index for '
+				+ `this quarter is data/${indexSlug}/${quarter.toLowerCase()}.json and on the site at `
+				+ `${SITE}/indices/${indexSlug}/. Interim files exist so movement over time can be `
+				+ 'analysed; they are not editorially reviewed and firms are not ranked on them.',
+		};
+		const historyDir = join(SNAPSHOT_ROOT, indexSlug, 'history');
+		await mkdir(historyDir, { recursive: true });
+		await writeFile(join(historyDir, `${period}.json`), JSON.stringify(payload, null, 2) + '\n');
+		await writeFile(join(historyDir, `${period}.csv`), exportCsv(ranked));
+		console.log(`Archived interim measurement to data/${indexSlug}/history/${period}.{json,csv}`);
+		return;
 	}
 
 	/* The previous quarter's published snapshot, if one exists. Read from this

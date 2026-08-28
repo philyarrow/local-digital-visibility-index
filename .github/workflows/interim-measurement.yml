@@ -1,0 +1,154 @@
+# Monthly interim measurement.
+#
+# Collects and scores every index, then archives a dated measurement to
+# data/<index>/history/<YYYY-MM>.json. It does NOT publish: no site pages are
+# generated, no ranking is updated, and data/<index>/<quarter>.json — the
+# receipt for what the site published — is never touched.
+#
+# Why it lives here and not in the site repo: this repo is public, so Actions
+# minutes are free; the site repo is private with Actions disabled. The split
+# also matches the boundary in CLAUDE.md — collection and snapshots belong to
+# the pipeline, publishing belongs to the site.
+#
+# Why publishing stays manual: collect.mjs spends real money, and a ranking
+# that businesses are judged by should have a human look at it before it goes
+# out. Both are deliberate, not unfinished.
+
+name: Monthly interim measurement
+
+on:
+  # DELIBERATELY only these two triggers. Never add pull_request or
+  # pull_request_target: this workflow holds a credential that spends money,
+  # and in a public repo a forked PR must never be able to reach it.
+  schedule:
+    - cron: '0 3 1 * *' # 03:00 UTC on the 1st of each month
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Estimate cost and fetch nothing'
+        type: boolean
+        default: false
+      indices:
+        description: 'Space-separated slugs, or blank for all'
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+
+# Serialise runs. Two concurrent collections against the same DataForSEO
+# account corrupt cost reconciliation — spend is attributed by time window,
+# so an overlapping run lands in the other run's ledger.
+concurrency:
+  group: interim-measurement
+  cancel-in-progress: false
+
+jobs:
+  measure:
+    # Forks inherit the workflow file but must never run it on a schedule.
+    if: github.repository == 'philyarrow/local-digital-visibility-index'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # No dependency install: the pipeline imports only Node builtins.
+
+      - name: Resolve which indices to run
+        id: plan
+        run: |
+          if [ -n "${{ inputs.indices }}" ]; then
+            SLUGS="${{ inputs.indices }}"
+          else
+            SLUGS=$(node -e "
+              const c = require('./pipeline/config/indices.json');
+              console.log(Object.keys(c).filter(k => !k.startsWith('_')).join(' '));
+            ")
+          fi
+          echo "slugs=$SLUGS" >> "$GITHUB_OUTPUT"
+          echo "Indices: $SLUGS" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Collect, score, archive
+        working-directory: pipeline
+        env:
+          DATAFORSEO_AUTH: ${{ secrets.DATAFORSEO_AUTH }}
+          PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${DATAFORSEO_AUTH:-}" ]; then
+            echo "::error::DATAFORSEO_AUTH is not set. Add it under Settings → Secrets → Actions."
+            exit 1
+          fi
+
+          DRY=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            DRY="--dry-run"
+            echo "::notice::Dry run — nothing will be fetched or charged."
+          fi
+
+          # Sequential on purpose. See the concurrency note above: parallel
+          # collection breaks per-run cost attribution.
+          for slug in ${{ steps.plan.outputs.slugs }}; do
+            echo "::group::$slug"
+            node collect.mjs "seeds/$slug.csv" $DRY
+            if [ -z "$DRY" ]; then
+              node score.mjs "$slug"
+              node generate.mjs "$slug" --archive-only
+            fi
+            echo "::endgroup::"
+          done
+
+      - name: Summarise spend
+        if: inputs.dry_run != true
+        run: |
+          node -e "
+            const fs = require('fs');
+            const glob = fs.readdirSync('pipeline/data', { withFileTypes: true })
+              .filter(d => d.isDirectory())
+              .map(d => 'pipeline/data/' + d.name + '/_cost.json')
+              .filter(fs.existsSync);
+            let usd = 0, gbp = 0;
+            const rows = glob.map(f => {
+              const c = JSON.parse(fs.readFileSync(f, 'utf8'));
+              usd += c.ledgerUsd || 0; gbp += c.ledgerGbp || 0;
+              return \`| \${c.index} | \${c.businesses} | \$\${(c.ledgerUsd || 0).toFixed(4)} |\`;
+            });
+            const out = ['| Index | Businesses | Cost |', '|---|---:|---:|', ...rows,
+              \`| **Total** | | **\$\${usd.toFixed(2)} / £\${gbp.toFixed(2)}** |\`].join('\n');
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, out + '\n');
+          "
+
+      - name: Commit the interim measurement
+        if: inputs.dry_run != true
+        run: |
+          set -euo pipefail
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # Only the history directory. If anything else changed, that is a bug
+          # in --archive-only and the run should fail loudly rather than commit
+          # over a published snapshot.
+          if ! git diff --quiet -- data ':!data/*/history'; then
+            echo "::error::A published snapshot was modified. --archive-only must only write data/<index>/history/."
+            git --no-pager diff --stat -- data ':!data/*/history'
+            exit 1
+          fi
+
+          # `git add data` is safe because the guard above already proved
+          # nothing outside data/*/history changed.
+          git add data
+          if git diff --cached --quiet; then
+            echo "No change to commit." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          PERIOD=$(date -u +%Y-%m)
+          git commit \
+            -m "Interim measurement $PERIOD" \
+            -m "Automated monthly collection. Not a published ranking: the site still shows the last published quarter, and data/<index>/<quarter>.json is unchanged. These files exist so movement over time can be analysed."
+          git push

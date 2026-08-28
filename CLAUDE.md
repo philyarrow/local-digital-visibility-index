@@ -181,3 +181,37 @@ sums, a clamp. That is what makes a published figure recomputable from the open
 dataset. Generated copy must never describe the statistical glossary as the
 scoring method — it is the toolkit for analysing results, and the distinction is
 the difference between an auditable index and a black box.
+
+## Scheduled interim measurement
+
+`.github/workflows/interim-measurement.yml` runs monthly (03:00 UTC on the 1st)
+and on manual dispatch. It collects, scores, and writes
+`data/<index>/history/<YYYY-MM>.json` via `generate.mjs --archive-only`.
+
+It does **not** publish. No site pages, no ranking update, and
+`data/<index>/<quarter>.json` is never touched — a step guard fails the run if
+anything outside `data/*/history` changes.
+
+Three constraints that are deliberate, not unfinished:
+
+- **Only `schedule` and `workflow_dispatch`.** This repo is public and the
+  workflow holds a credential that spends money. Never add `pull_request` or
+  `pull_request_target`, or a forked PR becomes a way to drain the balance.
+- **Indices run sequentially.** DataForSEO spend is reconciled by time window
+  via `id_list`, so two concurrent collections land in each other's ledger. The
+  `concurrency` group enforces the same thing across runs.
+- **Publishing stays manual.** `generate.mjs` needs `--site-root`, and the site
+  repo is private with Actions off. More importantly, a ranking businesses are
+  judged by should have someone look at it first.
+
+To publish a quarter, on a machine with both repos checked out:
+
+```sh
+cd pipeline
+./regenerate-all.sh ../../hub.philyarrow.co.uk Q4-2026
+```
+
+then commit both repos, add a changelog entry on the site, and `wrangler deploy`.
+
+**Required secret:** `DATAFORSEO_AUTH` (and `PAGESPEED_API_KEY`) under
+Settings → Secrets and variables → Actions.
