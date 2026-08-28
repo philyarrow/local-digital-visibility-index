@@ -555,7 +555,7 @@ async function collectBusiness(biz, indexSlug, shared, cfg) {
 	const enrichers = [
 		['crawl', () => crawlSite(biz.url, { maxPages: 25, maxDepth: 2, totalBudgetMs: 60000 })],
 		['crux', () => collectCrux(biz.url)],
-		['companies', () => collectCompaniesHouse(biz.name)],
+		['companies', () => collectCompaniesHouse(biz.name, { town: shared.town })],
 	];
 
 	for (const [key, fn] of steps) {
@@ -569,6 +569,7 @@ async function collectBusiness(biz, indexSlug, shared, cfg) {
 	}
 
 	record.enrichment = {};
+	record.enrichmentErrors = [];
 	for (const [key, fn] of enrichers) {
 		try {
 			record.enrichment[key] = await fn();
@@ -577,8 +578,12 @@ async function collectBusiness(biz, indexSlug, shared, cfg) {
 			   API key must not cost us a scored record. */
 			record.enrichment[key] = { error: String(e?.message || e) };
 		}
+		/* Kept out of record.errors, which is reported as "N signal error(s)" and
+		   describes the quality of the MEASUREMENT. A crawl timeout on a
+		   business whose six pillars collected cleanly is not a data-quality
+		   problem with that business's score. */
 		const err = record.enrichment[key]?.error;
-		if (err && err !== 'no API key') record.errors.push(`${key}: ${err}`);
+		if (err && err !== 'no API key') record.enrichmentErrors.push(`${key}: ${err}`);
 	}
 
 	// Derived from data already bought — no further API cost.
@@ -989,7 +994,7 @@ async function main() {
 		console.log('');
 	}
 
-	const shared = { keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor, targetedErrors };
+	const shared = { keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor, targetedErrors, town: indexCfg.town ?? null };
 
 	/* ---- Phase 3: per-business assembly ---- */
 

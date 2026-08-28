@@ -45,7 +45,7 @@ const KEY_PAGE_PATTERNS = {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function fetchText(url, timeoutMs) {
+async function fetchText(url, timeoutMs, { allowPlain = false } = {}) {
 	const ctrl = new AbortController();
 	const t = setTimeout(() => ctrl.abort(), timeoutMs);
 	try {
@@ -55,7 +55,11 @@ async function fetchText(url, timeoutMs) {
 			signal: ctrl.signal,
 		});
 		const ct = res.headers.get('content-type') || '';
-		if (!res.ok || !/text\/html|xml/.test(ct)) return { ok: false, status: res.status, html: '' };
+		/* robots.txt is served as text/plain. The html/xml gate silently rejected
+		   it, so `rules` stayed empty and every path was treated as allowed —
+		   the crawler claimed to obey robots.txt while never reading one. */
+		const okType = allowPlain ? /text\/|xml/.test(ct) || ct === '' : /text\/html|xml/.test(ct);
+		if (!res.ok || !okType) return { ok: false, status: res.status, html: '' };
 		return { ok: true, status: res.status, html: await res.text(), finalUrl: res.url };
 	} catch (e) {
 		return { ok: false, status: 0, html: '', error: e?.name === 'AbortError' ? 'timeout' : String(e?.message || e) };
@@ -85,25 +89,50 @@ export function parseRobots(txt, ua) {
 			current.rules.push({ allow: field === 'allow', path: value });
 		}
 	}
-	const name = ua.toLowerCase();
-	const exact = groups.find((g) => g.agents.some((a) => a !== '*' && name.includes(a)));
+	/* Match on the PRODUCT TOKEN, not the whole UA string. The full UA contains
+	   "research", "local", "agency" and "hub", so `name.includes(a)` bound this
+	   crawler to any group named for those words — and `find` took the first
+	   such group rather than the most specific. */
+	const token = (ua.split('/')[0] || ua).toLowerCase();
+	let best = null;
+	for (const g of groups) {
+		for (const a of g.agents) {
+			if (a === '*' || !token.includes(a)) continue;
+			if (!best || a.length > best.len) best = { len: a.length, group: g };
+		}
+	}
 	const star = groups.find((g) => g.agents.includes('*'));
-	return (exact || star || { rules: [] }).rules;
+	return (best?.group || star || { rules: [] }).rules;
 }
 
 export function robotsAllows(rules, pathname) {
 	/* Longest matching rule wins; Allow beats Disallow at equal length, which is
-	   the behaviour Google documents. */
+	   the behaviour Google documents.
+
+	   Patterns may contain `*` anywhere and may end with `$`. Stripping only a
+	   trailing `*` left `Disallow: /*?*` (Shopify's default) as a literal
+	   prefix that never matched, silently allowing everything it was meant to
+	   block. Specificity is measured on the pattern length, per the spec. */
 	let best = null;
 	for (const r of rules) {
 		if (r.path === '') continue;
-		const p = r.path.replace(/\*+$/, '');
-		if (!pathname.startsWith(p)) continue;
-		if (!best || p.length > best.len || (p.length === best.len && r.allow)) {
-			best = { len: p.length, allow: r.allow };
+		if (!robotsPatternMatches(r.path, pathname)) continue;
+		const len = r.path.length;
+		if (!best || len > best.len || (len === best.len && r.allow)) {
+			best = { len, allow: r.allow };
 		}
 	}
 	return best ? best.allow : true;
+}
+
+function robotsPatternMatches(pattern, pathname) {
+	const anchored = pattern.endsWith('$');
+	const body = anchored ? pattern.slice(0, -1) : pattern;
+	if (!body.includes('*')) {
+		return anchored ? pathname === body : pathname.startsWith(body);
+	}
+	const rx = body.split('*').map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('.*');
+	return new RegExp('^' + rx + (anchored ? '$' : '')).test(pathname);
 }
 
 function absolute(href, base) {
@@ -136,6 +165,7 @@ export async function crawlSite(startUrl, opts = {}) {
 		sitemapUrls: null,
 		robotsDisallowedAll: false,
 		stoppedBecause: null,
+		depthLimited: false,
 		error: null,
 	};
 
@@ -148,7 +178,7 @@ export async function crawlSite(startUrl, opts = {}) {
 
 	// ---- robots ----
 	let rules = [];
-	const rob = await fetchText(`${origin}/robots.txt`, cfg.perRequestTimeoutMs);
+	const rob = await fetchText(`${origin}/robots.txt`, cfg.perRequestTimeoutMs, { allowPlain: true });
 	if (rob.ok) rules = parseRobots(rob.html, CRAWL_UA);
 	if (!robotsAllows(rules, '/')) {
 		out.robotsDisallowedAll = true;
@@ -157,6 +187,7 @@ export async function crawlSite(startUrl, opts = {}) {
 	}
 
 	// ---- crawl ----
+	let depthTruncated = false;
 	const seen = new Set();
 	const queue = [{ url: startUrl, depth: 0 }];
 	seen.add(startUrl.replace(/\/$/, ''));
@@ -175,14 +206,23 @@ export async function crawlSite(startUrl, opts = {}) {
 		const res = await fetchText(url, cfg.perRequestTimeoutMs);
 		if (!res.ok) continue;
 
+		/* Resolve against the post-redirect URL: a relative href on a page that
+		   redirected would otherwise resolve against the pre-redirect path,
+		   producing wrong depths and fetching the same page under two URLs. */
+		const base = res.finalUrl || url;
 		out.pagesCrawled++;
 		out.maxDepthReached = Math.max(out.maxDepthReached, depth);
 		reached.set(pathname.replace(/\/$/, '') || '/', depth);
 
 		for (const m of res.html.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
-			const u = absolute(m[1], url);
+			const u = absolute(m[1], base);
 			if (!u) continue;
+			/* Same ORIGIN, not merely the same registrable domain. robots.txt is
+			   per-origin, so following www -> shop.example.com would apply the
+			   wrong site's rules — or none at all. Cross-subdomain links still
+			   count as internal for the link tally. */
 			if (registrableDomain(u.href) !== home) continue;   // internal only
+			const sameOrigin = u.origin === origin;
 			out.internalLinks++;
 
 			const text = m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
@@ -198,15 +238,18 @@ export async function crawlSite(startUrl, opts = {}) {
 				}
 			}
 
+			if (!sameOrigin) continue;
 			if (SKIP_EXT.test(u.pathname)) continue;
 			const norm = u.href.replace(/\/$/, '');
 			if (seen.has(norm)) continue;
 			seen.add(norm);
 			out.pagesDiscovered++;
 			if (depth + 1 <= cfg.maxDepth) queue.push({ url: u.href, depth: depth + 1 });
+			else depthTruncated = true;
 		}
 	}
 
+	out.depthLimited = depthTruncated;
 	if (out.pagesCrawled) {
 		out.avgInternalLinksPerPage = Number((out.internalLinks / out.pagesCrawled).toFixed(1));
 		out.genericAnchorRatio = out.internalLinks
@@ -224,7 +267,10 @@ export async function crawlSite(startUrl, opts = {}) {
 			/* Only meaningful when the crawl finished naturally — a crawl stopped
 			   by the page cap has unvisited pages by construction, and calling
 			   those orphans would be false. */
-			if (!out.stoppedBecause) {
+			/* Only when the crawl genuinely exhausted the site. A queue drained
+			   because maxDepth cut it short still has unvisited pages, and
+			   calling those orphans publishes a false number on a firm's page. */
+			if (!out.stoppedBecause && !depthTruncated) {
 				let missing = 0;
 				for (const l of pages) {
 					let p;

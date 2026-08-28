@@ -1915,6 +1915,9 @@ function exportJson(ranked, quarter, indexSlug) {
 		   could be measured on, so there is no single index-level set. Publishing
 		   businesses[0]'s as if there were made the dataset unreproducible for
 		   every row with a different coverage shape. */
+		contextNote: 'The `context` block on each business is recorded alongside the '
+			+ 'measurement and carries NO weight in the Digital Visibility Score. See '
+			+ `${SITE}/indices/methodology/.`,
 		effectiveWeightsNote:
 			'Weights are renormalised per business around its measured pillars. '
 			+ 'See each business\'s effectiveWeights; there is no index-level set.',
@@ -1928,6 +1931,12 @@ function exportJson(ranked, quarter, indexSlug) {
 			includedPillars: b.includedPillars,
 			excludedPillars: b.excludedPillars,
 			effectiveWeights: b.effectiveWeights,
+			/* The scorecard publishes a Companies House number, a CrUX reading
+			   and crawl metrics. The dated snapshot is this project's receipt
+			   for what was published, so anything asserted on a page has to be
+			   reproducible from it — otherwise the page makes claims the open
+			   data cannot support. Unscored, and labelled as such. */
+			context: b.enrichment ?? null,
 		})),
 	};
 }

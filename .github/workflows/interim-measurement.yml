@@ -72,9 +72,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: plan
+        env:
+          # Never interpolate a dispatch input directly into the script: a
+          # quote breaks it and `';curl …;'` would run with the API keys in
+          # scope. Through env it is data, not code.
+          REQUESTED: ${{ inputs.indices }}
         run: |
-          if [ -n "${{ inputs.indices }}" ]; then
-            SLUGS="${{ inputs.indices }}"
+          set -euo pipefail
+          if [ -n "${REQUESTED:-}" ]; then
+            SLUGS="$REQUESTED"
           else
             SLUGS=$(node -e "
               const c = require('./pipeline/config/indices.json');
@@ -83,8 +89,11 @@ jobs:
           fi
           MATRIX=$(node -e "
             const s = process.argv[1].trim().split(/\s+/).filter(Boolean);
+            if (!s.length) { console.error('No indices resolved.'); process.exit(1); }
             console.log(JSON.stringify({ slug: s }));
           " "$SLUGS")
+          # An empty matrix makes GitHub SKIP the job and report the run green,
+          # so a scheduled run could collect nothing and look successful.
           echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
           echo "Indices: $SLUGS" >> "$GITHUB_STEP_SUMMARY"
 
@@ -114,8 +123,10 @@ jobs:
       - name: Collect, score, archive
         working-directory: pipeline
         env:
+          SLUG: ${{ matrix.slug }}
           DATAFORSEO_AUTH: ${{ secrets.DATAFORSEO_AUTH }}
           PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+          COMPANIES_HOUSE_KEY: ${{ secrets.COMPANIES_HOUSE_KEY }}
         run: |
           set -euo pipefail
 
@@ -135,7 +146,7 @@ jobs:
 
           # Sequential on purpose. See the concurrency note above: parallel
           # collection breaks per-run cost attribution.
-          slug='${{ matrix.slug }}'
+          slug="$SLUG"
           if [ ! -f "seeds/$slug.csv" ]; then
             echo "::error::seeds/$slug.csv is missing. An index must have a reviewed seed before it is collected."
             exit 1
@@ -184,8 +195,17 @@ jobs:
 
           # `git add data` is safe because the guard above already proved
           # nothing outside data/*/history changed.
-          # Another matrix job may have pushed since checkout.
-          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          # Stage FIRST, then rebase. The new history file is untracked on a
+          # first-of-month run; if the incoming commit adds the same path the
+          # pull aborts with "untracked working tree file would be overwritten"
+          # and the already-paid-for measurement is thrown away. Staged, it is
+          # tracked and rebases cleanly.
+          git add data
+          git -c user.name='github-actions[bot]' \
+              -c user.email='github-actions[bot]@users.noreply.github.com' \
+              stash push --staged -m pyc-interim >/dev/null 2>&1 || true
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git stash pop >/dev/null 2>&1 || true
           git add data
           if git diff --cached --quiet; then
             echo "No change to commit." >> "$GITHUB_STEP_SUMMARY"
@@ -196,4 +216,5 @@ jobs:
           git commit \
             -m "Interim measurement $PERIOD" \
             -m "Automated monthly collection. Not a published ranking: the site still shows the last published quarter, and data/<index>/<quarter>.json is unchanged. These files exist so movement over time can be analysed."
-          git push
+          # One retry: a sibling job may land between our rebase and our push.
+          git push || { git pull --rebase origin "${GITHUB_REF_NAME}"; git push; }

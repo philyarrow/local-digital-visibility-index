@@ -22,6 +22,11 @@
 const CRUX_ENDPOINT = 'https://chromeuxreport.googleapis.com/v1/records:queryRecord';
 const CH_API = 'https://api.company-information.service.gov.uk';
 
+/* The callback must consume the body INSIDE the timeout. Returning the
+   Response and reading .json() afterwards disarmed the abort at headers, so a
+   server that sent headers and then stalled hung collectBusiness forever — and
+   with it the whole matrix job, burning its 330-minute budget and losing the
+   run's DataForSEO spend. */
 async function withTimeout(fn, ms) {
 	const ctrl = new AbortController();
 	const t = setTimeout(() => ctrl.abort(), ms);
@@ -51,21 +56,23 @@ export async function collectCrux(url, { key = process.env.PAGESPEED_API_KEY, fo
 	try { origin = new URL(url).origin; } catch { out.error = 'invalid URL'; return out; }
 
 	try {
-		const res = await withTimeout((signal) => fetch(`${CRUX_ENDPOINT}?key=${encodeURIComponent(key)}`, {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ origin, formFactor }),
-			signal,
-		}), 20000);
+		const res = await withTimeout(async (signal) => {
+			const r = await fetch(`${CRUX_ENDPOINT}?key=${encodeURIComponent(key)}`, {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ origin, formFactor }),
+				signal,
+			});
+			return { status: r.status, ok: r.ok, text: await r.text() };
+		}, 20000);
 
 		if (res.status === 404) { out.available = false; return out; } // origin below CrUX threshold
 		if (!res.ok) {
-			const body = await res.text().catch(() => '');
-			out.error = `CrUX HTTP ${res.status}${/blocked/i.test(body) ? ' (API not enabled on this key)' : ''}`;
+			out.error = `CrUX HTTP ${res.status}${/blocked/i.test(res.text) ? ' (API not enabled on this key)' : ''}`;
 			return out;
 		}
 
-		const m = (await res.json())?.record?.metrics || {};
+		const m = JSON.parse(res.text)?.record?.metrics || {};
 		const p75 = (k) => {
 			const v = m[k]?.percentiles?.p75;
 			return v === undefined ? null : Number(v);
@@ -107,7 +114,7 @@ function normaliseCo(s) {
 		.trim();
 }
 
-export async function collectCompaniesHouse(name, { key = process.env.COMPANIES_HOUSE_KEY, postcode = null } = {}) {
+export async function collectCompaniesHouse(name, { key = process.env.COMPANIES_HOUSE_KEY, postcode = null, town = null } = {}) {
 	const out = {
 		source: 'Companies House public register',
 		matched: null,
@@ -118,6 +125,7 @@ export async function collectCompaniesHouse(name, { key = process.env.COMPANIES_
 		ageYears: null,
 		sicCodes: null,
 		matchConfidence: null,
+		registeredAddress: null,
 		error: null,
 	};
 	if (!key) { out.error = 'no API key'; return out; }
@@ -125,19 +133,51 @@ export async function collectCompaniesHouse(name, { key = process.env.COMPANIES_
 
 	try {
 		const q = encodeURIComponent(postcode ? `${name} ${postcode}` : name);
-		const res = await withTimeout((signal) => fetch(`${CH_API}/search/companies?q=${q}&items_per_page=20`, {
-			headers: { Authorization: chAuth(key) },
-			signal,
-		}), 20000);
+		const res = await withTimeout(async (signal) => {
+			const r = await fetch(`${CH_API}/search/companies?q=${q}&items_per_page=20`, {
+				headers: { Authorization: chAuth(key) },
+				signal,
+			});
+			return { ok: r.ok, status: r.status, text: await r.text() };
+		}, 20000);
 		if (!res.ok) { out.error = `Companies House HTTP ${res.status}`; return out; }
 
-		const items = (await res.json())?.items || [];
+		const items = JSON.parse(res.text)?.items || [];
 		const want = normaliseCo(name);
-		const hit = items.find((i) => i.company_status === 'active' && normaliseCo(i.title) === want);
-		if (!hit) { out.matched = false; return out; }
+		const hits = items.filter((i) => i.company_status === 'active' && normaliseCo(i.title) === want);
+
+		if (!hits.length) { out.matched = false; return out; }
+
+		/* AMBIGUITY IS A NON-MATCH. normaliseCo strips Ltd/LLP/PLC, so a short
+		   trading name — "Ocean", "Bell", "The Grange" — collides with unrelated
+		   active companies. Taking the first would publish a stranger's company
+		   number, age and SIC on a firm's page under a confident-sounding label.
+		   Recording no match is the honest answer; the pillar excludes it. */
+		if (hits.length > 1) {
+			out.matched = false;
+			out.error = `ambiguous: ${hits.length} active companies share this normalised name`;
+			return out;
+		}
+		const hit = hits[0];
+		if (!hit.company_number) { out.matched = false; out.error = 'no company number on the match'; return out; }
+
+		/* Unique is not the same as correct. Exactly one active company may
+		   normalise to "Ocean" and still be a haulier in Hull rather than the
+		   estate agent we are measuring. When the index tells us the town, the
+		   registered address must corroborate it; without that corroboration
+		   the match is recorded at lower confidence so nothing downstream can
+		   present it as verified. */
+		const snippet = String(hit.address_snippet || '').toLowerCase();
+		const townOk = town ? snippet.includes(String(town).toLowerCase()) : null;
+		if (town && !townOk) {
+			out.matched = false;
+			out.error = `registered address does not mention ${town}`;
+			return out;
+		}
 
 		out.matched = true;
-		out.matchConfidence = 'exact-normalised-name';
+		out.matchConfidence = townOk ? 'unique-name-and-town' : 'unique-name-only';
+		out.registeredAddress = hit.address_snippet || null;
 		out.companyNumber = hit.company_number || null;
 		out.companyName = hit.title || null;
 		out.companyStatus = hit.company_status || null;
@@ -148,12 +188,15 @@ export async function collectCompaniesHouse(name, { key = process.env.COMPANIES_
 		}
 
 		if (out.companyNumber) {
-			const p = await withTimeout((signal) => fetch(`${CH_API}/company/${out.companyNumber}`, {
-				headers: { Authorization: chAuth(key) },
-				signal,
-			}), 20000);
+			const p = await withTimeout(async (signal) => {
+				const r = await fetch(`${CH_API}/company/${out.companyNumber}`, {
+					headers: { Authorization: chAuth(key) },
+					signal,
+				});
+				return { ok: r.ok, text: await r.text() };
+			}, 20000);
 			if (p.ok) {
-				const prof = await p.json();
+				const prof = JSON.parse(p.text);
 				out.sicCodes = prof?.sic_codes || null;
 				out.companyStatus = prof?.company_status || out.companyStatus;
 			}
