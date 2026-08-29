@@ -77,7 +77,9 @@ function scoreTechnical(p) {
 	return clamp100(Math.round((passed / known.length) * 100));
 }
 
-/* Local presence — STUB until Places/GBP wired. */
+/* Local presence — live. Google Business Profile completeness, review volume
+   and recency, NAP consistency and local-pack coverage, from DataForSEO's
+   business_data endpoints. */
 function scoreLocal(p) {
 	if (!p || p.stub) return null;
 	// Reference scoring (used once real data lands). Kept here so wiring the
@@ -92,7 +94,8 @@ function scoreLocal(p) {
 	return clamp100(Math.round(parts.reduce((a, b) => a + b, 0) / parts.length));
 }
 
-/* Visibility — STUB until SERP source wired. */
+/* Visibility — live. Ranked share of the sector keyword basket, weighted by
+   average position, with a local-pack bonus. SERP data from DataForSEO. */
 function scoreVisibility(p) {
 	if (!p || p.stub) return null;
 	if (typeof p.rankedKeywords !== 'number' || typeof p.basketSize !== 'number' || !p.basketSize) return null;
@@ -103,7 +106,8 @@ function scoreVisibility(p) {
 	return clamp100(Math.round(coverage * 0.5 + posBonus + packBonus));
 }
 
-/* AI search presence — STUB until AI-engine querying wired. */
+/* AI search presence — live. Share of the sector's AI prompts in which the
+   business is named, from ai_optimization llm_responses. */
 function scoreAi(p) {
 	if (!p || p.stub) return null;
 	if (typeof p.citedQueryCount !== 'number' || typeof p.basketSize !== 'number' || !p.basketSize) return null;
