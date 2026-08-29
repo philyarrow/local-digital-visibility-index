@@ -52,6 +52,10 @@ const NATIONAL_CHAIN = [
 	'greeneking-pubs.co.uk', 'marstons.co.uk', 'harvester.co.uk', 'millerandcarter.co.uk',
 	'beefeater.co.uk', 'brewersfayre.co.uk', 'premierinn.com', 'mcdonalds.com', 'kfc.co.uk',
 	'subway.com', 'costa.co.uk', 'starbucks.co.uk', 'greggs.co.uk', 'wetherspoon.co.uk',
+	// hotel groups: a branch restaurant lives on the group's site, and the
+	// Gloucester sweep pulled in a Cheltenham Ramada through exactly this
+	'wyndhamhotels.com', 'ihg.com', 'accor.com', 'hilton.com', 'marriott.com',
+	'travelodge.co.uk', 'britanniahotels.com', 'bestwestern.co.uk',
 	// national housebuilders
 	'redrow.co.uk', 'barratthomes.co.uk', 'bloorhomes.com', 'persimmonhomes.com',
 	'taylorwimpey.co.uk', 'bellway.co.uk', 'davidwilsonhomes.co.uk', 'cala.co.uk',

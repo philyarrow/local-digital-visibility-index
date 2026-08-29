@@ -26,33 +26,33 @@
   },
   "pillarCoverage": {
     "speed": {
-      "scored": 42,
-      "total": 47,
+      "scored": 41,
+      "total": 44,
       "live": true
     },
     "technical": {
-      "scored": 47,
-      "total": 47,
+      "scored": 44,
+      "total": 44,
       "live": true
     },
     "local": {
-      "scored": 47,
-      "total": 47,
+      "scored": 44,
+      "total": 44,
       "live": true
     },
     "visibility": {
-      "scored": 47,
-      "total": 47,
+      "scored": 44,
+      "total": 44,
       "live": true
     },
     "ai": {
-      "scored": 47,
-      "total": 47,
+      "scored": 44,
+      "total": 44,
       "live": true
     },
     "content": {
-      "scored": 40,
-      "total": 47,
+      "scored": 38,
+      "total": 44,
       "live": true
     }
   },
@@ -60,12 +60,12 @@
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
-    "speed": 68.5,
+    "speed": 69,
     "technical": 75,
     "local": 76,
     "visibility": 0,
     "ai": 0,
-    "content": 33
+    "content": 16.5
   },
   "businesses": [
     {
@@ -1950,110 +1950,6 @@
     },
     {
       "rank": 19,
-      "name": "Ramada by Wyndham Cheltenham",
-      "url": "https://www.wyndhamhotels.com/en-uk/ramada/cheltenham-united-kingdom/ramada-cheltenham/overview",
-      "digitalVisibilityScore": 48,
-      "pillarScores": {
-        "speed": null,
-        "technical": 88,
-        "local": 72,
-        "visibility": 0,
-        "ai": 0,
-        "content": 67
-      },
-      "includedPillars": [
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [
-        "speed"
-      ],
-      "effectiveWeights": {
-        "speed": 0,
-        "technical": 25,
-        "local": 25,
-        "visibility": 18.75,
-        "ai": 18.75,
-        "content": 12.5
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.wyndhamhotels.com/en-uk/ramada/cheltenham-united-kingdom/ramada-cheltenham/overview",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 2226,
-          "internalLinks": 5317,
-          "avgInternalLinksPerPage": 212.7,
-          "maxDepthReached": 1,
-          "genericAnchors": 108,
-          "genericAnchorRatio": 0.02,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": 2,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 4140,
-          "inpMs": 426,
-          "cls": 0.24,
-          "lcpGood": false,
-          "inpGood": false,
-          "clsGood": false,
-          "passesCwv": false,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": null,
-          "fhrsId": null,
-          "businessName": null,
-          "businessType": null,
-          "ratingValue": null,
-          "ratingNumeric": null,
-          "ratingDate": null,
-          "postcode": null,
-          "localAuthority": null,
-          "distanceKm": null,
-          "locatedBy": null,
-          "scores": null,
-          "error": "FSA HTTP 403"
-        }
-      }
-    },
-    {
-      "rank": 20,
       "name": "Roots + Seeds Cafe Kitchen Gloucester Food Docks",
       "url": "https://www.rootsandseedskitchengarden.co.uk/",
       "digitalVisibilityScore": 48,
@@ -2156,7 +2052,7 @@
       }
     },
     {
-      "rank": 21,
+      "rank": 20,
       "name": "Côte Gloucester",
       "url": "https://www.cote.co.uk/restaurant/gloucester/?utm_source=google&utm_medium=organic&utm_campaign=Google+My+Business?utm_source=extnet&utm_medium=yext",
       "digitalVisibilityScore": 47,
@@ -2259,7 +2155,7 @@
       }
     },
     {
-      "rank": 22,
+      "rank": 21,
       "name": "Fly Wingz",
       "url": "https://flywingz.co.uk/",
       "digitalVisibilityScore": 47,
@@ -2366,110 +2262,7 @@
       }
     },
     {
-      "rank": 23,
-      "name": "The Restaurant At The Cheltenham Chase Hotel",
-      "url": "https://www.thecheltenhamchase.co.uk/dining/",
-      "digitalVisibilityScore": 47,
-      "pillarScores": {
-        "speed": 65,
-        "technical": 75,
-        "local": 59,
-        "visibility": 0,
-        "ai": 0,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.thecheltenhamchase.co.uk/dining/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 109,
-          "internalLinks": 2439,
-          "avgInternalLinksPerPage": 97.6,
-          "maxDepthReached": 1,
-          "genericAnchors": 68,
-          "genericAnchorRatio": 0.028,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": 1,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 1139,
-          "inpMs": 201,
-          "cls": 0.02,
-          "lcpGood": true,
-          "inpGood": false,
-          "clsGood": true,
-          "passesCwv": false,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": null,
-          "fhrsId": null,
-          "businessName": null,
-          "businessType": null,
-          "ratingValue": null,
-          "ratingNumeric": null,
-          "ratingDate": null,
-          "postcode": null,
-          "localAuthority": null,
-          "distanceKm": null,
-          "locatedBy": null,
-          "scores": null,
-          "error": "FSA HTTP 403"
-        }
-      }
-    },
-    {
-      "rank": 24,
+      "rank": 22,
       "name": "Bombay Mix",
       "url": "https://bombaymixtuffley.co.uk/",
       "digitalVisibilityScore": 46,
@@ -2576,7 +2369,7 @@
       }
     },
     {
-      "rank": 25,
+      "rank": 23,
       "name": "Chuck Burgers",
       "url": "https://www.chuckburgerbar.com/",
       "digitalVisibilityScore": 46,
@@ -2685,7 +2478,7 @@
       }
     },
     {
-      "rank": 26,
+      "rank": 24,
       "name": "Indian Memories",
       "url": "http://www.indianmemories.co.uk/",
       "digitalVisibilityScore": 46,
@@ -2790,7 +2583,7 @@
       }
     },
     {
-      "rank": 27,
+      "rank": 25,
       "name": "GO SPICE",
       "url": "https://gospice.co.uk/",
       "digitalVisibilityScore": 45,
@@ -2897,7 +2690,7 @@
       }
     },
     {
-      "rank": 28,
+      "rank": 26,
       "name": "Golden City",
       "url": "http://www.goldencitychurchdown.co.uk/",
       "digitalVisibilityScore": 45,
@@ -3004,7 +2797,7 @@
       }
     },
     {
-      "rank": 29,
+      "rank": 27,
       "name": "Tara",
       "url": "https://hatton-court.co.uk/eating-drinking-restaurants-gloucester-cotswolds/",
       "digitalVisibilityScore": 45,
@@ -3107,7 +2900,7 @@
       }
     },
     {
-      "rank": 30,
+      "rank": 28,
       "name": "Brimble's Cafe",
       "url": "http://www.brimblescafe.co.uk/",
       "digitalVisibilityScore": 44,
@@ -3210,7 +3003,7 @@
       }
     },
     {
-      "rank": 31,
+      "rank": 29,
       "name": "Seymour Fryer",
       "url": "https://seymourfryer.co.uk/",
       "digitalVisibilityScore": 44,
@@ -3313,7 +3106,7 @@
       }
     },
     {
-      "rank": 32,
+      "rank": 30,
       "name": "The Old Elm Inn",
       "url": "http://www.theoldelminn.co.uk/",
       "digitalVisibilityScore": 44,
@@ -3416,7 +3209,7 @@
       }
     },
     {
-      "rank": 33,
+      "rank": 31,
       "name": "Friar Tucks",
       "url": "http://www.thefriartucks.co.uk/",
       "digitalVisibilityScore": 43,
@@ -3519,7 +3312,7 @@
       }
     },
     {
-      "rank": 34,
+      "rank": 32,
       "name": "Nineteen at Brickhampton",
       "url": "https://www.brickhampton.co.uk/nineteenatbrickhampton",
       "digitalVisibilityScore": 43,
@@ -3622,7 +3415,7 @@
       }
     },
     {
-      "rank": 35,
+      "rank": 33,
       "name": "The Victoria Hotel",
       "url": "http://www.victoriainnhucclecote.co.uk/",
       "digitalVisibilityScore": 43,
@@ -3725,7 +3518,7 @@
       }
     },
     {
-      "rank": 36,
+      "rank": 34,
       "name": "Coney Hill Fish & Chips",
       "url": "http://coneyhillfishandchips.co.uk/",
       "digitalVisibilityScore": 42,
@@ -3828,7 +3621,7 @@
       }
     },
     {
-      "rank": 37,
+      "rank": 35,
       "name": "Spice Master",
       "url": "https://thespicemaster.co.uk/",
       "digitalVisibilityScore": 42,
@@ -3931,7 +3724,7 @@
       }
     },
     {
-      "rank": 38,
+      "rank": 36,
       "name": "Banchina Italian",
       "url": "https://banchina.co.uk/",
       "digitalVisibilityScore": 41,
@@ -4038,7 +3831,7 @@
       }
     },
     {
-      "rank": 39,
+      "rank": 37,
       "name": "Khans Kebabs & Grill",
       "url": "https://khanskebab.co.uk/",
       "digitalVisibilityScore": 41,
@@ -4141,7 +3934,7 @@
       }
     },
     {
-      "rank": 40,
+      "rank": 38,
       "name": "Moft Caffe",
       "url": "http://www.moftcaffe.com/",
       "digitalVisibilityScore": 40,
@@ -4245,7 +4038,7 @@
       }
     },
     {
-      "rank": 41,
+      "rank": 39,
       "name": "NepaleseChef",
       "url": "http://www.nepalesechef.co.uk/",
       "digitalVisibilityScore": 40,
@@ -4348,7 +4141,7 @@
       }
     },
     {
-      "rank": 42,
+      "rank": 40,
       "name": "Olympian Bites",
       "url": "http://olympianbites.co.uk/",
       "digitalVisibilityScore": 39,
@@ -4452,7 +4245,7 @@
       }
     },
     {
-      "rank": 43,
+      "rank": 41,
       "name": "Saeeds",
       "url": "https://www.saeedbaltihouse.co.uk/",
       "digitalVisibilityScore": 31,
@@ -4556,111 +4349,7 @@
       }
     },
     {
-      "rank": 44,
-      "name": "SIGNATURE GRILL HOUSE",
-      "url": "https://www.ramadacheltenham.com/restaurant/",
-      "digitalVisibilityScore": 23,
-      "pillarScores": {
-        "speed": null,
-        "technical": 0,
-        "local": 79,
-        "visibility": 0,
-        "ai": 0,
-        "content": null
-      },
-      "includedPillars": [
-        "technical",
-        "local",
-        "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
-        "speed",
-        "content"
-      ],
-      "effectiveWeights": {
-        "speed": 0,
-        "technical": 28.57,
-        "local": 28.57,
-        "visibility": 21.43,
-        "ai": 21.43,
-        "content": 0
-      },
-      "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.ramadacheltenham.com/restaurant/",
-          "pagesCrawled": 0,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": null,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": "fetch failed"
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": null,
-          "fhrsId": null,
-          "businessName": null,
-          "businessType": null,
-          "ratingValue": null,
-          "ratingNumeric": null,
-          "ratingDate": null,
-          "postcode": null,
-          "localAuthority": null,
-          "distanceKm": null,
-          "locatedBy": null,
-          "scores": null,
-          "error": "FSA HTTP 403"
-        }
-      }
-    },
-    {
-      "rank": 45,
+      "rank": 42,
       "name": "Dough from dough (events only)",
       "url": "http://www.doughfromdough.com/",
       "digitalVisibilityScore": 22,
@@ -4764,7 +4453,7 @@
       }
     },
     {
-      "rank": 46,
+      "rank": 43,
       "name": "TANK",
       "url": "http://www.tankgloucester.co.uk/",
       "digitalVisibilityScore": 21,
@@ -4868,7 +4557,7 @@
       }
     },
     {
-      "rank": 47,
+      "rank": 44,
       "name": "Tim Hortons - Gloucester",
       "url": "https://www.timhortons.co.uk/",
       "digitalVisibilityScore": 21,
