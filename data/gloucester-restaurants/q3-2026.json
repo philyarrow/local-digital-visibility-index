@@ -51,12 +51,12 @@
       "live": true
     },
     "content": {
-      "scored": 39,
+      "scored": 40,
       "total": 47,
       "live": true
     }
   },
-  "overallMedian": 47,
+  "overallMedian": 46,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
@@ -1320,114 +1320,6 @@
     },
     {
       "rank": 13,
-      "name": "Bombay Mix",
-      "url": "https://bombaymixtuffley.co.uk/",
-      "digitalVisibilityScore": 51,
-      "pillarScores": {
-        "speed": 100,
-        "technical": 57,
-        "local": 74,
-        "visibility": 0,
-        "ai": 0,
-        "content": null
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
-        "content"
-      ],
-      "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
-      },
-      "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://bombaymixtuffley.co.uk/",
-          "pagesCrawled": 0,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": null,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": "homepage HTTP 403"
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": true,
-          "fhrsId": 25791,
-          "businessName": "Bombay Mix",
-          "businessType": "Restaurant/Cafe/Canteen",
-          "ratingValue": "5",
-          "ratingNumeric": 5,
-          "ratingDate": "2025-07-22",
-          "postcode": "GL4 0QU",
-          "localAuthority": "Gloucester City",
-          "distanceKm": 4,
-          "locatedBy": "distance",
-          "scores": {
-            "hygiene": 5,
-            "structural": 5,
-            "confidenceInManagement": 5
-          },
-          "error": null
-        }
-      }
-    },
-    {
-      "rank": 14,
       "name": "Pepe's",
       "url": "https://pepes.co.uk/pepes-piri-piri-stores/#!/l/gloucester/144-eastgate-street/4609439",
       "digitalVisibilityScore": 51,
@@ -1530,7 +1422,7 @@
       }
     },
     {
-      "rank": 15,
+      "rank": 14,
       "name": "Café René",
       "url": "http://www.caferene.co.uk/",
       "digitalVisibilityScore": 50,
@@ -1637,7 +1529,7 @@
       }
     },
     {
-      "rank": 16,
+      "rank": 15,
       "name": "The New Dawn Inn",
       "url": "http://newdawninn.co.uk/",
       "digitalVisibilityScore": 50,
@@ -1740,7 +1632,7 @@
       }
     },
     {
-      "rank": 17,
+      "rank": 16,
       "name": "Farmhouse Deli",
       "url": "http://www.farmhousedeli.co.uk/",
       "digitalVisibilityScore": 49,
@@ -1847,7 +1739,7 @@
       }
     },
     {
-      "rank": 18,
+      "rank": 17,
       "name": "Royal Oak",
       "url": "https://www.hungryhorse.co.uk/pubs/gloucestershire/royal-oak?utm_source=g_places&utm_medium=locations&utm_campaign=HH_pubpage",
       "digitalVisibilityScore": 49,
@@ -1950,7 +1842,7 @@
       }
     },
     {
-      "rank": 19,
+      "rank": 18,
       "name": "Hare & Hounds",
       "url": "https://www.greeneking.co.uk/pubs/gloucestershire/hare-and-hounds?utm_source=g_places&utm_medium=locations&utm_campaign=PL_pubpage",
       "digitalVisibilityScore": 48,
@@ -2057,7 +1949,7 @@
       }
     },
     {
-      "rank": 20,
+      "rank": 19,
       "name": "Ramada by Wyndham Cheltenham",
       "url": "https://www.wyndhamhotels.com/en-uk/ramada/cheltenham-united-kingdom/ramada-cheltenham/overview",
       "digitalVisibilityScore": 48,
@@ -2161,7 +2053,7 @@
       }
     },
     {
-      "rank": 21,
+      "rank": 20,
       "name": "Roots + Seeds Cafe Kitchen Gloucester Food Docks",
       "url": "https://www.rootsandseedskitchengarden.co.uk/",
       "digitalVisibilityScore": 48,
@@ -2264,7 +2156,7 @@
       }
     },
     {
-      "rank": 22,
+      "rank": 21,
       "name": "Côte Gloucester",
       "url": "https://www.cote.co.uk/restaurant/gloucester/?utm_source=google&utm_medium=organic&utm_campaign=Google+My+Business?utm_source=extnet&utm_medium=yext",
       "digitalVisibilityScore": 47,
@@ -2367,7 +2259,7 @@
       }
     },
     {
-      "rank": 23,
+      "rank": 22,
       "name": "Fly Wingz",
       "url": "https://flywingz.co.uk/",
       "digitalVisibilityScore": 47,
@@ -2474,7 +2366,7 @@
       }
     },
     {
-      "rank": 24,
+      "rank": 23,
       "name": "The Restaurant At The Cheltenham Chase Hotel",
       "url": "https://www.thecheltenhamchase.co.uk/dining/",
       "digitalVisibilityScore": 47,
@@ -2573,6 +2465,113 @@
           "locatedBy": null,
           "scores": null,
           "error": "FSA HTTP 403"
+        }
+      }
+    },
+    {
+      "rank": 24,
+      "name": "Bombay Mix",
+      "url": "https://bombaymixtuffley.co.uk/",
+      "digitalVisibilityScore": 46,
+      "pillarScores": {
+        "speed": 100,
+        "technical": 57,
+        "local": 74,
+        "visibility": 0,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://bombaymixtuffley.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": true,
+          "fhrsId": 25791,
+          "businessName": "Bombay Mix",
+          "businessType": "Restaurant/Cafe/Canteen",
+          "ratingValue": "5",
+          "ratingNumeric": 5,
+          "ratingDate": "2025-07-22",
+          "postcode": "GL4 0QU",
+          "localAuthority": "Gloucester City",
+          "distanceKm": 4,
+          "locatedBy": "distance",
+          "scores": {
+            "hygiene": 5,
+            "structural": 5,
+            "confidenceInManagement": 5
+          },
+          "error": null
         }
       }
     },

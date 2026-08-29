@@ -44,7 +44,7 @@
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { join, dirname, isAbsolute, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import {
 	parseSeed,
 	slugify,
@@ -248,7 +248,10 @@ function safeOrigin(u) {
 /* Pillar 6 — Content & trust (indexed-count still stubbed)                    */
 /* -------------------------------------------------------------------------- */
 
-async function collectContent(url, sectorCfg) {
+/* Exported so a correction can re-run this one check without re-collecting
+   everything. Re-measuring all six pillars to fix one signal would mix the fix
+   with genuine drift and make the change unattributable. */
+export async function collectContent(url, sectorCfg) {
 	const out = {
 		source: 'Live homepage parse (links) + STUB indexed-count',
 		hasAboutLink: null,
@@ -1099,7 +1102,12 @@ async function main() {
 	console.log('\nNext: node score.mjs ' + indexSlug);
 }
 
-main().catch((e) => {
-	console.error(e);
-	process.exit(1);
-});
+/* Only run when executed directly. collectContent is imported by
+   backfill-content.mjs, and an unguarded call here made that import run a whole
+   collection and exit with a usage message. */
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+	main().catch((e) => {
+		console.error(e);
+		process.exit(1);
+	});
+}

@@ -551,43 +551,6 @@
     },
     {
       "rank": 14,
-      "name": "Goodman & Lilley",
-      "url": "https://goodmanlilley.co.uk/",
-      "digitalVisibilityScore": 51,
-      "pillarScores": {
-        "speed": 78,
-        "technical": 50,
-        "local": 79,
-        "visibility": 21,
-        "ai": 0,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true
-      },
-      "context": null
-    },
-    {
-      "rank": 15,
       "name": "Hydes of Bristol",
       "url": "https://www.hydes.co.uk/",
       "digitalVisibilityScore": 49,
@@ -619,6 +582,43 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 15,
+      "name": "Goodman & Lilley",
+      "url": "https://goodmanlilley.co.uk/",
+      "digitalVisibilityScore": 45,
+      "pillarScores": {
+        "speed": 78,
+        "technical": 50,
+        "local": 79,
+        "visibility": 21,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
         "hasCredentialsLink": false
       },
       "context": null

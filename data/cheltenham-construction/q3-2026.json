@@ -72,14 +72,14 @@
       "rank": 1,
       "name": "The Little Conservatory Company LTD",
       "url": "https://www.littleconservatorycompany.co.uk/?utm_source=Google+My+Business&utm_campaign=Google+My+Business",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 65,
       "pillarScores": {
         "speed": 75,
         "technical": 100,
         "local": 77,
         "visibility": 31,
         "ai": 0,
-        "content": 67
+        "content": 100
       },
       "includedPillars": [
         "speed",
@@ -101,7 +101,7 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": false
+        "hasCredentialsLink": true
       },
       "context": {
         "crawl": {
@@ -338,14 +338,14 @@
       "rank": 4,
       "name": "DP Carpentry and Building Ltd",
       "url": "https://www.dpcarpentryandbuilding.co.uk/",
-      "digitalVisibilityScore": 54,
+      "digitalVisibilityScore": 57,
       "pillarScores": {
         "speed": 67,
         "technical": 100,
         "local": 73,
         "visibility": 17,
         "ai": 0,
-        "content": 33
+        "content": 67
       },
       "includedPillars": [
         "speed",
@@ -367,7 +367,7 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
-        "hasCredentialsLink": false
+        "hasCredentialsLink": true
       },
       "context": {
         "crawl": {
@@ -426,6 +426,182 @@
     },
     {
       "rank": 5,
+      "name": "BRG Technologies",
+      "url": "https://brgtech.com/",
+      "digitalVisibilityScore": 54,
+      "pillarScores": {
+        "speed": 67,
+        "technical": 100,
+        "local": 68,
+        "visibility": 0,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://brgtech.com/",
+          "pagesCrawled": 8,
+          "pagesDiscovered": 22,
+          "internalLinks": 290,
+          "avgInternalLinksPerPage": 36.3,
+          "maxDepthReached": 1,
+          "genericAnchors": 17,
+          "genericAnchorRatio": 0.059,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "time budget",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "07632025",
+          "companyName": "BRG TECHNOLOGIES LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2011-05-12",
+          "ageYears": 15.3,
+          "sicCodes": [
+            "70100"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Technology House Herrick Close, Staverton Technology Park, Cheltenham, England, GL51 6TQ",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "name": "ITS Cheltenham",
+      "url": "http://itsconstruction.co.uk/",
+      "digitalVisibilityScore": 54,
+      "pillarScores": {
+        "speed": 63,
+        "technical": 100,
+        "local": 71,
+        "visibility": 0,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://itsconstruction.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 94,
+          "avgInternalLinksPerPage": 94,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Cheltenham"
+        }
+      }
+    },
+    {
+      "rank": 7,
       "name": "Leckhampton Builders Ltd",
       "url": "http://www.leckhamptonbuilders.com/",
       "digitalVisibilityScore": 52,
@@ -514,7 +690,94 @@
       }
     },
     {
-      "rank": 6,
+      "rank": 8,
+      "name": "Perks Building Contractors Ltd",
+      "url": "http://www.perksbuilders.co.uk/",
+      "digitalVisibilityScore": 52,
+      "pillarScores": {
+        "speed": 61,
+        "technical": 100,
+        "local": 50,
+        "visibility": 21,
+        "ai": 20,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.perksbuilders.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 47,
+          "avgInternalLinksPerPage": 47,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 11,
+          "sitemapUrls": 12,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Cheltenham"
+        }
+      }
+    },
+    {
+      "rank": 9,
       "name": "KFM Construction",
       "url": "https://kfmconstruction.co.uk/",
       "digitalVisibilityScore": 51,
@@ -602,183 +865,7 @@
       }
     },
     {
-      "rank": 7,
-      "name": "BRG Technologies",
-      "url": "https://brgtech.com/",
-      "digitalVisibilityScore": 50,
-      "pillarScores": {
-        "speed": 67,
-        "technical": 100,
-        "local": 68,
-        "visibility": 0,
-        "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://brgtech.com/",
-          "pagesCrawled": 8,
-          "pagesDiscovered": 22,
-          "internalLinks": 290,
-          "avgInternalLinksPerPage": 36.3,
-          "maxDepthReached": 1,
-          "genericAnchors": 17,
-          "genericAnchorRatio": 0.059,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "time budget",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "07632025",
-          "companyName": "BRG TECHNOLOGIES LIMITED",
-          "companyStatus": "active",
-          "incorporatedOn": "2011-05-12",
-          "ageYears": 15.3,
-          "sicCodes": [
-            "70100"
-          ],
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "Technology House Herrick Close, Staverton Technology Park, Cheltenham, England, GL51 6TQ",
-          "error": null
-        }
-      }
-    },
-    {
-      "rank": 8,
-      "name": "ITS Cheltenham",
-      "url": "http://itsconstruction.co.uk/",
-      "digitalVisibilityScore": 50,
-      "pillarScores": {
-        "speed": 63,
-        "technical": 100,
-        "local": 71,
-        "visibility": 0,
-        "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://itsconstruction.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 94,
-          "avgInternalLinksPerPage": 94,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Cheltenham"
-        }
-      }
-    },
-    {
-      "rank": 9,
+      "rank": 10,
       "name": "Eleven Builders Ltd",
       "url": "http://elevenbuilders.co.uk/",
       "digitalVisibilityScore": 49,
@@ -865,7 +952,7 @@
       }
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Newland Homes Ltd",
       "url": "http://www.newlandhomes.co.uk/",
       "digitalVisibilityScore": 49,
@@ -952,7 +1039,7 @@
       }
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Old Yard",
       "url": "https://www.kingsleyevans.co.uk/wp-content/uploads/2023/09/brochure-4037-1.pdf",
       "digitalVisibilityScore": 48,
@@ -1022,93 +1109,6 @@
           "inpGood": true,
           "clsGood": true,
           "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Cheltenham"
-        }
-      }
-    },
-    {
-      "rank": 12,
-      "name": "Perks Building Contractors Ltd",
-      "url": "http://www.perksbuilders.co.uk/",
-      "digitalVisibilityScore": 48,
-      "pillarScores": {
-        "speed": 61,
-        "technical": 100,
-        "local": 50,
-        "visibility": 21,
-        "ai": 20,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.perksbuilders.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 47,
-          "avgInternalLinksPerPage": 47,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": null,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": 11,
-          "sitemapUrls": 12,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
           "error": null
         },
         "companies": {
@@ -2704,6 +2704,93 @@
     },
     {
       "rank": 31,
+      "name": "Regency Contracting Cheltenham Ltd",
+      "url": "http://www.regencycontracting.co.uk/",
+      "digitalVisibilityScore": 39,
+      "pillarScores": {
+        "speed": 27,
+        "technical": 88,
+        "local": 50,
+        "visibility": 17,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.regencycontracting.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 43,
+          "avgInternalLinksPerPage": 43,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Cheltenham"
+        }
+      }
+    },
+    {
+      "rank": 32,
       "name": "A P P",
       "url": "http://appgeneralbuilding.co.uk/",
       "digitalVisibilityScore": 38,
@@ -2790,7 +2877,7 @@
       }
     },
     {
-      "rank": 32,
+      "rank": 33,
       "name": "BKS Bathroom and Kitchen Specialists",
       "url": "http://www.bksdesigns.co.uk/",
       "digitalVisibilityScore": 38,
@@ -2877,7 +2964,7 @@
       }
     },
     {
-      "rank": 33,
+      "rank": 34,
       "name": "Tom Hazzledine",
       "url": "http://www.tomhazzledine.co.uk/",
       "digitalVisibilityScore": 38,
@@ -2964,7 +3051,7 @@
       }
     },
     {
-      "rank": 34,
+      "rank": 35,
       "name": "EMG Construction",
       "url": "http://www.emg-construction.co.uk/",
       "digitalVisibilityScore": 37,
@@ -3009,93 +3096,6 @@
           "maxDepthReached": 0,
           "genericAnchors": 6,
           "genericAnchorRatio": 0.429,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": null,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Cheltenham"
-        }
-      }
-    },
-    {
-      "rank": 35,
-      "name": "Regency Contracting Cheltenham Ltd",
-      "url": "http://www.regencycontracting.co.uk/",
-      "digitalVisibilityScore": 36,
-      "pillarScores": {
-        "speed": 27,
-        "technical": 88,
-        "local": 50,
-        "visibility": 17,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.regencycontracting.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 43,
-          "avgInternalLinksPerPage": 43,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
           "keyPageDepth": {
             "contact": 1,
             "about": null,

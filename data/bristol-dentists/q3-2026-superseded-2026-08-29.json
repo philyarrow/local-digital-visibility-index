@@ -1,12 +1,12 @@
 {
-  "index": "exeter-solicitors",
-  "title": "PYC Exeter Solicitor Digital Visibility Index",
-  "town": "Exeter",
-  "sector": "solicitors",
-  "sectorLabel": "solicitors",
+  "index": "bristol-dentists",
+  "title": "PYC Bristol Dentist Digital Visibility Index",
+  "town": "Bristol",
+  "sector": "dentists",
+  "sectorLabel": "dentists",
   "keywordsPerIndex": 12,
   "quarter": "Q3-2026",
-  "measuredAt": "2026-08-27T17:55:47.626Z",
+  "measuredAt": "2026-08-27T17:54:33.379Z",
   "methodology": "https://hub.pyc.agency/indices/methodology/",
   "license": {
     "name": "CC BY 4.0",
@@ -14,7 +14,7 @@
     "terms": "https://hub.pyc.agency/indices/licence/"
   },
   "attribution": "Phil Yarrow (PYC) — Local Digital Visibility Index. https://hub.pyc.agency/indices/",
-  "citation": "Phil Yarrow (PYC) — Local Digital Visibility Index: Exeter Solicitor, Q3-2026. https://hub.pyc.agency/indices/exeter-solicitors/",
+  "citation": "Phil Yarrow (PYC) — Local Digital Visibility Index: Bristol Dentist, Q3-2026. https://hub.pyc.agency/indices/bristol-dentists/",
   "attributionNote": "Reuse of ANY data from this index — a single figure, one dataset, several, or all of them — requires the `attribution` credit above, reproduced and linked. `citation` is the fuller form for quoting this particular dataset. Reuse is permitted commercially and in AI-generated answers on that condition.",
   "weights": {
     "speed": 20,
@@ -27,58 +27,58 @@
   "pillarCoverage": {
     "speed": {
       "scored": 8,
-      "total": 8,
+      "total": 9,
       "live": true
     },
     "technical": {
-      "scored": 8,
-      "total": 8,
+      "scored": 9,
+      "total": 9,
       "live": true
     },
     "local": {
-      "scored": 8,
-      "total": 8,
+      "scored": 9,
+      "total": 9,
       "live": true
     },
     "visibility": {
-      "scored": 8,
-      "total": 8,
+      "scored": 9,
+      "total": 9,
       "live": true
     },
     "ai": {
-      "scored": 8,
-      "total": 8,
+      "scored": 9,
+      "total": 9,
       "live": true
     },
     "content": {
-      "scored": 8,
-      "total": 8,
+      "scored": 9,
+      "total": 9,
       "live": true
     }
   },
-  "overallMedian": 72,
+  "overallMedian": 56,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
-    "speed": 71.5,
-    "technical": 100,
-    "local": 74.5,
-    "visibility": 42.5,
-    "ai": 50,
-    "content": 67
+    "speed": 58,
+    "technical": 88,
+    "local": 77,
+    "visibility": 29,
+    "ai": 0,
+    "content": 33
   },
   "businesses": [
     {
       "rank": 1,
-      "name": "Dunn & Baker",
-      "url": "https://www.dunnandbaker.co.uk/",
-      "digitalVisibilityScore": 80,
+      "name": "Clifton Dental Surgery",
+      "url": "https://cliftondentalsurgery.co.uk/",
+      "digitalVisibilityScore": 66,
       "pillarScores": {
-        "speed": 56,
-        "technical": 100,
-        "local": 77,
-        "visibility": 55,
-        "ai": 100,
+        "speed": 43,
+        "technical": 88,
+        "local": 69,
+        "visibility": 47,
+        "ai": 60,
         "content": 100
       },
       "includedPillars": [
@@ -107,162 +107,14 @@
     },
     {
       "rank": 2,
-      "name": "Amicus Law",
-      "url": "https://www.amicuslaw.co.uk/",
-      "digitalVisibilityScore": 75,
+      "name": "Redland Road Dental Practice",
+      "url": "https://redlanddental.co.uk/",
+      "digitalVisibilityScore": 60,
       "pillarScores": {
-        "speed": 73,
-        "technical": 100,
-        "local": 78,
+        "speed": 64,
+        "technical": 75,
+        "local": 80,
         "visibility": 46,
-        "ai": 100,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": null
-    },
-    {
-      "rank": 3,
-      "name": "Gilbert Stephens",
-      "url": "https://gilbertstephens.co.uk/",
-      "digitalVisibilityScore": 73,
-      "pillarScores": {
-        "speed": 77,
-        "technical": 100,
-        "local": 77,
-        "visibility": 60,
-        "ai": 40,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false
-      },
-      "context": null
-    },
-    {
-      "rank": 4,
-      "name": "Stephens Scown",
-      "url": "https://www.stephens-scown.co.uk/",
-      "digitalVisibilityScore": 73,
-      "pillarScores": {
-        "speed": 59,
-        "technical": 100,
-        "local": 78,
-        "visibility": 43,
-        "ai": 60,
-        "content": 100
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true
-      },
-      "context": null
-    },
-    {
-      "rank": 5,
-      "name": "Wollens",
-      "url": "https://wollens.co.uk/",
-      "digitalVisibilityScore": 71,
-      "pillarScores": {
-        "speed": 74,
-        "technical": 100,
-        "local": 72,
-        "visibility": 42,
-        "ai": 60,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true
-      },
-      "context": null
-    },
-    {
-      "rank": 6,
-      "name": "Setfords Exeter",
-      "url": "https://www.setfords.co.uk/locations/devon/solicitors-in-exeter/",
-      "digitalVisibilityScore": 66,
-      "pillarScores": {
-        "speed": 89,
-        "technical": 100,
-        "local": 65,
-        "visibility": 38,
         "ai": 20,
         "content": 67
       },
@@ -291,17 +143,17 @@
       "context": null
     },
     {
-      "rank": 7,
-      "name": "Porter Dodson",
-      "url": "https://www.porterdodson.co.uk/",
-      "digitalVisibilityScore": 62,
+      "rank": 3,
+      "name": "Clifton Down Dental Practice",
+      "url": "https://cliftondowndental.co.uk/",
+      "digitalVisibilityScore": 59,
       "pillarScores": {
-        "speed": 67,
-        "technical": 88,
-        "local": 61,
-        "visibility": 42,
-        "ai": 40,
-        "content": 67
+        "speed": 68,
+        "technical": 100,
+        "local": 76,
+        "visibility": 23,
+        "ai": 20,
+        "content": 33
       },
       "includedPillars": [
         "speed",
@@ -321,23 +173,23 @@
         "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
       },
       "context": null
     },
     {
-      "rank": 8,
-      "name": "WBW Solicitors",
-      "url": "https://www.wbw.co.uk/",
+      "rank": 4,
+      "name": "Bristol Dental Specialists",
+      "url": "https://bristoldentalspecialists.com/",
       "digitalVisibilityScore": 57,
       "pillarScores": {
-        "speed": 70,
-        "technical": 50,
-        "local": 72,
-        "visibility": 38,
-        "ai": 40,
+        "speed": 59,
+        "technical": 88,
+        "local": 80,
+        "visibility": 35,
+        "ai": 0,
         "content": 67
       },
       "includedPillars": [
@@ -360,6 +212,192 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 5,
+      "name": "Dental Touch",
+      "url": "https://www.dental-touch.co.uk/",
+      "digitalVisibilityScore": 56,
+      "pillarScores": {
+        "speed": 57,
+        "technical": 88,
+        "local": 79,
+        "visibility": 33,
+        "ai": 20,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 6,
+      "name": "Zetland Road Dental Practice",
+      "url": "https://www.zetlanddental.co.uk/",
+      "digitalVisibilityScore": 52,
+      "pillarScores": {
+        "speed": 82,
+        "technical": 88,
+        "local": 70,
+        "visibility": 4,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 7,
+      "name": "Promenade Dental",
+      "url": "https://promenade-dental.co.uk/",
+      "digitalVisibilityScore": 50,
+      "pillarScores": {
+        "speed": 28,
+        "technical": 100,
+        "local": 77,
+        "visibility": 14,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 8,
+      "name": "Windmill Hill Smiles",
+      "url": "https://www.windmillhillsmiles.com/",
+      "digitalVisibilityScore": 50,
+      "pillarScores": {
+        "speed": 56,
+        "technical": 75,
+        "local": 80,
+        "visibility": 29,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 9,
+      "name": "DentaQuest Clifton",
+      "url": "https://dentaquest.co.uk/",
+      "digitalVisibilityScore": 34,
+      "pillarScores": {
+        "speed": null,
+        "technical": 50,
+        "local": 75,
+        "visibility": 17,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [
+        "speed"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 25,
+        "local": 25,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
         "hasCredentialsLink": false
       },
       "context": null

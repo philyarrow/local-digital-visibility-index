@@ -338,15 +338,15 @@
     },
     {
       "rank": 4,
-      "name": "Preece and Sons Ltd",
-      "url": "https://www.preeceandsonsltd.co.uk/",
+      "name": "James Grove Ltd-Worcester Tree Surgeons & Firewood Deliveries",
+      "url": "http://www.james-grove.co.uk/",
       "digitalVisibilityScore": 57,
       "pillarScores": {
-        "speed": 61,
-        "technical": 88,
-        "local": 68,
-        "visibility": 23,
-        "ai": 20,
+        "speed": 58,
+        "technical": 100,
+        "local": 80,
+        "visibility": 19,
+        "ai": 0,
         "content": 67
       },
       "includedPillars": [
@@ -374,14 +374,14 @@
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.preeceandsonsltd.co.uk/",
-          "pagesCrawled": 7,
-          "pagesDiscovered": 7,
-          "internalLinks": 90,
-          "avgInternalLinksPerPage": 12.9,
-          "maxDepthReached": 2,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
+          "startUrl": "http://www.james-grove.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 40,
+          "avgInternalLinksPerPage": 40,
+          "maxDepthReached": 0,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.025,
           "keyPageDepth": {
             "contact": 1,
             "about": 1,
@@ -392,7 +392,7 @@
           "sitemapUrls": null,
           "robotsDisallowedAll": false,
           "stoppedBecause": null,
-          "depthLimited": true,
+          "depthLimited": false,
           "error": null
         },
         "crux": {
@@ -419,7 +419,7 @@
           "sicCodes": null,
           "matchConfidence": null,
           "registeredAddress": null,
-          "error": "registered address does not mention Worcester"
+          "error": null
         }
       }
     },
@@ -514,93 +514,6 @@
     },
     {
       "rank": 6,
-      "name": "James Grove Ltd-Worcester Tree Surgeons & Firewood Deliveries",
-      "url": "http://www.james-grove.co.uk/",
-      "digitalVisibilityScore": 54,
-      "pillarScores": {
-        "speed": 58,
-        "technical": 100,
-        "local": 80,
-        "visibility": 19,
-        "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.james-grove.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 40,
-          "avgInternalLinksPerPage": 40,
-          "maxDepthReached": 0,
-          "genericAnchors": 1,
-          "genericAnchorRatio": 0.025,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        }
-      }
-    },
-    {
-      "rank": 7,
       "name": "W Maggs Construction",
       "url": "http://www.wmaggsconstruction.com/",
       "digitalVisibilityScore": 54,
@@ -687,105 +600,16 @@
       }
     },
     {
-      "rank": 8,
-      "name": "Montel Civil Engineering",
-      "url": "http://montelcivilengineering.co.uk/",
-      "digitalVisibilityScore": 52,
+      "rank": 7,
+      "name": "Preece and Sons Ltd",
+      "url": "https://www.preeceandsonsltd.co.uk/",
+      "digitalVisibilityScore": 53,
       "pillarScores": {
-        "speed": 72,
-        "technical": 75,
-        "local": 60,
-        "visibility": 4,
-        "ai": 0,
-        "content": 100
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://montelcivilengineering.co.uk/",
-          "pagesCrawled": 0,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": null,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": "homepage HTTP 403"
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "08949189",
-          "companyName": "MONTEL CIVIL ENGINEERING LIMITED",
-          "companyStatus": "active",
-          "incorporatedOn": "2014-03-20",
-          "ageYears": 12.4,
-          "sicCodes": [
-            "42990"
-          ],
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "Suite A & B, Unit 1 Wainwright Road, Shire Business Park, Worcester, England, WR4 9FA",
-          "error": null
-        }
-      }
-    },
-    {
-      "rank": 9,
-      "name": "WP Rendering",
-      "url": "http://www.wprendering-plastering.co.uk/",
-      "digitalVisibilityScore": 51,
-      "pillarScores": {
-        "speed": 60,
-        "technical": 100,
-        "local": 77,
-        "visibility": 0,
-        "ai": 0,
+        "speed": 61,
+        "technical": 88,
+        "local": 68,
+        "visibility": 23,
+        "ai": 20,
         "content": 33
       },
       "includedPillars": [
@@ -806,32 +630,32 @@
         "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": false,
+        "hasAboutLink": true,
         "hasTeamLink": false,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": false
       },
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.wprendering-plastering.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 73,
-          "avgInternalLinksPerPage": 73,
-          "maxDepthReached": 0,
-          "genericAnchors": 6,
-          "genericAnchorRatio": 0.082,
+          "startUrl": "https://www.preeceandsonsltd.co.uk/",
+          "pagesCrawled": 7,
+          "pagesDiscovered": 7,
+          "internalLinks": 90,
+          "avgInternalLinksPerPage": 12.9,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
           "keyPageDepth": {
             "contact": 1,
-            "about": null,
+            "about": 1,
             "team": null,
-            "services": 1
+            "services": null
           },
           "orphanCandidates": null,
           "sitemapUrls": null,
           "robotsDisallowedAll": false,
           "stoppedBecause": null,
-          "depthLimited": false,
+          "depthLimited": true,
           "error": null
         },
         "crux": {
@@ -863,7 +687,7 @@
       }
     },
     {
-      "rank": 10,
+      "rank": 8,
       "name": "Lioncourt Homes - The Hamlet",
       "url": "https://www.lioncourthomes.com/housing-developments/worcestershire/the-hamlet/",
       "digitalVisibilityScore": 50,
@@ -950,7 +774,7 @@
       }
     },
     {
-      "rank": 11,
+      "rank": 9,
       "name": "ALL BRITAIN CONSTRUCTION",
       "url": "http://allbritainconstruction.co.uk/",
       "digitalVisibilityScore": 49,
@@ -1037,15 +861,15 @@
       }
     },
     {
-      "rank": 12,
-      "name": "Allbritain-Barefoot Ltd",
-      "url": "http://www.allbritain.co.uk/",
-      "digitalVisibilityScore": 48,
+      "rank": 10,
+      "name": "Montel Civil Engineering",
+      "url": "http://montelcivilengineering.co.uk/",
+      "digitalVisibilityScore": 49,
       "pillarScores": {
-        "speed": 58,
-        "technical": 100,
-        "local": 47,
-        "visibility": 2,
+        "speed": 72,
+        "technical": 75,
+        "local": 60,
+        "visibility": 4,
         "ai": 0,
         "content": 67
       },
@@ -1068,17 +892,17 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
       },
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.allbritain.co.uk/",
-          "pagesCrawled": 1,
+          "startUrl": "http://montelcivilengineering.co.uk/",
+          "pagesCrawled": 0,
           "pagesDiscovered": 0,
           "internalLinks": 0,
-          "avgInternalLinksPerPage": 0,
+          "avgInternalLinksPerPage": null,
           "maxDepthReached": 0,
           "genericAnchors": 0,
           "genericAnchorRatio": null,
@@ -1093,7 +917,7 @@
           "robotsDisallowedAll": false,
           "stoppedBecause": null,
           "depthLimited": false,
-          "error": null
+          "error": "homepage HTTP 403"
         },
         "crux": {
           "source": "Chrome UX Report (field data, 28-day p75)",
@@ -1110,21 +934,23 @@
         },
         "companies": {
           "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
+          "matched": true,
+          "companyNumber": "08949189",
+          "companyName": "MONTEL CIVIL ENGINEERING LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2014-03-20",
+          "ageYears": 12.4,
+          "sicCodes": [
+            "42990"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Suite A & B, Unit 1 Wainwright Road, Shire Business Park, Worcester, England, WR4 9FA",
           "error": null
         }
       }
     },
     {
-      "rank": 13,
+      "rank": 11,
       "name": "D-S Building & Landscaping",
       "url": "http://www.d-sbuildingservices.co.uk/",
       "digitalVisibilityScore": 48,
@@ -1211,94 +1037,7 @@
       }
     },
     {
-      "rank": 14,
-      "name": "H & B Refurbishments Ltd",
-      "url": "http://hbrefurbishmentsltd.co.uk/",
-      "digitalVisibilityScore": 48,
-      "pillarScores": {
-        "speed": 63,
-        "technical": 75,
-        "local": 66,
-        "visibility": 0,
-        "ai": 0,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://hbrefurbishmentsltd.co.uk/",
-          "pagesCrawled": 0,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": null,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": "homepage HTTP 403"
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Worcester"
-        }
-      }
-    },
-    {
-      "rank": 15,
+      "rank": 12,
       "name": "Claines Construction",
       "url": "http://clainesconstruction.co.uk/",
       "digitalVisibilityScore": 47,
@@ -1385,7 +1124,7 @@
       }
     },
     {
-      "rank": 16,
+      "rank": 13,
       "name": "SH Construction LTD",
       "url": "https://businewmap.org/details/sh-construction-ltd-ChIJ68S",
       "digitalVisibilityScore": 47,
@@ -1472,7 +1211,7 @@
       }
     },
     {
-      "rank": 17,
+      "rank": 14,
       "name": "VolkerLaser",
       "url": "http://www.volkerlaser.co.uk/",
       "digitalVisibilityScore": 47,
@@ -1559,7 +1298,94 @@
       }
     },
     {
-      "rank": 18,
+      "rank": 15,
+      "name": "WP Rendering",
+      "url": "http://www.wprendering-plastering.co.uk/",
+      "digitalVisibilityScore": 47,
+      "pillarScores": {
+        "speed": 60,
+        "technical": 100,
+        "local": 77,
+        "visibility": 0,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.wprendering-plastering.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 73,
+          "avgInternalLinksPerPage": 73,
+          "maxDepthReached": 0,
+          "genericAnchors": 6,
+          "genericAnchorRatio": 0.082,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Worcester"
+        }
+      }
+    },
+    {
+      "rank": 16,
       "name": "Titan Construction and Building Services LTD",
       "url": "https://www.titan-construction.uk/",
       "digitalVisibilityScore": 46,
@@ -1646,7 +1472,94 @@
       }
     },
     {
-      "rank": 19,
+      "rank": 17,
+      "name": "Allbritain-Barefoot Ltd",
+      "url": "http://www.allbritain.co.uk/",
+      "digitalVisibilityScore": 45,
+      "pillarScores": {
+        "speed": 58,
+        "technical": 100,
+        "local": 47,
+        "visibility": 2,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.allbritain.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 18,
       "name": "Crush And Save",
       "url": "http://www.crushandsave.co.uk/",
       "digitalVisibilityScore": 45,
@@ -1733,7 +1646,7 @@
       }
     },
     {
-      "rank": 20,
+      "rank": 19,
       "name": "Lawrence And Sons Building",
       "url": "http://www.lawrenceandsons.co.uk/",
       "digitalVisibilityScore": 45,
@@ -1822,7 +1735,7 @@
       }
     },
     {
-      "rank": 21,
+      "rank": 20,
       "name": "SG Building Services",
       "url": "https://sgbuildingservice.com/",
       "digitalVisibilityScore": 45,
@@ -1909,7 +1822,7 @@
       }
     },
     {
-      "rank": 22,
+      "rank": 21,
       "name": "The Waterside at Royal Worcester by Berkeley",
       "url": "http://www.berkeleygroup.co.uk/developments/worcestershire/worcester/the-waterside-at-royal-worcester",
       "digitalVisibilityScore": 45,
@@ -1996,7 +1909,7 @@
       }
     },
     {
-      "rank": 23,
+      "rank": 22,
       "name": "1Eighty Roofing Solutions Ltd",
       "url": "https://1-eighty.co.uk/",
       "digitalVisibilityScore": 44,
@@ -2085,7 +1998,7 @@
       }
     },
     {
-      "rank": 24,
+      "rank": 23,
       "name": "Andy Johnson - Chimney Sweep & Stove Installer - Worcestershire",
       "url": "http://www.andysweeps.com/",
       "digitalVisibilityScore": 44,
@@ -2172,7 +2085,7 @@
       }
     },
     {
-      "rank": 25,
+      "rank": 24,
       "name": "DMR General Builder",
       "url": "http://dmrgeneralbuilder.co.uk/",
       "digitalVisibilityScore": 44,
@@ -2255,6 +2168,93 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        }
+      }
+    },
+    {
+      "rank": 25,
+      "name": "H & B Refurbishments Ltd",
+      "url": "http://hbrefurbishmentsltd.co.uk/",
+      "digitalVisibilityScore": 44,
+      "pillarScores": {
+        "speed": 63,
+        "technical": 75,
+        "local": 66,
+        "visibility": 0,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://hbrefurbishmentsltd.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Worcester"
         }
       }
     },
@@ -3578,6 +3578,93 @@
     },
     {
       "rank": 41,
+      "name": "Bourne Site Services",
+      "url": "http://www.bournesiteservices.co.uk/",
+      "digitalVisibilityScore": 38,
+      "pillarScores": {
+        "speed": 59,
+        "technical": 63,
+        "local": 52,
+        "visibility": 0,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.bournesiteservices.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 34,
+          "avgInternalLinksPerPage": 34,
+          "maxDepthReached": 0,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.029,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Worcester"
+        }
+      }
+    },
+    {
+      "rank": 42,
       "name": "Five Star Building",
       "url": "http://www.fivestarbuilding.co.uk/",
       "digitalVisibilityScore": 38,
@@ -3660,93 +3747,6 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
-        }
-      }
-    },
-    {
-      "rank": 42,
-      "name": "S & S Builders",
-      "url": "http://www.sandsbuilders.biz/",
-      "digitalVisibilityScore": 38,
-      "pillarScores": {
-        "speed": 67,
-        "technical": 29,
-        "local": 44,
-        "visibility": 25,
-        "ai": 0,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.sandsbuilders.biz/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 6,
-          "avgInternalLinksPerPage": 6,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Worcester"
         }
       }
     },
@@ -3926,93 +3926,6 @@
     },
     {
       "rank": 45,
-      "name": "Bourne Site Services",
-      "url": "http://www.bournesiteservices.co.uk/",
-      "digitalVisibilityScore": 35,
-      "pillarScores": {
-        "speed": 59,
-        "technical": 63,
-        "local": 52,
-        "visibility": 0,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.bournesiteservices.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 34,
-          "avgInternalLinksPerPage": 34,
-          "maxDepthReached": 0,
-          "genericAnchors": 1,
-          "genericAnchorRatio": 0.029,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": null,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Worcester"
-        }
-      }
-    },
-    {
-      "rank": 46,
       "name": "MITRE OAK LTD",
       "url": "http://mitreoak.co.uk/",
       "digitalVisibilityScore": 35,
@@ -4096,6 +4009,93 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        }
+      }
+    },
+    {
+      "rank": 46,
+      "name": "S & S Builders",
+      "url": "http://www.sandsbuilders.biz/",
+      "digitalVisibilityScore": 35,
+      "pillarScores": {
+        "speed": 67,
+        "technical": 29,
+        "local": 44,
+        "visibility": 25,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.sandsbuilders.biz/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 6,
+          "avgInternalLinksPerPage": 6,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Worcester"
         }
       }
     },

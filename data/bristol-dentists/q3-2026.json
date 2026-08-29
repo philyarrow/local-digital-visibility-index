@@ -56,7 +56,7 @@
       "live": true
     }
   },
-  "overallMedian": 56,
+  "overallMedian": 57,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
@@ -65,7 +65,7 @@
     "local": 77,
     "visibility": 29,
     "ai": 0,
-    "content": 33
+    "content": 67
   },
   "businesses": [
     {
@@ -109,14 +109,14 @@
       "rank": 2,
       "name": "Redland Road Dental Practice",
       "url": "https://redlanddental.co.uk/",
-      "digitalVisibilityScore": 60,
+      "digitalVisibilityScore": 64,
       "pillarScores": {
         "speed": 64,
         "technical": 75,
         "local": 80,
         "visibility": 46,
         "ai": 20,
-        "content": 67
+        "content": 100
       },
       "includedPillars": [
         "speed",
@@ -138,7 +138,7 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": false
+        "hasCredentialsLink": true
       },
       "context": null
     },
@@ -146,14 +146,14 @@
       "rank": 3,
       "name": "Clifton Down Dental Practice",
       "url": "https://cliftondowndental.co.uk/",
-      "digitalVisibilityScore": 59,
+      "digitalVisibilityScore": 62,
       "pillarScores": {
         "speed": 68,
         "technical": 100,
         "local": 76,
         "visibility": 23,
         "ai": 20,
-        "content": 33
+        "content": 67
       },
       "includedPillars": [
         "speed",
@@ -175,12 +175,49 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
-        "hasCredentialsLink": false
+        "hasCredentialsLink": true
       },
       "context": null
     },
     {
       "rank": 4,
+      "name": "Dental Touch",
+      "url": "https://www.dental-touch.co.uk/",
+      "digitalVisibilityScore": 59,
+      "pillarScores": {
+        "speed": 57,
+        "technical": 88,
+        "local": 79,
+        "visibility": 33,
+        "ai": 20,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 5,
       "name": "Bristol Dental Specialists",
       "url": "https://bristoldentalspecialists.com/",
       "digitalVisibilityScore": 57,
@@ -211,43 +248,6 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false
-      },
-      "context": null
-    },
-    {
-      "rank": 5,
-      "name": "Dental Touch",
-      "url": "https://www.dental-touch.co.uk/",
-      "digitalVisibilityScore": 56,
-      "pillarScores": {
-        "speed": 57,
-        "technical": 88,
-        "local": 79,
-        "visibility": 33,
-        "ai": 20,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
         "hasTeamLink": true,
         "hasCredentialsLink": false
       },
@@ -368,14 +368,14 @@
       "rank": 9,
       "name": "DentaQuest Clifton",
       "url": "https://dentaquest.co.uk/",
-      "digitalVisibilityScore": 34,
+      "digitalVisibilityScore": 47,
       "pillarScores": {
         "speed": null,
         "technical": 50,
         "local": 75,
         "visibility": 17,
         "ai": 0,
-        "content": 0
+        "content": 100
       },
       "includedPillars": [
         "technical",
@@ -396,9 +396,9 @@
         "content": 12.5
       },
       "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
       },
       "context": null
     }

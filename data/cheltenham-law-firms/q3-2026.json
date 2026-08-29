@@ -56,7 +56,7 @@
       "live": true
     }
   },
-  "overallMedian": 61,
+  "overallMedian": 62.5,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
@@ -65,21 +65,21 @@
     "local": 76,
     "visibility": 38,
     "ai": 30,
-    "content": 50
+    "content": 67
   },
   "businesses": [
     {
       "rank": 1,
       "name": "BPE Solicitors",
       "url": "https://www.bpe.co.uk/",
-      "digitalVisibilityScore": 70,
+      "digitalVisibilityScore": 73,
       "pillarScores": {
         "speed": 66,
         "technical": 88,
         "local": 73,
         "visibility": 58,
         "ai": 60,
-        "content": 67
+        "content": 100
       },
       "includedPillars": [
         "speed",
@@ -101,7 +101,7 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": false
+        "hasCredentialsLink": true
       },
       "context": null
     },
@@ -222,14 +222,14 @@
       "rank": 5,
       "name": "Hine Solicitors",
       "url": "https://www.hinesolicitors.com/",
-      "digitalVisibilityScore": 59,
+      "digitalVisibilityScore": 62,
       "pillarScores": {
         "speed": 81,
         "technical": 100,
         "local": 72,
         "visibility": 33,
         "ai": 0,
-        "content": 33
+        "content": 67
       },
       "includedPillars": [
         "speed",
@@ -251,7 +251,7 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
-        "hasCredentialsLink": false
+        "hasCredentialsLink": true
       },
       "context": null
     },
@@ -294,6 +294,43 @@
     },
     {
       "rank": 7,
+      "name": "Davis Gregory",
+      "url": "https://www.cheltenhamsolicitors.co.uk/",
+      "digitalVisibilityScore": 53,
+      "pillarScores": {
+        "speed": 75,
+        "technical": 50,
+        "local": 78,
+        "visibility": 39,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 8,
       "name": "HCR Law",
       "url": "https://www.hcrlaw.com/",
       "digitalVisibilityScore": 50,
@@ -327,43 +364,6 @@
         "hasAboutLink": null,
         "hasTeamLink": null,
         "hasCredentialsLink": null
-      },
-      "context": null
-    },
-    {
-      "rank": 8,
-      "name": "Davis Gregory",
-      "url": "https://www.cheltenhamsolicitors.co.uk/",
-      "digitalVisibilityScore": 46,
-      "pillarScores": {
-        "speed": 75,
-        "technical": 50,
-        "local": 78,
-        "visibility": 39,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
       },
       "context": null
     }

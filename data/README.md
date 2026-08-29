@@ -26,6 +26,11 @@ data/bristol-estate-agents/
 scorecards are generated from, and what a citation refers to. It is written once
 per quarter and never rewritten.
 
+**`<quarter>-superseded-<date>.json` is a withdrawn published dataset.** When a
+figure is corrected after publication the original is kept, not deleted, so
+anyone who cited it can still find exactly what they cited. The
+[changelog](https://hub.pyc.agency/indices/changelog/) says what changed and why.
+
 **`history/<YYYY-MM>.json` is an interim measurement.** Collection runs monthly
 so that movement can be analysed over time — you cannot fit a trend to one data
 point. These files carry `"status": "interim"`, they are produced automatically

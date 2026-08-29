@@ -1,12 +1,12 @@
 {
-  "index": "exeter-solicitors",
-  "title": "PYC Exeter Solicitor Digital Visibility Index",
-  "town": "Exeter",
-  "sector": "solicitors",
-  "sectorLabel": "solicitors",
+  "index": "swindon-estate-agents",
+  "title": "PYC Swindon Estate Agent Digital Visibility Index",
+  "town": "Swindon",
+  "sector": "estate-agents",
+  "sectorLabel": "estate agents",
   "keywordsPerIndex": 12,
   "quarter": "Q3-2026",
-  "measuredAt": "2026-08-27T17:55:47.626Z",
+  "measuredAt": "2026-08-27T17:56:59.863Z",
   "methodology": "https://hub.pyc.agency/indices/methodology/",
   "license": {
     "name": "CC BY 4.0",
@@ -14,7 +14,7 @@
     "terms": "https://hub.pyc.agency/indices/licence/"
   },
   "attribution": "Phil Yarrow (PYC) — Local Digital Visibility Index. https://hub.pyc.agency/indices/",
-  "citation": "Phil Yarrow (PYC) — Local Digital Visibility Index: Exeter Solicitor, Q3-2026. https://hub.pyc.agency/indices/exeter-solicitors/",
+  "citation": "Phil Yarrow (PYC) — Local Digital Visibility Index: Swindon Estate Agent, Q3-2026. https://hub.pyc.agency/indices/swindon-estate-agents/",
   "attributionNote": "Reuse of ANY data from this index — a single figure, one dataset, several, or all of them — requires the `attribution` credit above, reproduced and linked. `citation` is the fuller form for quoting this particular dataset. Reuse is permitted commercially and in AI-generated answers on that condition.",
   "weights": {
     "speed": 20,
@@ -56,28 +56,28 @@
       "live": true
     }
   },
-  "overallMedian": 72,
+  "overallMedian": 68.5,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
-    "speed": 71.5,
-    "technical": 100,
-    "local": 74.5,
-    "visibility": 42.5,
-    "ai": 50,
-    "content": 67
+    "speed": 65,
+    "technical": 88,
+    "local": 78,
+    "visibility": 49,
+    "ai": 40,
+    "content": 100
   },
   "businesses": [
     {
       "rank": 1,
-      "name": "Dunn & Baker",
-      "url": "https://www.dunnandbaker.co.uk/",
-      "digitalVisibilityScore": 80,
+      "name": "Charles Harding",
+      "url": "https://www.charles-harding.co.uk/",
+      "digitalVisibilityScore": 85,
       "pillarScores": {
-        "speed": 56,
+        "speed": 71,
         "technical": 100,
-        "local": 77,
-        "visibility": 55,
+        "local": 78,
+        "visibility": 65,
         "ai": 100,
         "content": 100
       },
@@ -107,53 +107,16 @@
     },
     {
       "rank": 2,
-      "name": "Amicus Law",
-      "url": "https://www.amicuslaw.co.uk/",
-      "digitalVisibilityScore": 75,
-      "pillarScores": {
-        "speed": 73,
-        "technical": 100,
-        "local": 78,
-        "visibility": 46,
-        "ai": 100,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": null
-    },
-    {
-      "rank": 3,
-      "name": "Gilbert Stephens",
-      "url": "https://gilbertstephens.co.uk/",
+      "name": "Chappells",
+      "url": "https://www.chappells.uk.com/",
       "digitalVisibilityScore": 73,
       "pillarScores": {
-        "speed": 77,
-        "technical": 100,
-        "local": 77,
-        "visibility": 60,
-        "ai": 40,
-        "content": 67
+        "speed": 68,
+        "technical": 75,
+        "local": 79,
+        "visibility": 45,
+        "ai": 80,
+        "content": 100
       },
       "includedPillars": [
         "speed",
@@ -175,21 +138,58 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": false
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 3,
+      "name": "McFarlane",
+      "url": "https://www.mcfarlaneproperty.com/",
+      "digitalVisibilityScore": 73,
+      "pillarScores": {
+        "speed": 75,
+        "technical": 88,
+        "local": 78,
+        "visibility": 58,
+        "ai": 40,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
       },
       "context": null
     },
     {
       "rank": 4,
-      "name": "Stephens Scown",
-      "url": "https://www.stephens-scown.co.uk/",
-      "digitalVisibilityScore": 73,
+      "name": "Connells Swindon Old Town",
+      "url": "https://www.connells.co.uk/estate-agents/swindon-old-town",
+      "digitalVisibilityScore": 69,
       "pillarScores": {
-        "speed": 59,
-        "technical": 100,
-        "local": 78,
-        "visibility": 43,
-        "ai": 60,
+        "speed": 58,
+        "technical": 88,
+        "local": 79,
+        "visibility": 52,
+        "ai": 40,
         "content": 100
       },
       "includedPillars": [
@@ -218,16 +218,16 @@
     },
     {
       "rank": 5,
-      "name": "Wollens",
-      "url": "https://wollens.co.uk/",
-      "digitalVisibilityScore": 71,
+      "name": "Richard James",
+      "url": "https://richardjames.uk/",
+      "digitalVisibilityScore": 68,
       "pillarScores": {
-        "speed": 74,
-        "technical": 100,
-        "local": 72,
-        "visibility": 42,
-        "ai": 60,
-        "content": 67
+        "speed": 44,
+        "technical": 88,
+        "local": 79,
+        "visibility": 52,
+        "ai": 100,
+        "content": 33
       },
       "includedPillars": [
         "speed",
@@ -249,22 +249,22 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": false
       },
       "context": null
     },
     {
       "rank": 6,
-      "name": "Setfords Exeter",
-      "url": "https://www.setfords.co.uk/locations/devon/solicitors-in-exeter/",
-      "digitalVisibilityScore": 66,
+      "name": "Location Real Estate",
+      "url": "https://locationrealestate.co.uk/",
+      "digitalVisibilityScore": 63,
       "pillarScores": {
-        "speed": 89,
+        "speed": 62,
         "technical": 100,
-        "local": 65,
-        "visibility": 38,
-        "ai": 20,
-        "content": 67
+        "local": 75,
+        "visibility": 34,
+        "ai": 0,
+        "content": 100
       },
       "includedPillars": [
         "speed",
@@ -286,22 +286,22 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": false
+        "hasCredentialsLink": true
       },
       "context": null
     },
     {
       "rank": 7,
-      "name": "Porter Dodson",
-      "url": "https://www.porterdodson.co.uk/",
-      "digitalVisibilityScore": 62,
+      "name": "Taylors Swindon",
+      "url": "https://www.taylorsestateagents.co.uk/branch/estate-agents/swindon",
+      "digitalVisibilityScore": 57,
       "pillarScores": {
-        "speed": 67,
+        "speed": 69,
         "technical": 88,
-        "local": 61,
-        "visibility": 42,
-        "ai": 40,
-        "content": 67
+        "local": 77,
+        "visibility": 46,
+        "ai": 0,
+        "content": 33
       },
       "includedPillars": [
         "speed",
@@ -321,7 +321,7 @@
         "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": true,
+        "hasAboutLink": false,
         "hasTeamLink": false,
         "hasCredentialsLink": true
       },
@@ -329,16 +329,16 @@
     },
     {
       "rank": 8,
-      "name": "WBW Solicitors",
-      "url": "https://www.wbw.co.uk/",
-      "digitalVisibilityScore": 57,
+      "name": "Atwell Martin Swindon",
+      "url": "https://swindon.atwellmartin.co.uk/",
+      "digitalVisibilityScore": 47,
       "pillarScores": {
-        "speed": 70,
-        "technical": 50,
-        "local": 72,
-        "visibility": 38,
-        "ai": 40,
-        "content": 67
+        "speed": 52,
+        "technical": 100,
+        "local": 68,
+        "visibility": 0,
+        "ai": 20,
+        "content": 0
       },
       "includedPillars": [
         "speed",
@@ -358,8 +358,8 @@
         "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
+        "hasAboutLink": false,
+        "hasTeamLink": false,
         "hasCredentialsLink": false
       },
       "context": null

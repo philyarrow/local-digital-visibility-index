@@ -56,7 +56,7 @@
       "live": true
     }
   },
-  "overallMedian": 72,
+  "overallMedian": 69,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
@@ -65,21 +65,21 @@
     "local": 74.5,
     "visibility": 42.5,
     "ai": 50,
-    "content": 67
+    "content": 50
   },
   "businesses": [
     {
       "rank": 1,
       "name": "Dunn & Baker",
       "url": "https://www.dunnandbaker.co.uk/",
-      "digitalVisibilityScore": 80,
+      "digitalVisibilityScore": 77,
       "pillarScores": {
         "speed": 56,
         "technical": 100,
         "local": 77,
         "visibility": 55,
         "ai": 100,
-        "content": 100
+        "content": 67
       },
       "includedPillars": [
         "speed",
@@ -101,7 +101,7 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": false
       },
       "context": null
     },
@@ -183,49 +183,12 @@
       "rank": 4,
       "name": "Stephens Scown",
       "url": "https://www.stephens-scown.co.uk/",
-      "digitalVisibilityScore": 73,
+      "digitalVisibilityScore": 70,
       "pillarScores": {
         "speed": 59,
         "technical": 100,
         "local": 78,
         "visibility": 43,
-        "ai": 60,
-        "content": 100
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true
-      },
-      "context": null
-    },
-    {
-      "rank": 5,
-      "name": "Wollens",
-      "url": "https://wollens.co.uk/",
-      "digitalVisibilityScore": 71,
-      "pillarScores": {
-        "speed": 74,
-        "technical": 100,
-        "local": 72,
-        "visibility": 42,
         "ai": 60,
         "content": 67
       },
@@ -248,8 +211,45 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 5,
+      "name": "Wollens",
+      "url": "https://wollens.co.uk/",
+      "digitalVisibilityScore": 68,
+      "pillarScores": {
+        "speed": 74,
+        "technical": 100,
+        "local": 72,
+        "visibility": 42,
+        "ai": 60,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
         "hasTeamLink": false,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": false
       },
       "context": null
     },
@@ -294,14 +294,14 @@
       "rank": 7,
       "name": "Porter Dodson",
       "url": "https://www.porterdodson.co.uk/",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 59,
       "pillarScores": {
         "speed": 67,
         "technical": 88,
         "local": 61,
         "visibility": 42,
         "ai": 40,
-        "content": 67
+        "content": 33
       },
       "includedPillars": [
         "speed",
@@ -323,7 +323,7 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": false
       },
       "context": null
     },
@@ -331,14 +331,14 @@
       "rank": 8,
       "name": "WBW Solicitors",
       "url": "https://www.wbw.co.uk/",
-      "digitalVisibilityScore": 57,
+      "digitalVisibilityScore": 50,
       "pillarScores": {
         "speed": 70,
         "technical": 50,
         "local": 72,
         "visibility": 38,
         "ai": 40,
-        "content": 67
+        "content": 0
       },
       "includedPillars": [
         "speed",
@@ -358,8 +358,8 @@
         "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
+        "hasAboutLink": false,
+        "hasTeamLink": false,
         "hasCredentialsLink": false
       },
       "context": null

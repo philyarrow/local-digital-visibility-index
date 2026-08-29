@@ -51,7 +51,7 @@
       "live": true
     },
     "content": {
-      "scored": 13,
+      "scored": 12,
       "total": 13,
       "live": true
     }
@@ -146,14 +146,14 @@
       "rank": 3,
       "name": "Buildex Construction",
       "url": "https://buildexuk.com/",
-      "digitalVisibilityScore": 54,
+      "digitalVisibilityScore": 51,
       "pillarScores": {
         "speed": 41,
         "technical": 75,
         "local": 63,
         "visibility": 17,
         "ai": 40,
-        "content": 100
+        "content": 67
       },
       "includedPillars": [
         "speed",
@@ -175,49 +175,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": false
       },
       "context": null
     },
     {
       "rank": 4,
-      "name": "Cotswold Construction",
-      "url": "https://www.cotswold-construction.co.uk/",
-      "digitalVisibilityScore": 49,
-      "pillarScores": {
-        "speed": 62,
-        "technical": 50,
-        "local": 50,
-        "visibility": 29,
-        "ai": 60,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true
-      },
-      "context": null
-    },
-    {
-      "rank": 5,
       "name": "RPM Building Services",
       "url": "https://www.rpmbuildingservices.co.uk/",
       "digitalVisibilityScore": 49,
@@ -254,7 +217,7 @@
       "context": null
     },
     {
-      "rank": 6,
+      "rank": 5,
       "name": "Longlevens Building",
       "url": "http://www.longlevensbuilding.com/",
       "digitalVisibilityScore": 47,
@@ -291,7 +254,7 @@
       "context": null
     },
     {
-      "rank": 7,
+      "rank": 6,
       "name": "AJ Build",
       "url": "https://ajbuildltd.com/",
       "digitalVisibilityScore": 46,
@@ -323,6 +286,43 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 7,
+      "name": "Cotswold Construction",
+      "url": "https://www.cotswold-construction.co.uk/",
+      "digitalVisibilityScore": 46,
+      "pillarScores": {
+        "speed": 62,
+        "technical": 50,
+        "local": 50,
+        "visibility": 29,
+        "ai": 60,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
@@ -443,14 +443,14 @@
       "rank": 11,
       "name": "King Builders",
       "url": "https://www.kingbuildersglosltd.co.uk/",
-      "digitalVisibilityScore": 43,
+      "digitalVisibilityScore": 40,
       "pillarScores": {
         "speed": 61,
         "technical": 50,
         "local": 65,
         "visibility": 31,
         "ai": 0,
-        "content": 33
+        "content": 0
       },
       "includedPillars": [
         "speed",
@@ -470,7 +470,7 @@
         "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": true,
+        "hasAboutLink": false,
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
@@ -525,30 +525,30 @@
         "local": null,
         "visibility": 25,
         "ai": 80,
-        "content": 33
+        "content": null
       },
       "includedPillars": [
         "technical",
         "visibility",
-        "ai",
-        "content"
+        "ai"
       ],
       "excludedPillars": [
         "speed",
-        "local"
+        "local",
+        "content"
       ],
       "effectiveWeights": {
         "speed": 0,
-        "technical": 33.33,
+        "technical": 40,
         "local": 0,
-        "visibility": 25,
-        "ai": 25,
-        "content": 16.67
+        "visibility": 30,
+        "ai": 30,
+        "content": 0
       },
       "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
+        "hasAboutLink": null,
+        "hasTeamLink": null,
+        "hasCredentialsLink": null
       },
       "context": null
     }
