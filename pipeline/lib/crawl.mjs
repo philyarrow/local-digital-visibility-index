@@ -204,7 +204,15 @@ export async function crawlSite(startUrl, opts = {}) {
 
 		if (out.pagesCrawled > 0) await sleep(cfg.delayMs);
 		const res = await fetchText(url, cfg.perRequestTimeoutMs);
-		if (!res.ok) continue;
+		if (!res.ok) {
+			/* The start page failing is the whole crawl failing, and it was being
+			   reported as a bare "0 pages" with no reason — indistinguishable
+			   from a site that legitimately has nothing to crawl. */
+			if (out.pagesCrawled === 0 && url === startUrl) {
+				out.error = res.error || `homepage HTTP ${res.status || 'unreachable'}`;
+			}
+			continue;
+		}
 
 		/* Resolve against the post-redirect URL: a relative href on a page that
 		   redirected would otherwise resolve against the pre-redirect path,
