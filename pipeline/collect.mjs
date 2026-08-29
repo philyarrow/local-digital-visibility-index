@@ -314,19 +314,40 @@ function profileCompleteness(item) {
 
 /* Reviews newer than the configured window. DataForSEO returns `timestamp` as
    an ISO-ish string; anything unparseable is skipped rather than counted. */
-function countRecentReviews(reviewsResult, windowDays) {
+/* Accepts the DataForSEO shapes: "YYYY-MM-DD HH:MM:SS +00:00",
+   the same with a trailing "Z", and a bare "YYYY-MM-DD". */
+function normaliseReviewTimestamp(raw) {
+	const s = String(raw).trim();
+	const m = s.match(/^(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2}:\d{2})(?:\s*([+-]\d{2}:?\d{2}|Z))?$/);
+	if (m) return `${m[1]}T${m[2]}${(m[3] || 'Z').replace(/^([+-]\d{2})(\d{2})$/, '$1:$2')}`;
+	if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return `${s}T00:00:00Z`;
+	return s;
+}
+
+function countRecentReviews(reviewsResult, windowDays, lifetimeCount = 0) {
 	if (!reviewsResult) return null;
 	const items = reviewsResult.items || [];
-	if (!items.length) return 0;
+	/* No items with a nonzero lifetime count is a failed fetch, not a quiet
+	   business — score it as unmeasured rather than as zero. */
+	if (!items.length) return lifetimeCount > 0 ? null : 0;
 	const cutoff = Date.now() - windowDays * 24 * 60 * 60 * 1000;
-	let n = 0;
+	let n = 0, unparsed = 0;
 	for (const r of items) {
 		const raw = r.timestamp || r.time_ago_iso || null;
 		if (!raw) continue;
-		const t = Date.parse(String(raw).replace(' ', 'T'));
-		if (Number.isNaN(t)) continue;
+		/* DataForSEO returns "2024-03-15 10:23:45 +00:00". The old code did
+		   .replace(' ', 'T'), which replaces only the FIRST space and leaves
+		   "2024-03-15T10:23:45 +00:00" — a space before the offset, which
+		   Date.parse rejects as NaN. Every review was therefore skipped and
+		   the count was 0 for all 266 measured businesses, feeding a constant
+		   zero into the Local pillar of every published score. */
+		const t = Date.parse(normaliseReviewTimestamp(raw));
+		if (Number.isNaN(t)) { unparsed++; continue; }
 		if (t >= cutoff) n++;
 	}
+	/* If nothing parsed, we measured nothing — do not report that as zero.
+	   This is the guard whose absence hid the bug above for a whole quarter. */
+	if (unparsed === items.length) return null;
 	return n;
 }
 
@@ -426,7 +447,7 @@ function buildLocal(business, matched, gbpItem, reviewsResult, cfg, lookupError 
 	}
 
 	if (cfg.local.reviewVelocity) {
-		out.reviewsLast90d = countRecentReviews(reviewsResult, cfg.local.velocityWindowDays || 90);
+		out.reviewsLast90d = countRecentReviews(reviewsResult, cfg.local.velocityWindowDays || 90, out.reviewCount || 0);
 		if (out.reviewsLast90d === null) out.error = 'review velocity unavailable (reviews task failed)';
 	}
 
