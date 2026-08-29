@@ -2052,10 +2052,21 @@ ${sortScript()}
 
 /* ---- exports ---- */
 
-function exportJson(ranked, quarter, indexSlug) {
+function exportJson(ranked, quarter, indexSlug, cfg = null, sectorCfg = null) {
 	return {
 		index: indexSlug,
 		title: `PYC ${indexTitle(indexSlug)} Digital Visibility Index`,
+		/* Town, sector and basket size stated rather than left to be parsed out
+		   of the slug. The site was splitting on the first hyphen, which turns
+		   "weston-super-mare-dentists" into the town "weston" and the sector
+		   "super-mare-dentists" — a spurious row and column in any grid built
+		   from it. The keyword count is exported for the same reason: published
+		   analysis was asserting "twelve keywords" while the basket size is
+		   per-index configurable. */
+		town: cfg?.town ?? null,
+		sector: cfg?.sector ?? null,
+		sectorLabel: sectorCfg?.label ?? null,
+		keywordsPerIndex: ranked.businesses?.[0]?.evidence?.keywordBasket?.length ?? null,
 		quarter,
 		/* measuredAt only. scoredAt is wall-clock at the scoring run, so
 		   publishing it would churn the dated snapshot on every no-op
@@ -2199,6 +2210,22 @@ async function main() {
 	const quarter = qArg || defaultQuarter();
 	const rankedFile = join(DATA_ROOT, indexSlug, '_ranked.json');
 
+	/* Index and sector config, so the exported dataset can state its own town
+	   and sector instead of leaving the site to parse them out of the slug. */
+	let indexCfg = null, sectorCfg = null;
+	try {
+		const indices = JSON.parse(await readFile(join(HERE, 'config', 'indices.json'), 'utf8'));
+		indexCfg = indices[indexSlug] ?? null;
+		if (indexCfg?.sector) {
+			const sectors = JSON.parse(await readFile(join(HERE, 'config', 'sectors.json'), 'utf8'));
+			sectorCfg = sectors[indexCfg.sector] ?? null;
+		}
+	} catch (e) {
+		/* Config is a convenience here, not a requirement: the dataset still
+		   generates, it just cannot state its own town. */
+		console.warn(`Could not read config for ${indexSlug}: ${e.message}`);
+	}
+
 	let ranked;
 	try {
 		ranked = JSON.parse(await readFile(rankedFile, 'utf8'));
@@ -2222,7 +2249,7 @@ async function main() {
 	if (ARCHIVE_ONLY) {
 		const period = new Date(ranked.measuredAt ?? ranked.scoredAt).toISOString().slice(0, 7);
 		const payload = {
-			...exportJson(ranked, quarter, indexSlug),
+			...exportJson(ranked, quarter, indexSlug, indexCfg, sectorCfg),
 			status: 'interim',
 			period,
 			statusNote:
@@ -2281,7 +2308,7 @@ async function main() {
 		cards++;
 	}
 	// exports — the site's "latest" copy, overwritten each quarter
-	const json = JSON.stringify(exportJson(ranked, quarter, indexSlug), null, 2) + '\n';
+	const json = JSON.stringify(exportJson(ranked, quarter, indexSlug, indexCfg, sectorCfg), null, 2) + '\n';
 	const csv = exportCsv(ranked);
 	await writeFile(join(PUBLIC_DATA, `${indexSlug}.json`), json);
 	await writeFile(join(PUBLIC_DATA, `${indexSlug}.csv`), csv);
