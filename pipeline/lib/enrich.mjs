@@ -206,3 +206,161 @@ export async function collectCompaniesHouse(name, { key = process.env.COMPANIES_
 	}
 	return out;
 }
+
+/* ------------------------------------------------- FSA hygiene ratings ---- */
+
+/* The Food Standards Agency publishes food hygiene ratings as a genuinely open
+ * API: no key, no registration, no crawl restriction. That matters because it
+ * is the one official rating this project can legitimately cross-reference —
+ * the professional regulators (SRA, Gas Safe, Propertymark) all disallow the
+ * register endpoints their data would have to come from.
+ *
+ * Ratings are 0-5 in England, Wales and Northern Ireland. Scotland uses
+ * Pass/Improvement Required, and non-numeric values also cover
+ * AwaitingInspection, AwaitingPublication, Exempt and AwaitingRatingChange.
+ * Those are recorded verbatim rather than coerced to a number.
+ */
+
+const FSA_API = 'https://api.ratings.food.gov.uk';
+
+/* Same discipline as the Companies House matcher: a unique exact match on a
+ * normalised name, corroborated by town, or no match at all. A hygiene rating
+ * published against the wrong restaurant is worse than no rating. */
+function normaliseVenue(s, town = null) {
+	let v = String(s || '')
+		.normalize('NFKD')                    // "Café René" and "Cafe Rene" must agree
+		.replace(/[\u0300-\u036f]/g, '')
+		.toLowerCase()
+		.replace(/&/g, ' and ');
+	/* Trading names often carry the town as a disambiguator that the register
+	   does not use: "Tim Hortons - Gloucester", "Cote Gloucester". */
+	if (town) v = v.replace(new RegExp(`\\b${String(town).toLowerCase()}\\b`, 'g'), ' ');
+	return v
+		.replace(/\b(the|ltd|limited|restaurant|cafe|bar|pub|inn)\b/g, ' ')
+		.replace(/[^a-z0-9]+/g, ' ')
+		.trim();
+}
+
+/* Great-circle distance in km. The FSA name search is national in practice —
+   "Royal Oak" in a Gloucester query returned a pub in GL54, 25km away — so a
+   match has to be inside the index's own radius or it is not our business. */
+function distanceKm(a, b) {
+	const R = 6371, rad = (d) => (d * Math.PI) / 180;
+	const dLat = rad(b.lat - a.lat), dLon = rad(b.lon - a.lon);
+	const h = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLon / 2) ** 2;
+	return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+export async function collectFsa(name, { town = null, coordinate = null } = {}) {
+	const out = {
+		source: 'Food Standards Agency food hygiene ratings (open data)',
+		matched: null,
+		fhrsId: null,
+		businessName: null,
+		businessType: null,
+		ratingValue: null,      // string: "5" … "0", or "Pass", "Exempt", "AwaitingInspection"
+		ratingNumeric: null,    // number 0-5 where the scheme is numeric, else null
+		ratingDate: null,
+		postcode: null,
+		localAuthority: null,
+		distanceKm: null,
+		locatedBy: null,
+		scores: null,           // { hygiene, structural, confidenceInManagement } — lower is better
+		error: null,
+	};
+	if (!name) { out.error = 'no name'; return out; }
+
+	try {
+		/* Query with the town suffix removed. "Tim Hortons - Gloucester" and
+		   "Cote Gloucester" are trading names; the register lists the venue.
+		   Searching the raw string returns nothing for them. */
+		const queryName = town
+			? String(name).replace(new RegExp(`[\\s-]*\\b${String(town)}\\b`, 'gi'), '').trim() || String(name)
+			: String(name);
+		const qs = new URLSearchParams({ name: queryName, pageSize: '40' });
+		if (town) qs.set('address', town);
+		const res = await withTimeout(async (signal) => {
+			const r = await fetch(`${FSA_API}/Establishments?${qs}`, {
+				headers: { 'x-api-version': '2', accept: 'application/json' },
+				signal,
+			});
+			return { ok: r.ok, status: r.status, text: await r.text() };
+		}, 20000);
+		if (!res.ok) { out.error = `FSA HTTP ${res.status}`; return out; }
+
+		const items = JSON.parse(res.text)?.establishments || [];
+		const want = normaliseVenue(name, town);
+		let hits = items.filter((e) => normaliseVenue(e.BusinessName, town) === want);
+
+		/* Distance gate before the ambiguity check, so two same-named venues in
+		   different towns do not read as an ambiguous match in ours. */
+		let centre = null, radiusKm = null;
+		if (coordinate) {
+			const [la, lo, rad] = String(coordinate).split(',').map(Number);
+			if (Number.isFinite(la) && Number.isFinite(lo)) { centre = { lat: la, lon: lo }; radiusKm = Number.isFinite(rad) ? rad : 15; }
+		}
+		/* Two ways to corroborate location, because the FSA populates geocode for
+		   only some establishments — Greek On The Docks, plainly in Gloucester,
+		   has latitude and longitude both null. Rejecting those outright threw
+		   away correct matches; accepting them blindly is how a Cotswold pub
+		   ends up on a Gloucester scorecard. LocalAuthorityName is the reliable
+		   second signal: Gloucester City, Cotswold, Bristol. */
+		const townKey = town ? String(town).toLowerCase() : null;
+		const locatedBy = new Map();
+		if (centre || townKey) {
+			hits = hits.filter((e) => {
+				const g = e.geocode || {};
+				/* Number(null) is 0, not NaN, so a null geocode passed isFinite
+				   and the distance was measured to lat 0 / lon 0 — the Gulf of
+				   Guinea — silently rejecting every establishment the FSA has
+				   not geocoded, which includes plainly-local ones. */
+				const hasGeo = g.latitude != null && g.longitude != null;
+				const lat = Number(g.latitude), lon = Number(g.longitude);
+				if (centre && hasGeo && Number.isFinite(lat) && Number.isFinite(lon)) {
+					const d = distanceKm(centre, { lat, lon });
+					if (d <= radiusKm) { locatedBy.set(e, { how: 'distance', d }); return true; }
+					return false;
+				}
+				if (townKey && String(e.LocalAuthorityName || '').toLowerCase().includes(townKey)) {
+					locatedBy.set(e, { how: 'local-authority', d: null });
+					return true;
+				}
+				return false;
+			});
+		}
+
+		if (!hits.length) { out.matched = false; return out; }
+		if (hits.length > 1) {
+			/* A chain with several branches in one town, or two venues sharing a
+			   name. Without an address to disambiguate we do not guess. */
+			out.matched = false;
+			out.error = `ambiguous: ${hits.length} establishments share this name in the area`;
+			return out;
+		}
+
+		const e = hits[0];
+		out.matched = true;
+		const loc = locatedBy.get(e);
+		out.locatedBy = loc?.how ?? null;
+		if (loc?.d != null) out.distanceKm = Math.round(loc.d * 10) / 10;
+		out.fhrsId = e.FHRSID ?? null;
+		out.businessName = e.BusinessName ?? null;
+		out.businessType = e.BusinessType ?? null;
+		out.ratingValue = e.RatingValue != null ? String(e.RatingValue) : null;
+		out.ratingNumeric = /^[0-5]$/.test(out.ratingValue || '') ? Number(out.ratingValue) : null;
+		out.ratingDate = e.RatingDate ? String(e.RatingDate).slice(0, 10) : null;
+		out.postcode = e.PostCode ?? null;
+		out.localAuthority = e.LocalAuthorityName ?? null;
+		const sc = e.scores || {};
+		if (sc.Hygiene != null || sc.Structural != null || sc.ConfidenceInManagement != null) {
+			out.scores = {
+				hygiene: sc.Hygiene ?? null,
+				structural: sc.Structural ?? null,
+				confidenceInManagement: sc.ConfidenceInManagement ?? null,
+			};
+		}
+	} catch (err) {
+		out.error = err?.name === 'AbortError' ? 'FSA timeout' : String(err?.message || err);
+	}
+	return out;
+}

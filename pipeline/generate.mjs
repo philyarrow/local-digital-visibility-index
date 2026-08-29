@@ -516,6 +516,17 @@ function contextCard(b) {
 		rows.push(['Real-user speed (CrUX)', 'Too little traffic to appear in Chrome\u2019s public dataset']);
 	}
 
+	const fsa = e.fsa;
+	if (fsa && fsa.matched) {
+		const bits = [];
+		bits.push(fsa.ratingNumeric !== null ? `Rating ${fsa.ratingValue} of 5` : `Rating: ${esc(fsa.ratingValue)}`);
+		if (fsa.ratingDate) bits.push(`inspected ${esc(fsa.ratingDate)}`);
+		if (fsa.localAuthority) bits.push(esc(fsa.localAuthority));
+		rows.push(['Food hygiene (FSA)', bits.join(' · ')]);
+	} else if (fsa && fsa.matched === false) {
+		rows.push(['Food hygiene (FSA)', 'No confident match on the registered trading name']);
+	}
+
 	const cr = e.crawl;
 	if (cr && cr.pagesCrawled) {
 		const p = [`${cr.pagesCrawled} pages crawled`];
@@ -643,6 +654,49 @@ function registryMix(ranked) {
 <figure class="pyc-fig">
 <figcaption>Companies House matched ${matched.length} of ${ranked.businesses.length} businesses ${howMatched}. Firms are seeded by trading name, which is how a business presents itself rather than what it is registered to do — so the mix below is often broader than the index title suggests.${sumNote}${missingNote}${ageLine} Recorded alongside the measurement and carrying no weight in any score.</figcaption>
 <table class="pyc-kv"><thead><tr><th scope="col">SIC</th><th scope="col">Registered activity</th><th scope="col" class="pyc-pl-n">Firms</th></tr></thead><tbody>${rows}</tbody></table>
+</figure>
+`;
+}
+
+/* Hygiene rating against digital visibility.
+ *
+ * This is the cross-check the professional regulators made impossible: the FSA
+ * publishes ratings as genuinely open data, so a food cohort can be compared
+ * against an official assessment nobody in this project produced.
+ *
+ * The match rate is low and stated, because venues register with the FSA under
+ * a name that often differs from the one they trade under, and a hygiene rating
+ * published against the wrong restaurant is worse than no rating at all. */
+function hygieneCrossCheck(ranked) {
+	const m = ranked.businesses.filter((b) => b.enrichment?.fsa?.matched === true && b.digitalVisibilityScore != null);
+	if (m.length < 5) return '';
+
+	const byRating = new Map();
+	for (const b of m) {
+		const r = b.enrichment.fsa.ratingValue;
+		if (!byRating.has(r)) byRating.set(r, []);
+		byRating.get(r).push(b.digitalVisibilityScore);
+	}
+	const med = (a) => {
+		const x = [...a].sort((p, q) => p - q); const i = x.length >> 1;
+		return x.length % 2 ? x[i] : Math.round(((x[i - 1] + x[i]) / 2) * 10) / 10;
+	};
+	const rows = [...byRating.entries()]
+		.sort((a, c) => String(c[0]).localeCompare(String(a[0])))
+		.map(([r, v]) => `<tr><th scope="row">${esc(r)}</th><td class="pyc-pl-n">${v.length}</td><td class="pyc-pl-n">${med(v)}</td></tr>`)
+		.join('');
+
+	const top = m.filter((b) => b.enrichment.fsa.ratingNumeric === 5).map((b) => b.digitalVisibilityScore);
+	const rest = m.filter((b) => b.enrichment.fsa.ratingNumeric !== null && b.enrichment.fsa.ratingNumeric < 5).map((b) => b.digitalVisibilityScore);
+	const line = top.length >= 3 && rest.length >= 3
+		? ` Firms rated 5 have a median Digital Visibility Score of ${med(top)}; those rated below 5, ${med(rest)}. On ${m.length} matched venues that is suggestive, not conclusive.`
+		: '';
+
+	return `## Food hygiene rating against digital visibility
+
+<figure class="pyc-fig">
+<figcaption>Food Standards Agency hygiene ratings, matched to ${m.length} of ${ranked.businesses.length} businesses on an exact registered name with the location corroborated by distance or local authority. The match rate is low by design: venues register under names that differ from the one they trade under, and an unmatched venue is left unmatched rather than guessed at.${line} Recorded alongside the measurement and carrying no weight in any score.</figcaption>
+<table class="pyc-kv"><thead><tr><th scope="col">Hygiene rating</th><th scope="col" class="pyc-pl-n">Venues</th><th scope="col" class="pyc-pl-n">Median visibility score</th></tr></thead><tbody>${rows}</tbody></table>
 </figure>
 `;
 }
@@ -1959,6 +2013,7 @@ ${section('Reputation: reviews against rating', reputationScatter(ranked))}
 ${section('What the keyword basket is asking', intentMix(ranked))}
 ${section('Local pack coverage across the city', geoGrid(ranked))}
 ${section('What changed since last quarter', quarterMovement(ranked, prior, quarter))}
+${hygieneCrossCheck(ranked)}
 ${registryMix(ranked)}
 ## Which ${idxTitle.toLowerCase()} has the best website?
 

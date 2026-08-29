@@ -71,7 +71,7 @@ import {
 import { loadConfig, resolveIndex, buildKeywords, buildPrompts } from './lib/basket.mjs';
 import { findOrganicPosition, inLocalPack, matchReason, domainsMatch, buildLandscape, matchTargeted, searchNeedle } from './lib/match.mjs';
 import { crawlSite } from './lib/crawl.mjs';
-import { collectCrux, collectCompaniesHouse } from './lib/enrich.mjs';
+import { collectCrux, collectCompaniesHouse, collectFsa } from './lib/enrich.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA_ROOT = join(HERE, 'data');
@@ -568,6 +568,14 @@ async function collectBusiness(biz, indexSlug, shared, cfg) {
 		['companies', () => collectCompaniesHouse(biz.name, { town: shared.town })],
 	];
 
+	/* Food hygiene ratings, only where the sector is actually inspected. The
+	   FSA is free and open, which is why restaurants lead the sectors with an
+	   official rating to cross-reference — the professional regulators all
+	   disallow the endpoints their data would have to come from. */
+	if (shared.sector?.fsaRated) {
+		enrichers.push(['fsa', () => collectFsa(biz.name, { town: shared.town, coordinate: shared.coordinate })]);
+	}
+
 	for (const [key, fn] of steps) {
 		try {
 			record.pillars[key] = await fn();
@@ -1004,7 +1012,7 @@ async function main() {
 		console.log('');
 	}
 
-	const shared = { sector, keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor, targetedErrors, town: indexCfg.town ?? null };
+	const shared = { sector, keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor, targetedErrors, town: indexCfg.town ?? null, coordinate: indexCfg.coordinate ?? null };
 
 	/* ---- Phase 3: per-business assembly ---- */
 
