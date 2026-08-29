@@ -528,6 +528,9 @@ function contextCard(b) {
 		rows.push(['Site structure', p.join(' · ')]);
 	} else if (cr && cr.robotsDisallowedAll) {
 		rows.push(['Site structure', 'robots.txt asks crawlers not to read this site, so it was not crawled']);
+	} else if (cr && (cr.error || cr.stoppedBecause)) {
+		/* A failed crawl was indistinguishable from an absent one. */
+		rows.push(['Site structure', `Not crawled — ${esc(cr.error || cr.stoppedBecause)}`]);
 	}
 
 	if (!rows.length) return '';
@@ -560,6 +563,24 @@ const SIC_LABELS = {
 	'86230': 'Dental practice',
 	'82110': 'Combined office administrative services',
 	'70229': 'Management consultancy',
+	'43390': 'Other building completion and finishing',
+	'42990': 'Construction of other civil engineering projects',
+	'43342': 'Glazing',
+	'43120': 'Site preparation',
+	'43910': 'Roofing activities',
+	'43290': 'Other construction installation',
+	'43110': 'Demolition',
+	'70100': 'Activities of head offices',
+	'70221': 'Financial management',
+	'71111': 'Architectural activities',
+	'71129': 'Other engineering activities',
+	'68100': 'Buying and selling of own real estate',
+	'68209': 'Other letting and operating of real estate',
+	'68201': 'Renting and operating of Housing Association real estate',
+	'81300': 'Landscape service activities',
+	'96090': 'Other service activities',
+	'47990': 'Other retail sale not in stores',
+	'62020': 'Information technology consultancy',
 };
 
 /* What the public register says this cohort is.
@@ -587,15 +608,40 @@ function registryMix(ranked) {
 		.map(([code, n]) => `<tr><th scope="row">${esc(code)}</th><td>${esc(SIC_LABELS[code] || 'Not labelled here')}</td><td class="pyc-pl-n">${n}</td></tr>`)
 		.join('');
 
+	/* [len >> 1] is the upper middle, not the median, for an even-sized set —
+	   it published 15.3 for Cheltenham construction where the median is 14.7. */
 	const ages = matched.map((b) => b.enrichment.companies.ageYears).filter((v) => typeof v === 'number').sort((a, c) => a - c);
-	const ageLine = ages.length
-		? ` Median company age is ${ages[ages.length >> 1]} years, ranging from ${ages[0]} to ${ages[ages.length - 1]}.`
+	const mid = ages.length >> 1;
+	const ageMedian = !ages.length ? null
+		: ages.length % 2 ? ages[mid]
+		: Math.round(((ages[mid - 1] + ages[mid]) / 2) * 10) / 10;
+	const ageLine = ageMedian !== null
+		? ` Median company age is ${ageMedian} years, ranging from ${ages[0]} to ${ages[ages.length - 1]}.`
 		: '';
+
+	/* Address corroboration only happens when the index config carries a town.
+	   Claiming it unconditionally would assert a check that never ran. */
+	const corroborated = matched.filter((b) => b.enrichment.companies.matchConfidence === 'unique-name-and-town').length;
+	const howMatched = corroborated === matched.length
+		? 'on an exact name with a corroborating registered address'
+		: corroborated === 0
+			? 'on an exact, unique registered name'
+			: `on an exact, unique registered name — ${corroborated} of them also corroborated by the registered address`;
+
+	/* Firms whose profile returned no SIC codes contribute no row, so say so
+	   rather than implying the table covers every matched firm. And the counts
+	   only exceed the cohort when firms actually hold multiple codes. */
+	const noSic = matched.length - matched.filter((b) => (b.enrichment.companies.sicCodes || []).length).length;
+	const codeTotal = [...counts.values()].reduce((a, c) => a + c, 0);
+	const sumNote = codeTotal > matched.length - noSic
+		? ' A company may register several SIC codes, so these counts sum to more than the number of firms.'
+		: '';
+	const missingNote = noSic ? ` ${noSic} matched ${noSic === 1 ? 'firm lists' : 'firms list'} no SIC code and ${noSic === 1 ? 'is' : 'are'} absent from the table.` : '';
 
 	return `## What the register says this cohort is
 
 <figure class="pyc-fig">
-<figcaption>Companies House matched ${matched.length} of ${ranked.businesses.length} businesses on an exact name with a corroborating registered address. Firms are seeded by trading name, which is how a business presents itself rather than what it is registered to do — so the mix below is often broader than the index title suggests. A company may register several SIC codes, so these counts sum to more than the number of firms.${ageLine} Recorded alongside the measurement and carrying no weight in any score.</figcaption>
+<figcaption>Companies House matched ${matched.length} of ${ranked.businesses.length} businesses ${howMatched}. Firms are seeded by trading name, which is how a business presents itself rather than what it is registered to do — so the mix below is often broader than the index title suggests.${sumNote}${missingNote}${ageLine} Recorded alongside the measurement and carrying no weight in any score.</figcaption>
 <table class="pyc-kv"><thead><tr><th scope="col">SIC</th><th scope="col">Registered activity</th><th scope="col" class="pyc-pl-n">Firms</th></tr></thead><tbody>${rows}</tbody></table>
 </figure>
 `;

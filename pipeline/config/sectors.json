@@ -31,7 +31,18 @@
 			"letting_agents",
 			"property_management_company"
 		],
-		"geoKeyword": "estate agents near me"
+		"geoKeyword": "estate agents near me",
+		"credentialTerms": [
+			"propertymark",
+			"naea",
+			"arla",
+			"rics",
+			"ombudsman",
+			"tpos",
+			"the-property-ombudsman",
+			"client-money-protection",
+			"cmp"
+		]
 	},
 	"solicitors": {
 		"label": "solicitors",
@@ -64,7 +75,15 @@
 			"solicitor",
 			"conveyancer"
 		],
-		"geoKeyword": "solicitors near me"
+		"geoKeyword": "solicitors near me",
+		"credentialTerms": [
+			"sra",
+			"solicitors-regulation",
+			"law-society",
+			"lexcel",
+			"regulated-by-the-sra",
+			"cilex"
+		]
 	},
 	"law-firms": {
 		"label": "law firms",
@@ -97,7 +116,17 @@
 			"solicitor",
 			"corporate_office"
 		],
-		"geoKeyword": "solicitors near me"
+		"geoKeyword": "solicitors near me",
+		"credentialTerms": [
+			"sra",
+			"solicitors-regulation",
+			"law-society",
+			"lexcel",
+			"regulated-by-the-sra",
+			"cilex",
+			"icaew",
+			"acca"
+		]
 	},
 	"dentists": {
 		"label": "dentists",
@@ -130,7 +159,15 @@
 			"cosmetic_dentist",
 			"orthodontist"
 		],
-		"geoKeyword": "dentist near me"
+		"geoKeyword": "dentist near me",
+		"credentialTerms": [
+			"gdc",
+			"general-dental-council",
+			"cqc",
+			"care-quality",
+			"bda",
+			"british-dental"
+		]
 	},
 	"construction": {
 		"label": "construction firms",
@@ -163,7 +200,20 @@
 			"builder",
 			"home_builder"
 		],
-		"geoKeyword": "builders near me"
+		"geoKeyword": "builders near me",
+		"credentialTerms": [
+			"fmb",
+			"federation-of-master-builders",
+			"niceic",
+			"gas-safe",
+			"chas",
+			"constructionline",
+			"trustmark",
+			"nhbc",
+			"ciob",
+			"citb",
+			"safecontractor"
+		]
 	},
 	"restaurants": {
 		"_note": "FSA food hygiene ratings are an open API with no key, so this sector supports a rating-vs-visibility cross-check no competitor publishes.",
@@ -197,7 +247,14 @@
 			"family_restaurant",
 			"gastropub"
 		],
-		"geoKeyword": "restaurants near me"
+		"geoKeyword": "restaurants near me",
+		"credentialTerms": [
+			"food-hygiene",
+			"food-standards",
+			"fsa",
+			"scores-on-the-doors",
+			"rating"
+		]
 	},
 	"care-homes": {
 		"_note": "CQC ratings exist but their public API now requires a subscription key — verify access before promising the cross-check.",
@@ -231,7 +288,13 @@
 			"assisted_living_facility",
 			"elder_care_service"
 		],
-		"geoKeyword": "care homes near me"
+		"geoKeyword": "care homes near me",
+		"credentialTerms": [
+			"cqc",
+			"care-quality-commission",
+			"care-inspectorate",
+			"skills-for-care"
+		]
 	},
 	"schools": {
 		"_note": "Ofsted and DfE Get Information About Schools publish open data suitable for a rating cross-check.",
@@ -265,7 +328,14 @@
 			"nursery_school",
 			"secondary_school"
 		],
-		"geoKeyword": "independent schools near me"
+		"geoKeyword": "independent schools near me",
+		"credentialTerms": [
+			"ofsted",
+			"isi",
+			"independent-schools-inspectorate",
+			"isc",
+			"department-for-education"
+		]
 	},
 	"accountants": {
 		"label": "accountants",
@@ -298,7 +368,18 @@
 			"tax_consultant",
 			"bookkeeping_service"
 		],
-		"geoKeyword": "accountants near me"
+		"geoKeyword": "accountants near me",
+		"credentialTerms": [
+			"icaew",
+			"acca",
+			"aat",
+			"cima",
+			"ciot",
+			"chartered-accountants",
+			"att",
+			"xero-certified",
+			"quickbooks-certified"
+		]
 	},
 	"vets": {
 		"label": "veterinary practices",
@@ -331,7 +412,12 @@
 			"animal_hospital",
 			"emergency_veterinarian_service"
 		],
-		"geoKeyword": "vets near me"
+		"geoKeyword": "vets near me",
+		"credentialTerms": [
+			"rcvs",
+			"royal-college-of-veterinary",
+			"practice-standards"
+		]
 	},
 	"physiotherapy": {
 		"label": "physiotherapy clinics",
@@ -364,7 +450,13 @@
 			"chiropractor",
 			"osteopath"
 		],
-		"geoKeyword": "physiotherapy near me"
+		"geoKeyword": "physiotherapy near me",
+		"credentialTerms": [
+			"csp",
+			"hcpc",
+			"chartered-society-of-physiotherapy",
+			"health-and-care-professions"
+		]
 	},
 	"roofers": {
 		"label": "roofing contractors",
@@ -395,7 +487,14 @@
 			"roofing_contractor",
 			"roofing_service"
 		],
-		"geoKeyword": "roofers near me"
+		"geoKeyword": "roofers near me",
+		"credentialTerms": [
+			"nfrc",
+			"confederation-of-roofing",
+			"trustmark",
+			"chas",
+			"competent-roofer"
+		]
 	},
 	"heating-engineers": {
 		"label": "heating engineers",
@@ -428,7 +527,16 @@
 			"heating_contractor",
 			"boiler_supplier"
 		],
-		"geoKeyword": "heating engineers near me"
+		"geoKeyword": "heating engineers near me",
+		"credentialTerms": [
+			"gas-safe",
+			"oftec",
+			"hetas",
+			"niceic",
+			"mcs",
+			"ciphe",
+			"trustmark"
+		]
 	},
 	"removals": {
 		"label": "removal companies",
@@ -460,6 +568,12 @@
 			"mover",
 			"storage_facility"
 		],
-		"geoKeyword": "removals near me"
+		"geoKeyword": "removals near me",
+		"credentialTerms": [
+			"bar",
+			"british-association-of-removers",
+			"fidi",
+			"trustmark"
+		]
 	}
 }

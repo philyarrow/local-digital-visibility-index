@@ -32,6 +32,15 @@ for slug in "${SLUGS[@]}"; do
     echo "not collected yet - skipped"; skipped=$((skipped+1)); continue
   fi
 
+  # collect.mjs writes _cost.json once, after the per-business loop, so its
+  # presence means the run finished. Without this an IN-PROGRESS collection at
+  # 49 of 55 businesses passed the percentage test below and was generated
+  # mid-flight — a published league table missing whoever had not been
+  # collected yet.
+  if [ ! -f "data/$slug/_cost.json" ]; then
+    echo "collection in progress or aborted - skipped"; skipped=$((skipped+1)); continue
+  fi
+
   # Nor is "some records" enough. An interrupted collection left 2 of 41
   # Gloucester accountants on disk and this script cheerfully generated and
   # published a two-firm league table. A cohort missing a fifth of its

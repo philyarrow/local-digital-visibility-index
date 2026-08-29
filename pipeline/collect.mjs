@@ -248,7 +248,7 @@ function safeOrigin(u) {
 /* Pillar 6 — Content & trust (indexed-count still stubbed)                    */
 /* -------------------------------------------------------------------------- */
 
-async function collectContent(url) {
+async function collectContent(url, sectorCfg) {
 	const out = {
 		source: 'Live homepage parse (links) + STUB indexed-count',
 		hasAboutLink: null,
@@ -270,8 +270,15 @@ async function collectContent(url) {
 
 		out.hasAboutLink = /\babout\b|about-us|our-story|who-we-are/.test(haystack);
 		out.hasTeamLink = /\bteam\b|our-team|meet-the-team|our-people|staff/.test(haystack);
-		out.hasCredentialsLink =
-			/propertymark|naea|arla|rics|ombudsman|tpos|the-property-ombudsman|client-money-protection|cmp/.test(haystack);
+		/* Sector-specific, because a single property-sector regex was being
+		   applied to every index. It matched Propertymark/NAEA/ARLA/RICS and
+		   nothing else, so construction, law, accountancy and dental cohorts
+		   scored 0% on credentials — a detector artefact published as a finding
+		   about those firms, and one that skewed the whole three-link analysis
+		   towards estate agents. Generic terms are included so a firm that says
+		   "accredited" without naming a body is still detected. */
+		const credTerms = [...(sectorCfg?.credentialTerms || []), ...GENERIC_CREDENTIAL_TERMS];
+		out.hasCredentialsLink = credTerms.some((t) => haystack.includes(t));
 	} catch (e) {
 		out.error = e?.name === 'AbortError' ? 'homepage timeout' : String(e?.message || e);
 	}
@@ -284,6 +291,9 @@ async function collectContent(url) {
 
 /* Fields that together make a Google Business Profile "complete". Weighted
    equally; the fraction present becomes profileCompleteness (0-1). */
+/* Words a site uses when it is signalling regulation without naming a body. */
+const GENERIC_CREDENTIAL_TERMS = ['accredited', 'accreditation', 'registered-with', 'regulated-by', 'our-credentials', 'memberships', 'professional-body'];
+
 const GBP_COMPLETENESS_FIELDS = [
 	'title', 'address', 'phone', 'url', 'work_time',
 	'category', 'description', 'main_image', 'latitude',
@@ -549,7 +559,7 @@ async function collectBusiness(biz, indexSlug, shared, cfg) {
 	const steps = [
 		['speed', () => collectSpeed(biz.url)],
 		['technical', () => collectTechnical(biz.url)],
-		['content', () => collectContent(biz.url)],
+		['content', () => collectContent(biz.url, shared.sector)],
 	];
 
 	const enrichers = [
@@ -994,7 +1004,7 @@ async function main() {
 		console.log('');
 	}
 
-	const shared = { keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor, targetedErrors, town: indexCfg.town ?? null };
+	const shared = { sector, keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor, targetedErrors, town: indexCfg.town ?? null };
 
 	/* ---- Phase 3: per-business assembly ---- */
 

@@ -200,7 +200,15 @@ export async function crawlSite(startUrl, opts = {}) {
 		const { url, depth } = queue.shift();
 		let pathname;
 		try { pathname = new URL(url).pathname; } catch { continue; }
-		if (!robotsAllows(rules, pathname)) continue;
+		if (!robotsAllows(rules, pathname)) {
+			/* robots.txt may allow "/" but disallow the start path itself. That
+			   emptied the queue with no error and no stoppedBecause — the exact
+			   reasonless zero this was meant to eliminate. */
+			if (out.pagesCrawled === 0 && url === startUrl) {
+				out.stoppedBecause = 'robots.txt disallows the start page';
+			}
+			continue;
+		}
 
 		if (out.pagesCrawled > 0) await sleep(cfg.delayMs);
 		const res = await fetchText(url, cfg.perRequestTimeoutMs);
