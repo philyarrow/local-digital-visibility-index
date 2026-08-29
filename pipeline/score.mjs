@@ -180,6 +180,15 @@ function computeBusiness(record) {
 		   compelling thing the pipeline produces, and they were previously
 		   stranded in the per-business files where nothing downstream read them. */
 		evidence: {
+			/* The three homepage link checks that make up the Content & trust
+			   pillar. Carried through and exported because published analysis
+			   cites them, and this project's rule is that a figure a reader
+			   cannot reproduce from the open data does not get published. */
+			content: {
+				hasAboutLink: record.pillars?.content?.hasAboutLink ?? null,
+				hasTeamLink: record.pillars?.content?.hasTeamLink ?? null,
+				hasCredentialsLink: record.pillars?.content?.hasCredentialsLink ?? null,
+			},
 			positions: record.pillars?.visibility?.positions || {},
 			keywordBasket: record.pillars?.visibility?.keywordBasket || [],
 			rankedKeywords: record.pillars?.visibility?.rankedKeywords ?? null,

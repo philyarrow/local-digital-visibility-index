@@ -1992,6 +1992,9 @@ function exportJson(ranked, quarter, indexSlug) {
 			includedPillars: b.includedPillars,
 			excludedPillars: b.excludedPillars,
 			effectiveWeights: b.effectiveWeights,
+			/* Published so the homepage-link analysis on the blog is
+			   reproducible from this file, as that piece states it is. */
+			contentChecks: b.evidence?.content ?? null,
 			/* The scorecard publishes a Companies House number, a CrUX reading
 			   and crawl metrics. The dated snapshot is this project's receipt
 			   for what was published, so anything asserted on a page has to be
