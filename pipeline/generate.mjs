@@ -541,6 +541,66 @@ function contextCard(b) {
 `;
 }
 
+/* SIC labels for the codes these sectors actually produce. Unknown codes are
+   shown bare rather than guessed at — a wrong label on official registry data
+   would be worse than no label. */
+const SIC_LABELS = {
+	'41100': 'Development of building projects',
+	'41201': 'Construction of commercial buildings',
+	'41202': 'Construction of domestic buildings',
+	'43999': 'Other specialised construction',
+	'43310': 'Plastering', '43320': 'Joinery installation', '43341': 'Painting',
+	'43210': 'Electrical installation', '43220': 'Plumbing and heating',
+	'56101': 'Licensed restaurants', '56102': 'Unlicensed restaurants and cafes',
+	'56103': 'Take-away food shops', '56302': 'Public houses and bars',
+	'55100': 'Hotels and similar accommodation',
+	'69201': 'Accounting and auditing', '69202': 'Bookkeeping', '69203': 'Tax consultancy',
+	'69102': 'Solicitors', '69109': 'Other legal activities',
+	'68310': 'Real estate agencies', '68320': 'Management of real estate',
+	'86230': 'Dental practice',
+	'82110': 'Combined office administrative services',
+	'70229': 'Management consultancy',
+};
+
+/* What the public register says this cohort is.
+ *
+ * The seed list is curated from trading names, which is how a firm presents
+ * itself rather than what it is registered to do. For Gloucester accountants
+ * those disagreed: six firms trading as "Accountancy" or "Accounting" are
+ * registered under bookkeeping. Publishing the mix is more useful than quietly
+ * narrowing the cohort to fit its own title, and it is the one place the
+ * Companies House data says something about the sector rather than one firm. */
+function registryMix(ranked) {
+	const matched = ranked.businesses.filter((b) => b.enrichment?.companies?.matched === true);
+	if (matched.length < 5) return '';
+
+	const counts = new Map();
+	for (const b of matched) {
+		for (const c of b.enrichment.companies.sicCodes || []) {
+			counts.set(c, (counts.get(c) || 0) + 1);
+		}
+	}
+	if (!counts.size) return '';
+
+	const rows = [...counts.entries()]
+		.sort((a, c) => c[1] - a[1])
+		.map(([code, n]) => `<tr><th scope="row">${esc(code)}</th><td>${esc(SIC_LABELS[code] || 'Not labelled here')}</td><td class="pyc-pl-n">${n}</td></tr>`)
+		.join('');
+
+	const ages = matched.map((b) => b.enrichment.companies.ageYears).filter((v) => typeof v === 'number').sort((a, c) => a - c);
+	const ageLine = ages.length
+		? ` Median company age is ${ages[ages.length >> 1]} years, ranging from ${ages[0]} to ${ages[ages.length - 1]}.`
+		: '';
+
+	return `## What the register says this cohort is
+
+<figure class="pyc-fig">
+<figcaption>Companies House matched ${matched.length} of ${ranked.businesses.length} businesses on an exact name with a corroborating registered address. Firms are seeded by trading name, which is how a business presents itself rather than what it is registered to do — so the mix below is often broader than the index title suggests. A company may register several SIC codes, so these counts sum to more than the number of firms.${ageLine} Recorded alongside the measurement and carrying no weight in any score.</figcaption>
+<table class="pyc-kv"><thead><tr><th scope="col">SIC</th><th scope="col">Registered activity</th><th scope="col" class="pyc-pl-n">Firms</th></tr></thead><tbody>${rows}</tbody></table>
+</figure>
+`;
+}
+
 function idTitleQuarter(idxTitle, quarter) {
 	return `${idxTitle} Digital Visibility Index ${quarter}`;
 }
@@ -1853,6 +1913,7 @@ ${section('Reputation: reviews against rating', reputationScatter(ranked))}
 ${section('What the keyword basket is asking', intentMix(ranked))}
 ${section('Local pack coverage across the city', geoGrid(ranked))}
 ${section('What changed since last quarter', quarterMovement(ranked, prior, quarter))}
+${registryMix(ranked)}
 ## Which ${idxTitle.toLowerCase()} has the best website?
 
 ${scored.length ? `${scored[0].name} tops the ${quarter} index with a Digital Visibility Score of ${scored[0].digitalVisibilityScore}/100.` : ''} Each firm has a full diagnostic scorecard linked from the table above.
