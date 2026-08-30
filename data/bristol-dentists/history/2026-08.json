@@ -1,0 +1,986 @@
+{
+  "index": "bristol-dentists",
+  "title": "PYC Bristol Dentist Digital Visibility Index",
+  "town": "Bristol",
+  "sector": "dentists",
+  "sectorLabel": "dentists",
+  "keywordsPerIndex": 12,
+  "quarter": "Q3-2026",
+  "measuredAt": "2026-08-30T12:40:52.073Z",
+  "methodology": "https://hub.pyc.agency/indices/methodology/",
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "terms": "https://hub.pyc.agency/indices/licence/"
+  },
+  "attribution": "Phil Yarrow (PYC) — Local Digital Visibility Index. https://hub.pyc.agency/indices/",
+  "citation": "Phil Yarrow (PYC) — Local Digital Visibility Index: Bristol Dentist, Q3-2026. https://hub.pyc.agency/indices/bristol-dentists/",
+  "attributionNote": "Reuse of ANY data from this index — a single figure, one dataset, several, or all of them — requires the `attribution` credit above, reproduced and linked. `citation` is the fuller form for quoting this particular dataset. Reuse is permitted commercially and in AI-generated answers on that condition.",
+  "weights": {
+    "speed": 20,
+    "technical": 20,
+    "local": 20,
+    "visibility": 15,
+    "ai": 15,
+    "content": 10
+  },
+  "pillarCoverage": {
+    "speed": {
+      "scored": 9,
+      "total": 9,
+      "live": true
+    },
+    "technical": {
+      "scored": 9,
+      "total": 9,
+      "live": true
+    },
+    "local": {
+      "scored": 9,
+      "total": 9,
+      "live": true
+    },
+    "visibility": {
+      "scored": 9,
+      "total": 9,
+      "live": true
+    },
+    "ai": {
+      "scored": 9,
+      "total": 9,
+      "live": true
+    },
+    "content": {
+      "scored": 9,
+      "total": 9,
+      "live": true
+    }
+  },
+  "overallMedian": 58,
+  "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
+  "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
+  "sectorMedians": {
+    "speed": 61,
+    "technical": 88,
+    "local": 86,
+    "visibility": 27,
+    "ai": 0,
+    "content": 67
+  },
+  "businesses": [
+    {
+      "rank": 1,
+      "name": "Clifton Dental Surgery",
+      "url": "https://cliftondentalsurgery.co.uk/",
+      "digitalVisibilityScore": 71,
+      "pillarScores": {
+        "speed": 41,
+        "technical": 88,
+        "local": 89,
+        "visibility": 34,
+        "ai": 80,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://cliftondentalsurgery.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 35,
+          "avgInternalLinksPerPage": 35,
+          "maxDepthReached": 0,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.029,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "name": "Dental Touch",
+      "url": "https://www.dental-touch.co.uk/",
+      "digitalVisibilityScore": 64,
+      "pillarScores": {
+        "speed": 60,
+        "technical": 88,
+        "local": 99,
+        "visibility": 33,
+        "ai": 20,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.dental-touch.co.uk/",
+          "pagesCrawled": 19,
+          "pagesDiscovered": 35,
+          "internalLinks": 1013,
+          "avgInternalLinksPerPage": 53.3,
+          "maxDepthReached": 1,
+          "genericAnchors": 31,
+          "genericAnchorRatio": 0.031,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": 1,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 8,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2025-10-20",
+          "sitemapStaleDays": 314,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "time budget",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "name": "Clifton Down Dental Practice",
+      "url": "https://cliftondowndental.co.uk/",
+      "digitalVisibilityScore": 62,
+      "pillarScores": {
+        "speed": 65,
+        "technical": 100,
+        "local": 80,
+        "visibility": 24,
+        "ai": 20,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://cliftondowndental.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 29,
+          "internalLinks": 563,
+          "avgInternalLinksPerPage": 22.5,
+          "maxDepthReached": 2,
+          "genericAnchors": 13,
+          "genericAnchorRatio": 0.023,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 27,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-01-28",
+          "sitemapStaleDays": 214,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "name": "DentaQuest Clifton",
+      "url": "https://dentaquest.co.uk/",
+      "digitalVisibilityScore": 61,
+      "pillarScores": {
+        "speed": 66,
+        "technical": 100,
+        "local": 77,
+        "visibility": 17,
+        "ai": 0,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://dentaquest.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1563,
+          "inpMs": null,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": null,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "name": "Bristol Dental Specialists",
+      "url": "https://bristoldentalspecialists.com/",
+      "digitalVisibilityScore": 58,
+      "pillarScores": {
+        "speed": 54,
+        "technical": 88,
+        "local": 90,
+        "visibility": 31,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://bristoldentalspecialists.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 76,
+          "internalLinks": 2759,
+          "avgInternalLinksPerPage": 110.4,
+          "maxDepthReached": 1,
+          "genericAnchors": 60,
+          "genericAnchorRatio": 0.022,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 31,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-07-30",
+          "sitemapStaleDays": 31,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "11696017",
+          "companyName": "BRISTOL DENTAL SPECIALISTS LTD",
+          "companyStatus": "active",
+          "incorporatedOn": "2018-11-26",
+          "ageYears": 7.8,
+          "sicCodes": [
+            "86230"
+          ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "24 Berkeley Square Clifton, Bristol, England, BS8 1HP",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "name": "Windmill Hill Smiles",
+      "url": "https://www.windmillhillsmiles.com/",
+      "digitalVisibilityScore": 54,
+      "pillarScores": {
+        "speed": 61,
+        "technical": 75,
+        "local": 100,
+        "visibility": 25,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.windmillhillsmiles.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 29,
+          "internalLinks": 731,
+          "avgInternalLinksPerPage": 29.2,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 25,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2025-08-27",
+          "sitemapStaleDays": 369,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 7,
+      "name": "Redland Road Dental Practice",
+      "url": "https://redlanddental.co.uk/",
+      "digitalVisibilityScore": 52,
+      "pillarScores": {
+        "speed": 62,
+        "technical": 75,
+        "local": 86,
+        "visibility": 29,
+        "ai": 20,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://redlanddental.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 8,
+      "name": "Zetland Road Dental Practice",
+      "url": "https://www.zetlanddental.co.uk/",
+      "digitalVisibilityScore": 47,
+      "pillarScores": {
+        "speed": 85,
+        "technical": 75,
+        "local": 70,
+        "visibility": 4,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.zetlanddental.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 9,
+      "name": "Promenade Dental",
+      "url": "https://promenade-dental.co.uk/",
+      "digitalVisibilityScore": 46,
+      "pillarScores": {
+        "speed": 56,
+        "technical": 75,
+        "local": 79,
+        "visibility": 27,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://promenade-dental.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Bristol"
+        }
+      }
+    }
+  ],
+  "status": "interim",
+  "period": "2026-08",
+  "statusNote": "Interim monthly measurement, not a published ranking. The published index for this quarter is data/bristol-dentists/q3-2026.json and on the site at https://hub.pyc.agency/indices/bristol-dentists/. Interim files exist so movement over time can be analysed; they are not editorially reviewed and firms are not ranked on them."
+}
