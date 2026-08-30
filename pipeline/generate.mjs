@@ -886,7 +886,7 @@ function divergingPillars(b, medians, scaleTo = 25) {
  *
  * Lighthouse runs one throttled load on a datacentre machine. CrUX reports what
  * actual Chrome users experienced over 28 days. Across the businesses where we
- * hold both, the median lab LCP is more than six times the real-user figure —
+ * hold both, the median lab LCP is seven times the real-user figure —
  * 11.9 seconds against 1.7 — and the two verdicts disagree for roughly a third
  * of sites.
  *
