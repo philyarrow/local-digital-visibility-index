@@ -163,6 +163,13 @@ export async function crawlSite(startUrl, opts = {}) {
 		keyPageDepth: { contact: null, about: null, team: null, services: null },
 		orphanCandidates: null,
 		sitemapUrls: null,
+		sitemapDeclaredInRobots: null,
+		sitemapIsIndex: false,
+		sitemapHasLastmod: null,
+		sitemapNewestLastmod: null,
+		sitemapStaleDays: null,
+		sitemapSampleChecked: null,
+		sitemapSampleResolved: null,
 		robotsDisallowedAll: false,
 		stoppedBecause: null,
 		depthLimited: false,
@@ -273,13 +280,69 @@ export async function crawlSite(startUrl, opts = {}) {
 			: null;
 	}
 
-	// ---- orphans: in the sitemap but never reached by following links ----
-	const sm = await fetchText(`${origin}/sitemap.xml`, cfg.perRequestTimeoutMs);
+	/* ---- sitemap ----
+	   A sitemap is a claim about what a site contains, and the interesting part
+	   is whether the claim holds: is it declared where crawlers look, does it
+	   carry dates, are those dates recent, and do the URLs it lists actually
+	   resolve. A count on its own says almost nothing. */
+	out.sitemapDeclaredInRobots = /(^|\n)\s*sitemap\s*:/i.test(rob.ok ? rob.html : '');
+
+	let smUrl = `${origin}/sitemap.xml`;
+	const declared = (rob.ok ? rob.html : '').match(/(?:^|\n)\s*sitemap\s*:\s*(\S+)/i);
+	if (declared && registrableDomain(declared[1]) === home) smUrl = declared[1];
+
+	let sm = await fetchText(smUrl, cfg.perRequestTimeoutMs, { allowPlain: true });
+
+	/* A sitemap index points at other sitemaps; follow the first child so the
+	   count reflects pages rather than a list of files. */
+	if (sm.ok && /<sitemapindex/i.test(sm.html)) {
+		out.sitemapIsIndex = true;
+		const child = sm.html.match(/<loc>\s*([^<\s]+)\s*<\/loc>/i);
+		if (child && registrableDomain(child[1]) === home) {
+			sm = await fetchText(child[1], cfg.perRequestTimeoutMs, { allowPlain: true });
+		}
+	}
+
 	if (sm.ok) {
-		const locs = [...sm.html.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/gi)].map((m) => m[1]);
+		const entries = [...sm.html.matchAll(/<url>([\s\S]*?)<\/url>/gi)].map((m) => m[1]);
+		const locs = entries.length
+			? entries.map((e) => (e.match(/<loc>\s*([^<\s]+)\s*<\/loc>/i) || [])[1]).filter(Boolean)
+			: [...sm.html.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/gi)].map((m) => m[1]);
 		const pages = locs.filter((l) => !/\.xml$/i.test(l) && registrableDomain(l) === home);
+
+		/* lastmod tells you whether anyone maintains the thing. A sitemap with
+		   no dates at all, or dates years old, is a different signal from one
+		   updated last week — and it is the cheapest freshness proxy there is. */
+		const mods = entries
+			.map((e) => (e.match(/<lastmod>\s*([^<\s]+)\s*<\/lastmod>/i) || [])[1])
+			.filter(Boolean)
+			.map((d) => Date.parse(d))
+			.filter((t) => !Number.isNaN(t))
+			.sort((a, b) => b - a);
+		out.sitemapHasLastmod = mods.length > 0;
+		if (mods.length) {
+			out.sitemapNewestLastmod = new Date(mods[0]).toISOString().slice(0, 10);
+			out.sitemapStaleDays = Math.round((Date.now() - mods[0]) / 86400000);
+		}
+
 		if (pages.length) {
 			out.sitemapUrls = pages.length;
+
+			/* Sample rather than verify every URL: a 400-page sitemap is not
+			   worth 400 requests, and a sample answers the question — does this
+			   sitemap point at pages that exist. */
+			const sample = pages.slice(0, 5);
+			let ok = 0, checked = 0;
+			for (const u of sample) {
+				if (Date.now() - started > cfg.totalBudgetMs + 20000) break;
+				const r = await fetchText(u, cfg.perRequestTimeoutMs);
+				checked++;
+				if (r.ok) ok++;
+			}
+			if (checked) {
+				out.sitemapSampleChecked = checked;
+				out.sitemapSampleResolved = ok;
+			}
 			/* Only meaningful when the crawl finished naturally — a crawl stopped
 			   by the page cap has unvisited pages by construction, and calling
 			   those orphans would be false. */

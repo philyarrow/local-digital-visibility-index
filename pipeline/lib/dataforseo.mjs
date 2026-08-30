@@ -606,3 +606,37 @@ export function buildGrid(centreLat, centreLng, radiusKm, n = 3) {
 	}
 	return points;
 }
+
+/* ---- backlinks ----
+   Referring domains and the spread of them. Priced per call rather than per
+   result, so it is the most expensive per-business signal in the pipeline —
+   which is why it is enrichment rather than a pillar, and why the caller
+   decides whether to spend it. */
+export async function backlinkSummary(target) {
+	if (!target) return { error: 'no target' };
+	const d = await post('backlinks/summary/live', [{
+		target,
+		internal_list_limit: 1,
+		backlinks_status_type: 'live',
+		include_subdomains: true,
+	}], { label: 'backlinks/summary' });
+
+	const task = d.tasks?.[0];
+	if (task && task.status_code !== 20000) {
+		return { error: `backlinks: ${task.status_code} ${task.status_message}` };
+	}
+	const r = task?.result?.[0];
+	if (!r) return { error: 'no result' };
+	return {
+		target: r.target ?? target,
+		rank: r.rank ?? null,
+		backlinks: r.backlinks ?? null,
+		referringDomains: r.referring_domains ?? null,
+		referringMainDomains: r.referring_main_domains ?? null,
+		referringPages: r.referring_pages ?? null,
+		brokenBacklinks: r.broken_backlinks ?? null,
+		referringLinksTypes: r.referring_links_types ?? null,
+		firstSeen: r.first_seen ?? null,
+		lostDate: r.lost_date ?? null,
+	};
+}

@@ -124,6 +124,18 @@ export async function collectCompaniesHouse(name, { key = process.env.COMPANIES_
 		incorporatedOn: null,
 		ageYears: null,
 		sicCodes: null,
+		companyType: null,
+		/* Size proxy. The strongest objection to any league table is "you are
+		   comparing a three-person firm with a fifty-person one", and Companies
+		   House answers it for free: the accounts filing type is small, micro,
+		   medium or full. It arrives in the profile response we already fetch
+		   and was being discarded. */
+		accountsType: null,
+		accountsMadeUpTo: null,
+		accountsOverdue: null,
+		hasCharges: null,
+		hasInsolvencyHistory: null,
+		previousNames: null,
 		matchConfidence: null,
 		registeredAddress: null,
 		error: null,
@@ -199,6 +211,19 @@ export async function collectCompaniesHouse(name, { key = process.env.COMPANIES_
 				const prof = JSON.parse(p.text);
 				out.sicCodes = prof?.sic_codes || null;
 				out.companyStatus = prof?.company_status || out.companyStatus;
+				out.companyType = prof?.type ?? null;
+				const acc = prof?.accounts || {};
+				out.accountsType = acc?.last_accounts?.type ?? null;
+				out.accountsMadeUpTo = acc?.last_accounts?.made_up_to ?? null;
+				out.accountsOverdue = typeof acc?.overdue === 'boolean'
+					? acc.overdue
+					: (typeof acc?.next_accounts?.overdue === 'boolean' ? acc.next_accounts.overdue : null);
+				out.hasCharges = typeof prof?.has_charges === 'boolean' ? prof.has_charges : null;
+				out.hasInsolvencyHistory = typeof prof?.has_insolvency_history === 'boolean' ? prof.has_insolvency_history : null;
+				/* A firm that has traded under other names is why a name match can
+				   fail; recording them makes an unmatched business explainable. */
+				const prev = prof?.previous_company_names;
+				out.previousNames = Array.isArray(prev) && prev.length ? prev.map((x) => x.name).filter(Boolean) : null;
 			}
 		}
 	} catch (e) {
@@ -361,6 +386,82 @@ export async function collectFsa(name, { town = null, coordinate = null } = {}) 
 		}
 	} catch (err) {
 		out.error = err?.name === 'AbortError' ? 'FSA timeout' : String(err?.message || err);
+	}
+	return out;
+}
+
+/* ------------------------------------------------------- Lighthouse ------- */
+
+/* The Speed pillar keeps a mobile performance score and two lab metrics. The
+ * same PageSpeed response also carries accessibility, best-practices and SEO
+ * categories, and the rest of the performance audits — all of it discarded.
+ *
+ * Recorded here as unscored context rather than folded into the pillar: adding
+ * categories to a published score would change every ranking retroactively, and
+ * a score that moves because we started looking at more things is not a score
+ * anyone can trust.
+ */
+export async function collectLighthouse(url, { key = process.env.PAGESPEED_API_KEY, strategy = 'mobile' } = {}) {
+	const out = {
+		source: 'PageSpeed Insights / Lighthouse (lab, mobile)',
+		strategy,
+		performance: null,
+		accessibility: null,
+		bestPractices: null,
+		seo: null,
+		lcpMs: null,
+		tbtMs: null,
+		clsScore: null,
+		fcpMs: null,
+		speedIndexMs: null,
+		/* The audits a local business can act on, and which fail most often. */
+		failing: null,
+		error: null,
+	};
+	if (!key) { out.error = 'no API key'; return out; }
+	if (!url) { out.error = 'no URL'; return out; }
+
+	try {
+		const qs = new URLSearchParams({ url, strategy, key });
+		for (const c of ['performance', 'accessibility', 'best-practices', 'seo']) qs.append('category', c);
+		const res = await withTimeout(async (signal) => {
+			const r = await fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${qs}`, { signal });
+			return { ok: r.ok, status: r.status, text: await r.text() };
+		}, 60000);
+		if (!res.ok) { out.error = `PSI HTTP ${res.status}`; return out; }
+
+		const lh = JSON.parse(res.text)?.lighthouseResult;
+		if (!lh) { out.error = 'no lighthouse result'; return out; }
+
+		const cat = (k) => {
+			const v = lh.categories?.[k]?.score;
+			return typeof v === 'number' ? Math.round(v * 100) : null;
+		};
+		out.performance = cat('performance');
+		out.accessibility = cat('accessibility');
+		out.bestPractices = cat('best-practices');
+		out.seo = cat('seo');
+
+		const a = lh.audits || {};
+		const num = (k) => (typeof a[k]?.numericValue === 'number' ? Math.round(a[k].numericValue) : null);
+		out.lcpMs = num('largest-contentful-paint');
+		out.tbtMs = num('total-blocking-time');
+		out.fcpMs = num('first-contentful-paint');
+		out.speedIndexMs = num('speed-index');
+		const cls = a['cumulative-layout-shift']?.numericValue;
+		out.clsScore = typeof cls === 'number' ? Number(cls.toFixed(3)) : null;
+
+		/* Named failing audits, so "your score is 62" becomes "these three
+		   things cost you it". Scores below 0.9 that carry a real title. */
+		const failing = Object.entries(a)
+			.filter(([, v]) => typeof v?.score === 'number' && v.score < 0.9 && v.title
+				&& v.scoreDisplayMode !== 'informative' && v.scoreDisplayMode !== 'notApplicable')
+			.map(([id, v]) => ({ id, title: v.title, score: Math.round(v.score * 100) }))
+			.sort((x, y) => x.score - y.score)
+			.slice(0, 8);
+		out.failing = failing.length ? failing : null;
+	} catch (e) {
+		out.error = e?.name === 'AbortError' ? 'PSI timeout' : String(e?.message || e);
 	}
 	return out;
 }
