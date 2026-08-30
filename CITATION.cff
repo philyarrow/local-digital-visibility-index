@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: Local Digital Visibility Index
+message: >-
+  If you use this dataset or reproduce these figures, please cite it. The
+  published analysis lives at hub.pyc.agency/indices; this repository holds
+  the open data and the pipeline that produced it.
+type: dataset
+authors:
+  - family-names: Yarrow
+    given-names: Phil
+    affiliation: PYC
+    website: https://pyc.agency
+repository-code: https://github.com/philyarrow/local-digital-visibility-index
+url: https://hub.pyc.agency/indices/
+abstract: >-
+  Quarterly league tables scoring South West UK businesses 0-100 on a Digital
+  Visibility Score, built from six weighted pillars: Speed and Core Web Vitals,
+  Technical foundation, Local presence, Visibility, AI search presence, and
+  Content and trust. Q3-2026 covers 271 businesses across 11 indices in Bath,
+  Bristol, Cheltenham, Exeter, Gloucester, Swindon and Worcester. Every score is
+  recomputable from the published data using the pipeline in this repository.
+  Superseded snapshots are retained alongside each release, so any previously
+  cited figure remains recoverable.
+keywords:
+  - local-seo
+  - open-data
+  - core-web-vitals
+  - digital-visibility
+  - south-west-england
+  - ai-search
+license: CC-BY-4.0
+version: q3-2026
+date-released: '2026-08-30'

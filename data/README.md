@@ -1,45 +1,67 @@
 # Datasets
 
-Dated quarterly snapshots of each Local Digital Visibility Index, one folder per index.
+Dated snapshots of every Local Digital Visibility Index, one folder per index.
+**271 businesses across 11 indices** as of Q3-2026.
+
+![Distribution of Digital Visibility Scores across 271 South West businesses, median 51](./score-distribution.svg)
+
+Most businesses sit between 40 and 60. Nothing scores above 90, and only three
+businesses reach the 80s — a score in this index is hard to get, because it
+requires being findable as well as technically sound.
+
+## The indices
+
+| Folder | Town | Sector | Businesses | Median score |
+|---|---|---|---:|---:|
+| [`bath-estate-agents/`](./bath-estate-agents/) | Bath | estate agents | 15 | 66 |
+| [`bristol-dentists/`](./bristol-dentists/) | Bristol | dentists | 9 | 59 |
+| [`bristol-estate-agents/`](./bristol-estate-agents/) | Bristol | estate agents | 18 | 59 |
+| [`cheltenham-construction/`](./cheltenham-construction/) | Cheltenham | construction firms | 52 | 46 |
+| [`cheltenham-law-firms/`](./cheltenham-law-firms/) | Cheltenham | law firms | 8 | 64.5 |
+| [`exeter-solicitors/`](./exeter-solicitors/) | Exeter | solicitors | 8 | 73 |
+| [`gloucester-accountants/`](./gloucester-accountants/) | Gloucester | accountants | 41 | 53 |
+| [`gloucester-construction/`](./gloucester-construction/) | Gloucester | construction firms | 13 | 50 |
+| [`gloucester-restaurants/`](./gloucester-restaurants/) | Gloucester | restaurants | 44 | 50 |
+| [`swindon-estate-agents/`](./swindon-estate-agents/) | Swindon | estate agents | 8 | 70.5 |
+| [`worcester-construction/`](./worcester-construction/) | Worcester | construction firms | 55 | 48 |
+
+## What is in each folder
 
 ```
-data/
-  bristol-estate-agents/      Bristol — estate agents
-  cheltenham-law-firms/       Cheltenham — law firms & accountants   (planned)
-  gloucester-construction/    Gloucester — construction & trades     (planned)
+q3-2026.json                        the published snapshot
+q3-2026.csv                         the same data, flat
+q3-2026-superseded-YYYY-MM-DD.*     what was published before a correction
+history/YYYY-MM.json                interim monthly measurement, NOT a ranking
 ```
 
-Each index folder holds one `<quarter>.json` and `<quarter>.csv` per snapshot, e.g. `q2-2026.json`. Snapshots are immutable and dated ("true as of [date]"); prior snapshots stay published so movement over time is visible.
+**`<quarter>.json` is the published ranking.** It is the receipt for what the
+site showed, and it changes only when a score is corrected — never quietly.
+Every correction is dated and explained in the
+[changelog](https://hub.pyc.agency/indices/changelog/), and the state before it
+is preserved as a `superseded` file so an earlier citation stays verifiable.
 
-## Two kinds of file, and the difference matters
+**`history/` is not a ranking.** Those files are automated monthly measurements
+that exist so movement over time can be analysed. They are not editorially
+reviewed, and businesses are not ranked on them. Each one says so in its own
+`statusNote`.
 
-```
-data/bristol-estate-agents/
-  q3-2026.json        PUBLISHED  the ranking, editorially reviewed
-  q3-2026.csv         PUBLISHED
-  history/
-    2026-09.json      INTERIM    a monthly measurement, not a ranking
-    2026-09.csv       INTERIM
-```
+## Using the data
 
-**`<quarter>.json` is the published index.** It is what the site shows, what the
-scorecards are generated from, and what a citation refers to. It is written once
-per quarter and never rewritten.
+Licensed [CC BY 4.0](../LICENSE-DATA). Cite a dated snapshot:
 
-**`<quarter>-superseded-<date>.json` is a withdrawn published dataset.** When a
-figure is corrected after publication the original is kept, not deleted, so
-anyone who cited it can still find exactly what they cited. The
-[changelog](https://hub.pyc.agency/indices/changelog/) says what changed and why.
+> PYC Local Digital Visibility Index, Q3-2026. https://hub.pyc.agency/indices/ · CC BY 4.0
 
-**`history/<YYYY-MM>.json` is an interim measurement.** Collection runs monthly
-so that movement can be analysed over time — you cannot fit a trend to one data
-point. These files carry `"status": "interim"`, they are produced automatically
-without editorial review, and **no business is ranked on them**.
+Every figure is recomputable from these files using the
+[pipeline](../pipeline/) in this repository. If you think a score is wrong,
+each scorecard on the site carries a correction link — corrections are logged
+publicly with a date.
 
-If you are citing a score for a business, cite the quarterly file. If you are
-analysing change over time, use the history series. Do not present an interim
-figure as a business's position in the index, because it isn't one.
+## Reading the scores honestly
 
-**License:** all data here is CC BY 4.0 — see [`../LICENSE-DATA`](../LICENSE-DATA). Reuse freely with attribution to `PYC Local Digital Visibility Index — https://hub.pyc.agency/indices/`.
-
-The human-facing analysis for every snapshot lives at [hub.pyc.agency/indices](https://hub.pyc.agency/indices/) (canonical).
+- **A pillar can be excluded.** Where a signal could not be measured, it is left
+  out and the remaining weights are renormalised, rather than scored as zero.
+  `includedPillars` and `effectiveWeights` on each business record say which.
+- **Compare within an index, not across them.** Sectors differ in ways the score
+  does not fully adjust for.
+- **One quarter is not a trend.** Q3-2026 is the first published quarter for
+  most of these cohorts.
