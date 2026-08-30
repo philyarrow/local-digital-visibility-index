@@ -132,3 +132,21 @@ Indices are re-measured quarterly. Each snapshot is a dated, tagged release ("tr
 ---
 
 Maintained by [Phil Yarrow (PYC)](https://hub.pyc.agency/about/).
+
+## Licensing
+
+**Data (`data/**`) — [CC BY 4.0](./LICENSE).** Use the numbers anywhere, including
+commercially, as long as you say where they came from:
+
+> PYC Local Digital Visibility Index, Q3-2026. https://hub.pyc.agency/indices/ · CC BY 4.0
+
+**Code (`pipeline/**`) — [MIT](./LICENSE-CODE).** Use it however you like.
+
+GitHub labels the whole repository CC BY 4.0 because that is the licence on the
+thing most people come here for. The pipeline is more permissive, not less; see
+[LICENSING.md](./LICENSING.md) for the split in full.
+
+Cite a *dated snapshot*, not the repository. Scores are corrected when we find
+them wrong, corrections are logged publicly in the
+[changelog](https://hub.pyc.agency/indices/changelog/), and the superseded data
+is kept alongside the current release so an earlier citation stays checkable.
