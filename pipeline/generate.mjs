@@ -323,6 +323,7 @@ ${section('The gap to the leader', gapDumbbell(b, ranked))}
 ${section('Closest to the first page', nearMisses(ranked, { slug: b.slug }))}
 ${section('AI search presence', aiCitations(b))}
 ${section('Local presence', localCard(b))}
+${section('Lab speed against real users', labVsField(b))}
 ${section('What customers talk about', reviewThemes(b))}
 ${section('Why this score', whyThisScore(b))}
 ## Key findings
@@ -881,6 +882,66 @@ function divergingPillars(b, medians, scaleTo = 25) {
 
 /* Every keyword this firm was measured on, with its live position. The single
    most useful thing the pipeline produces, and previously unpublished. */
+/* Lab against field: the same site, measured two ways.
+ *
+ * Lighthouse runs one throttled load on a datacentre machine. CrUX reports what
+ * actual Chrome users experienced over 28 days. Across the businesses where we
+ * hold both, the median lab LCP is more than six times the real-user figure —
+ * 11.9 seconds against 1.7 — and the two verdicts disagree for roughly a third
+ * of sites.
+ *
+ * That matters commercially, because the lab number is the one most often put
+ * in front of a business owner as evidence they need performance work. Where
+ * field data exists it is the better evidence, and a business is entitled to
+ * see both before being sold anything.
+ *
+ * Only rendered where BOTH exist. CrUX needs enough real traffic to report, so
+ * the quieter sites have no field data and get nothing here rather than a
+ * comparison against an absence. */
+function labVsField(b) {
+	const lh = b.enrichment?.lighthouse;
+	const cx = b.enrichment?.crux;
+	if (!lh || !cx || !cx.available) return '';
+	const labLcp = lh.lcpMs, fieldLcp = cx.lcpMs;
+	if (!Number.isFinite(labLcp) || !Number.isFinite(fieldLcp) || !fieldLcp) return '';
+
+	const ratio = Math.round((labLcp / fieldLcp) * 10) / 10;
+	const labSlow = typeof lh.performance === 'number' && lh.performance < 50;
+	const fieldFail = cx.passesCwv === false;
+
+	/* Name the metric that actually fails. The table above compares LCP, but the
+	   pass/fail verdict is the whole Core Web Vitals set — so a site with a fast
+	   real-user LCP and a layout-shift problem read as a flat contradiction:
+	   "1.5s" directly above "real visitors are failing Core Web Vitals". */
+	const failing = [
+		cx.lcpGood === false && 'loading (LCP)',
+		cx.inpGood === false && 'responsiveness (INP)',
+		cx.clsGood === false && 'layout shift (CLS)',
+	].filter(Boolean);
+	const failingText = failing.length ? ` The metric failing for real users is ${failing.join(' and ')}.` : '';
+
+	let verdict;
+	if (labSlow && !fieldFail) {
+		verdict = `The lab test rates this site poorly, but real visitors are not experiencing it that way — Core Web Vitals pass on field data. Treat a low lab score here as a lead to investigate, not a fault to pay to fix.`;
+	} else if (!labSlow && fieldFail) {
+		verdict = `The lab test looks acceptable while real visitors are failing Core Web Vitals. This is the more serious direction of disagreement: the problem is real and a one-off lab run is missing it.${failingText}`;
+	} else if (fieldFail) {
+		verdict = `Both agree there is a problem, and the field data confirms real visitors are affected. This is worth fixing.${failingText}`;
+	} else {
+		verdict = `Both agree the site is performing acceptably for real visitors.`;
+	}
+
+	const sec = (ms) => `${(ms / 1000).toFixed(1)}s`;
+	return `<figure class="pyc-fig">
+<figcaption>Largest Contentful Paint measured two ways: one throttled lab run, against 28 days of real Chrome users.</figcaption>
+<table class="pyc-lab"><tbody>
+<tr><th scope="row">Lab (Lighthouse, mobile)</th><td class="pyc-lab-n">${sec(labLcp)}</td><td>one throttled load on a datacentre machine</td></tr>
+<tr><th scope="row">Field (real users)</th><td class="pyc-lab-n">${sec(fieldLcp)}</td><td>75th percentile of actual Chrome visitors over 28 days</td></tr>
+</tbody></table>
+<p class="pyc-takeaway">The lab figure is <strong>${ratio}\u00d7</strong> the real-user figure. ${esc(verdict)}</p>
+</figure>`;
+}
+
 /* Hard failures, named, above the fold.
  *
  * A pillar score of 45 tells a business it is behind. It does not tell it that
