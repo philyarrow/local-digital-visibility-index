@@ -267,6 +267,25 @@ function computeBusiness(record, ctx = {}) {
 				hasAboutLink: record.pillars?.content?.hasAboutLink ?? null,
 				hasTeamLink: record.pillars?.content?.hasTeamLink ?? null,
 				hasCredentialsLink: record.pillars?.content?.hasCredentialsLink ?? null,
+				hasBlogLink: record.pillars?.content?.hasBlogLink ?? null,
+				wordCount: record.pillars?.content?.wordCount ?? null,
+				contentFreshnessDays: record.pillars?.content?.contentFreshnessDays ?? null,
+			},
+			/* The technical checks behind the pillar score. Previously stopped
+			   here: a business could see "Technical 45" and had no way to learn
+			   that its own robots.txt was telling search engines to stay away.
+			   Publishing a number while withholding the reason it is low is not
+			   a diagnostic, and 46 of the businesses we measure are blocked
+			   this way right now. */
+			technical: {
+				https: record.pillars?.technical?.https ?? null,
+				indexable: record.pillars?.technical?.indexable ?? null,
+				robotsAllowsIndexing: record.pillars?.technical?.robotsAllowsIndexing ?? null,
+				hasSitemap: record.pillars?.technical?.hasSitemap ?? null,
+				hasRobotsTxt: record.pillars?.technical?.hasRobotsTxt ?? null,
+				hasJsonLd: record.pillars?.technical?.hasJsonLd ?? null,
+				hasLocalBusinessSchema: record.pillars?.technical?.hasLocalBusinessSchema ?? null,
+				hasViewportMeta: record.pillars?.technical?.hasViewportMeta ?? null,
 			},
 			positions: record.pillars?.visibility?.positions || {},
 			keywordBasket: record.pillars?.visibility?.keywordBasket || [],

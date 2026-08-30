@@ -317,11 +317,14 @@ ${pillarTable(b, ranked.sectorMedians)}
 
 ${divergingPillars(b, ranked.sectorMedians, deltaScale(ranked))}
 
+${section('Problems found', problemsFound(b))}
 ${section('Where this firm ranks', keywordTable(b))}
 ${section('The gap to the leader', gapDumbbell(b, ranked))}
 ${section('Closest to the first page', nearMisses(ranked, { slug: b.slug }))}
 ${section('AI search presence', aiCitations(b))}
 ${section('Local presence', localCard(b))}
+${section('What customers talk about', reviewThemes(b))}
+${section('Why this score', whyThisScore(b))}
 ## Key findings
 
 ${keyFindings(b, ranked).map((f) => `- ${f}`).join('\n')}
@@ -878,6 +881,145 @@ function divergingPillars(b, medians, scaleTo = 25) {
 
 /* Every keyword this firm was measured on, with its live position. The single
    most useful thing the pipeline produces, and previously unpublished. */
+/* Hard failures, named, above the fold.
+ *
+ * A pillar score of 45 tells a business it is behind. It does not tell it that
+ * its own robots.txt is instructing search engines to stay away — which is true
+ * of 46 of the businesses in these indices, is free to fix, and was previously
+ * knowable from the published dataset but stated nowhere on the page.
+ *
+ * Only unambiguous, checkable, actionable failures go here. Not "your score is
+ * low": that is what the score is for. */
+function problemsFound(b) {
+	const t = b.evidence?.technical || {};
+	const c = b.evidence?.content || {};
+	const items = [];
+
+	if (t.robotsAllowsIndexing === false) {
+		items.push(['critical', 'Search engines are being told not to index this site',
+			'The site\u2019s own robots.txt disallows crawling. Until that changes, nothing else on this page can help — the pages cannot enter the index in the first place.']);
+	}
+	if (t.indexable === false) {
+		items.push(['critical', 'The homepage carries a noindex instruction',
+			'A meta robots or X-Robots-Tag directive is asking search engines to leave this page out of results.']);
+	}
+	if (t.https === false) {
+		items.push(['critical', 'The site is not served over HTTPS',
+			'Browsers mark it as not secure, and it is a ranking signal in its own right.']);
+	}
+	if (t.hasSitemap === false) {
+		items.push(['warning', 'No XML sitemap found',
+			'Search engines have to discover every page by following links. On a small site that is survivable; on a large one it is not.']);
+	}
+	if (t.hasJsonLd === false) {
+		items.push(['warning', 'No structured data on the homepage',
+			'Nothing tells a search engine or an assistant what this business is, where it is, or what it does — in machine-readable terms.']);
+	} else if (t.hasLocalBusinessSchema === false) {
+		items.push(['warning', 'Structured data present, but no LocalBusiness markup',
+			'The page describes something to machines, but not that it is a local business with an address and opening hours.']);
+	}
+	if (t.hasViewportMeta === false) {
+		items.push(['warning', 'No mobile viewport tag',
+			'The page is not telling phones how to lay itself out. Most local searches happen on one.']);
+	}
+	if (c.hasBlogLink === false && typeof c.wordCount === 'number' && c.wordCount < 400) {
+		items.push(['warning', 'Very little published content',
+			`The homepage carries ${c.wordCount} words and the site links to no blog, news or insights section. There is little here for a search engine to match, or for an assistant to quote.`]);
+	}
+	if (typeof c.contentFreshnessDays === 'number' && c.contentFreshnessDays > 730) {
+		items.push(['note', 'The site has not changed in a long time',
+			`The homepage last reported a change ${Math.round(c.contentFreshnessDays / 365 * 10) / 10} years ago.`]);
+	}
+	if (!items.length) return '';
+
+	const label = { critical: 'Critical', warning: 'Worth fixing', note: 'Worth knowing' };
+	const rows = items.map(([sev, head, body]) =>
+		`<li class="pyc-prob pyc-prob-${sev}"><span class="pyc-prob-tag">${label[sev]}</span><b>${esc(head)}</b><span>${esc(body)}</span></li>`).join('');
+	const crit = items.filter((i) => i[0] === 'critical').length;
+	return `<figure class="pyc-fig">
+<figcaption>${crit ? `${crit} critical ${crit === 1 ? 'problem' : 'problems'} found. ` : ''}These are specific, checkable faults on the site — not opinions about it.</figcaption>
+<ul class="pyc-probs">${rows}</ul>
+</figure>`;
+}
+
+/* The arithmetic behind each pillar, on the page. The project's central claim is
+   that any published figure can be recomputed from the open data without
+   trusting anyone; that is easier to believe with the components printed next
+   to the number. */
+function whyThisScore(b) {
+	const c = b.evidence?.content || {};
+	const l = b.evidence?.local || {};
+	const ev = b.evidence || {};
+	const yn = (v) => v === true ? 'yes' : v === false ? 'no' : '—';
+	const rows = [];
+
+	const contentBits = [
+		`about page: ${yn(c.hasAboutLink)}`, `team page: ${yn(c.hasTeamLink)}`,
+		`credentials: ${yn(c.hasCredentialsLink)}`, `blog or news: ${yn(c.hasBlogLink)}`,
+	];
+	if (typeof c.wordCount === 'number') contentBits.push(`homepage: ${c.wordCount.toLocaleString('en-GB')} words`);
+	if (typeof c.contentFreshnessDays === 'number') contentBits.push(`last changed: ${c.contentFreshnessDays} days ago`);
+	if (typeof b.pillarScores?.content === 'number') rows.push(['Content &amp; trust', b.pillarScores.content, contentBits]);
+
+	if (typeof b.pillarScores?.visibility === 'number' && ev.keywordBasket?.length) {
+		const bits = [`ranks for ${ev.rankedKeywords ?? 0} of ${ev.keywordBasket.length} keywords`];
+		if (ev.avgPosition !== null && ev.avgPosition !== undefined) bits.push(`average position ${ev.avgPosition}`);
+		if (ev.localPackAppearances !== null && ev.localPackAppearances !== undefined) bits.push(`local 3-pack: ${ev.localPackAppearances}`);
+		rows.push(['Visibility', b.pillarScores.visibility, bits]);
+	}
+
+	if (typeof b.pillarScores?.local === 'number') {
+		const bits = [];
+		if (l.reviewCount !== null && l.reviewCount !== undefined) bits.push(`${l.reviewCount} reviews`);
+		if (l.avgRating !== null && l.avgRating !== undefined) bits.push(`rated ${l.avgRating}`);
+		if (l.reviewsLast90d !== null && l.reviewsLast90d !== undefined) bits.push(`${l.reviewsLast90d} new in 90 days`);
+		if (bits.length) rows.push(['Local presence', b.pillarScores.local, bits]);
+	}
+
+	const t = b.evidence?.technical || {};
+	if (typeof b.pillarScores?.technical === 'number' && Object.values(t).some((v) => v !== null)) {
+		/* robots.txt is listed alongside the page-level noindex check on
+		   purpose. They are different mechanisms and a site can pass one while
+		   failing the other, which reads as a contradiction unless both are
+		   shown: "indexable: yes" next to a critical robots warning is
+		   confusing, "page allows indexing / robots.txt blocks it" is not. */
+		rows.push(['Technical', b.pillarScores.technical, [
+			`HTTPS: ${yn(t.https)}`,
+			`page allows indexing: ${yn(t.indexable)}`,
+			`robots.txt allows crawling: ${yn(t.robotsAllowsIndexing)}`,
+			`sitemap: ${yn(t.hasSitemap)}`,
+			`structured data: ${yn(t.hasJsonLd)}`,
+		]]);
+	}
+
+	if (!rows.length) return '';
+	const body = rows.map(([name, score, bits]) =>
+		`<tr><th scope="row">${name}</th><td class="pyc-why-n">${score}</td><td>${bits.map(esc).join(' · ')}</td></tr>`).join('');
+	return `<figure class="pyc-fig">
+<figcaption>What each score is made of. Every input here is in the <a href="/indices/licence/">open dataset</a>, so the arithmetic can be checked rather than taken on trust.</figcaption>
+<table class="pyc-why"><thead><tr><th scope="col">Pillar</th><th scope="col">Score</th><th scope="col">Made up of</th></tr></thead><tbody>${body}</tbody></table>
+</figure>`;
+}
+
+/* What customers actually say, per Google's own topic extraction. The only
+   qualitative signal in the index, and it was going unpublished. */
+function reviewThemes(b) {
+	const topics = b.enrichment?.gbpDetail?.placeTopics;
+	if (!topics || typeof topics !== 'object') return '';
+	const list = Object.entries(topics)
+		.filter(([, n]) => typeof n === 'number' && n > 0)
+		.sort((a, c) => c[1] - a[1])
+		.slice(0, 10);
+	if (list.length < 3) return '';
+	const max = list[0][1];
+	const rows = list.map(([topic, n]) =>
+		`<li><span class="pyc-th-lab">${esc(topic)}</span><span class="pyc-th-bar" style="width:${Math.round((n / max) * 100)}%"></span><span class="pyc-th-n">${n}</span></li>`).join('');
+	return `<figure class="pyc-fig">
+<figcaption>Themes Google extracted from this business’s reviews, by how often customers raise them. Not scored — this is what people say, not how findable the business is.</figcaption>
+<ul class="pyc-themes">${rows}</ul>
+</figure>`;
+}
+
 function keywordTable(b) {
 	const ev = b.evidence;
 	if (!ev || !ev.keywordBasket?.length) return '';
