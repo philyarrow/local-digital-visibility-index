@@ -159,14 +159,45 @@ function scoreAi(p) {
 }
 
 /* Content & trust — about/team/credentials are real; indexed-count is stub. */
+/* Content & trust.
+ *
+ * This pillar was four boolean-derived values wide — 0, 33, 67 or 100 — because
+ * it read three link checks and nothing else, while two further signals sat as
+ * permanent nulls and the published methodology claimed both. It is the
+ * strongest predictor of findability in the whole index (r = 0.52 against
+ * Visibility), and it was the most coarsely measured.
+ *
+ * Now: four link checks plus depth and freshness, each scored on its own and
+ * averaged. Any signal we could not read is excluded rather than counted
+ * against the business, so a site that publishes no modification date is not
+ * marked stale for it. */
 function scoreContent(p) {
 	if (!p) return null;
-	const checks = [p.hasAboutLink, p.hasTeamLink, p.hasCredentialsLink];
-	const known = checks.filter((c) => typeof c === 'boolean');
-	// indexedPageCount / contentFreshnessDays are stubbed (null) and excluded.
-	if (!known.length) return null;
-	const passed = known.filter(Boolean).length;
-	return clamp100(Math.round((passed / known.length) * 100));
+	const parts = [];
+
+	for (const flag of [p.hasAboutLink, p.hasTeamLink, p.hasCredentialsLink, p.hasBlogLink]) {
+		if (typeof flag === 'boolean') parts.push(flag ? 100 : 0);
+	}
+
+	/* Homepage depth. Banded rather than continuous because the difference
+	   between 900 and 1,100 words is noise, while the difference between 150
+	   and 900 is a business that has written something and one that has not.
+	   Capped so a wall of boilerplate cannot outscore a substantial page. */
+	if (typeof p.wordCount === 'number') {
+		const w = p.wordCount;
+		parts.push(w >= 800 ? 100 : w >= 400 ? 75 : w >= 200 ? 50 : w >= 80 ? 25 : 0);
+	}
+
+	/* Freshness. Generous bands: a local business is not obliged to publish
+	   weekly, and the signal being tested is whether the site is maintained at
+	   all, not whether it is a news outlet. */
+	if (typeof p.contentFreshnessDays === 'number') {
+		const d = p.contentFreshnessDays;
+		parts.push(d <= 90 ? 100 : d <= 365 ? 75 : d <= 730 ? 45 : 20);
+	}
+
+	if (!parts.length) return null;
+	return clamp100(Math.round(parts.reduce((a, b) => a + b, 0) / parts.length));
 }
 
 const SCORERS = {

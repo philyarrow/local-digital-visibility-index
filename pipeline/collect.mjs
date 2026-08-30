@@ -253,19 +253,61 @@ function safeOrigin(u) {
    with genuine drift and make the change unattributable. */
 export async function collectContent(url, sectorCfg) {
 	const out = {
-		source: 'Live homepage parse (links) + STUB indexed-count',
+		source: 'Live homepage parse',
 		hasAboutLink: null,
 		hasTeamLink: null,
-		hasCredentialsLink: null, // e.g. ARLA / Propertymark / NAEA / RICS / Ombudsman
-		// STUB: a true indexed-page count needs GSC or a crawl; not available here.
-		indexedPageCount: null,
-		contentFreshnessDays: null, // STUB: needs blog/post dates parse or sitemap lastmod analysis
+		hasCredentialsLink: null, // sector-specific bodies, see credTerms below
+		hasBlogLink: null,
+		/* Visible words on the homepage. A thin homepage is the commonest shape
+		   among businesses that rank for nothing: there is simply nothing on the
+		   page for a search engine to match or an assistant to quote. */
+		wordCount: null,
+		/* Days since the page said it was last changed. Read from JSON-LD
+		   dateModified first, then the Last-Modified header. Null when the site
+		   claims neither — which is most of them, and null is excluded from
+		   scoring rather than counted against the business. */
+		contentFreshnessDays: null,
+		freshnessSource: null,
 		error: null,
 	};
+	/* indexedPageCount was removed rather than implemented. A true indexed-page
+	   count needs Search Console access to each business's own property, which
+	   we do not and should not have. It sat here as a null stub while the
+	   published methodology claimed the pillar measured it — a claim about
+	   third-party businesses that was not true. Counting pages a site publishes
+	   is a different quantity and naming it "indexed" would repeat the error. */
 	try {
 		const res = await fetchWithTimeout(url, { headers: { 'User-Agent': UA } }, 20000);
 		if (!res.ok) { out.error = `homepage HTTP ${res.status}`; return out; }
-		const html = (await res.text()).toLowerCase();
+		const rawHtml = await res.text();
+		const html = rawHtml.toLowerCase();
+
+		/* Visible text only: script, style, noscript and svg contain no prose
+		   but can outweigh the real copy several times over on a modern site. */
+		const visible = rawHtml
+			.replace(/<(script|style|noscript|svg)\b[\s\S]*?<\/\1>/gi, ' ')
+			.replace(/<!--[\s\S]*?-->/g, ' ')
+			.replace(/<[^>]+>/g, ' ')
+			.replace(/&[a-z]+;|&#\d+;/gi, ' ');
+		out.wordCount = (visible.match(/[A-Za-z][A-Za-z'’-]{1,}/g) || []).length;
+
+		/* Freshness, most trustworthy source first. JSON-LD dateModified is the
+		   site's own explicit claim; Last-Modified is the server's. Neither is
+		   universal and a missing date is not evidence of staleness, so this
+		   stays null rather than defaulting to old. */
+		const jsonLdDate = rawHtml.match(/"date(?:Modified|Published)"\s*:\s*"([^"]+)"/i);
+		const headerDate = res.headers?.get?.('last-modified') || null;
+		for (const [raw, src] of [[jsonLdDate?.[1], 'json-ld'], [headerDate, 'last-modified']]) {
+			if (!raw) continue;
+			const t = Date.parse(raw);
+			if (Number.isNaN(t)) continue;
+			const days = Math.round((Date.now() - t) / 86400000);
+			/* A future date is a broken template, not fresh content. */
+			if (days < 0 || days > 20000) continue;
+			out.contentFreshnessDays = days;
+			out.freshnessSource = src;
+			break;
+		}
 
 		const anchorText = [...html.matchAll(/<a\b[^>]*>([\s\S]*?)<\/a>/gi)].map((m) => m[1]);
 		const hrefs = [...html.matchAll(/href=["']([^"']+)["']/gi)].map((m) => m[1]);
@@ -282,6 +324,10 @@ export async function collectContent(url, sectorCfg) {
 		   "accredited" without naming a body is still detected. */
 		const credTerms = [...(sectorCfg?.credentialTerms || []), ...GENERIC_CREDENTIAL_TERMS];
 		out.hasCredentialsLink = credTerms.some((t) => haystack.includes(t));
+		/* Somewhere the business publishes something. The strongest separator in
+		   the index between firms that rank and firms that do not is whether
+		   there is anything to rank at all. */
+		out.hasBlogLink = /\bblog\b|\bnews\b|insights|case-stud|articles|resources|guides/.test(haystack);
 	} catch (e) {
 		out.error = e?.name === 'AbortError' ? 'homepage timeout' : String(e?.message || e);
 	}
@@ -316,7 +362,7 @@ function profileCompleteness(item) {
    an ISO-ish string; anything unparseable is skipped rather than counted. */
 /* Accepts the DataForSEO shapes: "YYYY-MM-DD HH:MM:SS +00:00",
    the same with a trailing "Z", and a bare "YYYY-MM-DD". */
-function normaliseReviewTimestamp(raw) {
+export function normaliseReviewTimestamp(raw) {
 	const s = String(raw).trim();
 	const m = s.match(/^(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2}:\d{2})(?:\s*([+-]\d{2}:?\d{2}|Z))?$/);
 	if (m) return `${m[1]}T${m[2]}${(m[3] || 'Z').replace(/^([+-]\d{2})(\d{2})$/, '$1:$2')}`;
@@ -324,7 +370,57 @@ function normaliseReviewTimestamp(raw) {
 	return s;
 }
 
-function countRecentReviews(reviewsResult, windowDays, lifetimeCount = 0) {
+/* Everything else worth knowing from a reviews response we already pay for.
+ *
+ * Twenty reviews are bought per business and, until now, exactly one number was
+ * taken from them: how many arrived recently. The same payload carries whether
+ * the owner replies and what the ratings have been doing lately, both of which
+ * say more about whether anyone is running the profile than a lifetime average
+ * ever can.
+ *
+ * All three fields are null when the response cannot support them. A business
+ * with no reviews has no response rate — that is unmeasured, not zero. */
+export function analyseReviews(reviewsResult, windowDays) {
+	const out = { ownerResponseRate: null, ownerResponseMedianDays: null, ratingTrend: null };
+	const items = reviewsResult?.items || [];
+	if (!items.length) return out;
+
+	/* Owner responses. DataForSEO exposes the reply as owner_answer, with
+	   owner_timestamp where it has one. */
+	let answered = 0, considered = 0;
+	const lags = [];
+	for (const r of items) {
+		const reply = r.owner_answer ?? r.owner_answer_text ?? null;
+		considered++;
+		if (!reply) continue;
+		answered++;
+		const rt = Date.parse(normaliseReviewTimestamp(r.owner_timestamp || ''));
+		const vt = Date.parse(normaliseReviewTimestamp(r.timestamp || ''));
+		if (!Number.isNaN(rt) && !Number.isNaN(vt) && rt >= vt) lags.push((rt - vt) / 86400000);
+	}
+	if (considered) out.ownerResponseRate = Math.round((answered / considered) * 100) / 100;
+	if (lags.length) {
+		lags.sort((a, b) => a - b);
+		out.ownerResponseMedianDays = Math.round(lags[Math.floor(lags.length / 2)] * 10) / 10;
+	}
+
+	/* Rating direction. A lifetime average of 4.5 hides whether the business is
+	   climbing or sliding; this compares the newer half of the sampled reviews
+	   with the older half. Needs a reasonable sample on both sides, or the
+	   "trend" is one bad week. */
+	const dated = items
+		.map((r) => ({ t: Date.parse(normaliseReviewTimestamp(r.timestamp || '')), v: Number(r.rating?.value ?? r.rating) }))
+		.filter((x) => !Number.isNaN(x.t) && Number.isFinite(x.v) && x.v > 0)
+		.sort((a, b) => a.t - b.t);
+	if (dated.length >= 8) {
+		const half = Math.floor(dated.length / 2);
+		const mean = (a) => a.reduce((s, x) => s + x.v, 0) / a.length;
+		out.ratingTrend = Math.round((mean(dated.slice(half)) - mean(dated.slice(0, half))) * 100) / 100;
+	}
+	return out;
+}
+
+export function countRecentReviews(reviewsResult, windowDays, lifetimeCount = 0) {
 	if (!reviewsResult) return null;
 	const items = reviewsResult.items || [];
 	/* No items with a nonzero lifetime count is a failed fetch, not a quiet
@@ -449,6 +545,12 @@ function buildLocal(business, matched, gbpItem, reviewsResult, cfg, lookupError 
 	if (cfg.local.reviewVelocity) {
 		out.reviewsLast90d = countRecentReviews(reviewsResult, cfg.local.velocityWindowDays || 90, out.reviewCount || 0);
 		if (out.reviewsLast90d === null) out.error = 'review velocity unavailable (reviews task failed)';
+		/* Unscored for now, and deliberately so: these are new signals and a
+		   published score should not move because we started reading a field we
+		   were already paying for. They are reported on the scorecard and will
+		   be considered for scoring once a second quarter shows they are
+		   stable. */
+		Object.assign(out, analyseReviews(reviewsResult, cfg.local.velocityWindowDays || 90));
 	}
 
 	return out;
@@ -1126,7 +1228,9 @@ async function main() {
 /* Only run when executed directly. collectContent is imported by
    backfill-content.mjs, and an unguarded call here made that import run a whole
    collection and exit with a usage message. */
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+/* argv[1] is undefined under `node -e` and in some embedders, where
+   pathToFileURL throws — which turned a guarded import into a hard crash. */
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
 	main().catch((e) => {
 		console.error(e);
 		process.exit(1);

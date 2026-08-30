@@ -25,36 +25,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { reviewsBatch, loadEnv, ledger } from './lib/dataforseo.mjs';
 import { loadConfig, resolveIndex } from './lib/basket.mjs';
+import { normaliseReviewTimestamp, countRecentReviews, analyseReviews } from './collect.mjs';
 
 const DRY = process.argv.includes('--dry-run');
 const only = process.argv.slice(2).filter((a) => !a.startsWith('--'))[0] || null;
-
-/* Same normalisation as collect.mjs — kept in sync deliberately; if you
-   change one, change both. */
-function normaliseReviewTimestamp(raw) {
-	const s = String(raw).trim();
-	const m = s.match(/^(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2}:\d{2})(?:\s*([+-]\d{2}:?\d{2}|Z))?$/);
-	if (m) return `${m[1]}T${m[2]}${(m[3] || 'Z').replace(/^([+-]\d{2})(\d{2})$/, '$1:$2')}`;
-	if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return `${s}T00:00:00Z`;
-	return s;
-}
-
-function countRecent(result, windowDays, lifetimeCount) {
-	if (!result) return null;
-	const items = result.items || [];
-	if (!items.length) return lifetimeCount > 0 ? null : 0;
-	const cutoff = Date.now() - windowDays * 864e5;
-	let n = 0, unparsed = 0;
-	for (const r of items) {
-		const raw = r.timestamp || r.time_ago_iso || null;
-		if (!raw) continue;
-		const t = Date.parse(normaliseReviewTimestamp(raw));
-		if (Number.isNaN(t)) { unparsed++; continue; }
-		if (t >= cutoff) n++;
-	}
-	if (unparsed === items.length) return null;
-	return n;
-}
 
 loadEnv();
 const config = loadConfig();
@@ -102,9 +76,10 @@ for (const slug of indices) {
 		const key = r.slug || r.name;
 		if (!byKey.has(key)) continue;
 		const before = loc.reviewsLast90d;
-		const after = countRecent(byKey.get(key), engine.local.velocityWindowDays || 90, loc.reviewCount || 0);
+		const after = countRecentReviews(byKey.get(key), engine.local.velocityWindowDays || 90, loc.reviewCount || 0);
 		if (before === after) continue;
 		loc.reviewsLast90d = after;
+		Object.assign(loc, analyseReviews(byKey.get(key), engine.local.velocityWindowDays || 90));
 		if (after !== null && loc.error === 'review velocity unavailable (reviews task failed)') loc.error = null;
 		fs.writeFileSync(path.join(dir, f), JSON.stringify(r, null, 2) + '\n');
 		changed++;

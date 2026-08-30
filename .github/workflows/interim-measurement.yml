@@ -153,6 +153,24 @@ jobs:
           fi
           node collect.mjs "seeds/$slug.csv" $DRY
           if [ -z "$DRY" ]; then
+            # Enrichment on a different cadence from the pillars, because these
+            # signals move at different speeds and some of them cost money.
+            #
+            # Free sources every month: our own crawl, CrUX, Companies House,
+            # FSA and Lighthouse. All keyless or free-tier, so a monthly refresh
+            # costs nothing and keeps the time series complete.
+            #
+            # Paid sources (GBP detail sweep, backlinks) only at the start of a
+            # quarter. A backlink profile does not meaningfully move in thirty
+            # days, so paying to re-measure it monthly buys noise.
+            #
+            # Enrichment is never scored, so nothing here can move a ranking.
+            PAID=""
+            case "$(date -u +%m)" in
+              01|04|07|10) PAID="--with-paid" ;;
+            esac
+            node backfill-enrichment.mjs "$slug" $PAID ||               echo "::warning::enrichment failed for $slug — pillars are unaffected, it is unscored"
+
             node score.mjs "$slug"
             node generate.mjs "$slug" --archive-only
           fi
