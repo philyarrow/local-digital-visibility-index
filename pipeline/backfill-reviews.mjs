@@ -23,11 +23,11 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { reviewsBatch } from './lib/dataforseo.mjs';
-import { loadIndexConfig, loadEngineConfig } from './lib/config.mjs';
+import { reviewsBatch, loadEnv, ledger } from './lib/dataforseo.mjs';
+import { loadConfig, resolveIndex } from './lib/basket.mjs';
 
 const DRY = process.argv.includes('--dry-run');
-const only = process.argv.filter((a) => !a.startsWith('--'))[0] || null;
+const only = process.argv.slice(2).filter((a) => !a.startsWith('--'))[0] || null;
 
 /* Same normalisation as collect.mjs — kept in sync deliberately; if you
    change one, change both. */
@@ -56,6 +56,8 @@ function countRecent(result, windowDays, lifetimeCount) {
 	return n;
 }
 
+loadEnv();
+const config = loadConfig();
 const indices = (only ? [only] : fs.readdirSync('data'))
 	.filter((d) => fs.statSync(path.join('data', d)).isDirectory());
 
@@ -67,9 +69,10 @@ for (const slug of indices) {
 
 	let indexCfg, engine;
 	try {
-		indexCfg = await loadIndexConfig(slug);
-		engine = await loadEngineConfig();
-	} catch { console.log(`  ${slug}: no config, skipped`); continue; }
+		const r = resolveIndex(slug, config);
+		indexCfg = r.index;
+		engine = r.engine;
+	} catch (e) { console.log(`  ${slug}: ${e.message.split('.')[0]}, skipped`); continue; }
 	if (!engine.local?.reviewVelocity) { console.log(`  ${slug}: reviewVelocity off, skipped`); continue; }
 
 	const records = files.map((f) => ({ f, r: JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) }));
@@ -110,3 +113,8 @@ for (const slug of indices) {
 	totalChanged += changed;
 }
 console.log(`\nTotal: ${totalChanged} record(s). Next: re-score and regenerate.`);
+if (!DRY) {
+	/* ledger is an object with a report() method, not a callable. */
+	if (typeof ledger?.report === 'function') console.log('\nCost this run:\n' + ledger.report());
+	else if (ledger?.total != null) console.log(`\nCost this run: $${ledger.total}`);
+}

@@ -1,0 +1,3692 @@
+{
+  "index": "gloucester-accountants",
+  "title": "PYC Gloucester Accountant Digital Visibility Index",
+  "town": "Gloucester",
+  "sector": "accountants",
+  "sectorLabel": "accountants",
+  "keywordsPerIndex": 12,
+  "quarter": "Q3-2026",
+  "measuredAt": "2026-08-29T02:42:12.460Z",
+  "methodology": "https://hub.pyc.agency/indices/methodology/",
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "terms": "https://hub.pyc.agency/indices/licence/"
+  },
+  "attribution": "Phil Yarrow (PYC) — Local Digital Visibility Index. https://hub.pyc.agency/indices/",
+  "citation": "Phil Yarrow (PYC) — Local Digital Visibility Index: Gloucester Accountant, Q3-2026. https://hub.pyc.agency/indices/gloucester-accountants/",
+  "attributionNote": "Reuse of ANY data from this index — a single figure, one dataset, several, or all of them — requires the `attribution` credit above, reproduced and linked. `citation` is the fuller form for quoting this particular dataset. Reuse is permitted commercially and in AI-generated answers on that condition.",
+  "weights": {
+    "speed": 20,
+    "technical": 20,
+    "local": 20,
+    "visibility": 15,
+    "ai": 15,
+    "content": 10
+  },
+  "pillarCoverage": {
+    "speed": {
+      "scored": 30,
+      "total": 41,
+      "live": true
+    },
+    "technical": {
+      "scored": 41,
+      "total": 41,
+      "live": true
+    },
+    "local": {
+      "scored": 41,
+      "total": 41,
+      "live": true
+    },
+    "visibility": {
+      "scored": 41,
+      "total": 41,
+      "live": true
+    },
+    "ai": {
+      "scored": 41,
+      "total": 41,
+      "live": true
+    },
+    "content": {
+      "scored": 33,
+      "total": 41,
+      "live": true
+    }
+  },
+  "overallMedian": 49,
+  "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
+  "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
+  "sectorMedians": {
+    "speed": 65.5,
+    "technical": 75,
+    "local": 63,
+    "visibility": 13,
+    "ai": 0,
+    "content": 33
+  },
+  "businesses": [
+    {
+      "rank": 1,
+      "name": "Griffiths Marshall",
+      "url": "https://www.griffithsmarshall.co.uk/",
+      "digitalVisibilityScore": 69,
+      "pillarScores": {
+        "speed": null,
+        "technical": 88,
+        "local": 57,
+        "visibility": 50,
+        "ai": 60,
+        "content": 100
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [
+        "speed"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 25,
+        "local": 25,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.griffithsmarshall.co.uk/",
+          "pagesCrawled": 2,
+          "pagesDiscovered": 26,
+          "internalLinks": 113,
+          "avgInternalLinksPerPage": 56.5,
+          "maxDepthReached": 1,
+          "genericAnchors": 9,
+          "genericAnchorRatio": 0.08,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "time budget",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "06439816",
+          "companyName": "GRIFFITHS MARSHALL LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2007-11-28",
+          "ageYears": 18.8,
+          "sicCodes": [
+            "69201"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "4th Floor Llanthony Warehouse, The Docks, Gloucester, Gloucestershire, United Kingdom, GL1 2EH",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "name": "APS Accounting",
+      "url": "http://www.apsaccounting.co.uk/",
+      "digitalVisibilityScore": 65,
+      "pillarScores": {
+        "speed": 65,
+        "technical": 75,
+        "local": 70,
+        "visibility": 28,
+        "ai": 80,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.apsaccounting.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 13,
+          "avgInternalLinksPerPage": 13,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 6,
+          "sitemapUrls": 7,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "name": "iLex Accountancy Services Limited",
+      "url": "https://www.ilexas.co.uk/",
+      "digitalVisibilityScore": 65,
+      "pillarScores": {
+        "speed": 58,
+        "technical": 88,
+        "local": 72,
+        "visibility": 58,
+        "ai": 60,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.ilexas.co.uk/",
+          "pagesCrawled": 4,
+          "pagesDiscovered": 10,
+          "internalLinks": 63,
+          "avgInternalLinksPerPage": 15.8,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "time budget",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "06436757",
+          "companyName": "ILEX ACCOUNTANCY SERVICES LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2007-11-26",
+          "ageYears": 18.8,
+          "sicCodes": [
+            "69201",
+            "69202"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Unit 1, Steadings Business Centre, Maisemore, Gloucester, Gloucestershire, England, GL2 8EY",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "name": "Randall & Payne LLP",
+      "url": "http://www.randall-payne.co.uk/",
+      "digitalVisibilityScore": 63,
+      "pillarScores": {
+        "speed": null,
+        "technical": 88,
+        "local": 66,
+        "visibility": 42,
+        "ai": 20,
+        "content": 100
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [
+        "speed"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 25,
+        "local": 25,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.randall-payne.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 236,
+          "avgInternalLinksPerPage": 236,
+          "maxDepthReached": 0,
+          "genericAnchors": 12,
+          "genericAnchorRatio": 0.051,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "OC345710",
+          "companyName": "RANDALL & PAYNE LLP",
+          "companyStatus": "active",
+          "incorporatedOn": "2009-05-18",
+          "ageYears": 17.3,
+          "sicCodes": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Chargrove House Shurdington Road, Shurdington, Cheltenham, Gloucestershire, GL51 4GA",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "name": "Pitt Godden & Taylor LLP",
+      "url": "http://www.pg-t.co.uk/",
+      "digitalVisibilityScore": 61,
+      "pillarScores": {
+        "speed": 71,
+        "technical": 33,
+        "local": 65,
+        "visibility": 62,
+        "ai": 80,
+        "content": null
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai"
+      ],
+      "excludedPillars": [
+        "content"
+      ],
+      "effectiveWeights": {
+        "speed": 22.22,
+        "technical": 22.22,
+        "local": 22.22,
+        "visibility": 16.67,
+        "ai": 16.67,
+        "content": 0
+      },
+      "contentChecks": {
+        "hasAboutLink": null,
+        "hasTeamLink": null,
+        "hasCredentialsLink": null
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.pg-t.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "OC372482",
+          "companyName": "PITT GODDEN & TAYLOR LLP",
+          "companyStatus": "active",
+          "incorporatedOn": "2012-02-15",
+          "ageYears": 14.5,
+          "sicCodes": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Unit 3 Ambrose House, Meteor Court, Barnett Way, Barnwood, Gloucester,, Gloucestershire, United Kingdom, GL4 3GG",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "name": "Hucclecote Accountancy & Taxation Services",
+      "url": "https://www.hatsgloucester.co.uk/",
+      "digitalVisibilityScore": 60,
+      "pillarScores": {
+        "speed": 59,
+        "technical": 100,
+        "local": 73,
+        "visibility": 47,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.hatsgloucester.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 28,
+          "internalLinks": 774,
+          "avgInternalLinksPerPage": 31,
+          "maxDepthReached": 2,
+          "genericAnchors": 19,
+          "genericAnchorRatio": 0.025,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 26,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 7,
+      "name": "Accountx",
+      "url": "https://www.accountx.co.uk/",
+      "digitalVisibilityScore": 59,
+      "pillarScores": {
+        "speed": 89,
+        "technical": 100,
+        "local": 74,
+        "visibility": 21,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.accountx.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 28,
+          "internalLinks": 1277,
+          "avgInternalLinksPerPage": 51.1,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 29,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        }
+      }
+    },
+    {
+      "rank": 8,
+      "name": "Original Accountancy Limited",
+      "url": "https://www.originalaccountancy.co.uk/",
+      "digitalVisibilityScore": 59,
+      "pillarScores": {
+        "speed": 51,
+        "technical": 100,
+        "local": 50,
+        "visibility": 25,
+        "ai": 80,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.originalaccountancy.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 29,
+          "avgInternalLinksPerPage": 29,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "10229558",
+          "companyName": "ORIGINAL ACCOUNTANCY LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2016-06-13",
+          "ageYears": 10.2,
+          "sicCodes": [
+            "69201"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "3 The Tulworths, Gloucester, Gloucestershire, England, GL2 9RS",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 9,
+      "name": "Gloucestersphere Accountants Limited",
+      "url": "https://www.gloucestersphere.co.uk/contact-us/?utm_source=GMBlisting&utm_medium=organic",
+      "digitalVisibilityScore": 58,
+      "pillarScores": {
+        "speed": null,
+        "technical": 88,
+        "local": 64,
+        "visibility": 43,
+        "ai": 40,
+        "content": 33
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [
+        "speed"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 25,
+        "local": 25,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.gloucestersphere.co.uk/contact-us/?utm_source=GMBlisting&utm_medium=organic",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 57,
+          "internalLinks": 1705,
+          "avgInternalLinksPerPage": 68.2,
+          "maxDepthReached": 2,
+          "genericAnchors": 23,
+          "genericAnchorRatio": 0.013,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "10206722",
+          "companyName": "GLOUCESTERSPHERE ACCOUNTANTS LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2016-05-31",
+          "ageYears": 10.2,
+          "sicCodes": [
+            "69201",
+            "69202",
+            "69203"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "13 Water Wheel Close, Quedgeley, Gloucester, England, GL2 4XH",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 10,
+      "name": "Reed & Co Accountants",
+      "url": "https://www.reedaccountants.co.uk/gloucester/",
+      "digitalVisibilityScore": 58,
+      "pillarScores": {
+        "speed": 59,
+        "technical": 75,
+        "local": 70,
+        "visibility": 52,
+        "ai": 40,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.reedaccountants.co.uk/gloucester/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 51,
+          "internalLinks": 1303,
+          "avgInternalLinksPerPage": 52.1,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        }
+      }
+    },
+    {
+      "rank": 11,
+      "name": "Pi Accountancy",
+      "url": "http://pi-accountancy.co.uk/",
+      "digitalVisibilityScore": 57,
+      "pillarScores": {
+        "speed": 63,
+        "technical": 88,
+        "local": 75,
+        "visibility": 36,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://pi-accountancy.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 100,
+          "avgInternalLinksPerPage": 100,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 12,
+      "name": "LNH Management Solutions Limited",
+      "url": "https://www.lnhms.co.uk/",
+      "digitalVisibilityScore": 56,
+      "pillarScores": {
+        "speed": 85,
+        "technical": 67,
+        "local": 59,
+        "visibility": 13,
+        "ai": 40,
+        "content": null
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai"
+      ],
+      "excludedPillars": [
+        "content"
+      ],
+      "effectiveWeights": {
+        "speed": 22.22,
+        "technical": 22.22,
+        "local": 22.22,
+        "visibility": 16.67,
+        "ai": 16.67,
+        "content": 0
+      },
+      "contentChecks": {
+        "hasAboutLink": null,
+        "hasTeamLink": null,
+        "hasCredentialsLink": null
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.lnhms.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "08092144",
+          "companyName": "LNH MANAGEMENT SOLUTIONS LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2012-06-01",
+          "ageYears": 14.2,
+          "sicCodes": [
+            "69201"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Suite 6 Business Centre Innsworth Technology Park, Innsworth Lane, Gloucester, Gloucestershire, England, GL3 1DL",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 13,
+      "name": "Clarke & Co.",
+      "url": "http://clarkeaccountants.co.uk/",
+      "digitalVisibilityScore": 55,
+      "pillarScores": {
+        "speed": 70,
+        "technical": 75,
+        "local": 70,
+        "visibility": 38,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://clarkeaccountants.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 7,
+          "avgInternalLinksPerPage": 7,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 7,
+          "sitemapUrls": 8,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        }
+      }
+    },
+    {
+      "rank": 14,
+      "name": "Kingscott Dix",
+      "url": "http://www.kingscott-dix.co.uk/",
+      "digitalVisibilityScore": 54,
+      "pillarScores": {
+        "speed": 60,
+        "technical": 75,
+        "local": 70,
+        "visibility": 47,
+        "ai": 20,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.kingscott-dix.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 42,
+          "avgInternalLinksPerPage": 42,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "07118109",
+          "companyName": "KINGSCOTT DIX LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2010-01-06",
+          "ageYears": 16.6,
+          "sicCodes": [
+            "69201"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Goodridge Court, Goodridge Avenue, Gloucester, England, GL2 5EN",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 15,
+      "name": "PBT Accountancy Limited",
+      "url": "http://www.pbtaccountancy.co.uk/",
+      "digitalVisibilityScore": 54,
+      "pillarScores": {
+        "speed": 69,
+        "technical": 75,
+        "local": 74,
+        "visibility": 25,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.pbtaccountancy.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 63,
+          "avgInternalLinksPerPage": 63,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 127,
+          "sitemapUrls": 128,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "10428592",
+          "companyName": "PBT ACCOUNTANCY LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2016-10-14",
+          "ageYears": 9.9,
+          "sicCodes": [
+            "69201",
+            "69202"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Suite 1 & 2, The Business Centre, Innsworth Technology Park, Gloucester, United Kingdom, GL3 1DL",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 16,
+      "name": "Harper Sheldon",
+      "url": "http://www.harpersheldon.com/",
+      "digitalVisibilityScore": 53,
+      "pillarScores": {
+        "speed": 99,
+        "technical": 75,
+        "local": 63,
+        "visibility": 0,
+        "ai": 0,
+        "content": null
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai"
+      ],
+      "excludedPillars": [
+        "content"
+      ],
+      "effectiveWeights": {
+        "speed": 22.22,
+        "technical": 22.22,
+        "local": 22.22,
+        "visibility": 16.67,
+        "ai": 16.67,
+        "content": 0
+      },
+      "contentChecks": {
+        "hasAboutLink": null,
+        "hasTeamLink": null,
+        "hasCredentialsLink": null
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.harpersheldon.com/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "04329107",
+          "companyName": "HARPER SHELDON LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2001-11-26",
+          "ageYears": 24.8,
+          "sicCodes": [
+            "69201",
+            "69203"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Midway House Herrick Way, Staverton Technology Park, Staverton, Cheltenham, Gloucestershire, GL51 6TQ",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 17,
+      "name": "KJaccountants",
+      "url": "https://kjaccountants.co.uk/",
+      "digitalVisibilityScore": 53,
+      "pillarScores": {
+        "speed": 99,
+        "technical": 100,
+        "local": 50,
+        "visibility": 0,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://kjaccountants.co.uk/",
+          "pagesCrawled": 9,
+          "pagesDiscovered": 10,
+          "internalLinks": 207,
+          "avgInternalLinksPerPage": 23,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 18,
+      "name": "Abaqus",
+      "url": "https://www.askabaqus.com/contact-us/",
+      "digitalVisibilityScore": 52,
+      "pillarScores": {
+        "speed": 73,
+        "technical": 75,
+        "local": 65,
+        "visibility": 17,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.askabaqus.com/contact-us/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 172,
+          "internalLinks": 2664,
+          "avgInternalLinksPerPage": 106.6,
+          "maxDepthReached": 2,
+          "genericAnchors": 10,
+          "genericAnchorRatio": 0.004,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 70,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "10443570",
+          "companyName": "ABAQUS LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2016-10-24",
+          "ageYears": 9.8,
+          "sicCodes": [
+            "69201",
+            "69202",
+            "69203",
+            "82110"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "No. 1 Business Centre, 1-11 Alvin Street, Gloucester, Glos, England, GL1 3EJ",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 19,
+      "name": "Brothertons",
+      "url": "https://brothertons.co.uk/",
+      "digitalVisibilityScore": 51,
+      "pillarScores": {
+        "speed": 73,
+        "technical": 88,
+        "local": 63,
+        "visibility": 17,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://brothertons.co.uk/",
+          "pagesCrawled": 7,
+          "pagesDiscovered": 40,
+          "internalLinks": 167,
+          "avgInternalLinksPerPage": 23.9,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "time budget",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 20,
+      "name": "The Alanbrookes Group",
+      "url": "http://www.alanbrookes.co.uk/",
+      "digitalVisibilityScore": 50,
+      "pillarScores": {
+        "speed": 56,
+        "technical": 100,
+        "local": 44,
+        "visibility": 0,
+        "ai": 0,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.alanbrookes.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 104,
+          "avgInternalLinksPerPage": 104,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": 206,
+          "sitemapUrls": 206,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        }
+      }
+    },
+    {
+      "rank": 21,
+      "name": "Accounting for the Ad-Venture",
+      "url": "https://www.a4adventure2024.co.uk/",
+      "digitalVisibilityScore": 49,
+      "pillarScores": {
+        "speed": 66,
+        "technical": 100,
+        "local": 61,
+        "visibility": 0,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.a4adventure2024.co.uk/",
+          "pagesCrawled": 8,
+          "pagesDiscovered": 7,
+          "internalLinks": 183,
+          "avgInternalLinksPerPage": 22.9,
+          "maxDepthReached": 1,
+          "genericAnchors": 8,
+          "genericAnchorRatio": 0.044,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 22,
+      "name": "Gloucester Cloud Accountants",
+      "url": "http://www.glosaccountants.co.uk/",
+      "digitalVisibilityScore": 48,
+      "pillarScores": {
+        "speed": 92,
+        "technical": 57,
+        "local": 63,
+        "visibility": 0,
+        "ai": 40,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.glosaccountants.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 23,
+      "name": "MBS Accountants",
+      "url": "https://www.mbsaccountants.co.uk/",
+      "digitalVisibilityScore": 47,
+      "pillarScores": {
+        "speed": 37,
+        "technical": 75,
+        "local": 75,
+        "visibility": 21,
+        "ai": 20,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.mbsaccountants.co.uk/",
+          "pagesCrawled": 24,
+          "pagesDiscovered": 59,
+          "internalLinks": 547,
+          "avgInternalLinksPerPage": 22.8,
+          "maxDepthReached": 2,
+          "genericAnchors": 39,
+          "genericAnchorRatio": 0.071,
+          "keyPageDepth": {
+            "contact": 2,
+            "about": 1,
+            "team": null,
+            "services": 2
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 80,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        }
+      }
+    },
+    {
+      "rank": 24,
+      "name": "Padam Walburn Accounting Services",
+      "url": "http://www.padamwalburn.com/",
+      "digitalVisibilityScore": 47,
+      "pillarScores": {
+        "speed": 59,
+        "technical": 75,
+        "local": 65,
+        "visibility": 0,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.padamwalburn.com/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 65,
+          "avgInternalLinksPerPage": 65,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 25,
+      "name": "PCD Accountancy Limited",
+      "url": "http://pcdaccountancy.co.uk/",
+      "digitalVisibilityScore": 47,
+      "pillarScores": {
+        "speed": 63,
+        "technical": 75,
+        "local": 63,
+        "visibility": 43,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://pcdaccountancy.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "07862507",
+          "companyName": "PCD ACCOUNTANCY LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2011-11-28",
+          "ageYears": 14.8,
+          "sicCodes": [
+            "69201"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "17 Oak Tree Close, Hardwicke, Gloucester, GL2 4TJ",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 26,
+      "name": "Burton Sweet Ltd",
+      "url": "https://www.burton-sweet.co.uk/",
+      "digitalVisibilityScore": 45,
+      "pillarScores": {
+        "speed": 58,
+        "technical": 88,
+        "local": 47,
+        "visibility": 0,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.burton-sweet.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 31,
+          "internalLinks": 78,
+          "avgInternalLinksPerPage": 78,
+          "maxDepthReached": 0,
+          "genericAnchors": 7,
+          "genericAnchorRatio": 0.09,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "time budget",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        }
+      }
+    },
+    {
+      "rank": 27,
+      "name": "Hucclecote Accountancy Practice",
+      "url": "http://www.gloucesteraccountants.com/",
+      "digitalVisibilityScore": 45,
+      "pillarScores": {
+        "speed": 78,
+        "technical": 50,
+        "local": 70,
+        "visibility": 5,
+        "ai": 0,
+        "content": null
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai"
+      ],
+      "excludedPillars": [
+        "content"
+      ],
+      "effectiveWeights": {
+        "speed": 22.22,
+        "technical": 22.22,
+        "local": 22.22,
+        "visibility": 16.67,
+        "ai": 16.67,
+        "content": 0
+      },
+      "contentChecks": {
+        "hasAboutLink": null,
+        "hasTeamLink": null,
+        "hasCredentialsLink": null
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.gloucesteraccountants.com/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 28,
+      "name": "KJ ACCOUNTS",
+      "url": "http://kjaccounts.com/",
+      "digitalVisibilityScore": 45,
+      "pillarScores": {
+        "speed": 69,
+        "technical": 75,
+        "local": 45,
+        "visibility": 0,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://kjaccounts.com/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 5,
+          "avgInternalLinksPerPage": 5,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 29,
+      "name": "The Accountancy & Finance House Ltd",
+      "url": "https://www.theaccountancyandfinancehouse.com/",
+      "digitalVisibilityScore": 45,
+      "pillarScores": {
+        "speed": 62,
+        "technical": 88,
+        "local": 59,
+        "visibility": 0,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.theaccountancyandfinancehouse.com/",
+          "pagesCrawled": 5,
+          "pagesDiscovered": 4,
+          "internalLinks": 66,
+          "avgInternalLinksPerPage": 13.2,
+          "maxDepthReached": 1,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.015,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        }
+      }
+    },
+    {
+      "rank": 30,
+      "name": "Accountrix",
+      "url": "http://accountrix.co.uk/",
+      "digitalVisibilityScore": 44,
+      "pillarScores": {
+        "speed": 65,
+        "technical": 75,
+        "local": 44,
+        "visibility": 25,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://accountrix.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 7,
+          "avgInternalLinksPerPage": 7,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "08829863",
+          "companyName": "ACCOUNTRIX LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2014-01-02",
+          "ageYears": 12.7,
+          "sicCodes": [
+            "69201"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "6 Bamel Way, Gloucester Business Park, Brockworth, Gloucester, GL3 4BH",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 31,
+      "name": "B Digital Accounts",
+      "url": "https://www.bdigitalaccounts.co.uk/",
+      "digitalVisibilityScore": 44,
+      "pillarScores": {
+        "speed": null,
+        "technical": 75,
+        "local": 63,
+        "visibility": 4,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [
+        "speed"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 25,
+        "local": 25,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.bdigitalaccounts.co.uk/",
+          "pagesCrawled": 5,
+          "pagesDiscovered": 4,
+          "internalLinks": 61,
+          "avgInternalLinksPerPage": 12.2,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 0,
+          "sitemapUrls": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 32,
+      "name": "AGR Accounts Ltd",
+      "url": "http://www.agraccounts.com/",
+      "digitalVisibilityScore": 42,
+      "pillarScores": {
+        "speed": 62,
+        "technical": 75,
+        "local": 47,
+        "visibility": 13,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.agraccounts.com/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 139,
+          "avgInternalLinksPerPage": 139,
+          "maxDepthReached": 0,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.007,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 33,
+      "name": "Correct Balance LLP",
+      "url": "https://www.correctbalance.co.uk/",
+      "digitalVisibilityScore": 40,
+      "pillarScores": {
+        "speed": null,
+        "technical": 75,
+        "local": 64,
+        "visibility": 0,
+        "ai": 0,
+        "content": null
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai"
+      ],
+      "excludedPillars": [
+        "speed",
+        "content"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 28.57,
+        "local": 28.57,
+        "visibility": 21.43,
+        "ai": 21.43,
+        "content": 0
+      },
+      "contentChecks": {
+        "hasAboutLink": null,
+        "hasTeamLink": null,
+        "hasCredentialsLink": null
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.correctbalance.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "OC379815",
+          "companyName": "CORRECT BALANCE LLP",
+          "companyStatus": "active",
+          "incorporatedOn": "2012-10-31",
+          "ageYears": 13.8,
+          "sicCodes": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Alexandra House, 88 Pillowell Drive, Gloucester, England, GL1 3LZ",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 34,
+      "name": "Harbour Key Limited",
+      "url": "http://www.harbourkey.com/",
+      "digitalVisibilityScore": 40,
+      "pillarScores": {
+        "speed": null,
+        "technical": 75,
+        "local": 67,
+        "visibility": 0,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [
+        "speed"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 25,
+        "local": 25,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.harbourkey.com/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 49,
+          "avgInternalLinksPerPage": 49,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": 1,
+            "services": null
+          },
+          "orphanCandidates": 3,
+          "sitemapUrls": 3,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "07483339",
+          "companyName": "HARBOUR KEY LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2011-01-05",
+          "ageYears": 15.6,
+          "sicCodes": [
+            "69201",
+            "69203"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Midway House Herrick Way, Staverton Technology Park, Staverton, Cheltenham, Gloucestershire, England, GL51 6TQ",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 35,
+      "name": "BR Accounting Ltd",
+      "url": "http://www.gloucester-accounting.co.uk/",
+      "digitalVisibilityScore": 36,
+      "pillarScores": {
+        "speed": 99,
+        "technical": 14,
+        "local": 59,
+        "visibility": 13,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.gloucester-accounting.co.uk/",
+          "pagesCrawled": 7,
+          "pagesDiscovered": 7,
+          "internalLinks": 58,
+          "avgInternalLinksPerPage": 8.3,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "11286561",
+          "companyName": "BR ACCOUNTING LTD",
+          "companyStatus": "active",
+          "incorporatedOn": "2018-04-03",
+          "ageYears": 8.4,
+          "sicCodes": [
+            "69201",
+            "69202"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Unit 1b Bristol Road, Morelands Trading Estate, Gloucester, United Kingdom, GL1 5RZ",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 36,
+      "name": "Macdonald & Co",
+      "url": "http://www.lawson-macdonald.com/",
+      "digitalVisibilityScore": 32,
+      "pillarScores": {
+        "speed": 100,
+        "technical": 14,
+        "local": 47,
+        "visibility": 0,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.lawson-macdonald.com/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 1,
+          "internalLinks": 1,
+          "avgInternalLinksPerPage": 1,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 37,
+      "name": "Bluestar Accounting",
+      "url": "http://www.bluestaraccounting.com/",
+      "digitalVisibilityScore": 30,
+      "pillarScores": {
+        "speed": null,
+        "technical": 63,
+        "local": 39,
+        "visibility": 0,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [
+        "speed"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 25,
+        "local": 25,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.bluestaraccounting.com/",
+          "pagesCrawled": 2,
+          "pagesDiscovered": 1,
+          "internalLinks": 21,
+          "avgInternalLinksPerPage": 10.5,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "07384341",
+          "companyName": "BLUESTAR ACCOUNTING LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2010-09-22",
+          "ageYears": 15.9,
+          "sicCodes": [
+            "69202"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "14 Southfield Close, Cheltenham, Gloucestershire, England, GL53 9LF",
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 38,
+      "name": "Robert Powell Chartered Accountants",
+      "url": "http://robert-powell.com/",
+      "digitalVisibilityScore": 29,
+      "pillarScores": {
+        "speed": null,
+        "technical": 0,
+        "local": 50,
+        "visibility": 46,
+        "ai": 20,
+        "content": 33
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [
+        "speed"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 25,
+        "local": 25,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://robert-powell.com/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 37,
+          "avgInternalLinksPerPage": 37,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 39,
+      "name": "Drivers Accountant LTD",
+      "url": "http://driversacc.com/?utm_source=gmb&utm_medium=referral",
+      "digitalVisibilityScore": 18,
+      "pillarScores": {
+        "speed": null,
+        "technical": 0,
+        "local": 64,
+        "visibility": 0,
+        "ai": 0,
+        "content": null
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai"
+      ],
+      "excludedPillars": [
+        "speed",
+        "content"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 28.57,
+        "local": 28.57,
+        "visibility": 21.43,
+        "ai": 21.43,
+        "content": 0
+      },
+      "contentChecks": {
+        "hasAboutLink": null,
+        "hasTeamLink": null,
+        "hasCredentialsLink": null
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://driversacc.com/?utm_source=gmb&utm_medium=referral",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 40,
+      "name": "Clements Tax",
+      "url": "http://clementstaxassociates.co.uk/",
+      "digitalVisibilityScore": 14,
+      "pillarScores": {
+        "speed": null,
+        "technical": 0,
+        "local": 50,
+        "visibility": 0,
+        "ai": 0,
+        "content": null
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai"
+      ],
+      "excludedPillars": [
+        "speed",
+        "content"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 28.57,
+        "local": 28.57,
+        "visibility": 21.43,
+        "ai": 21.43,
+        "content": 0
+      },
+      "contentChecks": {
+        "hasAboutLink": null,
+        "hasTeamLink": null,
+        "hasCredentialsLink": null
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://clementstaxassociates.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 41,
+      "name": "Erhan Ogruc Consultants",
+      "url": "http://erhanogruc.com/",
+      "digitalVisibilityScore": 13,
+      "pillarScores": {
+        "speed": null,
+        "technical": 0,
+        "local": 44,
+        "visibility": 0,
+        "ai": 0,
+        "content": null
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai"
+      ],
+      "excludedPillars": [
+        "speed",
+        "content"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 28.57,
+        "local": 28.57,
+        "visibility": 21.43,
+        "ai": 21.43,
+        "content": 0
+      },
+      "contentChecks": {
+        "hasAboutLink": null,
+        "hasTeamLink": null,
+        "hasCredentialsLink": null
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://erhanogruc.com/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        }
+      }
+    }
+  ]
+}

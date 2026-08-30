@@ -103,7 +103,142 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.guardianbuildersgloucester.co.uk/",
+          "pagesCrawled": 14,
+          "pagesDiscovered": 13,
+          "internalLinks": 524,
+          "avgInternalLinksPerPage": 37.4,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 18,
+          "sitemapUrls": 19,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-03",
+          "sitemapStaleDays": 26,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 81,
+          "accessibility": 93,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 4809,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 1809,
+          "speedIndexMs": 2587,
+          "failing": [
+            {
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "guardianbuildersgloucester.co.uk",
+          "rank": 80,
+          "backlinks": 85,
+          "referringDomains": 43,
+          "referringMainDomains": 43,
+          "referringPages": 82,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 82
+          },
+          "firstSeen": "2023-11-05 04:17:33 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 2,
@@ -140,7 +275,142 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://buildergloucestershire.co.uk/",
+          "pagesCrawled": 6,
+          "pagesDiscovered": 5,
+          "internalLinks": 162,
+          "avgInternalLinksPerPage": 27,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 0,
+          "sitemapUrls": 6,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2025-06-27",
+          "sitemapStaleDays": 428,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 90,
+          "accessibility": 100,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 1801,
+          "tbtMs": 50,
+          "clsScore": 0,
+          "fcpMs": 1366,
+          "speedIndexMs": 9342,
+          "failing": [
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "buildergloucestershire.co.uk",
+          "rank": 105,
+          "backlinks": 50,
+          "referringDomains": 34,
+          "referringMainDomains": 34,
+          "referringPages": 45,
+          "brokenBacklinks": 58,
+          "referringLinksTypes": {
+            "anchor": 42
+          },
+          "firstSeen": "2024-11-12 22:49:34 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 3,
@@ -177,7 +447,167 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://buildexuk.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 60,
+          "internalLinks": 1851,
+          "avgInternalLinksPerPage": 74,
+          "maxDepthReached": 1,
+          "genericAnchors": 25,
+          "genericAnchorRatio": 0.014,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 12,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2015-05-19",
+          "sitemapStaleDays": 4120,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "05132687",
+          "companyName": "BUILDEX CONSTRUCTION LTD",
+          "companyStatus": "active",
+          "incorporatedOn": "2004-05-19",
+          "ageYears": 22.3,
+          "sicCodes": [
+            "41201",
+            "43290"
+          ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-05-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Unit 6 Stanley Court Edison Close, Waterwells Business Park Quedgeley, Gloucester, Gloucestershire, GL2 2AE",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 72,
+          "accessibility": 67,
+          "bestPractices": 88,
+          "seo": 85,
+          "lcpMs": 5345,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3038,
+          "speedIndexMs": 4911,
+          "failing": [
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 13,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Garage builder"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 43,
+          "placeTopics": null,
+          "firstSeen": "2024-07-10 21:54:37 +00:00",
+          "lastUpdated": "2026-07-11 17:38:00 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "buildexuk.com",
+          "rank": 68,
+          "backlinks": 148,
+          "referringDomains": 105,
+          "referringMainDomains": 103,
+          "referringPages": 134,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 133
+          },
+          "firstSeen": "2021-09-12 21:33:06 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 4,
@@ -214,7 +644,142 @@
         "hasTeamLink": false,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.cotswold-construction.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 75,
+          "accessibility": 86,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 7053,
+          "tbtMs": 62,
+          "clsScore": 0,
+          "fcpMs": 1710,
+          "speedIndexMs": 3304,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cotswold-construction.co.uk",
+          "rank": 0,
+          "backlinks": 48,
+          "referringDomains": 10,
+          "referringMainDomains": 10,
+          "referringPages": 48,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 48
+          },
+          "firstSeen": "2023-11-14 11:02:25 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 5,
@@ -251,7 +816,144 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.rpmbuildingservices.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 30,
+          "internalLinks": 827,
+          "avgInternalLinksPerPage": 33.1,
+          "maxDepthReached": 2,
+          "genericAnchors": 7,
+          "genericAnchorRatio": 0.008,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 2,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 7,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2024-07-22",
+          "sitemapStaleDays": 768,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "11978876",
+          "companyName": "RPM BUILDING SERVICES LTD",
+          "companyStatus": "active",
+          "incorporatedOn": "2019-05-03",
+          "ageYears": 7.3,
+          "sicCodes": [
+            "41202"
+          ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-05-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "5 Winston Road, Churchdown, Gloucester, United Kingdom, GL3 2QZ",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 35,
+          "accessibility": 64,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 16184,
+          "tbtMs": 362,
+          "clsScore": 1.047,
+          "fcpMs": 2702,
+          "speedIndexMs": 4792,
+          "failing": [
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "list",
+              "title": "Lists do not contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "rpmbuildingservices.co.uk",
+          "rank": 63,
+          "backlinks": 42,
+          "referringDomains": 39,
+          "referringMainDomains": 39,
+          "referringPages": 41,
+          "brokenBacklinks": 15,
+          "referringLinksTypes": {
+            "anchor": 40
+          },
+          "firstSeen": "2022-12-19 04:36:09 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 6,
@@ -288,7 +990,142 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.longlevensbuilding.com/",
+          "pagesCrawled": 11,
+          "pagesDiscovered": 12,
+          "internalLinks": 386,
+          "avgInternalLinksPerPage": 35.1,
+          "maxDepthReached": 1,
+          "genericAnchors": 13,
+          "genericAnchorRatio": 0.034,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 2,
+          "sitemapUrls": 2,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2018-02-26",
+          "sitemapStaleDays": 3106,
+          "sitemapSampleChecked": 2,
+          "sitemapSampleResolved": 2,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 83,
+          "bestPractices": 74,
+          "seo": 92,
+          "lcpMs": 13500,
+          "tbtMs": 34,
+          "clsScore": 0,
+          "fcpMs": 6171,
+          "speedIndexMs": 9540,
+          "failing": [
+            {
+              "id": "redirects-http",
+              "title": "Does not redirect HTTP traffic to HTTPS",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "longlevensbuilding.com",
+          "rank": 77,
+          "backlinks": 61,
+          "referringDomains": 45,
+          "referringMainDomains": 43,
+          "referringPages": 52,
+          "brokenBacklinks": 18,
+          "referringLinksTypes": {
+            "anchor": 51
+          },
+          "firstSeen": "2020-08-06 12:52:45 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 7,
@@ -326,7 +1163,144 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://ajbuildltd.com/",
+          "pagesCrawled": 5,
+          "pagesDiscovered": 4,
+          "internalLinks": 58,
+          "avgInternalLinksPerPage": 11.6,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 1,
+          "sitemapUrls": 1,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2022-10-17",
+          "sitemapStaleDays": 1412,
+          "sitemapSampleChecked": 1,
+          "sitemapSampleResolved": 1,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "12566650",
+          "companyName": "AJ BUILD LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2020-04-21",
+          "ageYears": 6.4,
+          "sicCodes": [
+            "41202"
+          ],
+          "companyType": "ltd",
+          "accountsType": "unaudited-abridged",
+          "accountsMadeUpTo": "2025-04-30",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "13 Tewkesbury Road, Gloucester, Gloucestershire, United Kingdom, GL2 9AY",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 78,
+          "accessibility": 91,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 4651,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3011,
+          "speedIndexMs": 3058,
+          "failing": [
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "ajbuildltd.com",
+          "rank": 0,
+          "backlinks": 55,
+          "referringDomains": 51,
+          "referringMainDomains": 48,
+          "referringPages": 55,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 55
+          },
+          "firstSeen": "2023-10-14 20:46:23 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 8,
@@ -363,10 +1337,319 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.halfordbuilders.co.uk/",
+          "pagesCrawled": 18,
+          "pagesDiscovered": 17,
+          "internalLinks": 792,
+          "avgInternalLinksPerPage": 44,
+          "maxDepthReached": 1,
+          "genericAnchors": 43,
+          "genericAnchorRatio": 0.054,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 0,
+          "sitemapUrls": 17,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2020-10-30",
+          "sitemapStaleDays": 2130,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 60,
+          "accessibility": 89,
+          "bestPractices": 77,
+          "seo": 92,
+          "lcpMs": 7393,
+          "tbtMs": 68,
+          "clsScore": 0,
+          "fcpMs": 4526,
+          "speedIndexMs": 7037,
+          "failing": [
+            {
+              "id": "unminified-javascript",
+              "title": "Minify JavaScript",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "deprecations",
+              "title": "Uses deprecated APIs",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "valid-source-maps",
+              "title": "Missing source maps for large first-party JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "halfordbuilders.co.uk",
+          "rank": 21,
+          "backlinks": 550,
+          "referringDomains": 51,
+          "referringMainDomains": 47,
+          "referringPages": 386,
+          "brokenBacklinks": 20,
+          "referringLinksTypes": {
+            "anchor": 386
+          },
+          "firstSeen": "2022-11-15 22:30:54 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 9,
+      "name": "A.R.D. Developments",
+      "url": "https://www.arddevelopmentsltd.co.uk/",
+      "digitalVisibilityScore": 44,
+      "pillarScores": {
+        "speed": 48,
+        "technical": 63,
+        "local": 69,
+        "visibility": 33,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.arddevelopmentsltd.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 47,
+          "internalLinks": 581,
+          "avgInternalLinksPerPage": 23.2,
+          "maxDepthReached": 1,
+          "genericAnchors": 22,
+          "genericAnchorRatio": 0.038,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "03935125",
+          "companyName": "A.R.D. DEVELOPMENTS LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2000-02-28",
+          "ageYears": 26.5,
+          "sicCodes": [
+            "41202"
+          ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "18 Clover Drive Hardwicke, Gloucester, Gloucestershire, England, GL2 4TG",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 79,
+          "bestPractices": 54,
+          "seo": 77,
+          "lcpMs": 14478,
+          "tbtMs": 37,
+          "clsScore": 0.144,
+          "fcpMs": 3605,
+          "speedIndexMs": 7075,
+          "failing": [
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "deprecations",
+              "title": "Uses deprecated APIs",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "arddevelopmentsltd.co.uk",
+          "rank": 149,
+          "backlinks": 310,
+          "referringDomains": 53,
+          "referringMainDomains": 52,
+          "referringPages": 300,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 295
+          },
+          "firstSeen": "2019-02-21 05:54:24 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 10,
       "name": "Carma UK Construction",
       "url": "https://www.carmaukconstruction.co.uk/",
       "digitalVisibilityScore": 44,
@@ -400,44 +1683,142 @@
         "hasTeamLink": true,
         "hasCredentialsLink": false
       },
-      "context": null
-    },
-    {
-      "rank": 10,
-      "name": "A.R.D. Developments",
-      "url": "https://www.arddevelopmentsltd.co.uk/",
-      "digitalVisibilityScore": 43,
-      "pillarScores": {
-        "speed": 48,
-        "technical": 63,
-        "local": 65,
-        "visibility": 33,
-        "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.carmaukconstruction.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 111,
+          "internalLinks": 2791,
+          "avgInternalLinksPerPage": 111.6,
+          "maxDepthReached": 1,
+          "genericAnchors": 93,
+          "genericAnchorRatio": 0.033,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 54,
+          "accessibility": 91,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 23396,
+          "tbtMs": 186,
+          "clsScore": 0,
+          "fcpMs": 6111,
+          "speedIndexMs": 9474,
+          "failing": [
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "aria-hidden-focus",
+              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "carmaukconstruction.co.uk",
+          "rank": 184,
+          "backlinks": 415,
+          "referringDomains": 150,
+          "referringMainDomains": 146,
+          "referringPages": 279,
+          "brokenBacklinks": 14,
+          "referringLinksTypes": {
+            "anchor": 274
+          },
+          "firstSeen": "2021-10-17 02:21:50 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 11,
@@ -474,7 +1855,162 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.kingbuildersglosltd.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 68,
+          "accessibility": 77,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 6891,
+          "tbtMs": 29,
+          "clsScore": 0.018,
+          "fcpMs": 3065,
+          "speedIndexMs": 4861,
+          "failing": [
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 24,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 5
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 20,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 08:29:43 +00:00",
+          "lastUpdated": "2026-06-30 03:25:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kingbuildersglosltd.co.uk",
+          "rank": 85,
+          "backlinks": 73,
+          "referringDomains": 61,
+          "referringMainDomains": 61,
+          "referringPages": 69,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 69
+          },
+          "firstSeen": "2019-03-21 10:50:25 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 12,
@@ -512,7 +2048,142 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://landwbuilders.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 28,
+          "internalLinks": 944,
+          "avgInternalLinksPerPage": 37.8,
+          "maxDepthReached": 1,
+          "genericAnchors": 10,
+          "genericAnchorRatio": 0.011,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 16,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2023-09-28",
+          "sitemapStaleDays": 1066,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 82,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 8701,
+          "tbtMs": 322,
+          "clsScore": 0.035,
+          "fcpMs": 3316,
+          "speedIndexMs": 6358,
+          "failing": [
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "select-name",
+              "title": "Select elements do not have associated label elements.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "landwbuilders.com",
+          "rank": 74,
+          "backlinks": 100,
+          "referringDomains": 70,
+          "referringMainDomains": 66,
+          "referringPages": 87,
+          "brokenBacklinks": 74,
+          "referringLinksTypes": {
+            "anchor": 83
+          },
+          "firstSeen": "2020-06-06 10:23:47 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 13,
@@ -550,7 +2221,133 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.gloucesterbuilding.co.uk/",
+          "pagesCrawled": 19,
+          "pagesDiscovered": 18,
+          "internalLinks": 1029,
+          "avgInternalLinksPerPage": 54.2,
+          "maxDepthReached": 2,
+          "genericAnchors": 25,
+          "genericAnchorRatio": 0.024,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 0,
+          "sitemapUrls": 8,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-03-19",
+          "sitemapStaleDays": 163,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "16410485",
+          "companyName": "GLOUCESTER BUILDERS LTD",
+          "companyStatus": "active",
+          "incorporatedOn": "2025-04-26",
+          "ageYears": 1.3,
+          "sicCodes": [
+            "41202"
+          ],
+          "companyType": "ltd",
+          "accountsType": "dormant",
+          "accountsMadeUpTo": "2026-04-30",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "24 Grove Crescent, Barnwood, Gloucester, England, GL4 3JJ",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 67,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 7075,
+          "tbtMs": 45,
+          "clsScore": 0,
+          "fcpMs": 3305,
+          "speedIndexMs": 4556,
+          "failing": [
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "error": "no result"
+        }
+      }
     }
   ]
 }

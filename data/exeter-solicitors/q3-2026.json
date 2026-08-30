@@ -56,13 +56,13 @@
       "live": true
     }
   },
-  "overallMedian": 72,
+  "overallMedian": 72.5,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
     "speed": 71.5,
     "technical": 100,
-    "local": 74.5,
+    "local": 78.5,
     "visibility": 42.5,
     "ai": 50,
     "content": 67
@@ -72,11 +72,11 @@
       "rank": 1,
       "name": "Dunn & Baker",
       "url": "https://www.dunnandbaker.co.uk/",
-      "digitalVisibilityScore": 80,
+      "digitalVisibilityScore": 82,
       "pillarScores": {
         "speed": 56,
         "technical": 100,
-        "local": 77,
+        "local": 89,
         "visibility": 55,
         "ai": 100,
         "content": 100
@@ -103,17 +103,192 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.dunnandbaker.co.uk/",
+          "pagesCrawled": 22,
+          "pagesDiscovered": 77,
+          "internalLinks": 1060,
+          "avgInternalLinksPerPage": 48.2,
+          "maxDepthReached": 1,
+          "genericAnchors": 36,
+          "genericAnchorRatio": 0.034,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "time budget",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 2835,
+          "inpMs": null,
+          "cls": 0,
+          "lcpGood": false,
+          "inpGood": null,
+          "clsGood": true,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "OC386610",
+          "companyName": "DUNN & BAKER LLP",
+          "companyStatus": "active",
+          "incorporatedOn": "2013-07-16",
+          "ageYears": 13.1,
+          "sicCodes": null,
+          "companyType": "llp",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2026-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "21 Southernhay East, Exeter, Devon, EX1 1QQ",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 39,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 15381,
+          "tbtMs": 167,
+          "clsScore": 0.287,
+          "fcpMs": 8706,
+          "speedIndexMs": 11174,
+          "failing": [
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 7,
+          "ratingDistribution": {
+            "1": 19,
+            "2": 3,
+            "3": 1,
+            "4": 0,
+            "5": 94
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Conveyancer",
+            "Criminal defence lawyer",
+            "Employment Lawyer",
+            "Family Lawyer",
+            "Law firm",
+            "Lawyer",
+            "Personal Injury Lawyer",
+            "Property lawyer"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 40,
+          "placeTopics": {
+            "conveyancing team": 6,
+            "quick responses": 12,
+            "email response time": 4,
+            "case resolution": 3,
+            "solicitor recommendation": 2,
+            "family law": 3,
+            "frequent updates": 3,
+            "court proceedings": 2,
+            "reasonable fees": 3,
+            "quick process": 3
+          },
+          "firstSeen": "2024-07-16 23:53:28 +00:00",
+          "lastUpdated": "2026-06-25 10:04:41 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "dunnandbaker.co.uk",
+          "rank": 179,
+          "backlinks": 316,
+          "referringDomains": 138,
+          "referringMainDomains": 130,
+          "referringPages": 270,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 245
+          },
+          "firstSeen": "2019-01-19 19:19:10 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 2,
       "name": "Amicus Law",
       "url": "https://www.amicuslaw.co.uk/",
-      "digitalVisibilityScore": 75,
+      "digitalVisibilityScore": 76,
       "pillarScores": {
         "speed": 73,
         "technical": 100,
-        "local": 78,
+        "local": 82,
         "visibility": 46,
         "ai": 100,
         "content": 33
@@ -140,54 +315,183 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.amicuslaw.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 201,
+          "internalLinks": 2937,
+          "avgInternalLinksPerPage": 117.5,
+          "maxDepthReached": 1,
+          "genericAnchors": 25,
+          "genericAnchorRatio": 0.009,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 2
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 230,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-27",
+          "sitemapStaleDays": 3,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1184,
+          "inpMs": 147,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 68,
+          "accessibility": 81,
+          "bestPractices": 73,
+          "seo": 100,
+          "lcpMs": 6001,
+          "tbtMs": 143,
+          "clsScore": 0.001,
+          "fcpMs": 3464,
+          "speedIndexMs": 4333,
+          "failing": [
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "deprecations",
+              "title": "Uses deprecated APIs",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 7,
+          "ratingDistribution": {
+            "1": 4,
+            "2": 2,
+            "3": 0,
+            "4": 3,
+            "5": 74
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 19,
+          "placeTopics": {
+            "helpful staff": 25,
+            "conveyancing": 8,
+            "friendly team": 10,
+            "immigration solicitor": 2,
+            "kind solicitor": 2,
+            "responsive staff": 6,
+            "affordable": 5,
+            "pleasant staff": 3,
+            "shared ownership": 4,
+            "meeting deadlines": 2
+          },
+          "firstSeen": "2026-06-25 18:00:49 +00:00",
+          "lastUpdated": "2026-06-25 18:00:49 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "amicuslaw.co.uk",
+          "rank": 247,
+          "backlinks": 2185,
+          "referringDomains": 289,
+          "referringMainDomains": 274,
+          "referringPages": 1828,
+          "brokenBacklinks": 520,
+          "referringLinksTypes": {
+            "anchor": 1373
+          },
+          "firstSeen": "2019-01-19 15:27:13 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 3,
-      "name": "Gilbert Stephens",
-      "url": "https://gilbertstephens.co.uk/",
-      "digitalVisibilityScore": 73,
-      "pillarScores": {
-        "speed": 77,
-        "technical": 100,
-        "local": 77,
-        "visibility": 60,
-        "ai": 40,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false
-      },
-      "context": null
-    },
-    {
-      "rank": 4,
       "name": "Stephens Scown",
       "url": "https://www.stephens-scown.co.uk/",
-      "digitalVisibilityScore": 73,
+      "digitalVisibilityScore": 76,
       "pillarScores": {
         "speed": 59,
         "technical": 100,
-        "local": 78,
+        "local": 92,
         "visibility": 43,
         "ai": 60,
         "content": 100
@@ -214,17 +518,396 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.stephens-scown.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 203,
+          "internalLinks": 4983,
+          "avgInternalLinksPerPage": 199.3,
+          "maxDepthReached": 1,
+          "genericAnchors": 18,
+          "genericAnchorRatio": 0.004,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 2,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 1001,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-27",
+          "sitemapStaleDays": 3,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1988,
+          "inpMs": 85,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "OC356696",
+          "companyName": "STEPHENS SCOWN LLP",
+          "companyStatus": "active",
+          "incorporatedOn": "2010-07-23",
+          "ageYears": 16.1,
+          "sicCodes": null,
+          "companyType": "llp",
+          "accountsType": "full",
+          "accountsMadeUpTo": "2025-04-30",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Curzon House, Southernhay West, Exeter, Devon, EX1 1RS",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 54,
+          "accessibility": 85,
+          "bestPractices": 96,
+          "seo": 85,
+          "lcpMs": 24043,
+          "tbtMs": 144,
+          "clsScore": 0,
+          "fcpMs": 11819,
+          "speedIndexMs": 11819,
+          "failing": [
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 57,
+          "ratingDistribution": {
+            "1": 18,
+            "2": 4,
+            "3": 1,
+            "4": 7,
+            "5": 179
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Legal services"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 31,
+          "placeTopics": {
+            "professional team": 56,
+            "visa application": 10,
+            "divorce litigation": 17,
+            "employment litigation": 5,
+            "quick responses": 15,
+            "immigration team": 7,
+            "clear explanations": 11,
+            "matrimonial proceedings": 3,
+            "family law department": 2,
+            "timely application submission": 2
+          },
+          "firstSeen": "2026-06-26 02:47:39 +00:00",
+          "lastUpdated": "2026-06-26 02:47:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "stephens-scown.co.uk",
+          "rank": 339,
+          "backlinks": 23875,
+          "referringDomains": 738,
+          "referringMainDomains": 709,
+          "referringPages": 14004,
+          "brokenBacklinks": 9589,
+          "referringLinksTypes": {
+            "image": 9967
+          },
+          "firstSeen": "2019-01-17 03:59:06 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "name": "Gilbert Stephens",
+      "url": "https://gilbertstephens.co.uk/",
+      "digitalVisibilityScore": 73,
+      "pillarScores": {
+        "speed": 77,
+        "technical": 100,
+        "local": 79,
+        "visibility": 60,
+        "ai": 40,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://gilbertstephens.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 189,
+          "internalLinks": 3708,
+          "avgInternalLinksPerPage": 148.3,
+          "maxDepthReached": 1,
+          "genericAnchors": 34,
+          "genericAnchorRatio": 0.009,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 59,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-04",
+          "sitemapStaleDays": 25,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 808,
+          "inpMs": 72,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "OC352723",
+          "companyName": "GILBERT STEPHENS LLP",
+          "companyStatus": "active",
+          "incorporatedOn": "2010-03-01",
+          "ageYears": 16.5,
+          "sicCodes": null,
+          "companyType": "llp",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-06-30",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "17 Southernhay East, Exeter, Devon, EX1 1QE",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 48,
+          "accessibility": 84,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 14627,
+          "tbtMs": 166,
+          "clsScore": 0.397,
+          "fcpMs": 2897,
+          "speedIndexMs": 3675,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "cls-culprits-insight",
+              "title": "Layout shift culprits",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 11,
+            "2": 1,
+            "3": 2,
+            "4": 7,
+            "5": 72
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Conveyancer",
+            "Divorce lawyer",
+            "Employment Lawyer",
+            "Family Lawyer",
+            "Law firm",
+            "Lawyer",
+            "Personal Injury Lawyer"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 81,
+          "placeTopics": {
+            "conveyancing": 19,
+            "quick to respond": 11,
+            "helpful staff": 20,
+            "quick paperwork handling": 2,
+            "smooth process": 9,
+            "sound advice": 3,
+            "property purchase": 11,
+            "informative staff": 2,
+            "thorough advice": 2,
+            "solicitors": 7
+          },
+          "firstSeen": "2024-07-17 02:10:50 +00:00",
+          "lastUpdated": "2026-06-29 22:27:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "gilbertstephens.co.uk",
+          "rank": 224,
+          "backlinks": 1369,
+          "referringDomains": 191,
+          "referringMainDomains": 176,
+          "referringPages": 1182,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 1086
+          },
+          "firstSeen": "2019-01-17 11:03:58 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 5,
       "name": "Wollens",
       "url": "https://wollens.co.uk/",
-      "digitalVisibilityScore": 71,
+      "digitalVisibilityScore": 72,
       "pillarScores": {
         "speed": 74,
         "technical": 100,
-        "local": 72,
+        "local": 78,
         "visibility": 42,
         "ai": 60,
         "content": 67
@@ -251,17 +934,187 @@
         "hasTeamLink": false,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://wollens.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 362,
+          "internalLinks": 5268,
+          "avgInternalLinksPerPage": 210.7,
+          "maxDepthReached": 1,
+          "genericAnchors": 26,
+          "genericAnchorRatio": 0.005,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 2,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 200,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-25",
+          "sitemapStaleDays": 5,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1765,
+          "inpMs": 116,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 38,
+          "accessibility": 71,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 17353,
+          "tbtMs": 747,
+          "clsScore": 0,
+          "fcpMs": 10177,
+          "speedIndexMs": 10177,
+          "failing": [
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "listitem",
+              "title": "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 28,
+          "ratingDistribution": {
+            "1": 9,
+            "2": 1,
+            "3": 0,
+            "4": 1,
+            "5": 30
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Family Lawyer",
+            "Law firm",
+            "Legal services"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "friendly team": 5,
+            "clear explanations": 3,
+            "polite staff": 2,
+            "clear communication": 2,
+            "responsiveness": 3,
+            "genuine care": 2,
+            "home purchase": 4,
+            "efficiency": 3,
+            "support": 3,
+            "sale": 2
+          },
+          "firstSeen": "2026-06-29 23:29:45 +00:00",
+          "lastUpdated": "2026-06-29 23:29:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "wollens.co.uk",
+          "rank": 290,
+          "backlinks": 7989,
+          "referringDomains": 470,
+          "referringMainDomains": 387,
+          "referringPages": 7286,
+          "brokenBacklinks": 16,
+          "referringLinksTypes": {
+            "image": 4160
+          },
+          "firstSeen": "2019-05-19 10:20:19 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 6,
       "name": "Setfords Exeter",
       "url": "https://www.setfords.co.uk/locations/devon/solicitors-in-exeter/",
-      "digitalVisibilityScore": 66,
+      "digitalVisibilityScore": 67,
       "pillarScores": {
         "speed": 89,
         "technical": 100,
-        "local": 65,
+        "local": 71,
         "visibility": 38,
         "ai": 20,
         "content": 67
@@ -288,17 +1141,152 @@
         "hasTeamLink": true,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.setfords.co.uk/locations/devon/solicitors-in-exeter/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 236,
+          "internalLinks": 8824,
+          "avgInternalLinksPerPage": 353,
+          "maxDepthReached": 1,
+          "genericAnchors": 23,
+          "genericAnchorRatio": 0.003,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 562,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-28",
+          "sitemapStaleDays": 2,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 3158,
+          "inpMs": 117,
+          "cls": 0,
+          "lcpGood": false,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 96,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 2402,
+          "tbtMs": 50,
+          "clsScore": 0,
+          "fcpMs": 1084,
+          "speedIndexMs": 4101,
+          "failing": [
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "list",
+              "title": "Lists do not contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "setfords.co.uk",
+          "rank": 277,
+          "backlinks": 3215,
+          "referringDomains": 618,
+          "referringMainDomains": 606,
+          "referringPages": 3075,
+          "brokenBacklinks": 9,
+          "referringLinksTypes": {
+            "anchor": 2959
+          },
+          "firstSeen": "2019-01-19 11:15:42 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 7,
       "name": "Porter Dodson",
       "url": "https://www.porterdodson.co.uk/",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 63,
       "pillarScores": {
         "speed": 67,
         "technical": 88,
-        "local": 61,
+        "local": 63,
         "visibility": 42,
         "ai": 40,
         "content": 67
@@ -325,7 +1313,162 @@
         "hasTeamLink": false,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.porterdodson.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 306,
+          "internalLinks": 4974,
+          "avgInternalLinksPerPage": 199,
+          "maxDepthReached": 1,
+          "genericAnchors": 33,
+          "genericAnchorRatio": 0.007,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 2,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 622,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-28",
+          "sitemapStaleDays": 2,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1311,
+          "inpMs": 194,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Exeter"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 61,
+          "accessibility": 81,
+          "bestPractices": 92,
+          "seo": 85,
+          "lcpMs": 12597,
+          "tbtMs": 74,
+          "clsScore": 0,
+          "fcpMs": 4027,
+          "speedIndexMs": 6264,
+          "failing": [
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 52,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 08:29:27 +00:00",
+          "lastUpdated": "2026-06-30 10:19:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "porterdodson.co.uk",
+          "rank": 252,
+          "backlinks": 1861,
+          "referringDomains": 307,
+          "referringMainDomains": 293,
+          "referringPages": 1468,
+          "brokenBacklinks": 14,
+          "referringLinksTypes": {
+            "anchor": 1322
+          },
+          "firstSeen": "2019-01-20 17:34:19 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 8,
@@ -335,7 +1478,7 @@
       "pillarScores": {
         "speed": 70,
         "technical": 50,
-        "local": 72,
+        "local": 74,
         "visibility": 38,
         "ai": 40,
         "content": 67
@@ -362,7 +1505,177 @@
         "hasTeamLink": true,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.wbw.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1476,
+          "inpMs": 115,
+          "cls": 0.11,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": false,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Exeter"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 52,
+          "accessibility": 75,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 15549,
+          "tbtMs": 228,
+          "clsScore": 0,
+          "fcpMs": 6636,
+          "speedIndexMs": 9808,
+          "failing": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 3,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 23
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Financial Advisor",
+            "Law firm",
+            "Legal services"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 103,
+          "placeTopics": {
+            "clear explanations": 2,
+            "polite staff": 3,
+            "clear communication": 2,
+            "easy process": 2,
+            "responsiveness": 2,
+            "conveyancing": 3,
+            "sale of house": 2,
+            "reassurance": 2,
+            "efficient staff": 2,
+            "helpfulness": 2
+          },
+          "firstSeen": "2024-07-19 14:50:20 +00:00",
+          "lastUpdated": "2026-06-30 14:45:16 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "wbw.co.uk",
+          "rank": 237,
+          "backlinks": 2930,
+          "referringDomains": 330,
+          "referringMainDomains": 311,
+          "referringPages": 2139,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 1537
+          },
+          "firstSeen": "2019-01-21 01:44:07 +00:00",
+          "lostDate": null
+        }
+      }
     }
   ]
 }

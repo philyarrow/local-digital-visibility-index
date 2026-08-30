@@ -56,13 +56,13 @@
       "live": true
     }
   },
-  "overallMedian": 62.5,
+  "overallMedian": 64,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
     "speed": 77,
     "technical": 75.5,
-    "local": 76,
+    "local": 78,
     "visibility": 38,
     "ai": 30,
     "content": 67
@@ -72,11 +72,11 @@
       "rank": 1,
       "name": "BPE Solicitors",
       "url": "https://www.bpe.co.uk/",
-      "digitalVisibilityScore": 73,
+      "digitalVisibilityScore": 74,
       "pillarScores": {
         "speed": 66,
         "technical": 88,
-        "local": 73,
+        "local": 75,
         "visibility": 58,
         "ai": 60,
         "content": 100
@@ -103,17 +103,184 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.bpe.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 250,
+          "internalLinks": 6269,
+          "avgInternalLinksPerPage": 250.8,
+          "maxDepthReached": 1,
+          "genericAnchors": 146,
+          "genericAnchorRatio": 0.023,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 523,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 583,
+          "inpMs": 87,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "OC349012",
+          "companyName": "BPE SOLICITORS LLP",
+          "companyStatus": "active",
+          "incorporatedOn": "2009-09-28",
+          "ageYears": 16.9,
+          "sicCodes": null,
+          "companyType": "llp",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "St James House, St James Square, Cheltenham, Gloucestershire, GL50 3PR",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 41,
+          "accessibility": 96,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 9764,
+          "tbtMs": 159,
+          "clsScore": 0.286,
+          "fcpMs": 7541,
+          "speedIndexMs": 7541,
+          "failing": [
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 15,
+          "ratingDistribution": {
+            "1": 7,
+            "2": 2,
+            "3": 0,
+            "4": 3,
+            "5": 31
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Conveyancer",
+            "Divorce lawyer",
+            "Employment Lawyer",
+            "Family Lawyer",
+            "Legal services",
+            "Notary public"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 64,
+          "placeTopics": {
+            "contactability": 2,
+            "house purchase": 2,
+            "efficiency": 4,
+            "advice": 3
+          },
+          "firstSeen": "2024-07-16 23:51:35 +00:00",
+          "lastUpdated": "2026-06-29 20:43:06 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bpe.co.uk",
+          "rank": 202,
+          "backlinks": 1169,
+          "referringDomains": 312,
+          "referringMainDomains": 297,
+          "referringPages": 1080,
+          "brokenBacklinks": 341,
+          "referringLinksTypes": {
+            "anchor": 993
+          },
+          "firstSeen": "2019-01-17 02:40:09 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 2,
       "name": "Willans",
       "url": "https://www.willans.co.uk/",
-      "digitalVisibilityScore": 69,
+      "digitalVisibilityScore": 72,
       "pillarScores": {
         "speed": 79,
         "technical": 33,
-        "local": 78,
+        "local": 94,
         "visibility": 80,
         "ai": 80,
         "content": null
@@ -141,7 +308,142 @@
         "hasTeamLink": null,
         "hasCredentialsLink": null
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.willans.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1830,
+          "inpMs": 102,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "OC334485",
+          "companyName": "WILLANS LLP",
+          "companyStatus": "active",
+          "incorporatedOn": "2008-02-01",
+          "ageYears": 18.6,
+          "sicCodes": null,
+          "companyType": "llp",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "34 Imperial Square, Cheltenham, England, GL50 1QZ",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 57,
+          "accessibility": 73,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 9848,
+          "tbtMs": 4,
+          "clsScore": 0.189,
+          "fcpMs": 2555,
+          "speedIndexMs": 6116,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "cls-culprits-insight",
+              "title": "Layout shift culprits",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "select-name",
+              "title": "Select elements do not have associated label elements.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "willans.co.uk",
+          "rank": 330,
+          "backlinks": 2544,
+          "referringDomains": 593,
+          "referringMainDomains": 578,
+          "referringPages": 2372,
+          "brokenBacklinks": 864,
+          "referringLinksTypes": {
+            "anchor": 2111
+          },
+          "firstSeen": "2019-01-21 12:10:29 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 3,
@@ -179,17 +481,152 @@
         "hasTeamLink": true,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.setfords.co.uk/locations/gloucestershire/solicitors-in-cheltenham/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 238,
+          "internalLinks": 8824,
+          "avgInternalLinksPerPage": 353,
+          "maxDepthReached": 1,
+          "genericAnchors": 23,
+          "genericAnchorRatio": 0.003,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 562,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-28",
+          "sitemapStaleDays": 2,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 3158,
+          "inpMs": 117,
+          "cls": 0,
+          "lcpGood": false,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 87,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 1876,
+          "tbtMs": 370,
+          "clsScore": 0.001,
+          "fcpMs": 1094,
+          "speedIndexMs": 4862,
+          "failing": [
+            {
+              "id": "list",
+              "title": "Lists do not contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "setfords.co.uk",
+          "rank": 277,
+          "backlinks": 3215,
+          "referringDomains": 618,
+          "referringMainDomains": 606,
+          "referringPages": 3075,
+          "brokenBacklinks": 9,
+          "referringLinksTypes": {
+            "anchor": 2959
+          },
+          "firstSeen": "2019-01-19 11:15:42 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 4,
       "name": "Pembridge Solicitors",
       "url": "https://pembridgesolicitors.co.uk/",
-      "digitalVisibilityScore": 63,
+      "digitalVisibilityScore": 65,
       "pillarScores": {
         "speed": 59,
         "technical": 100,
-        "local": 76,
+        "local": 86,
         "visibility": 46,
         "ai": 40,
         "content": 33
@@ -216,17 +653,154 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://pembridgesolicitors.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 98,
+          "internalLinks": 4155,
+          "avgInternalLinksPerPage": 166.2,
+          "maxDepthReached": 1,
+          "genericAnchors": 28,
+          "genericAnchorRatio": 0.007,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 12,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-06-19",
+          "sitemapStaleDays": 72,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "09777070",
+          "companyName": "PEMBRIDGE SOLICITORS LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2015-09-15",
+          "ageYears": 11,
+          "sicCodes": [
+            "69102"
+          ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-09-30",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Pembridge Solicitors, Calderwood Montpellier Parade, Cheltenham, England, GL50 1UA",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 57,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 18160,
+          "tbtMs": 2,
+          "clsScore": 0,
+          "fcpMs": 7426,
+          "speedIndexMs": 7985,
+          "failing": [
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "pembridgesolicitors.co.uk",
+          "rank": 86,
+          "backlinks": 79,
+          "referringDomains": 44,
+          "referringMainDomains": 42,
+          "referringPages": 61,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 60
+          },
+          "firstSeen": "2023-01-08 10:56:17 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 5,
       "name": "Hine Solicitors",
       "url": "https://www.hinesolicitors.com/",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 63,
       "pillarScores": {
         "speed": 81,
         "technical": 100,
-        "local": 72,
+        "local": 74,
         "visibility": 33,
         "ai": 0,
         "content": 67
@@ -253,17 +827,152 @@
         "hasTeamLink": false,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.hinesolicitors.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 178,
+          "internalLinks": 1287,
+          "avgInternalLinksPerPage": 51.5,
+          "maxDepthReached": 1,
+          "genericAnchors": 22,
+          "genericAnchorRatio": 0.017,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 2,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 22,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-06-04",
+          "sitemapStaleDays": 86,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1692,
+          "inpMs": 90,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 73,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 5284,
+          "tbtMs": 72,
+          "clsScore": 0,
+          "fcpMs": 3343,
+          "speedIndexMs": 3343,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "hinesolicitors.com",
+          "rank": 230,
+          "backlinks": 3054,
+          "referringDomains": 208,
+          "referringMainDomains": 193,
+          "referringPages": 1762,
+          "brokenBacklinks": 146,
+          "referringLinksTypes": {
+            "anchor": 1709
+          },
+          "firstSeen": "2019-11-19 23:57:08 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 6,
       "name": "Converse Law",
       "url": "https://www.converselaw.com/",
-      "digitalVisibilityScore": 56,
+      "digitalVisibilityScore": 57,
       "pillarScores": {
         "speed": 67,
         "technical": 63,
-        "local": 76,
+        "local": 78,
         "visibility": 37,
         "ai": 20,
         "content": 67
@@ -290,17 +999,154 @@
         "hasTeamLink": true,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.converselaw.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 69,
+          "internalLinks": 1305,
+          "avgInternalLinksPerPage": 52.2,
+          "maxDepthReached": 2,
+          "genericAnchors": 31,
+          "genericAnchorRatio": 0.024,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "09355827",
+          "companyName": "CONVERSE LAW LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2014-12-15",
+          "ageYears": 11.7,
+          "sicCodes": [
+            "69102"
+          ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Formal House, 60 St. Georges Place, Cheltenham, England, GL50 3PN",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 70,
+          "accessibility": 81,
+          "bestPractices": 96,
+          "seo": 91,
+          "lcpMs": 6468,
+          "tbtMs": 90,
+          "clsScore": 0,
+          "fcpMs": 3218,
+          "speedIndexMs": 3295,
+          "failing": [
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "converselaw.com",
+          "rank": 160,
+          "backlinks": 169,
+          "referringDomains": 80,
+          "referringMainDomains": 75,
+          "referringPages": 151,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 148
+          },
+          "firstSeen": "2021-09-07 19:10:16 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 7,
       "name": "Davis Gregory",
       "url": "https://www.cheltenhamsolicitors.co.uk/",
-      "digitalVisibilityScore": 53,
+      "digitalVisibilityScore": 57,
       "pillarScores": {
         "speed": 75,
         "technical": 50,
-        "local": 78,
+        "local": 98,
         "visibility": 39,
         "ai": 0,
         "content": 67
@@ -327,17 +1173,154 @@
         "hasTeamLink": true,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.cheltenhamsolicitors.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1696,
+          "inpMs": null,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": null,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "04789550",
+          "companyName": "DAVIS GREGORY LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2003-06-05",
+          "ageYears": 23.2,
+          "sicCodes": [
+            "69102"
+          ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-10-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "23-25 Rodney Road, Cheltenham, England, GL50 1HX",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 59,
+          "accessibility": 91,
+          "bestPractices": 73,
+          "seo": 92,
+          "lcpMs": 13914,
+          "tbtMs": 30,
+          "clsScore": 0,
+          "fcpMs": 4724,
+          "speedIndexMs": 7440,
+          "failing": [
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cheltenhamsolicitors.co.uk",
+          "rank": 163,
+          "backlinks": 941,
+          "referringDomains": 154,
+          "referringMainDomains": 149,
+          "referringPages": 925,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 918
+          },
+          "firstSeen": "2019-02-15 21:47:12 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 8,
       "name": "HCR Law",
       "url": "https://www.hcrlaw.com/",
-      "digitalVisibilityScore": 50,
+      "digitalVisibilityScore": 51,
       "pillarScores": {
         "speed": 95,
         "technical": 33,
-        "local": 69,
+        "local": 73,
         "visibility": 0,
         "ai": 40,
         "content": null
@@ -365,7 +1348,137 @@
         "hasTeamLink": null,
         "hasCredentialsLink": null
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.hcrlaw.com/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 2756,
+          "inpMs": 87,
+          "cls": 0,
+          "lcpGood": false,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 97,
+          "accessibility": 93,
+          "bestPractices": 96,
+          "seo": 40,
+          "lcpMs": 2408,
+          "tbtMs": 98,
+          "clsScore": 0.004,
+          "fcpMs": 761,
+          "speedIndexMs": 1004,
+          "failing": [
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "is-crawlable",
+              "title": "Page is blocked from indexing",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "meta-refresh",
+              "title": "The document uses `<meta http-equiv=\"refresh\">`",
+              "score": 0
+            },
+            {
+              "id": "http-status-code",
+              "title": "Page has unsuccessful HTTP status code",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 50
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "hcrlaw.com",
+          "rank": 357,
+          "backlinks": 26832,
+          "referringDomains": 1835,
+          "referringMainDomains": 1658,
+          "referringPages": 23083,
+          "brokenBacklinks": 21365,
+          "referringLinksTypes": {
+            "image": 14610
+          },
+          "firstSeen": "2019-01-16 00:04:57 +00:00",
+          "lostDate": null
+        }
+      }
     }
   ]
 }

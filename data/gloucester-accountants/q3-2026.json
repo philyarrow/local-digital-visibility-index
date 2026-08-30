@@ -152,9 +152,107 @@
           "sicCodes": [
             "69201"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "4th Floor Llanthony Warehouse, The Docks, Gloucester, Gloucestershire, United Kingdom, GL1 2EH",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 59,
+          "accessibility": 80,
+          "bestPractices": 73,
+          "seo": 92,
+          "lcpMs": 23552,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 4202,
+          "speedIndexMs": 7736,
+          "failing": [
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 1,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 73,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 12:44:30 +00:00",
+          "lastUpdated": "2026-06-30 13:16:17 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "griffithsmarshall.co.uk",
+          "rank": 189,
+          "backlinks": 351,
+          "referringDomains": 99,
+          "referringMainDomains": 95,
+          "referringPages": 297,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 212
+          },
+          "firstSeen": "2019-07-17 07:25:58 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -239,9 +337,112 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 69,
+          "accessibility": 63,
+          "bestPractices": 70,
+          "seo": 100,
+          "lcpMs": 5205,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3992,
+          "speedIndexMs": 5354,
+          "failing": [
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 8,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 16
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 32,
+          "placeTopics": {
+            "friendly accountant": 3,
+            "helpful staff": 8,
+            "easy to work with": 2,
+            "reasonable rates": 2
+          },
+          "firstSeen": "2024-08-02 18:02:03 +00:00",
+          "lastUpdated": "2026-06-29 22:08:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "apsaccounting.co.uk",
+          "rank": 89,
+          "backlinks": 111,
+          "referringDomains": 81,
+          "referringMainDomains": 76,
+          "referringPages": 99,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 99
+          },
+          "firstSeen": "2021-09-13 07:08:54 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -329,9 +530,120 @@
             "69201",
             "69202"
           ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-01-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": [
+            "BOOKTECH LIMITED"
+          ],
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Unit 1, Steadings Business Centre, Maisemore, Gloucester, Gloucestershire, England, GL2 8EY",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 49,
+          "accessibility": 86,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 12981,
+          "tbtMs": 403,
+          "clsScore": 0,
+          "fcpMs": 5164,
+          "speedIndexMs": 7089,
+          "failing": [
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "title": "Elements use prohibited ARIA attributes",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 6,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 15
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Accounting firm",
+            "Bookkeeping service",
+            "Payroll service",
+            "Tax preparation",
+            "Tax preparation service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 42,
+          "placeTopics": {
+            "team": 7,
+            "teamwork": 2,
+            "patient": 2,
+            "communication": 2
+          },
+          "firstSeen": "2024-07-14 18:20:21 +00:00",
+          "lastUpdated": "2026-06-27 00:41:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "ilexas.co.uk",
+          "rank": 167,
+          "backlinks": 321,
+          "referringDomains": 100,
+          "referringMainDomains": 97,
+          "referringPages": 289,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 288
+          },
+          "firstSeen": "2020-07-08 05:56:28 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -343,7 +655,7 @@
       "pillarScores": {
         "speed": null,
         "technical": 88,
-        "local": 66,
+        "local": 68,
         "visibility": 42,
         "ai": 20,
         "content": 100
@@ -417,14 +729,495 @@
           "incorporatedOn": "2009-05-18",
           "ageYears": 17.3,
           "sicCodes": null,
+          "companyType": "llp",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Chargrove House Shurdington Road, Shurdington, Cheltenham, Gloucestershire, GL51 4GA",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 52,
+          "accessibility": 85,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 13515,
+          "tbtMs": 355,
+          "clsScore": 0.01,
+          "fcpMs": 3679,
+          "speedIndexMs": 8215,
+          "failing": [
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 44,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 10:36:16 +00:00",
+          "lastUpdated": "2026-06-30 11:49:21 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "randall-payne.co.uk",
+          "rank": 256,
+          "backlinks": 1434,
+          "referringDomains": 428,
+          "referringMainDomains": 415,
+          "referringPages": 1289,
+          "brokenBacklinks": 1516,
+          "referringLinksTypes": {
+            "anchor": 1275
+          },
+          "firstSeen": "2019-01-15 23:40:41 +00:00",
+          "lostDate": null
         }
       }
     },
     {
       "rank": 5,
+      "name": "Accountx",
+      "url": "https://www.accountx.co.uk/",
+      "digitalVisibilityScore": 61,
+      "pillarScores": {
+        "speed": 89,
+        "technical": 100,
+        "local": 84,
+        "visibility": 21,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.accountx.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 28,
+          "internalLinks": 1277,
+          "avgInternalLinksPerPage": 51.1,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 29,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 95,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 2851,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 1658,
+          "speedIndexMs": 1658,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "aria-hidden-focus",
+              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 50
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 50
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 50
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 82
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 5,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 44
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Accountant"
+          ],
+          "hasDescription": true,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": {
+            "tax filing": 2,
+            "clear explanations": 4,
+            "attention to detail": 2,
+            "finances": 3,
+            "efficiency": 5,
+            "reliability": 4,
+            "accountant": 5,
+            "understanding": 2,
+            "job": 3,
+            "communication": 3
+          },
+          "firstSeen": "2026-08-16 19:43:05 +00:00",
+          "lastUpdated": "2026-08-16 19:43:05 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "accountx.co.uk",
+          "rank": 71,
+          "backlinks": 450,
+          "referringDomains": 67,
+          "referringMainDomains": 64,
+          "referringPages": 428,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 428
+          },
+          "firstSeen": "2022-04-06 09:08:13 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "name": "Hucclecote Accountancy & Taxation Services",
+      "url": "https://www.hatsgloucester.co.uk/",
+      "digitalVisibilityScore": 61,
+      "pillarScores": {
+        "speed": 59,
+        "technical": 100,
+        "local": 75,
+        "visibility": 47,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.hatsgloucester.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 28,
+          "internalLinks": 774,
+          "avgInternalLinksPerPage": 31,
+          "maxDepthReached": 2,
+          "genericAnchors": 19,
+          "genericAnchorRatio": 0.025,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 26,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 59,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 10786,
+          "tbtMs": 153,
+          "clsScore": 0,
+          "fcpMs": 4742,
+          "speedIndexMs": 5824,
+          "failing": [
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 5,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 2,
+            "4": 0,
+            "5": 30
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 31,
+          "placeTopics": {
+            "helpful staff": 16,
+            "quick responses": 3,
+            "engaging team": 2,
+            "efficiency": 3,
+            "business support": 3,
+            "helpfulness": 2,
+            "easy to understand": 2,
+            "initial meeting": 2,
+            "ease of dealing": 2,
+            "communication": 3
+          },
+          "firstSeen": "2024-07-17 10:42:36 +00:00",
+          "lastUpdated": "2026-06-30 05:08:37 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "hatsgloucester.co.uk",
+          "rank": 101,
+          "backlinks": 175,
+          "referringDomains": 77,
+          "referringMainDomains": 72,
+          "referringPages": 161,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 159
+          },
+          "firstSeen": "2021-05-06 04:18:55 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 7,
       "name": "Pitt Godden & Taylor LLP",
       "url": "http://www.pg-t.co.uk/",
       "digitalVisibilityScore": 61,
@@ -505,183 +1298,111 @@
           "incorporatedOn": "2012-02-15",
           "ageYears": 14.5,
           "sicCodes": null,
+          "companyType": "llp",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Unit 3 Ambrose House, Meteor Court, Barnett Way, Barnwood, Gloucester,, Gloucestershire, United Kingdom, GL4 3GG",
           "error": null
-        }
-      }
-    },
-    {
-      "rank": 6,
-      "name": "Hucclecote Accountancy & Taxation Services",
-      "url": "https://www.hatsgloucester.co.uk/",
-      "digitalVisibilityScore": 60,
-      "pillarScores": {
-        "speed": 59,
-        "technical": 100,
-        "local": 73,
-        "visibility": 47,
-        "ai": 0,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.hatsgloucester.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 28,
-          "internalLinks": 774,
-          "avgInternalLinksPerPage": 31,
-          "maxDepthReached": 2,
-          "genericAnchors": 19,
-          "genericAnchorRatio": 0.025,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": 1,
-            "services": 1
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 80,
+          "accessibility": 64,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 4328,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 2889,
+          "speedIndexMs": 3006,
+          "failing": [
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "object-alt",
+              "title": "`<object>` elements do not have alternate text",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 9,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 4
           },
-          "orphanCandidates": null,
-          "sitemapUrls": 26,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": true,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        }
-      }
-    },
-    {
-      "rank": 7,
-      "name": "Accountx",
-      "url": "https://www.accountx.co.uk/",
-      "digitalVisibilityScore": 59,
-      "pillarScores": {
-        "speed": 89,
-        "technical": 100,
-        "local": 74,
-        "visibility": 21,
-        "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.accountx.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 28,
-          "internalLinks": 1277,
-          "avgInternalLinksPerPage": 51.1,
-          "maxDepthReached": 1,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": 1
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Tax Advisor"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 44,
+          "placeTopics": {
+            "accounting needs": 2
           },
-          "orphanCandidates": null,
-          "sitemapUrls": 29,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
+          "firstSeen": "2024-07-17 07:58:35 +00:00",
+          "lastUpdated": "2026-06-30 03:01:56 +00:00"
         },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Gloucester"
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "pg-t.co.uk",
+          "rank": 95,
+          "backlinks": 231,
+          "referringDomains": 74,
+          "referringMainDomains": 68,
+          "referringPages": 219,
+          "brokenBacklinks": 185,
+          "referringLinksTypes": {
+            "anchor": 213
+          },
+          "firstSeen": "2021-09-10 17:49:16 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -768,9 +1489,101 @@
           "sicCodes": [
             "69201"
           ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-07-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "3 The Tulworths, Gloucester, Gloucestershire, England, GL2 9RS",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 53,
+          "accessibility": 94,
+          "bestPractices": 92,
+          "seo": 85,
+          "lcpMs": 4831,
+          "tbtMs": 92,
+          "clsScore": 0.477,
+          "fcpMs": 3641,
+          "speedIndexMs": 4124,
+          "failing": [
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "skip-link",
+              "title": "Skip links are not focusable.",
+              "score": 0
+            },
+            {
+              "id": "robots-txt",
+              "title": "robots.txt is not valid",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 27,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 04:54:10 +00:00",
+          "lastUpdated": "2026-06-30 04:54:10 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "originalaccountancy.co.uk",
+          "rank": 0,
+          "backlinks": 27,
+          "referringDomains": 25,
+          "referringMainDomains": 25,
+          "referringPages": 26,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 26
+          },
+          "firstSeen": "2023-11-14 06:41:28 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -860,14 +1673,302 @@
             "69202",
             "69203"
           ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2026-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "13 Water Wheel Close, Quedgeley, Gloucester, England, GL2 4XH",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 71,
+          "accessibility": 83,
+          "bestPractices": 96,
+          "seo": 85,
+          "lcpMs": 4356,
+          "tbtMs": 135,
+          "clsScore": 0.022,
+          "fcpMs": 3606,
+          "speedIndexMs": 6717,
+          "failing": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "valid-source-maps",
+              "title": "Missing source maps for large first-party JavaScript",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 8,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Accounting firm",
+            "Chartered accountant",
+            "Payroll service",
+            "Tax Advisor",
+            "Tax preparation",
+            "Tax preparation service"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 17,
+          "placeTopics": null,
+          "firstSeen": "2026-06-28 07:22:43 +00:00",
+          "lastUpdated": "2026-06-28 07:22:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "gloucestersphere.co.uk",
+          "rank": 111,
+          "backlinks": 223,
+          "referringDomains": 75,
+          "referringMainDomains": 70,
+          "referringPages": 201,
+          "brokenBacklinks": 3,
+          "referringLinksTypes": {
+            "anchor": 201
+          },
+          "firstSeen": "2019-11-14 13:15:58 +00:00",
+          "lostDate": null
         }
       }
     },
     {
       "rank": 10,
+      "name": "Kingscott Dix",
+      "url": "http://www.kingscott-dix.co.uk/",
+      "digitalVisibilityScore": 58,
+      "pillarScores": {
+        "speed": 60,
+        "technical": 75,
+        "local": 90,
+        "visibility": 47,
+        "ai": 20,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.kingscott-dix.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 42,
+          "avgInternalLinksPerPage": 42,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "07118109",
+          "companyName": "KINGSCOTT DIX LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2010-01-06",
+          "ageYears": 16.6,
+          "sicCodes": [
+            "69201"
+          ],
+          "companyType": "ltd",
+          "accountsType": "small",
+          "accountsMadeUpTo": "2024-12-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": [
+            "KINGSCOTT DIX (GLOUCESTER) LIMITED"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Goodridge Court, Goodridge Avenue, Gloucester, England, GL2 5EN",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 76,
+          "bestPractices": 70,
+          "seo": 92,
+          "lcpMs": 19523,
+          "tbtMs": 31,
+          "clsScore": 0,
+          "fcpMs": 8934,
+          "speedIndexMs": 8934,
+          "failing": [
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-16 16:31:22 +00:00",
+          "lastUpdated": "2026-06-29 13:44:52 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kingscott-dix.co.uk",
+          "rank": 245,
+          "backlinks": 238,
+          "referringDomains": 126,
+          "referringMainDomains": 120,
+          "referringPages": 202,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 200
+          },
+          "firstSeen": "2021-08-27 22:13:33 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 11,
       "name": "Reed & Co Accountants",
       "url": "https://www.reedaccountants.co.uk/gloucester/",
       "digitalVisibilityScore": 58,
@@ -947,14 +2048,118 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Gloucester"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 71,
+          "accessibility": 84,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 9676,
+          "tbtMs": 53,
+          "clsScore": 0.001,
+          "fcpMs": 2735,
+          "speedIndexMs": 2735,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 15
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 56,
+          "placeTopics": {
+            "thank you paul": 2,
+            "communication": 2,
+            "invaluable asset": 2,
+            "team": 2,
+            "accountants": 2
+          },
+          "firstSeen": "2024-07-15 07:11:33 +00:00",
+          "lastUpdated": "2026-06-25 07:41:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "reedaccountants.co.uk",
+          "rank": 166,
+          "backlinks": 242,
+          "referringDomains": 159,
+          "referringMainDomains": 143,
+          "referringPages": 219,
+          "brokenBacklinks": 145,
+          "referringLinksTypes": {
+            "anchor": 210
+          },
+          "firstSeen": "2020-02-24 03:44:19 +00:00",
+          "lostDate": null
         }
       }
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Pi Accountancy",
       "url": "http://pi-accountancy.co.uk/",
       "digitalVisibilityScore": 57,
@@ -1034,14 +2239,311 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 65,
+          "accessibility": 78,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 6357,
+          "tbtMs": 35,
+          "clsScore": 0,
+          "fcpMs": 3816,
+          "speedIndexMs": 5794,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "label",
+              "title": "Form elements do not have associated labels",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 12,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 34
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 42,
+          "placeTopics": {
+            "friendly staff": 12,
+            "tax return": 4,
+            "clear explanations": 5,
+            "free consultation": 2,
+            "professional company": 7,
+            "business advice": 2,
+            "small business": 4,
+            "guidance": 2,
+            "business growth": 2,
+            "accountancy": 5
+          },
+          "firstSeen": "2024-06-12 11:58:27 +00:00",
+          "lastUpdated": "2026-08-07 21:13:53 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "pi-accountancy.co.uk",
+          "rank": 163,
+          "backlinks": 722,
+          "referringDomains": 519,
+          "referringMainDomains": 462,
+          "referringPages": 683,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 646
+          },
+          "firstSeen": "2019-06-20 22:24:09 +00:00",
+          "lostDate": null
         }
       }
     },
     {
-      "rank": 12,
+      "rank": 13,
+      "name": "Clarke & Co.",
+      "url": "http://clarkeaccountants.co.uk/",
+      "digitalVisibilityScore": 56,
+      "pillarScores": {
+        "speed": 70,
+        "technical": 75,
+        "local": 72,
+        "visibility": 38,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://clarkeaccountants.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 7,
+          "avgInternalLinksPerPage": 7,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 7,
+          "sitemapUrls": 8,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 68,
+          "accessibility": 68,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 8552,
+          "tbtMs": 110,
+          "clsScore": 0,
+          "fcpMs": 3138,
+          "speedIndexMs": 3504,
+          "failing": [
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "doctype",
+              "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 8
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 5,
+          "placeTopics": {
+            "value for money": 2,
+            "cost": 2
+          },
+          "firstSeen": "2024-07-17 13:14:40 +00:00",
+          "lastUpdated": "2026-06-30 07:04:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "clarkeaccountants.co.uk",
+          "rank": 66,
+          "backlinks": 58,
+          "referringDomains": 38,
+          "referringMainDomains": 37,
+          "referringPages": 45,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 45
+          },
+          "firstSeen": "2019-06-25 11:27:43 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 14,
       "name": "LNH Management Solutions Limited",
       "url": "https://www.lnhms.co.uk/",
       "digitalVisibilityScore": 56,
@@ -1124,185 +2626,114 @@
           "sicCodes": [
             "69201"
           ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2024-06-30",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Suite 6 Business Centre Innsworth Technology Park, Innsworth Lane, Gloucester, Gloucestershire, England, GL3 1DL",
           "error": null
-        }
-      }
-    },
-    {
-      "rank": 13,
-      "name": "Clarke & Co.",
-      "url": "http://clarkeaccountants.co.uk/",
-      "digitalVisibilityScore": 55,
-      "pillarScores": {
-        "speed": 70,
-        "technical": 75,
-        "local": 70,
-        "visibility": 38,
-        "ai": 0,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://clarkeaccountants.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 7,
-          "avgInternalLinksPerPage": 7,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 7,
-          "sitemapUrls": 8,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
         },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Gloucester"
-        }
-      }
-    },
-    {
-      "rank": 14,
-      "name": "Kingscott Dix",
-      "url": "http://www.kingscott-dix.co.uk/",
-      "digitalVisibilityScore": 54,
-      "pillarScores": {
-        "speed": 60,
-        "technical": 75,
-        "local": 70,
-        "visibility": 47,
-        "ai": 20,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.kingscott-dix.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 42,
-          "avgInternalLinksPerPage": 42,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "07118109",
-          "companyName": "KINGSCOTT DIX LIMITED",
-          "companyStatus": "active",
-          "incorporatedOn": "2010-01-06",
-          "ageYears": 16.6,
-          "sicCodes": [
-            "69201"
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 48,
+          "accessibility": 89,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 6186,
+          "tbtMs": 0,
+          "clsScore": 0.934,
+          "fcpMs": 2889,
+          "speedIndexMs": 2950,
+          "failing": [
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "cls-culprits-insight",
+              "title": "Layout shift culprits",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            }
           ],
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "Goodridge Court, Goodridge Avenue, Gloucester, England, GL2 5EN",
           "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": null,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Accounting",
+            "Bookkeeping service",
+            "Chartered accountant",
+            "Tax Advisor",
+            "Tax preparation",
+            "Tax preparation service"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 49,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 12:28:32 +00:00",
+          "lastUpdated": "2026-06-30 13:04:59 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "lnhms.co.uk",
+          "rank": 82,
+          "backlinks": 114,
+          "referringDomains": 57,
+          "referringMainDomains": 54,
+          "referringPages": 111,
+          "brokenBacklinks": 8,
+          "referringLinksTypes": {
+            "anchor": 109
+          },
+          "firstSeen": "2019-01-20 19:54:54 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1390,9 +2821,118 @@
             "69201",
             "69202"
           ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-10-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Suite 1 & 2, The Business Centre, Innsworth Technology Park, Gloucester, United Kingdom, GL3 1DL",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 75,
+          "accessibility": 89,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 6079,
+          "tbtMs": 24,
+          "clsScore": 0,
+          "fcpMs": 1690,
+          "speedIndexMs": 4336,
+          "failing": [
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 12,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 25
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 50,
+          "placeTopics": {
+            "helpful staff": 10,
+            "small business support": 2,
+            "clear guidance": 3,
+            "kind staff": 3,
+            "team": 3,
+            "efficiency": 2,
+            "availability": 2,
+            "employment": 2,
+            "couple": 2,
+            "financial": 3
+          },
+          "firstSeen": "2024-07-17 05:28:22 +00:00",
+          "lastUpdated": "2026-06-30 00:59:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "pbtaccountancy.co.uk",
+          "rank": 103,
+          "backlinks": 196,
+          "referringDomains": 94,
+          "referringMainDomains": 90,
+          "referringPages": 179,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 175
+          },
+          "firstSeen": "2019-04-22 12:26:08 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1481,9 +3021,114 @@
             "69201",
             "69203"
           ],
+          "companyType": "ltd",
+          "accountsType": "unaudited-abridged",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": [
+            "THS ACCOUNTANTS LIMITED"
+          ],
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Midway House Herrick Way, Staverton Technology Park, Staverton, Cheltenham, Gloucestershire, GL51 6TQ",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 98,
+          "accessibility": 96,
+          "bestPractices": 74,
+          "seo": 82,
+          "lcpMs": 1983,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 1532,
+          "speedIndexMs": 2578,
+          "failing": [
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "http-status-code",
+              "title": "Page has unsuccessful HTTP status code",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "doctype",
+              "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 5,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Accounting firm",
+            "Auditor",
+            "Chartered accountant",
+            "Financial audit"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 20,
+          "placeTopics": null,
+          "firstSeen": "2026-06-27 03:34:45 +00:00",
+          "lastUpdated": "2026-06-27 03:34:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "harpersheldon.com",
+          "rank": 101,
+          "backlinks": 101,
+          "referringDomains": 58,
+          "referringMainDomains": 52,
+          "referringPages": 99,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 97
+          },
+          "firstSeen": "2023-10-08 04:10:00 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1568,9 +3213,108 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 98,
+          "accessibility": 92,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 1305,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 1230,
+          "speedIndexMs": 3817,
+          "failing": [
+            {
+              "id": "svg-img-alt",
+              "title": "SVG elements with an `img` role do not have an accessible text alternative",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "title": "Elements use prohibited ARIA attributes",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 50
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Accountant",
+            "Bookkeeping service",
+            "Chartered accountant",
+            "Tax Advisor",
+            "Tax preparation",
+            "Tax preparation service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 8,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 11:23:44 +00:00",
+          "lastUpdated": "2026-06-30 11:23:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kjaccountants.co.uk",
+          "rank": 30,
+          "backlinks": 44,
+          "referringDomains": 37,
+          "referringMainDomains": 35,
+          "referringPages": 38,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 38
+          },
+          "firstSeen": "2025-02-09 05:11:15 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1660,9 +3404,109 @@
             "69203",
             "82110"
           ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-01-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": [
+            "COTSWOLD BUSINESS SOLUTIONS LIMITED"
+          ],
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "No. 1 Business Centre, 1-11 Alvin Street, Gloucester, Glos, England, GL1 3EJ",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 80,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 4260,
+          "tbtMs": 167,
+          "clsScore": 0,
+          "fcpMs": 2408,
+          "speedIndexMs": 2408,
+          "failing": [
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 10,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 3,
+          "placeTopics": null,
+          "firstSeen": "2026-07-08 19:40:40 +00:00",
+          "lastUpdated": "2026-07-08 19:40:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "askabaqus.com",
+          "rank": 162,
+          "backlinks": 172,
+          "referringDomains": 65,
+          "referringMainDomains": 60,
+          "referringPages": 172,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "image": 104
+          },
+          "firstSeen": "2020-08-04 13:49:14 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1747,9 +3591,107 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 76,
+          "accessibility": 67,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 5415,
+          "tbtMs": 146,
+          "clsScore": 0,
+          "fcpMs": 1505,
+          "speedIndexMs": 4353,
+          "failing": [
+            {
+              "id": "label",
+              "title": "Form elements do not have associated labels",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 4
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 6,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 06:14:54 +00:00",
+          "lastUpdated": "2026-06-30 01:37:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "brothertons.co.uk",
+          "rank": 68,
+          "backlinks": 128,
+          "referringDomains": 70,
+          "referringMainDomains": 67,
+          "referringPages": 123,
+          "brokenBacklinks": 60,
+          "referringLinksTypes": {
+            "anchor": 122
+          },
+          "firstSeen": "2020-07-08 05:54:19 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1834,9 +3776,101 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Gloucester"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 40,
+          "accessibility": 90,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 11657,
+          "tbtMs": 752,
+          "clsScore": 0,
+          "fcpMs": 5421,
+          "speedIndexMs": 7479,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 05:55:52 +00:00",
+          "lastUpdated": "2024-07-17 05:55:52 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "alanbrookes.co.uk",
+          "rank": 159,
+          "backlinks": 205,
+          "referringDomains": 64,
+          "referringMainDomains": 59,
+          "referringPages": 192,
+          "brokenBacklinks": 122,
+          "referringLinksTypes": {
+            "image": 110
+          },
+          "firstSeen": "2021-12-07 21:30:02 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1921,9 +3955,109 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 70,
+          "accessibility": 65,
+          "bestPractices": 100,
+          "seo": 85,
+          "lcpMs": 12011,
+          "tbtMs": 0,
+          "clsScore": 0.028,
+          "fcpMs": 2716,
+          "speedIndexMs": 3412,
+          "failing": [
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Service establishment"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-05-02 16:06:42 +00:00",
+          "lastUpdated": "2026-05-02 16:06:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "a4adventure2024.co.uk",
+          "rank": 0,
+          "backlinks": 88,
+          "referringDomains": 26,
+          "referringMainDomains": 22,
+          "referringPages": 88,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 88
+          },
+          "firstSeen": "2024-07-06 02:28:27 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2008,9 +4142,104 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 96,
+          "accessibility": 94,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 2441,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 1687,
+          "speedIndexMs": 3079,
+          "failing": [
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 50
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Accounting firm"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 31,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 10:27:41 +00:00",
+          "lastUpdated": "2026-06-30 04:57:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "glosaccountants.co.uk",
+          "rank": 21,
+          "backlinks": 96,
+          "referringDomains": 59,
+          "referringMainDomains": 55,
+          "referringPages": 94,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 93
+          },
+          "firstSeen": "2021-06-12 19:41:01 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2095,9 +4324,124 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Gloucester"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 39,
+          "accessibility": 95,
+          "bestPractices": 73,
+          "seo": 91,
+          "lcpMs": 12690,
+          "tbtMs": 775,
+          "clsScore": 0.168,
+          "fcpMs": 4052,
+          "speedIndexMs": 4239,
+          "failing": [
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "max-potential-fid",
+              "title": "Max Potential First Input Delay",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 22,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 2,
+            "4": 0,
+            "5": 41
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Accounting firm",
+            "Bookkeeping service",
+            "Tax Advisor",
+            "Tax preparation",
+            "Tax preparation service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 62,
+          "placeTopics": {
+            "helpful staff": 15,
+            "fast answers": 5,
+            "supportive staff": 4,
+            "efficiency": 6,
+            "technology use": 5,
+            "helpfulness": 3,
+            "communication": 2,
+            "expertise": 4,
+            "advice": 2,
+            "team": 11
+          },
+          "firstSeen": "2024-07-17 11:41:26 +00:00",
+          "lastUpdated": "2026-06-30 05:54:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "mbsaccountants.co.uk",
+          "rank": 136,
+          "backlinks": 293,
+          "referringDomains": 163,
+          "referringMainDomains": 158,
+          "referringPages": 274,
+          "brokenBacklinks": 2,
+          "referringLinksTypes": {
+            "anchor": 270
+          },
+          "firstSeen": "2019-10-16 20:34:12 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2182,9 +4526,109 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 66,
+          "accessibility": 91,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 8011,
+          "tbtMs": 0,
+          "clsScore": 0.003,
+          "fcpMs": 3999,
+          "speedIndexMs": 4057,
+          "failing": [
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "skip-link",
+              "title": "Skip links are not focusable.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "tabindex",
+              "title": "Some elements have a `[tabindex]` value greater than 0",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 24,
+          "placeTopics": {
+            "team": 2
+          },
+          "firstSeen": "2024-07-19 07:54:47 +00:00",
+          "lastUpdated": "2026-06-30 10:04:16 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "padamwalburn.com",
+          "rank": 68,
+          "backlinks": 104,
+          "referringDomains": 92,
+          "referringMainDomains": 89,
+          "referringPages": 100,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 70
+          },
+          "firstSeen": "2021-06-25 09:38:23 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2271,9 +4715,107 @@
           "sicCodes": [
             "69201"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "17 Oak Tree Close, Hardwicke, Gloucester, GL2 4TJ",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 63,
+          "accessibility": 73,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 5705,
+          "tbtMs": 148,
+          "clsScore": 0.059,
+          "fcpMs": 3785,
+          "speedIndexMs": 6864,
+          "failing": [
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 36,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 05:30:17 +00:00",
+          "lastUpdated": "2026-06-30 01:02:03 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "pcdaccountancy.co.uk",
+          "rank": 92,
+          "backlinks": 107,
+          "referringDomains": 75,
+          "referringMainDomains": 71,
+          "referringPages": 97,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 96
+          },
+          "firstSeen": "2022-05-03 03:11:49 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2358,9 +4900,101 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Gloucester"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 79,
+          "bestPractices": 100,
+          "seo": 85,
+          "lcpMs": 12978,
+          "tbtMs": 139,
+          "clsScore": 0,
+          "fcpMs": 7803,
+          "speedIndexMs": 7803,
+          "failing": [
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "label-content-name-mismatch",
+              "title": "Elements with visible text labels do not have matching accessible names.",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 40,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 10:45:58 +00:00",
+          "lastUpdated": "2026-06-30 10:45:58 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "burton-sweet.co.uk",
+          "rank": 191,
+          "backlinks": 642,
+          "referringDomains": 169,
+          "referringMainDomains": 157,
+          "referringPages": 593,
+          "brokenBacklinks": 11,
+          "referringLinksTypes": {
+            "anchor": 572
+          },
+          "firstSeen": "2019-03-25 00:43:16 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2446,9 +5080,119 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 71,
+          "accessibility": 100,
+          "bestPractices": 78,
+          "seo": 58,
+          "lcpMs": 3490,
+          "tbtMs": 549,
+          "clsScore": 0,
+          "fcpMs": 3188,
+          "speedIndexMs": 3188,
+          "failing": [
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "is-crawlable",
+              "title": "Page is blocked from indexing",
+              "score": 0
+            },
+            {
+              "id": "http-status-code",
+              "title": "Page has unsuccessful HTTP status code",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 2,
+            "5": 26
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Tax preparation service"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 30,
+          "placeTopics": {
+            "tax explanation": 2,
+            "prompt responses": 2,
+            "efficiency": 3,
+            "business accounting": 2,
+            "reliability": 3,
+            "easy to work with": 2,
+            "advice": 4,
+            "number": 4,
+            "helpful": 2
+          },
+          "firstSeen": "2024-07-19 08:10:39 +00:00",
+          "lastUpdated": "2026-06-30 10:04:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "gloucesteraccountants.com",
+          "rank": 0,
+          "backlinks": 49,
+          "referringDomains": 48,
+          "referringMainDomains": 47,
+          "referringPages": 49,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 49
+          },
+          "firstSeen": "2024-04-17 04:24:25 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2533,9 +5277,107 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 4750,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 2367,
+          "speedIndexMs": 3004,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 31
+            },
+            {
+              "id": "duplicated-javascript-insight",
+              "title": "Duplicated JavaScript",
+              "score": 50
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 50
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 2,
+          "placeTopics": null,
+          "firstSeen": "2024-06-04 12:11:42 +00:00",
+          "lastUpdated": "2026-06-27 00:32:37 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kjaccounts.com",
+          "rank": 0,
+          "backlinks": 42,
+          "referringDomains": 40,
+          "referringMainDomains": 38,
+          "referringPages": 42,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 39
+          },
+          "firstSeen": "2023-10-14 19:48:24 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2620,9 +5462,114 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Gloucester"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 54,
+          "accessibility": 98,
+          "bestPractices": 96,
+          "seo": 85,
+          "lcpMs": 14817,
+          "tbtMs": 132,
+          "clsScore": 0,
+          "fcpMs": 12510,
+          "speedIndexMs": 12510,
+          "failing": [
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": null,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Accountant",
+            "Bookkeeping service",
+            "Business management consultant",
+            "Service establishment",
+            "Payroll service",
+            "Tax preparation"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 10,
+          "placeTopics": null,
+          "firstSeen": "2026-07-03 17:28:17 +00:00",
+          "lastUpdated": "2026-07-03 17:28:17 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "theaccountancyandfinancehouse.com",
+          "rank": 46,
+          "backlinks": 33,
+          "referringDomains": 8,
+          "referringMainDomains": 8,
+          "referringPages": 31,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "image": 24
+          },
+          "firstSeen": "2026-07-02 16:32:34 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2709,9 +5656,101 @@
           "sicCodes": [
             "69201"
           ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-01-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "6 Bamel Way, Gloucester Business Park, Brockworth, Gloucester, GL3 4BH",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 68,
+          "accessibility": 90,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 6689,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3822,
+          "speedIndexMs": 3822,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 3,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 09:37:24 +00:00",
+          "lastUpdated": "2026-06-30 11:05:57 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "accountrix.co.uk",
+          "rank": 51,
+          "backlinks": 45,
+          "referringDomains": 45,
+          "referringMainDomains": 41,
+          "referringPages": 45,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 45
+          },
+          "firstSeen": "2023-11-14 11:38:20 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2797,9 +5836,107 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 75,
+          "accessibility": 89,
+          "bestPractices": 100,
+          "seo": 85,
+          "lcpMs": 5295,
+          "tbtMs": 2,
+          "clsScore": 0.03,
+          "fcpMs": 3024,
+          "speedIndexMs": 3064,
+          "failing": [
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "title": "Elements use prohibited ARIA attributes",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 5,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 34,
+          "placeTopics": null,
+          "firstSeen": "2026-07-10 16:17:09 +00:00",
+          "lastUpdated": "2026-07-10 16:17:09 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bdigitalaccounts.co.uk",
+          "rank": 2,
+          "backlinks": 113,
+          "referringDomains": 46,
+          "referringMainDomains": 43,
+          "referringPages": 113,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 113
+          },
+          "firstSeen": "2022-12-11 02:52:56 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2884,9 +6021,101 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 85,
+          "accessibility": 86,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 2766,
+          "tbtMs": 390,
+          "clsScore": 0,
+          "fcpMs": 1961,
+          "speedIndexMs": 2436,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 19,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 13:45:22 +00:00",
+          "lastUpdated": "2026-06-30 13:57:27 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "agraccounts.com",
+          "rank": 0,
+          "backlinks": 53,
+          "referringDomains": 49,
+          "referringMainDomains": 44,
+          "referringPages": 52,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 51
+          },
+          "firstSeen": "2023-11-13 12:32:18 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2972,9 +6201,70 @@
           "incorporatedOn": "2012-10-31",
           "ageYears": 13.8,
           "sicCodes": null,
+          "companyType": "llp",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2020-03-31",
+          "accountsOverdue": true,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Alexandra House, 88 Pillowell Drive, Gloucester, England, GL1 3LZ",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Accounting firm",
+            "Business-to-Business service",
+            "Tax preparation service"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 36,
+          "placeTopics": null,
+          "firstSeen": "2024-07-14 18:02:28 +00:00",
+          "lastUpdated": "2026-06-27 00:14:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "correctbalance.co.uk",
+          "rank": 74,
+          "backlinks": 100,
+          "referringDomains": 80,
+          "referringMainDomains": 77,
+          "referringPages": 92,
+          "brokenBacklinks": 107,
+          "referringLinksTypes": {
+            "anchor": 92
+          },
+          "firstSeen": "2019-06-20 21:04:58 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3063,9 +6353,110 @@
             "69201",
             "69203"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2026-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": [
+            "HARBOUR LOCK LIMITED",
+            "HARBOUR KEY LIMITED"
+          ],
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Midway House Herrick Way, Staverton Technology Park, Staverton, Cheltenham, Gloucestershire, England, GL51 6TQ",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 66,
+          "accessibility": 77,
+          "bestPractices": 74,
+          "seo": 92,
+          "lcpMs": 5900,
+          "tbtMs": 211,
+          "clsScore": 0.126,
+          "fcpMs": 2731,
+          "speedIndexMs": 3043,
+          "failing": [
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 7
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 7,
+          "placeTopics": null,
+          "firstSeen": "2024-07-15 08:20:43 +00:00",
+          "lastUpdated": "2026-06-28 07:19:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "harbourkey.com",
+          "rank": 109,
+          "backlinks": 159,
+          "referringDomains": 71,
+          "referringMainDomains": 67,
+          "referringPages": 144,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 92
+          },
+          "firstSeen": "2019-01-22 14:33:56 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3153,9 +6544,107 @@
             "69201",
             "69202"
           ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Unit 1b Bristol Road, Morelands Trading Estate, Gloucester, United Kingdom, GL1 5RZ",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 98,
+          "accessibility": 64,
+          "bestPractices": 67,
+          "seo": 91,
+          "lcpMs": 1878,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 752,
+          "speedIndexMs": 3788,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 1,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 11,
+          "placeTopics": null,
+          "firstSeen": "2024-07-15 09:11:40 +00:00",
+          "lastUpdated": "2026-06-28 08:09:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "gloucester-accounting.co.uk",
+          "rank": 45,
+          "backlinks": 116,
+          "referringDomains": 44,
+          "referringMainDomains": 43,
+          "referringPages": 113,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 113
+          },
+          "firstSeen": "2021-09-07 18:49:53 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3240,9 +6729,101 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 100,
+          "accessibility": 53,
+          "bestPractices": 67,
+          "seo": 73,
+          "lcpMs": 608,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 608,
+          "speedIndexMs": 608,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "charset",
+              "title": "Charset declaration is missing or occurs too late in the HTML",
+              "score": 0
+            },
+            {
+              "id": "doctype",
+              "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "redirects-http",
+              "title": "Does not redirect HTTP traffic to HTTPS",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 14:10:56 +00:00",
+          "lastUpdated": "2026-06-30 14:10:56 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "lawson-macdonald.com",
+          "rank": 1,
+          "backlinks": 47,
+          "referringDomains": 44,
+          "referringMainDomains": 40,
+          "referringPages": 45,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 45
+          },
+          "firstSeen": "2021-06-12 19:41:01 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3330,9 +6911,103 @@
           "sicCodes": [
             "69202"
           ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-09-30",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "14 Southfield Close, Cheltenham, Gloucestershire, England, GL53 9LF",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 72,
+          "accessibility": 70,
+          "bestPractices": 74,
+          "seo": 92,
+          "lcpMs": 8312,
+          "tbtMs": 0,
+          "clsScore": 0.01,
+          "fcpMs": 2414,
+          "speedIndexMs": 2566,
+          "failing": [
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Service establishment"
+          ],
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 13,
+          "placeTopics": null,
+          "firstSeen": "2026-07-22 14:11:20 +00:00",
+          "lastUpdated": "2026-07-22 14:11:20 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bluestaraccounting.com",
+          "rank": 0,
+          "backlinks": 47,
+          "referringDomains": 43,
+          "referringMainDomains": 41,
+          "referringPages": 45,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 44
+          },
+          "firstSeen": "2023-11-14 09:28:12 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3418,9 +7093,66 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Accounting firm",
+            "Bookkeeping service",
+            "Chartered accountant",
+            "Payroll service",
+            "Tax preparation"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 41,
+          "placeTopics": null,
+          "firstSeen": "2026-06-27 09:36:45 +00:00",
+          "lastUpdated": "2026-06-27 09:36:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "robert-powell.com",
+          "rank": 0,
+          "backlinks": 171,
+          "referringDomains": 52,
+          "referringMainDomains": 49,
+          "referringPages": 171,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 171
+          },
+          "firstSeen": "2022-11-17 02:24:11 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3506,9 +7238,66 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-06-07 02:56:21 +00:00",
+          "lastUpdated": "2026-07-12 15:26:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "driversacc.com",
+          "rank": 0,
+          "backlinks": 32,
+          "referringDomains": 29,
+          "referringMainDomains": 26,
+          "referringPages": 32,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 32
+          },
+          "firstSeen": "2023-11-13 05:19:38 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3594,9 +7383,60 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 12,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 9,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 07:23:40 +00:00",
+          "lastUpdated": "2026-06-30 02:34:03 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "clementstaxassociates.co.uk",
+          "rank": 0,
+          "backlinks": 21,
+          "referringDomains": 21,
+          "referringMainDomains": 21,
+          "referringPages": 21,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 21
+          },
+          "firstSeen": "2023-11-14 14:00:35 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3682,9 +7522,60 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 5,
+          "placeTopics": null,
+          "firstSeen": "2024-06-07 02:56:20 +00:00",
+          "lastUpdated": "2026-07-12 15:27:52 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "erhanogruc.com",
+          "rank": 76,
+          "backlinks": 32,
+          "referringDomains": 26,
+          "referringMainDomains": 23,
+          "referringPages": 31,
+          "brokenBacklinks": 4,
+          "referringLinksTypes": {
+            "anchor": 28
+          },
+          "firstSeen": "2023-11-14 12:11:56 +00:00",
+          "lostDate": null
         }
       }
     }

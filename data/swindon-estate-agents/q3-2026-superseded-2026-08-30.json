@@ -1,0 +1,368 @@
+{
+  "index": "swindon-estate-agents",
+  "title": "PYC Swindon Estate Agent Digital Visibility Index",
+  "town": "Swindon",
+  "sector": "estate-agents",
+  "sectorLabel": "estate agents",
+  "keywordsPerIndex": 12,
+  "quarter": "Q3-2026",
+  "measuredAt": "2026-08-27T17:56:59.863Z",
+  "methodology": "https://hub.pyc.agency/indices/methodology/",
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "terms": "https://hub.pyc.agency/indices/licence/"
+  },
+  "attribution": "Phil Yarrow (PYC) — Local Digital Visibility Index. https://hub.pyc.agency/indices/",
+  "citation": "Phil Yarrow (PYC) — Local Digital Visibility Index: Swindon Estate Agent, Q3-2026. https://hub.pyc.agency/indices/swindon-estate-agents/",
+  "attributionNote": "Reuse of ANY data from this index — a single figure, one dataset, several, or all of them — requires the `attribution` credit above, reproduced and linked. `citation` is the fuller form for quoting this particular dataset. Reuse is permitted commercially and in AI-generated answers on that condition.",
+  "weights": {
+    "speed": 20,
+    "technical": 20,
+    "local": 20,
+    "visibility": 15,
+    "ai": 15,
+    "content": 10
+  },
+  "pillarCoverage": {
+    "speed": {
+      "scored": 8,
+      "total": 8,
+      "live": true
+    },
+    "technical": {
+      "scored": 8,
+      "total": 8,
+      "live": true
+    },
+    "local": {
+      "scored": 8,
+      "total": 8,
+      "live": true
+    },
+    "visibility": {
+      "scored": 8,
+      "total": 8,
+      "live": true
+    },
+    "ai": {
+      "scored": 8,
+      "total": 8,
+      "live": true
+    },
+    "content": {
+      "scored": 8,
+      "total": 8,
+      "live": true
+    }
+  },
+  "overallMedian": 68.5,
+  "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
+  "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
+  "sectorMedians": {
+    "speed": 65,
+    "technical": 88,
+    "local": 78,
+    "visibility": 49,
+    "ai": 40,
+    "content": 100
+  },
+  "businesses": [
+    {
+      "rank": 1,
+      "name": "Charles Harding",
+      "url": "https://www.charles-harding.co.uk/",
+      "digitalVisibilityScore": 85,
+      "pillarScores": {
+        "speed": 71,
+        "technical": 100,
+        "local": 78,
+        "visibility": 65,
+        "ai": 100,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 2,
+      "name": "Chappells",
+      "url": "https://www.chappells.uk.com/",
+      "digitalVisibilityScore": 73,
+      "pillarScores": {
+        "speed": 68,
+        "technical": 75,
+        "local": 79,
+        "visibility": 45,
+        "ai": 80,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 3,
+      "name": "McFarlane",
+      "url": "https://www.mcfarlaneproperty.com/",
+      "digitalVisibilityScore": 73,
+      "pillarScores": {
+        "speed": 75,
+        "technical": 88,
+        "local": 78,
+        "visibility": 58,
+        "ai": 40,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 4,
+      "name": "Connells Swindon Old Town",
+      "url": "https://www.connells.co.uk/estate-agents/swindon-old-town",
+      "digitalVisibilityScore": 69,
+      "pillarScores": {
+        "speed": 58,
+        "technical": 88,
+        "local": 79,
+        "visibility": 52,
+        "ai": 40,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 5,
+      "name": "Richard James",
+      "url": "https://richardjames.uk/",
+      "digitalVisibilityScore": 68,
+      "pillarScores": {
+        "speed": 44,
+        "technical": 88,
+        "local": 79,
+        "visibility": 52,
+        "ai": 100,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 6,
+      "name": "Location Real Estate",
+      "url": "https://locationrealestate.co.uk/",
+      "digitalVisibilityScore": 63,
+      "pillarScores": {
+        "speed": 62,
+        "technical": 100,
+        "local": 75,
+        "visibility": 34,
+        "ai": 0,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 7,
+      "name": "Taylors Swindon",
+      "url": "https://www.taylorsestateagents.co.uk/branch/estate-agents/swindon",
+      "digitalVisibilityScore": 57,
+      "pillarScores": {
+        "speed": 69,
+        "technical": 88,
+        "local": 77,
+        "visibility": 46,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 8,
+      "name": "Atwell Martin Swindon",
+      "url": "https://swindon.atwellmartin.co.uk/",
+      "digitalVisibilityScore": 50,
+      "pillarScores": {
+        "speed": 52,
+        "technical": 100,
+        "local": 68,
+        "visibility": 0,
+        "ai": 20,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    }
+  ]
+}

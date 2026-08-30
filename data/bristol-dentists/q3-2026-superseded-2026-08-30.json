@@ -1,0 +1,406 @@
+{
+  "index": "bristol-dentists",
+  "title": "PYC Bristol Dentist Digital Visibility Index",
+  "town": "Bristol",
+  "sector": "dentists",
+  "sectorLabel": "dentists",
+  "keywordsPerIndex": 12,
+  "quarter": "Q3-2026",
+  "measuredAt": "2026-08-27T17:54:33.379Z",
+  "methodology": "https://hub.pyc.agency/indices/methodology/",
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "terms": "https://hub.pyc.agency/indices/licence/"
+  },
+  "attribution": "Phil Yarrow (PYC) — Local Digital Visibility Index. https://hub.pyc.agency/indices/",
+  "citation": "Phil Yarrow (PYC) — Local Digital Visibility Index: Bristol Dentist, Q3-2026. https://hub.pyc.agency/indices/bristol-dentists/",
+  "attributionNote": "Reuse of ANY data from this index — a single figure, one dataset, several, or all of them — requires the `attribution` credit above, reproduced and linked. `citation` is the fuller form for quoting this particular dataset. Reuse is permitted commercially and in AI-generated answers on that condition.",
+  "weights": {
+    "speed": 20,
+    "technical": 20,
+    "local": 20,
+    "visibility": 15,
+    "ai": 15,
+    "content": 10
+  },
+  "pillarCoverage": {
+    "speed": {
+      "scored": 8,
+      "total": 9,
+      "live": true
+    },
+    "technical": {
+      "scored": 9,
+      "total": 9,
+      "live": true
+    },
+    "local": {
+      "scored": 9,
+      "total": 9,
+      "live": true
+    },
+    "visibility": {
+      "scored": 9,
+      "total": 9,
+      "live": true
+    },
+    "ai": {
+      "scored": 9,
+      "total": 9,
+      "live": true
+    },
+    "content": {
+      "scored": 9,
+      "total": 9,
+      "live": true
+    }
+  },
+  "overallMedian": 57,
+  "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
+  "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
+  "sectorMedians": {
+    "speed": 58,
+    "technical": 88,
+    "local": 77,
+    "visibility": 29,
+    "ai": 0,
+    "content": 67
+  },
+  "businesses": [
+    {
+      "rank": 1,
+      "name": "Clifton Dental Surgery",
+      "url": "https://cliftondentalsurgery.co.uk/",
+      "digitalVisibilityScore": 66,
+      "pillarScores": {
+        "speed": 43,
+        "technical": 88,
+        "local": 69,
+        "visibility": 47,
+        "ai": 60,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 2,
+      "name": "Redland Road Dental Practice",
+      "url": "https://redlanddental.co.uk/",
+      "digitalVisibilityScore": 64,
+      "pillarScores": {
+        "speed": 64,
+        "technical": 75,
+        "local": 80,
+        "visibility": 46,
+        "ai": 20,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 3,
+      "name": "Clifton Down Dental Practice",
+      "url": "https://cliftondowndental.co.uk/",
+      "digitalVisibilityScore": 62,
+      "pillarScores": {
+        "speed": 68,
+        "technical": 100,
+        "local": 76,
+        "visibility": 23,
+        "ai": 20,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 4,
+      "name": "Dental Touch",
+      "url": "https://www.dental-touch.co.uk/",
+      "digitalVisibilityScore": 59,
+      "pillarScores": {
+        "speed": 57,
+        "technical": 88,
+        "local": 79,
+        "visibility": 33,
+        "ai": 20,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    },
+    {
+      "rank": 5,
+      "name": "Bristol Dental Specialists",
+      "url": "https://bristoldentalspecialists.com/",
+      "digitalVisibilityScore": 57,
+      "pillarScores": {
+        "speed": 59,
+        "technical": 88,
+        "local": 80,
+        "visibility": 35,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 6,
+      "name": "Zetland Road Dental Practice",
+      "url": "https://www.zetlanddental.co.uk/",
+      "digitalVisibilityScore": 52,
+      "pillarScores": {
+        "speed": 82,
+        "technical": 88,
+        "local": 70,
+        "visibility": 4,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 7,
+      "name": "Promenade Dental",
+      "url": "https://promenade-dental.co.uk/",
+      "digitalVisibilityScore": 50,
+      "pillarScores": {
+        "speed": 28,
+        "technical": 100,
+        "local": 77,
+        "visibility": 14,
+        "ai": 0,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 8,
+      "name": "Windmill Hill Smiles",
+      "url": "https://www.windmillhillsmiles.com/",
+      "digitalVisibilityScore": 50,
+      "pillarScores": {
+        "speed": 56,
+        "technical": 75,
+        "local": 80,
+        "visibility": 29,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": null
+    },
+    {
+      "rank": 9,
+      "name": "DentaQuest Clifton",
+      "url": "https://dentaquest.co.uk/",
+      "digitalVisibilityScore": 47,
+      "pillarScores": {
+        "speed": null,
+        "technical": 50,
+        "local": 75,
+        "visibility": 17,
+        "ai": 0,
+        "content": 100
+      },
+      "includedPillars": [
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [
+        "speed"
+      ],
+      "effectiveWeights": {
+        "speed": 0,
+        "technical": 25,
+        "local": 25,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": null
+    }
+  ]
+}

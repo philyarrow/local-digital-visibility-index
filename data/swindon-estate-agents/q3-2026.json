@@ -56,13 +56,13 @@
       "live": true
     }
   },
-  "overallMedian": 68.5,
+  "overallMedian": 70.5,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
     "speed": 65,
     "technical": 88,
-    "local": 78,
+    "local": 91,
     "visibility": 49,
     "ai": 40,
     "content": 100
@@ -72,11 +72,11 @@
       "rank": 1,
       "name": "Charles Harding",
       "url": "https://www.charles-harding.co.uk/",
-      "digitalVisibilityScore": 85,
+      "digitalVisibilityScore": 87,
       "pillarScores": {
         "speed": 71,
         "technical": 100,
-        "local": 78,
+        "local": 90,
         "visibility": 65,
         "ai": 100,
         "content": 100
@@ -103,54 +103,191 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.charles-harding.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 103,
+          "internalLinks": 2287,
+          "avgInternalLinksPerPage": 91.5,
+          "maxDepthReached": 1,
+          "genericAnchors": 12,
+          "genericAnchorRatio": 0.005,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 11,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-28",
+          "sitemapStaleDays": 2,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 2202,
+          "inpMs": 96,
+          "cls": 0.07,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 57,
+          "accessibility": 81,
+          "bestPractices": 77,
+          "seo": 85,
+          "lcpMs": 13658,
+          "tbtMs": 400,
+          "clsScore": 0,
+          "fcpMs": 1983,
+          "speedIndexMs": 7549,
+          "failing": [
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 21,
+          "ratingDistribution": {
+            "1": 32,
+            "2": 5,
+            "3": 2,
+            "4": 9,
+            "5": 179
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Apartment Letting Agency",
+            "Commercial agent",
+            "Commercial property estate agent",
+            "Housing Development",
+            "Property management company",
+            "Property valuer",
+            "Property Rental Agency"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 16,
+          "placeTopics": {
+            "lettings": 22,
+            "professional team": 30,
+            "kind staff": 11,
+            "returning lost phone": 2,
+            "prompt call returns": 2,
+            "prompt responses": 6,
+            "selling property": 16,
+            "viewings": 8,
+            "sound advice": 3,
+            "supportive team": 4
+          },
+          "firstSeen": "2024-07-17 08:04:33 +00:00",
+          "lastUpdated": "2026-06-26 01:18:20 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "charles-harding.co.uk",
+          "rank": 293,
+          "backlinks": 704,
+          "referringDomains": 104,
+          "referringMainDomains": 97,
+          "referringPages": 653,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 516
+          },
+          "firstSeen": "2021-10-09 10:47:09 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 2,
-      "name": "Chappells",
-      "url": "https://www.chappells.uk.com/",
-      "digitalVisibilityScore": 73,
-      "pillarScores": {
-        "speed": 68,
-        "technical": 75,
-        "local": 79,
-        "visibility": 45,
-        "ai": 80,
-        "content": 100
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true
-      },
-      "context": null
-    },
-    {
-      "rank": 3,
       "name": "McFarlane",
       "url": "https://www.mcfarlaneproperty.com/",
-      "digitalVisibilityScore": 73,
+      "digitalVisibilityScore": 77,
       "pillarScores": {
         "speed": 75,
         "technical": 88,
-        "local": 78,
+        "local": 98,
         "visibility": 58,
         "ai": 40,
         "content": 100
@@ -177,19 +314,190 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.mcfarlaneproperty.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 38,
+          "internalLinks": 1123,
+          "avgInternalLinksPerPage": 44.9,
+          "maxDepthReached": 2,
+          "genericAnchors": 20,
+          "genericAnchorRatio": 0.018,
+          "keyPageDepth": {
+            "contact": null,
+            "about": 1,
+            "team": 1,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 42,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-28",
+          "sitemapStaleDays": 2,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1904,
+          "inpMs": 101,
+          "cls": 0.03,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 54,
+          "accessibility": 85,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 13214,
+          "tbtMs": 323,
+          "clsScore": 0,
+          "fcpMs": 4238,
+          "speedIndexMs": 6253,
+          "failing": [
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "duplicated-javascript-insight",
+              "title": "Duplicated JavaScript",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 216,
+          "ratingDistribution": {
+            "1": 49,
+            "2": 2,
+            "3": 5,
+            "4": 12,
+            "5": 240
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Commercial property estate agent",
+            "Property management company",
+            "Estate agent",
+            "Property Rental Agency"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 12,
+          "placeTopics": {
+            "helpful staff": 102,
+            "property viewing": 12,
+            "efficient staff": 19,
+            "finding a flat": 10,
+            "quick responses": 14,
+            "letting agent": 21,
+            "property rental": 9,
+            "first home purchase": 3,
+            "helpfulness": 23,
+            "sales progressor": 3
+          },
+          "firstSeen": "2024-07-17 04:30:27 +00:00",
+          "lastUpdated": "2026-07-02 20:33:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "mcfarlaneproperty.com",
+          "rank": 308,
+          "backlinks": 1002,
+          "referringDomains": 110,
+          "referringMainDomains": 106,
+          "referringPages": 889,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 807
+          },
+          "firstSeen": "2019-02-20 00:59:23 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
-      "rank": 4,
-      "name": "Connells Swindon Old Town",
-      "url": "https://www.connells.co.uk/estate-agents/swindon-old-town",
-      "digitalVisibilityScore": 69,
+      "rank": 3,
+      "name": "Chappells",
+      "url": "https://www.chappells.uk.com/",
+      "digitalVisibilityScore": 76,
       "pillarScores": {
-        "speed": 58,
-        "technical": 88,
-        "local": 79,
-        "visibility": 52,
-        "ai": 40,
+        "speed": 68,
+        "technical": 75,
+        "local": 91,
+        "visibility": 45,
+        "ai": 80,
         "content": 100
       },
       "includedPillars": [
@@ -214,17 +522,152 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.chappells.uk.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 58,
+          "internalLinks": 1176,
+          "avgInternalLinksPerPage": 47,
+          "maxDepthReached": 1,
+          "genericAnchors": 19,
+          "genericAnchorRatio": 0.016,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 244,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-29",
+          "sitemapStaleDays": 0,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 722,
+          "inpMs": 78,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Swindon"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 87,
+          "bestPractices": 92,
+          "seo": 85,
+          "lcpMs": 60163,
+          "tbtMs": 159,
+          "clsScore": 0,
+          "fcpMs": 7079,
+          "speedIndexMs": 7079,
+          "failing": [
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "select-name",
+              "title": "Select elements do not have associated label elements.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "uk.com",
+          "rank": 633,
+          "backlinks": 37035750,
+          "referringDomains": 18077,
+          "referringMainDomains": 16700,
+          "referringPages": 36863100,
+          "brokenBacklinks": 518,
+          "referringLinksTypes": {
+            "anchor": 36839621
+          },
+          "firstSeen": "2019-01-16 09:42:26 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
-      "rank": 5,
+      "rank": 4,
       "name": "Richard James",
       "url": "https://richardjames.uk/",
-      "digitalVisibilityScore": 68,
+      "digitalVisibilityScore": 71,
       "pillarScores": {
         "speed": 44,
         "technical": 88,
-        "local": 79,
+        "local": 91,
         "visibility": 52,
         "ai": 100,
         "content": 33
@@ -251,17 +694,392 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://richardjames.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 225,
+          "internalLinks": 3928,
+          "avgInternalLinksPerPage": 157.1,
+          "maxDepthReached": 1,
+          "genericAnchors": 184,
+          "genericAnchorRatio": 0.047,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 2,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 155,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-04-29",
+          "sitemapStaleDays": 123,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 2724,
+          "inpMs": 125,
+          "cls": 0.12,
+          "lcpGood": false,
+          "inpGood": true,
+          "clsGood": false,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Swindon"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 30,
+          "accessibility": 88,
+          "bestPractices": 54,
+          "seo": 100,
+          "lcpMs": 18088,
+          "tbtMs": 293,
+          "clsScore": 0.461,
+          "fcpMs": 8735,
+          "speedIndexMs": 8773,
+          "failing": [
+            {
+              "id": "cls-culprits-insight",
+              "title": "Layout shift culprits",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 4,
+            "2": 1,
+            "3": 0,
+            "4": 7,
+            "5": 153
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 26,
+          "placeTopics": {
+            "sales progressor": 12,
+            "selling property": 21,
+            "dealing with solicitors": 6,
+            "efficient staff": 6,
+            "viewings": 7,
+            "sales negotiator": 5,
+            "informative staff": 3,
+            "supportive staff": 6,
+            "regular updates": 5,
+            "onward purchase": 2
+          },
+          "firstSeen": "2024-07-19 09:59:37 +00:00",
+          "lastUpdated": "2026-06-30 11:24:04 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "richardjames.uk",
+          "rank": 195,
+          "backlinks": 1343,
+          "referringDomains": 165,
+          "referringMainDomains": 154,
+          "referringPages": 1218,
+          "brokenBacklinks": 10,
+          "referringLinksTypes": {
+            "image": 889
+          },
+          "firstSeen": "2019-01-18 01:10:05 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "name": "Connells Swindon Old Town",
+      "url": "https://www.connells.co.uk/estate-agents/swindon-old-town",
+      "digitalVisibilityScore": 70,
+      "pillarScores": {
+        "speed": 58,
+        "technical": 88,
+        "local": 83,
+        "visibility": 52,
+        "ai": 40,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.connells.co.uk/estate-agents/swindon-old-town",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 72,
+          "internalLinks": 1591,
+          "avgInternalLinksPerPage": 63.6,
+          "maxDepthReached": 1,
+          "genericAnchors": 6,
+          "genericAnchorRatio": 0.004,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 90,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 2520,
+          "inpMs": 238,
+          "cls": 0.01,
+          "lcpGood": false,
+          "inpGood": false,
+          "clsGood": true,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 39,
+          "accessibility": 84,
+          "bestPractices": 54,
+          "seo": 100,
+          "lcpMs": 9251,
+          "tbtMs": 1725,
+          "clsScore": 0,
+          "fcpMs": 2705,
+          "speedIndexMs": 5831,
+          "failing": [
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 17,
+          "ratingDistribution": {
+            "1": 7,
+            "2": 0,
+            "3": 4,
+            "4": 6,
+            "5": 116
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Apartment Letting Agency",
+            "Mortgage lender",
+            "Property management company",
+            "Estate agent",
+            "Property valuer"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 8,
+          "placeTopics": {
+            "helpful staff": 52,
+            "supportive staff": 16,
+            "mortgage advisor": 2,
+            "letting team": 6,
+            "timely responses": 3,
+            "finding tenants": 4,
+            "guided process": 2,
+            "house rental": 3,
+            "easy to contact": 4,
+            "help with move": 2
+          },
+          "firstSeen": "2024-07-17 13:13:20 +00:00",
+          "lastUpdated": "2026-06-25 12:46:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "connells.co.uk",
+          "rank": 459,
+          "backlinks": 68456,
+          "referringDomains": 908,
+          "referringMainDomains": 857,
+          "referringPages": 48404,
+          "brokenBacklinks": 40865,
+          "referringLinksTypes": {
+            "anchor": 46660
+          },
+          "firstSeen": "2019-01-17 12:16:48 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 6,
       "name": "Location Real Estate",
       "url": "https://locationrealestate.co.uk/",
-      "digitalVisibilityScore": 63,
+      "digitalVisibilityScore": 67,
       "pillarScores": {
         "speed": 62,
         "technical": 100,
-        "local": 75,
+        "local": 95,
         "visibility": 34,
         "ai": 0,
         "content": 100
@@ -288,17 +1106,152 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://locationrealestate.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 98,
+          "internalLinks": 1349,
+          "avgInternalLinksPerPage": 54,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 9,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-03-24",
+          "sitemapStaleDays": 159,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 68,
+          "accessibility": 94,
+          "bestPractices": 73,
+          "seo": 100,
+          "lcpMs": 5879,
+          "tbtMs": 183,
+          "clsScore": 0,
+          "fcpMs": 3333,
+          "speedIndexMs": 4043,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "locationrealestate.co.uk",
+          "rank": 94,
+          "backlinks": 67,
+          "referringDomains": 51,
+          "referringMainDomains": 51,
+          "referringPages": 64,
+          "brokenBacklinks": 2,
+          "referringLinksTypes": {
+            "anchor": 62
+          },
+          "firstSeen": "2022-04-04 00:40:01 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 7,
       "name": "Taylors Swindon",
       "url": "https://www.taylorsestateagents.co.uk/branch/estate-agents/swindon",
-      "digitalVisibilityScore": 57,
+      "digitalVisibilityScore": 61,
       "pillarScores": {
         "speed": 69,
         "technical": 88,
-        "local": 77,
+        "local": 97,
         "visibility": 46,
         "ai": 0,
         "content": 33
@@ -325,17 +1278,186 @@
         "hasTeamLink": false,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.taylorsestateagents.co.uk/branch/estate-agents/swindon",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 62,
+          "internalLinks": 840,
+          "avgInternalLinksPerPage": 33.6,
+          "maxDepthReached": 1,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.001,
+          "keyPageDepth": {
+            "contact": 2,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 54,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 2308,
+          "inpMs": 181,
+          "cls": 0.08,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 52,
+          "accessibility": 84,
+          "bestPractices": 92,
+          "seo": 92,
+          "lcpMs": 4930,
+          "tbtMs": 625,
+          "clsScore": 0.094,
+          "fcpMs": 2735,
+          "speedIndexMs": 8230,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "label",
+              "title": "Form elements do not have associated labels",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "aria-command-name",
+              "title": "`button`, `link`, and `menuitem` elements do not have accessible names.",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 15,
+          "ratingDistribution": {
+            "1": 65,
+            "2": 4,
+            "3": 2,
+            "4": 14,
+            "5": 350
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Mortgage broker",
+            "Estate Agent"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 28,
+          "placeTopics": {
+            "helpful staff": 162,
+            "letting process": 20,
+            "mortgage advisor": 9,
+            "lettings team": 19,
+            "kind staff": 27,
+            "renting property": 25,
+            "friendly agents": 8,
+            "viewings": 15,
+            "supportive staff": 13,
+            "quick responses": 15
+          },
+          "firstSeen": "2024-07-15 04:07:18 +00:00",
+          "lastUpdated": "2026-06-27 16:59:57 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "taylorsestateagents.co.uk",
+          "rank": 323,
+          "backlinks": 17179,
+          "referringDomains": 506,
+          "referringMainDomains": 484,
+          "referringPages": 10784,
+          "brokenBacklinks": 8556,
+          "referringLinksTypes": {
+            "anchor": 10398
+          },
+          "firstSeen": "2019-01-22 14:59:30 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 8,
       "name": "Atwell Martin Swindon",
       "url": "https://swindon.atwellmartin.co.uk/",
-      "digitalVisibilityScore": 50,
+      "digitalVisibilityScore": 51,
       "pillarScores": {
         "speed": 52,
         "technical": 100,
-        "local": 68,
+        "local": 70,
         "visibility": 0,
         "ai": 20,
         "content": 33
@@ -362,7 +1484,142 @@
         "hasTeamLink": false,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://swindon.atwellmartin.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 10,
+          "avgInternalLinksPerPage": 10,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 3,
+          "sitemapUrls": 4,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2024-09-03",
+          "sitemapStaleDays": 725,
+          "sitemapSampleChecked": 4,
+          "sitemapSampleResolved": 4,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 59,
+          "accessibility": 86,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 7141,
+          "tbtMs": 0,
+          "clsScore": 0.115,
+          "fcpMs": 5232,
+          "speedIndexMs": 5232,
+          "failing": [
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unminified-javascript",
+              "title": "Minify JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "atwellmartin.co.uk",
+          "rank": 162,
+          "backlinks": 373,
+          "referringDomains": 149,
+          "referringMainDomains": 142,
+          "referringPages": 320,
+          "brokenBacklinks": 14,
+          "referringLinksTypes": {
+            "anchor": 247
+          },
+          "firstSeen": "2019-01-16 21:22:52 +00:00",
+          "lostDate": null
+        }
+      }
     }
   ]
 }

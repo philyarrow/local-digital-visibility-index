@@ -72,11 +72,11 @@
       "rank": 1,
       "name": "The Little Conservatory Company LTD",
       "url": "https://www.littleconservatorycompany.co.uk/?utm_source=Google+My+Business&utm_campaign=Google+My+Business",
-      "digitalVisibilityScore": 65,
+      "digitalVisibilityScore": 66,
       "pillarScores": {
         "speed": 75,
         "technical": 100,
-        "local": 77,
+        "local": 83,
         "visibility": 31,
         "ai": 0,
         "content": 100
@@ -151,9 +151,125 @@
           "sicCodes": [
             "43342"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Homestead Farm, Elmstone Hardwicke, Cheltenham, Gloucestershire, United Kingdom, GL51 9TH",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 57,
+          "accessibility": 93,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 13910,
+          "tbtMs": 348,
+          "clsScore": 0.013,
+          "fcpMs": 3515,
+          "speedIndexMs": 4814,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 35,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 1,
+            "3": 0,
+            "4": 3,
+            "5": 59
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Aluminium Window",
+            "Construction Company",
+            "Door supplier",
+            "Double glazing installer",
+            "PVC windows supplier",
+            "Window installation service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 40,
+          "placeTopics": {
+            "conservatory replacement": 15,
+            "double glazed design": 2,
+            "roof repair": 2,
+            "plasterwork": 2,
+            "competitive quote": 2,
+            "amenable installers": 3,
+            "helpful team": 3,
+            "polite staff": 6,
+            "tidiness": 4,
+            "design advice": 3
+          },
+          "firstSeen": "2024-07-19 08:47:27 +00:00",
+          "lastUpdated": "2026-06-30 10:40:54 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "littleconservatorycompany.co.uk",
+          "rank": 231,
+          "backlinks": 699,
+          "referringDomains": 168,
+          "referringMainDomains": 167,
+          "referringPages": 468,
+          "brokenBacklinks": 27,
+          "referringLinksTypes": {
+            "anchor": 321
+          },
+          "firstSeen": "2021-09-12 10:33:23 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -238,9 +354,121 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 78,
+          "accessibility": 88,
+          "bestPractices": 73,
+          "seo": 100,
+          "lcpMs": 5588,
+          "tbtMs": 107,
+          "clsScore": 0.008,
+          "fcpMs": 913,
+          "speedIndexMs": 3374,
+          "failing": [
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "title": "Elements use prohibited ARIA attributes",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 45,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 19
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Construction Company",
+            "Service establishment"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "new bathroom": 3,
+            "attention to detail": 2,
+            "bathroom install": 2,
+            "pleasant staff": 2,
+            "skilled team": 4,
+            "communication": 2,
+            "results": 2,
+            "attention": 2,
+            "team": 3,
+            "quality of work": 3
+          },
+          "firstSeen": "2024-07-17 05:17:30 +00:00",
+          "lastUpdated": "2026-06-05 14:28:27 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "constructsbuilding.co.uk",
+          "rank": 62,
+          "backlinks": 36,
+          "referringDomains": 30,
+          "referringMainDomains": 29,
+          "referringPages": 36,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 32
+          },
+          "firstSeen": "2023-07-04 10:37:42 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -248,11 +476,11 @@
       "rank": 3,
       "name": "Barthorp Building",
       "url": "http://www.barthorpbuilding.co.uk/",
-      "digitalVisibilityScore": 58,
+      "digitalVisibilityScore": 59,
       "pillarScores": {
         "speed": 67,
         "technical": 100,
-        "local": 70,
+        "local": 74,
         "visibility": 8,
         "ai": 40,
         "content": 33
@@ -328,9 +556,118 @@
             "41100",
             "43390"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-02-28",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "5 Duke Street, Cheltenham, United Kingdom, United Kingdom, GL52 6BS",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 54,
+          "accessibility": 95,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 15994,
+          "tbtMs": 136,
+          "clsScore": 0,
+          "fcpMs": 12787,
+          "speedIndexMs": 12787,
+          "failing": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 21,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 8
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 18,
+          "placeTopics": {
+            "patio construction": 2,
+            "durability": 2,
+            "work quality": 2,
+            "high standard": 4,
+            "conscientious": 2,
+            "wall": 3,
+            "hard work": 2,
+            "kitchen": 2,
+            "job": 3,
+            "ideas": 3
+          },
+          "firstSeen": "2024-06-07 05:24:14 +00:00",
+          "lastUpdated": "2026-07-12 16:04:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "barthorpbuilding.co.uk",
+          "rank": 0,
+          "backlinks": 99,
+          "referringDomains": 42,
+          "referringMainDomains": 39,
+          "referringPages": 99,
+          "brokenBacklinks": 61,
+          "referringLinksTypes": {
+            "anchor": 98
+          },
+          "firstSeen": "2023-08-27 23:36:58 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -338,11 +675,11 @@
       "rank": 4,
       "name": "DP Carpentry and Building Ltd",
       "url": "https://www.dpcarpentryandbuilding.co.uk/",
-      "digitalVisibilityScore": 57,
+      "digitalVisibilityScore": 58,
       "pillarScores": {
         "speed": 67,
         "technical": 100,
-        "local": 73,
+        "local": 77,
         "visibility": 17,
         "ai": 0,
         "content": 67
@@ -418,9 +755,118 @@
             "41100",
             "41202"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-06-30",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "17 Denbigh Road, Cheltenham, Gloucestershire, United Kingdom, GL51 3JW",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 71,
+          "accessibility": 86,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 8495,
+          "tbtMs": 0,
+          "clsScore": 0.039,
+          "fcpMs": 2072,
+          "speedIndexMs": 4465,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 26,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 18
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 26,
+          "placeTopics": {
+            "loft conversion": 2,
+            "new rooms": 3,
+            "tidiness": 3,
+            "friendly staff": 5,
+            "workmanship": 3,
+            "attention to detail": 2,
+            "polite staff": 3,
+            "cleanliness": 2,
+            "reliability": 2,
+            "professional team": 3
+          },
+          "firstSeen": "2024-06-07 05:24:12 +00:00",
+          "lastUpdated": "2026-07-13 12:11:50 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "dpcarpentryandbuilding.co.uk",
+          "rank": 102,
+          "backlinks": 55,
+          "referringDomains": 13,
+          "referringMainDomains": 12,
+          "referringPages": 54,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 54
+          },
+          "firstSeen": "2024-08-29 00:20:23 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -507,9 +953,112 @@
           "sicCodes": [
             "70100"
           ],
+          "companyType": "ltd",
+          "accountsType": "group",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": [
+            "BLADEROOM HOLDINGS LIMITED",
+            "CHARCO 49 LIMITED"
+          ],
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Technology House Herrick Close, Staverton Technology Park, Cheltenham, England, GL51 6TQ",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 67,
+          "accessibility": 83,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 8600,
+          "tbtMs": 140,
+          "clsScore": 0.007,
+          "fcpMs": 2252,
+          "speedIndexMs": 5126,
+          "failing": [
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "list",
+              "title": "Lists do not contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 5,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 5
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 9,
+          "placeTopics": {
+            "staff": 2
+          },
+          "firstSeen": "2024-07-19 07:15:03 +00:00",
+          "lastUpdated": "2026-06-30 09:23:54 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "brgtech.com",
+          "rank": 235,
+          "backlinks": 2036,
+          "referringDomains": 54,
+          "referringMainDomains": 51,
+          "referringPages": 1980,
+          "brokenBacklinks": 2,
+          "referringLinksTypes": {
+            "image": 1788
+          },
+          "firstSeen": "2023-03-21 04:59:12 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -594,9 +1143,117 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 38,
+          "accessibility": 89,
+          "bestPractices": 74,
+          "seo": 100,
+          "lcpMs": 16012,
+          "tbtMs": 1130,
+          "clsScore": 0.086,
+          "fcpMs": 2881,
+          "speedIndexMs": 7399,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 27,
+          "ratingDistribution": {
+            "1": 8,
+            "2": 0,
+            "3": 1,
+            "4": 2,
+            "5": 22
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Construction Company",
+            "Job Centre",
+            "Employment consultant"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 17,
+          "placeTopics": {
+            "finding work": 2,
+            "telehandler driver": 2,
+            "communication": 2,
+            "number": 2,
+            "work": 4
+          },
+          "firstSeen": "2024-07-19 08:10:23 +00:00",
+          "lastUpdated": "2026-06-30 10:12:08 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "itsconstruction.co.uk",
+          "rank": 175,
+          "backlinks": 830,
+          "referringDomains": 128,
+          "referringMainDomains": 122,
+          "referringPages": 767,
+          "brokenBacklinks": 3,
+          "referringLinksTypes": {
+            "image": 522
+          },
+          "firstSeen": "2019-01-17 01:28:07 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -683,9 +1340,109 @@
           "sicCodes": [
             "42990"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-09-30",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Units 4 & 5 Rockfield Business Park, Old Station Drive, Cheltenham, Gloucestershire, United Kingdom, GL53 0AN",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 59,
+          "accessibility": 96,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 9449,
+          "tbtMs": 0,
+          "clsScore": 0.001,
+          "fcpMs": 4682,
+          "speedIndexMs": 7504,
+          "failing": [
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 16,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Building restoration service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 18,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 05:37:49 +00:00",
+          "lastUpdated": "2026-06-30 05:37:49 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "leckhamptonbuilders.com",
+          "rank": 173,
+          "backlinks": 293,
+          "referringDomains": 62,
+          "referringMainDomains": 60,
+          "referringPages": 274,
+          "brokenBacklinks": 4,
+          "referringLinksTypes": {
+            "image": 184
+          },
+          "firstSeen": "2021-01-27 00:12:06 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -770,9 +1527,108 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 71,
+          "accessibility": 92,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 6644,
+          "tbtMs": 36,
+          "clsScore": 0,
+          "fcpMs": 2431,
+          "speedIndexMs": 4546,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Building consultant",
+            "Building firm",
+            "Carpenter",
+            "Construction Company",
+            "Joiner",
+            "Stair contractor"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 99,
+          "placeTopics": null,
+          "firstSeen": "2024-08-13 06:26:28 +00:00",
+          "lastUpdated": "2026-07-11 16:27:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "perksbuilders.co.uk",
+          "rank": 0,
+          "backlinks": 34,
+          "referringDomains": 29,
+          "referringMainDomains": 26,
+          "referringPages": 33,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 33
+          },
+          "firstSeen": "2025-02-09 08:52:39 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -858,9 +1714,109 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 100,
+          "accessibility": 95,
+          "bestPractices": 96,
+          "seo": 36,
+          "lcpMs": 785,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 785,
+          "speedIndexMs": 1778,
+          "failing": [
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "is-crawlable",
+              "title": "Page is blocked from indexing",
+              "score": 0
+            },
+            {
+              "id": "robots-txt",
+              "title": "robots.txt is not valid",
+              "score": 0
+            },
+            {
+              "id": "http-status-code",
+              "title": "Page has unsuccessful HTTP status code",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 50
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 129,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Concrete contractor",
+            "Custom home builder",
+            "Drainage service",
+            "Flooring contractor",
+            "General Contractor",
+            "Paving contractor"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 28,
+          "placeTopics": null,
+          "firstSeen": "2024-07-15 17:27:22 +00:00",
+          "lastUpdated": "2026-06-28 17:08:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kfmconstruction.co.uk",
+          "rank": 0,
+          "backlinks": 46,
+          "referringDomains": 32,
+          "referringMainDomains": 30,
+          "referringPages": 46,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 46
+          },
+          "firstSeen": "2023-11-14 14:14:15 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -945,9 +1901,116 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 62,
+          "accessibility": 84,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 16831,
+          "tbtMs": 99,
+          "clsScore": 0,
+          "fcpMs": 4014,
+          "speedIndexMs": 5860,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 12,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 7
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Construction Company",
+            "Service establishment"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 8,
+          "placeTopics": {
+            "sub-contractors": 2,
+            "friendly team": 3,
+            "quality of work": 2,
+            "planning": 2,
+            "communication": 2
+          },
+          "firstSeen": "2024-06-07 02:56:22 +00:00",
+          "lastUpdated": "2026-07-22 11:04:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "elevenbuilders.co.uk",
+          "rank": 113,
+          "backlinks": 66,
+          "referringDomains": 40,
+          "referringMainDomains": 37,
+          "referringPages": 66,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 66
+          },
+          "firstSeen": "2023-11-13 22:16:43 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1032,14 +2095,318 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 51,
+          "accessibility": 75,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 18996,
+          "tbtMs": 229,
+          "clsScore": 0,
+          "fcpMs": 12326,
+          "speedIndexMs": 12326,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "select-name",
+              "title": "Select elements do not have associated label elements.",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "aria-allowed-attr",
+              "title": "`[aria-*]` attributes do not match their roles",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 36,
+          "ratingDistribution": {
+            "1": 8,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 10
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Construction Company"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 25,
+          "placeTopics": {
+            "buying experience": 3,
+            "responsiveness": 2,
+            "sales team": 4,
+            "office": 3
+          },
+          "firstSeen": "2026-06-26 06:39:59 +00:00",
+          "lastUpdated": "2026-06-26 06:39:59 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "newlandhomes.co.uk",
+          "rank": 183,
+          "backlinks": 2438,
+          "referringDomains": 150,
+          "referringMainDomains": 143,
+          "referringPages": 2404,
+          "brokenBacklinks": 7,
+          "referringLinksTypes": {
+            "image": 2135
+          },
+          "firstSeen": "2019-05-20 21:01:30 +00:00",
+          "lostDate": null
         }
       }
     },
     {
       "rank": 12,
+      "name": "Ryan Meadows Group LTD",
+      "url": "https://www.ryanmeadowsgroup.co.uk/",
+      "digitalVisibilityScore": 49,
+      "pillarScores": {
+        "speed": 50,
+        "technical": 100,
+        "local": 78,
+        "visibility": 0,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.ryanmeadowsgroup.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 26,
+          "internalLinks": 836,
+          "avgInternalLinksPerPage": 33.4,
+          "maxDepthReached": 2,
+          "genericAnchors": 50,
+          "genericAnchorRatio": 0.06,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 41,
+          "accessibility": 83,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 21228,
+          "tbtMs": 708,
+          "clsScore": 0.098,
+          "fcpMs": 3007,
+          "speedIndexMs": 10407,
+          "failing": [
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 103,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 27
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Building firm",
+            "Garage builder"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 34,
+          "placeTopics": {
+            "garage conversion": 8,
+            "single story extension": 2,
+            "kitchen renovation": 2,
+            "tidy team": 2,
+            "quality builders": 2,
+            "high standard of work": 6,
+            "smooth process": 2,
+            "competitive pricing": 2,
+            "thoroughness": 2,
+            "budget": 2
+          },
+          "firstSeen": "2026-06-30 12:41:28 +00:00",
+          "lastUpdated": "2026-06-30 12:41:28 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "ryanmeadowsgroup.co.uk",
+          "rank": 117,
+          "backlinks": 52,
+          "referringDomains": 48,
+          "referringMainDomains": 44,
+          "referringPages": 51,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 51
+          },
+          "firstSeen": "2024-06-24 13:44:46 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 13,
       "name": "Old Yard",
       "url": "https://www.kingsleyevans.co.uk/wp-content/uploads/2023/09/brochure-4037-1.pdf",
       "digitalVisibilityScore": 48,
@@ -1120,21 +2487,113 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 58,
+          "accessibility": 91,
+          "bestPractices": 96,
+          "seo": 50,
+          "lcpMs": 11895,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 7501,
+          "speedIndexMs": 7501,
+          "failing": [
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "is-crawlable",
+              "title": "Page is blocked from indexing",
+              "score": 0
+            },
+            {
+              "id": "unminified-javascript",
+              "title": "Minify JavaScript",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 1,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 06:54:41 +00:00",
+          "lastUpdated": "2026-06-30 02:10:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kingsleyevans.co.uk",
+          "rank": 138,
+          "backlinks": 583,
+          "referringDomains": 76,
+          "referringMainDomains": 71,
+          "referringPages": 574,
+          "brokenBacklinks": 7,
+          "referringLinksTypes": {
+            "anchor": 571
+          },
+          "firstSeen": "2019-01-18 05:24:04 +00:00",
+          "lostDate": null
         }
       }
     },
     {
-      "rank": 13,
-      "name": "Ryan Meadows Group LTD",
-      "url": "https://www.ryanmeadowsgroup.co.uk/",
+      "rank": 14,
+      "name": "VIP Properties Ltd",
+      "url": "https://www.vip-properties.co.uk/",
       "digitalVisibilityScore": 48,
       "pillarScores": {
-        "speed": 50,
+        "speed": 49,
         "technical": 100,
-        "local": 74,
+        "local": 72,
         "visibility": 0,
         "ai": 0,
         "content": 33
@@ -1164,25 +2623,25 @@
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.ryanmeadowsgroup.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 26,
-          "internalLinks": 836,
-          "avgInternalLinksPerPage": 33.4,
+          "startUrl": "https://www.vip-properties.co.uk/",
+          "pagesCrawled": 22,
+          "pagesDiscovered": 24,
+          "internalLinks": 764,
+          "avgInternalLinksPerPage": 34.7,
           "maxDepthReached": 2,
-          "genericAnchors": 50,
-          "genericAnchorRatio": 0.06,
+          "genericAnchors": 9,
+          "genericAnchorRatio": 0.012,
           "keyPageDepth": {
-            "contact": null,
-            "about": null,
+            "contact": 1,
+            "about": 1,
             "team": null,
-            "services": null
+            "services": 1
           },
           "orphanCandidates": null,
           "sitemapUrls": null,
           "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
+          "stoppedBecause": null,
+          "depthLimited": true,
           "error": null
         },
         "crux": {
@@ -1207,14 +2666,120 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 54,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 14970,
+          "tbtMs": 143,
+          "clsScore": 0,
+          "fcpMs": 10265,
+          "speedIndexMs": 10265,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 61,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 8
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 38,
+          "placeTopics": {
+            "bathroom renovation": 2,
+            "helpful team": 2,
+            "issue resolution": 2,
+            "communication": 4,
+            "home": 2,
+            "room": 5,
+            "boiler": 3
+          },
+          "firstSeen": "2026-06-29 22:54:49 +00:00",
+          "lastUpdated": "2026-06-29 22:54:49 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "vip-properties.co.uk",
+          "rank": 0,
+          "backlinks": 56,
+          "referringDomains": 55,
+          "referringMainDomains": 51,
+          "referringPages": 56,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 56
+          },
+          "firstSeen": "2023-11-14 09:21:35 +00:00",
+          "lostDate": null
         }
       }
     },
     {
-      "rank": 14,
+      "rank": 15,
       "name": "Corinium Construction Ltd",
       "url": "https://coriniumconstruction.co.uk/",
       "digitalVisibilityScore": 47,
@@ -1294,96 +2859,107 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
-        }
-      }
-    },
-    {
-      "rank": 15,
-      "name": "VIP Properties Ltd",
-      "url": "https://www.vip-properties.co.uk/",
-      "digitalVisibilityScore": 47,
-      "pillarScores": {
-        "speed": 49,
-        "technical": 100,
-        "local": 70,
-        "visibility": 0,
-        "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.vip-properties.co.uk/",
-          "pagesCrawled": 22,
-          "pagesDiscovered": 24,
-          "internalLinks": 764,
-          "avgInternalLinksPerPage": 34.7,
-          "maxDepthReached": 2,
-          "genericAnchors": 9,
-          "genericAnchorRatio": 0.012,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": 1
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 68,
+          "accessibility": 93,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 7393,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3494,
+          "speedIndexMs": 3494,
+          "failing": [
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": null,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
           },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": true,
-          "error": null
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-08-04 23:37:29 +00:00",
+          "lastUpdated": "2026-07-10 14:29:12 +00:00"
         },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Cheltenham"
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "coriniumconstruction.co.uk",
+          "rank": 82,
+          "backlinks": 32,
+          "referringDomains": 30,
+          "referringMainDomains": 30,
+          "referringPages": 30,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 28
+          },
+          "firstSeen": "2020-04-09 07:12:39 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1470,9 +3046,104 @@
           "sicCodes": [
             "41202"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-12-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": [
+            "RICHWOOD BUILDING ASSET MANAGEMENT LIMITED",
+            "PURESTART LIMITED"
+          ],
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Unit 1 Mackenzie Way, Swindon Village, Cheltenham, Gloucestershire, England, GL51 9TX",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 63,
+          "accessibility": 92,
+          "bestPractices": 81,
+          "seo": 85,
+          "lcpMs": 12562,
+          "tbtMs": 61,
+          "clsScore": 0,
+          "fcpMs": 4850,
+          "speedIndexMs": 4850,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 14,
+          "placeTopics": null,
+          "firstSeen": "2024-06-21 12:28:23 +00:00",
+          "lastUpdated": "2026-06-29 18:21:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cranattconstruction.co.uk",
+          "rank": 88,
+          "backlinks": 101,
+          "referringDomains": 37,
+          "referringMainDomains": 37,
+          "referringPages": 94,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 92
+          },
+          "firstSeen": "2021-11-29 03:53:21 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1557,14 +3228,299 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 66,
+          "accessibility": 88,
+          "bestPractices": 92,
+          "seo": 77,
+          "lcpMs": 8752,
+          "tbtMs": 93,
+          "clsScore": 0,
+          "fcpMs": 2279,
+          "speedIndexMs": 6388,
+          "failing": [
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 61,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Building restoration service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 15,
+          "placeTopics": null,
+          "firstSeen": "2026-07-09 02:58:54 +00:00",
+          "lastUpdated": "2026-07-09 02:58:54 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "meliora-renovations.co.uk",
+          "rank": 0,
+          "backlinks": 16,
+          "referringDomains": 13,
+          "referringMainDomains": 13,
+          "referringPages": 16,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 16
+          },
+          "firstSeen": "2023-11-14 10:15:32 +00:00",
+          "lostDate": null
         }
       }
     },
     {
       "rank": 18,
+      "name": "Stallard Construction",
+      "url": "http://www.stallardconstruction.co.uk/",
+      "digitalVisibilityScore": 46,
+      "pillarScores": {
+        "speed": 95,
+        "technical": 75,
+        "local": 59,
+        "visibility": 0,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.stallardconstruction.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 93,
+          "accessibility": 76,
+          "bestPractices": 81,
+          "seo": 85,
+          "lcpMs": 2103,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 2026,
+          "speedIndexMs": 5261,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 04:42:37 +00:00",
+          "lastUpdated": "2026-06-30 00:22:49 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "stallardconstruction.co.uk",
+          "rank": 0,
+          "backlinks": 91,
+          "referringDomains": 22,
+          "referringMainDomains": 22,
+          "referringPages": 91,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 91
+          },
+          "firstSeen": "2023-02-13 11:27:08 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 19,
       "name": "Hemming Architectural and Surveying Services Ltd",
       "url": "http://www.haass.co.uk/",
       "digitalVisibilityScore": 45,
@@ -1647,96 +3603,109 @@
             "41100",
             "71111"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2022-07-31",
+          "accountsOverdue": true,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "8a Lansdown Place, Cheltenham, United Kingdom, GL50 2HU",
           "error": null
-        }
-      }
-    },
-    {
-      "rank": 19,
-      "name": "Stallard Construction",
-      "url": "http://www.stallardconstruction.co.uk/",
-      "digitalVisibilityScore": 45,
-      "pillarScores": {
-        "speed": 95,
-        "technical": 75,
-        "local": 57,
-        "visibility": 0,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.stallardconstruction.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": 0,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 100,
+          "accessibility": 47,
+          "bestPractices": 78,
+          "seo": 82,
+          "lcpMs": 1359,
+          "tbtMs": 0,
+          "clsScore": 0.01,
+          "fcpMs": 1359,
+          "speedIndexMs": 1359,
+          "failing": [
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "robots-txt",
+              "title": "robots.txt is not valid",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "redirects-http",
+              "title": "Does not redirect HTTP traffic to HTTPS",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 1
           },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Home builder"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 33,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 03:40:44 +00:00",
+          "lastUpdated": "2026-06-30 03:40:44 +00:00"
         },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "haass.co.uk",
+          "rank": 73,
+          "backlinks": 65,
+          "referringDomains": 47,
+          "referringMainDomains": 44,
+          "referringPages": 58,
+          "brokenBacklinks": 2,
+          "referringLinksTypes": {
+            "anchor": 58
+          },
+          "firstSeen": "2021-09-12 20:15:57 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1821,9 +3790,109 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 58,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 17659,
+          "tbtMs": 81,
+          "clsScore": 0.001,
+          "fcpMs": 4101,
+          "speedIndexMs": 9578,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Service establishment"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 3,
+          "placeTopics": null,
+          "firstSeen": "2024-06-07 05:24:09 +00:00",
+          "lastUpdated": "2026-06-26 20:28:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "stonewellwalling.co.uk",
+          "rank": 0,
+          "backlinks": 30,
+          "referringDomains": 28,
+          "referringMainDomains": 25,
+          "referringPages": 30,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 30
+          },
+          "firstSeen": "2023-11-14 05:13:41 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1908,9 +3977,103 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 57,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 5786,
+          "tbtMs": 494,
+          "clsScore": 0.012,
+          "fcpMs": 3217,
+          "speedIndexMs": 4846,
+          "failing": [
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 15
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": null,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Service establishment"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 8,
+          "placeTopics": null,
+          "firstSeen": "2026-07-25 02:57:13 +00:00",
+          "lastUpdated": "2026-07-25 02:57:13 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "ueniweb.com",
+          "rank": 531,
+          "backlinks": 497034,
+          "referringDomains": 20813,
+          "referringMainDomains": 18428,
+          "referringPages": 413327,
+          "brokenBacklinks": 2391,
+          "referringLinksTypes": {
+            "anchor": 376406
+          },
+          "firstSeen": "2019-01-17 00:20:59 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1922,7 +4085,7 @@
       "pillarScores": {
         "speed": 63,
         "technical": 75,
-        "local": 73,
+        "local": 75,
         "visibility": 4,
         "ai": 0,
         "content": 0
@@ -1997,9 +4160,120 @@
           "sicCodes": [
             "43390"
           ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-08-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "61 Beaumont Road, Cheltenham, England, GL51 0LP",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 77,
+          "accessibility": 88,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 5908,
+          "tbtMs": 4,
+          "clsScore": 0.021,
+          "fcpMs": 1887,
+          "speedIndexMs": 2737,
+          "failing": [
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 107,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 30
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Service establishment"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "kitchen remodeling": 4,
+            "helpful staff": 5,
+            "hardworking team": 5,
+            "budget management": 2,
+            "workmanship": 6,
+            "attention to detail": 4,
+            "standard of work": 3,
+            "cleanliness": 2,
+            "reliable": 4,
+            "guidance": 2
+          },
+          "firstSeen": "2024-02-16 04:04:02 +00:00",
+          "lastUpdated": "2026-05-14 04:21:26 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "lpd-buildingservices.co.uk",
+          "rank": 0,
+          "backlinks": 140,
+          "referringDomains": 10,
+          "referringMainDomains": 10,
+          "referringPages": 140,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 140
+          },
+          "firstSeen": "2025-11-19 03:07:36 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2085,9 +4359,66 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 20,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 10:08:39 +00:00",
+          "lastUpdated": "2026-06-30 04:42:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "thisisrs.co.uk",
+          "rank": 79,
+          "backlinks": 75,
+          "referringDomains": 52,
+          "referringMainDomains": 47,
+          "referringPages": 70,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 70
+          },
+          "firstSeen": "2021-09-12 12:31:36 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2172,9 +4503,125 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 64,
+          "accessibility": 88,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 7866,
+          "tbtMs": 25,
+          "clsScore": 0,
+          "fcpMs": 3233,
+          "speedIndexMs": 6216,
+          "failing": [
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 38,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 15
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Bricklayer",
+            "Building restoration service",
+            "Service establishment",
+            "Landscape Gardener",
+            "Plant and machinery hire",
+            "Plasterer"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 27,
+          "placeTopics": {
+            "plastering": 2,
+            "polite team": 2,
+            "tidiness": 2,
+            "leak": 2,
+            "punctuality": 2,
+            "professional team": 2,
+            "quality work": 3,
+            "planning phase": 2,
+            "communication": 3,
+            "hardworking": 2
+          },
+          "firstSeen": "2024-06-07 02:11:54 +00:00",
+          "lastUpdated": "2026-07-22 10:11:08 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "shield-brickwork.co.uk",
+          "rank": 166,
+          "backlinks": 58,
+          "referringDomains": 57,
+          "referringMainDomains": 53,
+          "referringPages": 58,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 58
+          },
+          "firstSeen": "2025-02-09 01:42:19 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2259,9 +4706,104 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 74,
+          "accessibility": 93,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 5773,
+          "tbtMs": 118,
+          "clsScore": 0,
+          "fcpMs": 2485,
+          "speedIndexMs": 3311,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 9,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Construction Company",
+            "Drainage service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-07-08 18:06:45 +00:00",
+          "lastUpdated": "2026-07-08 18:06:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "apexgroundworks.co.uk",
+          "rank": 0,
+          "backlinks": 42,
+          "referringDomains": 42,
+          "referringMainDomains": 39,
+          "referringPages": 42,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 42
+          },
+          "firstSeen": "2025-02-08 05:31:35 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2346,9 +4888,109 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 60,
+          "accessibility": 81,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 8278,
+          "tbtMs": 12,
+          "clsScore": 0.019,
+          "fcpMs": 5047,
+          "speedIndexMs": 6892,
+          "failing": [
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": null,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Home builder"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 11,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 11:39:03 +00:00",
+          "lastUpdated": "2026-06-30 12:29:05 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "charltonpiling.co.uk",
+          "rank": 48,
+          "backlinks": 101,
+          "referringDomains": 38,
+          "referringMainDomains": 35,
+          "referringPages": 99,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 99
+          },
+          "firstSeen": "2021-04-13 03:44:34 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2433,9 +5075,109 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 65,
+          "accessibility": 63,
+          "bestPractices": 70,
+          "seo": 100,
+          "lcpMs": 13836,
+          "tbtMs": 55,
+          "clsScore": 0,
+          "fcpMs": 3747,
+          "speedIndexMs": 4604,
+          "failing": [
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "unminified-javascript",
+              "title": "Minify JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 9,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "General Contractor"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 4,
+          "placeTopics": null,
+          "firstSeen": "2024-06-12 06:54:30 +00:00",
+          "lastUpdated": "2026-06-26 02:24:07 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "brightofficeinteriors.co.uk",
+          "rank": 0,
+          "backlinks": 424,
+          "referringDomains": 29,
+          "referringMainDomains": 29,
+          "referringPages": 274,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 273
+          },
+          "firstSeen": "2021-09-12 15:23:49 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2522,9 +5264,109 @@
           "sicCodes": [
             "41202"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2024-12-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Willow End Stoke Orchard Road, Bishops Cleeve, Cheltenham, Gloucestershire, England, GL52 7DG",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 43021,
+          "tbtMs": 6,
+          "clsScore": 0,
+          "fcpMs": 2637,
+          "speedIndexMs": 6000,
+          "failing": [
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 31,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 1,
+            "3": 0,
+            "4": 2,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Builder"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 19,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 10:08:10 +00:00",
+          "lastUpdated": "2026-06-30 04:40:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "centaurhomes.co.uk",
+          "rank": 66,
+          "backlinks": 69,
+          "referringDomains": 63,
+          "referringMainDomains": 61,
+          "referringPages": 65,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 64
+          },
+          "firstSeen": "2021-10-11 04:00:38 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2602,16 +5444,119 @@
         },
         "companies": {
           "source": "Companies House public register",
-          "matched": null,
+          "matched": false,
           "companyNumber": null,
           "companyName": null,
           "companyStatus": null,
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
-          "error": "Companies House timeout"
+          "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 58,
+          "accessibility": 96,
+          "bestPractices": 81,
+          "seo": 61,
+          "lcpMs": 17882,
+          "tbtMs": 0,
+          "clsScore": 0.067,
+          "fcpMs": 5896,
+          "speedIndexMs": 7092,
+          "failing": [
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 40,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 5
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Construction Company",
+            "Contractor"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 24,
+          "placeTopics": {
+            "team": 2
+          },
+          "firstSeen": "2024-07-14 13:17:24 +00:00",
+          "lastUpdated": "2026-06-26 16:17:48 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "buildtecconstruction.co.uk",
+          "rank": 51,
+          "backlinks": 138,
+          "referringDomains": 27,
+          "referringMainDomains": 27,
+          "referringPages": 138,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 138
+          },
+          "firstSeen": "2022-11-22 14:50:43 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2696,9 +5641,109 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 86,
+          "accessibility": 81,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 3604,
+          "tbtMs": 0,
+          "clsScore": 0.004,
+          "fcpMs": 1379,
+          "speedIndexMs": 5373,
+          "failing": [
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 12,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Building firm",
+            "Electrical engineer",
+            "Electrician",
+            "Service establishment",
+            "Central Heating Service",
+            "Interior construction contractor",
+            "Security system installation service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 25,
+          "placeTopics": null,
+          "firstSeen": "2026-07-25 02:53:05 +00:00",
+          "lastUpdated": "2026-07-25 02:53:05 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kw-construction.co.uk",
+          "rank": 0,
+          "backlinks": 47,
+          "referringDomains": 46,
+          "referringMainDomains": 43,
+          "referringPages": 47,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 47
+          },
+          "firstSeen": "2023-11-13 21:18:50 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2783,9 +5828,106 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 45,
+          "accessibility": 77,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 6366,
+          "tbtMs": 146,
+          "clsScore": 0.41,
+          "fcpMs": 3932,
+          "speedIndexMs": 5671,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "cls-culprits-insight",
+              "title": "Layout shift culprits",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 30,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Civil Engineering",
+            "Kitchen Renovator",
+            "Office refurbishment service",
+            "Roofing Service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 25,
+          "placeTopics": null,
+          "firstSeen": "2024-07-16 23:44:30 +00:00",
+          "lastUpdated": "2026-06-29 20:32:50 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "regencycontracting.co.uk",
+          "rank": 119,
+          "backlinks": 205,
+          "referringDomains": 101,
+          "referringMainDomains": 100,
+          "referringPages": 172,
+          "brokenBacklinks": 73,
+          "referringLinksTypes": {
+            "anchor": 125
+          },
+          "firstSeen": "2021-09-12 21:35:12 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2870,9 +6012,107 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 69,
+          "accessibility": 77,
+          "bestPractices": 78,
+          "seo": 83,
+          "lcpMs": 9703,
+          "tbtMs": 35,
+          "clsScore": 0.108,
+          "fcpMs": 2319,
+          "speedIndexMs": 2319,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "redirects-http",
+              "title": "Does not redirect HTTP traffic to HTTPS",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "list",
+              "title": "Lists do not contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 14,
+          "placeTopics": null,
+          "firstSeen": "2024-06-10 00:21:03 +00:00",
+          "lastUpdated": "2026-06-29 14:57:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "appgeneralbuilding.co.uk",
+          "rank": 84,
+          "backlinks": 377,
+          "referringDomains": 20,
+          "referringMainDomains": 20,
+          "referringPages": 373,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 372
+          },
+          "firstSeen": "2022-11-21 21:15:27 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2957,9 +6197,113 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 67,
+          "accessibility": 96,
+          "bestPractices": 59,
+          "seo": 100,
+          "lcpMs": 5709,
+          "tbtMs": 163,
+          "clsScore": 0.003,
+          "fcpMs": 3190,
+          "speedIndexMs": 5140,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Construction Company",
+            "Interior designer",
+            "Kitchen Renovator"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "results": 2
+          },
+          "firstSeen": "2024-06-04 07:45:35 +00:00",
+          "lastUpdated": "2026-07-12 10:09:52 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bksdesigns.co.uk",
+          "rank": 0,
+          "backlinks": 11,
+          "referringDomains": 11,
+          "referringMainDomains": 11,
+          "referringPages": 11,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 11
+          },
+          "firstSeen": "2022-09-16 14:59:49 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3044,9 +6388,101 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 100,
+          "accessibility": 73,
+          "bestPractices": 70,
+          "seo": 91,
+          "lcpMs": 1492,
+          "tbtMs": 41,
+          "clsScore": 0,
+          "fcpMs": 726,
+          "speedIndexMs": 726,
+          "failing": [
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            },
+            {
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "redirects-http",
+              "title": "Does not redirect HTTP traffic to HTTPS",
+              "score": 0
+            },
+            {
+              "id": "doctype",
+              "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 5,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 07:54:39 +00:00",
+          "lastUpdated": "2026-06-30 09:53:56 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "tomhazzledine.co.uk",
+          "rank": 73,
+          "backlinks": 91,
+          "referringDomains": 80,
+          "referringMainDomains": 76,
+          "referringPages": 90,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 90
+          },
+          "firstSeen": "2019-05-21 10:42:03 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3131,9 +6567,101 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 79,
+          "accessibility": 95,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 4097,
+          "tbtMs": 10,
+          "clsScore": 0,
+          "fcpMs": 3494,
+          "speedIndexMs": 3494,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": null,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 20,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 00:36:23 +00:00",
+          "lastUpdated": "2026-06-29 23:40:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "emg-construction.co.uk",
+          "rank": 148,
+          "backlinks": 526,
+          "referringDomains": 67,
+          "referringMainDomains": 64,
+          "referringPages": 349,
+          "brokenBacklinks": 22,
+          "referringLinksTypes": {
+            "image": 273
+          },
+          "firstSeen": "2021-09-12 19:04:07 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3219,9 +6747,110 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 99,
+          "accessibility": 55,
+          "bestPractices": 67,
+          "seo": 73,
+          "lcpMs": 1506,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 1506,
+          "speedIndexMs": 2613,
+          "failing": [
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "doctype",
+              "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+              "score": 0
+            },
+            {
+              "id": "http-status-code",
+              "title": "Page has unsuccessful HTTP status code",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Building firm",
+            "Property maintenance"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 43,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 04:30:41 +00:00",
+          "lastUpdated": "2026-06-30 04:30:41 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "tb-mc.co.uk",
+          "rank": 51,
+          "backlinks": 35,
+          "referringDomains": 34,
+          "referringMainDomains": 31,
+          "referringPages": 35,
+          "brokenBacklinks": 2,
+          "referringLinksTypes": {
+            "anchor": 35
+          },
+          "firstSeen": "2023-11-13 19:46:46 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3307,9 +6936,109 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 100,
+          "accessibility": 95,
+          "bestPractices": 70,
+          "seo": 80,
+          "lcpMs": 1204,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 607,
+          "speedIndexMs": 607,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "redirects-http",
+              "title": "Does not redirect HTTP traffic to HTTPS",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "http-status-code",
+              "title": "Page has unsuccessful HTTP status code",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "doctype",
+              "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 28,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 1,
+            "3": 0,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Building restoration service",
+            "Fence contractor",
+            "Landscape designer",
+            "Landscape Gardener"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 22,
+          "placeTopics": {
+            "quality work": 2
+          },
+          "firstSeen": "2024-07-19 15:00:30 +00:00",
+          "lastUpdated": "2026-06-30 14:48:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "tpmbuilders.com",
+          "rank": 0,
+          "backlinks": 42,
+          "referringDomains": 39,
+          "referringMainDomains": 35,
+          "referringPages": 42,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 42
+          },
+          "firstSeen": "2023-11-13 16:37:02 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3394,9 +7123,101 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 100,
+          "accessibility": 43,
+          "bestPractices": 88,
+          "seo": 73,
+          "lcpMs": 1066,
+          "tbtMs": 0,
+          "clsScore": 0.007,
+          "fcpMs": 770,
+          "speedIndexMs": 770,
+          "failing": [
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "doctype",
+              "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "charset",
+              "title": "Charset declaration is missing or occurs too late in the HTML",
+              "score": 0
+            },
+            {
+              "id": "document-title",
+              "title": "Document doesn't have a `<title>` element",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-06-07 02:56:01 +00:00",
+          "lastUpdated": "2026-02-05 23:10:50 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "visha.construction",
+          "rank": 0,
+          "backlinks": 20,
+          "referringDomains": 18,
+          "referringMainDomains": 18,
+          "referringPages": 20,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 20
+          },
+          "firstSeen": "2025-05-14 20:07:13 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3408,7 +7229,7 @@
       "pillarScores": {
         "speed": 30,
         "technical": 63,
-        "local": 69,
+        "local": 71,
         "visibility": 9,
         "ai": 0,
         "content": 0
@@ -3483,9 +7304,118 @@
           "sicCodes": [
             "41202"
           ],
+          "companyType": "ltd",
+          "accountsType": "unaudited-abridged",
+          "accountsMadeUpTo": "2025-02-28",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "The White House, Newdawn Place, Cheltenham, England, GL51 0FR",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 52,
+          "accessibility": 87,
+          "bestPractices": 59,
+          "seo": 100,
+          "lcpMs": 29667,
+          "tbtMs": 202,
+          "clsScore": 0,
+          "fcpMs": 11241,
+          "speedIndexMs": 14285,
+          "failing": [
+            {
+              "id": "dlitem",
+              "title": "Definition list items are not wrapped in `<dl>` elements",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 5,
+            "2": 1,
+            "3": 0,
+            "4": 1,
+            "5": 22
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 4,
+          "placeTopics": {
+            "build quality": 3,
+            "attention to detail": 4,
+            "friendly team": 2,
+            "buying process": 2,
+            "supportive staff": 2,
+            "snag resolution": 2,
+            "house quality": 2,
+            "craftsmanship": 2,
+            "personalization": 2,
+            "issue resolution": 2
+          },
+          "firstSeen": "2026-06-30 13:10:26 +00:00",
+          "lastUpdated": "2026-06-30 13:10:26 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "newdawnhomes.co.uk",
+          "rank": 67,
+          "backlinks": 121,
+          "referringDomains": 59,
+          "referringMainDomains": 55,
+          "referringPages": 119,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 117
+          },
+          "firstSeen": "2021-12-03 23:12:02 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3573,9 +7503,101 @@
             "41201",
             "41202"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-07-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "24 Cromwell Road, Cheltenham, Glos, GL52 5DW",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 100,
+          "accessibility": 54,
+          "bestPractices": 67,
+          "seo": 70,
+          "lcpMs": 635,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 635,
+          "speedIndexMs": 635,
+          "failing": [
+            {
+              "id": "doctype",
+              "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "charset",
+              "title": "Charset declaration is missing or occurs too late in the HTML",
+              "score": 0
+            },
+            {
+              "id": "redirects-http",
+              "title": "Does not redirect HTTP traffic to HTTPS",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "document-title",
+              "title": "Document doesn't have a `<title>` element",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 38,
+          "placeTopics": null,
+          "firstSeen": "2024-08-05 03:47:33 +00:00",
+          "lastUpdated": "2026-07-10 17:27:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "pearsonshort.co.uk",
+          "rank": 51,
+          "backlinks": 45,
+          "referringDomains": 41,
+          "referringMainDomains": 38,
+          "referringPages": 44,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 44
+          },
+          "firstSeen": "2022-05-03 00:48:09 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3660,9 +7682,103 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 53,
+          "accessibility": 95,
+          "bestPractices": 74,
+          "seo": 92,
+          "lcpMs": 7458,
+          "tbtMs": 406,
+          "clsScore": 0,
+          "fcpMs": 4239,
+          "speedIndexMs": 5827,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Service establishment"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 14,
+          "placeTopics": null,
+          "firstSeen": "2024-06-07 05:24:08 +00:00",
+          "lastUpdated": "2026-07-22 14:09:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "icebergdevelopments.co.uk",
+          "rank": 11,
+          "backlinks": 35,
+          "referringDomains": 34,
+          "referringMainDomains": 34,
+          "referringPages": 35,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 30
+          },
+          "firstSeen": "2021-10-22 21:34:29 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3748,9 +7864,71 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 117,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 10
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 6,
+          "placeTopics": {
+            "quartz worktops": 2,
+            "kitchen worktops": 5,
+            "quality work": 2,
+            "kitchen": 2
+          },
+          "firstSeen": "2026-07-04 23:36:59 +00:00",
+          "lastUpdated": "2026-07-04 23:36:59 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cheltenhamworktops.uk",
+          "rank": 51,
+          "backlinks": 39,
+          "referringDomains": 39,
+          "referringMainDomains": 36,
+          "referringPages": 39,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 39
+          },
+          "firstSeen": "2023-11-14 09:40:39 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3762,7 +7940,7 @@
       "pillarScores": {
         "speed": null,
         "technical": 0,
-        "local": 66,
+        "local": 68,
         "visibility": 0,
         "ai": 0,
         "content": null
@@ -3836,9 +8014,74 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 55,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 6
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Service establishment"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 38,
+          "placeTopics": {
+            "attention to detail": 2,
+            "workmanship": 2,
+            "cleanliness": 2,
+            "attention": 2,
+            "garden": 3
+          },
+          "firstSeen": "2024-06-07 02:56:20 +00:00",
+          "lastUpdated": "2026-07-22 11:04:22 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cjimprovements.com",
+          "rank": 0,
+          "backlinks": 26,
+          "referringDomains": 26,
+          "referringMainDomains": 22,
+          "referringPages": 26,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 26
+          },
+          "firstSeen": "2023-10-14 20:39:42 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3927,9 +8170,106 @@
             "41100",
             "41202"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": [
+            "CRONK BUILDING LIMITED"
+          ],
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "20 Warden Hill Road, Cheltenham, England, GL51 3AW",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 44,
+          "accessibility": 83,
+          "bestPractices": 81,
+          "seo": 92,
+          "lcpMs": 17761,
+          "tbtMs": 0,
+          "clsScore": 0.403,
+          "fcpMs": 4711,
+          "speedIndexMs": 4711,
+          "failing": [
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 7,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architectural Designer",
+            "General Contractor"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 15,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 13:48:28 +00:00",
+          "lastUpdated": "2026-06-30 07:25:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "greetbuildingservices.co.uk",
+          "rank": 0,
+          "backlinks": 16,
+          "referringDomains": 11,
+          "referringMainDomains": 11,
+          "referringPages": 16,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 16
+          },
+          "firstSeen": "2023-11-13 21:18:42 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4015,9 +8355,66 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 1,
+          "placeTopics": null,
+          "firstSeen": "2026-07-09 02:11:51 +00:00",
+          "lastUpdated": "2026-07-09 02:11:51 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cowleyshepherdshuts.co.uk",
+          "rank": 35,
+          "backlinks": 32,
+          "referringDomains": 30,
+          "referringMainDomains": 29,
+          "referringPages": 32,
+          "brokenBacklinks": 3,
+          "referringLinksTypes": {
+            "anchor": 30
+          },
+          "firstSeen": "2021-12-24 01:14:43 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4107,9 +8504,71 @@
             "68100",
             "68209"
           ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "3 Royal Crescent, Cheltenham, Gloucestershire, United Kingdom, GL50 3DA",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 16,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Builder"
+          ],
+          "hasDescription": true,
+          "hasHours": false,
+          "services": 19,
+          "placeTopics": {
+            "contemporary new build": 2,
+            "eye for detail": 2
+          },
+          "firstSeen": "2024-07-17 06:57:33 +00:00",
+          "lastUpdated": "2026-06-30 02:13:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "newandtilley.co.uk",
+          "rank": 51,
+          "backlinks": 42,
+          "referringDomains": 41,
+          "referringMainDomains": 40,
+          "referringPages": 42,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 42
+          },
+          "firstSeen": "2023-11-14 08:52:16 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4195,9 +8654,60 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 38,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 3,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 04:05:43 +00:00",
+          "lastUpdated": "2026-06-29 23:50:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "pdhomeimprovementscleeve.co.uk",
+          "rank": 0,
+          "backlinks": 28,
+          "referringDomains": 28,
+          "referringMainDomains": 25,
+          "referringPages": 28,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 28
+          },
+          "firstSeen": "2023-11-14 00:03:04 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4283,9 +8793,60 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 15,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 19,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 09:05:40 +00:00",
+          "lastUpdated": "2026-06-30 03:55:37 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "propertyconservationco.co.uk",
+          "rank": 77,
+          "backlinks": 112,
+          "referringDomains": 78,
+          "referringMainDomains": 77,
+          "referringPages": 111,
+          "brokenBacklinks": 84,
+          "referringLinksTypes": {
+            "anchor": 101
+          },
+          "firstSeen": "2020-11-25 22:48:16 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4375,9 +8936,62 @@
             "41201",
             "41202"
           ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-10-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": [
+            "STANIEL CONSTRUCTION LIMITED"
+          ],
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "86 East End Road, Charlton Kings, Cheltenham, England, GL53 8QL",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-08-05 18:52:28 +00:00",
+          "lastUpdated": "2026-07-11 07:13:27 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "adirabuild.com",
+          "rank": 0,
+          "backlinks": 11,
+          "referringDomains": 11,
+          "referringMainDomains": 11,
+          "referringPages": 11,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 11
+          },
+          "firstSeen": "2023-10-14 20:00:40 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4463,9 +9077,60 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 48,
+          "placeTopics": null,
+          "firstSeen": "2024-08-05 01:26:35 +00:00",
+          "lastUpdated": "2026-07-10 15:44:59 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "randm-construction.co.uk",
+          "rank": 0,
+          "backlinks": 22,
+          "referringDomains": 18,
+          "referringMainDomains": 18,
+          "referringPages": 22,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 22
+          },
+          "firstSeen": "2023-11-14 08:49:20 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4551,9 +9216,60 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 4,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 03:05:49 +00:00",
+          "lastUpdated": "2026-06-29 23:16:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kenyondavies.co.uk",
+          "rank": 0,
+          "backlinks": 35,
+          "referringDomains": 33,
+          "referringMainDomains": 30,
+          "referringPages": 35,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 35
+          },
+          "firstSeen": "2023-11-14 05:07:53 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4639,9 +9355,60 @@
           "incorporatedOn": null,
           "ageYears": null,
           "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-06-07 05:24:08 +00:00",
+          "lastUpdated": "2026-07-12 16:06:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "qchomes.uk",
+          "rank": 0,
+          "backlinks": 32,
+          "referringDomains": 30,
+          "referringMainDomains": 27,
+          "referringPages": 32,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 32
+          },
+          "firstSeen": "2023-11-14 07:11:21 +00:00",
+          "lostDate": null
         }
       }
     }

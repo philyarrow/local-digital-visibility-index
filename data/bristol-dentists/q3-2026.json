@@ -56,13 +56,13 @@
       "live": true
     }
   },
-  "overallMedian": 57,
+  "overallMedian": 59,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
     "speed": 58,
     "technical": 88,
-    "local": 77,
+    "local": 86,
     "visibility": 29,
     "ai": 0,
     "content": 67
@@ -72,11 +72,11 @@
       "rank": 1,
       "name": "Clifton Dental Surgery",
       "url": "https://cliftondentalsurgery.co.uk/",
-      "digitalVisibilityScore": 66,
+      "digitalVisibilityScore": 70,
       "pillarScores": {
         "speed": 43,
         "technical": 88,
-        "local": 69,
+        "local": 89,
         "visibility": 47,
         "ai": 60,
         "content": 100
@@ -103,17 +103,152 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://cliftondentalsurgery.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 35,
+          "avgInternalLinksPerPage": 35,
+          "maxDepthReached": 0,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.029,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 37,
+          "accessibility": 73,
+          "bestPractices": 73,
+          "seo": 77,
+          "lcpMs": 46062,
+          "tbtMs": 738,
+          "clsScore": 0,
+          "fcpMs": 19997,
+          "speedIndexMs": 19997,
+          "failing": [
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "list",
+              "title": "Lists do not contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cliftondentalsurgery.co.uk",
+          "rank": 132,
+          "backlinks": 200,
+          "referringDomains": 103,
+          "referringMainDomains": 101,
+          "referringPages": 183,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 183
+          },
+          "firstSeen": "2021-04-22 12:27:43 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 2,
       "name": "Redland Road Dental Practice",
       "url": "https://redlanddental.co.uk/",
-      "digitalVisibilityScore": 64,
+      "digitalVisibilityScore": 65,
       "pillarScores": {
         "speed": 64,
         "technical": 75,
-        "local": 80,
+        "local": 86,
         "visibility": 46,
         "ai": 20,
         "content": 100
@@ -140,17 +275,192 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://redlanddental.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 42,
+          "internalLinks": 924,
+          "avgInternalLinksPerPage": 37,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 62,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-11",
+          "sitemapStaleDays": 18,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 67,
+          "accessibility": 78,
+          "bestPractices": 96,
+          "seo": 77,
+          "lcpMs": 8426,
+          "tbtMs": 0,
+          "clsScore": 0.094,
+          "fcpMs": 2462,
+          "speedIndexMs": 4590,
+          "failing": [
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "skip-link",
+              "title": "Skip links are not focusable.",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 31,
+          "ratingDistribution": {
+            "1": 3,
+            "2": 1,
+            "3": 1,
+            "4": 0,
+            "5": 122
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Cosmetic dentist",
+            "Dental hygienist",
+            "Dental implants periodontist",
+            "Dental radiology",
+            "Dentist",
+            "Denture Care Centre",
+            "Orthodontist",
+            "Teeth whitening service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 1,
+          "placeTopics": {
+            "hygienists": 19,
+            "thorough check up": 8,
+            "tooth whitening": 2,
+            "welcoming staff": 12,
+            "urgent dental work": 2,
+            "emergency appointment": 5,
+            "realistic advice": 2,
+            "friendly team": 5,
+            "root canal": 2,
+            "relaxed atmosphere": 2
+          },
+          "firstSeen": "2024-07-14 14:40:42 +00:00",
+          "lastUpdated": "2026-06-26 18:33:41 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "redlanddental.co.uk",
+          "rank": 148,
+          "backlinks": 231,
+          "referringDomains": 115,
+          "referringMainDomains": 110,
+          "referringPages": 210,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 208
+          },
+          "firstSeen": "2020-04-06 01:16:29 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 3,
       "name": "Clifton Down Dental Practice",
       "url": "https://cliftondowndental.co.uk/",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 63,
       "pillarScores": {
         "speed": 68,
         "technical": 100,
-        "local": 76,
+        "local": 80,
         "visibility": 23,
         "ai": 20,
         "content": 67
@@ -177,17 +487,183 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://cliftondowndental.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 29,
+          "internalLinks": 563,
+          "avgInternalLinksPerPage": 22.5,
+          "maxDepthReached": 2,
+          "genericAnchors": 13,
+          "genericAnchorRatio": 0.023,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 27,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-01-28",
+          "sitemapStaleDays": 214,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 71,
+          "accessibility": 77,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 6901,
+          "tbtMs": 94,
+          "clsScore": 0.003,
+          "fcpMs": 2102,
+          "speedIndexMs": 4810,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 6,
+          "ratingDistribution": {
+            "1": 3,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 42
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "dental nurse": 5,
+            "hygienist": 5,
+            "calm atmosphere": 4,
+            "reception staff": 11,
+            "informative staff": 2,
+            "painless treatment": 3,
+            "at ease feeling": 2,
+            "efficient staff": 2,
+            "warm welcome": 2,
+            "caring staff": 7
+          },
+          "firstSeen": "2024-07-15 09:57:43 +00:00",
+          "lastUpdated": "2026-06-28 01:16:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cliftondowndental.co.uk",
+          "rank": 147,
+          "backlinks": 276,
+          "referringDomains": 100,
+          "referringMainDomains": 98,
+          "referringPages": 259,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 258
+          },
+          "firstSeen": "2020-04-06 01:24:33 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 4,
       "name": "Dental Touch",
       "url": "https://www.dental-touch.co.uk/",
-      "digitalVisibilityScore": 59,
+      "digitalVisibilityScore": 63,
       "pillarScores": {
         "speed": 57,
         "technical": 88,
-        "local": 79,
+        "local": 99,
         "visibility": 33,
         "ai": 20,
         "content": 67
@@ -214,17 +690,152 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.dental-touch.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 35,
+          "internalLinks": 1258,
+          "avgInternalLinksPerPage": 50.3,
+          "maxDepthReached": 1,
+          "genericAnchors": 37,
+          "genericAnchorRatio": 0.029,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": 1,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 8,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2025-10-20",
+          "sitemapStaleDays": 314,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 53,
+          "accessibility": 68,
+          "bestPractices": 96,
+          "seo": 85,
+          "lcpMs": 15151,
+          "tbtMs": 359,
+          "clsScore": 0,
+          "fcpMs": 3495,
+          "speedIndexMs": 6913,
+          "failing": [
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "dental-touch.co.uk",
+          "rank": 145,
+          "backlinks": 364,
+          "referringDomains": 97,
+          "referringMainDomains": 88,
+          "referringPages": 338,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 331
+          },
+          "firstSeen": "2020-02-27 01:40:57 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 5,
       "name": "Bristol Dental Specialists",
       "url": "https://bristoldentalspecialists.com/",
-      "digitalVisibilityScore": 57,
+      "digitalVisibilityScore": 59,
       "pillarScores": {
         "speed": 59,
         "technical": 88,
-        "local": 80,
+        "local": 90,
         "visibility": 35,
         "ai": 0,
         "content": 67
@@ -251,10 +862,387 @@
         "hasTeamLink": true,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://bristoldentalspecialists.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 76,
+          "internalLinks": 2759,
+          "avgInternalLinksPerPage": 110.4,
+          "maxDepthReached": 1,
+          "genericAnchors": 60,
+          "genericAnchorRatio": 0.022,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 31,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-07-30",
+          "sitemapStaleDays": 30,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "11696017",
+          "companyName": "BRISTOL DENTAL SPECIALISTS LTD",
+          "companyStatus": "active",
+          "incorporatedOn": "2018-11-26",
+          "ageYears": 7.8,
+          "sicCodes": [
+            "86230"
+          ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "24 Berkeley Square Clifton, Bristol, England, BS8 1HP",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 57,
+          "accessibility": 97,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 13479,
+          "tbtMs": 50,
+          "clsScore": 0,
+          "fcpMs": 8123,
+          "speedIndexMs": 8123,
+          "failing": [
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 65,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 1,
+            "3": 1,
+            "4": 0,
+            "5": 139
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Cosmetic dentist",
+            "Dental clinic",
+            "Dental implants provider",
+            "Dentist",
+            "Teeth whitening service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 11,
+          "placeTopics": {
+            "dental implants": 14,
+            "tooth extraction": 13,
+            "wisdom tooth extraction": 8,
+            "root canal treatment": 6,
+            "invisalign treatment": 8,
+            "zoom consultation": 2,
+            "smile transformation": 4,
+            "aftercare": 9,
+            "final check up": 3,
+            "local anesthetic": 2
+          },
+          "firstSeen": "2024-07-19 11:36:50 +00:00",
+          "lastUpdated": "2026-06-26 02:26:05 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bristoldentalspecialists.com",
+          "rank": 236,
+          "backlinks": 689,
+          "referringDomains": 169,
+          "referringMainDomains": 164,
+          "referringPages": 628,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 625
+          },
+          "firstSeen": "2021-09-08 13:07:21 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 6,
+      "name": "Windmill Hill Smiles",
+      "url": "https://www.windmillhillsmiles.com/",
+      "digitalVisibilityScore": 54,
+      "pillarScores": {
+        "speed": 56,
+        "technical": 75,
+        "local": 100,
+        "visibility": 29,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.windmillhillsmiles.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 29,
+          "internalLinks": 731,
+          "avgInternalLinksPerPage": 29.2,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 25,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2025-08-27",
+          "sitemapStaleDays": 368,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1200,
+          "inpMs": 163,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 65,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 6253,
+          "tbtMs": 153,
+          "clsScore": 0.008,
+          "fcpMs": 3914,
+          "speedIndexMs": 4806,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 6
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 11
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 25
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 23,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 115
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 5,
+          "placeTopics": {
+            "welcoming staff": 19,
+            "root canal extraction": 2,
+            "emergency appointment": 6,
+            "private dentist": 2,
+            "hygienist": 7,
+            "dental emergency": 4,
+            "friendly team": 9,
+            "comfortable atmosphere": 14,
+            "dental nurse": 3,
+            "clear explanations": 10
+          },
+          "firstSeen": "2026-06-26 02:58:39 +00:00",
+          "lastUpdated": "2026-06-26 02:58:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "windmillhillsmiles.com",
+          "rank": 131,
+          "backlinks": 97,
+          "referringDomains": 52,
+          "referringMainDomains": 47,
+          "referringPages": 78,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 78
+          },
+          "firstSeen": "2023-10-14 17:54:34 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 7,
       "name": "Zetland Road Dental Practice",
       "url": "https://www.zetlanddental.co.uk/",
       "digitalVisibilityScore": 52,
@@ -288,17 +1276,185 @@
         "hasTeamLink": false,
         "hasCredentialsLink": false
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.zetlanddental.co.uk/",
+          "pagesCrawled": 21,
+          "pagesDiscovered": 21,
+          "internalLinks": 704,
+          "avgInternalLinksPerPage": 33.5,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 57,
+          "accessibility": 87,
+          "bestPractices": 69,
+          "seo": 92,
+          "lcpMs": 9585,
+          "tbtMs": 56,
+          "clsScore": 0,
+          "fcpMs": 8160,
+          "speedIndexMs": 8160,
+          "failing": [
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 16,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 1,
+            "3": 0,
+            "4": 0,
+            "5": 10
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Cosmetic dentist",
+            "Dental clinic",
+            "Dental hygienist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "implant procedure": 2,
+            "experienced staff": 3,
+            "hygienist": 2,
+            "gentle": 3,
+            "caring staff": 2,
+            "dentistry": 3,
+            "kind": 2,
+            "staff": 4
+          },
+          "firstSeen": "2024-07-17 02:58:33 +00:00",
+          "lastUpdated": "2026-06-29 23:11:48 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "zetlanddental.co.uk",
+          "rank": 149,
+          "backlinks": 278,
+          "referringDomains": 109,
+          "referringMainDomains": 102,
+          "referringPages": 251,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 249
+          },
+          "firstSeen": "2019-03-26 12:04:19 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Promenade Dental",
       "url": "https://promenade-dental.co.uk/",
       "digitalVisibilityScore": 50,
       "pillarScores": {
         "speed": 28,
         "technical": 100,
-        "local": 77,
+        "local": 79,
         "visibility": 14,
         "ai": 0,
         "content": 67
@@ -325,44 +1481,142 @@
         "hasTeamLink": true,
         "hasCredentialsLink": false
       },
-      "context": null
-    },
-    {
-      "rank": 8,
-      "name": "Windmill Hill Smiles",
-      "url": "https://www.windmillhillsmiles.com/",
-      "digitalVisibilityScore": 50,
-      "pillarScores": {
-        "speed": 56,
-        "technical": 75,
-        "local": 80,
-        "visibility": 29,
-        "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://promenade-dental.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 61,
+          "internalLinks": 2068,
+          "avgInternalLinksPerPage": 82.7,
+          "maxDepthReached": 1,
+          "genericAnchors": 25,
+          "genericAnchorRatio": 0.012,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 5,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2025-11-18",
+          "sitemapStaleDays": 284,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Bristol"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 38,
+          "accessibility": 87,
+          "bestPractices": 96,
+          "seo": 77,
+          "lcpMs": 11282,
+          "tbtMs": 523,
+          "clsScore": 0.331,
+          "fcpMs": 2721,
+          "speedIndexMs": 4868,
+          "failing": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "promenade-dental.co.uk",
+          "rank": 122,
+          "backlinks": 148,
+          "referringDomains": 114,
+          "referringMainDomains": 112,
+          "referringPages": 144,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 141
+          },
+          "firstSeen": "2020-02-21 10:18:47 +00:00",
+          "lostDate": null
+        }
+      }
     },
     {
       "rank": 9,
@@ -372,7 +1626,7 @@
       "pillarScores": {
         "speed": null,
         "technical": 50,
-        "local": 75,
+        "local": 77,
         "visibility": 17,
         "ai": 0,
         "content": 100
@@ -400,7 +1654,142 @@
         "hasTeamLink": true,
         "hasCredentialsLink": true
       },
-      "context": null
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://dentaquest.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1557,
+          "inpMs": null,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": null,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 89,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 14201,
+          "tbtMs": 125,
+          "clsScore": 0.021,
+          "fcpMs": 8854,
+          "speedIndexMs": 8854,
+          "failing": [
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "dentaquest.co.uk",
+          "rank": 181,
+          "backlinks": 226,
+          "referringDomains": 101,
+          "referringMainDomains": 97,
+          "referringPages": 215,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 214
+          },
+          "firstSeen": "2023-11-14 14:03:19 +00:00",
+          "lostDate": null
+        }
+      }
     }
   ]
 }
