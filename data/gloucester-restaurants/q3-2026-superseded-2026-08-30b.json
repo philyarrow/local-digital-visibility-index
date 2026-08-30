@@ -56,13 +56,13 @@
       "live": true
     }
   },
-  "overallMedian": 48.5,
+  "overallMedian": 49.5,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
     "speed": 69,
     "technical": 75,
-    "local": 84,
+    "local": 92,
     "visibility": 0,
     "ai": 0,
     "content": 16.5
@@ -946,11 +946,11 @@
       "rank": 5,
       "name": "Gloucester Food Dock",
       "url": "https://www.gloucesterfooddock.co.uk/",
-      "digitalVisibilityScore": 59,
+      "digitalVisibilityScore": 61,
       "pillarScores": {
         "speed": 58,
         "technical": 100,
-        "local": 82,
+        "local": 90,
         "visibility": 54,
         "ai": 20,
         "content": 0
@@ -1596,11 +1596,11 @@
       "rank": 8,
       "name": "Five Guys Burgers and Fries Gloucester Quays",
       "url": "https://restaurants.fiveguys.co.uk/south-west/r11-gloucester-quays-outlet",
-      "digitalVisibilityScore": 55,
+      "digitalVisibilityScore": 56,
       "pillarScores": {
         "speed": 88,
         "technical": 88,
-        "local": 83,
+        "local": 89,
         "visibility": 0,
         "ai": 0,
         "content": 33
@@ -1813,6 +1813,224 @@
     },
     {
       "rank": 9,
+      "name": "Burger Boi - Gloucester",
+      "url": "https://burgerboi.co.uk/",
+      "digitalVisibilityScore": 55,
+      "pillarScores": {
+        "speed": 90,
+        "technical": 75,
+        "local": 93,
+        "visibility": 0,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://burgerboi.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 47,
+          "internalLinks": 975,
+          "avgInternalLinksPerPage": 39,
+          "maxDepthReached": 1,
+          "genericAnchors": 16,
+          "genericAnchorRatio": 0.016,
+          "keyPageDepth": {
+            "contact": null,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 53,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 919,
+          "inpMs": 200,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": true,
+          "fhrsId": 1525340,
+          "businessName": "Burger Boi",
+          "businessType": "Other catering premises",
+          "ratingValue": "5",
+          "ratingNumeric": 5,
+          "ratingDate": "2025-01-23",
+          "postcode": "GL1 1AH",
+          "localAuthority": "Gloucester City",
+          "distanceKm": null,
+          "locatedBy": "local-authority",
+          "scores": {
+            "hygiene": 5,
+            "structural": 5,
+            "confidenceInManagement": 5
+          },
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 92,
+          "accessibility": 97,
+          "bestPractices": 100,
+          "seo": 85,
+          "lcpMs": 3219,
+          "tbtMs": 49,
+          "clsScore": 0,
+          "fcpMs": 1202,
+          "speedIndexMs": 3133,
+          "failing": [
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "aria-hidden-focus",
+              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 138,
+          "ratingDistribution": {
+            "1": 93,
+            "2": 36,
+            "3": 27,
+            "4": 47,
+            "5": 610
+          },
+          "priceLevel": "inexpensive",
+          "isClaimed": true,
+          "additionalCategories": [
+            "Takeaway"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 28,
+          "placeTopics": {
+            "burgers": 171,
+            "milkshakes": 51,
+            "outdoor seating": 4,
+            "loaded fries": 15,
+            "mac and cheese": 20,
+            "wings": 32,
+            "chicken burger": 14,
+            "triple cheese boi": 9,
+            "sweet potato fries": 9,
+            "churros": 8
+          },
+          "firstSeen": "2024-07-16 00:38:18 +00:00",
+          "lastUpdated": "2026-06-29 00:13:49 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "burgerboi.co.uk",
+          "rank": 169,
+          "backlinks": 545,
+          "referringDomains": 94,
+          "referringMainDomains": 88,
+          "referringPages": 522,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 515
+          },
+          "firstSeen": "2022-05-31 20:43:04 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 10,
       "name": "Pepe's",
       "url": "https://pepes.co.uk/pepes-piri-piri-stores/#!/l/gloucester/144-eastgate-street/4609439",
       "digitalVisibilityScore": 55,
@@ -2027,7 +2245,7 @@
       }
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Café René",
       "url": "http://www.caferene.co.uk/",
       "digitalVisibilityScore": 54,
@@ -2246,427 +2464,14 @@
       }
     },
     {
-      "rank": 11,
-      "name": "Burger Boi - Gloucester",
-      "url": "https://burgerboi.co.uk/",
-      "digitalVisibilityScore": 53,
-      "pillarScores": {
-        "speed": 90,
-        "technical": 75,
-        "local": 85,
-        "visibility": 0,
-        "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://burgerboi.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 47,
-          "internalLinks": 975,
-          "avgInternalLinksPerPage": 39,
-          "maxDepthReached": 1,
-          "genericAnchors": 16,
-          "genericAnchorRatio": 0.016,
-          "keyPageDepth": {
-            "contact": null,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 53,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 919,
-          "inpMs": 200,
-          "cls": 0,
-          "lcpGood": true,
-          "inpGood": true,
-          "clsGood": true,
-          "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": true,
-          "fhrsId": 1525340,
-          "businessName": "Burger Boi",
-          "businessType": "Other catering premises",
-          "ratingValue": "5",
-          "ratingNumeric": 5,
-          "ratingDate": "2025-01-23",
-          "postcode": "GL1 1AH",
-          "localAuthority": "Gloucester City",
-          "distanceKm": null,
-          "locatedBy": "local-authority",
-          "scores": {
-            "hygiene": 5,
-            "structural": 5,
-            "confidenceInManagement": 5
-          },
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 92,
-          "accessibility": 97,
-          "bestPractices": 100,
-          "seo": 85,
-          "lcpMs": 3219,
-          "tbtMs": 49,
-          "clsScore": 0,
-          "fcpMs": 1202,
-          "speedIndexMs": 3133,
-          "failing": [
-            {
-              "id": "meta-description",
-              "title": "Document does not have a meta description",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "link-text",
-              "title": "Links do not have descriptive text",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "aria-hidden-focus",
-              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 138,
-          "ratingDistribution": {
-            "1": 93,
-            "2": 36,
-            "3": 27,
-            "4": 47,
-            "5": 610
-          },
-          "priceLevel": "inexpensive",
-          "isClaimed": true,
-          "additionalCategories": [
-            "Takeaway"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 28,
-          "placeTopics": {
-            "burgers": 171,
-            "milkshakes": 51,
-            "outdoor seating": 4,
-            "loaded fries": 15,
-            "mac and cheese": 20,
-            "wings": 32,
-            "chicken burger": 14,
-            "triple cheese boi": 9,
-            "sweet potato fries": 9,
-            "churros": 8
-          },
-          "firstSeen": "2024-07-16 00:38:18 +00:00",
-          "lastUpdated": "2026-06-29 00:13:49 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "burgerboi.co.uk",
-          "rank": 169,
-          "backlinks": 545,
-          "referringDomains": 94,
-          "referringMainDomains": 88,
-          "referringPages": 522,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 515
-          },
-          "firstSeen": "2022-05-31 20:43:04 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 12,
-      "name": "Eat Unique",
-      "url": "http://eat-unique.uk/",
-      "digitalVisibilityScore": 53,
-      "pillarScores": {
-        "speed": 65,
-        "technical": 100,
-        "local": 47,
-        "visibility": 29,
-        "ai": 0,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://eat-unique.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 35,
-          "avgInternalLinksPerPage": 35,
-          "maxDepthReached": 0,
-          "genericAnchors": 1,
-          "genericAnchorRatio": 0.029,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": false,
-          "fhrsId": null,
-          "businessName": null,
-          "businessType": null,
-          "ratingValue": null,
-          "ratingNumeric": null,
-          "ratingDate": null,
-          "postcode": null,
-          "localAuthority": null,
-          "distanceKm": null,
-          "locatedBy": null,
-          "scores": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 69,
-          "accessibility": 83,
-          "bestPractices": 78,
-          "seo": 77,
-          "lcpMs": 35997,
-          "tbtMs": 0,
-          "clsScore": 0,
-          "fcpMs": 2927,
-          "speedIndexMs": 3534,
-          "failing": [
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "image-alt",
-              "title": "Image elements do not have `[alt]` attributes",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "interactive",
-              "title": "Time to Interactive",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": false,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2024-08-05 11:41:19 +00:00",
-          "lastUpdated": "2025-01-04 23:24:56 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "eat-unique.uk",
-          "rank": 98,
-          "backlinks": 86,
-          "referringDomains": 63,
-          "referringMainDomains": 59,
-          "referringPages": 81,
-          "brokenBacklinks": 74,
-          "referringLinksTypes": {
-            "anchor": 78
-          },
-          "firstSeen": "2023-02-21 00:24:45 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 13,
       "name": "Poppins",
       "url": "http://www.poppinsrestaurants.co.uk/",
-      "digitalVisibilityScore": 53,
+      "digitalVisibilityScore": 54,
       "pillarScores": {
         "speed": 91,
         "technical": 75,
-        "local": 79,
+        "local": 82,
         "visibility": 4,
         "ai": 0,
         "content": 33
@@ -2875,14 +2680,14 @@
       }
     },
     {
-      "rank": 14,
+      "rank": 13,
       "name": "The Linden Tree",
       "url": "https://gloucesterpartnership.org.uk/business/the-linden-tree/",
-      "digitalVisibilityScore": 53,
+      "digitalVisibilityScore": 54,
       "pillarScores": {
         "speed": 69,
         "technical": 100,
-        "local": 80,
+        "local": 84,
         "visibility": 0,
         "ai": 0,
         "content": 33
@@ -3089,222 +2894,17 @@
       }
     },
     {
-      "rank": 15,
-      "name": "Hare & Hounds",
-      "url": "https://www.greeneking.co.uk/pubs/gloucestershire/hare-and-hounds?utm_source=g_places&utm_medium=locations&utm_campaign=PL_pubpage",
-      "digitalVisibilityScore": 52,
+      "rank": 14,
+      "name": "Eat Unique",
+      "url": "http://eat-unique.uk/",
+      "digitalVisibilityScore": 53,
       "pillarScores": {
-        "speed": 55,
-        "technical": 88,
-        "local": 93,
-        "visibility": 8,
+        "speed": 65,
+        "technical": 100,
+        "local": 47,
+        "visibility": 29,
         "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.greeneking.co.uk/pubs/gloucestershire/hare-and-hounds?utm_source=g_places&utm_medium=locations&utm_campaign=PL_pubpage",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 279,
-          "internalLinks": 1435,
-          "avgInternalLinksPerPage": 57.4,
-          "maxDepthReached": 1,
-          "genericAnchors": 18,
-          "genericAnchorRatio": 0.013,
-          "keyPageDepth": {
-            "contact": 2,
-            "about": null,
-            "team": 2,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 45428,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 1600,
-          "inpMs": 211,
-          "cls": 0.02,
-          "lcpGood": true,
-          "inpGood": false,
-          "clsGood": true,
-          "passesCwv": false,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": true,
-          "fhrsId": 123598,
-          "businessName": "Hare And Hounds",
-          "businessType": "Pub/bar/nightclub",
-          "ratingValue": "5",
-          "ratingNumeric": 5,
-          "ratingDate": "2025-08-26",
-          "postcode": "GL3 1AA",
-          "localAuthority": "Tewkesbury",
-          "distanceKm": 4.3,
-          "locatedBy": "distance",
-          "scores": {
-            "hygiene": 5,
-            "structural": 5,
-            "confidenceInManagement": 5
-          },
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 59,
-          "accessibility": 100,
-          "bestPractices": 96,
-          "seo": 92,
-          "lcpMs": 7112,
-          "tbtMs": 221,
-          "clsScore": 0,
-          "fcpMs": 3303,
-          "speedIndexMs": 7286,
-          "failing": [
-            {
-              "id": "valid-source-maps",
-              "title": "Missing source maps for large first-party JavaScript",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "link-text",
-              "title": "Links do not have descriptive text",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 2
-          },
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": false,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2024-07-17 10:41:24 +00:00",
-          "lastUpdated": "2026-06-30 05:07:36 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "greeneking.co.uk",
-          "rank": 460,
-          "backlinks": 297339,
-          "referringDomains": 8268,
-          "referringMainDomains": 7647,
-          "referringPages": 263782,
-          "brokenBacklinks": 187413,
-          "referringLinksTypes": {
-            "anchor": 157543
-          },
-          "firstSeen": "2019-01-16 07:46:56 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 16,
-      "name": "Roots + Seeds Cafe Kitchen Gloucester Food Docks",
-      "url": "https://www.rootsandseedskitchengarden.co.uk/",
-      "digitalVisibilityScore": 52,
-      "pillarScores": {
-        "speed": 55,
-        "technical": 88,
-        "local": 95,
-        "visibility": 4,
-        "ai": 0,
-        "content": 33
+        "content": 67
       },
       "includedPillars": [
         "speed",
@@ -3326,19 +2926,19 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
-        "hasCredentialsLink": false
+        "hasCredentialsLink": true
       },
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.rootsandseedskitchengarden.co.uk/",
-          "pagesCrawled": 0,
+          "startUrl": "http://eat-unique.uk/",
+          "pagesCrawled": 1,
           "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": null,
+          "internalLinks": 35,
+          "avgInternalLinksPerPage": 35,
           "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.029,
           "keyPageDepth": {
             "contact": null,
             "about": null,
@@ -3350,7 +2950,7 @@
           "robotsDisallowedAll": false,
           "stoppedBecause": null,
           "depthLimited": false,
-          "error": "homepage HTTP 403"
+          "error": null
         },
         "crux": {
           "source": "Chrome UX Report (field data, 28-day p75)",
@@ -3387,7 +2987,7 @@
         },
         "fsa": {
           "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": null,
+          "matched": false,
           "fhrsId": null,
           "businessName": null,
           "businessType": null,
@@ -3399,24 +2999,24 @@
           "distanceKm": null,
           "locatedBy": null,
           "scores": null,
-          "error": "FSA HTTP 403"
+          "error": null
         },
         "lighthouse": {
           "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
           "strategy": "mobile",
-          "performance": 55,
-          "accessibility": 85,
-          "bestPractices": 77,
-          "seo": 100,
-          "lcpMs": 15429,
-          "tbtMs": 50,
-          "clsScore": 0.119,
-          "fcpMs": 3650,
-          "speedIndexMs": 10339,
+          "performance": 69,
+          "accessibility": 83,
+          "bestPractices": 78,
+          "seo": 77,
+          "lcpMs": 35997,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 2927,
+          "speedIndexMs": 3534,
           "failing": [
             {
-              "id": "layout-shifts",
-              "title": "Avoid large layout shifts",
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
               "score": 0
             },
             {
@@ -3425,28 +3025,28 @@
               "score": 0
             },
             {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
               "score": 0
             },
             {
               "id": "network-dependency-tree-insight",
               "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
               "score": 0
             },
             {
@@ -3459,63 +3059,44 @@
         },
         "gbpDetail": {
           "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 71,
-          "ratingDistribution": {
-            "1": 1,
-            "2": 1,
-            "3": 3,
-            "4": 8,
-            "5": 62
-          },
-          "priceLevel": "inexpensive",
-          "isClaimed": true,
-          "additionalCategories": [
-            "Restaurant"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 34,
-          "placeTopics": {
-            "caesar salad": 5,
-            "rose wine": 2,
-            "dish sizes": 3,
-            "jolly staff": 3,
-            "thoughtfully prepared dishes": 2,
-            "food dock": 2,
-            "local food": 3,
-            "cakes": 2,
-            "quality ingredients": 2,
-            "outdoor seating": 2
-          },
-          "firstSeen": "2026-06-30 09:11:50 +00:00",
-          "lastUpdated": "2026-06-30 09:11:50 +00:00"
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-08-05 11:41:19 +00:00",
+          "lastUpdated": "2025-01-04 23:24:56 +00:00"
         },
         "backlinks": {
           "source": "DataForSEO backlinks/summary",
-          "target": "rootsandseedskitchengarden.co.uk",
-          "rank": 160,
-          "backlinks": 246,
-          "referringDomains": 68,
-          "referringMainDomains": 62,
-          "referringPages": 208,
-          "brokenBacklinks": 0,
+          "target": "eat-unique.uk",
+          "rank": 98,
+          "backlinks": 86,
+          "referringDomains": 63,
+          "referringMainDomains": 59,
+          "referringPages": 81,
+          "brokenBacklinks": 74,
           "referringLinksTypes": {
-            "anchor": 204
+            "anchor": 78
           },
-          "firstSeen": "2024-06-12 00:05:31 +00:00",
+          "firstSeen": "2023-02-21 00:24:45 +00:00",
           "lostDate": null
         }
       }
     },
     {
-      "rank": 17,
+      "rank": 15,
       "name": "Royal Oak",
       "url": "https://www.hungryhorse.co.uk/pubs/gloucestershire/royal-oak?utm_source=g_places&utm_medium=locations&utm_campaign=HH_pubpage",
-      "digitalVisibilityScore": 52,
+      "digitalVisibilityScore": 53,
       "pillarScores": {
         "speed": 56,
         "technical": 88,
-        "local": 94,
+        "local": 96,
         "visibility": 8,
         "ai": 0,
         "content": 33
@@ -3722,14 +3303,14 @@
       }
     },
     {
-      "rank": 18,
+      "rank": 16,
       "name": "The New Dawn Inn",
       "url": "http://newdawninn.co.uk/",
-      "digitalVisibilityScore": 51,
+      "digitalVisibilityScore": 53,
       "pillarScores": {
         "speed": 70,
         "technical": 100,
-        "local": 87,
+        "local": 96,
         "visibility": 0,
         "ai": 0,
         "content": 0
@@ -3934,7 +3515,862 @@
       }
     },
     {
+      "rank": 17,
+      "name": "Hare & Hounds",
+      "url": "https://www.greeneking.co.uk/pubs/gloucestershire/hare-and-hounds?utm_source=g_places&utm_medium=locations&utm_campaign=PL_pubpage",
+      "digitalVisibilityScore": 52,
+      "pillarScores": {
+        "speed": 55,
+        "technical": 88,
+        "local": 96,
+        "visibility": 8,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.greeneking.co.uk/pubs/gloucestershire/hare-and-hounds?utm_source=g_places&utm_medium=locations&utm_campaign=PL_pubpage",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 279,
+          "internalLinks": 1435,
+          "avgInternalLinksPerPage": 57.4,
+          "maxDepthReached": 1,
+          "genericAnchors": 18,
+          "genericAnchorRatio": 0.013,
+          "keyPageDepth": {
+            "contact": 2,
+            "about": null,
+            "team": 2,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 45428,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1600,
+          "inpMs": 211,
+          "cls": 0.02,
+          "lcpGood": true,
+          "inpGood": false,
+          "clsGood": true,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": true,
+          "fhrsId": 123598,
+          "businessName": "Hare And Hounds",
+          "businessType": "Pub/bar/nightclub",
+          "ratingValue": "5",
+          "ratingNumeric": 5,
+          "ratingDate": "2025-08-26",
+          "postcode": "GL3 1AA",
+          "localAuthority": "Tewkesbury",
+          "distanceKm": 4.3,
+          "locatedBy": "distance",
+          "scores": {
+            "hygiene": 5,
+            "structural": 5,
+            "confidenceInManagement": 5
+          },
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 59,
+          "accessibility": 100,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 7112,
+          "tbtMs": 221,
+          "clsScore": 0,
+          "fcpMs": 3303,
+          "speedIndexMs": 7286,
+          "failing": [
+            {
+              "id": "valid-source-maps",
+              "title": "Missing source maps for large first-party JavaScript",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 10:41:24 +00:00",
+          "lastUpdated": "2026-06-30 05:07:36 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "greeneking.co.uk",
+          "rank": 460,
+          "backlinks": 297339,
+          "referringDomains": 8268,
+          "referringMainDomains": 7647,
+          "referringPages": 263782,
+          "brokenBacklinks": 187413,
+          "referringLinksTypes": {
+            "anchor": 157543
+          },
+          "firstSeen": "2019-01-16 07:46:56 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 18,
+      "name": "Roots + Seeds Cafe Kitchen Gloucester Food Docks",
+      "url": "https://www.rootsandseedskitchengarden.co.uk/",
+      "digitalVisibilityScore": 52,
+      "pillarScores": {
+        "speed": 55,
+        "technical": 88,
+        "local": 98,
+        "visibility": 4,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.rootsandseedskitchengarden.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": null,
+          "fhrsId": null,
+          "businessName": null,
+          "businessType": null,
+          "ratingValue": null,
+          "ratingNumeric": null,
+          "ratingDate": null,
+          "postcode": null,
+          "localAuthority": null,
+          "distanceKm": null,
+          "locatedBy": null,
+          "scores": null,
+          "error": "FSA HTTP 403"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 55,
+          "accessibility": 85,
+          "bestPractices": 77,
+          "seo": 100,
+          "lcpMs": 15429,
+          "tbtMs": 50,
+          "clsScore": 0.119,
+          "fcpMs": 3650,
+          "speedIndexMs": 10339,
+          "failing": [
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 71,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 1,
+            "3": 3,
+            "4": 8,
+            "5": 62
+          },
+          "priceLevel": "inexpensive",
+          "isClaimed": true,
+          "additionalCategories": [
+            "Restaurant"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 34,
+          "placeTopics": {
+            "caesar salad": 5,
+            "rose wine": 2,
+            "dish sizes": 3,
+            "jolly staff": 3,
+            "thoughtfully prepared dishes": 2,
+            "food dock": 2,
+            "local food": 3,
+            "cakes": 2,
+            "quality ingredients": 2,
+            "outdoor seating": 2
+          },
+          "firstSeen": "2026-06-30 09:11:50 +00:00",
+          "lastUpdated": "2026-06-30 09:11:50 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "rootsandseedskitchengarden.co.uk",
+          "rank": 160,
+          "backlinks": 246,
+          "referringDomains": 68,
+          "referringMainDomains": 62,
+          "referringPages": 208,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 204
+          },
+          "firstSeen": "2024-06-12 00:05:31 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 19,
+      "name": "Farmhouse Deli",
+      "url": "http://www.farmhousedeli.co.uk/",
+      "digitalVisibilityScore": 51,
+      "pillarScores": {
+        "speed": 70,
+        "technical": 100,
+        "local": 84,
+        "visibility": 0,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.farmhousedeli.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 87,
+          "avgInternalLinksPerPage": 87,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 3,
+          "sitemapUrls": 3,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": true,
+          "fhrsId": 1020182,
+          "businessName": "Farmhouse Deli",
+          "businessType": "Restaurant/Cafe/Canteen",
+          "ratingValue": "5",
+          "ratingNumeric": 5,
+          "ratingDate": "2026-01-28",
+          "postcode": "GL1 1TP",
+          "localAuthority": "Gloucester City",
+          "distanceKm": 0.6,
+          "locatedBy": "distance",
+          "scores": {
+            "hygiene": 5,
+            "structural": 5,
+            "confidenceInManagement": 0
+          },
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 72,
+          "accessibility": 92,
+          "bestPractices": 74,
+          "seo": 100,
+          "lcpMs": 6331,
+          "tbtMs": 14,
+          "clsScore": 0.015,
+          "fcpMs": 2581,
+          "speedIndexMs": 4217,
+          "failing": [
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "label-content-name-mismatch",
+              "title": "Elements with visible text labels do not have matching accessible names.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 31,
+          "ratingDistribution": {
+            "1": 9,
+            "2": 2,
+            "3": 5,
+            "4": 11,
+            "5": 39
+          },
+          "priceLevel": "inexpensive",
+          "isClaimed": true,
+          "additionalCategories": [
+            "Breakfast restaurant",
+            "Ham shop",
+            "Lunch restaurant",
+            "Takeout restaurant",
+            "Restaurant"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 32,
+          "placeTopics": {
+            "sausage and bacon roll": 8,
+            "sausage rolls": 9,
+            "hash browns": 2,
+            "baguettes": 3,
+            "brie": 2,
+            "friendly staff": 22,
+            "value for money": 3,
+            "mushrooms": 2,
+            "deli": 2,
+            "polite staff": 3
+          },
+          "firstSeen": "2024-07-19 07:52:21 +00:00",
+          "lastUpdated": "2026-06-25 17:43:00 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "farmhousedeli.co.uk",
+          "rank": 145,
+          "backlinks": 122,
+          "referringDomains": 63,
+          "referringMainDomains": 59,
+          "referringPages": 112,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 109
+          },
+          "firstSeen": "2019-05-26 02:37:37 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 20,
+      "name": "Fly Wingz",
+      "url": "https://flywingz.co.uk/",
+      "digitalVisibilityScore": 51,
+      "pillarScores": {
+        "speed": 85,
+        "technical": 75,
+        "local": 93,
+        "visibility": 0,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://flywingz.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 2,
+          "avgInternalLinksPerPage": 2,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": true,
+          "fhrsId": 1893058,
+          "businessName": "Fly Wingz",
+          "businessType": "Other catering premises",
+          "ratingValue": "5",
+          "ratingNumeric": 5,
+          "ratingDate": "2026-02-11",
+          "postcode": "GL2 5QX",
+          "localAuthority": "Gloucester City",
+          "distanceKm": 1,
+          "locatedBy": "distance",
+          "scores": {
+            "hygiene": 5,
+            "structural": 5,
+            "confidenceInManagement": 5
+          },
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 92,
+          "accessibility": 91,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 2703,
+          "tbtMs": 205,
+          "clsScore": 0.061,
+          "fcpMs": 923,
+          "speedIndexMs": 2433,
+          "failing": [
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 14
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 8,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 34
+          },
+          "priceLevel": "inexpensive",
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 45,
+          "placeTopics": {
+            "smash burger": 3,
+            "wings": 3,
+            "friendly staff": 6,
+            "flavour": 2,
+            "fries": 2,
+            "tenders": 2,
+            "food": 7,
+            "chicken wings": 2
+          },
+          "firstSeen": "2026-07-07 20:56:48 +00:00",
+          "lastUpdated": "2026-07-07 20:56:48 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "flywingz.co.uk",
+          "rank": 0,
+          "backlinks": 33,
+          "referringDomains": 31,
+          "referringMainDomains": 31,
+          "referringPages": 33,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 33
+          },
+          "firstSeen": "2025-12-31 02:06:13 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 21,
       "name": "Chuck Burgers",
       "url": "https://www.chuckburgerbar.com/",
       "digitalVisibilityScore": 50,
@@ -4152,662 +4588,14 @@
       }
     },
     {
-      "rank": 20,
-      "name": "Farmhouse Deli",
-      "url": "http://www.farmhousedeli.co.uk/",
-      "digitalVisibilityScore": 50,
-      "pillarScores": {
-        "speed": 70,
-        "technical": 100,
-        "local": 79,
-        "visibility": 0,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.farmhousedeli.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 87,
-          "avgInternalLinksPerPage": 87,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 3,
-          "sitemapUrls": 3,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": true,
-          "fhrsId": 1020182,
-          "businessName": "Farmhouse Deli",
-          "businessType": "Restaurant/Cafe/Canteen",
-          "ratingValue": "5",
-          "ratingNumeric": 5,
-          "ratingDate": "2026-01-28",
-          "postcode": "GL1 1TP",
-          "localAuthority": "Gloucester City",
-          "distanceKm": 0.6,
-          "locatedBy": "distance",
-          "scores": {
-            "hygiene": 5,
-            "structural": 5,
-            "confidenceInManagement": 0
-          },
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 72,
-          "accessibility": 92,
-          "bestPractices": 74,
-          "seo": 100,
-          "lcpMs": 6331,
-          "tbtMs": 14,
-          "clsScore": 0.015,
-          "fcpMs": 2581,
-          "speedIndexMs": 4217,
-          "failing": [
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "frame-title",
-              "title": "`<frame>` or `<iframe>` elements do not have a title",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "label-content-name-mismatch",
-              "title": "Elements with visible text labels do not have matching accessible names.",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 31,
-          "ratingDistribution": {
-            "1": 9,
-            "2": 2,
-            "3": 5,
-            "4": 11,
-            "5": 39
-          },
-          "priceLevel": "inexpensive",
-          "isClaimed": true,
-          "additionalCategories": [
-            "Breakfast restaurant",
-            "Ham shop",
-            "Lunch restaurant",
-            "Takeout restaurant",
-            "Restaurant"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 32,
-          "placeTopics": {
-            "sausage and bacon roll": 8,
-            "sausage rolls": 9,
-            "hash browns": 2,
-            "baguettes": 3,
-            "brie": 2,
-            "friendly staff": 22,
-            "value for money": 3,
-            "mushrooms": 2,
-            "deli": 2,
-            "polite staff": 3
-          },
-          "firstSeen": "2024-07-19 07:52:21 +00:00",
-          "lastUpdated": "2026-06-25 17:43:00 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "farmhousedeli.co.uk",
-          "rank": 145,
-          "backlinks": 122,
-          "referringDomains": 63,
-          "referringMainDomains": 59,
-          "referringPages": 112,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 109
-          },
-          "firstSeen": "2019-05-26 02:37:37 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 21,
-      "name": "Fly Wingz",
-      "url": "https://flywingz.co.uk/",
-      "digitalVisibilityScore": 50,
-      "pillarScores": {
-        "speed": 85,
-        "technical": 75,
-        "local": 89,
-        "visibility": 0,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://flywingz.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 2,
-          "avgInternalLinksPerPage": 2,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": true,
-          "fhrsId": 1893058,
-          "businessName": "Fly Wingz",
-          "businessType": "Other catering premises",
-          "ratingValue": "5",
-          "ratingNumeric": 5,
-          "ratingDate": "2026-02-11",
-          "postcode": "GL2 5QX",
-          "localAuthority": "Gloucester City",
-          "distanceKm": 1,
-          "locatedBy": "distance",
-          "scores": {
-            "hygiene": 5,
-            "structural": 5,
-            "confidenceInManagement": 5
-          },
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 92,
-          "accessibility": 91,
-          "bestPractices": 96,
-          "seo": 92,
-          "lcpMs": 2703,
-          "tbtMs": 205,
-          "clsScore": 0.061,
-          "fcpMs": 923,
-          "speedIndexMs": 2433,
-          "failing": [
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "meta-description",
-              "title": "Document does not have a meta description",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "interactive",
-              "title": "Time to Interactive",
-              "score": 14
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 8,
-          "ratingDistribution": {
-            "1": 1,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 34
-          },
-          "priceLevel": "inexpensive",
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": true,
-          "services": 45,
-          "placeTopics": {
-            "smash burger": 3,
-            "wings": 3,
-            "friendly staff": 6,
-            "flavour": 2,
-            "fries": 2,
-            "tenders": 2,
-            "food": 7,
-            "chicken wings": 2
-          },
-          "firstSeen": "2026-07-07 20:56:48 +00:00",
-          "lastUpdated": "2026-07-07 20:56:48 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "flywingz.co.uk",
-          "rank": 0,
-          "backlinks": 33,
-          "referringDomains": 31,
-          "referringMainDomains": 31,
-          "referringPages": 33,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 33
-          },
-          "firstSeen": "2025-12-31 02:06:13 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 22,
-      "name": "GO SPICE",
-      "url": "https://gospice.co.uk/",
-      "digitalVisibilityScore": 49,
-      "pillarScores": {
-        "speed": 76,
-        "technical": 75,
-        "local": 94,
-        "visibility": 0,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://gospice.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": 0,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 5,
-          "sitemapUrls": 6,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 2016,
-          "inpMs": null,
-          "cls": 0,
-          "lcpGood": true,
-          "inpGood": null,
-          "clsGood": true,
-          "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": true,
-          "fhrsId": 1956255,
-          "businessName": "Go Spice",
-          "businessType": "Other catering premises",
-          "ratingValue": "5",
-          "ratingNumeric": 5,
-          "ratingDate": "2026-07-22",
-          "postcode": "GL1 1EP",
-          "localAuthority": "Gloucester City",
-          "distanceKm": 0.2,
-          "locatedBy": "distance",
-          "scores": {
-            "hygiene": 0,
-            "structural": 5,
-            "confidenceInManagement": 5
-          },
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 60,
-          "accessibility": 100,
-          "bestPractices": 100,
-          "seo": 100,
-          "lcpMs": 17149,
-          "tbtMs": 25,
-          "clsScore": 0,
-          "fcpMs": 4853,
-          "speedIndexMs": 6191,
-          "failing": [
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 32,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 1,
-            "5": 22
-          },
-          "priceLevel": "inexpensive",
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": null,
-          "placeTopics": {
-            "welcoming staff": 4,
-            "attentive staff": 6,
-            "children": 2,
-            "hospitality": 2,
-            "tasty food": 3,
-            "food": 6
-          },
-          "firstSeen": "2026-07-18 01:51:28 +00:00",
-          "lastUpdated": "2026-07-18 01:51:28 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "gospice.co.uk",
-          "rank": 51,
-          "backlinks": 47,
-          "referringDomains": 44,
-          "referringMainDomains": 42,
-          "referringPages": 45,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 39
-          },
-          "firstSeen": "2022-07-23 17:18:53 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 23,
       "name": "Indian Memories",
       "url": "http://www.indianmemories.co.uk/",
-      "digitalVisibilityScore": 48,
+      "digitalVisibilityScore": 50,
       "pillarScores": {
         "speed": 61,
         "technical": 75,
-        "local": 87,
+        "local": 97,
         "visibility": 0,
         "ai": 0,
         "content": 33
@@ -5019,7 +4807,434 @@
       }
     },
     {
+      "rank": 23,
+      "name": "GO SPICE",
+      "url": "https://gospice.co.uk/",
+      "digitalVisibilityScore": 49,
+      "pillarScores": {
+        "speed": 76,
+        "technical": 75,
+        "local": 94,
+        "visibility": 0,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://gospice.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 5,
+          "sitemapUrls": 6,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 2016,
+          "inpMs": null,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": null,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": true,
+          "fhrsId": 1956255,
+          "businessName": "Go Spice",
+          "businessType": "Other catering premises",
+          "ratingValue": "5",
+          "ratingNumeric": 5,
+          "ratingDate": "2026-07-22",
+          "postcode": "GL1 1EP",
+          "localAuthority": "Gloucester City",
+          "distanceKm": 0.2,
+          "locatedBy": "distance",
+          "scores": {
+            "hygiene": 0,
+            "structural": 5,
+            "confidenceInManagement": 5
+          },
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 60,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 17149,
+          "tbtMs": 25,
+          "clsScore": 0,
+          "fcpMs": 4853,
+          "speedIndexMs": 6191,
+          "failing": [
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 32,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 22
+          },
+          "priceLevel": "inexpensive",
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "welcoming staff": 4,
+            "attentive staff": 6,
+            "children": 2,
+            "hospitality": 2,
+            "tasty food": 3,
+            "food": 6
+          },
+          "firstSeen": "2026-07-18 01:51:28 +00:00",
+          "lastUpdated": "2026-07-18 01:51:28 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "gospice.co.uk",
+          "rank": 51,
+          "backlinks": 47,
+          "referringDomains": 44,
+          "referringMainDomains": 42,
+          "referringPages": 45,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 39
+          },
+          "firstSeen": "2022-07-23 17:18:53 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 24,
+      "name": "Brimble's Cafe",
+      "url": "http://www.brimblescafe.co.uk/",
+      "digitalVisibilityScore": 48,
+      "pillarScores": {
+        "speed": 65,
+        "technical": 63,
+        "local": 94,
+        "visibility": 0,
+        "ai": 0,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.brimblescafe.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 1,
+          "avgInternalLinksPerPage": 1,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": false,
+          "fhrsId": null,
+          "businessName": null,
+          "businessType": null,
+          "ratingValue": null,
+          "ratingNumeric": null,
+          "ratingDate": null,
+          "postcode": null,
+          "localAuthority": null,
+          "distanceKm": null,
+          "locatedBy": null,
+          "scores": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 68,
+          "accessibility": 89,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 8329,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3350,
+          "speedIndexMs": 3350,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "duplicated-javascript-insight",
+              "title": "Duplicated JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 66,
+          "ratingDistribution": {
+            "1": 3,
+            "2": 0,
+            "3": 2,
+            "4": 4,
+            "5": 84
+          },
+          "priceLevel": "inexpensive",
+          "isClaimed": true,
+          "additionalCategories": [
+            "Coffee shop",
+            "Restaurant"
+          ],
+          "hasDescription": true,
+          "hasHours": false,
+          "services": 77,
+          "placeTopics": {
+            "cosy atmosphere": 16,
+            "toastie": 8,
+            "cakes": 12,
+            "bbq pulled pork ciabattas": 2,
+            "scone": 5,
+            "friendly staff": 48,
+            "generous portions": 4,
+            "hot chocolate": 4,
+            "friendly owners": 4,
+            "pot of tea": 2
+          },
+          "firstSeen": "2024-07-10 22:56:32 +00:00",
+          "lastUpdated": "2026-06-29 22:17:54 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "brimblescafe.co.uk",
+          "rank": 105,
+          "backlinks": 67,
+          "referringDomains": 50,
+          "referringMainDomains": 47,
+          "referringPages": 64,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 64
+          },
+          "firstSeen": "2022-04-05 17:40:55 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 25,
       "name": "The Old Elm Inn",
       "url": "http://www.theoldelminn.co.uk/",
       "digitalVisibilityScore": 48,
@@ -5233,7 +5448,207 @@
       }
     },
     {
-      "rank": 25,
+      "rank": 26,
+      "name": "Bombay Mix",
+      "url": "https://bombaymixtuffley.co.uk/",
+      "digitalVisibilityScore": 47,
+      "pillarScores": {
+        "speed": 100,
+        "technical": 57,
+        "local": 76,
+        "visibility": 0,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://bombaymixtuffley.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": true,
+          "fhrsId": 25791,
+          "businessName": "Bombay Mix",
+          "businessType": "Restaurant/Cafe/Canteen",
+          "ratingValue": "5",
+          "ratingNumeric": 5,
+          "ratingDate": "2025-07-22",
+          "postcode": "GL4 0QU",
+          "localAuthority": "Gloucester City",
+          "distanceKm": 4,
+          "locatedBy": "distance",
+          "scores": {
+            "hygiene": 5,
+            "structural": 5,
+            "confidenceInManagement": 5
+          },
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 100,
+          "accessibility": 100,
+          "bestPractices": 96,
+          "seo": 80,
+          "lcpMs": 925,
+          "tbtMs": 90,
+          "clsScore": 0,
+          "fcpMs": 913,
+          "speedIndexMs": 913,
+          "failing": [
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "http-status-code",
+              "title": "Page has unsuccessful HTTP status code",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 50
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 113,
+          "ratingDistribution": {
+            "1": 13,
+            "2": 4,
+            "3": 5,
+            "4": 9,
+            "5": 43
+          },
+          "priceLevel": "inexpensive",
+          "isClaimed": true,
+          "additionalCategories": [
+            "Fried chicken takeaway",
+            "Indian restaurant",
+            "Takeaway",
+            "Restaurant"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 148,
+          "placeTopics": {
+            "chicken tikka": 3,
+            "hot food": 4,
+            "curry": 5,
+            "tasty food": 4,
+            "manager": 2,
+            "garlic": 3,
+            "naan": 2,
+            "phone": 2,
+            "food": 19
+          },
+          "firstSeen": "2024-07-19 10:14:35 +00:00",
+          "lastUpdated": "2026-06-30 11:29:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bombaymixtuffley.co.uk",
+          "rank": 109,
+          "backlinks": 79,
+          "referringDomains": 73,
+          "referringMainDomains": 71,
+          "referringPages": 78,
+          "brokenBacklinks": 82,
+          "referringLinksTypes": {
+            "anchor": 77
+          },
+          "firstSeen": "2023-11-14 05:13:41 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 27,
       "name": "Côte Gloucester",
       "url": "https://www.cote.co.uk/restaurant/gloucester/?utm_source=google&utm_medium=organic&utm_campaign=Google+My+Business?utm_source=extnet&utm_medium=yext",
       "digitalVisibilityScore": 47,
@@ -5454,14 +5869,14 @@
       }
     },
     {
-      "rank": 26,
-      "name": "Bombay Mix",
-      "url": "https://bombaymixtuffley.co.uk/",
+      "rank": 28,
+      "name": "Friar Tucks",
+      "url": "http://www.thefriartucks.co.uk/",
       "digitalVisibilityScore": 46,
       "pillarScores": {
-        "speed": 100,
-        "technical": 57,
-        "local": 75,
+        "speed": 75,
+        "technical": 63,
+        "local": 91,
         "visibility": 0,
         "ai": 0,
         "content": 0
@@ -5491,222 +5906,22 @@
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://bombaymixtuffley.co.uk/",
-          "pagesCrawled": 0,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": null,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": "homepage HTTP 403"
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": true,
-          "fhrsId": 25791,
-          "businessName": "Bombay Mix",
-          "businessType": "Restaurant/Cafe/Canteen",
-          "ratingValue": "5",
-          "ratingNumeric": 5,
-          "ratingDate": "2025-07-22",
-          "postcode": "GL4 0QU",
-          "localAuthority": "Gloucester City",
-          "distanceKm": 4,
-          "locatedBy": "distance",
-          "scores": {
-            "hygiene": 5,
-            "structural": 5,
-            "confidenceInManagement": 5
-          },
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 100,
-          "accessibility": 100,
-          "bestPractices": 96,
-          "seo": 80,
-          "lcpMs": 925,
-          "tbtMs": 90,
-          "clsScore": 0,
-          "fcpMs": 913,
-          "speedIndexMs": 913,
-          "failing": [
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "meta-description",
-              "title": "Document does not have a meta description",
-              "score": 0
-            },
-            {
-              "id": "http-status-code",
-              "title": "Page has unsuccessful HTTP status code",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 50
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 113,
-          "ratingDistribution": {
-            "1": 13,
-            "2": 4,
-            "3": 5,
-            "4": 9,
-            "5": 43
-          },
-          "priceLevel": "inexpensive",
-          "isClaimed": true,
-          "additionalCategories": [
-            "Fried chicken takeaway",
-            "Indian restaurant",
-            "Takeaway",
-            "Restaurant"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 148,
-          "placeTopics": {
-            "chicken tikka": 3,
-            "hot food": 4,
-            "curry": 5,
-            "tasty food": 4,
-            "manager": 2,
-            "garlic": 3,
-            "naan": 2,
-            "phone": 2,
-            "food": 19
-          },
-          "firstSeen": "2024-07-19 10:14:35 +00:00",
-          "lastUpdated": "2026-06-30 11:29:44 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "bombaymixtuffley.co.uk",
-          "rank": 109,
-          "backlinks": 79,
-          "referringDomains": 73,
-          "referringMainDomains": 71,
-          "referringPages": 78,
-          "brokenBacklinks": 82,
-          "referringLinksTypes": {
-            "anchor": 77
-          },
-          "firstSeen": "2023-11-14 05:13:41 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 27,
-      "name": "Brimble's Cafe",
-      "url": "http://www.brimblescafe.co.uk/",
-      "digitalVisibilityScore": 46,
-      "pillarScores": {
-        "speed": 65,
-        "technical": 63,
-        "local": 84,
-        "visibility": 0,
-        "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.brimblescafe.co.uk/",
+          "startUrl": "http://www.thefriartucks.co.uk/",
           "pagesCrawled": 1,
           "pagesDiscovered": 0,
-          "internalLinks": 1,
-          "avgInternalLinksPerPage": 1,
+          "internalLinks": 46,
+          "avgInternalLinksPerPage": 46,
           "maxDepthReached": 0,
           "genericAnchors": 0,
           "genericAnchorRatio": 0,
           "keyPageDepth": {
-            "contact": null,
+            "contact": 1,
             "about": null,
             "team": null,
             "services": null
           },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
+          "orphanCandidates": 5,
+          "sitemapUrls": 7,
           "robotsDisallowedAll": false,
           "stoppedBecause": null,
           "depthLimited": false,
@@ -5764,34 +5979,24 @@
         "lighthouse": {
           "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
           "strategy": "mobile",
-          "performance": 68,
+          "performance": 66,
           "accessibility": 89,
-          "bestPractices": 78,
-          "seo": 100,
-          "lcpMs": 8329,
-          "tbtMs": 0,
+          "bestPractices": 74,
+          "seo": 92,
+          "lcpMs": 13232,
+          "tbtMs": 6,
           "clsScore": 0,
-          "fcpMs": 3350,
-          "speedIndexMs": 3350,
+          "fcpMs": 3336,
+          "speedIndexMs": 4716,
           "failing": [
             {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
               "score": 0
             },
             {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
+              "id": "font-display-insight",
+              "title": "Font display",
               "score": 0
             },
             {
@@ -5800,18 +6005,28 @@
               "score": 0
             },
             {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
               "id": "image-delivery-insight",
               "title": "Improve image delivery",
               "score": 0
             },
             {
-              "id": "duplicated-javascript-insight",
-              "title": "Duplicated JavaScript",
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
               "score": 0
             },
             {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
               "score": 0
             }
           ],
@@ -5819,57 +6034,278 @@
         },
         "gbpDetail": {
           "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 66,
+          "totalPhotos": 72,
           "ratingDistribution": {
-            "1": 3,
-            "2": 0,
-            "3": 2,
-            "4": 4,
-            "5": 84
+            "1": 15,
+            "2": 16,
+            "3": 26,
+            "4": 79,
+            "5": 227
           },
-          "priceLevel": "inexpensive",
+          "priceLevel": "moderate",
           "isClaimed": true,
           "additionalCategories": [
-            "Coffee shop",
+            "Bar",
+            "Breakfast restaurant",
+            "Pub",
             "Restaurant"
           ],
           "hasDescription": true,
-          "hasHours": false,
-          "services": 77,
+          "hasHours": true,
+          "services": null,
           "placeTopics": {
-            "cosy atmosphere": 16,
-            "toastie": 8,
-            "cakes": 12,
-            "bbq pulled pork ciabattas": 2,
-            "scone": 5,
-            "friendly staff": 48,
-            "generous portions": 4,
-            "hot chocolate": 4,
-            "friendly owners": 4,
-            "pot of tea": 2
+            "friars feast": 3,
+            "home cooked food": 9,
+            "friendly landlord": 12,
+            "dart board": 2,
+            "ham egg and chips": 2,
+            "comfy bed": 3,
+            "dog friendly": 4,
+            "traditional pub": 3,
+            "value": 32,
+            "friendly host": 3
           },
-          "firstSeen": "2024-07-10 22:56:32 +00:00",
-          "lastUpdated": "2026-06-29 22:17:54 +00:00"
+          "firstSeen": "2026-06-26 05:26:17 +00:00",
+          "lastUpdated": "2026-06-26 05:26:17 +00:00"
         },
         "backlinks": {
           "source": "DataForSEO backlinks/summary",
-          "target": "brimblescafe.co.uk",
-          "rank": 105,
-          "backlinks": 67,
-          "referringDomains": 50,
-          "referringMainDomains": 47,
-          "referringPages": 64,
+          "target": "thefriartucks.co.uk",
+          "rank": 149,
+          "backlinks": 82,
+          "referringDomains": 55,
+          "referringMainDomains": 52,
+          "referringPages": 77,
           "brokenBacklinks": 0,
           "referringLinksTypes": {
-            "anchor": 64
+            "anchor": 75
           },
-          "firstSeen": "2022-04-05 17:40:55 +00:00",
+          "firstSeen": "2023-10-06 23:24:22 +00:00",
           "lostDate": null
         }
       }
     },
     {
-      "rank": 28,
+      "rank": 29,
+      "name": "Golden City",
+      "url": "http://www.goldencitychurchdown.co.uk/",
+      "digitalVisibilityScore": 46,
+      "pillarScores": {
+        "speed": 74,
+        "technical": 75,
+        "local": 80,
+        "visibility": 0,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.goldencitychurchdown.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": true,
+          "fhrsId": 125531,
+          "businessName": "Golden City",
+          "businessType": "Takeaway/sandwich shop",
+          "ratingValue": "3",
+          "ratingNumeric": 3,
+          "ratingDate": "2025-01-08",
+          "postcode": "GL3 2ER",
+          "localAuthority": "Tewkesbury",
+          "distanceKm": 5,
+          "locatedBy": "distance",
+          "scores": {
+            "hygiene": 10,
+            "structural": 10,
+            "confidenceInManagement": 5
+          },
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 44,
+          "accessibility": 80,
+          "bestPractices": 81,
+          "seo": 85,
+          "lcpMs": 7087,
+          "tbtMs": 745,
+          "clsScore": 0,
+          "fcpMs": 4312,
+          "speedIndexMs": 6217,
+          "failing": [
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "valid-source-maps",
+              "title": "Missing source maps for large first-party JavaScript",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 21,
+          "ratingDistribution": {
+            "1": 24,
+            "2": 7,
+            "3": 11,
+            "4": 30,
+            "5": 123
+          },
+          "priceLevel": "moderate",
+          "isClaimed": true,
+          "additionalCategories": [
+            "Takeaway",
+            "Restaurant"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "portion size": 5,
+            "special fried rice": 2,
+            "chow mein": 4,
+            "hangover box": 2,
+            "online ordering": 2,
+            "value for money": 4,
+            "gluten free": 3,
+            "food temperature": 4,
+            "large order": 4,
+            "tasty food": 2
+          },
+          "firstSeen": "2024-07-01 18:50:40 +00:00",
+          "lastUpdated": "2026-08-16 13:14:49 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "goldencitychurchdown.co.uk",
+          "rank": 0,
+          "backlinks": 11,
+          "referringDomains": 9,
+          "referringMainDomains": 9,
+          "referringPages": 11,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 11
+          },
+          "firstSeen": "2025-06-01 03:19:23 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 30,
       "name": "Banchina Italian",
       "url": "https://banchina.co.uk/",
       "digitalVisibilityScore": 45,
@@ -6085,14 +6521,14 @@
       }
     },
     {
-      "rank": 29,
-      "name": "Golden City",
-      "url": "http://www.goldencitychurchdown.co.uk/",
+      "rank": 31,
+      "name": "Seymour Fryer",
+      "url": "https://seymourfryer.co.uk/",
       "digitalVisibilityScore": 45,
       "pillarScores": {
-        "speed": 74,
+        "speed": 65,
         "technical": 75,
-        "local": 78,
+        "local": 86,
         "visibility": 0,
         "ai": 0,
         "content": 0
@@ -6122,7 +6558,7 @@
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.goldencitychurchdown.co.uk/",
+          "startUrl": "https://seymourfryer.co.uk/",
           "pagesCrawled": 1,
           "pagesDiscovered": 0,
           "internalLinks": 0,
@@ -6174,49 +6610,65 @@
           "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
-          "error": "registered address does not mention Gloucester"
+          "error": null
         },
         "fsa": {
           "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": true,
-          "fhrsId": 125531,
-          "businessName": "Golden City",
-          "businessType": "Takeaway/sandwich shop",
-          "ratingValue": "3",
-          "ratingNumeric": 3,
-          "ratingDate": "2025-01-08",
-          "postcode": "GL3 2ER",
-          "localAuthority": "Tewkesbury",
-          "distanceKm": 5,
-          "locatedBy": "distance",
-          "scores": {
-            "hygiene": 10,
-            "structural": 10,
-            "confidenceInManagement": 5
-          },
-          "error": null
+          "matched": null,
+          "fhrsId": null,
+          "businessName": null,
+          "businessType": null,
+          "ratingValue": null,
+          "ratingNumeric": null,
+          "ratingDate": null,
+          "postcode": null,
+          "localAuthority": null,
+          "distanceKm": null,
+          "locatedBy": null,
+          "scores": null,
+          "error": "FSA HTTP 403"
         },
         "lighthouse": {
           "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
           "strategy": "mobile",
-          "performance": 44,
+          "performance": 79,
           "accessibility": 80,
-          "bestPractices": 81,
-          "seo": 85,
-          "lcpMs": 7087,
-          "tbtMs": 745,
-          "clsScore": 0,
-          "fcpMs": 4312,
-          "speedIndexMs": 6217,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 5214,
+          "tbtMs": 38,
+          "clsScore": 0.054,
+          "fcpMs": 1840,
+          "speedIndexMs": 2315,
           "failing": [
             {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
               "score": 0
             },
             {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
               "score": 0
             },
             {
@@ -6225,28 +6677,8 @@
               "score": 0
             },
             {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
               "id": "meta-viewport",
               "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
-              "score": 0
-            },
-            {
-              "id": "valid-source-maps",
-              "title": "Missing source maps for large first-party JavaScript",
-              "score": 0
-            },
-            {
-              "id": "crawlable-anchors",
-              "title": "Links are not crawlable",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
               "score": 0
             }
           ],
@@ -6254,64 +6686,63 @@
         },
         "gbpDetail": {
           "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 21,
+          "totalPhotos": 33,
           "ratingDistribution": {
-            "1": 24,
-            "2": 7,
-            "3": 11,
-            "4": 30,
-            "5": 123
+            "1": 20,
+            "2": 14,
+            "3": 27,
+            "4": 70,
+            "5": 301
           },
-          "priceLevel": "moderate",
+          "priceLevel": "inexpensive",
           "isClaimed": true,
           "additionalCategories": [
-            "Takeaway",
             "Restaurant"
           ],
           "hasDescription": true,
           "hasHours": true,
           "services": null,
           "placeTopics": {
-            "portion size": 5,
-            "special fried rice": 2,
-            "chow mein": 4,
-            "hangover box": 2,
-            "online ordering": 2,
-            "value for money": 4,
-            "gluten free": 3,
-            "food temperature": 4,
-            "large order": 4,
-            "tasty food": 2
+            "cheesecakes": 8,
+            "gluten free fish and chips": 3,
+            "small cod": 2,
+            "gluten free options": 8,
+            "hake": 2,
+            "cod bites": 2,
+            "chip portions": 2,
+            "fresh chips": 3,
+            "social distancing": 2,
+            "big order": 2
           },
-          "firstSeen": "2024-07-01 18:50:40 +00:00",
-          "lastUpdated": "2026-08-16 13:14:49 +00:00"
+          "firstSeen": "2024-07-17 09:18:20 +00:00",
+          "lastUpdated": "2026-06-26 14:35:53 +00:00"
         },
         "backlinks": {
           "source": "DataForSEO backlinks/summary",
-          "target": "goldencitychurchdown.co.uk",
+          "target": "seymourfryer.co.uk",
           "rank": 0,
-          "backlinks": 11,
-          "referringDomains": 9,
-          "referringMainDomains": 9,
-          "referringPages": 11,
+          "backlinks": 2,
+          "referringDomains": 2,
+          "referringMainDomains": 2,
+          "referringPages": 2,
           "brokenBacklinks": 0,
           "referringLinksTypes": {
-            "anchor": 11
+            "anchor": 2
           },
-          "firstSeen": "2025-06-01 03:19:23 +00:00",
+          "firstSeen": "2026-01-19 18:34:47 +00:00",
           "lostDate": null
         }
       }
     },
     {
-      "rank": 30,
+      "rank": 32,
       "name": "Tara",
       "url": "https://hatton-court.co.uk/eating-drinking-restaurants-gloucester-cotswolds/",
       "digitalVisibilityScore": 45,
       "pillarScores": {
         "speed": 59,
         "technical": 100,
-        "local": 66,
+        "local": 67,
         "visibility": 0,
         "ai": 0,
         "content": 0
@@ -6519,224 +6950,7 @@
       }
     },
     {
-      "rank": 31,
-      "name": "Friar Tucks",
-      "url": "http://www.thefriartucks.co.uk/",
-      "digitalVisibilityScore": 44,
-      "pillarScores": {
-        "speed": 75,
-        "technical": 63,
-        "local": 84,
-        "visibility": 0,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.thefriartucks.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 46,
-          "avgInternalLinksPerPage": 46,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 5,
-          "sitemapUrls": 7,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": false,
-          "fhrsId": null,
-          "businessName": null,
-          "businessType": null,
-          "ratingValue": null,
-          "ratingNumeric": null,
-          "ratingDate": null,
-          "postcode": null,
-          "localAuthority": null,
-          "distanceKm": null,
-          "locatedBy": null,
-          "scores": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 66,
-          "accessibility": 89,
-          "bestPractices": 74,
-          "seo": 92,
-          "lcpMs": 13232,
-          "tbtMs": 6,
-          "clsScore": 0,
-          "fcpMs": 3336,
-          "speedIndexMs": 4716,
-          "failing": [
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "image-aspect-ratio",
-              "title": "Displays images with incorrect aspect ratio",
-              "score": 0
-            },
-            {
-              "id": "crawlable-anchors",
-              "title": "Links are not crawlable",
-              "score": 0
-            },
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 72,
-          "ratingDistribution": {
-            "1": 15,
-            "2": 16,
-            "3": 26,
-            "4": 79,
-            "5": 227
-          },
-          "priceLevel": "moderate",
-          "isClaimed": true,
-          "additionalCategories": [
-            "Bar",
-            "Breakfast restaurant",
-            "Pub",
-            "Restaurant"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": null,
-          "placeTopics": {
-            "friars feast": 3,
-            "home cooked food": 9,
-            "friendly landlord": 12,
-            "dart board": 2,
-            "ham egg and chips": 2,
-            "comfy bed": 3,
-            "dog friendly": 4,
-            "traditional pub": 3,
-            "value": 32,
-            "friendly host": 3
-          },
-          "firstSeen": "2026-06-26 05:26:17 +00:00",
-          "lastUpdated": "2026-06-26 05:26:17 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "thefriartucks.co.uk",
-          "rank": 149,
-          "backlinks": 82,
-          "referringDomains": 55,
-          "referringMainDomains": 52,
-          "referringPages": 77,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 75
-          },
-          "firstSeen": "2023-10-06 23:24:22 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 32,
+      "rank": 33,
       "name": "NepaleseChef",
       "url": "http://www.nepalesechef.co.uk/",
       "digitalVisibilityScore": 44,
@@ -6958,220 +7172,6 @@
       }
     },
     {
-      "rank": 33,
-      "name": "Seymour Fryer",
-      "url": "https://seymourfryer.co.uk/",
-      "digitalVisibilityScore": 44,
-      "pillarScores": {
-        "speed": 65,
-        "technical": 75,
-        "local": 82,
-        "visibility": 0,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://seymourfryer.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": 0,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": null,
-          "fhrsId": null,
-          "businessName": null,
-          "businessType": null,
-          "ratingValue": null,
-          "ratingNumeric": null,
-          "ratingDate": null,
-          "postcode": null,
-          "localAuthority": null,
-          "distanceKm": null,
-          "locatedBy": null,
-          "scores": null,
-          "error": "FSA HTTP 403"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 79,
-          "accessibility": 80,
-          "bestPractices": 100,
-          "seo": 100,
-          "lcpMs": 5214,
-          "tbtMs": 38,
-          "clsScore": 0.054,
-          "fcpMs": 1840,
-          "speedIndexMs": 2315,
-          "failing": [
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "landmark-one-main",
-              "title": "Document does not have a main landmark.",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "meta-viewport",
-              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 33,
-          "ratingDistribution": {
-            "1": 20,
-            "2": 14,
-            "3": 27,
-            "4": 70,
-            "5": 301
-          },
-          "priceLevel": "inexpensive",
-          "isClaimed": true,
-          "additionalCategories": [
-            "Restaurant"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": null,
-          "placeTopics": {
-            "cheesecakes": 8,
-            "gluten free fish and chips": 3,
-            "small cod": 2,
-            "gluten free options": 8,
-            "hake": 2,
-            "cod bites": 2,
-            "chip portions": 2,
-            "fresh chips": 3,
-            "social distancing": 2,
-            "big order": 2
-          },
-          "firstSeen": "2024-07-17 09:18:20 +00:00",
-          "lastUpdated": "2026-06-26 14:35:53 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "seymourfryer.co.uk",
-          "rank": 0,
-          "backlinks": 2,
-          "referringDomains": 2,
-          "referringMainDomains": 2,
-          "referringPages": 2,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 2
-          },
-          "firstSeen": "2026-01-19 18:34:47 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 34,
       "name": "Coney Hill Fish & Chips",
       "url": "http://coneyhillfishandchips.co.uk/",
@@ -7179,7 +7179,7 @@
       "pillarScores": {
         "speed": 68,
         "technical": 50,
-        "local": 79,
+        "local": 82,
         "visibility": 0,
         "ai": 0,
         "content": 33
@@ -7388,431 +7388,13 @@
     },
     {
       "rank": 35,
-      "name": "Nineteen at Brickhampton",
-      "url": "https://www.brickhampton.co.uk/nineteenatbrickhampton",
-      "digitalVisibilityScore": 43,
-      "pillarScores": {
-        "speed": 84,
-        "technical": 63,
-        "local": 68,
-        "visibility": 0,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.brickhampton.co.uk/nineteenatbrickhampton",
-          "pagesCrawled": 21,
-          "pagesDiscovered": 21,
-          "internalLinks": 1739,
-          "avgInternalLinksPerPage": 82.8,
-          "maxDepthReached": 2,
-          "genericAnchors": 5,
-          "genericAnchorRatio": 0.003,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": 2,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": true,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 1392,
-          "inpMs": 79,
-          "cls": 0,
-          "lcpGood": true,
-          "inpGood": true,
-          "clsGood": true,
-          "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": null,
-          "fhrsId": null,
-          "businessName": null,
-          "businessType": null,
-          "ratingValue": null,
-          "ratingNumeric": null,
-          "ratingDate": null,
-          "postcode": null,
-          "localAuthority": null,
-          "distanceKm": null,
-          "locatedBy": null,
-          "scores": null,
-          "error": "FSA HTTP 403"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 73,
-          "accessibility": 89,
-          "bestPractices": 96,
-          "seo": 100,
-          "lcpMs": 5327,
-          "tbtMs": 27,
-          "clsScore": 0,
-          "fcpMs": 3302,
-          "speedIndexMs": 3684,
-          "failing": [
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "aria-hidden-focus",
-              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "button-name",
-              "title": "Buttons do not have an accessible name",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 5
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": false,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2024-07-17 00:58:45 +00:00",
-          "lastUpdated": "2025-11-04 12:18:26 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "brickhampton.co.uk",
-          "rank": 183,
-          "backlinks": 458,
-          "referringDomains": 217,
-          "referringMainDomains": 192,
-          "referringPages": 418,
-          "brokenBacklinks": 7,
-          "referringLinksTypes": {
-            "anchor": 401
-          },
-          "firstSeen": "2019-01-16 13:19:44 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 36,
-      "name": "The Victoria Hotel",
-      "url": "http://www.victoriainnhucclecote.co.uk/",
-      "digitalVisibilityScore": 43,
-      "pillarScores": {
-        "speed": 62,
-        "technical": 75,
-        "local": 78,
-        "visibility": 0,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.victoriainnhucclecote.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 28,
-          "avgInternalLinksPerPage": 28,
-          "maxDepthReached": 0,
-          "genericAnchors": 1,
-          "genericAnchorRatio": 0.036,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 13,
-          "sitemapUrls": 14,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "fsa": {
-          "source": "Food Standards Agency food hygiene ratings (open data)",
-          "matched": null,
-          "fhrsId": null,
-          "businessName": null,
-          "businessType": null,
-          "ratingValue": null,
-          "ratingNumeric": null,
-          "ratingDate": null,
-          "postcode": null,
-          "localAuthority": null,
-          "distanceKm": null,
-          "locatedBy": null,
-          "scores": null,
-          "error": "FSA HTTP 403"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 61,
-          "accessibility": 90,
-          "bestPractices": 81,
-          "seo": 100,
-          "lcpMs": 7245,
-          "tbtMs": 199,
-          "clsScore": 0,
-          "fcpMs": 3636,
-          "speedIndexMs": 5984,
-          "failing": [
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "label-content-name-mismatch",
-              "title": "Elements with visible text labels do not have matching accessible names.",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 43,
-          "ratingDistribution": {
-            "1": 14,
-            "2": 8,
-            "3": 19,
-            "4": 32,
-            "5": 86
-          },
-          "priceLevel": "inexpensive",
-          "isClaimed": true,
-          "additionalCategories": [
-            "Bar",
-            "Beer garden",
-            "Restaurant",
-            "Sports bar"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 45,
-          "placeTopics": {
-            "pleasant staff": 8,
-            "sunday roast": 5,
-            "recent refit": 3,
-            "sports bar": 2,
-            "proper pub": 2,
-            "pool table": 3,
-            "dogs": 6,
-            "darts": 5,
-            "food selection": 4,
-            "local": 3
-          },
-          "firstSeen": "2024-07-14 13:12:34 +00:00",
-          "lastUpdated": "2026-06-26 16:05:53 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "victoriainnhucclecote.co.uk",
-          "rank": 85,
-          "backlinks": 24,
-          "referringDomains": 19,
-          "referringMainDomains": 19,
-          "referringPages": 23,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 21
-          },
-          "firstSeen": "2023-11-28 02:30:45 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 37,
       "name": "Khans Kebabs & Grill",
       "url": "https://khanskebab.co.uk/",
-      "digitalVisibilityScore": 42,
+      "digitalVisibilityScore": 43,
       "pillarScores": {
         "speed": 57,
         "technical": 75,
-        "local": 80,
+        "local": 85,
         "visibility": 0,
         "ai": 0,
         "content": 0
@@ -8021,14 +7603,215 @@
       }
     },
     {
-      "rank": 38,
+      "rank": 36,
+      "name": "Nineteen at Brickhampton",
+      "url": "https://www.brickhampton.co.uk/nineteenatbrickhampton",
+      "digitalVisibilityScore": 43,
+      "pillarScores": {
+        "speed": 84,
+        "technical": 63,
+        "local": 68,
+        "visibility": 0,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.brickhampton.co.uk/nineteenatbrickhampton",
+          "pagesCrawled": 21,
+          "pagesDiscovered": 21,
+          "internalLinks": 1739,
+          "avgInternalLinksPerPage": 82.8,
+          "maxDepthReached": 2,
+          "genericAnchors": 5,
+          "genericAnchorRatio": 0.003,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": 2,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1392,
+          "inpMs": 79,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": null,
+          "fhrsId": null,
+          "businessName": null,
+          "businessType": null,
+          "ratingValue": null,
+          "ratingNumeric": null,
+          "ratingDate": null,
+          "postcode": null,
+          "localAuthority": null,
+          "distanceKm": null,
+          "locatedBy": null,
+          "scores": null,
+          "error": "FSA HTTP 403"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 73,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 5327,
+          "tbtMs": 27,
+          "clsScore": 0,
+          "fcpMs": 3302,
+          "speedIndexMs": 3684,
+          "failing": [
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "aria-hidden-focus",
+              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 5
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 00:58:45 +00:00",
+          "lastUpdated": "2025-11-04 12:18:26 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "brickhampton.co.uk",
+          "rank": 183,
+          "backlinks": 458,
+          "referringDomains": 217,
+          "referringMainDomains": 192,
+          "referringPages": 418,
+          "brokenBacklinks": 7,
+          "referringLinksTypes": {
+            "anchor": 401
+          },
+          "firstSeen": "2019-01-16 13:19:44 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 37,
       "name": "Spice Master",
       "url": "https://thespicemaster.co.uk/",
-      "digitalVisibilityScore": 42,
+      "digitalVisibilityScore": 43,
       "pillarScores": {
         "speed": 57,
         "technical": 75,
-        "local": 79,
+        "local": 82,
         "visibility": 0,
         "ai": 0,
         "content": 0
@@ -8231,6 +8014,223 @@
             "anchor": 39
           },
           "firstSeen": "2024-06-22 03:34:06 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 38,
+      "name": "The Victoria Hotel",
+      "url": "http://www.victoriainnhucclecote.co.uk/",
+      "digitalVisibilityScore": 43,
+      "pillarScores": {
+        "speed": 62,
+        "technical": 75,
+        "local": 80,
+        "visibility": 0,
+        "ai": 0,
+        "content": 0
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.victoriainnhucclecote.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 28,
+          "avgInternalLinksPerPage": 28,
+          "maxDepthReached": 0,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.036,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 13,
+          "sitemapUrls": 14,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "fsa": {
+          "source": "Food Standards Agency food hygiene ratings (open data)",
+          "matched": null,
+          "fhrsId": null,
+          "businessName": null,
+          "businessType": null,
+          "ratingValue": null,
+          "ratingNumeric": null,
+          "ratingDate": null,
+          "postcode": null,
+          "localAuthority": null,
+          "distanceKm": null,
+          "locatedBy": null,
+          "scores": null,
+          "error": "FSA HTTP 403"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 61,
+          "accessibility": 90,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 7245,
+          "tbtMs": 199,
+          "clsScore": 0,
+          "fcpMs": 3636,
+          "speedIndexMs": 5984,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "label-content-name-mismatch",
+              "title": "Elements with visible text labels do not have matching accessible names.",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 43,
+          "ratingDistribution": {
+            "1": 14,
+            "2": 8,
+            "3": 19,
+            "4": 32,
+            "5": 86
+          },
+          "priceLevel": "inexpensive",
+          "isClaimed": true,
+          "additionalCategories": [
+            "Bar",
+            "Beer garden",
+            "Restaurant",
+            "Sports bar"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 45,
+          "placeTopics": {
+            "pleasant staff": 8,
+            "sunday roast": 5,
+            "recent refit": 3,
+            "sports bar": 2,
+            "proper pub": 2,
+            "pool table": 3,
+            "dogs": 6,
+            "darts": 5,
+            "food selection": 4,
+            "local": 3
+          },
+          "firstSeen": "2024-07-14 13:12:34 +00:00",
+          "lastUpdated": "2026-06-26 16:05:53 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "victoriainnhucclecote.co.uk",
+          "rank": 85,
+          "backlinks": 24,
+          "referringDomains": 19,
+          "referringMainDomains": 19,
+          "referringPages": 23,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 21
+          },
+          "firstSeen": "2023-11-28 02:30:45 +00:00",
           "lostDate": null
         }
       }
@@ -8669,11 +8669,11 @@
       "rank": 41,
       "name": "Saeeds",
       "url": "https://www.saeedbaltihouse.co.uk/",
-      "digitalVisibilityScore": 32,
+      "digitalVisibilityScore": 33,
       "pillarScores": {
         "speed": 60,
         "technical": 0,
-        "local": 83,
+        "local": 88,
         "visibility": 0,
         "ai": 0,
         "content": null

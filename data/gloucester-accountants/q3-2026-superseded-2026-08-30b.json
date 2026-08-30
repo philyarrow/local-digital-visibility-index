@@ -56,13 +56,13 @@
       "live": true
     }
   },
-  "overallMedian": 52,
+  "overallMedian": 49,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
     "speed": 65.5,
     "technical": 75,
-    "local": 79,
+    "local": 63,
     "visibility": 13,
     "ai": 0,
     "content": 33
@@ -72,11 +72,11 @@
       "rank": 1,
       "name": "Griffiths Marshall",
       "url": "https://www.griffithsmarshall.co.uk/",
-      "digitalVisibilityScore": 73,
+      "digitalVisibilityScore": 69,
       "pillarScores": {
         "speed": null,
         "technical": 88,
-        "local": 71,
+        "local": 57,
         "visibility": 50,
         "ai": 60,
         "content": 100
@@ -260,11 +260,11 @@
       "rank": 2,
       "name": "APS Accounting",
       "url": "http://www.apsaccounting.co.uk/",
-      "digitalVisibilityScore": 69,
+      "digitalVisibilityScore": 65,
       "pillarScores": {
         "speed": 65,
         "technical": 75,
-        "local": 88,
+        "local": 70,
         "visibility": 28,
         "ai": 80,
         "content": 67
@@ -450,11 +450,11 @@
       "rank": 3,
       "name": "iLex Accountancy Services Limited",
       "url": "https://www.ilexas.co.uk/",
-      "digitalVisibilityScore": 68,
+      "digitalVisibilityScore": 65,
       "pillarScores": {
         "speed": 58,
         "technical": 88,
-        "local": 90,
+        "local": 72,
         "visibility": 58,
         "ai": 60,
         "content": 33
@@ -651,11 +651,11 @@
       "rank": 4,
       "name": "Randall & Payne LLP",
       "url": "http://www.randall-payne.co.uk/",
-      "digitalVisibilityScore": 67,
+      "digitalVisibilityScore": 63,
       "pillarScores": {
         "speed": null,
         "technical": 88,
-        "local": 83,
+        "local": 68,
         "visibility": 42,
         "ai": 20,
         "content": 100
@@ -829,61 +829,60 @@
     },
     {
       "rank": 5,
-      "name": "Pitt Godden & Taylor LLP",
-      "url": "http://www.pg-t.co.uk/",
-      "digitalVisibilityScore": 65,
+      "name": "Accountx",
+      "url": "https://www.accountx.co.uk/",
+      "digitalVisibilityScore": 61,
       "pillarScores": {
-        "speed": 71,
-        "technical": 33,
-        "local": 81,
-        "visibility": 62,
-        "ai": 80,
-        "content": null
+        "speed": 89,
+        "technical": 100,
+        "local": 84,
+        "visibility": 21,
+        "ai": 0,
+        "content": 33
       },
       "includedPillars": [
         "speed",
         "technical",
         "local",
         "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
+        "ai",
         "content"
       ],
+      "excludedPillars": [],
       "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
       },
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.pg-t.co.uk/",
-          "pagesCrawled": 0,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": null,
-          "maxDepthReached": 0,
+          "startUrl": "https://www.accountx.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 28,
+          "internalLinks": 1277,
+          "avgInternalLinksPerPage": 51.1,
+          "maxDepthReached": 1,
           "genericAnchors": 0,
-          "genericAnchorRatio": null,
+          "genericAnchorRatio": 0,
           "keyPageDepth": {
-            "contact": null,
-            "about": null,
+            "contact": 1,
+            "about": 1,
             "team": null,
-            "services": null
+            "services": 1
           },
           "orphanCandidates": null,
-          "sitemapUrls": null,
+          "sitemapUrls": 29,
           "robotsDisallowedAll": false,
-          "stoppedBecause": null,
+          "stoppedBecause": "page cap",
           "depthLimited": false,
           "error": null
         },
@@ -902,117 +901,121 @@
         },
         "companies": {
           "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "OC372482",
-          "companyName": "PITT GODDEN & TAYLOR LLP",
-          "companyStatus": "active",
-          "incorporatedOn": "2012-02-15",
-          "ageYears": 14.5,
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
           "sicCodes": null,
-          "companyType": "llp",
-          "accountsType": "total-exemption-full",
-          "accountsMadeUpTo": "2025-03-31",
-          "accountsOverdue": false,
-          "hasCharges": false,
-          "hasInsolvencyHistory": false,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
           "previousNames": null,
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "Unit 3 Ambrose House, Meteor Court, Barnett Way, Barnwood, Gloucester,, Gloucestershire, United Kingdom, GL4 3GG",
-          "error": null
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
         },
         "lighthouse": {
           "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
           "strategy": "mobile",
-          "performance": 80,
-          "accessibility": 64,
-          "bestPractices": 78,
-          "seo": 92,
-          "lcpMs": 4328,
+          "performance": 95,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 2851,
           "tbtMs": 0,
           "clsScore": 0,
-          "fcpMs": 2889,
-          "speedIndexMs": 3006,
+          "fcpMs": 1658,
+          "speedIndexMs": 1658,
           "failing": [
             {
-              "id": "link-in-text-block",
-              "title": "Links rely on color to be distinguishable.",
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
               "score": 0
             },
             {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "aria-hidden-focus",
+              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
               "score": 0
             },
             {
               "id": "image-delivery-insight",
               "title": "Improve image delivery",
-              "score": 0
+              "score": 50
             },
             {
               "id": "render-blocking-insight",
               "title": "Render-blocking requests",
-              "score": 0
+              "score": 50
             },
             {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 50
             },
             {
-              "id": "object-alt",
-              "title": "`<object>` elements do not have alternate text",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "image-size-responsive",
-              "title": "Serves images with low resolution",
-              "score": 0
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 82
             }
           ],
           "error": null
         },
         "gbpDetail": {
           "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 9,
+          "totalPhotos": 5,
           "ratingDistribution": {
             "1": 0,
             "2": 0,
             "3": 0,
-            "4": 0,
-            "5": 4
+            "4": 1,
+            "5": 44
           },
           "priceLevel": null,
           "isClaimed": true,
           "additionalCategories": [
-            "Tax Advisor"
+            "Accountant"
           ],
-          "hasDescription": false,
-          "hasHours": true,
-          "services": 44,
+          "hasDescription": true,
+          "hasHours": false,
+          "services": null,
           "placeTopics": {
-            "accounting needs": 2
+            "tax filing": 2,
+            "clear explanations": 4,
+            "attention to detail": 2,
+            "finances": 3,
+            "efficiency": 5,
+            "reliability": 4,
+            "accountant": 5,
+            "understanding": 2,
+            "job": 3,
+            "communication": 3
           },
-          "firstSeen": "2024-07-17 07:58:35 +00:00",
-          "lastUpdated": "2026-06-30 03:01:56 +00:00"
+          "firstSeen": "2026-08-16 19:43:05 +00:00",
+          "lastUpdated": "2026-08-16 19:43:05 +00:00"
         },
         "backlinks": {
           "source": "DataForSEO backlinks/summary",
-          "target": "pg-t.co.uk",
-          "rank": 95,
-          "backlinks": 231,
-          "referringDomains": 74,
-          "referringMainDomains": 68,
-          "referringPages": 219,
-          "brokenBacklinks": 185,
+          "target": "accountx.co.uk",
+          "rank": 71,
+          "backlinks": 450,
+          "referringDomains": 67,
+          "referringMainDomains": 64,
+          "referringPages": 428,
+          "brokenBacklinks": 0,
           "referringLinksTypes": {
-            "anchor": 213
+            "anchor": 428
           },
-          "firstSeen": "2021-09-10 17:49:16 +00:00",
+          "firstSeen": "2022-04-06 09:08:13 +00:00",
           "lostDate": null
         }
       }
@@ -1021,11 +1024,11 @@
       "rank": 6,
       "name": "Hucclecote Accountancy & Taxation Services",
       "url": "https://www.hatsgloucester.co.uk/",
-      "digitalVisibilityScore": 64,
+      "digitalVisibilityScore": 61,
       "pillarScores": {
         "speed": 59,
         "technical": 100,
-        "local": 91,
+        "local": 75,
         "visibility": 47,
         "ai": 0,
         "content": 67
@@ -1215,60 +1218,61 @@
     },
     {
       "rank": 7,
-      "name": "Accountx",
-      "url": "https://www.accountx.co.uk/",
-      "digitalVisibilityScore": 63,
+      "name": "Pitt Godden & Taylor LLP",
+      "url": "http://www.pg-t.co.uk/",
+      "digitalVisibilityScore": 61,
       "pillarScores": {
-        "speed": 89,
-        "technical": 100,
-        "local": 93,
-        "visibility": 21,
-        "ai": 0,
-        "content": 33
+        "speed": 71,
+        "technical": 33,
+        "local": 65,
+        "visibility": 62,
+        "ai": 80,
+        "content": null
       },
       "includedPillars": [
         "speed",
         "technical",
         "local",
         "visibility",
-        "ai",
+        "ai"
+      ],
+      "excludedPillars": [
         "content"
       ],
-      "excludedPillars": [],
       "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
+        "speed": 22.22,
+        "technical": 22.22,
+        "local": 22.22,
+        "visibility": 16.67,
+        "ai": 16.67,
+        "content": 0
       },
       "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
+        "hasAboutLink": null,
+        "hasTeamLink": null,
+        "hasCredentialsLink": null
       },
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.accountx.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 28,
-          "internalLinks": 1277,
-          "avgInternalLinksPerPage": 51.1,
-          "maxDepthReached": 1,
+          "startUrl": "http://www.pg-t.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
           "genericAnchors": 0,
-          "genericAnchorRatio": 0,
+          "genericAnchorRatio": null,
           "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
+            "contact": null,
+            "about": null,
             "team": null,
-            "services": 1
+            "services": null
           },
           "orphanCandidates": null,
-          "sitemapUrls": 29,
+          "sitemapUrls": null,
           "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
+          "stoppedBecause": null,
           "depthLimited": false,
           "error": null
         },
@@ -1287,121 +1291,117 @@
         },
         "companies": {
           "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
+          "matched": true,
+          "companyNumber": "OC372482",
+          "companyName": "PITT GODDEN & TAYLOR LLP",
+          "companyStatus": "active",
+          "incorporatedOn": "2012-02-15",
+          "ageYears": 14.5,
           "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
+          "companyType": "llp",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
           "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Gloucester"
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Unit 3 Ambrose House, Meteor Court, Barnett Way, Barnwood, Gloucester,, Gloucestershire, United Kingdom, GL4 3GG",
+          "error": null
         },
         "lighthouse": {
           "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
           "strategy": "mobile",
-          "performance": 95,
-          "accessibility": 96,
-          "bestPractices": 100,
-          "seo": 100,
-          "lcpMs": 2851,
+          "performance": 80,
+          "accessibility": 64,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 4328,
           "tbtMs": 0,
           "clsScore": 0,
-          "fcpMs": 1658,
-          "speedIndexMs": 1658,
+          "fcpMs": 2889,
+          "speedIndexMs": 3006,
           "failing": [
             {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
               "score": 0
             },
             {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "aria-hidden-focus",
-              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
               "score": 0
             },
             {
               "id": "image-delivery-insight",
               "title": "Improve image delivery",
-              "score": 50
+              "score": 0
             },
             {
               "id": "render-blocking-insight",
               "title": "Render-blocking requests",
-              "score": 50
+              "score": 0
             },
             {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 50
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
             },
             {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 82
+              "id": "object-alt",
+              "title": "`<object>` elements do not have alternate text",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
             }
           ],
           "error": null
         },
         "gbpDetail": {
           "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 5,
+          "totalPhotos": 9,
           "ratingDistribution": {
             "1": 0,
             "2": 0,
             "3": 0,
-            "4": 1,
-            "5": 44
+            "4": 0,
+            "5": 4
           },
           "priceLevel": null,
           "isClaimed": true,
           "additionalCategories": [
-            "Accountant"
+            "Tax Advisor"
           ],
-          "hasDescription": true,
-          "hasHours": false,
-          "services": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 44,
           "placeTopics": {
-            "tax filing": 2,
-            "clear explanations": 4,
-            "attention to detail": 2,
-            "finances": 3,
-            "efficiency": 5,
-            "reliability": 4,
-            "accountant": 5,
-            "understanding": 2,
-            "job": 3,
-            "communication": 3
+            "accounting needs": 2
           },
-          "firstSeen": "2026-08-16 19:43:05 +00:00",
-          "lastUpdated": "2026-08-16 19:43:05 +00:00"
+          "firstSeen": "2024-07-17 07:58:35 +00:00",
+          "lastUpdated": "2026-06-30 03:01:56 +00:00"
         },
         "backlinks": {
           "source": "DataForSEO backlinks/summary",
-          "target": "accountx.co.uk",
-          "rank": 71,
-          "backlinks": 450,
-          "referringDomains": 67,
-          "referringMainDomains": 64,
-          "referringPages": 428,
-          "brokenBacklinks": 0,
+          "target": "pg-t.co.uk",
+          "rank": 95,
+          "backlinks": 231,
+          "referringDomains": 74,
+          "referringMainDomains": 68,
+          "referringPages": 219,
+          "brokenBacklinks": 185,
           "referringLinksTypes": {
-            "anchor": 428
+            "anchor": 213
           },
-          "firstSeen": "2022-04-06 09:08:13 +00:00",
+          "firstSeen": "2021-09-10 17:49:16 +00:00",
           "lostDate": null
         }
       }
@@ -1410,11 +1410,11 @@
       "rank": 8,
       "name": "Original Accountancy Limited",
       "url": "https://www.originalaccountancy.co.uk/",
-      "digitalVisibilityScore": 63,
+      "digitalVisibilityScore": 59,
       "pillarScores": {
         "speed": 51,
         "technical": 100,
-        "local": 67,
+        "local": 50,
         "visibility": 25,
         "ai": 80,
         "content": 33
@@ -1591,11 +1591,11 @@
       "rank": 9,
       "name": "Gloucestersphere Accountants Limited",
       "url": "https://www.gloucestersphere.co.uk/contact-us/?utm_source=GMBlisting&utm_medium=organic",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 58,
       "pillarScores": {
         "speed": null,
         "technical": 88,
-        "local": 80,
+        "local": 64,
         "visibility": 43,
         "ai": 40,
         "content": 33
@@ -1786,13 +1786,387 @@
     },
     {
       "rank": 10,
+      "name": "Kingscott Dix",
+      "url": "http://www.kingscott-dix.co.uk/",
+      "digitalVisibilityScore": 58,
+      "pillarScores": {
+        "speed": 60,
+        "technical": 75,
+        "local": 90,
+        "visibility": 47,
+        "ai": 20,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.kingscott-dix.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 42,
+          "avgInternalLinksPerPage": 42,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "07118109",
+          "companyName": "KINGSCOTT DIX LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2010-01-06",
+          "ageYears": 16.6,
+          "sicCodes": [
+            "69201"
+          ],
+          "companyType": "ltd",
+          "accountsType": "small",
+          "accountsMadeUpTo": "2024-12-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": [
+            "KINGSCOTT DIX (GLOUCESTER) LIMITED"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Goodridge Court, Goodridge Avenue, Gloucester, England, GL2 5EN",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 76,
+          "bestPractices": 70,
+          "seo": 92,
+          "lcpMs": 19523,
+          "tbtMs": 31,
+          "clsScore": 0,
+          "fcpMs": 8934,
+          "speedIndexMs": 8934,
+          "failing": [
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "image-size-responsive",
+              "title": "Serves images with low resolution",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-16 16:31:22 +00:00",
+          "lastUpdated": "2026-06-29 13:44:52 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kingscott-dix.co.uk",
+          "rank": 245,
+          "backlinks": 238,
+          "referringDomains": 126,
+          "referringMainDomains": 120,
+          "referringPages": 202,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 200
+          },
+          "firstSeen": "2021-08-27 22:13:33 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 11,
+      "name": "Reed & Co Accountants",
+      "url": "https://www.reedaccountants.co.uk/gloucester/",
+      "digitalVisibilityScore": 58,
+      "pillarScores": {
+        "speed": 59,
+        "technical": 75,
+        "local": 70,
+        "visibility": 52,
+        "ai": 40,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.reedaccountants.co.uk/gloucester/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 51,
+          "internalLinks": 1303,
+          "avgInternalLinksPerPage": 52.1,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 71,
+          "accessibility": 84,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 9676,
+          "tbtMs": 53,
+          "clsScore": 0.001,
+          "fcpMs": 2735,
+          "speedIndexMs": 2735,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 15
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 56,
+          "placeTopics": {
+            "thank you paul": 2,
+            "communication": 2,
+            "invaluable asset": 2,
+            "team": 2,
+            "accountants": 2
+          },
+          "firstSeen": "2024-07-15 07:11:33 +00:00",
+          "lastUpdated": "2026-06-25 07:41:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "reedaccountants.co.uk",
+          "rank": 166,
+          "backlinks": 242,
+          "referringDomains": 159,
+          "referringMainDomains": 143,
+          "referringPages": 219,
+          "brokenBacklinks": 145,
+          "referringLinksTypes": {
+            "anchor": 210
+          },
+          "firstSeen": "2020-02-24 03:44:19 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 12,
       "name": "Pi Accountancy",
       "url": "http://pi-accountancy.co.uk/",
-      "digitalVisibilityScore": 61,
+      "digitalVisibilityScore": 57,
       "pillarScores": {
         "speed": 63,
         "technical": 88,
-        "local": 94,
+        "local": 75,
         "visibility": 36,
         "ai": 0,
         "content": 67
@@ -1981,205 +2355,14 @@
       }
     },
     {
-      "rank": 11,
-      "name": "Reed & Co Accountants",
-      "url": "https://www.reedaccountants.co.uk/gloucester/",
-      "digitalVisibilityScore": 61,
-      "pillarScores": {
-        "speed": 59,
-        "technical": 75,
-        "local": 87,
-        "visibility": 52,
-        "ai": 40,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.reedaccountants.co.uk/gloucester/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 51,
-          "internalLinks": 1303,
-          "avgInternalLinksPerPage": 52.1,
-          "maxDepthReached": 2,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": true,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Gloucester"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 71,
-          "accessibility": 84,
-          "bestPractices": 96,
-          "seo": 92,
-          "lcpMs": 9676,
-          "tbtMs": 53,
-          "clsScore": 0.001,
-          "fcpMs": 2735,
-          "speedIndexMs": 2735,
-          "failing": [
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "link-in-text-block",
-              "title": "Links rely on color to be distinguishable.",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "meta-description",
-              "title": "Document does not have a meta description",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 3,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 15
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": true,
-          "services": 56,
-          "placeTopics": {
-            "thank you paul": 2,
-            "communication": 2,
-            "invaluable asset": 2,
-            "team": 2,
-            "accountants": 2
-          },
-          "firstSeen": "2024-07-15 07:11:33 +00:00",
-          "lastUpdated": "2026-06-25 07:41:47 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "reedaccountants.co.uk",
-          "rank": 166,
-          "backlinks": 242,
-          "referringDomains": 159,
-          "referringMainDomains": 143,
-          "referringPages": 219,
-          "brokenBacklinks": 145,
-          "referringLinksTypes": {
-            "anchor": 210
-          },
-          "firstSeen": "2020-02-24 03:44:19 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 12,
+      "rank": 13,
       "name": "Clarke & Co.",
       "url": "http://clarkeaccountants.co.uk/",
-      "digitalVisibilityScore": 59,
+      "digitalVisibilityScore": 56,
       "pillarScores": {
         "speed": 70,
         "technical": 75,
-        "local": 87,
+        "local": 72,
         "visibility": 38,
         "ai": 0,
         "content": 67
@@ -2360,14 +2543,14 @@
       }
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "LNH Management Solutions Limited",
       "url": "https://www.lnhms.co.uk/",
-      "digitalVisibilityScore": 59,
+      "digitalVisibilityScore": 56,
       "pillarScores": {
         "speed": 85,
         "technical": 67,
-        "local": 73,
+        "local": 59,
         "visibility": 13,
         "ai": 40,
         "content": null
@@ -2555,197 +2738,14 @@
       }
     },
     {
-      "rank": 14,
-      "name": "Kingscott Dix",
-      "url": "http://www.kingscott-dix.co.uk/",
-      "digitalVisibilityScore": 58,
-      "pillarScores": {
-        "speed": 60,
-        "technical": 75,
-        "local": 88,
-        "visibility": 47,
-        "ai": 20,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.kingscott-dix.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 42,
-          "avgInternalLinksPerPage": 42,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "07118109",
-          "companyName": "KINGSCOTT DIX LIMITED",
-          "companyStatus": "active",
-          "incorporatedOn": "2010-01-06",
-          "ageYears": 16.6,
-          "sicCodes": [
-            "69201"
-          ],
-          "companyType": "ltd",
-          "accountsType": "small",
-          "accountsMadeUpTo": "2024-12-31",
-          "accountsOverdue": false,
-          "hasCharges": false,
-          "hasInsolvencyHistory": false,
-          "previousNames": [
-            "KINGSCOTT DIX (GLOUCESTER) LIMITED"
-          ],
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "Goodridge Court, Goodridge Avenue, Gloucester, England, GL2 5EN",
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 56,
-          "accessibility": 76,
-          "bestPractices": 70,
-          "seo": 92,
-          "lcpMs": 19523,
-          "tbtMs": 31,
-          "clsScore": 0,
-          "fcpMs": 8934,
-          "speedIndexMs": 8934,
-          "failing": [
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "landmark-one-main",
-              "title": "Document does not have a main landmark.",
-              "score": 0
-            },
-            {
-              "id": "target-size",
-              "title": "Touch targets do not have sufficient size or spacing.",
-              "score": 0
-            },
-            {
-              "id": "image-alt",
-              "title": "Image elements do not have `[alt]` attributes",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "image-size-responsive",
-              "title": "Serves images with low resolution",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": true,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2024-07-16 16:31:22 +00:00",
-          "lastUpdated": "2026-06-29 13:44:52 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "kingscott-dix.co.uk",
-          "rank": 245,
-          "backlinks": 238,
-          "referringDomains": 126,
-          "referringMainDomains": 120,
-          "referringPages": 202,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 200
-          },
-          "firstSeen": "2021-08-27 22:13:33 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 15,
       "name": "PBT Accountancy Limited",
       "url": "http://www.pbtaccountancy.co.uk/",
-      "digitalVisibilityScore": 58,
+      "digitalVisibilityScore": 54,
       "pillarScores": {
         "speed": 69,
         "technical": 75,
-        "local": 93,
+        "local": 74,
         "visibility": 25,
         "ai": 0,
         "content": 67
@@ -2940,11 +2940,11 @@
       "rank": 16,
       "name": "Harper Sheldon",
       "url": "http://www.harpersheldon.com/",
-      "digitalVisibilityScore": 56,
+      "digitalVisibilityScore": 53,
       "pillarScores": {
         "speed": 99,
         "technical": 75,
-        "local": 79,
+        "local": 63,
         "visibility": 0,
         "ai": 0,
         "content": null
@@ -3136,11 +3136,11 @@
       "rank": 17,
       "name": "KJaccountants",
       "url": "https://kjaccountants.co.uk/",
-      "digitalVisibilityScore": 56,
+      "digitalVisibilityScore": 53,
       "pillarScores": {
         "speed": 99,
         "technical": 100,
-        "local": 67,
+        "local": 50,
         "visibility": 0,
         "ai": 0,
         "content": 33
@@ -3322,11 +3322,11 @@
       "rank": 18,
       "name": "Abaqus",
       "url": "https://www.askabaqus.com/contact-us/",
-      "digitalVisibilityScore": 55,
+      "digitalVisibilityScore": 52,
       "pillarScores": {
         "speed": 73,
         "technical": 75,
-        "local": 81,
+        "local": 65,
         "visibility": 17,
         "ai": 0,
         "content": 67
@@ -3514,11 +3514,11 @@
       "rank": 19,
       "name": "Brothertons",
       "url": "https://brothertons.co.uk/",
-      "digitalVisibilityScore": 54,
+      "digitalVisibilityScore": 51,
       "pillarScores": {
         "speed": 73,
         "technical": 88,
-        "local": 78,
+        "local": 63,
         "visibility": 17,
         "ai": 0,
         "content": 33
@@ -3699,11 +3699,11 @@
       "rank": 20,
       "name": "The Alanbrookes Group",
       "url": "http://www.alanbrookes.co.uk/",
-      "digitalVisibilityScore": 53,
+      "digitalVisibilityScore": 50,
       "pillarScores": {
         "speed": 56,
         "technical": 100,
-        "local": 59,
+        "local": 44,
         "visibility": 0,
         "ai": 0,
         "content": 100
@@ -3878,11 +3878,11 @@
       "rank": 21,
       "name": "Accounting for the Ad-Venture",
       "url": "https://www.a4adventure2024.co.uk/",
-      "digitalVisibilityScore": 52,
+      "digitalVisibilityScore": 49,
       "pillarScores": {
         "speed": 66,
         "technical": 100,
-        "local": 76,
+        "local": 61,
         "visibility": 0,
         "ai": 0,
         "content": 33
@@ -4065,11 +4065,11 @@
       "rank": 22,
       "name": "Gloucester Cloud Accountants",
       "url": "http://www.glosaccountants.co.uk/",
-      "digitalVisibilityScore": 51,
+      "digitalVisibilityScore": 48,
       "pillarScores": {
         "speed": 92,
         "technical": 57,
-        "local": 78,
+        "local": 63,
         "visibility": 0,
         "ai": 40,
         "content": 0
@@ -4247,11 +4247,11 @@
       "rank": 23,
       "name": "MBS Accountants",
       "url": "https://www.mbsaccountants.co.uk/",
-      "digitalVisibilityScore": 51,
+      "digitalVisibilityScore": 47,
       "pillarScores": {
         "speed": 37,
         "technical": 75,
-        "local": 94,
+        "local": 75,
         "visibility": 21,
         "ai": 20,
         "content": 33
@@ -4449,11 +4449,11 @@
       "rank": 24,
       "name": "Padam Walburn Accounting Services",
       "url": "http://www.padamwalburn.com/",
-      "digitalVisibilityScore": 50,
+      "digitalVisibilityScore": 47,
       "pillarScores": {
         "speed": 59,
         "technical": 75,
-        "local": 81,
+        "local": 65,
         "visibility": 0,
         "ai": 0,
         "content": 67
@@ -4636,11 +4636,11 @@
       "rank": 25,
       "name": "PCD Accountancy Limited",
       "url": "http://pcdaccountancy.co.uk/",
-      "digitalVisibilityScore": 50,
+      "digitalVisibilityScore": 47,
       "pillarScores": {
         "speed": 63,
         "technical": 75,
-        "local": 79,
+        "local": 63,
         "visibility": 43,
         "ai": 0,
         "content": 0
@@ -4823,11 +4823,11 @@
       "rank": 26,
       "name": "Burton Sweet Ltd",
       "url": "https://www.burton-sweet.co.uk/",
-      "digitalVisibilityScore": 49,
+      "digitalVisibilityScore": 45,
       "pillarScores": {
         "speed": 58,
         "technical": 88,
-        "local": 63,
+        "local": 47,
         "visibility": 0,
         "ai": 0,
         "content": 67
@@ -5002,11 +5002,11 @@
       "rank": 27,
       "name": "Hucclecote Accountancy Practice",
       "url": "http://www.gloucesteraccountants.com/",
-      "digitalVisibilityScore": 49,
+      "digitalVisibilityScore": 45,
       "pillarScores": {
         "speed": 78,
         "technical": 50,
-        "local": 87,
+        "local": 70,
         "visibility": 5,
         "ai": 0,
         "content": null
@@ -5198,34 +5198,33 @@
     },
     {
       "rank": 28,
-      "name": "B Digital Accounts",
-      "url": "https://www.bdigitalaccounts.co.uk/",
-      "digitalVisibilityScore": 48,
+      "name": "KJ ACCOUNTS",
+      "url": "http://kjaccounts.com/",
+      "digitalVisibilityScore": 45,
       "pillarScores": {
-        "speed": null,
+        "speed": 69,
         "technical": 75,
-        "local": 79,
-        "visibility": 4,
+        "local": 45,
+        "visibility": 0,
         "ai": 0,
         "content": 67
       },
       "includedPillars": [
+        "speed",
         "technical",
         "local",
         "visibility",
         "ai",
         "content"
       ],
-      "excludedPillars": [
-        "speed"
-      ],
+      "excludedPillars": [],
       "effectiveWeights": {
-        "speed": 0,
-        "technical": 25,
-        "local": 25,
-        "visibility": 18.75,
-        "ai": 18.75,
-        "content": 12.5
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
       },
       "contentChecks": {
         "hasAboutLink": true,
@@ -5235,22 +5234,22 @@
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.bdigitalaccounts.co.uk/",
-          "pagesCrawled": 5,
-          "pagesDiscovered": 4,
-          "internalLinks": 61,
-          "avgInternalLinksPerPage": 12.2,
-          "maxDepthReached": 1,
+          "startUrl": "http://kjaccounts.com/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 5,
+          "avgInternalLinksPerPage": 5,
+          "maxDepthReached": 0,
           "genericAnchors": 0,
           "genericAnchorRatio": 0,
           "keyPageDepth": {
             "contact": 1,
-            "about": null,
+            "about": 1,
             "team": null,
             "services": 1
           },
-          "orphanCandidates": 0,
-          "sitemapUrls": 5,
+          "orphanCandidates": null,
+          "sitemapUrls": null,
           "robotsDisallowedAll": false,
           "stoppedBecause": null,
           "depthLimited": false,
@@ -5292,19 +5291,24 @@
         "lighthouse": {
           "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
           "strategy": "mobile",
-          "performance": 75,
-          "accessibility": 89,
-          "bestPractices": 100,
-          "seo": 85,
-          "lcpMs": 5295,
-          "tbtMs": 2,
-          "clsScore": 0.03,
-          "fcpMs": 3024,
-          "speedIndexMs": 3064,
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 4750,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 2367,
+          "speedIndexMs": 3004,
           "failing": [
             {
-              "id": "crawlable-anchors",
-              "title": "Links are not crawlable",
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
               "score": 0
             },
             {
@@ -5313,13 +5317,8 @@
               "score": 0
             },
             {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
               "score": 0
             },
             {
@@ -5328,56 +5327,56 @@
               "score": 0
             },
             {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 31
             },
             {
-              "id": "link-text",
-              "title": "Links do not have descriptive text",
-              "score": 0
+              "id": "duplicated-javascript-insight",
+              "title": "Duplicated JavaScript",
+              "score": 50
             },
             {
-              "id": "aria-prohibited-attr",
-              "title": "Elements use prohibited ARIA attributes",
-              "score": 0
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 50
             }
           ],
           "error": null
         },
         "gbpDetail": {
           "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 5,
+          "totalPhotos": 1,
           "ratingDistribution": {
-            "1": 0,
+            "1": 1,
             "2": 0,
             "3": 0,
             "4": 0,
-            "5": 1
+            "5": 0
           },
           "priceLevel": null,
-          "isClaimed": true,
+          "isClaimed": false,
           "additionalCategories": null,
-          "hasDescription": true,
+          "hasDescription": false,
           "hasHours": true,
-          "services": 34,
+          "services": 2,
           "placeTopics": null,
-          "firstSeen": "2026-07-10 16:17:09 +00:00",
-          "lastUpdated": "2026-07-10 16:17:09 +00:00"
+          "firstSeen": "2024-06-04 12:11:42 +00:00",
+          "lastUpdated": "2026-06-27 00:32:37 +00:00"
         },
         "backlinks": {
           "source": "DataForSEO backlinks/summary",
-          "target": "bdigitalaccounts.co.uk",
-          "rank": 2,
-          "backlinks": 113,
-          "referringDomains": 46,
-          "referringMainDomains": 43,
-          "referringPages": 113,
+          "target": "kjaccounts.com",
+          "rank": 0,
+          "backlinks": 42,
+          "referringDomains": 40,
+          "referringMainDomains": 38,
+          "referringPages": 42,
           "brokenBacklinks": 0,
           "referringLinksTypes": {
-            "anchor": 113
+            "anchor": 39
           },
-          "firstSeen": "2022-12-11 02:52:56 +00:00",
+          "firstSeen": "2023-10-14 19:48:24 +00:00",
           "lostDate": null
         }
       }
@@ -5386,11 +5385,11 @@
       "rank": 29,
       "name": "The Accountancy & Finance House Ltd",
       "url": "https://www.theaccountancyandfinancehouse.com/",
-      "digitalVisibilityScore": 48,
+      "digitalVisibilityScore": 45,
       "pillarScores": {
         "speed": 62,
         "technical": 88,
-        "local": 73,
+        "local": 59,
         "visibility": 0,
         "ai": 0,
         "content": 33
@@ -5578,11 +5577,11 @@
       "rank": 30,
       "name": "Accountrix",
       "url": "http://accountrix.co.uk/",
-      "digitalVisibilityScore": 47,
+      "digitalVisibilityScore": 44,
       "pillarScores": {
         "speed": 65,
         "technical": 75,
-        "local": 59,
+        "local": 44,
         "visibility": 25,
         "ai": 0,
         "content": 33
@@ -5757,33 +5756,34 @@
     },
     {
       "rank": 31,
-      "name": "KJ ACCOUNTS",
-      "url": "http://kjaccounts.com/",
-      "digitalVisibilityScore": 47,
+      "name": "B Digital Accounts",
+      "url": "https://www.bdigitalaccounts.co.uk/",
+      "digitalVisibilityScore": 44,
       "pillarScores": {
-        "speed": 69,
+        "speed": null,
         "technical": 75,
-        "local": 56,
-        "visibility": 0,
+        "local": 63,
+        "visibility": 4,
         "ai": 0,
         "content": 67
       },
       "includedPillars": [
-        "speed",
         "technical",
         "local",
         "visibility",
         "ai",
         "content"
       ],
-      "excludedPillars": [],
+      "excludedPillars": [
+        "speed"
+      ],
       "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
+        "speed": 0,
+        "technical": 25,
+        "local": 25,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
       },
       "contentChecks": {
         "hasAboutLink": true,
@@ -5793,22 +5793,22 @@
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://kjaccounts.com/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 5,
-          "avgInternalLinksPerPage": 5,
-          "maxDepthReached": 0,
+          "startUrl": "https://www.bdigitalaccounts.co.uk/",
+          "pagesCrawled": 5,
+          "pagesDiscovered": 4,
+          "internalLinks": 61,
+          "avgInternalLinksPerPage": 12.2,
+          "maxDepthReached": 1,
           "genericAnchors": 0,
           "genericAnchorRatio": 0,
           "keyPageDepth": {
             "contact": 1,
-            "about": 1,
+            "about": null,
             "team": null,
             "services": 1
           },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
+          "orphanCandidates": 0,
+          "sitemapUrls": 5,
           "robotsDisallowedAll": false,
           "stoppedBecause": null,
           "depthLimited": false,
@@ -5850,24 +5850,19 @@
         "lighthouse": {
           "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
           "strategy": "mobile",
-          "performance": 79,
-          "accessibility": 100,
-          "bestPractices": 81,
-          "seo": 100,
-          "lcpMs": 4750,
-          "tbtMs": 0,
-          "clsScore": 0,
-          "fcpMs": 2367,
-          "speedIndexMs": 3004,
+          "performance": 75,
+          "accessibility": 89,
+          "bestPractices": 100,
+          "seo": 85,
+          "lcpMs": 5295,
+          "tbtMs": 2,
+          "clsScore": 0.03,
+          "fcpMs": 3024,
+          "speedIndexMs": 3064,
           "failing": [
             {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
               "score": 0
             },
             {
@@ -5876,8 +5871,13 @@
               "score": 0
             },
             {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
               "score": 0
             },
             {
@@ -5886,56 +5886,56 @@
               "score": 0
             },
             {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 31
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
             },
             {
-              "id": "duplicated-javascript-insight",
-              "title": "Duplicated JavaScript",
-              "score": 50
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
             },
             {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 50
+              "id": "aria-prohibited-attr",
+              "title": "Elements use prohibited ARIA attributes",
+              "score": 0
             }
           ],
           "error": null
         },
         "gbpDetail": {
           "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
+          "totalPhotos": 5,
           "ratingDistribution": {
-            "1": 1,
+            "1": 0,
             "2": 0,
             "3": 0,
             "4": 0,
-            "5": 0
+            "5": 1
           },
           "priceLevel": null,
-          "isClaimed": false,
+          "isClaimed": true,
           "additionalCategories": null,
-          "hasDescription": false,
+          "hasDescription": true,
           "hasHours": true,
-          "services": 2,
+          "services": 34,
           "placeTopics": null,
-          "firstSeen": "2024-06-04 12:11:42 +00:00",
-          "lastUpdated": "2026-06-27 00:32:37 +00:00"
+          "firstSeen": "2026-07-10 16:17:09 +00:00",
+          "lastUpdated": "2026-07-10 16:17:09 +00:00"
         },
         "backlinks": {
           "source": "DataForSEO backlinks/summary",
-          "target": "kjaccounts.com",
-          "rank": 0,
-          "backlinks": 42,
-          "referringDomains": 40,
-          "referringMainDomains": 38,
-          "referringPages": 42,
+          "target": "bdigitalaccounts.co.uk",
+          "rank": 2,
+          "backlinks": 113,
+          "referringDomains": 46,
+          "referringMainDomains": 43,
+          "referringPages": 113,
           "brokenBacklinks": 0,
           "referringLinksTypes": {
-            "anchor": 39
+            "anchor": 113
           },
-          "firstSeen": "2023-10-14 19:48:24 +00:00",
+          "firstSeen": "2022-12-11 02:52:56 +00:00",
           "lostDate": null
         }
       }
@@ -5944,11 +5944,11 @@
       "rank": 32,
       "name": "AGR Accounts Ltd",
       "url": "http://www.agraccounts.com/",
-      "digitalVisibilityScore": 45,
+      "digitalVisibilityScore": 42,
       "pillarScores": {
         "speed": 62,
         "technical": 75,
-        "local": 63,
+        "local": 47,
         "visibility": 13,
         "ai": 0,
         "content": 33
@@ -6123,11 +6123,11 @@
       "rank": 33,
       "name": "Correct Balance LLP",
       "url": "https://www.correctbalance.co.uk/",
-      "digitalVisibilityScore": 44,
+      "digitalVisibilityScore": 40,
       "pillarScores": {
         "speed": null,
         "technical": 75,
-        "local": 80,
+        "local": 64,
         "visibility": 0,
         "ai": 0,
         "content": null
@@ -6272,11 +6272,11 @@
       "rank": 34,
       "name": "Harbour Key Limited",
       "url": "http://www.harbourkey.com/",
-      "digitalVisibilityScore": 44,
+      "digitalVisibilityScore": 40,
       "pillarScores": {
         "speed": null,
         "technical": 75,
-        "local": 83,
+        "local": 67,
         "visibility": 0,
         "ai": 0,
         "content": 33
@@ -6464,11 +6464,11 @@
       "rank": 35,
       "name": "BR Accounting Ltd",
       "url": "http://www.gloucester-accounting.co.uk/",
-      "digitalVisibilityScore": 39,
+      "digitalVisibilityScore": 36,
       "pillarScores": {
         "speed": 99,
         "technical": 14,
-        "local": 73,
+        "local": 59,
         "visibility": 13,
         "ai": 0,
         "content": 0
@@ -6652,11 +6652,11 @@
       "rank": 36,
       "name": "Macdonald & Co",
       "url": "http://www.lawson-macdonald.com/",
-      "digitalVisibilityScore": 35,
+      "digitalVisibilityScore": 32,
       "pillarScores": {
         "speed": 100,
         "technical": 14,
-        "local": 63,
+        "local": 47,
         "visibility": 0,
         "ai": 0,
         "content": 0
@@ -6831,11 +6831,11 @@
       "rank": 37,
       "name": "Bluestar Accounting",
       "url": "http://www.bluestaraccounting.com/",
-      "digitalVisibilityScore": 33,
+      "digitalVisibilityScore": 30,
       "pillarScores": {
         "speed": null,
         "technical": 63,
-        "local": 52,
+        "local": 39,
         "visibility": 0,
         "ai": 0,
         "content": 33
@@ -7015,11 +7015,11 @@
       "rank": 38,
       "name": "Robert Powell Chartered Accountants",
       "url": "http://robert-powell.com/",
-      "digitalVisibilityScore": 33,
+      "digitalVisibilityScore": 29,
       "pillarScores": {
         "speed": null,
         "technical": 0,
-        "local": 67,
+        "local": 50,
         "visibility": 46,
         "ai": 20,
         "content": 33
@@ -7160,11 +7160,11 @@
       "rank": 39,
       "name": "Drivers Accountant LTD",
       "url": "http://driversacc.com/?utm_source=gmb&utm_medium=referral",
-      "digitalVisibilityScore": 23,
+      "digitalVisibilityScore": 18,
       "pillarScores": {
         "speed": null,
         "technical": 0,
-        "local": 80,
+        "local": 64,
         "visibility": 0,
         "ai": 0,
         "content": null
@@ -7305,11 +7305,11 @@
       "rank": 40,
       "name": "Clements Tax",
       "url": "http://clementstaxassociates.co.uk/",
-      "digitalVisibilityScore": 19,
+      "digitalVisibilityScore": 14,
       "pillarScores": {
         "speed": null,
         "technical": 0,
-        "local": 67,
+        "local": 50,
         "visibility": 0,
         "ai": 0,
         "content": null
@@ -7444,11 +7444,11 @@
       "rank": 41,
       "name": "Erhan Ogruc Consultants",
       "url": "http://erhanogruc.com/",
-      "digitalVisibilityScore": 17,
+      "digitalVisibilityScore": 13,
       "pillarScores": {
         "speed": null,
         "technical": 0,
-        "local": 59,
+        "local": 44,
         "visibility": 0,
         "ai": 0,
         "content": null

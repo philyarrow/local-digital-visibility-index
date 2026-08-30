@@ -62,7 +62,7 @@
   "sectorMedians": {
     "speed": 71.5,
     "technical": 88,
-    "local": 80,
+    "local": 84,
     "visibility": 29,
     "ai": 10,
     "content": 67
@@ -72,11 +72,11 @@
       "rank": 1,
       "name": "CJ Hole",
       "url": "https://www.cjhole.co.uk/",
-      "digitalVisibilityScore": 79,
+      "digitalVisibilityScore": 81,
       "pillarScores": {
         "speed": 77,
         "technical": 100,
-        "local": 86,
+        "local": 93,
         "visibility": 52,
         "ai": 80,
         "content": 67
@@ -487,11 +487,11 @@
       "rank": 3,
       "name": "Allen & Harris",
       "url": "https://www.allenandharris.co.uk/",
-      "digitalVisibilityScore": 65,
+      "digitalVisibilityScore": 67,
       "pillarScores": {
         "speed": 74,
         "technical": 88,
-        "local": 89,
+        "local": 98,
         "visibility": 37,
         "ai": 20,
         "content": 67
@@ -663,7 +663,7 @@
       "pillarScores": {
         "speed": 69,
         "technical": 88,
-        "local": 61,
+        "local": 62,
         "visibility": 33,
         "ai": 40,
         "content": 100
@@ -857,6 +857,178 @@
     },
     {
       "rank": 5,
+      "name": "Hollis Morgan",
+      "url": "https://www.hollismorgan.co.uk/",
+      "digitalVisibilityScore": 61,
+      "pillarScores": {
+        "speed": 72,
+        "technical": 75,
+        "local": 99,
+        "visibility": 14,
+        "ai": 0,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.hollismorgan.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 902,
+          "internalLinks": 2958,
+          "avgInternalLinksPerPage": 118.3,
+          "maxDepthReached": 1,
+          "genericAnchors": 595,
+          "genericAnchorRatio": 0.201,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 2,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 802,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-29",
+          "sitemapStaleDays": 0,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1171,
+          "inpMs": 84,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 82,
+          "accessibility": 96,
+          "bestPractices": 92,
+          "seo": 100,
+          "lcpMs": 4184,
+          "tbtMs": 120,
+          "clsScore": 0,
+          "fcpMs": 2409,
+          "speedIndexMs": 2409,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unminified-javascript",
+              "title": "Minify JavaScript",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "hollismorgan.co.uk",
+          "rank": 229,
+          "backlinks": 1752,
+          "referringDomains": 302,
+          "referringMainDomains": 292,
+          "referringPages": 1466,
+          "brokenBacklinks": 574,
+          "referringLinksTypes": {
+            "anchor": 1367
+          },
+          "firstSeen": "2019-01-23 00:09:42 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 6,
       "name": "Boardwalk Property",
       "url": "https://www.boardwalkpropertyco.com/",
       "digitalVisibilityScore": 60,
@@ -1030,186 +1202,14 @@
       }
     },
     {
-      "rank": 6,
-      "name": "Hollis Morgan",
-      "url": "https://www.hollismorgan.co.uk/",
-      "digitalVisibilityScore": 60,
-      "pillarScores": {
-        "speed": 72,
-        "technical": 75,
-        "local": 93,
-        "visibility": 14,
-        "ai": 0,
-        "content": 100
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.hollismorgan.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 902,
-          "internalLinks": 2958,
-          "avgInternalLinksPerPage": 118.3,
-          "maxDepthReached": 1,
-          "genericAnchors": 595,
-          "genericAnchorRatio": 0.201,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": 2,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 802,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-29",
-          "sitemapStaleDays": 0,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 1171,
-          "inpMs": 84,
-          "cls": 0,
-          "lcpGood": true,
-          "inpGood": true,
-          "clsGood": true,
-          "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 82,
-          "accessibility": 96,
-          "bestPractices": 92,
-          "seo": 100,
-          "lcpMs": 4184,
-          "tbtMs": 120,
-          "clsScore": 0,
-          "fcpMs": 2409,
-          "speedIndexMs": 2409,
-          "failing": [
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "unminified-javascript",
-              "title": "Minify JavaScript",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "image-aspect-ratio",
-              "title": "Displays images with incorrect aspect ratio",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "hollismorgan.co.uk",
-          "rank": 229,
-          "backlinks": 1752,
-          "referringDomains": 302,
-          "referringMainDomains": 292,
-          "referringPages": 1466,
-          "brokenBacklinks": 574,
-          "referringLinksTypes": {
-            "anchor": 1367
-          },
-          "firstSeen": "2019-01-23 00:09:42 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 7,
       "name": "Chappell & Matthews",
       "url": "https://www.chappellandmatthews.co.uk/",
-      "digitalVisibilityScore": 59,
+      "digitalVisibilityScore": 60,
       "pillarScores": {
         "speed": 77,
         "technical": 88,
-        "local": 83,
+        "local": 87,
         "visibility": 41,
         "ai": 0,
         "content": 33
@@ -1409,6 +1409,178 @@
     },
     {
       "rank": 8,
+      "name": "Richard Harding",
+      "url": "https://www.richardharding.co.uk/",
+      "digitalVisibilityScore": 60,
+      "pillarScores": {
+        "speed": 63,
+        "technical": 88,
+        "local": 86,
+        "visibility": 18,
+        "ai": 20,
+        "content": 67
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": false
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.richardharding.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 370,
+          "internalLinks": 2490,
+          "avgInternalLinksPerPage": 99.6,
+          "maxDepthReached": 1,
+          "genericAnchors": 577,
+          "genericAnchorRatio": 0.232,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 24,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-27",
+          "sitemapStaleDays": 2,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 3109,
+          "inpMs": 80,
+          "cls": 0,
+          "lcpGood": false,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Bristol"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 51,
+          "accessibility": 81,
+          "bestPractices": 100,
+          "seo": 77,
+          "lcpMs": 18910,
+          "tbtMs": 553,
+          "clsScore": 0,
+          "fcpMs": 3564,
+          "speedIndexMs": 4951,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "richardharding.co.uk",
+          "rank": 215,
+          "backlinks": 1245,
+          "referringDomains": 134,
+          "referringMainDomains": 126,
+          "referringPages": 858,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 817
+          },
+          "firstSeen": "2019-03-23 18:51:46 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 9,
       "name": "Elephant Estate Agents",
       "url": "https://www.elephantlovesbristol.co.uk/",
       "digitalVisibilityScore": 59,
@@ -1580,7 +1752,7 @@
       }
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Knight Frank Bristol",
       "url": "https://www.knightfrank.co.uk/offices/bristol-estate-agents",
       "digitalVisibilityScore": 59,
@@ -1747,178 +1919,6 @@
             "anchor": 93157
           },
           "firstSeen": "2019-01-16 02:23:57 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 10,
-      "name": "Richard Harding",
-      "url": "https://www.richardharding.co.uk/",
-      "digitalVisibilityScore": 59,
-      "pillarScores": {
-        "speed": 63,
-        "technical": 88,
-        "local": 83,
-        "visibility": 18,
-        "ai": 20,
-        "content": 67
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.richardharding.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 370,
-          "internalLinks": 2490,
-          "avgInternalLinksPerPage": 99.6,
-          "maxDepthReached": 1,
-          "genericAnchors": 577,
-          "genericAnchorRatio": 0.232,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": 1,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 24,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-27",
-          "sitemapStaleDays": 2,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 3109,
-          "inpMs": 80,
-          "cls": 0,
-          "lcpGood": false,
-          "inpGood": true,
-          "clsGood": true,
-          "passesCwv": false,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Bristol"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 51,
-          "accessibility": 81,
-          "bestPractices": 100,
-          "seo": 77,
-          "lcpMs": 18910,
-          "tbtMs": 553,
-          "clsScore": 0,
-          "fcpMs": 3564,
-          "speedIndexMs": 4951,
-          "failing": [
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "crawlable-anchors",
-              "title": "Links are not crawlable",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "richardharding.co.uk",
-          "rank": 215,
-          "backlinks": 1245,
-          "referringDomains": 134,
-          "referringMainDomains": 126,
-          "referringPages": 858,
-          "brokenBacklinks": 1,
-          "referringLinksTypes": {
-            "anchor": 817
-          },
-          "firstSeen": "2019-03-23 18:51:46 +00:00",
           "lostDate": null
         }
       }
@@ -2103,7 +2103,7 @@
       "pillarScores": {
         "speed": 84,
         "technical": 88,
-        "local": 62,
+        "local": 63,
         "visibility": 0,
         "ai": 0,
         "content": 67
@@ -2271,11 +2271,11 @@
       "rank": 13,
       "name": "Goodman & Lilley",
       "url": "https://goodmanlilley.co.uk/",
-      "digitalVisibilityScore": 52,
+      "digitalVisibilityScore": 54,
       "pillarScores": {
         "speed": 78,
         "technical": 50,
-        "local": 85,
+        "local": 91,
         "visibility": 21,
         "ai": 0,
         "content": 67
@@ -2820,11 +2820,11 @@
       "rank": 16,
       "name": "Connells Bristol",
       "url": "https://www.connells.co.uk/estate-agents/bristol",
-      "digitalVisibilityScore": 42,
+      "digitalVisibilityScore": 43,
       "pillarScores": {
         "speed": 41,
         "technical": 50,
-        "local": 80,
+        "local": 84,
         "visibility": 33,
         "ai": 0,
         "content": 33
@@ -3033,7 +3033,7 @@
       "pillarScores": {
         "speed": 59,
         "technical": 75,
-        "local": 69,
+        "local": 70,
         "visibility": 0,
         "ai": 0,
         "content": 0

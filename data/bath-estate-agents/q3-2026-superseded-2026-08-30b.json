@@ -62,7 +62,7 @@
   "sectorMedians": {
     "speed": 69,
     "technical": 88,
-    "local": 84,
+    "local": 88,
     "visibility": 42,
     "ai": 40,
     "content": 67
@@ -279,11 +279,11 @@
       "rank": 2,
       "name": "Allen & Harris Bath",
       "url": "https://www.allenandharris.co.uk/estate-agents/bath",
-      "digitalVisibilityScore": 74,
+      "digitalVisibilityScore": 75,
       "pillarScores": {
         "speed": 55,
         "technical": 88,
-        "local": 85,
+        "local": 90,
         "visibility": 42,
         "ai": 80,
         "content": 100
@@ -486,13 +486,218 @@
     },
     {
       "rank": 3,
+      "name": "Martin & Co Bath",
+      "url": "https://www.martinco.com/estate-agents-and-letting-agents/branch/bath/",
+      "digitalVisibilityScore": 74,
+      "pillarScores": {
+        "speed": 56,
+        "technical": 100,
+        "local": 99,
+        "visibility": 46,
+        "ai": 40,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.martinco.com/estate-agents-and-letting-agents/branch/bath/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 315,
+          "internalLinks": 4005,
+          "avgInternalLinksPerPage": 160.2,
+          "maxDepthReached": 1,
+          "genericAnchors": 23,
+          "genericAnchorRatio": 0.006,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 2,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 1000,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-26",
+          "sitemapStaleDays": 3,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1591,
+          "inpMs": 223,
+          "cls": 0.04,
+          "lcpGood": true,
+          "inpGood": false,
+          "clsGood": true,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 51,
+          "accessibility": 93,
+          "bestPractices": 73,
+          "seo": 100,
+          "lcpMs": 26861,
+          "tbtMs": 312,
+          "clsScore": 0,
+          "fcpMs": 4429,
+          "speedIndexMs": 8790,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 23,
+          "ratingDistribution": {
+            "1": 16,
+            "2": 0,
+            "3": 2,
+            "4": 8,
+            "5": 218
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Estate agent"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 23,
+          "placeTopics": {
+            "helpful staff": 103,
+            "informative staff": 13,
+            "property viewing": 8,
+            "quick responses": 23,
+            "efficient team": 13,
+            "letting agents": 12,
+            "tenancy": 26,
+            "accommodating staff": 17,
+            "moving in process": 4,
+            "feeling of security": 2
+          },
+          "firstSeen": "2026-06-25 07:46:42 +00:00",
+          "lastUpdated": "2026-06-25 07:46:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "martinco.com",
+          "rank": 470,
+          "backlinks": 62121,
+          "referringDomains": 1564,
+          "referringMainDomains": 1494,
+          "referringPages": 44380,
+          "brokenBacklinks": 47399,
+          "referringLinksTypes": {
+            "anchor": 39921
+          },
+          "firstSeen": "2019-01-16 06:15:40 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 4,
       "name": "Savills Bath",
       "url": "https://www.savills.co.uk/estate-agents/south-west-england/somerset/savills-bath.aspx",
       "digitalVisibilityScore": 74,
       "pillarScores": {
         "speed": 69,
         "technical": 63,
-        "local": 83,
+        "local": 86,
         "visibility": 38,
         "ai": 100,
         "content": 100
@@ -691,219 +896,14 @@
       }
     },
     {
-      "rank": 4,
-      "name": "Martin & Co Bath",
-      "url": "https://www.martinco.com/estate-agents-and-letting-agents/branch/bath/",
-      "digitalVisibilityScore": 72,
-      "pillarScores": {
-        "speed": 56,
-        "technical": 100,
-        "local": 91,
-        "visibility": 46,
-        "ai": 40,
-        "content": 100
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.martinco.com/estate-agents-and-letting-agents/branch/bath/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 315,
-          "internalLinks": 4005,
-          "avgInternalLinksPerPage": 160.2,
-          "maxDepthReached": 1,
-          "genericAnchors": 23,
-          "genericAnchorRatio": 0.006,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": 2,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 1000,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-26",
-          "sitemapStaleDays": 3,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 1591,
-          "inpMs": 223,
-          "cls": 0.04,
-          "lcpGood": true,
-          "inpGood": false,
-          "clsGood": true,
-          "passesCwv": false,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 51,
-          "accessibility": 93,
-          "bestPractices": 73,
-          "seo": 100,
-          "lcpMs": 26861,
-          "tbtMs": 312,
-          "clsScore": 0,
-          "fcpMs": 4429,
-          "speedIndexMs": 8790,
-          "failing": [
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 23,
-          "ratingDistribution": {
-            "1": 16,
-            "2": 0,
-            "3": 2,
-            "4": 8,
-            "5": 218
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Estate agent"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 23,
-          "placeTopics": {
-            "helpful staff": 103,
-            "informative staff": 13,
-            "property viewing": 8,
-            "quick responses": 23,
-            "efficient team": 13,
-            "letting agents": 12,
-            "tenancy": 26,
-            "accommodating staff": 17,
-            "moving in process": 4,
-            "feeling of security": 2
-          },
-          "firstSeen": "2026-06-25 07:46:42 +00:00",
-          "lastUpdated": "2026-06-25 07:46:42 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "martinco.com",
-          "rank": 470,
-          "backlinks": 62121,
-          "referringDomains": 1564,
-          "referringMainDomains": 1494,
-          "referringPages": 44380,
-          "brokenBacklinks": 47399,
-          "referringLinksTypes": {
-            "anchor": 39921
-          },
-          "firstSeen": "2019-01-16 06:15:40 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 5,
       "name": "Cobb Farr",
       "url": "https://www.cobbfarr.com/",
-      "digitalVisibilityScore": 71,
+      "digitalVisibilityScore": 72,
       "pillarScores": {
         "speed": 68,
         "technical": 100,
-        "local": 93,
+        "local": 99,
         "visibility": 21,
         "ai": 60,
         "content": 67
@@ -1034,7 +1034,7 @@
       "pillarScores": {
         "speed": 75,
         "technical": 88,
-        "local": 79,
+        "local": 80,
         "visibility": 38,
         "ai": 60,
         "content": 67
@@ -1222,11 +1222,11 @@
       "rank": 7,
       "name": "Strattons and Partners",
       "url": "https://www.strattonsandpartners.com/",
-      "digitalVisibilityScore": 68,
+      "digitalVisibilityScore": 69,
       "pillarScores": {
         "speed": 76,
         "technical": 63,
-        "local": 84,
+        "local": 88,
         "visibility": 31,
         "ai": 60,
         "content": 100
@@ -1636,7 +1636,7 @@
       "pillarScores": {
         "speed": 76,
         "technical": 100,
-        "local": 80,
+        "local": 82,
         "visibility": 46,
         "ai": 0,
         "content": 67
@@ -1849,7 +1849,7 @@
       "pillarScores": {
         "speed": 69,
         "technical": 88,
-        "local": 78,
+        "local": 79,
         "visibility": 50,
         "ai": 0,
         "content": 100
@@ -2057,7 +2057,7 @@
       "pillarScores": {
         "speed": 77,
         "technical": 100,
-        "local": 82,
+        "local": 84,
         "visibility": 37,
         "ai": 20,
         "content": 33
@@ -2256,11 +2256,11 @@
       "rank": 12,
       "name": "Justin Hunter",
       "url": "https://www.justin-hunter.co.uk/",
-      "digitalVisibilityScore": 60,
+      "digitalVisibilityScore": 62,
       "pillarScores": {
         "speed": 32,
         "technical": 63,
-        "local": 89,
+        "local": 96,
         "visibility": 51,
         "ai": 60,
         "content": 67
@@ -2459,11 +2459,11 @@
       "rank": 13,
       "name": "Crisp Cowley",
       "url": "https://www.crispcowley.co.uk/",
-      "digitalVisibilityScore": 59,
+      "digitalVisibilityScore": 60,
       "pillarScores": {
         "speed": 64,
         "technical": 75,
-        "local": 91,
+        "local": 98,
         "visibility": 42,
         "ai": 0,
         "content": 67
@@ -2662,11 +2662,11 @@
       "rank": 14,
       "name": "Fine & Country Bath",
       "url": "https://www.fineandcountry.co.uk/bath-estate-agents",
-      "digitalVisibilityScore": 59,
+      "digitalVisibilityScore": 60,
       "pillarScores": {
         "speed": 55,
         "technical": 88,
-        "local": 75,
+        "local": 80,
         "visibility": 42,
         "ai": 40,
         "content": 33
@@ -2838,7 +2838,7 @@
       "pillarScores": {
         "speed": 62,
         "technical": 63,
-        "local": 82,
+        "local": 84,
         "visibility": 26,
         "ai": 0,
         "content": 33

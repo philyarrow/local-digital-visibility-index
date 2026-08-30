@@ -80,15 +80,59 @@ function scoreTechnical(p) {
 /* Local presence — live. Google Business Profile completeness, review volume
    and recency, NAP consistency and local-pack coverage, from DataForSEO's
    business_data endpoints. */
-function scoreLocal(p) {
+/* Review velocity is scored against the cohort, not against an absolute.
+ *
+ * The absolute version (min(100, velocity * 10)) treated ten new reviews in
+ * ninety days as full marks for everyone. That is routine for a restaurant and
+ * exceptional for a solicitor, so the component was largely measuring which
+ * trade a business is in. Correcting the underlying count on 30 August made it
+ * worse, not better: it lifted restaurants and estate agents and left
+ * construction and accountancy untouched, widening the gap between them from
+ * 15 points to 31.
+ *
+ * `ref` is the cohort's 90th percentile, floored at 3 so a tiny cohort cannot
+ * produce a reference of 1 where a single review scores full marks.
+ *
+ * `ref === null` means the cohort is degenerate — see cohortVelocityRef. */
+function velocityScore(v, ref) {
+	if (typeof v !== 'number' || ref === null) return null;
+	return clamp100(Math.min(100, (v / ref) * 100));
+}
+
+/* The reference for one index, or null when velocity cannot discriminate in it.
+ *
+ * When three quarters of a cohort sit at zero — 83% of Cheltenham builders,
+ * 88% of Gloucester accountants — there is no distribution to normalise
+ * against. Scaling to the cohort maximum would score a builder with three
+ * reviews at 100 and forty-three builders at 0, manufacturing a hundred-point
+ * spread out of a nought-to-three range. Percentile rank is worse: the tied
+ * zeros take a midrank near the 41st percentile, so a business would be
+ * REWARDED for having no reviews at all.
+ *
+ * So the component is excluded for that cohort and the Local pillar is computed
+ * from its remaining parts. This is the same rule the rest of the pipeline
+ * follows — a signal that cannot be measured is left out, never scored as zero.
+ * A builder is not digitally weak for working in a trade whose customers do not
+ * leave Google reviews. */
+function cohortVelocityRef(records) {
+	const v = records
+		.map((r) => r?.pillars?.local?.reviewsLast90d)
+		.filter((x) => typeof x === 'number')
+		.sort((a, b) => a - b);
+	if (v.length < 4) return null;
+	const at = (q) => v[Math.min(v.length - 1, Math.floor(v.length * q))];
+	if (at(0.75) === 0) return null;
+	return Math.max(3, at(0.9));
+}
+
+function scoreLocal(p, ctx = {}) {
 	if (!p || p.stub) return null;
-	// Reference scoring (used once real data lands). Kept here so wiring the
-	// collector is the only change needed.
 	const parts = [];
 	if (typeof p.profileCompleteness === 'number') parts.push(clamp100(p.profileCompleteness * 100));
 	if (typeof p.avgRating === 'number') parts.push(clamp100((p.avgRating / 5) * 100));
 	if (typeof p.reviewCount === 'number') parts.push(clamp100(Math.min(100, Math.log10(p.reviewCount + 1) * 50)));
-	if (typeof p.reviewsLast90d === 'number') parts.push(clamp100(Math.min(100, p.reviewsLast90d * 10)));
+	const vel = velocityScore(p.reviewsLast90d, ctx.velocityRef ?? null);
+	if (vel !== null) parts.push(vel);
 	if (typeof p.napConsistent === 'boolean') parts.push(p.napConsistent ? 100 : 50);
 	if (!parts.length) return null;
 	return clamp100(Math.round(parts.reduce((a, b) => a + b, 0) / parts.length));
@@ -138,10 +182,10 @@ const SCORERS = {
 /* Weighted Digital Visibility Score with renormalisation                     */
 /* -------------------------------------------------------------------------- */
 
-function computeBusiness(record) {
+function computeBusiness(record, ctx = {}) {
 	const pillarScores = {};
 	for (const { key } of PILLARS) {
-		pillarScores[key] = SCORERS[key](record.pillars?.[key]);
+		pillarScores[key] = SCORERS[key](record.pillars?.[key], ctx);
 	}
 
 	const included = PILLARS.filter((p) => pillarScores[p.key] !== null).map((p) => p.key);
@@ -246,11 +290,25 @@ async function main() {
 		process.exit(1);
 	}
 
-	const businesses = [];
+	/* Two passes. Review velocity is scored against the cohort, so every record
+	   has to be read before any of them can be scored. */
+	const records = [];
 	for (const f of files) {
 		try {
-			const record = JSON.parse(await readFile(join(dir, f), 'utf8'));
-			businesses.push(computeBusiness(record));
+			records.push({ f, record: JSON.parse(await readFile(join(dir, f), 'utf8')) });
+		} catch (e) {
+			console.error(`  ! skipping ${f}: ${e.message}`);
+		}
+	}
+	const velocityRef = cohortVelocityRef(records.map((r) => r.record));
+	console.log(velocityRef === null
+		? '  review velocity: excluded — too few businesses in this cohort receive reviews to compare them'
+		: `  review velocity: scored against this cohort, full marks at ${velocityRef} reviews/90d`);
+
+	const businesses = [];
+	for (const { f, record } of records) {
+		try {
+			businesses.push(computeBusiness(record, { velocityRef }));
 		} catch (e) {
 			console.error(`  ! skipping ${f}: ${e.message}`);
 		}
