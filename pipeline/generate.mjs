@@ -527,6 +527,51 @@ function contextCard(b) {
 		rows.push(['Food hygiene (FSA)', 'No confident match on the registered trading name']);
 	}
 
+	/* Lighthouse: the categories the Speed pillar does not score. Kept out of
+	   the score deliberately — adding categories to a published pillar would
+	   move every ranking retroactively. */
+	const lh = e.lighthouse;
+	if (lh && lh.performance !== null && lh.performance !== undefined) {
+		const parts = [`Performance ${lh.performance}`];
+		if (lh.accessibility !== null && lh.accessibility !== undefined) parts.push(`accessibility ${lh.accessibility}`);
+		if (lh.bestPractices !== null && lh.bestPractices !== undefined) parts.push(`best practices ${lh.bestPractices}`);
+		if (lh.seo !== null && lh.seo !== undefined) parts.push(`SEO ${lh.seo}`);
+		let row = parts.join(' · ');
+		if (lh.failing?.length) {
+			row += ` — biggest losses: ${lh.failing.slice(0, 3).map((f) => esc(f.title)).join('; ')}`;
+		}
+		rows.push(['Lighthouse (lab, mobile)', row]);
+	}
+
+	/* Google profile detail the Local pillar computes over rather than reports. */
+	const g = e.gbpDetail;
+	if (g) {
+		const parts = [];
+		if (g.totalPhotos !== null && g.totalPhotos !== undefined) parts.push(`${g.totalPhotos} photo${g.totalPhotos === 1 ? '' : 's'}`);
+		if (g.isClaimed !== null && g.isClaimed !== undefined) parts.push(g.isClaimed ? 'claimed' : 'unclaimed');
+		if (g.hasDescription !== null) parts.push(g.hasDescription ? 'has a description' : 'no description');
+		if (g.hasHours !== null) parts.push(g.hasHours ? 'hours listed' : 'no hours listed');
+		const rd = g.ratingDistribution;
+		if (rd && typeof rd === 'object') {
+			const total = Object.values(rd).reduce((a, b) => a + (Number(b) || 0), 0);
+			const ones = Number(rd['1']) || 0;
+			/* The distribution behind an average: a 4.5 built from consistent
+			   fours reads very differently from one built from fives and ones. */
+			if (total >= 5) parts.push(`${ones} of ${total} reviews are one star`);
+		}
+		if (parts.length) rows.push(['Google profile detail', parts.join(' · ')]);
+	}
+
+	/* Backlinks: the only signal here bought per business rather than per index. */
+	const bl = e.backlinks;
+	if (bl && bl.referringDomains !== null && bl.referringDomains !== undefined) {
+		const parts = [`${bl.referringDomains} referring domains`];
+		if (bl.backlinks !== null && bl.backlinks !== undefined) parts.push(`${bl.backlinks} links`);
+		if (bl.rank !== null && bl.rank !== undefined) parts.push(`rank ${bl.rank}`);
+		if (bl.brokenBacklinks) parts.push(`${bl.brokenBacklinks} broken`);
+		rows.push(['Backlinks', parts.join(' · ')]);
+	}
+
 	const cr = e.crawl;
 	if (cr && cr.pagesCrawled) {
 		const p = [`${cr.pagesCrawled} pages crawled`];
@@ -537,6 +582,21 @@ function contextCard(b) {
 		if (cr.genericAnchorRatio !== null) p.push(`${Math.round(cr.genericAnchorRatio * 100)}% of links use a generic anchor`);
 		if (cr.orphanCandidates !== null) p.push(`${cr.orphanCandidates} sitemap pages not reachable by following links`);
 		rows.push(['Site structure', p.join(' · ')]);
+
+		/* A sitemap is a claim about what a site contains; these are the checks
+		   on whether the claim holds. */
+		const sm = [];
+		if (cr.sitemapUrls !== null && cr.sitemapUrls !== undefined) sm.push(`${cr.sitemapUrls} URLs listed`);
+		if (cr.sitemapDeclaredInRobots !== null && cr.sitemapDeclaredInRobots !== undefined) {
+			sm.push(cr.sitemapDeclaredInRobots ? 'declared in robots.txt' : 'not declared in robots.txt');
+		}
+		if (cr.sitemapStaleDays !== null && cr.sitemapStaleDays !== undefined) {
+			sm.push(`newest entry ${cr.sitemapStaleDays} day${cr.sitemapStaleDays === 1 ? '' : 's'} old`);
+		} else if (cr.sitemapHasLastmod === false) {
+			sm.push('no lastmod dates');
+		}
+		if (cr.sitemapSampleChecked) sm.push(`${cr.sitemapSampleResolved} of ${cr.sitemapSampleChecked} sampled URLs resolve`);
+		if (sm.length) rows.push(['Sitemap', sm.join(' · ')]);
 	} else if (cr && cr.robotsDisallowedAll) {
 		rows.push(['Site structure', 'robots.txt asks crawlers not to read this site, so it was not crawled']);
 	} else if (cr && (cr.error || cr.stoppedBecause)) {
