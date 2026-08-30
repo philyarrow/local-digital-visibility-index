@@ -6,7 +6,7 @@
   "sectorLabel": "estate agents",
   "keywordsPerIndex": 12,
   "quarter": "Q3-2026",
-  "measuredAt": "2026-08-30T13:08:56.548Z",
+  "measuredAt": "2026-08-30T19:34:31.389Z",
   "methodology": "https://hub.pyc.agency/indices/methodology/",
   "license": {
     "name": "CC BY 4.0",
@@ -56,16 +56,16 @@
       "live": true
     }
   },
-  "overallMedian": 69.5,
+  "overallMedian": 71.5,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
-    "speed": 61,
+    "speed": 69.5,
     "technical": 88,
-    "local": 91,
-    "visibility": 52.5,
-    "ai": 50,
-    "content": 100
+    "local": 85,
+    "visibility": 51.5,
+    "ai": 60,
+    "content": 80.5
   },
   "businesses": [
     {
@@ -74,12 +74,12 @@
       "url": "https://www.charles-harding.co.uk/",
       "digitalVisibilityScore": 85,
       "pillarScores": {
-        "speed": 66,
+        "speed": 77,
         "technical": 100,
-        "local": 90,
-        "visibility": 60,
+        "local": 84,
+        "visibility": 58,
         "ai": 100,
-        "content": 100
+        "content": 87
       },
       "includedPillars": [
         "speed",
@@ -101,16 +101,19 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 1295,
+        "contentFreshnessDays": 935
       },
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
           "startUrl": "https://www.charles-harding.co.uk/",
           "pagesCrawled": 25,
-          "pagesDiscovered": 104,
-          "internalLinks": 2287,
-          "avgInternalLinksPerPage": 91.5,
+          "pagesDiscovered": 103,
+          "internalLinks": 2309,
+          "avgInternalLinksPerPage": 92.4,
           "maxDepthReached": 1,
           "genericAnchors": 12,
           "genericAnchorRatio": 0.005,
@@ -126,7 +129,7 @@
           "sitemapIsIndex": true,
           "sitemapHasLastmod": true,
           "sitemapNewestLastmod": "2026-08-30",
-          "sitemapStaleDays": 0,
+          "sitemapStaleDays": 1,
           "sitemapSampleChecked": 5,
           "sitemapSampleResolved": 5,
           "robotsDisallowedAll": false,
@@ -166,6 +169,62 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 58,
+          "accessibility": 81,
+          "bestPractices": 77,
+          "seo": 85,
+          "lcpMs": 13951,
+          "tbtMs": 371,
+          "clsScore": 0,
+          "fcpMs": 1984,
+          "speedIndexMs": 6835,
+          "failing": [
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "skip-link",
+              "title": "Skip links are not focusable.",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            }
+          ],
+          "error": null
         }
       }
     },
@@ -173,14 +232,14 @@
       "rank": 2,
       "name": "McFarlane",
       "url": "https://www.mcfarlaneproperty.com/",
-      "digitalVisibilityScore": 85,
+      "digitalVisibilityScore": 83,
       "pillarScores": {
-        "speed": 72,
+        "speed": 77,
         "technical": 88,
-        "local": 98,
-        "visibility": 55,
+        "local": 88,
+        "visibility": 57,
         "ai": 100,
-        "content": 100
+        "content": 87
       },
       "includedPillars": [
         "speed",
@@ -202,7 +261,10 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 4071,
+        "contentFreshnessDays": 1206
       },
       "context": {
         "crawl": {
@@ -227,7 +289,7 @@
           "sitemapIsIndex": true,
           "sitemapHasLastmod": true,
           "sitemapNewestLastmod": "2026-08-28",
-          "sitemapStaleDays": 2,
+          "sitemapStaleDays": 3,
           "sitemapSampleChecked": 5,
           "sitemapSampleResolved": 5,
           "robotsDisallowedAll": false,
@@ -267,6 +329,62 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 55,
+          "accessibility": 85,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 13030,
+          "tbtMs": 335,
+          "clsScore": 0,
+          "fcpMs": 2705,
+          "speedIndexMs": 9406,
+          "failing": [
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "aria-hidden-focus",
+              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "label-content-name-mismatch",
+              "title": "Elements with visible text labels do not have matching accessible names.",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            }
+          ],
+          "error": null
         }
       }
     },
@@ -276,9 +394,9 @@
       "url": "https://www.chappells.uk.com/",
       "digitalVisibilityScore": 77,
       "pillarScores": {
-        "speed": 76,
+        "speed": 81,
         "technical": 75,
-        "local": 91,
+        "local": 85,
         "visibility": 43,
         "ai": 80,
         "content": 100
@@ -303,7 +421,10 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 1002,
+        "contentFreshnessDays": null
       },
       "context": {
         "crawl": {
@@ -368,6 +489,62 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Swindon"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 75,
+          "accessibility": 87,
+          "bestPractices": 92,
+          "seo": 85,
+          "lcpMs": 3902,
+          "tbtMs": 115,
+          "clsScore": 0.191,
+          "fcpMs": 1988,
+          "speedIndexMs": 3777,
+          "failing": [
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "select-name",
+              "title": "Select elements do not have associated label elements.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            }
+          ],
+          "error": null
         }
       }
     },
@@ -375,14 +552,14 @@
       "rank": 4,
       "name": "Richard James",
       "url": "https://richardjames.uk/",
-      "digitalVisibilityScore": 71,
+      "digitalVisibilityScore": 72,
       "pillarScores": {
-        "speed": 34,
+        "speed": 42,
         "technical": 88,
-        "local": 91,
-        "visibility": 66,
+        "local": 85,
+        "visibility": 60,
         "ai": 100,
-        "content": 33
+        "content": 53
       },
       "includedPillars": [
         "speed",
@@ -404,7 +581,10 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
-        "hasCredentialsLink": false
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 1036,
+        "contentFreshnessDays": 2378
       },
       "context": {
         "crawl": {
@@ -469,122 +649,77 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Swindon"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 31,
+          "accessibility": 88,
+          "bestPractices": 54,
+          "seo": 100,
+          "lcpMs": 22511,
+          "tbtMs": 231,
+          "clsScore": 0.453,
+          "fcpMs": 13658,
+          "speedIndexMs": 13658,
+          "failing": [
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            }
+          ],
+          "error": null
         }
       }
     },
     {
       "rank": 5,
-      "name": "Connells Swindon Old Town",
-      "url": "https://www.connells.co.uk/estate-agents/swindon-old-town",
-      "digitalVisibilityScore": 68,
-      "pillarScores": {
-        "speed": 56,
-        "technical": 88,
-        "local": 83,
-        "visibility": 64,
-        "ai": 20,
-        "content": 100
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.connells.co.uk/estate-agents/swindon-old-town",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 72,
-          "internalLinks": 1591,
-          "avgInternalLinksPerPage": 63.6,
-          "maxDepthReached": 1,
-          "genericAnchors": 6,
-          "genericAnchorRatio": 0.004,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 89,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": false,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 2516,
-          "inpMs": 238,
-          "cls": 0.01,
-          "lcpGood": false,
-          "inpGood": false,
-          "clsGood": true,
-          "passesCwv": false,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        }
-      }
-    },
-    {
-      "rank": 6,
       "name": "Location Real Estate",
       "url": "https://locationrealestate.co.uk/",
-      "digitalVisibilityScore": 65,
+      "digitalVisibilityScore": 71,
       "pillarScores": {
-        "speed": 52,
+        "speed": 66,
         "technical": 100,
         "local": 95,
-        "visibility": 35,
-        "ai": 0,
-        "content": 100
+        "visibility": 34,
+        "ai": 40,
+        "content": 74
       },
       "includedPillars": [
         "speed",
@@ -606,7 +741,10 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": true,
+        "hasBlogLink": false,
+        "wordCount": 1124,
+        "contentFreshnessDays": 382
       },
       "context": {
         "crawl": {
@@ -671,6 +809,222 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 64,
+          "accessibility": 94,
+          "bestPractices": 73,
+          "seo": 100,
+          "lcpMs": 4951,
+          "tbtMs": 299,
+          "clsScore": 0,
+          "fcpMs": 3317,
+          "speedIndexMs": 6204,
+          "failing": [
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            }
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "name": "Connells Swindon Old Town",
+      "url": "https://www.connells.co.uk/estate-agents/swindon-old-town",
+      "digitalVisibilityScore": 68,
+      "pillarScores": {
+        "speed": 59,
+        "technical": 88,
+        "local": 81,
+        "visibility": 64,
+        "ai": 20,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 1085,
+        "contentFreshnessDays": null
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.connells.co.uk/estate-agents/swindon-old-town",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 72,
+          "internalLinks": 1591,
+          "avgInternalLinksPerPage": 63.6,
+          "maxDepthReached": 1,
+          "genericAnchors": 6,
+          "genericAnchorRatio": 0.004,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 89,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 2516,
+          "inpMs": 238,
+          "cls": 0.01,
+          "lcpGood": false,
+          "inpGood": false,
+          "clsGood": true,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 44,
+          "accessibility": 84,
+          "bestPractices": 54,
+          "seo": 100,
+          "lcpMs": 5852,
+          "tbtMs": 1102,
+          "clsScore": 0,
+          "fcpMs": 2735,
+          "speedIndexMs": 7655,
+          "failing": [
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "server-response-time",
+              "title": "Reduce initial server response time",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            }
+          ],
+          "error": null
         }
       }
     },
@@ -678,14 +1032,14 @@
       "rank": 7,
       "name": "Taylors Swindon",
       "url": "https://www.taylorsestateagents.co.uk/branch/estate-agents/swindon",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 63,
       "pillarScores": {
-        "speed": 71,
+        "speed": 73,
         "technical": 88,
-        "local": 97,
-        "visibility": 50,
+        "local": 93,
+        "visibility": 46,
         "ai": 0,
-        "content": 33
+        "content": 55
       },
       "includedPillars": [
         "speed",
@@ -707,7 +1061,10 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 603,
+        "contentFreshnessDays": null
       },
       "context": {
         "crawl": {
@@ -772,6 +1129,62 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 47,
+          "accessibility": 84,
+          "bestPractices": 92,
+          "seo": 92,
+          "lcpMs": 5073,
+          "tbtMs": 806,
+          "clsScore": 0.094,
+          "fcpMs": 2735,
+          "speedIndexMs": 8489,
+          "failing": [
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "valid-source-maps",
+              "title": "Missing source maps for large first-party JavaScript",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            }
+          ],
+          "error": null
         }
       }
     },
@@ -779,14 +1192,14 @@
       "rank": 8,
       "name": "Atwell Martin Swindon",
       "url": "https://swindon.atwellmartin.co.uk/",
-      "digitalVisibilityScore": 47,
+      "digitalVisibilityScore": 46,
       "pillarScores": {
         "speed": 50,
         "technical": 100,
-        "local": 70,
+        "local": 69,
         "visibility": 0,
         "ai": 0,
-        "content": 33
+        "content": 20
       },
       "includedPillars": [
         "speed",
@@ -808,7 +1221,10 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
-        "hasCredentialsLink": true
+        "hasCredentialsLink": true,
+        "hasBlogLink": false,
+        "wordCount": 46,
+        "contentFreshnessDays": 3729
       },
       "context": {
         "crawl": {
@@ -872,6 +1288,62 @@
           "previousNames": null,
           "matchConfidence": null,
           "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 57,
+          "accessibility": 86,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 7033,
+          "tbtMs": 7,
+          "clsScore": 0.115,
+          "fcpMs": 5081,
+          "speedIndexMs": 6730,
+          "failing": [
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            }
+          ],
           "error": null
         }
       }
