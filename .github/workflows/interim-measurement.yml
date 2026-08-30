@@ -205,7 +205,15 @@ jobs:
           # Only the history directory. If anything else changed, that is a bug
           # in --archive-only and the run should fail loudly rather than commit
           # over a published snapshot.
-          if ! git diff --quiet -- data ':!data/*/history'; then
+          #
+          # The trailing /* matters. ':!data/*/history' excludes the directory
+          # entry, NOT the files inside it, so every history file the run had
+          # just legitimately written counted as "something else changed" and
+          # failed the job. It passed the first time only because the file was
+          # new: git diff does not report untracked files, so there was no diff
+          # to catch. The second run of a month, when the file already existed,
+          # failed on its own output.
+          if ! git diff --quiet -- data ':!data/*/history/*'; then
             echo "::error::A published snapshot was modified. --archive-only must only write data/<index>/history/."
             git --no-pager diff --stat -- data ':!data/*/history'
             exit 1
@@ -234,5 +242,14 @@ jobs:
           git commit \
             -m "Interim measurement $PERIOD" \
             -m "Automated monthly collection. Not a published ranking: the site still shows the last published quarter, and data/<index>/<quarter>.json is unchanged. These files exist so movement over time can be analysed."
-          # One retry: a sibling job may land between our rebase and our push.
-          git push || { git pull --rebase origin "${GITHUB_REF_NAME}"; git push; }
+          # Retry, because eleven jobs push to this branch in sequence and a
+          # sibling can land between our rebase and our push. One attempt was
+          # thin for that many hand-offs; three with a short backoff is not.
+          pushed=0
+          for attempt in 1 2 3; do
+            if git push; then pushed=1; break; fi
+            echo "push attempt $attempt failed; rebasing and retrying"
+            sleep $(( attempt * 5 ))
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+          done
+          [ "$pushed" = "1" ] || { echo "::error::could not push the interim measurement after 3 attempts"; exit 1; }
