@@ -314,7 +314,6 @@ function computeBusiness(record, ctx = {}) {
 				reviewsLast90d: record.pillars?.local?.reviewsLast90d ?? null,
 				domainConsistent: record.pillars?.local?.domainConsistent
 					?? record.pillars?.local?.napConsistent ?? null,
-				matchedBy: record.pillars?.local?.matchedBy ?? null,
 			},
 			speed: {
 				lcpMs: record.pillars?.speed?.lcpMs ?? null,

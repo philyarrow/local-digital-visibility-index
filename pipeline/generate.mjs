@@ -299,18 +299,45 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 	const pid = b.evidence?.local?.placeId;
 	/* Gated on match quality. A name-only listing match is the one case where the
 	   identity claim is weakest, and sameAs is a hard assertion. */
-	if (pid && /^ChIJ[A-Za-z0-9_-]+$/.test(pid) && b.evidence?.local?.matchedBy !== 'name-category') {
+	/* Also gated on branch count. placeId is placeIds[0] — whichever branch the
+	   listings API happened to return first, with nothing pinning the order — so
+	   for a multi-branch firm it names one arbitrary branch as the identity of the
+	   whole business, and a reordered response would silently change the published
+	   identity URL. That is the same objection the comment above uses to withhold
+	   address, and it applies here for the same reason: a branch place_id resolves
+	   to exactly one of those addresses. 22 firms are affected. */
+	const singleSite = (b.evidence?.local?.branchCount ?? 1) <= 1;
+	if (pid && /^ChIJ[A-Za-z0-9_-]+$/.test(pid) && b.evidence?.local?.matchedBy !== 'name-category' && singleSite) {
 		sameAs.push(`https://www.google.com/maps/place/?q=place_id:${pid}`);
 	}
 	const ch = b.enrichment?.companies;
 	const chNum = ch?.matched && /^(?:\d{8}|[A-Z]{2}\d{6})$/.test(ch.companyNumber || '') ? ch.companyNumber : null;
 	if (chNum) sameAs.push(`https://find-and-update.company-information.service.gov.uk/company/${chNum}`);
 
+	/* url is one of only four properties asserted about the business, and the only
+	   one pointing off-site, so it has to be defensible as "where this entity is
+	   described". b.url is whatever the pipeline crawled: 37 of 271 are not a site
+	   root, one is a PDF brochure hosted on an unrelated company's domain, and
+	   eight carry Google Business Profile tracking parameters that would be
+	   published as the entity's canonical address. Parsed, stripped and dropped
+	   when it cannot be defended. */
+	let entityUrl = null;
+	try {
+		const u = new URL(b.url);
+		const isAsset = /\.(pdf|docx?|xlsx?|jpe?g|png|gif|zip)$/i.test(u.pathname);
+		if (!isAsset && (u.protocol === 'http:' || u.protocol === 'https:')) {
+			for (const k of [...u.searchParams.keys()]) {
+				if (/^(utm_|gclid|fbclid|msclkid|_ga|ref$|source$)/i.test(k)) u.searchParams.delete(k);
+			}
+			entityUrl = u.toString();
+		}
+	} catch { entityUrl = null; }
+
 	const business = {
 		'@type': sectorCopy(indexSlug)?.schemaType || 'LocalBusiness',
 		'@id': bizId,
 		name: b.name,
-		...(b.url ? { url: b.url } : {}),
+		...(entityUrl ? { url: entityUrl } : {}),
 		...(sameAs.length ? { sameAs } : {}),
 		...(chNum ? {
 			identifier: {
@@ -358,7 +385,11 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 				about: { '@id': bizId },
 				mainEntity: { '@id': bizId },
 				publisher: { '@id': `${SITE}/#org` },
-				datePublished: date,
+				/* No datePublished. It would have to come from the measurement date,
+				   which is not when the page was published — most of these pages first
+				   appeared in June and would claim August, and the claim would advance
+				   again every quarter. The markup asserted no publication date before
+				   this change; dateModified carries the freshness signal honestly. */
 				dateModified: date,
 			},
 			business,
@@ -2776,7 +2807,11 @@ async function main() {
 				+ `\n    it overwrites that file and drops every hand-added rule.\n`,
 			);
 		}
-	} catch { /* a first run has no content dir yet; nothing to compare against */ }
+	} catch (e) {
+		/* Only the case this was written for. A bare catch here would hide a real
+		   permissions or I/O failure and silently disable the tripwire. */
+		if (e?.code !== 'ENOENT') console.warn(`  ! could not check for stale scorecards: ${e?.message || e}`);
+	}
 
 	// exports — the site's "latest" copy, overwritten each quarter
 	const json = JSON.stringify(exportJson(ranked, quarter, indexSlug, indexCfg, sectorCfg), null, 2) + '\n';
