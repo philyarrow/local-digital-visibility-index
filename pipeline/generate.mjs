@@ -1180,13 +1180,20 @@ function headlineCards(b, ranked) {
 
 	/* Positions 11-20: ranked, but on page two. The cheapest ranking work
 	   available to any firm, and invisible unless someone reads the table. */
-	const positions = Object.values(b.evidence?.positions || {}).filter((p) => typeof p === 'number');
-	const near = positions.filter((p) => p >= 11 && p <= 20).length;
-	if (near) {
+	const nearMissEntries = Object.entries(b.evidence?.positions || {})
+		.filter(([, p]) => typeof p === 'number' && p >= 11 && p <= 20)
+		.sort((x, y) => x[1] - y[1]);
+	if (nearMissEntries.length) {
+		/* Name the closest keyword rather than restate the label. "Searches where
+		   this firm ranks 11-20 — the cheapest ranking work available" repeated
+		   the tile's own heading and wrapped to three lines on a phone; the
+		   keyword it is closest on is the fact a reader can act on. */
+		const [kw, pos] = nearMissEntries[0];
+		const short = kw.length > 34 ? `${kw.slice(0, 33)}…` : kw;
 		cards.push({
 			label: 'One page from the first',
-			figure: String(near),
-			note: `${near === 1 ? 'Search where this firm ranks' : 'Searches where this firm ranks'} 11-20 — the cheapest ranking work available`,
+			figure: String(nearMissEntries.length),
+			note: `Closest: ${short} at #${pos}`,
 			href: '#closest-to-the-first-page',
 			tone: 'plain',
 		});
