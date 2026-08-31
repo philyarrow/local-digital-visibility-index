@@ -2336,6 +2336,29 @@ function exportJson(ranked, quarter, indexSlug, cfg = null, sectorCfg = null) {
 		   regeneration — the same defect in miniature. It stays in the
 		   internal _ranked.json for provenance. */
 		measuredAt: ranked.measuredAt ?? ranked.scoredAt,
+		/* Who actually holds the first page. Collected since launch, rendered on
+		   the index page, and until now not exported — so the site could draw
+		   the chart but nothing else could use the numbers. It is the single
+		   most useful thing for answering "why is my business not showing up":
+		   in most of these sectors the majority of page-one slots belong to
+		   directories and national chains rather than to any local firm, and a
+		   business told to "rank higher" is being pointed at a contest it is
+		   not actually in. Top domains are capped at ten; the full landscape
+		   stays in the pipeline's own snapshot. */
+		landscape: ranked.landscape ? {
+			measuredKeywords: ranked.landscape.measuredKeywords ?? null,
+			slotsAvailable: ranked.landscape.summary?.slotsAvailable ?? null,
+			heldBySeed: ranked.landscape.summary?.heldBySeed ?? null,
+			heldByOthers: ranked.landscape.summary?.heldByOthers ?? null,
+			seedSharePct: ranked.landscape.summary?.seedSharePct ?? null,
+			distinctDomains: ranked.landscape.summary?.distinctDomains ?? null,
+			topDomains: (ranked.landscape.topDomains || []).slice(0, 10).map((d) => ({
+				domain: d.domain,
+				inSeed: d.inSeed === true,
+				top10Slots: d.top10Slots ?? null,
+				bestPosition: d.bestPosition ?? null,
+			})),
+		} : null,
 		methodology: `${SITE}/indices/methodology/`,
 		license: { name: LICENCE.name, url: LICENCE.url, terms: LICENCE.terms },
 		attribution: attributionRequired(),
