@@ -133,7 +133,13 @@ function scoreLocal(p, ctx = {}) {
 	if (typeof p.reviewCount === 'number') parts.push(clamp100(Math.min(100, Math.log10(p.reviewCount + 1) * 50)));
 	const vel = velocityScore(p.reviewsLast90d, ctx.velocityRef ?? null);
 	if (vel !== null) parts.push(vel);
-	if (typeof p.napConsistent === 'boolean') parts.push(p.napConsistent ? 100 : 50);
+	/* domainConsistent is the honest name; napConsistent is what records collected
+	   before 31 August 2026 carry. Both are read so that renaming the field does
+	   not silently drop the component for every existing record and move 271
+	   Local presence scores for a presentation change. */
+	const domainOk = typeof p.domainConsistent === 'boolean' ? p.domainConsistent
+		: typeof p.napConsistent === 'boolean' ? p.napConsistent : null;
+	if (typeof domainOk === 'boolean') parts.push(domainOk ? 100 : 50);
 	if (!parts.length) return null;
 	return clamp100(Math.round(parts.reduce((a, b) => a + b, 0) / parts.length));
 }
@@ -296,11 +302,18 @@ function computeBusiness(record, ctx = {}) {
 			aiQueryBasket: record.pillars?.ai?.queryBasket || [],
 			aiBasketSize: record.pillars?.ai?.basketSize ?? null,
 			local: {
+				/* Carried through so the scorecard can identify the business as an
+				   entity. It is the same Google place_id that produced the Local
+				   pillar score, so naming it asserts nothing the score does not
+				   already rest on. */
+				placeId: record.pillars?.local?.placeId ?? null,
+				matchedBy: record.pillars?.local?.matchedBy ?? null,
 				reviewCount: record.pillars?.local?.reviewCount ?? null,
 				avgRating: record.pillars?.local?.avgRating ?? null,
 				branchCount: record.pillars?.local?.branchCount ?? null,
 				reviewsLast90d: record.pillars?.local?.reviewsLast90d ?? null,
-				napConsistent: record.pillars?.local?.napConsistent ?? null,
+				domainConsistent: record.pillars?.local?.domainConsistent
+					?? record.pillars?.local?.napConsistent ?? null,
 				matchedBy: record.pillars?.local?.matchedBy ?? null,
 			},
 			speed: {

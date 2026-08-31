@@ -268,6 +268,13 @@ export async function collectContent(url, sectorCfg) {
 		   scoring rather than counted against the business. */
 		contentFreshnessDays: null,
 		freshnessSource: null,
+		/* The site's own contact details, captured for a future name/address/
+		   phone comparison against the Google profile. They live on this pillar
+		   because this is where the homepage is fetched; the Google side is
+		   captured on the Local pillar. Neither is scored yet and neither is
+		   published as structured data. */
+		sitePhone: null,
+		sitePostcode: null,
 		error: null,
 	};
 	/* indexedPageCount was removed rather than implemented. A true indexed-page
@@ -328,6 +335,16 @@ export async function collectContent(url, sectorCfg) {
 		   the index between firms that rank and firms that do not is whether
 		   there is anything to rank at all. */
 		out.hasBlogLink = /\bblog\b|\bnews\b|insights|case-stud|articles|resources|guides/.test(haystack);
+
+		/* The site's own contact details, for a real NAP comparison against the
+		   Google profile. Captured here because the homepage is already fetched;
+		   NOT published as structured data about the business — see the note in
+		   generate.mjs on reference versus attribute claims. Phone comes from a
+		   tel: link where one exists, which is far more reliable than matching
+		   digit runs in prose. */
+		const tel = rawHtml.match(/href=["']tel:([^"']+)["']/i);
+		out.sitePhone = normalisePhone(tel?.[1]);
+		out.sitePostcode = extractPostcode(visible);
 	} catch (e) {
 		out.error = e?.name === 'AbortError' ? 'homepage timeout' : String(e?.message || e);
 	}
@@ -450,9 +467,36 @@ export function countRecentReviews(reviewsResult, windowDays, lifetimeCount = 0)
 /* NAP consistency, checkable slice: does the website Google has on the profile
    resolve to the same registrable domain as the seed URL? A mismatch is a real
    consistency failure (stale profile, wrong site, franchise page). */
-function napConsistency(item, business) {
+/* Named domainConsistency, not napConsistency, because that is what it does.
+   It compares the domain on the Google listing with the domain we measured. It
+   does not look at name, address or telephone, and calling a domain check "NAP
+   consistency" claimed three signals while measuring one. The published
+   methodology has been narrowed to match; the fields below are being collected
+   so a real comparison can replace it once a quarter of data exists. */
+function domainConsistency(item, business) {
 	if (!item || !item.url) return null;
 	return domainsMatch(item.url, business.url);
+}
+
+/* UK telephone numbers, normalised for comparison: strip everything but digits,
+   drop a leading 44, and restore the national leading zero. "+44 (0)1452 123
+   456", "01452123456" and "01452 123456" all reduce to the same string. */
+export function normalisePhone(raw) {
+	if (!raw) return null;
+	let d = String(raw).replace(/[^\d]/g, '');
+	if (d.startsWith('44')) d = d.slice(2);
+	if (!d.startsWith('0')) d = '0' + d;
+	return d.length >= 10 && d.length <= 12 ? d : null;
+}
+
+/* A UK postcode is the one part of an address that can be compared reliably
+   between two sources. Street lines vary too much in formatting to match
+   without a normalisation library, so the postcode is what is captured and the
+   methodology says so rather than implying full address matching. */
+export function extractPostcode(text) {
+	if (!text) return null;
+	const m = String(text).toUpperCase().match(/\b([A-Z]{1,2}\d[A-Z\d]?)\s*(\d[A-Z]{2})\b/);
+	return m ? `${m[1]} ${m[2]}` : null;
 }
 
 /* Find every listing belonging to one seed business. Domain is authoritative;
@@ -509,7 +553,13 @@ function buildLocal(business, matched, gbpItem, reviewsResult, cfg, lookupError 
 		avgRating: null,
 		reviewsLast90d: null,
 		profileCompleteness: null,
-		napConsistent: null,
+		domainConsistent: null,
+		/* Captured for a real name/address/phone comparison, not yet scored. The
+		   values are recorded on both sides so the check can be built and validated
+		   against a quarter of real data before it is allowed to move anyone's
+		   score. Nothing here is published as structured data about the business. */
+		gbpPhone: null,
+		gbpPostcode: null,
 		placeId: null,
 		branchCount: null,
 		claimed: null,
@@ -524,13 +574,17 @@ function buildLocal(business, matched, gbpItem, reviewsResult, cfg, lookupError 
 		out.branchCount = agg.branchCount;
 		out.claimed = agg.claimed;
 		out.placeId = agg.placeIds[0] || null;
-		out.napConsistent = napConsistency(matched.items[0], business);
+		out.domainConsistent = domainConsistency(matched.items[0], business);
+		out.gbpPhone = normalisePhone(matched.items[0]?.phone);
+		out.gbpPostcode = extractPostcode(matched.items[0]?.address);
 	} else if (gbpItem) {
 		out.placeId = gbpItem.place_id || gbpItem.cid || null;
 		out.avgRating = typeof gbpItem.rating?.value === 'number' ? gbpItem.rating.value : null;
 		out.reviewCount = typeof gbpItem.rating?.votes_count === 'number' ? gbpItem.rating.votes_count : null;
 		out.profileCompleteness = profileCompleteness(gbpItem);
-		out.napConsistent = napConsistency(gbpItem, business);
+		out.domainConsistent = domainConsistency(gbpItem, business);
+		out.gbpPhone = normalisePhone(gbpItem?.phone);
+		out.gbpPostcode = extractPostcode(gbpItem?.address);
 		out.branchCount = 1;
 	} else {
 		/* Distinguish "we looked and it isn't there" from "the lookup failed" —

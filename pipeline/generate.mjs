@@ -267,9 +267,65 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 	const medians = ranked.sectorMedians;
 	const cov = coverage(ranked);
 
+	/* Entity identification.
+	 *
+	 * The scorecard used to carry one blank LocalBusiness node nested inside
+	 * Dataset.about — no @id, so nothing could reconcile it with anything, and
+	 * "this dataset is about X" is not the same claim as "this page is about X".
+	 * Scorecards are wpType "page", so Head.astro emits no Article and there was
+	 * no WebPage node either: across 271 pages the only entity statement was one
+	 * buried inside a Dataset.
+	 *
+	 * Now a connected @graph — WebPage about the business, the business itself
+	 * with an @id in our own namespace, and the Dataset — with sameAs pointing at
+	 * where the entity is authoritatively described.
+	 *
+	 * What is deliberately NOT asserted, permanently: address, telephone and
+	 * aggregateRating. We hold avgRating and reviewCount and they must never be
+	 * emitted — third-party review markup about an entity you do not own is a
+	 * self-serving-review violation. The only address available anywhere is a
+	 * Companies House registered office, which is frequently the firm's
+	 * accountant rather than its premises, and 22 of these businesses have two to
+	 * five branches so a single address is wrong by construction.
+	 *
+	 * The line: name, url, sameAs and identifier are REFERENCE claims — here is
+	 * where this entity is authoritatively described. Address, telephone and
+	 * rating are ATTRIBUTE claims — here is what this entity is. A third party
+	 * publishes the first set only. */
+	const cardUrl = `${SITE}/indices/${indexSlug}/${b.slug}/`;
+	const bizId = `${cardUrl}#business`;
+
+	const sameAs = [];
+	const pid = b.evidence?.local?.placeId;
+	/* Gated on match quality. A name-only listing match is the one case where the
+	   identity claim is weakest, and sameAs is a hard assertion. */
+	if (pid && /^ChIJ[A-Za-z0-9_-]+$/.test(pid) && b.evidence?.local?.matchedBy !== 'name-category') {
+		sameAs.push(`https://www.google.com/maps/place/?q=place_id:${pid}`);
+	}
+	const ch = b.enrichment?.companies;
+	const chNum = ch?.matched && /^(?:\d{8}|[A-Z]{2}\d{6})$/.test(ch.companyNumber || '') ? ch.companyNumber : null;
+	if (chNum) sameAs.push(`https://find-and-update.company-information.service.gov.uk/company/${chNum}`);
+
+	const business = {
+		'@type': sectorCopy(indexSlug)?.schemaType || 'LocalBusiness',
+		'@id': bizId,
+		name: b.name,
+		...(b.url ? { url: b.url } : {}),
+		...(sameAs.length ? { sameAs } : {}),
+		...(chNum ? {
+			identifier: {
+				'@type': 'PropertyValue',
+				propertyID: 'GB-COH',
+				name: 'UK Companies House company number',
+				value: chNum,
+			},
+		} : {}),
+	};
+
 	const dataset = {
-		'@context': 'https://schema.org',
 		'@type': 'Dataset',
+		'@id': `${cardUrl}#dataset`,
+		url: cardUrl,
 		name: `${b.name} — ${idTitleQuarter(idxTitle, quarter)}`,
 		description: `Digital Visibility Score and six-pillar breakdown for ${b.name}, measured ${date} via the PYC ${idxTitle} Digital Visibility Index.`,
 		/* Reference the site-wide Organization node by @id rather than declaring a
@@ -286,13 +342,41 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 		copyrightYear: new Date(ranked.measuredAt ?? ranked.scoredAt).getUTCFullYear(),
 		dateModified: date,
 		isPartOf: { '@type': 'Dataset', name: `PYC ${idxTitle} Digital Visibility Index`, url: `${SITE}/indices/${indexSlug}/` },
-		about: { '@type': 'LocalBusiness', name: b.name, url: b.url },
+		about: { '@id': bizId },
+		mainEntityOfPage: { '@id': `${cardUrl}#webpage` },
+	};
+
+	const graph = {
+		'@context': 'https://schema.org',
+		'@graph': [
+			{
+				'@type': 'WebPage',
+				'@id': `${cardUrl}#webpage`,
+				url: cardUrl,
+				name: `${b.name} — ${idxTitle} Digital Visibility Score`,
+				isPartOf: { '@id': `${SITE}/#site` },
+				about: { '@id': bizId },
+				mainEntity: { '@id': bizId },
+				publisher: { '@id': `${SITE}/#org` },
+				datePublished: date,
+				dateModified: date,
+			},
+			business,
+			dataset,
+		],
 	};
 
 	const fm = [
 		'---',
 		`title: ${yamlStr(`${b.name} — ${idxTitle} Digital Visibility Score`)}`,
-		`description: ${yamlStr(`${b.name} scores ${b.digitalVisibilityScore ?? 'n/a'}/100 on the PYC ${idxTitle} Digital Visibility Index — pillar breakdown, sector comparison, and prioritised fixes. Measured ${quarter}.`)}`,
+		/* Rank and quarter first, index name dropped.
+		   The old wording ran to a median 171 characters with 248 of 271 over the
+		   ~160 a search result shows, and what got truncated was "Measured
+		   <quarter>" — the freshness stamp, which is the one thing distinguishing
+		   this page from the business's own site and from every directory. It also
+		   spent its budget restating the name and the index, both already in the
+		   title. Rank against cohort is the fact no competing result can state. */
+		`description: ${yamlStr(`${b.name} scored ${b.digitalVisibilityScore ?? 'n/a'}/100 in ${quarter}, rank ${b.rank ?? '—'} of ${ranked.count}. Pillar breakdown, sector medians and prioritised fixes — every figure reproducible.`)}`,
 		`date: ${date}`,
 		`lastUpdated: ${date}`,
 		'wpType: "page"',
@@ -339,6 +423,7 @@ ${leader.name} leads the index with ${leader.digitalVisibilityScore}/100. ${gapT
 
 ${topFixes(b, sectorCopy(indexSlug)).map((f, i) => `${i + 1}. ${f}`).join('\n')}
 
+${section('Firms ranked near this one', comparables(b, ranked, indexSlug))}
 ${contextCard(b)}
 ${whereToFix(b)}
 ${pager(b, ranked, indexSlug)}
@@ -347,7 +432,7 @@ ${pager(b, ranked, indexSlug)}
 
 *How this is measured: see the [index methodology](/indices/methodology/), and the [statistical methods](/glossary/) behind each pillar. This index is published by [PYC](https://pyc.agency/about/); if you want this score moved, [start here](https://pyc.agency/).*
 
-<script type="application/ld+json">${JSON.stringify(dataset)}</script>
+<script type="application/ld+json">${JSON.stringify(graph)}</script>
 `;
 }
 
@@ -460,6 +545,68 @@ function pillarTable(b, medians) {
    
    Static HTML, no script. It also puts ~158 contextual links into the index
    cluster, each one carrying a rank and a score as its own context. */
+/* Firms immediately around this one in the ranking, beyond the pager's ±1.
+ *
+ * Scorecards had a median of three inbound internal links: one from the league
+ * table row, two from the pagers of the firms either side. The top and bottom
+ * of each index had two, and a deep page on a young domain with two inbound
+ * links is crawled rarely and ranks weakly.
+ *
+ * A symmetric rank window, and nothing cleverer. Two designs were rejected in
+ * favour of it. Linking the sector leader from every card gave rank-1 pages 55,
+ * 52, 44 and 41 inbound links — the footprint of a link scheme rather than a
+ * reader feature. Adding "beats you on your weakest pillar" and "closest
+ * profile match" slots bought one extra median link and pushed the maximum
+ * in-degree to 34 of 55, and both collapse where a cohort ties: Gloucester
+ * restaurants has sector medians of 0 for Visibility and AI, so dozens of firms
+ * are exactly equal and every page would point at the same firm.
+ *
+ * The window is flat by construction. In-degree is structural — every firm sits
+ * in the window of the four firms nearest it in rank, whether or not it picks
+ * them back — so no page can accumulate an anomalous share.
+ *
+ * Every row states why it is there in terms the reader can check against the
+ * table they just looked at, and the anchor is the firm's name with its rank
+ * and score beside it, the same convention the pager uses. */
+function comparables(b, ranked, indexSlug) {
+	if (b.rank === null || b.rank === undefined) return '';
+	const byRank = ranked.businesses
+		.filter((x) => x.rank !== null && x.rank !== undefined)
+		.sort((x, y) => x.rank - y.rank);
+	const i = byRank.findIndex((x) => x.slug === b.slug);
+	if (i < 0 || byRank.length < 4) return '';
+
+	/* Never duplicate the pager: it already links ±1. */
+	const taken = new Set([b.slug, byRank[i - 1]?.slug, byRank[i + 1]?.slug].filter(Boolean));
+	const picked = [];
+	/* Walk outward from d=2. The outward walk is what lets the top and bottom
+	   of the table fill four slots too, rather than falling short. */
+	for (let d = 2; d < byRank.length && picked.length < 4; d++) {
+		for (const cand of [byRank[i - d], byRank[i + d]]) {
+			if (picked.length >= 4) break;
+			if (!cand || taken.has(cand.slug)) continue;
+			taken.add(cand.slug);
+			const places = Math.abs(cand.rank - b.rank);
+			picked.push({
+				firm: cand,
+				why: `${places} place${places === 1 ? '' : 's'} ${cand.rank < b.rank ? 'above' : 'below'} you`,
+			});
+		}
+	}
+	if (!picked.length) return '';
+
+	const rows = picked.map(({ firm, why }) =>
+		`<tr><th scope="row"><a href="/indices/${esc(indexSlug)}/${esc(firm.slug)}/">${esc(firm.name)}</a></th>`
+		+ `<td class="pyc-cmp-n">#${firm.rank}</td>`
+		+ `<td class="pyc-cmp-n">${firm.digitalVisibilityScore}/100</td>`
+		+ `<td>${esc(why)}</td></tr>`).join('');
+
+	return `<figure class="pyc-fig">
+<figcaption>The firms nearest ${esc(b.name)} in this ranking, beyond the two either side.</figcaption>
+<table class="pyc-cmp"><thead><tr><th scope="col">Firm</th><th scope="col">Rank</th><th scope="col">Score</th><th scope="col">Why it is here</th></tr></thead><tbody>${rows}</tbody></table>
+</figure>`;
+}
+
 function pager(b, ranked, indexSlug) {
 	if (b.rank === null || b.rank === undefined) return '';
 	const byRank = ranked.businesses
@@ -1145,7 +1292,7 @@ function localCard(b) {
 	['Reviews', l.reviewCount],
 	['Locations', l.branchCount],
 	['Reviews in last 90 days', l.reviewsLast90d],
-	['Address matches website', l.napConsistent === null ? null : (l.napConsistent ? 'yes' : 'no')],
+	['Address matches website', (l.domainConsistent ?? l.napConsistent) === null ? null : ((l.domainConsistent ?? l.napConsistent) ? 'yes' : 'no')],
 ])}</tbody></table>
 </figure>`;
 }
@@ -2393,6 +2540,13 @@ function exportJson(ranked, quarter, indexSlug, cfg = null, sectorCfg = null) {
 			/* Published so the homepage-link analysis on the blog is
 			   reproducible from this file, as that piece states it is. */
 			contentChecks: b.evidence?.content ?? null,
+			/* The identifiers behind the scorecard's sameAs claims. Exported because a
+			   page must not assert anything the dated snapshot cannot reproduce — the
+			   entity identification is now part of what is published, so it has to be
+			   checkable from the open data like every score is. */
+			localMatch: b.evidence?.local
+				? { placeId: b.evidence.local.placeId ?? null, matchedBy: b.evidence.local.matchedBy ?? null }
+				: null,
 			/* The scorecard publishes a Companies House number, a CrUX reading
 			   and crawl metrics. The dated snapshot is this project's receipt
 			   for what was published, so anything asserted on a page has to be
@@ -2593,6 +2747,37 @@ async function main() {
 		await writeFile(join(contentDir, `${b.slug}.md`), scorecardMdx(b, ranked, quarter, indexSlug));
 		cards++;
 	}
+	/* Stale-scorecard tripwire.
+	 *
+	 * This generator writes and never prunes, so a business dropped from a seed
+	 * leaves its scorecard behind permanently — live, canonical, in the sitemap,
+	 * and publishing a rank against a cohort size that no longer exists. Three
+	 * Cheltenham venues sat that way for two days after being removed from the
+	 * Gloucester restaurant index, one of them showing 23/100 for a named real
+	 * business on a page asserting every figure is reproducible from a dataset
+	 * that no longer contained it.
+	 *
+	 * It WARNS rather than deletes, deliberately. Deleting would drop a live URL
+	 * with no redirect, which is the one rule CLAUDE.md states flatly — and this
+	 * script cannot know what the right redirect target is. Retiring a scorecard
+	 * is an editorial decision with a redirect attached, not a cleanup step. */
+	try {
+		const present = (await readdir(contentDir))
+			.filter((f) => f.endsWith('.md') && f !== 'index.md')
+			.map((f) => f.replace(/\.md$/, ''));
+		const current = new Set(ranked.businesses.map((b) => b.slug));
+		const stale = present.filter((slug) => !current.has(slug));
+		if (stale.length) {
+			console.warn(
+				`\n  ! ${stale.length} stale scorecard(s) in ${indexSlug} — not in this index any more:\n`
+				+ stale.map((s2) => `      ${s2}`).join('\n')
+				+ `\n    They are still live and in the sitemap. Retire them: delete the .md and add a`
+				+ `\n    301 to new/public/_redirects by hand. Do NOT run scripts/build-redirects.mjs —`
+				+ `\n    it overwrites that file and drops every hand-added rule.\n`,
+			);
+		}
+	} catch { /* a first run has no content dir yet; nothing to compare against */ }
+
 	// exports — the site's "latest" copy, overwritten each quarter
 	const json = JSON.stringify(exportJson(ranked, quarter, indexSlug, indexCfg, sectorCfg), null, 2) + '\n';
 	const csv = exportCsv(ranked);
