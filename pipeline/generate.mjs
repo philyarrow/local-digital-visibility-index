@@ -397,6 +397,11 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 		],
 	};
 
+	/* The page used to open with a bold restatement of its own title — the firm
+	   name and index name again, adding only the quarter, which the blockquote
+	   below already dates more precisely. With the h1 and the blockquote that
+	   made three near-identical statements in the first four lines and pushed
+	   the score, the thing a reader came for, below them. Removed. */
 	const fm = [
 		'---',
 		`title: ${yamlStr(`${b.name} — ${idxTitle} Digital Visibility Score`)}`,
@@ -419,8 +424,6 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 	const movement = ''; // QoQ trend filled by the quarterly cron once a prior snapshot exists.
 
 	return `${fm}
-
-**${b.name}** — PYC ${idxTitle} Digital Visibility Index, ${quarter}
 
 **Digital Visibility Score: ${b.digitalVisibilityScore ?? 'n/a'} / 100**  ·  Rank ${b.rank ?? '—'} of ${ranked.count}${movement}
 
