@@ -427,6 +427,8 @@ function scorecardMdx(b, ranked, quarter, indexSlug) {
 
 **Digital Visibility Score: ${b.digitalVisibilityScore ?? 'n/a'} / 100**  ·  Rank ${b.rank ?? '—'} of ${ranked.count}${movement}
 
+${headlineCards(b, ranked)}
+
 ${cardBanner(cov)}> Measured ${human} via the PYC ${idxTitle} Digital Visibility Index. Every figure is objective and reproducible from the [methodology](/indices/methodology/). Spotted an error? [Request a correction](mailto:info@philyarrow.co.uk?subject=Correction:%20${encodeURIComponent(b.name)}).
 
 ## Pillar breakdown vs sector median
@@ -1132,7 +1134,95 @@ function labVsField(b) {
  *
  * Only unambiguous, checkable, actionable failures go here. Not "your score is
  * low": that is what the score is for. */
-function problemsFound(b) {
+/* The five-second read.
+ *
+ * Everything on a scorecard was a table or a chart, so learning anything took
+ * reading. These four tiles answer the questions a business owner actually
+ * arrives with — where do I stand, what is broken, what is closest to winning,
+ * where am I furthest behind — and each one links to the section that proves it.
+ *
+ * Deliberately four facts, not a dashboard of everything available. A tile that
+ * restates the score in a different unit, or shows a number nobody can act on,
+ * makes the other three harder to find. Each tile here is either a position, a
+ * fault, an opportunity or a gap, and all four are already published further
+ * down the page — this is navigation and emphasis, not new claims. */
+function headlineCards(b, ranked) {
+	const cards = [];
+
+	if (typeof b.digitalVisibilityScore === 'number') {
+		/* Only when it is genuinely the top half. The percentile of the bottom-ranked
+		   firm is 0, which rendered as "top 100%" — true arithmetically, absurd as a
+		   statement, and worst on exactly the pages least able to afford looking
+		   careless. "Rank 8 of 8" already says it. */
+		const pc = typeof b.percentile === 'number' && b.percentile >= 50
+			? `top ${Math.max(1, 100 - b.percentile)}%`
+			: null;
+		cards.push({
+			label: 'Digital Visibility Score',
+			figure: `${b.digitalVisibilityScore}<span class="pyc-hc-of">/100</span>`,
+			note: b.rank ? `Rank ${b.rank} of ${ranked.count}${pc ? ` · ${pc}` : ''}` : 'Not ranked',
+			href: '#pillar-breakdown-vs-sector-median',
+			tone: 'plain',
+		});
+	}
+
+	const probs = problemItems(b);
+	const crit = probs.filter((p) => p[0] === 'critical');
+	if (probs.length) {
+		cards.push({
+			label: crit.length ? 'Critical problem' + (crit.length === 1 ? '' : 's') : 'Problems found',
+			figure: String(crit.length || probs.length),
+			note: crit.length ? crit[0][1] : probs[0][1],
+			href: '#problems-found',
+			tone: crit.length ? 'critical' : 'warning',
+		});
+	}
+
+	/* Positions 11-20: ranked, but on page two. The cheapest ranking work
+	   available to any firm, and invisible unless someone reads the table. */
+	const positions = Object.values(b.evidence?.positions || {}).filter((p) => typeof p === 'number');
+	const near = positions.filter((p) => p >= 11 && p <= 20).length;
+	if (near) {
+		cards.push({
+			label: 'One page from the first',
+			figure: String(near),
+			note: `${near === 1 ? 'Search where this firm ranks' : 'Searches where this firm ranks'} 11-20 — the cheapest ranking work available`,
+			href: '#closest-to-the-first-page',
+			tone: 'plain',
+		});
+	}
+
+	/* Furthest below the sector median, which is the comparison that matters —
+	   a low absolute score in a pillar where everyone is low is not a gap. */
+	const medians = ranked.sectorMedians || {};
+	let worst = null;
+	for (const p of PILLARS) {
+		const mine = b.pillarScores?.[p.key], med = medians[p.key];
+		if (typeof mine !== 'number' || typeof med !== 'number') continue;
+		const delta = mine - med;
+		if (delta < 0 && (!worst || delta < worst.delta)) worst = { key: p.key, label: p.label, delta, mine, med };
+	}
+	if (worst) {
+		cards.push({
+			label: 'Furthest behind',
+			figure: `${worst.delta}`,
+			note: `${worst.label}: ${worst.mine} against a sector median of ${worst.med}`,
+			href: '#pillar-breakdown-vs-sector-median',
+			tone: 'warning',
+		});
+	}
+
+	if (cards.length < 2) return '';
+
+	return `<div class="pyc-hcards">`
+		+ cards.map((c) => `<a class="pyc-hc pyc-hc-${c.tone}" href="${c.href}">`
+			+ `<span class="pyc-hc-label">${esc(c.label)}</span>`
+			+ `<span class="pyc-hc-fig">${c.figure}</span>`
+			+ `<span class="pyc-hc-note">${esc(c.note)}</span></a>`).join('')
+		+ `</div>`;
+}
+
+function problemItems(b) {
 	const t = b.evidence?.technical || {};
 	const c = b.evidence?.content || {};
 	const items = [];
@@ -1172,6 +1262,11 @@ function problemsFound(b) {
 		items.push(['note', 'The site has not changed in a long time',
 			`The homepage last reported a change ${Math.round(c.contentFreshnessDays / 365 * 10) / 10} years ago.`]);
 	}
+	return items;
+}
+
+function problemsFound(b) {
+	const items = problemItems(b);
 	if (!items.length) return '';
 
 	const label = { critical: 'Critical', warning: 'Worth fixing', note: 'Worth knowing' };
