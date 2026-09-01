@@ -1,0 +1,4 @@
+{
+  "_comment": "Hand-assigned stable business identities — the last resort in the precedence chain in lib/identity.mjs (place_id, then registrable domain, then here). An entry is a deliberate human decision that two records are the same firm, so every one carries a note saying why it was needed and the date it was added. Keys are the stable id itself: pick something durable and descriptive, never a score, a rank or a quarter. `aliases` are '<index>/<name-slug>' lookups, matching the slug in the page URL — add the new alias when a firm renames, keep the old one. `urls` pin a business by registrable domain and are what survives a rename, so prefer them. Nothing here should be needed for a business that has a place_id; if you are reaching for this file often, the collector's local matching is the thing to fix.",
+  "entries": {}
+}
