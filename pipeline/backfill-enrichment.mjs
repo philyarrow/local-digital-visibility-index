@@ -8,7 +8,7 @@
  * Enrichment is not scored, so adding it cannot change a single ranking. This
  * writes only record.enrichment and never touches record.pillars.
  *
- *   node backfill-enrichment.mjs                 # all indices, free sources only
+ *   node backfill-enrichment.mjs                 # published indices, free sources only
  *   node backfill-enrichment.mjs --with-paid     # adds GBP detail and backlinks
  *   node backfill-enrichment.mjs <slug> [...]    # limit to named indices
  *   node backfill-enrichment.mjs --force         # redo work already present
@@ -30,7 +30,14 @@ const only = argv.filter((a) => !a.startsWith('--'));
 
 const indices = JSON.parse(await readFile(join(HERE, 'config', 'indices.json'), 'utf8'));
 const sectors = JSON.parse(await readFile(join(HERE, 'config', 'sectors.json'), 'utf8'));
-const slugs = Object.keys(indices).filter((k) => !k.startsWith('_')).filter((k) => !only.length || only.includes(k));
+/* Published indices by default, because --with-paid buys a businessListings
+   sweep per index. The old filter was "every configured index", which was
+   harmless only while data/ contained nothing but published cohorts — and the
+   documented way to publish a new index is to collect it first, which breaks
+   exactly that assumption. Name slugs explicitly to reach an unpublished one. */
+const slugs = Object.keys(indices)
+	.filter((k) => !k.startsWith('_'))
+	.filter((k) => (only.length ? only.includes(k) : indices[k]?.publish === true));
 
 let done = 0, skipped = 0;
 

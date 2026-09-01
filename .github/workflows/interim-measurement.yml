@@ -79,12 +79,22 @@ jobs:
           REQUESTED: ${{ inputs.indices }}
         run: |
           set -euo pipefail
+          # Blank input means "every PUBLISHED index", not "every index in the
+          # file". On 2026-09-01 those read as the same sentence and are not the
+          # same thing: 21 unreviewed cohorts had landed in indices.json, this
+          # step enumerated all 32, and the run had to be killed by hand after
+          # ~7 hours to stop it archiving public measurements for seeds nobody
+          # had read. "Remember not to commit the config" is not a control.
+          #
+          # An explicit dispatch still overrides — collecting a cohort before it
+          # is published is how it becomes published — but that path needs a
+          # person to type the slug.
           if [ -n "${REQUESTED:-}" ]; then
             SLUGS="$REQUESTED"
           else
             SLUGS=$(node -e "
               const c = require('./pipeline/config/indices.json');
-              console.log(Object.keys(c).filter(k => !k.startsWith('_')).join(' '));
+              console.log(Object.keys(c).filter(k => !k.startsWith('_') && c[k] && c[k].publish === true).join(' '));
             ")
           fi
           MATRIX=$(node -e "

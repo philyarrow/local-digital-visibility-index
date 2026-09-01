@@ -1,5 +1,5 @@
 {
-	"_comment": "Index registry: slug -> sector + location. The slug must match the seed CSV filename in seeds/. Adding an index is one entry here plus a seed CSV (generate one with business_listings/search rather than by hand). locationName must be a DataForSEO location string - 'Town,Region,Country'. areas are the named neighbourhoods used for the area-specific keywords and the fifth AI prompt. coordinate is 'lat,lng,radiusKm' for the business_listings sweep that powers Local presence.",
+	"_comment": "Index registry: slug -> sector + location. The slug must match the seed CSV filename in seeds/. publish marks an index as reviewed and live: a scheduled run measures only these, so a cohort whose seed no human has read can never be collected or archived by the cron. Set it true in the same commit that first publishes the index. Adding an index is one entry here plus a seed CSV (generate one with business_listings/search rather than by hand). locationName must be a DataForSEO location string - 'Town,Region,Country'. areas are the named neighbourhoods used for the area-specific keywords and the fifth AI prompt. coordinate is 'lat,lng,radiusKm' for the business_listings sweep that powers Local presence.",
 	"bristol-estate-agents": {
 		"sector": "estate-agents",
 		"town": "Bristol",
@@ -8,7 +8,8 @@
 			"Clifton",
 			"Redland"
 		],
-		"coordinate": "51.4545,-2.5879,12"
+		"coordinate": "51.4545,-2.5879,12",
+		"publish": true
 	},
 	"bath-estate-agents": {
 		"sector": "estate-agents",
@@ -18,7 +19,8 @@
 			"Widcombe",
 			"Lansdown"
 		],
-		"coordinate": "51.3811,-2.3590,10"
+		"coordinate": "51.3811,-2.3590,10",
+		"publish": true
 	},
 	"swindon-estate-agents": {
 		"sector": "estate-agents",
@@ -28,7 +30,8 @@
 			"Old Town",
 			"Wroughton"
 		],
-		"coordinate": "51.5558,-1.7797,10"
+		"coordinate": "51.5558,-1.7797,10",
+		"publish": true
 	},
 	"exeter-solicitors": {
 		"sector": "solicitors",
@@ -38,7 +41,8 @@
 			"St Leonards",
 			"Heavitree"
 		],
-		"coordinate": "50.7184,-3.5339,10"
+		"coordinate": "50.7184,-3.5339,10",
+		"publish": true
 	},
 	"cheltenham-law-firms": {
 		"sector": "law-firms",
@@ -48,7 +52,8 @@
 			"Montpellier",
 			"Pittville"
 		],
-		"coordinate": "51.9000,-2.0800,10"
+		"coordinate": "51.9000,-2.0800,10",
+		"publish": true
 	},
 	"bristol-dentists": {
 		"sector": "dentists",
@@ -58,7 +63,8 @@
 			"Clifton",
 			"Bishopston"
 		],
-		"coordinate": "51.4545,-2.5879,12"
+		"coordinate": "51.4545,-2.5879,12",
+		"publish": true
 	},
 	"gloucester-construction": {
 		"sector": "construction",
@@ -68,7 +74,8 @@
 			"Quedgeley",
 			"Hucclecote"
 		],
-		"coordinate": "51.8642,-2.2380,10"
+		"coordinate": "51.8642,-2.2380,10",
+		"publish": true
 	},
 	"gloucester-accountants": {
 		"sector": "accountants",
@@ -78,7 +85,8 @@
 			"Quedgeley",
 			"Hucclecote"
 		],
-		"coordinate": "51.8642,-2.2380,10"
+		"coordinate": "51.8642,-2.2380,10",
+		"publish": true
 	},
 	"cheltenham-construction": {
 		"sector": "construction",
@@ -88,7 +96,8 @@
 			"Montpellier",
 			"Charlton Kings"
 		],
-		"coordinate": "51.9000,-2.0800,10"
+		"coordinate": "51.9000,-2.0800,10",
+		"publish": true
 	},
 	"worcester-construction": {
 		"sector": "construction",
@@ -98,7 +107,8 @@
 			"St John's",
 			"Barbourne"
 		],
-		"coordinate": "52.1936,-2.2200,10"
+		"coordinate": "52.1936,-2.2200,10",
+		"publish": true
 	},
 	"gloucester-restaurants": {
 		"sector": "restaurants",
@@ -108,7 +118,8 @@
 			"Gloucester Quays",
 			"Westgate"
 		],
-		"coordinate": "51.8642,-2.2380,8"
+		"coordinate": "51.8642,-2.2380,8",
+		"publish": true
 	},
 	"bath-architects": {
 		"sector": "architects",
@@ -118,7 +129,8 @@
 			"Widcombe",
 			"Lansdown"
 		],
-		"coordinate": "51.3811,-2.3590,10"
+		"coordinate": "51.3811,-2.3590,10",
+		"publish": false
 	},
 	"bath-physiotherapy": {
 		"sector": "physiotherapy",
@@ -128,7 +140,8 @@
 			"Widcombe",
 			"Lansdown"
 		],
-		"coordinate": "51.3811,-2.3590,10"
+		"coordinate": "51.3811,-2.3590,10",
+		"publish": false
 	},
 	"bath-vets": {
 		"sector": "vets",
@@ -138,7 +151,8 @@
 			"Widcombe",
 			"Lansdown"
 		],
-		"coordinate": "51.3811,-2.3590,10"
+		"coordinate": "51.3811,-2.3590,10",
+		"publish": false
 	},
 	"bristol-architects": {
 		"sector": "architects",
@@ -148,7 +162,8 @@
 			"Clifton",
 			"Redland"
 		],
-		"coordinate": "51.4545,-2.5879,12"
+		"coordinate": "51.4545,-2.5879,12",
+		"publish": false
 	},
 	"bristol-physiotherapy": {
 		"sector": "physiotherapy",
@@ -158,7 +173,8 @@
 			"Clifton",
 			"Redland"
 		],
-		"coordinate": "51.4545,-2.5879,12"
+		"coordinate": "51.4545,-2.5879,12",
+		"publish": false
 	},
 	"bristol-vets": {
 		"sector": "vets",
@@ -168,7 +184,8 @@
 			"Clifton",
 			"Redland"
 		],
-		"coordinate": "51.4545,-2.5879,12"
+		"coordinate": "51.4545,-2.5879,12",
+		"publish": false
 	},
 	"cheltenham-architects": {
 		"sector": "architects",
@@ -178,7 +195,8 @@
 			"Montpellier",
 			"Charlton Kings"
 		],
-		"coordinate": "51.9000,-2.0800,10"
+		"coordinate": "51.9000,-2.0800,10",
+		"publish": false
 	},
 	"cheltenham-physiotherapy": {
 		"sector": "physiotherapy",
@@ -188,7 +206,8 @@
 			"Montpellier",
 			"Charlton Kings"
 		],
-		"coordinate": "51.9000,-2.0800,10"
+		"coordinate": "51.9000,-2.0800,10",
+		"publish": false
 	},
 	"cheltenham-vets": {
 		"sector": "vets",
@@ -198,7 +217,8 @@
 			"Montpellier",
 			"Charlton Kings"
 		],
-		"coordinate": "51.9000,-2.0800,10"
+		"coordinate": "51.9000,-2.0800,10",
+		"publish": false
 	},
 	"exeter-architects": {
 		"sector": "architects",
@@ -208,7 +228,8 @@
 			"Heavitree",
 			"St Leonards"
 		],
-		"coordinate": "50.7184,-3.5339,10"
+		"coordinate": "50.7184,-3.5339,10",
+		"publish": false
 	},
 	"exeter-physiotherapy": {
 		"sector": "physiotherapy",
@@ -218,7 +239,8 @@
 			"Heavitree",
 			"St Leonards"
 		],
-		"coordinate": "50.7184,-3.5339,10"
+		"coordinate": "50.7184,-3.5339,10",
+		"publish": false
 	},
 	"exeter-vets": {
 		"sector": "vets",
@@ -228,7 +250,8 @@
 			"Heavitree",
 			"St Leonards"
 		],
-		"coordinate": "50.7184,-3.5339,10"
+		"coordinate": "50.7184,-3.5339,10",
+		"publish": false
 	},
 	"gloucester-architects": {
 		"sector": "architects",
@@ -238,7 +261,8 @@
 			"Quedgeley",
 			"Hucclecote"
 		],
-		"coordinate": "51.8642,-2.2380,10"
+		"coordinate": "51.8642,-2.2380,10",
+		"publish": false
 	},
 	"gloucester-physiotherapy": {
 		"sector": "physiotherapy",
@@ -248,7 +272,8 @@
 			"Quedgeley",
 			"Hucclecote"
 		],
-		"coordinate": "51.8642,-2.2380,10"
+		"coordinate": "51.8642,-2.2380,10",
+		"publish": false
 	},
 	"gloucester-vets": {
 		"sector": "vets",
@@ -258,7 +283,8 @@
 			"Quedgeley",
 			"Hucclecote"
 		],
-		"coordinate": "51.8642,-2.2380,10"
+		"coordinate": "51.8642,-2.2380,10",
+		"publish": false
 	},
 	"swindon-architects": {
 		"sector": "architects",
@@ -268,7 +294,8 @@
 			"Old Town",
 			"Wroughton"
 		],
-		"coordinate": "51.5558,-1.7797,10"
+		"coordinate": "51.5558,-1.7797,10",
+		"publish": false
 	},
 	"swindon-physiotherapy": {
 		"sector": "physiotherapy",
@@ -278,7 +305,8 @@
 			"Old Town",
 			"Wroughton"
 		],
-		"coordinate": "51.5558,-1.7797,10"
+		"coordinate": "51.5558,-1.7797,10",
+		"publish": false
 	},
 	"swindon-vets": {
 		"sector": "vets",
@@ -288,7 +316,8 @@
 			"Old Town",
 			"Wroughton"
 		],
-		"coordinate": "51.5558,-1.7797,10"
+		"coordinate": "51.5558,-1.7797,10",
+		"publish": false
 	},
 	"worcester-architects": {
 		"sector": "architects",
@@ -298,7 +327,8 @@
 			"St Johns",
 			"Barbourne"
 		],
-		"coordinate": "52.1936,-2.2200,10"
+		"coordinate": "52.1936,-2.2200,10",
+		"publish": false
 	},
 	"worcester-physiotherapy": {
 		"sector": "physiotherapy",
@@ -308,7 +338,8 @@
 			"St Johns",
 			"Barbourne"
 		],
-		"coordinate": "52.1936,-2.2200,10"
+		"coordinate": "52.1936,-2.2200,10",
+		"publish": false
 	},
 	"worcester-vets": {
 		"sector": "vets",
@@ -318,6 +349,7 @@
 			"St Johns",
 			"Barbourne"
 		],
-		"coordinate": "52.1936,-2.2200,10"
+		"coordinate": "52.1936,-2.2200,10",
+		"publish": false
 	}
 }

@@ -11,7 +11,7 @@
  * homepage and rewrites only pillars.content, which keeps the correction
  * isolated and costs nothing — no paid API is involved.
  *
- *   node backfill-content.mjs            # every configured index
+ *   node backfill-content.mjs            # every published index
  *   node backfill-content.mjs <slug>     # one
  */
 import { readFile, writeFile, readdir } from 'node:fs/promises';
@@ -24,7 +24,12 @@ const only = process.argv[2] || null;
 
 const indices = JSON.parse(await readFile(join(HERE, 'config', 'indices.json'), 'utf8'));
 const sectors = JSON.parse(await readFile(join(HERE, 'config', 'sectors.json'), 'utf8'));
-const slugs = Object.keys(indices).filter((k) => !k.startsWith('_')).filter((k) => !only || k === only);
+/* Published indices by default; name a slug to reach an unpublished one.
+   Free to run, so this is about not silently rewriting pillars.content on a
+   cohort nobody has reviewed rather than about spend. */
+const slugs = Object.keys(indices)
+	.filter((k) => !k.startsWith('_'))
+	.filter((k) => (only ? k === only : indices[k]?.publish === true));
 
 let totalChanged = 0, totalSeen = 0;
 

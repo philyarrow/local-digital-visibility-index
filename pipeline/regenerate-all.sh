@@ -7,16 +7,84 @@
 # are surfaced and a single failure fails the run.
 set -euo pipefail
 
-SITE_ROOT="${1:-../../hub.philyarrow.co.uk}"
-QUARTER="${2:-Q3-2026}"
+# usage: regenerate-all.sh [SITE_ROOT] [QUARTER] [--only slug...]
+#
+# Slugs go behind --only, never in a bare positional. The bare positionals are
+# SITE_ROOT then QUARTER, and a slug in either slot is not detectable after the
+# fact: `regenerate-all.sh ../../site bristol-dentists` would take the slug as
+# the quarter, stamp "bristol-dentists" into 11 pages' titles and JSON-LD, and
+# write data/<slug>/bristol-dentists.json beside the real snapshot — exit 0, no
+# complaint. Both positionals are therefore validated below rather than trusted.
+SITE_ROOT=""
+QUARTER=""
+ONLY=()
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --only)
+      shift
+      while [ "$#" -gt 0 ]; do
+        case "$1" in --*) break ;; esac
+        ONLY+=("$1"); shift
+      done
+      ;;
+    --site-root) SITE_ROOT="${2:?--site-root needs a path}"; shift 2 ;;
+    --quarter)   QUARTER="${2:?--quarter needs a value}"; shift 2 ;;
+    --*) echo "unknown option: $1" >&2; exit 1 ;;
+    *)
+      if   [ -z "$SITE_ROOT" ]; then SITE_ROOT="$1"
+      elif [ -z "$QUARTER" ];   then QUARTER="$1"
+      else echo "unexpected argument '$1' — slugs go after --only" >&2; exit 1
+      fi
+      shift
+      ;;
+  esac
+done
+SITE_ROOT="${SITE_ROOT:-../../hub.philyarrow.co.uk}"
+QUARTER="${QUARTER:-Q3-2026}"
+
+case "$QUARTER" in
+  Q[1-4]-[0-9][0-9][0-9][0-9]) ;;
+  *) echo "quarter must look like Q3-2026, got '$QUARTER'" >&2; exit 1 ;;
+esac
 
 cd "$(dirname "$0")"
+
+# generate.mjs mkdirs its output recursively, so a mistyped site root is not an
+# error there — it silently builds a whole content tree inside this repo.
+[ -d "$SITE_ROOT/new/src/content/docs" ] || {
+  echo "site root '$SITE_ROOT' does not look like the hub repo (no new/src/content/docs)" >&2
+  exit 1
+}
+
+# Published indices only. This writes pages into the live site, so an index
+# reaches it by a person setting publish:true in config/indices.json, never by a
+# seed file existing. --only overrides the flag, for regenerating a single page.
+#
 # `mapfile` is bash 4+; macOS ships bash 3.2, so read the list portably.
 SLUGS=()
-while IFS= read -r line; do SLUGS+=("$line"); done < <(node -e "
-  const c = require('./config/indices.json');
-  Object.keys(c).filter(k => !k.startsWith('_')).forEach(k => console.log(k));
-")
+if [ "${#ONLY[@]}" -gt 0 ]; then
+  SLUGS=("${ONLY[@]}")
+  # A typo'd slug otherwise falls through to the "not collected yet" skip and
+  # the run reports success having regenerated nothing — the silent failure
+  # this script was written to prevent, reached through its own interface.
+  node -e "
+    const c = require('./config/indices.json');
+    const bad = process.argv.slice(1).filter((s) => s.startsWith('_') || !(s in c));
+    if (bad.length) { console.error('not in config/indices.json: ' + bad.join(', ')); process.exit(1); }
+  " "${SLUGS[@]}"
+else
+  while IFS= read -r line; do SLUGS+=("$line"); done < <(node -e "
+    const c = require('./config/indices.json');
+    Object.keys(c).filter((k) => !k.startsWith('_') && c[k] && c[k].publish === true).forEach((k) => console.log(k));
+  ")
+  # Count what the flag excluded. Without this the run prints "11 of 11" and a
+  # forgotten publish:true is invisible in the one place an operator looks.
+  UNPUBLISHED=$(node -e "
+    const c = require('./config/indices.json');
+    console.log(Object.keys(c).filter((k) => !k.startsWith('_') && !(c[k] && c[k].publish === true)).length);
+  ")
+fi
+[ "${#SLUGS[@]}" -gt 0 ] || { echo "No published indices resolved from config/indices.json." >&2; exit 1; }
 
 fail=0
 skipped=0
@@ -62,5 +130,6 @@ done
 
 [ "$fail" -eq 0 ] || { echo "one or more indices failed to generate" >&2; exit 1; }
 note=""
-[ "$skipped" -gt 0 ] && note=" ($skipped not collected yet)"
+[ "$skipped" -gt 0 ] && note="$note ($skipped not collected yet)"
+[ "${UNPUBLISHED:-0}" -gt 0 ] && note="$note (${UNPUBLISHED} configured but publish:false, not regenerated)"
 echo "Regenerated $(( ${#SLUGS[@]} - skipped )) of ${#SLUGS[@]} indices into $SITE_ROOT$note"

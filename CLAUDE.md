@@ -126,9 +126,27 @@ Adding an index is a config entry plus a seed CSV — never a code change.
 |---|---|
 | `pipeline/config/engine.json` | SERP depth/mode, AI engine + model, prompts and keywords per index, cadence, budget |
 | `pipeline/config/sectors.json` | Keyword and AI-prompt templates per sector, with `{town}` / `{area}` placeholders |
-| `pipeline/config/indices.json` | Index registry: slug → sector, town, DataForSEO `locationName`, `coordinate` (for the listings sweep), areas |
+| `pipeline/config/indices.json` | Index registry: slug → sector, town, DataForSEO `locationName`, `coordinate` (for the listings sweep), areas, `publish` |
 
 The seed CSV filename must match the `indices.json` key.
+
+### `publish` is the switch, and it defaults to off
+
+A registry entry is inert until `publish: true`. The scheduled workflow,
+`regenerate-all.sh` and both backfills fan out over published indices only;
+reaching anything else takes a slug named explicitly on the command line.
+
+This exists because on 2026-09-01 twenty-one unreviewed cohorts reached
+`indices.json` as an unintended passenger in an unrelated commit, and the
+monthly cron — reading "every configured index", which had been true and correct
+for months — fanned out over all thirty-two. It ran about seven hours archiving
+public measurements for seeds nobody had read before it was stopped by hand.
+`regenerate-all.sh` would have put those same cohorts on the live site at the
+next quarterly refresh.
+
+So: add the entry, collect it by name, read what comes back, and set
+`publish: true` in the commit that ships its pages. Never as a matter of course
+when adding the entry.
 
 ## Scoring integrity
 

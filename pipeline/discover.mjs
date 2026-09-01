@@ -8,9 +8,13 @@
  *
  * This writes a seed file and nothing else. It does not touch config/indices.json
  * — an index only becomes real once someone has read the seed list and added
- * the entry deliberately. regenerate-all.sh and the scheduled workflow iterate
- * every configured index, so a config entry without a reviewed seed would spend
- * money failing.
+ * the entry deliberately.
+ *
+ * A registry entry alone does not put an index into circulation: the scheduled
+ * workflow, regenerate-all.sh and both backfills act on publish:true only, so a
+ * new entry is inert until a person sets that flag. Collect it by naming the
+ * slug explicitly, review what comes back, then set publish:true in the commit
+ * that ships its pages.
  *
  * Usage:
  *   node discover.mjs <sector> <town> <lat,lng,radius> [--limit 100] [--dry-run]
