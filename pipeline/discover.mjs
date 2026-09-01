@@ -60,6 +60,25 @@ const NATIONAL_CHAIN = [
 	'redrow.co.uk', 'barratthomes.co.uk', 'bloorhomes.com', 'persimmonhomes.com',
 	'taylorwimpey.co.uk', 'bellway.co.uk', 'davidwilsonhomes.co.uk', 'cala.co.uk',
 	'crest-nicholson.com', 'vistry.co.uk', 'lovell.co.uk',
+	// veterinary groups. The profession has consolidated hard: a Cheltenham
+	// discovery sweep returned 5 corporate branches in 25 listings — Vets4Pets,
+	// Medivet twice, Vets Now and CVS. Their websites are group sites, so
+	// scoring one measures a national web team against local independents,
+	// which is the same error that put three Cheltenham restaurants into the
+	// Gloucester index. The consolidation is worth writing about; it is not
+	// worth ranking a branch page for.
+	'vets4pets.com', 'medivet.co.uk', 'medivetgroup.com', 'vets-now.com',
+	'cvsvets.com', 'petsathome.com', 'independentvetcare.co.uk',
+	'ivcevidensia.co.uk', 'whitecrossvets.co.uk', 'goddardvetgroup.co.uk',
+	'linnaeusgroup.co.uk', 'vetpartners.co.uk',
+	// healthcare groups, for the physiotherapy and clinic sectors
+	'nuffieldhealth.com', 'bupa.co.uk', 'spirehealthcare.com', 'circlehealthgroup.co.uk',
+	'vitahealthgroup.co.uk', 'connecthealth.co.uk',
+	// nursery and childcare groups, for the schools sector
+	'brighthorizons.co.uk', 'busybeeschildcare.co.uk', 'kidsplanetdaynurseries.co.uk',
+	'nfamilyclub.com', 'monkeypuzzledaynurseries.com',
+	// funeral groups, retained though the sector was dropped for cohort size
+	'dignityfunerals.co.uk', 'funeralcare.co.uk',
 ];
 
 function csvCell(s) {

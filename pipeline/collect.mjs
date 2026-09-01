@@ -540,6 +540,56 @@ function aggregateBranches(items) {
 	};
 }
 
+/* Everything the listings response carries, kept.
+ *
+ * The sweep is bought once per index and returns a full profile per business:
+ * ratings and their distribution, photo counts, hours, categories, claimed
+ * state, description, price level, the topics Google extracted from reviews.
+ * Until now five numbers were taken out of it and the rest was dropped on the
+ * floor — so a question like "did this firm lose half a star, or stop being
+ * claimed, or change its primary category" could not be answered afterwards at
+ * any price, because the response was gone.
+ *
+ * Discarding a paid response is the one irreversible thing this pipeline does.
+ * Re-collection cannot recover last quarter's state. So the snapshot is stored
+ * whole and decisions about what to score, publish or ignore are made later,
+ * against data that still exists.
+ *
+ * Stored, not published. Nothing here is emitted as structured data about a
+ * business — see the reference-versus-attribute note in generate.mjs. */
+function gbpSnapshot(item) {
+	if (!item || typeof item !== 'object') return null;
+	const num = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
+	const wt = item.work_time || {};
+	return {
+		placeId: item.place_id ?? null,
+		cid: item.cid ?? null,
+		title: item.title ?? null,
+		category: item.category ?? null,
+		additionalCategories: item.additional_categories ?? null,
+		rating: num(item.rating?.value),
+		reviewCount: num(item.rating?.votes_count),
+		ratingDistribution: item.rating_distribution ?? null,
+		totalPhotos: num(item.total_photos),
+		isClaimed: typeof item.is_claimed === 'boolean' ? item.is_claimed : null,
+		hasDescription: Boolean(item.description),
+		descriptionLength: item.description ? String(item.description).length : null,
+		priceLevel: item.price_level ?? null,
+		placeTopics: item.place_topics ?? null,
+		hasHours: Boolean(wt.work_hours?.timetable),
+		worksOnline: typeof wt.work_online === 'boolean' ? wt.work_online : null,
+		latitude: num(item.latitude),
+		longitude: num(item.longitude),
+		/* Recorded so a change of address or number is detectable next quarter.
+		   Neither is published; see the NAP note above. */
+		phone: normalisePhone(item.phone),
+		postcode: extractPostcode(item.address),
+		bookingUrl: item.book_online_url ?? null,
+		firstSeen: item.first_seen ?? null,
+		lastUpdated: item.last_updated_time ?? null,
+	};
+}
+
 function buildLocal(business, matched, gbpItem, reviewsResult, cfg, lookupError = null) {
 	const usingListings = matched && matched.items.length > 0;
 	const out = {
@@ -563,6 +613,10 @@ function buildLocal(business, matched, gbpItem, reviewsResult, cfg, lookupError 
 		placeId: null,
 		branchCount: null,
 		claimed: null,
+		/* The full profile as returned, per branch. Kept so next quarter can be
+		   compared against this one without re-buying a response that no longer
+		   describes the same moment. */
+		gbpSnapshot: null,
 		error: null,
 	};
 
@@ -577,6 +631,7 @@ function buildLocal(business, matched, gbpItem, reviewsResult, cfg, lookupError 
 		out.domainConsistent = domainConsistency(matched.items[0], business);
 		out.gbpPhone = normalisePhone(matched.items[0]?.phone);
 		out.gbpPostcode = extractPostcode(matched.items[0]?.address);
+		out.gbpSnapshot = matched.items.map(gbpSnapshot).filter(Boolean);
 	} else if (gbpItem) {
 		out.placeId = gbpItem.place_id || gbpItem.cid || null;
 		out.avgRating = typeof gbpItem.rating?.value === 'number' ? gbpItem.rating.value : null;
@@ -585,6 +640,7 @@ function buildLocal(business, matched, gbpItem, reviewsResult, cfg, lookupError 
 		out.domainConsistent = domainConsistency(gbpItem, business);
 		out.gbpPhone = normalisePhone(gbpItem?.phone);
 		out.gbpPostcode = extractPostcode(gbpItem?.address);
+		out.gbpSnapshot = [gbpSnapshot(gbpItem)].filter(Boolean);
 		out.branchCount = 1;
 	} else {
 		/* Distinguish "we looked and it isn't there" from "the lookup failed" —

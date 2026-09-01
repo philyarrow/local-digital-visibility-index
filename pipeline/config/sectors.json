@@ -298,7 +298,7 @@
 		]
 	},
 	"schools": {
-		"_note": "Ofsted and DfE Get Information About Schools publish open data suitable for a rating cross-check.",
+		"_note": "Narrowed on 31 Aug 2026. This config previously included nursery_school and day-care categories, so a discovery sweep returned mostly day nurseries: 25 of 38 in Cheltenham, 26 of 36 in Worcester. An index built on it would have been labelled 'schools' while measuring nurseries. Narrowed to fee-paying schools only — at which point the cohort is probably too thin to publish (about six genuine independent schools in Cheltenham, two in Worcester). Nurseries moved to their own 'nurseries' sector, which is the niche that actually exists.",
 		"label": "independent schools",
 		"singular": "independent school",
 		"keywords": [
@@ -325,9 +325,7 @@
 		],
 		"dfsCategories": [
 			"private_school",
-			"preparatory_school",
-			"nursery_school",
-			"secondary_school"
+			"preparatory_school"
 		],
 		"geoKeyword": "independent schools near me",
 		"credentialTerms": [
@@ -576,5 +574,137 @@
 			"fidi",
 			"trustmark"
 		]
+	},
+	"funeral-directors": {
+		"label": "funeral directors",
+		"singular": "funeral director",
+		"keywords": [
+			"funeral directors {town}",
+			"funeral director {town}",
+			"funeral homes {town}",
+			"cremation services {town}",
+			"funeral costs {town}",
+			"direct cremation {town}",
+			"funeral plans {town}",
+			"green funeral {town}",
+			"repatriation services {town}",
+			"funeral directors near {town}",
+			"arranging a funeral {town}",
+			"bereavement support {town}"
+		],
+		"areaKeywords": [
+			"funeral directors {area}",
+			"funeral director {area}"
+		],
+		"prompts": [
+			"Who are the best funeral directors in {town}?",
+			"Which funeral director in {town} would you recommend?",
+			"Independent funeral directors in {town}",
+			"I need to arrange a funeral in {town} - who should I contact?",
+			"Affordable funeral directors in {town}"
+		],
+		"dfsCategories": [
+			"funeral_home",
+			"funeral_director",
+			"cremation_service",
+			"mortuary"
+		],
+		"geoKeyword": "funeral directors near me",
+		"credentialTerms": [
+			"nafd",
+			"national-association-of-funeral-directors",
+			"saif",
+			"independent-funeral-directors",
+			"bifd",
+			"funeral-planning-authority"
+		]
+	},
+	"architects": {
+		"label": "architects",
+		"singular": "architectural practice",
+		"keywords": [
+			"architects {town}",
+			"architect {town}",
+			"architectural services {town}",
+			"house extension architect {town}",
+			"planning application architect {town}",
+			"listed building architect {town}",
+			"residential architects {town}",
+			"commercial architects {town}",
+			"self build architect {town}",
+			"loft conversion architect {town}",
+			"barn conversion architect {town}",
+			"conservation architect {town}"
+		],
+		"areaKeywords": [
+			"architects {area}",
+			"architect {area}"
+		],
+		"prompts": [
+			"Who are the best architects in {town}?",
+			"Which architect in {town} would you recommend for a house extension?",
+			"Top rated architectural practices in {town}",
+			"I need an architect in {town} - who should I contact?",
+			"Conservation architects in {town}"
+		],
+		"dfsCategories": [
+			"architect",
+			"architecture_firm",
+			"architectural_designer",
+			"building_designer"
+		],
+		"geoKeyword": "architects near me",
+		"credentialTerms": [
+			"riba",
+			"royal-institute-of-british-architects",
+			"arb",
+			"architects-registration-board",
+			"chartered-architect"
+		]
+	},
+	"nurseries": {
+		"label": "day nurseries",
+		"singular": "day nursery",
+		"keywords": [
+			"day nursery {town}",
+			"nurseries {town}",
+			"childcare {town}",
+			"pre-school {town}",
+			"nursery school {town}",
+			"baby room nursery {town}",
+			"montessori {town}",
+			"funded childcare {town}",
+			"wraparound care {town}",
+			"holiday club {town}",
+			"best nursery {town}",
+			"ofsted outstanding nursery {town}"
+		],
+		"areaKeywords": [
+			"day nursery {area}",
+			"childcare {area}"
+		],
+		"prompts": [
+			"Which are the best day nurseries in {town}?",
+			"Which nursery in {town} would you recommend?",
+			"Ofsted outstanding nurseries in {town}",
+			"I need childcare in {town} - who should I contact?",
+			"Nurseries in {town} with funded places"
+		],
+		"dfsCategories": [
+			"day_care_center",
+			"preschool",
+			"nursery_school"
+		],
+		"geoKeyword": "day nursery near me",
+		"credentialTerms": [
+			"ofsted",
+			"eyfs",
+			"early-years-foundation-stage",
+			"pacey",
+			"ndna",
+			"national-day-nurseries-association",
+			"montessori"
+		],
+		"_note": "child_care_agency was removed from the categories on 31 Aug 2026: it returned nanny agencies and a health-and-social-care recruitment firm alongside the nurseries, and only about two thirds of the sweep was on topic. A recruiter scored in a nursery league table is the same error as a Cheltenham hotel in the Gloucester restaurant index."
 	}
 }
