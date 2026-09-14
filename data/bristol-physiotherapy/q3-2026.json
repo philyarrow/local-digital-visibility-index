@@ -245,6 +245,106 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "26a Oakfield Road, Clifton, Bristol, BS8 2AT",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 73,
+          "accessibility": 89,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 5581,
+          "tbtMs": 13,
+          "clsScore": 0.001,
+          "fcpMs": 3069,
+          "speedIndexMs": 3435,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 9,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Acupuncturist",
+            "Chiropodist",
+            "Pregnancy Care Centre",
+            "Rehabilitation Centre",
+            "Sports injury clinic",
+            "Sports massage therapist",
+            "Sports medicine clinic",
+            "Sports Medicine Doctor"
+          ],
+          "hasDescription": true,
+          "hasHours": false,
+          "services": 5,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 14:07:40 +00:00",
+          "lastUpdated": "2026-06-29 22:19:41 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bristolphysio.com",
+          "rank": 191,
+          "backlinks": 897,
+          "referringDomains": 103,
+          "referringMainDomains": 97,
+          "referringPages": 823,
+          "brokenBacklinks": 529,
+          "referringLinksTypes": {
+            "anchor": 583
+          },
+          "firstSeen": "2020-07-03 22:32:43 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -355,6 +455,114 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "11 Alma Vale Road, Clifton, Bristol, United Kingdom, BS8 2HL",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 46,
+          "accessibility": 88,
+          "bestPractices": 74,
+          "seo": 85,
+          "lcpMs": 10128,
+          "tbtMs": 676,
+          "clsScore": 0.025,
+          "fcpMs": 4149,
+          "speedIndexMs": 5177,
+          "failing": [
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 215,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 403
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Acupuncturist",
+            "Massage therapist",
+            "Physical Therapy Clinic",
+            "Sports injury clinic",
+            "Sports massage therapist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 28,
+          "placeTopics": {
+            "deep tissue massage": 19,
+            "sports massage": 20,
+            "lower back pain relief": 22,
+            "injury treatment": 17,
+            "relaxed atmosphere": 23,
+            "friendly staff": 103,
+            "hot stone massage": 5,
+            "aromatherapy massage": 5,
+            "cupping": 6,
+            "welcoming staff": 18
+          },
+          "firstSeen": "2024-07-15 12:42:34 +00:00",
+          "lastUpdated": "2026-06-26 02:25:55 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "comforthealth.co.uk",
+          "rank": 170,
+          "backlinks": 334,
+          "referringDomains": 113,
+          "referringMainDomains": 108,
+          "referringPages": 298,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 265
+          },
+          "firstSeen": "2019-02-16 17:10:36 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -465,6 +673,108 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "86 Shirehampton Road, Stoke Bishop, Bristol, United Kingdom, BS9 2DR",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 73,
+          "accessibility": 85,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 3031,
+          "tbtMs": 460,
+          "clsScore": 0.001,
+          "fcpMs": 2131,
+          "speedIndexMs": 8034,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "aria-required-children",
+              "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 34,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 134
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 3,
+          "placeTopics": {
+            "back pain treatment": 47,
+            "acupuncture": 8,
+            "sciatica treatment": 5,
+            "osteopathy": 5,
+            "empathetic approach": 3,
+            "calm environment": 6,
+            "kind approach": 6,
+            "postural issues": 2,
+            "follow up appointment": 2,
+            "holistic approach": 6
+          },
+          "firstSeen": "2024-08-05 06:44:33 +00:00",
+          "lastUpdated": "2026-06-30 03:57:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bristolbackpain.com",
+          "rank": 101,
+          "backlinks": 413,
+          "referringDomains": 72,
+          "referringMainDomains": 68,
+          "referringPages": 392,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 381
+          },
+          "firstSeen": "2019-04-19 04:22:49 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -573,6 +883,100 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 57,
+          "accessibility": 95,
+          "bestPractices": 96,
+          "seo": 85,
+          "lcpMs": 19219,
+          "tbtMs": 239,
+          "clsScore": 0,
+          "fcpMs": 3606,
+          "speedIndexMs": 6763,
+          "failing": [
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 1,
+          "placeTopics": {
+            "hip pain treatment": 2,
+            "hip": 2
+          },
+          "firstSeen": "2026-07-09 19:52:57 +00:00",
+          "lastUpdated": "2026-07-09 19:52:57 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bodyset.co.uk",
+          "rank": 235,
+          "backlinks": 2194,
+          "referringDomains": 396,
+          "referringMainDomains": 382,
+          "referringPages": 1906,
+          "brokenBacklinks": 12,
+          "referringLinksTypes": {
+            "anchor": 1393
+          },
+          "firstSeen": "2020-06-03 12:43:43 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -681,6 +1085,118 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 60,
+          "accessibility": 88,
+          "bestPractices": 92,
+          "seo": 100,
+          "lcpMs": 6301,
+          "tbtMs": 141,
+          "clsScore": 0.009,
+          "fcpMs": 3772,
+          "speedIndexMs": 10255,
+          "failing": [
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "aria-hidden-focus",
+              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 33,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 1,
+            "3": 0,
+            "4": 2,
+            "5": 173
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Acupuncturist",
+            "Medical Diagnostic Imaging Centre",
+            "Nutritionist",
+            "Physiotherapist",
+            "Pilates studio",
+            "Chiropodist",
+            "Sports injury clinic",
+            "Sports massage therapist",
+            "Medical imaging centre"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "sports massage": 6,
+            "acupuncture": 6,
+            "injury treatment": 7,
+            "knowledgeable practitioner": 5,
+            "empathetic staff": 5,
+            "guided injection": 2,
+            "migraine treatment": 2,
+            "impartial advice": 2,
+            "welcoming environment": 6,
+            "clear explanations": 11
+          },
+          "firstSeen": "2024-07-16 23:42:15 +00:00",
+          "lastUpdated": "2026-06-29 20:34:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "clevechiropractic.com",
+          "rank": 112,
+          "backlinks": 431,
+          "referringDomains": 96,
+          "referringMainDomains": 95,
+          "referringPages": 417,
+          "brokenBacklinks": 133,
+          "referringLinksTypes": {
+            "anchor": 411
+          },
+          "firstSeen": "2019-02-18 17:33:31 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -789,6 +1305,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": 97,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": 0,
+          "fcpMs": 7841,
+          "speedIndexMs": 7841,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 10,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 198
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "acupuncture": 27,
+            "laser treatment": 13,
+            "back problems": 48,
+            "injury recovery": 10,
+            "hip pain treatment": 6,
+            "tennis elbow treatment": 4,
+            "friendly staff": 34,
+            "climbing injury": 3,
+            "sciatica": 5,
+            "stretches": 8
+          },
+          "firstSeen": "2024-07-17 03:23:20 +00:00",
+          "lastUpdated": "2026-07-12 03:07:51 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "the-bristol-osteopath.co.uk",
+          "rank": 35,
+          "backlinks": 44,
+          "referringDomains": 30,
+          "referringMainDomains": 30,
+          "referringPages": 41,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 41
+          },
+          "firstSeen": "2019-11-14 21:43:57 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -897,6 +1515,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 42,
+          "accessibility": 70,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 7269,
+          "tbtMs": 95,
+          "clsScore": 0.608,
+          "fcpMs": 3994,
+          "speedIndexMs": 4635,
+          "failing": [
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "aria-input-field-name",
+              "title": "ARIA input fields do not have accessible names",
+              "score": 0
+            },
+            {
+              "id": "aria-required-children",
+              "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "aria-valid-attr-value",
+              "title": "`[aria-*]` attributes do not have valid values",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 13,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 60
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "shoulder injuries": 2,
+            "knowledgeable staff": 6,
+            "friendly team": 5,
+            "expert team": 5,
+            "realistic exercises": 2,
+            "gentle treatment": 2,
+            "foot care": 2,
+            "effective exercises": 3,
+            "back problems": 8,
+            "sporting injuries": 2
+          },
+          "firstSeen": "2024-07-17 04:27:46 +00:00",
+          "lastUpdated": "2026-06-30 00:09:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bristolosteopaths.com",
+          "rank": 166,
+          "backlinks": 185,
+          "referringDomains": 94,
+          "referringMainDomains": 90,
+          "referringPages": 171,
+          "brokenBacklinks": 158,
+          "referringLinksTypes": {
+            "anchor": 135
+          },
+          "firstSeen": "2019-02-18 19:38:33 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1005,6 +1725,72 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI timeout"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 7,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 2,
+            "4": 2,
+            "5": 21
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Massage therapist",
+            "Physiotherapist",
+            "Physical Therapy Clinic",
+            "Chiropodist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 2,
+          "placeTopics": {
+            "treatment plan": 3,
+            "knee pain": 3,
+            "headache relief": 2,
+            "advice": 3,
+            "neck pain": 2,
+            "suffering": 3,
+            "feel": 2,
+            "back pain": 3,
+            "ear": 2,
+            "exercises": 3
+          },
+          "firstSeen": "2024-07-17 09:35:36 +00:00",
+          "lastUpdated": "2026-06-30 04:16:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "thehouseclinics.co.uk",
+          "rank": 164,
+          "backlinks": 502,
+          "referringDomains": 260,
+          "referringMainDomains": 253,
+          "referringPages": 459,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 405
+          },
+          "firstSeen": "2019-02-19 11:47:55 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1113,6 +1899,111 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 20,
+          "accessibility": 79,
+          "bestPractices": 38,
+          "seo": 85,
+          "lcpMs": 8577,
+          "tbtMs": 1211,
+          "clsScore": 0.374,
+          "fcpMs": 3991,
+          "speedIndexMs": 6105,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "deprecations",
+              "title": "Uses deprecated APIs",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            },
+            {
+              "id": "unminified-javascript",
+              "title": "Minify JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 14,
+          "ratingDistribution": {
+            "1": 16,
+            "2": 3,
+            "3": 0,
+            "4": 0,
+            "5": 176
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Massage therapist",
+            "Sports injury clinic"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "physiotherapy": 12,
+            "sciatica": 7,
+            "thorough treatment": 5,
+            "headache relief": 10,
+            "cost": 16,
+            "skilled chiropractor": 2,
+            "welcoming staff": 21,
+            "free consultations": 2,
+            "back pain relief": 50,
+            "headaches": 16
+          },
+          "firstSeen": "2024-07-17 08:57:38 +00:00",
+          "lastUpdated": "2026-06-30 03:48:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "willowlife.co.uk",
+          "rank": 214,
+          "backlinks": 1153,
+          "referringDomains": 140,
+          "referringMainDomains": 134,
+          "referringPages": 677,
+          "brokenBacklinks": 12,
+          "referringLinksTypes": {
+            "anchor": 656
+          },
+          "firstSeen": "2019-04-25 14:07:08 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1221,6 +2112,114 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 59,
+          "accessibility": 89,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 6452,
+          "tbtMs": 121,
+          "clsScore": 0.036,
+          "fcpMs": 5252,
+          "speedIndexMs": 8595,
+          "failing": [
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 4
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 42,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 232
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Counsellor",
+            "Massage therapist",
+            "Pregnancy Care Centre",
+            "Sports injury clinic",
+            "Sports massage therapist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 13,
+          "placeTopics": {
+            "pregnancy massage": 6,
+            "relaxing atmosphere": 16,
+            "sports massage": 6,
+            "deep tissue massage": 3,
+            "chiropractic treatment": 17,
+            "acupuncture": 4,
+            "friendly team": 11,
+            "short notice appointments": 2,
+            "thorough assessment": 3,
+            "clean clinic": 4
+          },
+          "firstSeen": "2024-07-15 20:08:34 +00:00",
+          "lastUpdated": "2026-06-28 20:00:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bristol-chiropractic.co.uk",
+          "rank": 134,
+          "backlinks": 551,
+          "referringDomains": 85,
+          "referringMainDomains": 82,
+          "referringPages": 528,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 524
+          },
+          "firstSeen": "2022-01-15 04:49:27 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1329,6 +2328,116 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 72,
+          "accessibility": 86,
+          "bestPractices": 73,
+          "seo": 100,
+          "lcpMs": 5300,
+          "tbtMs": 172,
+          "clsScore": 0,
+          "fcpMs": 2745,
+          "speedIndexMs": 3945,
+          "failing": [
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "skip-link",
+              "title": "Skip links are not focusable.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 37,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 121
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Acupuncture clinic",
+            "Alternative medicine practitioner",
+            "Fitness centre",
+            "Physical Fitness Programme",
+            "Doctor referral service",
+            "Physical Therapy Clinic",
+            "Wellness Programme"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 17,
+          "placeTopics": {
+            "exercise regime": 28,
+            "knowledgeable staff": 43,
+            "injury treatment": 12,
+            "thorough examination": 6,
+            "rehab programme": 8,
+            "recovery plan": 5,
+            "back pain relief": 9,
+            "ankle injury recovery": 2,
+            "shoulder injury treatment": 2,
+            "hamstring issues": 2
+          },
+          "firstSeen": "2024-05-31 14:16:29 +00:00",
+          "lastUpdated": "2026-06-30 03:20:56 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "henleazephysioclinic.co.uk",
+          "rank": 21,
+          "backlinks": 15,
+          "referringDomains": 13,
+          "referringMainDomains": 13,
+          "referringPages": 15,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 15
+          },
+          "firstSeen": "2024-01-17 17:50:11 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1440,6 +2549,118 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "The Myrtles Bristol Road, Chew Stoke, Bristol, England, BS40 8UB",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 60,
+          "accessibility": 78,
+          "bestPractices": 74,
+          "seo": 100,
+          "lcpMs": 5611,
+          "tbtMs": 346,
+          "clsScore": 0.013,
+          "fcpMs": 4116,
+          "speedIndexMs": 4887,
+          "failing": [
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 14,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 2,
+            "5": 166
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Acupuncture clinic",
+            "Chiropractor",
+            "Massage therapist",
+            "Osteopath",
+            "Pain control clinic",
+            "Physical rehabilitation center",
+            "Physical Therapy Clinic",
+            "Pilates studio",
+            "Sports massage therapist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 36,
+          "placeTopics": {
+            "climbing injuries": 16,
+            "finger injury treatment": 9,
+            "shoulder injury treatment": 7,
+            "knowledgeable staff": 39,
+            "shockwave therapy": 4,
+            "sports massage": 6,
+            "injury recovery": 9,
+            "knee injury treatment": 3,
+            "thorough assessment": 5,
+            "rehab exercises": 5
+          },
+          "firstSeen": "2024-07-17 01:54:22 +00:00",
+          "lastUpdated": "2026-06-26 05:32:58 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "risephysiotherapy.com",
+          "rank": 82,
+          "backlinks": 137,
+          "referringDomains": 72,
+          "referringMainDomains": 69,
+          "referringPages": 127,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 126
+          },
+          "firstSeen": "2019-06-18 06:47:23 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1548,6 +2769,114 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 45,
+          "accessibility": 78,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 5503,
+          "tbtMs": 747,
+          "clsScore": 0.111,
+          "fcpMs": 4673,
+          "speedIndexMs": 5655,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 32,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 222
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Medical Diagnostic Imaging Centre",
+            "MRI Centre",
+            "Rehabilitation Centre",
+            "Sports injury clinic",
+            "Sports massage therapist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 18,
+          "placeTopics": {
+            "ultrasound": 20,
+            "mri scan": 8,
+            "fibromyalgia support": 3,
+            "sports massage": 6,
+            "knowledgeable chiropractor": 8,
+            "headache treatment": 5,
+            "arthritis treatment": 3,
+            "detailed report": 5,
+            "thorough assessment": 5,
+            "shoulder pain relief": 9
+          },
+          "firstSeen": "2024-07-17 09:37:36 +00:00",
+          "lastUpdated": "2026-06-30 04:18:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "hanhamclinic.co.uk",
+          "rank": 108,
+          "backlinks": 179,
+          "referringDomains": 49,
+          "referringMainDomains": 43,
+          "referringPages": 174,
+          "brokenBacklinks": 175,
+          "referringLinksTypes": {
+            "anchor": 143
+          },
+          "firstSeen": "2022-09-19 05:50:47 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1656,6 +2985,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 87,
+          "accessibility": 92,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 3695,
+          "tbtMs": 0,
+          "clsScore": 0.022,
+          "fcpMs": 2116,
+          "speedIndexMs": 2232,
+          "failing": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 8,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 4,
+            "5": 170
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 15,
+          "placeTopics": {
+            "deep tissue massage": 29,
+            "sports massage": 18,
+            "friendly staff": 71,
+            "knee injury treatment": 4,
+            "passionate staff": 13,
+            "back pain relief": 10,
+            "acupuncture": 4,
+            "neck massage": 2,
+            "hamstring problem": 3,
+            "biomechanic questions": 2
+          },
+          "firstSeen": "2024-07-19 15:07:20 +00:00",
+          "lastUpdated": "2026-06-30 14:53:08 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "grcphysio.com",
+          "rank": 0,
+          "backlinks": 46,
+          "referringDomains": 42,
+          "referringMainDomains": 40,
+          "referringPages": 46,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 46
+          },
+          "firstSeen": "2023-11-13 13:08:43 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1764,6 +3195,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 41,
+          "accessibility": 69,
+          "bestPractices": 74,
+          "seo": 92,
+          "lcpMs": 15623,
+          "tbtMs": 737,
+          "clsScore": 0.002,
+          "fcpMs": 3640,
+          "speedIndexMs": 10081,
+          "failing": [
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "aria-hidden-focus",
+              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 10,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 0,
+            "4": 7,
+            "5": 140
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 11,
+          "placeTopics": {
+            "shoulder injury treatment": 4,
+            "back pain treatment": 8,
+            "sports massage": 5,
+            "sciatica treatment": 4,
+            "hamstring tear treatment": 2,
+            "targeted massage": 2,
+            "clear explanations": 12,
+            "hip surgery recovery": 2,
+            "confidence building": 7,
+            "hands on approach": 3
+          },
+          "firstSeen": "2026-06-30 13:08:05 +00:00",
+          "lastUpdated": "2026-06-30 13:08:05 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "keithjamesphysiotherapy.co.uk",
+          "rank": 145,
+          "backlinks": 111,
+          "referringDomains": 56,
+          "referringMainDomains": 54,
+          "referringPages": 100,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 83
+          },
+          "firstSeen": "2019-05-21 11:46:41 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1872,6 +3405,114 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 23,
+          "accessibility": 84,
+          "bestPractices": 73,
+          "seo": 85,
+          "lcpMs": 28059,
+          "tbtMs": 1452,
+          "clsScore": 0.312,
+          "fcpMs": 2730,
+          "speedIndexMs": 6806,
+          "failing": [
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 7,
+          "ratingDistribution": {
+            "1": 8,
+            "2": 0,
+            "3": 1,
+            "4": 2,
+            "5": 88
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Massage therapist",
+            "Physiotherapist",
+            "Physical Therapy Clinic",
+            "Sports injury clinic",
+            "Sports massage therapist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 10,
+          "placeTopics": {
+            "physiotherapy": 23,
+            "rotator cuff injury": 2,
+            "hamstring rehabilitation": 2,
+            "gait analysis": 2,
+            "patellofemoral pain": 2,
+            "shoulder pain relief": 5,
+            "sports massage": 2,
+            "issue resolution": 4,
+            "knowledgeable practitioner": 2,
+            "confidence in recovery": 3
+          },
+          "firstSeen": "2024-06-12 11:19:21 +00:00",
+          "lastUpdated": "2026-08-07 20:38:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "themedical.co.uk",
+          "rank": 220,
+          "backlinks": 1433,
+          "referringDomains": 249,
+          "referringMainDomains": 242,
+          "referringPages": 1287,
+          "brokenBacklinks": 96,
+          "referringLinksTypes": {
+            "anchor": 1210
+          },
+          "firstSeen": "2019-01-19 14:32:14 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1980,6 +3621,111 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 48,
+          "accessibility": 95,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 14357,
+          "tbtMs": 405,
+          "clsScore": 0,
+          "fcpMs": 5024,
+          "speedIndexMs": 8357,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 15,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 71
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Physiotherapist",
+            "Sports injury clinic"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 3,
+          "placeTopics": {
+            "soft tissue therapy": 5,
+            "injury rehab": 7,
+            "foam roller exercises": 2,
+            "personalized treatment": 6,
+            "half marathon preparation": 2,
+            "shoulder injury treatment": 2,
+            "lifestyle advice": 5,
+            "strengthening exercises": 5,
+            "range of motion improvement": 3,
+            "athletic taping": 2
+          },
+          "firstSeen": "2024-07-16 23:38:28 +00:00",
+          "lastUpdated": "2026-06-29 20:34:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bristolsofttissuetherapy.com",
+          "rank": 32,
+          "backlinks": 45,
+          "referringDomains": 42,
+          "referringMainDomains": 39,
+          "referringPages": 45,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 45
+          },
+          "firstSeen": "2023-02-03 15:49:16 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2088,6 +3834,112 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 72,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 4673,
+          "tbtMs": 74,
+          "clsScore": 0,
+          "fcpMs": 2711,
+          "speedIndexMs": 7160,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "speed-index",
+              "title": "Speed Index",
+              "score": 30
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 33
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 50
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 19
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Massage therapist",
+            "Sports injury clinic",
+            "Sports massage therapist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "sports massage": 5,
+            "remedial massage": 2,
+            "effective treatment": 2,
+            "back pain relief": 2,
+            "shoulders": 3,
+            "training": 2,
+            "book": 3,
+            "sports": 8,
+            "massage": 12,
+            "neck": 3
+          },
+          "firstSeen": "2026-06-29 23:29:45 +00:00",
+          "lastUpdated": "2026-06-29 23:29:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "thebristolbodyrepairclinic.co.uk",
+          "rank": 135,
+          "backlinks": 25,
+          "referringDomains": 13,
+          "referringMainDomains": 13,
+          "referringPages": 25,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 25
+          },
+          "firstSeen": "2025-02-27 17:28:38 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2199,6 +4051,108 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Ivy Court 61 High Street, Nailsea, Bristol, England, BS48 1AW",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 76,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 4823,
+          "tbtMs": 131,
+          "clsScore": 0,
+          "fcpMs": 2702,
+          "speedIndexMs": 3383,
+          "failing": [
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 14,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 54
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "tailored recovery path": 4,
+            "knowledgeable staff": 21,
+            "rotator cuff issues": 2,
+            "resistance band work": 2,
+            "recovery from ankle injury": 2,
+            "calf pain": 5,
+            "knee injury treatment": 2,
+            "thorough assessment": 3,
+            "strengthening exercises": 5,
+            "encouraging staff": 5
+          },
+          "firstSeen": "2026-07-11 22:33:43 +00:00",
+          "lastUpdated": "2026-07-11 22:33:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "evolvephysioclinic.co.uk",
+          "rank": 23,
+          "backlinks": 27,
+          "referringDomains": 27,
+          "referringMainDomains": 27,
+          "referringPages": 27,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 27
+          },
+          "firstSeen": "2024-08-17 06:59:29 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2307,6 +4261,110 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 50,
+          "accessibility": 98,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 12527,
+          "tbtMs": 349,
+          "clsScore": 0,
+          "fcpMs": 5966,
+          "speedIndexMs": 7520,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 8,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 93
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Personal trainer"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 4,
+          "placeTopics": {
+            "friendly physio": 6,
+            "knowledgeable staff": 19,
+            "knee recovery": 3,
+            "injury analysis": 2,
+            "calf repair": 2,
+            "shoulder injury treatment": 2,
+            "targeted exercises": 3,
+            "problem diagnosis": 6,
+            "gentle exercises": 3,
+            "exercise app": 5
+          },
+          "firstSeen": "2024-07-17 00:38:14 +00:00",
+          "lastUpdated": "2026-06-29 21:09:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "fitforming.co.uk",
+          "rank": 0,
+          "backlinks": 46,
+          "referringDomains": 42,
+          "referringMainDomains": 39,
+          "referringPages": 46,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 46
+          },
+          "firstSeen": "2023-11-13 13:02:29 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2415,6 +4473,113 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Bristol"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 38,
+          "accessibility": 95,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 22501,
+          "tbtMs": 710,
+          "clsScore": 0.033,
+          "fcpMs": 9547,
+          "speedIndexMs": 12489,
+          "failing": [
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 24,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 81
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Health consultant",
+            "Massage therapist",
+            "Sports massage therapist",
+            "Wellness Centre"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 9,
+          "placeTopics": {
+            "neck problems": 6,
+            "posture at work": 3,
+            "relaxing atmosphere": 5,
+            "hip pain relief": 3,
+            "treatment plan": 6,
+            "breathing exercises": 2,
+            "lower back pain": 32,
+            "increased flexibility": 3,
+            "effective treatment": 5,
+            "back issues": 2
+          },
+          "firstSeen": "2026-06-30 13:22:56 +00:00",
+          "lastUpdated": "2026-06-30 13:22:56 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "mychiro.co.uk",
+          "rank": 146,
+          "backlinks": 135,
+          "referringDomains": 63,
+          "referringMainDomains": 60,
+          "referringPages": 134,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 133
+          },
+          "firstSeen": "2021-11-03 10:04:24 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2523,6 +4688,115 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 59,
+          "accessibility": 82,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 7533,
+          "tbtMs": 249,
+          "clsScore": 0,
+          "fcpMs": 4231,
+          "speedIndexMs": 5117,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 45,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 44
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Acupuncturist",
+            "Holistic medicine practitioner",
+            "Massage therapist",
+            "Osteopath",
+            "Physical rehabilitation center",
+            "Physical Therapy Clinic"
+          ],
+          "hasDescription": true,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": {
+            "clinic": 9,
+            "injuries": 6,
+            "capacitive-resistive electric transfer": 5,
+            "neck": 6,
+            "exercises": 6,
+            "facial treatment": 4,
+            "reduce": 3,
+            "laser": 2,
+            "technology": 3,
+            "lymphatic massage": 2
+          },
+          "firstSeen": "2024-06-07 03:18:48 +00:00",
+          "lastUpdated": "2025-09-07 17:12:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "romenendezphysio.com",
+          "rank": 196,
+          "backlinks": 521,
+          "referringDomains": 36,
+          "referringMainDomains": 34,
+          "referringPages": 279,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 278
+          },
+          "firstSeen": "2023-11-13 15:36:48 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2631,6 +4905,110 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 79,
+          "accessibility": 92,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 4455,
+          "tbtMs": 0,
+          "clsScore": 0.03,
+          "fcpMs": 3041,
+          "speedIndexMs": 3041,
+          "failing": [
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "aria-hidden-focus",
+              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 10,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 2,
+            "5": 32
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Reflexologist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 2,
+          "placeTopics": {
+            "bowen treatments": 5,
+            "spinal stenosis": 2,
+            "pilates classes": 2,
+            "relaxed atmosphere": 2,
+            "reflexology": 2,
+            "diagnosis": 6,
+            "discomfort": 4,
+            "pain relief": 2,
+            "physical examination": 3,
+            "neck": 6
+          },
+          "firstSeen": "2024-07-19 12:59:34 +00:00",
+          "lastUpdated": "2026-06-30 06:05:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "timeouttherapies.co.uk",
+          "rank": 103,
+          "backlinks": 85,
+          "referringDomains": 57,
+          "referringMainDomains": 53,
+          "referringPages": 85,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 85
+          },
+          "firstSeen": "2022-01-09 03:34:35 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2739,6 +5117,113 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 69,
+          "accessibility": 93,
+          "bestPractices": 69,
+          "seo": 92,
+          "lcpMs": 9780,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 2107,
+          "speedIndexMs": 5214,
+          "failing": [
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 5,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 24
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Acupuncturist",
+            "Massage therapist",
+            "Physical Therapy Clinic",
+            "Sports medicine clinic"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "injury identification": 3,
+            "arthritis explanation": 2,
+            "helpful staff": 6,
+            "jaw pain relief": 2,
+            "warm practitioner": 2,
+            "thoughtful practitioner": 2,
+            "calm manner": 3,
+            "back problems": 5,
+            "holistic approach": 3,
+            "lovely staff": 2
+          },
+          "firstSeen": "2026-07-09 01:38:51 +00:00",
+          "lastUpdated": "2026-07-09 01:38:51 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "staplehillosteopathy.co.uk",
+          "rank": 44,
+          "backlinks": 128,
+          "referringDomains": 17,
+          "referringMainDomains": 17,
+          "referringPages": 127,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 126
+          },
+          "firstSeen": "2024-01-29 03:19:00 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2847,6 +5332,114 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 55,
+          "accessibility": 97,
+          "bestPractices": 54,
+          "seo": 85,
+          "lcpMs": 35661,
+          "tbtMs": 78,
+          "clsScore": 0,
+          "fcpMs": 23201,
+          "speedIndexMs": 23201,
+          "failing": [
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "deprecations",
+              "title": "Uses deprecated APIs",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 9,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 55
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Alternative medicine practitioner",
+            "Chiropractor",
+            "Health consultant",
+            "Osteopath",
+            "Sports massage therapist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 5,
+          "placeTopics": {
+            "cupping": 9,
+            "back pain treatment": 8,
+            "chiropractors": 4,
+            "knee injury treatment": 2,
+            "physios": 4,
+            "friendly staff": 12,
+            "exercise advice": 3,
+            "back issues": 2,
+            "attention to detail": 2,
+            "cleanliness": 2
+          },
+          "firstSeen": "2024-07-17 13:45:23 +00:00",
+          "lastUpdated": "2026-06-30 07:22:56 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "icaht.co.uk",
+          "rank": 196,
+          "backlinks": 3679,
+          "referringDomains": 191,
+          "referringMainDomains": 184,
+          "referringPages": 3634,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 3604
+          },
+          "firstSeen": "2019-12-09 13:18:54 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2955,6 +5548,112 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 90,
+          "bestPractices": 77,
+          "seo": 100,
+          "lcpMs": 8214,
+          "tbtMs": 374,
+          "clsScore": 0.002,
+          "fcpMs": 3007,
+          "speedIndexMs": 5701,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 27,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 52
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Bicycle Shop",
+            "Physical Therapy Clinic",
+            "Sports injury clinic"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 9,
+          "placeTopics": {
+            "bike fit": 29,
+            "physio assessment": 6,
+            "bike adjustments": 4,
+            "seat adjustment": 3,
+            "thorough assessment": 4,
+            "cleat adjustment": 2,
+            "passion for cycling": 2,
+            "endurance bike fit": 2,
+            "exercise videos": 2,
+            "knowledgeable staff": 8
+          },
+          "firstSeen": "2026-06-30 08:51:45 +00:00",
+          "lastUpdated": "2026-06-30 08:51:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "physiofitbristol.com",
+          "rank": 66,
+          "backlinks": 50,
+          "referringDomains": 43,
+          "referringMainDomains": 40,
+          "referringPages": 48,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 48
+          },
+          "firstSeen": "2023-11-13 14:20:58 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3063,6 +5762,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 68,
+          "accessibility": 59,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 8860,
+          "tbtMs": 58,
+          "clsScore": 0.011,
+          "fcpMs": 2585,
+          "speedIndexMs": 4786,
+          "failing": [
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 11,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 48
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "friendly chiropractor": 4,
+            "friendly team": 17,
+            "minor adjustments": 2,
+            "gentle approach": 4,
+            "lifestyle advice": 2,
+            "friendly atmosphere": 4,
+            "skilled staff": 3,
+            "support staff": 3,
+            "clear explanations": 2,
+            "hypermobility": 3
+          },
+          "firstSeen": "2024-08-05 19:17:32 +00:00",
+          "lastUpdated": "2026-07-11 07:32:58 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "vitalhealthchiropractor.co.uk",
+          "rank": 104,
+          "backlinks": 312,
+          "referringDomains": 41,
+          "referringMainDomains": 40,
+          "referringPages": 306,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 303
+          },
+          "firstSeen": "2022-11-15 19:59:43 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3171,6 +5972,97 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 78,
+          "accessibility": 73,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 4003,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3181,
+          "speedIndexMs": 4744,
+          "failing": [
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-06-07 01:35:10 +00:00",
+          "lastUpdated": "2026-07-12 14:57:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "chiropracticjobs.com",
+          "rank": 230,
+          "backlinks": 619,
+          "referringDomains": 58,
+          "referringMainDomains": 55,
+          "referringPages": 615,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 607
+          },
+          "firstSeen": "2021-12-01 16:43:57 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3287,6 +6179,111 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Scrapstore House, 21 Sevier Street, Bristol, England, BS2 9LB",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 67,
+          "accessibility": 96,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 3963,
+          "tbtMs": 516,
+          "clsScore": 0.062,
+          "fcpMs": 3213,
+          "speedIndexMs": 3213,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 20
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 38,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 29
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Personal trainer",
+            "Physiotherapist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 4,
+          "placeTopics": {
+            "sports rehab": 4,
+            "strength training": 3,
+            "weight loss": 2,
+            "physiotherapy": 4,
+            "fitness goals": 5,
+            "injury prevention": 2,
+            "friendly staff": 12,
+            "pain relief": 2,
+            "return to sport": 2,
+            "football": 3
+          },
+          "firstSeen": "2024-06-07 04:58:59 +00:00",
+          "lastUpdated": "2026-07-12 16:00:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "back2action.co.uk",
+          "rank": 72,
+          "backlinks": 91,
+          "referringDomains": 62,
+          "referringMainDomains": 60,
+          "referringPages": 80,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 78
+          },
+          "firstSeen": "2019-05-24 19:10:51 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3395,6 +6392,97 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Bristol"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 57,
+          "accessibility": 89,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 7375,
+          "tbtMs": 0,
+          "clsScore": 0.072,
+          "fcpMs": 4801,
+          "speedIndexMs": 10834,
+          "failing": [
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 7
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-07-08 08:35:58 +00:00",
+          "lastUpdated": "2026-07-08 08:35:58 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cliftonchiropractic.co.uk",
+          "rank": 131,
+          "backlinks": 312,
+          "referringDomains": 78,
+          "referringMainDomains": 75,
+          "referringPages": 297,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 291
+          },
+          "firstSeen": "2019-02-16 16:18:44 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3503,6 +6591,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 69,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 3654,
+          "tbtMs": 0,
+          "clsScore": 0.149,
+          "fcpMs": 3012,
+          "speedIndexMs": 12794,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 12,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 56
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 1,
+          "placeTopics": {
+            "sciatica treatment": 5,
+            "attentive listener": 4,
+            "back problems": 11,
+            "deep tissue work": 2,
+            "acupuncture": 2,
+            "rehab exercises": 2,
+            "safe environment": 5,
+            "tailored treatment": 2,
+            "chronic pain management": 2,
+            "calm manner": 3
+          },
+          "firstSeen": "2024-07-16 08:12:43 +00:00",
+          "lastUpdated": "2026-06-29 07:23:48 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "lucysmithosteopathy.co.uk",
+          "rank": 126,
+          "backlinks": 69,
+          "referringDomains": 32,
+          "referringMainDomains": 32,
+          "referringPages": 68,
+          "brokenBacklinks": 29,
+          "referringLinksTypes": {
+            "anchor": 67
+          },
+          "firstSeen": "2021-02-27 03:56:21 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3611,6 +6801,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 73,
+          "accessibility": 94,
+          "bestPractices": 81,
+          "seo": 92,
+          "lcpMs": 4682,
+          "tbtMs": 249,
+          "clsScore": 0,
+          "fcpMs": 3035,
+          "speedIndexMs": 3035,
+          "failing": [
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 6,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 53
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 1,
+          "placeTopics": {
+            "thorough assessment": 6,
+            "posture analysis": 3,
+            "root cause diagnosis": 3,
+            "knee injury": 3,
+            "knowledgeable staff": 12,
+            "experienced physiotherapist": 5,
+            "injury healing": 2,
+            "clear and thorough": 5,
+            "recovery guidance": 2,
+            "clear advice": 2
+          },
+          "firstSeen": "2024-06-07 03:18:45 +00:00",
+          "lastUpdated": "2026-07-12 15:35:48 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "phoenixphysio.uk",
+          "rank": 51,
+          "backlinks": 48,
+          "referringDomains": 45,
+          "referringMainDomains": 42,
+          "referringPages": 48,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 48
+          },
+          "firstSeen": "2021-11-02 12:53:49 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3721,6 +7013,115 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "21 Chandos Road, Redland, Bristol, BS6 6PG",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 69,
+          "accessibility": 82,
+          "bestPractices": 59,
+          "seo": 92,
+          "lcpMs": 4389,
+          "tbtMs": 334,
+          "clsScore": 0.006,
+          "fcpMs": 3662,
+          "speedIndexMs": 4064,
+          "failing": [
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "title": "Elements use prohibited ARIA attributes",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 29
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Acupuncture clinic",
+            "Reflexologist",
+            "Reiki therapist",
+            "Sports massage therapist",
+            "Thai massage therapist",
+            "Yoga studio"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "neck pain treatment": 4,
+            "cranial osteopathy": 2,
+            "knee complaints": 2,
+            "fibromyalgia": 2,
+            "calming presence": 2,
+            "gentle touch": 2,
+            "welcoming atmosphere": 2,
+            "caring staff": 5,
+            "holistic approach": 2,
+            "improved quality of life": 2
+          },
+          "firstSeen": "2024-07-17 06:48:07 +00:00",
+          "lastUpdated": "2026-06-30 02:04:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "chandosclinic.co.uk",
+          "rank": 208,
+          "backlinks": 675,
+          "referringDomains": 100,
+          "referringMainDomains": 95,
+          "referringPages": 649,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 642
+          },
+          "firstSeen": "2020-09-22 03:21:55 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3829,6 +7230,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 67,
+          "accessibility": 57,
+          "bestPractices": 78,
+          "seo": 83,
+          "lcpMs": 7889,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3202,
+          "speedIndexMs": 4832,
+          "failing": [
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 21,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 2,
+            "5": 70
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 2,
+          "placeTopics": {
+            "warm and friendly staff": 6,
+            "sciatica treatment": 2,
+            "acupuncture": 3,
+            "covid rules": 3,
+            "thorough assessment": 2,
+            "friendly reception staff": 3,
+            "neck pain treatment": 2,
+            "professional team": 8,
+            "friendly approach": 2,
+            "lovely environment": 4
+          },
+          "firstSeen": "2024-07-17 03:55:54 +00:00",
+          "lastUpdated": "2026-06-29 23:43:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "parkerclinic.co.uk",
+          "rank": 99,
+          "backlinks": 183,
+          "referringDomains": 67,
+          "referringMainDomains": 65,
+          "referringPages": 177,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 147
+          },
+          "firstSeen": "2019-01-23 06:11:23 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3937,6 +7440,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 93,
+          "accessibility": 91,
+          "bestPractices": 81,
+          "seo": 85,
+          "lcpMs": 3119,
+          "tbtMs": 65,
+          "clsScore": 0,
+          "fcpMs": 1304,
+          "speedIndexMs": 2279,
+          "failing": [
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 13
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "shockwave machine": 2,
+            "injuries": 3,
+            "clear explanations": 2,
+            "family": 2,
+            "knee": 2,
+            "various treatments": 3,
+            "nerve": 2,
+            "sports": 3,
+            "treatment": 3,
+            "neck": 3
+          },
+          "firstSeen": "2024-07-19 10:15:42 +00:00",
+          "lastUpdated": "2026-06-30 11:29:51 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "greenway-osteopaths.com",
+          "rank": 66,
+          "backlinks": 51,
+          "referringDomains": 45,
+          "referringMainDomains": 43,
+          "referringPages": 50,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 49
+          },
+          "firstSeen": "2022-01-07 17:40:08 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4045,6 +7650,104 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 73,
+          "accessibility": 94,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 10783,
+          "tbtMs": 80,
+          "clsScore": 0,
+          "fcpMs": 1953,
+          "speedIndexMs": 2018,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 14
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 3,
+          "placeTopics": {
+            "sports massage": 2,
+            "exercise program": 4,
+            "affordable": 2,
+            "advice": 2,
+            "treatment": 2,
+            "massage": 2
+          },
+          "firstSeen": "2026-06-30 03:38:43 +00:00",
+          "lastUpdated": "2026-06-30 03:38:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "jctherapyclinic.com",
+          "rank": 0,
+          "backlinks": 32,
+          "referringDomains": 31,
+          "referringMainDomains": 27,
+          "referringPages": 32,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 32
+          },
+          "firstSeen": "2025-06-03 12:45:23 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4153,6 +7856,100 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 61,
+          "accessibility": 98,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 6829,
+          "tbtMs": 5,
+          "clsScore": 0,
+          "fcpMs": 3966,
+          "speedIndexMs": 9073,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 7,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 8
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 3,
+          "placeTopics": {
+            "back pain removal": 2,
+            "helpful staff": 2
+          },
+          "firstSeen": "2024-07-17 13:39:04 +00:00",
+          "lastUpdated": "2026-06-30 07:16:58 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "ssp-osteopathy.co.uk",
+          "rank": 17,
+          "backlinks": 43,
+          "referringDomains": 43,
+          "referringMainDomains": 40,
+          "referringPages": 43,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 43
+          },
+          "firstSeen": "2023-11-14 14:49:46 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4261,6 +8058,107 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 73,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 13875,
+          "tbtMs": 189,
+          "clsScore": 0,
+          "fcpMs": 5937,
+          "speedIndexMs": 6892,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 10,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 4
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Acupuncture clinic",
+            "Acupuncturist",
+            "Pain Management Doctor",
+            "Physical Fitness Programme",
+            "Physiotherapist",
+            "Rehabilitation Centre",
+            "Sports massage therapist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "staff": 3
+          },
+          "firstSeen": "2024-07-19 08:42:17 +00:00",
+          "lastUpdated": "2026-06-30 10:23:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "annphysiocare.com",
+          "rank": 196,
+          "backlinks": 1227,
+          "referringDomains": 151,
+          "referringMainDomains": 148,
+          "referringPages": 1164,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 1133
+          },
+          "firstSeen": "2019-01-21 16:18:12 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4369,6 +8267,69 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI timeout"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 11,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 43
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Physical Therapy Clinic"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 18,
+          "placeTopics": {
+            "back pain treatment": 9,
+            "knee pain treatment": 3,
+            "neck pain relief": 2,
+            "confidence building": 3,
+            "tailored treatment": 2,
+            "training plan": 2,
+            "resolving back issue": 2,
+            "appointment updates": 2,
+            "problem diagnosis": 2,
+            "welcoming atmosphere": 2
+          },
+          "firstSeen": "2024-07-19 11:16:36 +00:00",
+          "lastUpdated": "2026-06-30 12:15:11 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "toptotoephysiotherapy.co.uk",
+          "rank": 139,
+          "backlinks": 207,
+          "referringDomains": 66,
+          "referringMainDomains": 65,
+          "referringPages": 190,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 101
+          },
+          "firstSeen": "2022-01-01 01:54:19 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4477,6 +8438,112 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 86,
+          "accessibility": 100,
+          "bestPractices": 81,
+          "seo": 92,
+          "lcpMs": 3513,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 2886,
+          "speedIndexMs": 2886,
+          "failing": [
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 50
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": {
+            "1": 3,
+            "2": 0,
+            "3": 1,
+            "4": 9,
+            "5": 55
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Foot care",
+            "Massage therapist",
+            "Physiotherapist",
+            "Physical Therapy Clinic",
+            "Chiropodist"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "acupuncture": 3,
+            "caring team": 2,
+            "foot care": 3,
+            "consultation": 3,
+            "massage": 3,
+            "staff": 11,
+            "sports": 2,
+            "foot": 7
+          },
+          "firstSeen": "2026-06-30 03:47:47 +00:00",
+          "lastUpdated": "2026-06-30 03:47:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "willowbrookclinic.co.uk",
+          "rank": 98,
+          "backlinks": 135,
+          "referringDomains": 37,
+          "referringMainDomains": 37,
+          "referringPages": 123,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 122
+          },
+          "firstSeen": "2022-04-06 08:38:03 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4585,6 +8652,99 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 62,
+          "accessibility": 94,
+          "bestPractices": 77,
+          "seo": 100,
+          "lcpMs": 13283,
+          "tbtMs": 94,
+          "clsScore": 0.066,
+          "fcpMs": 4359,
+          "speedIndexMs": 4728,
+          "failing": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "deprecations",
+              "title": "Uses deprecated APIs",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 5,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 6
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "book": 2
+          },
+          "firstSeen": "2026-06-30 00:04:47 +00:00",
+          "lastUpdated": "2026-06-30 00:04:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "eastonchiropracticbristol.co.uk",
+          "rank": 0,
+          "backlinks": 9,
+          "referringDomains": 7,
+          "referringMainDomains": 7,
+          "referringPages": 9,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 9
+          },
+          "firstSeen": "2025-12-28 09:59:20 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4693,6 +8853,97 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 82,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 3901,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 2885,
+          "speedIndexMs": 3248,
+          "failing": [
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 52
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 33,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-06-07 03:18:47 +00:00",
+          "lastUpdated": "2026-07-12 15:33:51 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "enablephysios.co.uk",
+          "rank": 0,
+          "backlinks": 60,
+          "referringDomains": 53,
+          "referringMainDomains": 50,
+          "referringPages": 59,
+          "brokenBacklinks": 4,
+          "referringLinksTypes": {
+            "anchor": 58
+          },
+          "firstSeen": "2023-10-27 04:27:23 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4801,6 +9052,99 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 59,
+          "accessibility": 84,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 7936,
+          "tbtMs": 5,
+          "clsScore": 0.051,
+          "fcpMs": 3566,
+          "speedIndexMs": 15634,
+          "failing": [
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 23,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Service establishment"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 2,
+          "placeTopics": null,
+          "firstSeen": "2024-06-07 01:34:52 +00:00",
+          "lastUpdated": "2026-07-22 09:42:58 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "ohanaphysio.co.uk",
+          "rank": 0,
+          "backlinks": 39,
+          "referringDomains": 38,
+          "referringMainDomains": 36,
+          "referringPages": 39,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 39
+          },
+          "firstSeen": "2023-11-13 21:56:02 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -4909,6 +9253,91 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 46,
+          "accessibility": 78,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 16330,
+          "tbtMs": 537,
+          "clsScore": 0,
+          "fcpMs": 4158,
+          "speedIndexMs": 8163,
+          "failing": [
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "list",
+              "title": "Lists do not contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-06-07 03:18:47 +00:00",
+          "lastUpdated": "2026-06-30 11:34:49 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "runningschoolbristol.co.uk",
+          "rank": 0,
+          "backlinks": 13,
+          "referringDomains": 9,
+          "referringMainDomains": 9,
+          "referringPages": 13,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 13
+          },
+          "firstSeen": "2023-11-14 03:09:05 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -5021,6 +9450,91 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Brunel House 11 The Promenade, Clifton, Bristol, United Kingdom, BS8 3NG",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 69,
+          "accessibility": 82,
+          "bestPractices": 81,
+          "seo": 92,
+          "lcpMs": 4865,
+          "tbtMs": 237,
+          "clsScore": 0.067,
+          "fcpMs": 2015,
+          "speedIndexMs": 6616,
+          "failing": [
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 5,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-06-19 16:02:45 +00:00",
+          "lastUpdated": "2024-09-03 06:43:01 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kasachiro.com",
+          "rank": 149,
+          "backlinks": 257,
+          "referringDomains": 88,
+          "referringMainDomains": 86,
+          "referringPages": 213,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 210
+          },
+          "firstSeen": "2022-04-26 21:30:44 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -5129,6 +9643,106 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 52,
+          "accessibility": 63,
+          "bestPractices": 81,
+          "seo": 85,
+          "lcpMs": 10232,
+          "tbtMs": 168,
+          "clsScore": 0.162,
+          "fcpMs": 4382,
+          "speedIndexMs": 6002,
+          "failing": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 14,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 8
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Acupuncture clinic",
+            "Pilates studio"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "vertigo treatment": 3,
+            "advice": 4,
+            "suffering": 2,
+            "phone": 2,
+            "vertigo": 3
+          },
+          "firstSeen": "2024-07-17 05:51:31 +00:00",
+          "lastUpdated": "2026-06-30 01:17:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bradleystokephysio.co.uk",
+          "rank": 97,
+          "backlinks": 118,
+          "referringDomains": 63,
+          "referringMainDomains": 63,
+          "referringPages": 106,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 99
+          },
+          "firstSeen": "2022-03-26 11:18:39 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -5237,6 +9851,91 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 67,
+          "accessibility": 84,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 5835,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 4488,
+          "speedIndexMs": 4488,
+          "failing": [
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "robots-txt",
+              "title": "robots.txt is not valid",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 12:18:16 +00:00",
+          "lastUpdated": "2026-06-30 12:58:17 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "businformaps.org",
+          "rank": 116,
+          "backlinks": 345,
+          "referringDomains": 53,
+          "referringMainDomains": 42,
+          "referringPages": 181,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 180
+          },
+          "firstSeen": "2025-10-11 09:36:25 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -5345,6 +10044,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 70,
+          "accessibility": 95,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 7012,
+          "tbtMs": 63,
+          "clsScore": 0,
+          "fcpMs": 3315,
+          "speedIndexMs": 3315,
+          "failing": [
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "duplicated-javascript-insight",
+              "title": "Duplicated JavaScript",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 7
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "shoulder pain treatment": 2,
+            "exercise recommendations": 2,
+            "back pain treatment": 2,
+            "pain relief": 2,
+            "injury": 2,
+            "clear explanations": 2,
+            "kindness": 2,
+            "hands": 2,
+            "osteopath": 2,
+            "advice": 2
+          },
+          "firstSeen": "2026-06-30 11:39:14 +00:00",
+          "lastUpdated": "2026-06-30 11:39:14 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "marionveyosteopathy.co.uk",
+          "rank": 0,
+          "backlinks": 1,
+          "referringDomains": 1,
+          "referringMainDomains": 1,
+          "referringPages": 1,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 1
+          },
+          "firstSeen": "2026-01-27 21:39:02 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -5453,6 +10254,91 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 70,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 4315,
+          "tbtMs": 65,
+          "clsScore": 0.889,
+          "fcpMs": 2738,
+          "speedIndexMs": 3072,
+          "failing": [
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 10:23:46 +00:00",
+          "lastUpdated": "2026-06-30 10:23:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cheringtonpractice.co.uk",
+          "rank": 116,
+          "backlinks": 359,
+          "referringDomains": 67,
+          "referringMainDomains": 66,
+          "referringPages": 232,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 143
+          },
+          "firstSeen": "2021-06-14 15:57:07 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -5561,6 +10447,93 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 45,
+          "accessibility": 92,
+          "bestPractices": 81,
+          "seo": 92,
+          "lcpMs": 12953,
+          "tbtMs": 486,
+          "clsScore": 0,
+          "fcpMs": 5781,
+          "speedIndexMs": 8679,
+          "failing": [
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Physiotherapist"
+          ],
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2023-11-30 16:47:54 +00:00",
+          "lastUpdated": "2023-11-30 16:47:54 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "aliveforlife.co.uk",
+          "rank": 77,
+          "backlinks": 141,
+          "referringDomains": 61,
+          "referringMainDomains": 56,
+          "referringPages": 134,
+          "brokenBacklinks": 13,
+          "referringLinksTypes": {
+            "anchor": 132
+          },
+          "firstSeen": "2021-01-17 22:50:11 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -5669,6 +10642,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 91,
+          "accessibility": 76,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 2573,
+          "tbtMs": 0,
+          "clsScore": 0.093,
+          "fcpMs": 2573,
+          "speedIndexMs": 2573,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 50
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 50
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 53
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": {
+            "injury understanding": 4,
+            "quick diagnosis": 2,
+            "back repair": 2,
+            "clean clinic": 2,
+            "relaxed atmosphere": 2,
+            "informative staff": 2,
+            "thorough": 4,
+            "sense of humour": 2,
+            "knowledgeable staff": 8,
+            "back pain relief": 6
+          },
+          "firstSeen": "2024-06-16 05:11:31 +00:00",
+          "lastUpdated": "2026-08-08 00:49:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bristolchiropractor.co.uk",
+          "rank": 24,
+          "backlinks": 35,
+          "referringDomains": 29,
+          "referringMainDomains": 29,
+          "referringPages": 35,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 34
+          },
+          "firstSeen": "2021-10-13 22:51:34 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -5778,6 +10853,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 85,
+          "accessibility": 94,
+          "bestPractices": 78,
+          "seo": 40,
+          "lcpMs": 3812,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 2606,
+          "speedIndexMs": 2606,
+          "failing": [
+            {
+              "id": "http-status-code",
+              "title": "Page has unsuccessful HTTP status code",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "is-crawlable",
+              "title": "Page is blocked from indexing",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 10,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 28
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 4,
+          "placeTopics": {
+            "improving posture": 2,
+            "neck pain relief": 3,
+            "thorough assessment": 2,
+            "knowledgeable staff": 5,
+            "back pain relief": 5,
+            "helpful exercises": 2,
+            "issue diagnosis": 2,
+            "welcoming staff": 2,
+            "holistic approach": 2,
+            "reassuring approach": 2
+          },
+          "firstSeen": "2026-06-30 03:19:40 +00:00",
+          "lastUpdated": "2026-06-30 03:19:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "melanienoble.co.uk",
+          "rank": 67,
+          "backlinks": 61,
+          "referringDomains": 43,
+          "referringMainDomains": 41,
+          "referringPages": 61,
+          "brokenBacklinks": 3,
+          "referringLinksTypes": {
+            "anchor": 61
+          },
+          "firstSeen": "2022-12-11 12:59:57 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -5886,6 +11063,102 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 58,
+          "accessibility": 89,
+          "bestPractices": 100,
+          "seo": 83,
+          "lcpMs": 6562,
+          "tbtMs": 305,
+          "clsScore": 0,
+          "fcpMs": 4176,
+          "speedIndexMs": 5409,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 31,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 12
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 8,
+          "placeTopics": {
+            "injury recovery": 3,
+            "knowledgeable staff": 3,
+            "physio": 3,
+            "injury": 6
+          },
+          "firstSeen": "2024-07-17 08:27:20 +00:00",
+          "lastUpdated": "2026-06-30 03:24:37 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "pjphysio.co.uk",
+          "rank": 59,
+          "backlinks": 48,
+          "referringDomains": 39,
+          "referringMainDomains": 36,
+          "referringPages": 47,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 46
+          },
+          "firstSeen": "2019-11-14 11:04:20 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -5995,6 +11268,99 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 43,
+          "accessibility": 91,
+          "bestPractices": 56,
+          "seo": 100,
+          "lcpMs": 6031,
+          "tbtMs": 1117,
+          "clsScore": 0,
+          "fcpMs": 2850,
+          "speedIndexMs": 7770,
+          "failing": [
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 4
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Pain Management Doctor"
+          ],
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 15:10:25 +00:00",
+          "lastUpdated": "2026-06-30 14:53:57 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bodyandmindphysio.co.uk",
+          "rank": 10,
+          "backlinks": 23,
+          "referringDomains": 21,
+          "referringMainDomains": 21,
+          "referringPages": 23,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 23
+          },
+          "firstSeen": "2023-11-13 18:21:33 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -6103,6 +11469,91 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 76,
+          "accessibility": 86,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 6057,
+          "tbtMs": 0,
+          "clsScore": 0.069,
+          "fcpMs": 1875,
+          "speedIndexMs": 2457,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 5,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 03:24:24 +00:00",
+          "lastUpdated": "2026-06-29 23:19:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "thenaturalhealthclinic.com",
+          "rank": 127,
+          "backlinks": 180,
+          "referringDomains": 70,
+          "referringMainDomains": 64,
+          "referringPages": 168,
+          "brokenBacklinks": 147,
+          "referringLinksTypes": {
+            "anchor": 156
+          },
+          "firstSeen": "2019-01-19 07:04:54 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -6211,6 +11662,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 64,
+          "accessibility": 73,
+          "bestPractices": 100,
+          "seo": 91,
+          "lcpMs": 6706,
+          "tbtMs": 102,
+          "clsScore": 0,
+          "fcpMs": 4151,
+          "speedIndexMs": 5270,
+          "failing": [
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 21
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "hip pain treatment": 2,
+            "shoulder treatment": 2,
+            "sports massage": 2,
+            "knowledgeable team": 3,
+            "safe environment": 4,
+            "clear explanations": 3,
+            "aftercare": 2,
+            "back treatment": 2,
+            "injuries": 5,
+            "advice": 2
+          },
+          "firstSeen": "2024-07-17 12:06:17 +00:00",
+          "lastUpdated": "2026-06-30 06:09:56 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "chewvalleyphysio.co.uk",
+          "rank": 26,
+          "backlinks": 50,
+          "referringDomains": 45,
+          "referringMainDomains": 41,
+          "referringPages": 50,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 50
+          },
+          "firstSeen": "2023-11-14 08:23:31 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -6319,6 +11872,91 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Bristol"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 66,
+          "accessibility": 73,
+          "bestPractices": 81,
+          "seo": 92,
+          "lcpMs": 7437,
+          "tbtMs": 14,
+          "clsScore": 0,
+          "fcpMs": 3550,
+          "speedIndexMs": 4990,
+          "failing": [
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": null,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-06-07 03:18:46 +00:00",
+          "lastUpdated": "2026-07-12 15:33:14 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "plowden.net",
+          "rank": 0,
+          "backlinks": 47,
+          "referringDomains": 45,
+          "referringMainDomains": 40,
+          "referringPages": 47,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 47
+          },
+          "firstSeen": "2023-11-14 09:48:33 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -6432,6 +12070,60 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Unit1 North View, Soundwell, Bristol, BS16 4NQ",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 15
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": {
+            "friendly staff": 6,
+            "physio needs": 2,
+            "injury": 2
+          },
+          "firstSeen": "2024-07-19 11:50:25 +00:00",
+          "lastUpdated": "2026-06-30 10:26:02 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "portlandtherapycentre.co.uk",
+          "rank": 0,
+          "backlinks": 28,
+          "referringDomains": 23,
+          "referringMainDomains": 23,
+          "referringPages": 28,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 27
+          },
+          "firstSeen": "2022-11-07 02:00:02 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -6541,6 +12233,74 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 49
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Health consultant",
+            "Massage therapist",
+            "Physiotherapist",
+            "Sports injury clinic",
+            "Sports massage therapist",
+            "Sports medicine clinic"
+          ],
+          "hasDescription": true,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": {
+            "feeling": 6,
+            "clinic": 6,
+            "energy": 5,
+            "back pain": 5,
+            "holistic": 4,
+            "suffering": 4,
+            "back injury": 3,
+            "travel": 4,
+            "chronic fatigue": 2,
+            "traumas": 2
+          },
+          "firstSeen": "2024-07-17 02:12:19 +00:00",
+          "lastUpdated": "2024-10-01 11:15:59 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "etherealhealth.co.uk",
+          "rank": 7,
+          "backlinks": 30,
+          "referringDomains": 27,
+          "referringMainDomains": 24,
+          "referringPages": 30,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 30
+          },
+          "firstSeen": "2025-02-08 08:26:26 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -6650,6 +12410,61 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Physiotherapist",
+            "Sports massage therapist"
+          ],
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": {
+            "exercises": 3
+          },
+          "firstSeen": "2024-07-17 06:35:42 +00:00",
+          "lastUpdated": "2025-03-03 01:59:49 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "thebatchclinic.co.uk",
+          "rank": 0,
+          "backlinks": 24,
+          "referringDomains": 23,
+          "referringMainDomains": 20,
+          "referringPages": 24,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 24
+          },
+          "firstSeen": "2025-02-09 01:14:15 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -6759,6 +12574,50 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 3,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 02:44:15 +00:00",
+          "lastUpdated": "2026-06-29 22:59:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "tifa-health.com",
+          "rank": 0,
+          "backlinks": 15,
+          "referringDomains": 13,
+          "referringMainDomains": 13,
+          "referringPages": 15,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 15
+          },
+          "firstSeen": "2023-10-14 19:12:08 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -6868,6 +12727,50 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-06-29 21:16:41 +00:00",
+          "lastUpdated": "2026-06-29 21:16:41 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "avonosteopathy.com",
+          "rank": 0,
+          "backlinks": 27,
+          "referringDomains": 26,
+          "referringMainDomains": 24,
+          "referringPages": 27,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 27
+          },
+          "firstSeen": "2023-10-14 18:16:32 +00:00",
+          "lostDate": null
         }
       }
     }

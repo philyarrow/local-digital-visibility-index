@@ -244,6 +244,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 43,
+          "accessibility": 97,
+          "bestPractices": 73,
+          "seo": 100,
+          "lcpMs": 14469,
+          "tbtMs": 659,
+          "clsScore": 0.01,
+          "fcpMs": 3652,
+          "speedIndexMs": 9890,
+          "failing": [
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 20,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 1,
+            "3": 0,
+            "4": 8,
+            "5": 86
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 69,
+          "placeTopics": {
+            "anxious dog": 2,
+            "kind vet": 3,
+            "lovely staff": 4,
+            "calm atmosphere": 2,
+            "gentle care": 2,
+            "amazing vets": 3,
+            "nurses": 2,
+            "empathy": 3,
+            "receptionists": 2,
+            "village": 2
+          },
+          "firstSeen": "2024-07-15 10:00:44 +00:00",
+          "lastUpdated": "2026-06-28 08:54:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bathvetgroup.co.uk",
+          "rank": 202,
+          "backlinks": 1034,
+          "referringDomains": 199,
+          "referringMainDomains": 193,
+          "referringPages": 856,
+          "brokenBacklinks": 5,
+          "referringLinksTypes": {
+            "anchor": 850
+          },
+          "firstSeen": "2019-01-16 22:40:37 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -354,6 +456,102 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Purcells, 342 Bloomfield Road, Bath, Somerset, BA2 2PB",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 60,
+          "accessibility": 73,
+          "bestPractices": 78,
+          "seo": 91,
+          "lcpMs": 12165,
+          "tbtMs": 37,
+          "clsScore": 0,
+          "fcpMs": 5865,
+          "speedIndexMs": 5865,
+          "failing": [
+            {
+              "id": "redirects-http",
+              "title": "Does not redirect HTTP traffic to HTTPS",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 14
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 6,
+          "placeTopics": {
+            "kind vet": 3,
+            "kind staff": 4,
+            "vets": 2,
+            "pet care": 2
+          },
+          "firstSeen": "2024-07-16 23:41:35 +00:00",
+          "lastUpdated": "2026-06-29 20:30:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bathveterinarycentre.co.uk",
+          "rank": 147,
+          "backlinks": 1693,
+          "referringDomains": 62,
+          "referringMainDomains": 60,
+          "referringPages": 1684,
+          "brokenBacklinks": 1781,
+          "referringLinksTypes": {
+            "anchor": 1682
+          },
+          "firstSeen": "2019-01-18 10:19:15 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -462,6 +660,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 79,
+          "accessibility": 95,
+          "bestPractices": 81,
+          "seo": 92,
+          "lcpMs": 4696,
+          "tbtMs": 5,
+          "clsScore": 0,
+          "fcpMs": 2595,
+          "speedIndexMs": 2595,
+          "failing": [
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 17,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 2,
+            "4": 0,
+            "5": 64
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 55,
+          "placeTopics": {
+            "nervous spaniel": 3,
+            "calm atmosphere": 7,
+            "independent vets": 2,
+            "independent practice": 2,
+            "giving birth": 2,
+            "vaccinations": 2,
+            "kind team": 2,
+            "personal touch": 2,
+            "local vet": 2,
+            "caring staff": 13
+          },
+          "firstSeen": "2024-07-17 11:24:40 +00:00",
+          "lastUpdated": "2026-06-30 05:41:38 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kelstonvets.co.uk",
+          "rank": 125,
+          "backlinks": 138,
+          "referringDomains": 57,
+          "referringMainDomains": 52,
+          "referringPages": 134,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 133
+          },
+          "firstSeen": "2022-09-10 10:44:40 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -570,6 +870,56 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Bath"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 500"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-06-06 05:16:31 +00:00",
+          "lastUpdated": "2026-07-16 16:32:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "businformaps.org",
+          "rank": 116,
+          "backlinks": 345,
+          "referringDomains": 53,
+          "referringMainDomains": 42,
+          "referringPages": 181,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 180
+          },
+          "firstSeen": "2025-10-11 09:36:25 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -682,6 +1032,108 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "136 Bath Road, Bradford On Avon, Wiltshire, England, BA15 1SS",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 66,
+          "accessibility": 90,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 5448,
+          "tbtMs": 37,
+          "clsScore": 0.005,
+          "fcpMs": 4161,
+          "speedIndexMs": 6547,
+          "failing": [
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "skip-link",
+              "title": "Skip links are not focusable.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 19
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 1,
+          "placeTopics": {
+            "flexible working": 2,
+            "equine knowledge": 2,
+            "kind staff": 3,
+            "horse care": 4,
+            "friendly staff": 5,
+            "expertise": 4,
+            "communication": 3,
+            "horses": 13,
+            "questions": 2,
+            "care": 2
+          },
+          "firstSeen": "2026-07-10 02:17:58 +00:00",
+          "lastUpdated": "2026-07-10 02:17:58 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cadenceequinevets.co.uk",
+          "rank": 54,
+          "backlinks": 24,
+          "referringDomains": 18,
+          "referringMainDomains": 17,
+          "referringPages": 19,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 17
+          },
+          "firstSeen": "2024-09-23 22:08:53 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -790,6 +1242,97 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 72,
+          "accessibility": 87,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 9452,
+          "tbtMs": 0,
+          "clsScore": 0.005,
+          "fcpMs": 2416,
+          "speedIndexMs": 2773,
+          "failing": [
+            {
+              "id": "autocomplete-valid",
+              "title": "`autocomplete` attributes are not used correctly",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "label",
+              "title": "Form elements do not have associated labels",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 5
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": false,
+          "services": 1,
+          "placeTopics": null,
+          "firstSeen": "2026-08-27 00:02:33 +00:00",
+          "lastUpdated": "2026-08-27 00:02:33 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "veethevet.co.uk",
+          "rank": 0,
+          "backlinks": 12,
+          "referringDomains": 12,
+          "referringMainDomains": 12,
+          "referringPages": 12,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 12
+          },
+          "firstSeen": "2025-06-29 06:26:00 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -898,6 +1441,101 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Bath"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 81,
+          "accessibility": 82,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 4835,
+          "tbtMs": 124,
+          "clsScore": 0,
+          "fcpMs": 933,
+          "speedIndexMs": 2908,
+          "failing": [
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "aria-dialog-name",
+              "title": "Elements with `role=\"dialog\"` or `role=\"alertdialog\"` do not have accessible names.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 4
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 8,
+          "placeTopics": {
+            "euthanasia": 2,
+            "compassion": 2,
+            "sleep": 2
+          },
+          "firstSeen": "2026-06-30 12:37:27 +00:00",
+          "lastUpdated": "2026-06-30 12:37:27 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "vet-painmanagement.com",
+          "rank": 0,
+          "backlinks": 52,
+          "referringDomains": 34,
+          "referringMainDomains": 32,
+          "referringPages": 50,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 50
+          },
+          "firstSeen": "2023-11-13 13:49:38 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1006,6 +1644,99 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 81,
+          "accessibility": 95,
+          "bestPractices": 81,
+          "seo": 92,
+          "lcpMs": 3823,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3370,
+          "speedIndexMs": 3370,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 38
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 5,
+          "placeTopics": {
+            "overall experience": 2
+          },
+          "firstSeen": "2026-06-29 21:55:46 +00:00",
+          "lastUpdated": "2026-06-29 21:55:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "handsonanimalphysiotherapy.co.uk",
+          "rank": 10,
+          "backlinks": 23,
+          "referringDomains": 18,
+          "referringMainDomains": 18,
+          "referringPages": 23,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 23
+          },
+          "firstSeen": "2019-02-16 21:41:42 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1121,6 +1852,91 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "33 Gay Street, Bath, England, BA1 2NT",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 71,
+          "accessibility": 100,
+          "bestPractices": 81,
+          "seo": 92,
+          "lcpMs": 5833,
+          "tbtMs": 32,
+          "clsScore": 0,
+          "fcpMs": 2890,
+          "speedIndexMs": 4700,
+          "failing": [
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 10,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 04:15:47 +00:00",
+          "lastUpdated": "2026-06-30 04:15:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "vetindex.co.uk",
+          "rank": 121,
+          "backlinks": 225,
+          "referringDomains": 123,
+          "referringMainDomains": 110,
+          "referringPages": 218,
+          "brokenBacklinks": 46,
+          "referringLinksTypes": {
+            "anchor": 207
+          },
+          "firstSeen": "2019-02-17 20:11:37 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1230,6 +2046,110 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 45,
+          "accessibility": 96,
+          "bestPractices": 73,
+          "seo": 100,
+          "lcpMs": 13018,
+          "tbtMs": 614,
+          "clsScore": 0.014,
+          "fcpMs": 3654,
+          "speedIndexMs": 7941,
+          "failing": [
+            {
+              "id": "deprecations",
+              "title": "Uses deprecated APIs",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 34,
+          "ratingDistribution": {
+            "1": 5,
+            "2": 0,
+            "3": 0,
+            "4": 7,
+            "5": 101
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Cattery"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 34,
+          "placeTopics": {
+            "cat clinic": 4,
+            "lovely staff": 8,
+            "keeping cat at ease": 2,
+            "helpful staff": 29,
+            "calm patience": 2,
+            "veterinary team": 2,
+            "compassionate care": 3,
+            "vet nurse": 3,
+            "thoroughness": 2,
+            "caring staff": 10
+          },
+          "firstSeen": "2024-07-14 15:21:27 +00:00",
+          "lastUpdated": "2026-06-25 17:14:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bathcatclinic.co.uk",
+          "rank": 165,
+          "backlinks": 395,
+          "referringDomains": 67,
+          "referringMainDomains": 65,
+          "referringPages": 239,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 239
+          },
+          "firstSeen": "2021-10-19 00:27:23 +00:00",
+          "lostDate": null
         }
       }
     }

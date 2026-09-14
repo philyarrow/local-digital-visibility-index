@@ -243,6 +243,102 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Swindon"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 75,
+          "accessibility": 51,
+          "bestPractices": 65,
+          "seo": 83,
+          "lcpMs": 4576,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3630,
+          "speedIndexMs": 3630,
+          "failing": [
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 13,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 7
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Interior designer",
+            "Surveyor"
+          ],
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 6,
+          "placeTopics": {
+            "friendly architect": 2
+          },
+          "firstSeen": "2024-07-10 22:21:23 +00:00",
+          "lastUpdated": "2026-08-27 00:44:59 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "ocarchitects.co.uk",
+          "rank": 48,
+          "backlinks": 232,
+          "referringDomains": 61,
+          "referringMainDomains": 57,
+          "referringPages": 209,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 207
+          },
+          "firstSeen": "2021-09-13 00:24:02 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -351,6 +447,106 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 61,
+          "accessibility": 88,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 8346,
+          "tbtMs": 152,
+          "clsScore": 0,
+          "fcpMs": 3668,
+          "speedIndexMs": 6231,
+          "failing": [
+            {
+              "id": "duplicated-javascript-insight",
+              "title": "Duplicated JavaScript",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 12,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 4
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architect",
+            "Architects association",
+            "Architecture firm",
+            "Building consultant",
+            "Custom home builder",
+            "Drafting Services",
+            "Housing Development",
+            "Kitchen Renovator"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 36,
+          "placeTopics": null,
+          "firstSeen": "2024-08-04 18:16:27 +00:00",
+          "lastUpdated": "2026-07-10 10:36:03 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "offgridarchitecture.co.uk",
+          "rank": 62,
+          "backlinks": 35,
+          "referringDomains": 29,
+          "referringMainDomains": 27,
+          "referringPages": 33,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 31
+          },
+          "firstSeen": "2020-02-26 04:29:12 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -459,6 +655,99 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 62,
+          "accessibility": 82,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 7351,
+          "tbtMs": 86,
+          "clsScore": 0.062,
+          "fcpMs": 3334,
+          "speedIndexMs": 7084,
+          "failing": [
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architectural Designer"
+          ],
+          "hasDescription": true,
+          "hasHours": false,
+          "services": 12,
+          "placeTopics": null,
+          "firstSeen": "2026-06-29 22:00:46 +00:00",
+          "lastUpdated": "2026-06-29 22:00:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "nwddesign.co.uk",
+          "rank": 100,
+          "backlinks": 92,
+          "referringDomains": 53,
+          "referringMainDomains": 51,
+          "referringPages": 88,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 88
+          },
+          "firstSeen": "2021-04-19 06:08:52 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -567,6 +856,103 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 49,
+          "accessibility": 95,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 19424,
+          "tbtMs": 387,
+          "clsScore": 0.004,
+          "fcpMs": 4308,
+          "speedIndexMs": 8761,
+          "failing": [
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 17,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 6
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Building consultant"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 9,
+          "placeTopics": {
+            "planning application": 2,
+            "quick responses": 2,
+            "planning": 3
+          },
+          "firstSeen": "2026-06-30 00:12:44 +00:00",
+          "lastUpdated": "2026-06-30 00:12:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "edwardtucker.co.uk",
+          "rank": 66,
+          "backlinks": 167,
+          "referringDomains": 61,
+          "referringMainDomains": 57,
+          "referringPages": 146,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 143
+          },
+          "firstSeen": "2019-01-19 05:13:11 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -675,6 +1061,105 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 70,
+          "accessibility": 98,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 7907,
+          "tbtMs": 75,
+          "clsScore": 0.013,
+          "fcpMs": 2732,
+          "speedIndexMs": 3574,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 9
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 13,
+          "placeTopics": {
+            "house renovation design": 2,
+            "planning permission": 2,
+            "designs": 2,
+            "reality": 3,
+            "communication": 4,
+            "ideas": 3,
+            "planning process": 4
+          },
+          "firstSeen": "2024-07-17 11:59:43 +00:00",
+          "lastUpdated": "2026-06-30 06:05:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "pendlepropertydesign.co.uk",
+          "rank": 0,
+          "backlinks": 39,
+          "referringDomains": 36,
+          "referringMainDomains": 36,
+          "referringPages": 39,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 38
+          },
+          "firstSeen": "2023-11-13 18:30:45 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -783,6 +1268,107 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 85,
+          "accessibility": 51,
+          "bestPractices": 63,
+          "seo": 92,
+          "lcpMs": 4228,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 1207,
+          "speedIndexMs": 2832,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "doctype",
+              "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 13
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architect"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 20,
+          "placeTopics": {
+            "extension plan": 2,
+            "planning process guidance": 4,
+            "affordable cost": 2,
+            "efficiency": 5,
+            "home design": 2,
+            "communication": 2,
+            "advice": 2
+          },
+          "firstSeen": "2024-07-19 13:28:33 +00:00",
+          "lastUpdated": "2026-06-30 13:46:50 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "home-plan-design.co.uk",
+          "rank": 103,
+          "backlinks": 168,
+          "referringDomains": 84,
+          "referringMainDomains": 79,
+          "referringPages": 158,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 148
+          },
+          "firstSeen": "2019-01-24 02:10:25 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -891,6 +1477,50 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI timeout"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 52,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 03:29:42 +00:00",
+          "lastUpdated": "2026-06-30 03:29:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "acarchitects.biz",
+          "rank": 244,
+          "backlinks": 2082,
+          "referringDomains": 590,
+          "referringMainDomains": 573,
+          "referringPages": 1940,
+          "brokenBacklinks": 14,
+          "referringLinksTypes": {
+            "image": 1285
+          },
+          "firstSeen": "2019-02-23 08:45:43 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1001,6 +1631,91 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Unit D,, 54-56 Bramble Road, Swindon, Wiltshire, England, SN2 8DS",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 85,
+          "accessibility": 84,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 3035,
+          "tbtMs": 59,
+          "clsScore": 0.031,
+          "fcpMs": 2885,
+          "speedIndexMs": 5534,
+          "failing": [
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 28,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 12:38:38 +00:00",
+          "lastUpdated": "2026-06-30 06:32:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "dwarchitech.co.uk",
+          "rank": 51,
+          "backlinks": 146,
+          "referringDomains": 43,
+          "referringMainDomains": 40,
+          "referringPages": 144,
+          "brokenBacklinks": 197,
+          "referringLinksTypes": {
+            "anchor": 144
+          },
+          "firstSeen": "2023-11-14 08:24:39 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1109,6 +1824,97 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Swindon"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 51,
+          "accessibility": 89,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 22308,
+          "tbtMs": 220,
+          "clsScore": 0,
+          "fcpMs": 12251,
+          "speedIndexMs": 12251,
+          "failing": [
+            {
+              "id": "unminified-javascript",
+              "title": "Minify JavaScript",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 0
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 2,
+          "placeTopics": null,
+          "firstSeen": "2024-06-12 12:05:29 +00:00",
+          "lastUpdated": "2026-06-29 13:53:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "iansullivanarchitecture.co.uk",
+          "rank": 0,
+          "backlinks": 53,
+          "referringDomains": 33,
+          "referringMainDomains": 33,
+          "referringPages": 53,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 53
+          },
+          "firstSeen": "2022-11-24 23:08:11 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1217,6 +2023,101 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 51,
+          "accessibility": 92,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 9198,
+          "tbtMs": 283,
+          "clsScore": 0.068,
+          "fcpMs": 4531,
+          "speedIndexMs": 9348,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "aria-hidden-focus",
+              "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architectural Designer",
+            "Environmental consultant",
+            "Landscape architect"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 35,
+          "placeTopics": null,
+          "firstSeen": "2024-07-16 00:35:06 +00:00",
+          "lastUpdated": "2026-06-25 22:08:38 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "dpds.co.uk",
+          "rank": 119,
+          "backlinks": 169,
+          "referringDomains": 98,
+          "referringMainDomains": 94,
+          "referringPages": 137,
+          "brokenBacklinks": 99,
+          "referringLinksTypes": {
+            "anchor": 120
+          },
+          "firstSeen": "2019-02-20 01:04:25 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1325,6 +2226,108 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Swindon"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 62,
+          "accessibility": 83,
+          "bestPractices": 74,
+          "seo": 92,
+          "lcpMs": 5187,
+          "tbtMs": 366,
+          "clsScore": 0.043,
+          "fcpMs": 3091,
+          "speedIndexMs": 5559,
+          "failing": [
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 4,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 85
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 20,
+          "placeTopics": {
+            "extension plans": 4,
+            "one story extension": 2,
+            "drawings": 19,
+            "planning permission": 24,
+            "detailed plans": 3,
+            "garage design": 2,
+            "conservatory": 2,
+            "structural calculations": 3,
+            "quick plans": 3,
+            "application process": 4
+          },
+          "firstSeen": "2024-07-17 01:36:27 +00:00",
+          "lastUpdated": "2026-06-29 22:00:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "randplanningconsultancy.co.uk",
+          "rank": 68,
+          "backlinks": 108,
+          "referringDomains": 27,
+          "referringMainDomains": 27,
+          "referringPages": 104,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 103
+          },
+          "firstSeen": "2022-11-24 23:08:11 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1435,6 +2438,105 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Basepoint Business Centre, Rivermead Drive, Swindon, Wiltshire, United Kingdom, SN5 7EX",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 59,
+          "accessibility": 91,
+          "bestPractices": 63,
+          "seo": 92,
+          "lcpMs": 13981,
+          "tbtMs": 153,
+          "clsScore": 0,
+          "fcpMs": 3189,
+          "speedIndexMs": 9851,
+          "failing": [
+            {
+              "id": "deprecations",
+              "title": "Uses deprecated APIs",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 9
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 37,
+          "placeTopics": {
+            "quick to respond": 2,
+            "extension": 2,
+            "expertize knowledge": 2,
+            "planning approval": 2,
+            "draw": 2,
+            "architectural work": 2,
+            "planning": 5
+          },
+          "firstSeen": "2024-07-17 11:29:40 +00:00",
+          "lastUpdated": "2026-06-30 05:45:41 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "mjfcadsolutions.co.uk",
+          "rank": 94,
+          "backlinks": 110,
+          "referringDomains": 88,
+          "referringMainDomains": 86,
+          "referringPages": 105,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 99
+          },
+          "firstSeen": "2019-07-21 00:17:15 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1543,6 +2645,97 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Swindon"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 99,
+          "accessibility": 97,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 1687,
+          "tbtMs": 71,
+          "clsScore": 0,
+          "fcpMs": 1537,
+          "speedIndexMs": 1861,
+          "failing": [
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 50
+            },
+            {
+              "id": "unsized-images",
+              "title": "Image elements do not have explicit `width` and `height`",
+              "score": 50
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 50
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 50
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Architectural Designer"
+          ],
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": {
+            "questions": 3,
+            "porch": 2
+          },
+          "firstSeen": "2024-07-19 10:00:36 +00:00",
+          "lastUpdated": "2024-12-18 18:51:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "planningdrawings.co.uk",
+          "rank": 0,
+          "backlinks": 44,
+          "referringDomains": 41,
+          "referringMainDomains": 38,
+          "referringPages": 44,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 43
+          },
+          "firstSeen": "2023-11-14 14:16:59 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1651,6 +2844,55 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Swindon"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI timeout"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architecture firm",
+            "Chartered surveyor",
+            "Legal services",
+            "Quantity surveyor"
+          ],
+          "hasDescription": true,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 11:25:33 +00:00",
+          "lastUpdated": "2024-10-04 02:59:19 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "eastonbevins.co.uk",
+          "rank": 174,
+          "backlinks": 1756,
+          "referringDomains": 131,
+          "referringMainDomains": 118,
+          "referringPages": 1689,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 1668
+          },
+          "firstSeen": "2019-03-21 08:40:41 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1759,6 +3001,116 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Swindon"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 66,
+          "accessibility": 88,
+          "bestPractices": 81,
+          "seo": 92,
+          "lcpMs": 3429,
+          "tbtMs": 0,
+          "clsScore": 0.73,
+          "fcpMs": 2032,
+          "speedIndexMs": 2293,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "cls-culprits-insight",
+              "title": "Layout shift culprits",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 92,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 22
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architecture firm",
+            "Building firm",
+            "Kitchen Renovator",
+            "Landscape Gardener",
+            "Painter and Decorator",
+            "Plasterer",
+            "Remodeller"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 73,
+          "placeTopics": {
+            "proactive advice": 2,
+            "bathroom remodeling": 2,
+            "attention to detail": 3,
+            "workmanship": 4,
+            "cleanliness": 2,
+            "professional team": 2,
+            "efficiency": 4,
+            "customer satisfaction": 2,
+            "electrical": 2,
+            "communication": 2
+          },
+          "firstSeen": "2024-07-14 12:25:25 +00:00",
+          "lastUpdated": "2026-06-26 12:03:38 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "construction-edge.co.uk",
+          "rank": 56,
+          "backlinks": 69,
+          "referringDomains": 24,
+          "referringMainDomains": 24,
+          "referringPages": 67,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 67
+          },
+          "firstSeen": "2022-11-20 03:42:47 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1867,6 +3219,93 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": "registered address does not mention Swindon"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 66,
+          "accessibility": 74,
+          "bestPractices": 77,
+          "seo": 92,
+          "lcpMs": 12154,
+          "tbtMs": 117,
+          "clsScore": 0.003,
+          "fcpMs": 3245,
+          "speedIndexMs": 4469,
+          "failing": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unminified-javascript",
+              "title": "Minify JavaScript",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architect"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 8,
+          "placeTopics": null,
+          "firstSeen": "2026-07-11 01:42:57 +00:00",
+          "lastUpdated": "2026-07-11 01:42:57 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "squiresplanning.co.uk",
+          "rank": 166,
+          "backlinks": 237,
+          "referringDomains": 70,
+          "referringMainDomains": 66,
+          "referringPages": 232,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 229
+          },
+          "firstSeen": "2020-04-07 04:19:13 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -1977,6 +3416,106 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "Ferndale Highworth Road, South Marston, Swindon, England, SN3 4SE",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 71,
+          "accessibility": 97,
+          "bestPractices": 78,
+          "seo": 92,
+          "lcpMs": 6589,
+          "tbtMs": 1,
+          "clsScore": 0,
+          "fcpMs": 2892,
+          "speedIndexMs": 3850,
+          "failing": [
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 11,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 7
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architectural Designer"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 3,
+          "placeTopics": {
+            "kitchen remodeling": 2,
+            "professional team": 3,
+            "tradespeople": 2,
+            "advice": 3,
+            "building works": 2,
+            "end result": 2
+          },
+          "firstSeen": "2026-06-30 00:32:43 +00:00",
+          "lastUpdated": "2026-06-30 00:32:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "r-r-designandbuild.com",
+          "rank": 0,
+          "backlinks": 32,
+          "referringDomains": 31,
+          "referringMainDomains": 27,
+          "referringPages": 31,
+          "brokenBacklinks": 2,
+          "referringLinksTypes": {
+            "anchor": 31
+          },
+          "firstSeen": "2023-11-13 12:59:36 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2085,6 +3624,101 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 57,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 10594,
+          "tbtMs": 119,
+          "clsScore": 0,
+          "fcpMs": 6136,
+          "speedIndexMs": 7297,
+          "failing": [
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 8,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architectural Designer",
+            "Art studio",
+            "Design institute",
+            "Homewares Shop",
+            "Industrial design company",
+            "Interior designer",
+            "Model design company",
+            "Research and product development",
+            "Web Designer"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 2,
+          "placeTopics": null,
+          "firstSeen": "2024-07-16 04:25:50 +00:00",
+          "lastUpdated": "2026-06-29 04:04:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "abodecreative.design",
+          "rank": 0,
+          "backlinks": 30,
+          "referringDomains": 29,
+          "referringMainDomains": 29,
+          "referringPages": 30,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 30
+          },
+          "firstSeen": "2023-01-21 13:06:53 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2193,6 +3827,97 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 100,
+          "accessibility": 83,
+          "bestPractices": 88,
+          "seo": 100,
+          "lcpMs": 1052,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 763,
+          "speedIndexMs": 763,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "charset",
+              "title": "Charset declaration is missing or occurs too late in the HTML",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 1,
+            "3": 0,
+            "4": 0,
+            "5": 0
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 13,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 07:50:40 +00:00",
+          "lastUpdated": "2026-06-30 09:47:54 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "swindonbuildingplans.co.uk",
+          "rank": 58,
+          "backlinks": 48,
+          "referringDomains": 37,
+          "referringMainDomains": 37,
+          "referringPages": 46,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 41
+          },
+          "firstSeen": "2021-10-11 08:59:31 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2308,6 +4033,106 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "77 Padstow Road, Swindon, England, SN2 2ED",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 78,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 85,
+          "lcpMs": 5315,
+          "tbtMs": 40,
+          "clsScore": 0,
+          "fcpMs": 1816,
+          "speedIndexMs": 3125,
+          "failing": [
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 21
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 17,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Bathroom Renovator",
+            "Bricklayer",
+            "Building designer",
+            "Carpenter",
+            "Construction Company",
+            "Flooring contractor",
+            "Kitchen Renovator",
+            "Roofing Service"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 25,
+          "placeTopics": null,
+          "firstSeen": "2026-07-08 09:51:55 +00:00",
+          "lastUpdated": "2026-07-08 09:51:55 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "sovereignstructures.co.uk",
+          "rank": 8,
+          "backlinks": 29,
+          "referringDomains": 26,
+          "referringMainDomains": 26,
+          "referringPages": 29,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 29
+          },
+          "firstSeen": "2024-03-13 03:17:36 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2418,6 +4243,91 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "332 Cheney Manor Road, Swindon, England, SN2 2PF",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 55,
+          "accessibility": 94,
+          "bestPractices": 81,
+          "seo": 85,
+          "lcpMs": 10255,
+          "tbtMs": 257,
+          "clsScore": 0.02,
+          "fcpMs": 4779,
+          "speedIndexMs": 6328,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 13,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 04:07:48 +00:00",
+          "lastUpdated": "2026-06-30 04:07:48 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "wiltshirebuildsolutions.co.uk",
+          "rank": 0,
+          "backlinks": 14,
+          "referringDomains": 14,
+          "referringMainDomains": 14,
+          "referringPages": 14,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 14
+          },
+          "firstSeen": "2023-11-13 19:24:46 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2528,6 +4438,97 @@
           "matchConfidence": "unique-name-and-town",
           "registeredAddress": "1 Whitgift Close, Grange Park, Swindon, SN5 6HQ",
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 78,
+          "accessibility": 100,
+          "bestPractices": 81,
+          "seo": 61,
+          "lcpMs": 5112,
+          "tbtMs": 0,
+          "clsScore": 0.031,
+          "fcpMs": 2321,
+          "speedIndexMs": 3032,
+          "failing": [
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "is-crawlable",
+              "title": "Page is blocked from indexing",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 22,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 30,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 06:25:49 +00:00",
+          "lastUpdated": "2026-06-30 01:46:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "halzacdesign.co.uk",
+          "rank": 34,
+          "backlinks": 142,
+          "referringDomains": 46,
+          "referringMainDomains": 43,
+          "referringPages": 141,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 141
+          },
+          "firstSeen": "2023-11-14 13:07:14 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2636,6 +4637,102 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 40,
+          "accessibility": 70,
+          "bestPractices": 48,
+          "seo": 85,
+          "lcpMs": 6087,
+          "tbtMs": 1615,
+          "clsScore": 0.011,
+          "fcpMs": 1935,
+          "speedIndexMs": 14306,
+          "failing": [
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 190,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architecture firm",
+            "Civil Engineering",
+            "Landscape designer",
+            "Structural engineer"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 52,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 06:35:45 +00:00",
+          "lastUpdated": "2026-06-30 06:35:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "siliconec.co.uk",
+          "rank": 296,
+          "backlinks": 2747,
+          "referringDomains": 118,
+          "referringMainDomains": 114,
+          "referringPages": 1992,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 1947
+          },
+          "firstSeen": "2019-09-15 20:02:08 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2744,6 +4841,97 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 98,
+          "accessibility": 83,
+          "bestPractices": 70,
+          "seo": 100,
+          "lcpMs": 2292,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 1531,
+          "speedIndexMs": 1531,
+          "failing": [
+            {
+              "id": "image-aspect-ratio",
+              "title": "Displays images with incorrect aspect ratio",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "doctype",
+              "title": "Page lacks the HTML doctype, thus triggering quirks-mode",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 11:35:31 +00:00",
+          "lastUpdated": "2026-06-30 05:47:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "lawrencebuildingplans.co.uk",
+          "rank": 51,
+          "backlinks": 25,
+          "referringDomains": 23,
+          "referringMainDomains": 23,
+          "referringPages": 24,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 24
+          },
+          "firstSeen": "2022-06-30 16:10:07 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2853,6 +5041,91 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 55,
+          "accessibility": 84,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 7917,
+          "tbtMs": 199,
+          "clsScore": 0.074,
+          "fcpMs": 3532,
+          "speedIndexMs": 13134,
+          "failing": [
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "frame-title",
+              "title": "`<frame>` or `<iframe>` elements do not have a title",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 32,
+          "placeTopics": null,
+          "firstSeen": "2024-07-16 16:39:35 +00:00",
+          "lastUpdated": "2026-06-29 13:52:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "neilbarmstrong.co.uk",
+          "rank": 139,
+          "backlinks": 222,
+          "referringDomains": 66,
+          "referringMainDomains": 64,
+          "referringPages": 199,
+          "brokenBacklinks": 21,
+          "referringLinksTypes": {
+            "anchor": 199
+          },
+          "firstSeen": "2021-09-13 00:24:02 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -2961,6 +5234,97 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 65,
+          "accessibility": 85,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 7700,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3240,
+          "speedIndexMs": 5763,
+          "failing": [
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-07-17 13:49:19 +00:00",
+          "lastUpdated": "2026-07-17 13:49:19 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "hawkridge.studio",
+          "rank": 0,
+          "backlinks": 9,
+          "referringDomains": 9,
+          "referringMainDomains": 9,
+          "referringPages": 9,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 9
+          },
+          "firstSeen": "2026-07-03 10:00:13 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3070,6 +5434,56 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 26,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 04:32:46 +00:00",
+          "lastUpdated": "2026-06-30 00:14:51 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "nc-architects.com",
+          "rank": 105,
+          "backlinks": 116,
+          "referringDomains": 66,
+          "referringMainDomains": 60,
+          "referringPages": 98,
+          "brokenBacklinks": 57,
+          "referringLinksTypes": {
+            "anchor": 90
+          },
+          "firstSeen": "2020-09-29 06:22:12 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3178,6 +5592,50 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI timeout"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 9,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 11:59:19 +00:00",
+          "lastUpdated": "2026-06-30 09:48:49 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "jtplananddesign.co.uk",
+          "rank": 75,
+          "backlinks": 59,
+          "referringDomains": 47,
+          "referringMainDomains": 44,
+          "referringPages": 57,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 57
+          },
+          "firstSeen": "2023-01-23 02:39:34 +00:00",
+          "lostDate": null
         }
       }
     },
@@ -3287,6 +5745,93 @@
           "matchConfidence": null,
           "registeredAddress": null,
           "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 67,
+          "accessibility": 87,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 6809,
+          "tbtMs": 47,
+          "clsScore": 0,
+          "fcpMs": 3339,
+          "speedIndexMs": 4824,
+          "failing": [
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "label",
+              "title": "Form elements do not have associated labels",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 7
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Construction Company"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 09:23:42 +00:00",
+          "lastUpdated": "2026-06-30 10:55:52 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "airsculpt.co.uk",
+          "rank": 142,
+          "backlinks": 222,
+          "referringDomains": 66,
+          "referringMainDomains": 61,
+          "referringPages": 210,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 209
+          },
+          "firstSeen": "2022-02-16 06:18:55 +00:00",
+          "lostDate": null
         }
       }
     }
