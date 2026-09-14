@@ -2744,17 +2744,22 @@ function defaultQuarter() {
 async function checkBridges(siteRoot) {
 	const docs = join(siteRoot, 'new', 'src', 'content', 'docs');
 	const targets = [
-		...Object.entries(PILLAR_KB).map(([k, slug]) => [k, join(docs, 'kb', `${slug}.md`), `/kb/${slug}/`]),
-		...Object.entries(PILLAR_METHOD).map(([k, slug]) => [k, join(docs, 'glossary', `${slug}.md`), `/glossary/${slug}/`]),
+		...Object.entries(PILLAR_KB).map(([k, slug]) => [k, join(docs, 'kb', slug), `/kb/${slug}/`]),
+		...Object.entries(PILLAR_METHOD).map(([k, slug]) => [k, join(docs, 'glossary', slug), `/glossary/${slug}/`]),
 	];
 
+	/* Both extensions. Starlight resolves .md and .mdx to the same route, and
+	   every KB and glossary target is in fact .mdx — so checking only .md
+	   reported 6 of 12 bridges missing on every single run. A check that always
+	   cries wolf is worse than no check: the one real broken slug, the thing
+	   this exists to catch before it 404s all 79 scorecards at once, would have
+	   arrived as the seventh line of familiar noise. */
 	const missing = [];
-	for (const [pillar, file, href] of targets) {
-		try {
-			await readFile(file);
-		} catch {
-			missing.push(`  ${pillar.padEnd(11)} ${href}`);
-		}
+	for (const [pillar, stem, href] of targets) {
+		const found = await Promise.all(
+			['.md', '.mdx'].map((ext) => readFile(stem + ext).then(() => true, () => false)),
+		);
+		if (!found.some(Boolean)) missing.push(`  ${pillar.padEnd(11)} ${href}`);
 	}
 
 	const noTarget = Object.entries(PILLAR_AGENCY).filter(([, v]) => !v).map(([k]) => k);

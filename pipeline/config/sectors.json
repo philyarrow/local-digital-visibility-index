@@ -706,5 +706,244 @@
 			"montessori"
 		],
 		"_note": "child_care_agency was removed from the categories on 31 Aug 2026: it returned nanny agencies and a health-and-social-care recruitment firm alongside the nurseries, and only about two thirds of the sweep was on topic. A recruiter scored in a nursery league table is the same error as a Cheltenham hotel in the Gloucester restaurant index."
+	},
+	"garages": {
+		"label": "marque specialist garages",
+		"singular": "specialist garage",
+		"_note": "Seeded from the general auto_repair_shop sweep and then FILTERED to marque specialists. Google has no 'BMW specialist' category, so the specialism has to come from the profile — name, description and review topics — not from the category. Do not seed from the SERP: taking whoever ranks for 'BMW specialist Cheltenham' selects on the dependent variable and deletes the invisible firms the index exists to find.",
+		"keywords": [
+			"{marque} specialist {town}",
+			"{marque} independent specialist {town}",
+			"{marque} servicing {town}",
+			"{marque} repair {town}",
+			"independent {marque} garage {town}",
+			"car servicing {town}",
+			"specialist car servicing {town}",
+			"{marque} diagnostics {town}"
+		],
+		"areaKeywords": [
+			"car specialist {area}",
+			"{marque} garage {area}"
+		],
+		"prompts": [
+			"Which independent specialist should service my {marque} in {town}?",
+			"Best {marque} specialist garage near {town}",
+			"Who repairs {marque} cars in {town}?",
+			"Independent alternative to a {marque} main dealer in {town}",
+			"Best specialist garages in {area}, {town}"
+		],
+		"dfsCategories": [
+			"auto_repair_shop",
+			"car_repair_and_maintenance_service",
+			"mechanic",
+			"auto_body_shop",
+			"car_service"
+		],
+		"geoKeyword": "car specialist near me",
+		"credentialTerms": [
+			"imi",
+			"good-garage-scheme",
+			"bosch-car-service",
+			"motor-ombudsman",
+			"rmi"
+		]
+	},
+	"locksmiths": {
+		"label": "mobile locksmiths",
+		"singular": "locksmith",
+		"_note": "PROBE ONLY, not published. Locksmiths are among the most listing-spammed local verticals: lead-generation networks operate duplicated and fictitious Google profiles at real-looking addresses. This index must not name a fake listing beside a real business, so the seed needs manual verification before anything here is collected or scored.",
+		"keywords": [
+			"locksmith {town}",
+			"emergency locksmith {town}",
+			"mobile locksmith {town}",
+			"24 hour locksmith {town}",
+			"locked out {town}",
+			"lock change {town}",
+			"uPVC door lock repair {town}",
+			"burglary repair {town}"
+		],
+		"areaKeywords": [
+			"locksmith {area}",
+			"emergency locksmith {area}"
+		],
+		"prompts": [
+			"Who is a trustworthy locksmith in {town}?",
+			"I am locked out in {town}, who should I call?",
+			"Best mobile locksmith near {town}",
+			"Which locksmiths in {town} are properly accredited?",
+			"Emergency locksmith in {area}, {town}"
+		],
+		"dfsCategories": [
+			"locksmith"
+		],
+		"geoKeyword": "locksmith near me",
+		"credentialTerms": [
+			"mla",
+			"master-locksmiths",
+			"dbs-checked",
+			"locksmith-association"
+		]
+	},
+	"barbers": {
+		"label": "barbers",
+		"singular": "barber shop",
+		"keywords": [
+			"barbers {town}",
+			"barber shop {town}",
+			"best barbers {town}",
+			"mens haircut {town}",
+			"beard trim {town}",
+			"hot towel shave {town}",
+			"walk in barbers {town}",
+			"kids haircut {town}"
+		],
+		"areaKeywords": [
+			"barbers {area}"
+		],
+		"prompts": [
+			"Best barbers in {town}?",
+			"Where should I get a haircut in {town}?",
+			"Top rated barber shop in {town}",
+			"Walk-in barbers in {town}",
+			"Best barbers in {area}, {town}"
+		],
+		"dfsCategories": [
+			"barber_shop",
+			"hair_salon",
+			"beauty_salon"
+		],
+		"geoKeyword": "barbers near me",
+		"credentialTerms": [
+			"master-barber",
+			"british-barbers-association",
+			"city-and-guilds"
+		]
+	},
+	"digital-agencies": {
+		"label": "digital agencies",
+		"singular": "digital agency",
+		"_note": "CONFLICT OF INTEREST. PYC is a digital agency. Scoring competitors on a methodology PYC authored invites the objection that the ruler was chosen to flatter its author, and this is the one cohort that will audit the method rather than act on it. If this is ever published, PYC must appear in it, scored identically, and the conflict must be stated on the index page.",
+		"keywords": [
+			"digital agency {town}",
+			"seo agency {town}",
+			"web design {town}",
+			"marketing agency {town}",
+			"ppc agency {town}",
+			"website designer {town}",
+			"social media agency {town}",
+			"branding agency {town}"
+		],
+		"areaKeywords": [
+			"digital agency {area}"
+		],
+		"prompts": [
+			"Best digital agency in {town}?",
+			"Who does SEO in {town}?",
+			"Recommend a web design company in {town}",
+			"Top marketing agencies in {town}",
+			"Best digital agency in {area}, {town}"
+		],
+		"dfsCategories": [
+			"marketing_agency",
+			"internet_marketing_service",
+			"advertising_agency",
+			"website_designer",
+			"web_hosting_company"
+		],
+		"geoKeyword": "digital agency near me",
+		"credentialTerms": [
+			"google-partner",
+			"iso-9001",
+			"dma",
+			"recommended-agency"
+		]
+	},
+	"wedding-photographers": {
+		"label": "wedding photographers",
+		"singular": "wedding photographer",
+		"_note": "Many wedding photographers are service-area businesses working from home, so their Google listing may carry no public address. Check how many are premises-based before treating the cohort as a town.",
+		"keywords": [
+			"wedding photographer {town}",
+			"wedding photography {town}",
+			"best wedding photographer {town}",
+			"documentary wedding photographer {town}",
+			"wedding photographer prices {town}",
+			"engagement shoot {town}",
+			"wedding videographer {town}",
+			"{town} wedding photos"
+		],
+		"areaKeywords": [
+			"wedding photographer {area}"
+		],
+		"prompts": [
+			"Best wedding photographer in {town}?",
+			"Recommend a wedding photographer near {town}",
+			"Documentary style wedding photographer {town}",
+			"How much is a wedding photographer in {town}?",
+			"Wedding photographer in {area}, {town}"
+		],
+		"dfsCategories": [
+			"wedding_photographer",
+			"photographer",
+			"photography_studio"
+		],
+		"geoKeyword": "wedding photographer near me",
+		"credentialTerms": [
+			"swpp",
+			"mpa",
+			"bipp",
+			"aop"
+		]
+	},
+	"double-glazing": {
+		"label": "double glazing companies",
+		"singular": "double glazing company",
+		"_note": "CONFLICT OF INTEREST. Pane Relief (panerelief.co.uk) is a PYC glazing client: fitting, repair and emergency glazing in Bristol, sealed units shipped within ~2h of Bristol. A published Bristol glazing table scores its competitors on a methodology PYC authored. Same rule as digital-agencies: if a Bristol index publishes, Pane Relief appears in it, scored identically, and the conflict is stated on the index page. DIRECTORY RISK. This is a construction-family trade, and construction holds only 8.3-10.8% of its own local SERP in all three towns measured (Checkatrade, FMB, TrustATrader). Double glazing adds national installers on top. Measure seedSharePct on one index before publishing any. SCOPE. Installers and suppliers of double glazed windows, doors and conservatories. glass_repair_service and auto_glass are deliberately excluded: emergency and repair glazing is a different buyer with a different search, and mixing it in makes the cohort incoherent. door_and_window_store is excluded as retail.",
+		"keywords": [
+			"double glazing {town}",
+			"double glazing companies {town}",
+			"upvc windows {town}",
+			"replacement windows {town}",
+			"window fitters {town}",
+			"best double glazing {town}",
+			"double glazing installers {town}",
+			"composite doors {town}",
+			"conservatories {town}"
+		],
+		"areaKeywords": [
+			"double glazing {area}",
+			"upvc windows {area}"
+		],
+		"prompts": [
+			"Who are the best double glazing companies in {town}?",
+			"Which window installer in {town} would you recommend for replacement windows?",
+			"Top rated upvc window fitters in {town}",
+			"I need new double glazing in {town} - who should I contact?",
+			"Best double glazing companies in {area}, {town}"
+		],
+		"dfsCategories": [
+			"double_glazing_supplier",
+			"double_glazing_supplier_uk",
+			"window_installation_service",
+			"window_supplier",
+			"pvc_windows_supplier",
+			"glazier",
+			"conservatory_specialist",
+			"conservatory_construction_contractor"
+		],
+		"geoKeyword": "double glazing near me",
+		"credentialTerms": [
+			"fensa",
+			"certass",
+			"trustmark",
+			"dgcos",
+			"bfrc",
+			"ggf.org.uk",
+			"glass-and-glazing-federation",
+			"which-trusted-trader",
+			"whichtrustedtraders",
+			"kitemark",
+			"installsure"
+		]
 	}
 }
