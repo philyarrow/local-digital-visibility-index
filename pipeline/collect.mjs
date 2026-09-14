@@ -43,6 +43,7 @@
 */
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { join, dirname, isAbsolute, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import {
@@ -873,6 +874,79 @@ const PUBLIC_LOG = !!process.env.CI;
 const redactBalance = (v) =>
 	PUBLIC_LOG ? '(hidden in CI)' : `$${v?.toFixed(4) ?? '?'}`;
 
+/* ---- resumable paid signals ----------------------------------------------
+
+   Phases 1, 2 and 4 buy everything that is bought: SERP, the AI prompts, the
+   listings sweep, profile fallbacks, reviews, intent and the geo grid. All of
+   it then sits in memory until the per-business loop consumes it, so a run
+   killed during that loop threw away every paid signal. Two Bristol runs
+   killed by the host at 113 and 37 of 116 businesses cost $0.43 each, for
+   signals that had already been bought and delivered.
+
+   The paid phases now checkpoint to _shared.json. A later run reloads it and
+   buys nothing, so an interrupted collect costs time rather than money.
+
+   The fingerprint is what makes that safe. Reloading paid signals against a
+   changed basket, a changed seed or a changed radius would silently score the
+   cohort on data describing a different question — which is worse than paying
+   twice. Anything that alters what was bought invalidates the checkpoint. */
+
+export function fingerprintFor({ indexSlug, keywords, prompts, businesses, indexCfg, sector, engine }) {
+	return createHash('sha256').update(JSON.stringify({
+		indexSlug,
+		keywords,
+		prompts,
+		/* Name and URL, because those are what the seed contributes to a paid
+		   lookup. Reordering the seed must not invalidate; editing it must. */
+		seed: businesses.map((b) => `${b.name}|${b.url}`).sort(),
+		coordinate: indexCfg.coordinate ?? null,
+		locationName: indexCfg.locationName ?? null,
+		categories: sector.dfsCategories ?? null,
+		serp: engine.serp,
+		ai: engine.ai,
+		local: engine.local,
+	})).digest('hex');
+}
+
+export async function loadSharedStore(path, fingerprint) {
+	let store;
+	try {
+		store = JSON.parse(await readFile(path, 'utf8'));
+	} catch {
+		return null; // absent or unreadable: buy it
+	}
+	if (store.fingerprint !== fingerprint) {
+		console.log('    _shared.json is from a different basket, seed or radius — ignoring it and buying fresh.');
+		return null;
+	}
+	const toMap = (pairs) => new Map(Array.isArray(pairs) ? pairs : []);
+	return {
+		collectedAt: store.collectedAt,
+		ageMin: Math.round((Date.now() - Date.parse(store.collectedAt)) / 60000),
+		serpByKeyword: toMap(store.serpByKeyword),
+		aiAnswers: store.aiAnswers || [],
+		listingMatches: toMap(store.listingMatches),
+		gbpByQuery: toMap(store.gbpByQuery),
+		reviewsByQuery: toMap(store.reviewsByQuery),
+		targetedErrors: toMap(store.targetedErrors),
+	};
+}
+
+export function saveSharedStore(path, fingerprint, s) {
+	return writeFile(path, JSON.stringify({
+		fingerprint,
+		collectedAt: new Date().toISOString(),
+		note: 'Paid per-index signals, checkpointed so an interrupted run resumes without re-buying. Safe to delete; deleting only costs money.',
+		serpByKeyword: [...s.serpByKeyword],
+		aiAnswers: s.aiAnswers,
+		listingMatches: [...s.listingMatches],
+		gbpByQuery: [...s.gbpByQuery],
+		reviewsByQuery: [...s.reviewsByQuery],
+		targetedErrors: [...s.targetedErrors],
+	}) + '\n');
+}
+
+
 async function main() {
 	loadEnv();
 
@@ -931,6 +1005,12 @@ async function main() {
 			? Math.pow(engine.geoGrid.size || 3, 2) * 0.0035 : 0) +
 		businesses.length * (engine.local.reviewVelocity ? 0.0015 : 0);
 
+	/* Computed before the dry run returns, so --dry-run can answer the only
+	   question that matters before spending: will this run pay again, or
+	   reuse a checkpoint? */
+	const sharedStorePath = join(outDir, '_shared.json');
+	const sharedFingerprint = fingerprintFor({ indexSlug, keywords, prompts, businesses, indexCfg, sector, engine });
+
 	console.log(`Index:      ${indexSlug}`);
 	console.log(`Sector:     ${sector.label} — ${indexCfg.town} (${indexCfg.locationName})`);
 	console.log(`Businesses: ${businesses.length}`);
@@ -945,6 +1025,12 @@ async function main() {
 		keywords.forEach((k, i) => console.log(`  ${String(i + 1).padStart(2)}. ${k}`));
 		console.log('\nAI prompts:');
 		prompts.forEach((p, i) => console.log(`  ${String(i + 1).padStart(2)}. ${p}`));
+		const checkpoint = await loadSharedStore(sharedStorePath, sharedFingerprint);
+		console.log('');
+		console.log(checkpoint
+			? `Checkpoint: _shared.json matches this basket (${checkpoint.ageMin} min old) — a real run would reuse it and buy nothing.`
+			: 'Checkpoint: none usable — a real run would buy the paid signals above.');
+		console.log(`Basket id:  ${sharedFingerprint.slice(0, 16)}`);
 		console.log('\n--dry-run: nothing was fetched and nothing was charged.');
 		return;
 	}
@@ -953,308 +1039,336 @@ async function main() {
 	const before = await balance();
 	console.log(`Balance:    ${redactBalance(before.balance)}\n`);
 
-	/* ---- Phase 1: shared per-index signals (bought once) ---- */
-
-	const modeLabel = engine.serp.mode === 'queue' ? 'standard queue' : 'live';
-	console.log(`[serp] SERP — ${keywords.length} keyword(s), ${modeLabel}, depth ${engine.serp.depth}`);
-
-	await mkdir(outDir, { recursive: true });
-
-	/* A posted SERP task is already charged and stays retrievable for days, so
-	   the ids are persisted before harvesting. If a previous run posted this
-	   exact basket and died before collecting, resume it rather than paying
-	   again. */
-	const taskStorePath = join(outDir, '_serp-tasks.json');
-	const idToKeyword = new Map();
-
-	try {
-		const store = JSON.parse(await readFile(taskStorePath, 'utf8'));
-		if (store.harvested === false && store.tasks) {
-			// Reuse only the tasks whose keyword is still in the current basket —
-			// an edited basket must not resurrect keywords that were dropped.
-			const wanted = new Set(keywords);
-			for (const [id, kw] of Object.entries(store.tasks)) {
-				if (wanted.has(kw)) idToKeyword.set(id, kw);
-			}
-			if (idToKeyword.size) {
-				const age = Math.round((Date.now() - Date.parse(store.postedAt)) / 60000);
-				console.log(`    resuming ${idToKeyword.size} task(s) posted ${age} min ago — not re-posting, not re-charging`);
-			}
-		}
-	} catch {
-		// no store, or unreadable — everything gets posted below
-	}
-
-	// Post whatever the store did not already cover. On a clean run that is the
-	// whole basket; on a resume it is only the gap.
-	const covered = new Set(idToKeyword.values());
-	const toPost = keywords.filter((k) => !covered.has(k));
-
-	if (toPost.length) {
-		const fresh = await serpPost(
-			toPost.map((keyword) => ({
-				keyword,
-				location_name: indexCfg.locationName,
-				language_code: engine.serp.languageCode,
-				device: engine.serp.device,
-				depth: engine.serp.depth,
-			})),
-			{ log: (m) => console.log(m) }
-		);
-		for (const [id, kw] of fresh) idToKeyword.set(id, kw);
-		console.log(`    posted ${fresh.size} new task(s)${covered.size ? ` (topping up the resumed ${covered.size})` : ''}`);
-	}
-
-	const writeStore = (harvested) => writeFile(taskStorePath, JSON.stringify({
-		postedAt: new Date().toISOString(),
-		keywords,
-		harvested,
-		tasks: Object.fromEntries(idToKeyword),
-	}, null, 2) + '\n');
-
-	// Persist ids BEFORE harvesting: they are charged the moment they are posted.
-	await writeStore(false);
-
-	const serpByKeyword = await serpHarvest(idToKeyword, { log: (m) => console.log(m) });
-
-	// Only mark harvested once every task has actually been collected; a partial
-	// harvest must stay resumable.
-	const allHarvested = keywords.every((k) => serpByKeyword.get(k));
-	if (allHarvested) await writeStore(true);
-	console.log(`    ${[...serpByKeyword.values()].filter(Boolean).length}/${keywords.length} keyword(s) returned\n`);
-
-	/* ---- The wider landscape, extracted from SERPs already paid for ----
-
-	   Every organic result and every ad in these responses is data we have
-	   bought. Keeping only the seed's own positions throws away the competitive
-	   set, the directory share, and — most usefully — evidence that the seed
-	   itself is incomplete. This costs nothing per run. */
-	let landscape = null;
-	try {
-		landscape = buildLandscape(serpByKeyword, businesses.map((b) => b.url));
-	} catch (e) {
-		console.log(`    ! landscape extraction failed: ${e.message} (SERP data is unaffected)`);
-	}
-	if (landscape) {
-		await writeFile(
-			join(outDir, '_landscape.json'),
-			JSON.stringify({ index: indexSlug, collectedAt: new Date().toISOString(), ...landscape }, null, 2) + '\n'
-		);
-
-		const ls = landscape.summary;
-		if (!landscape.measuredKeywords) {
-			console.log('    no SERPs harvested — landscape not computed');
-		} else {
-			console.log(`    page-1 share: seed holds ${ls.heldBySeed}/${ls.slotsAvailable} top-10 slots (${ls.seedSharePct}%), ${ls.distinctDomains} distinct domains seen`);
-			if (landscape.seedGaps.length) {
-				console.log(`    ! ${landscape.seedGaps.length} untracked domain(s) rank top-10 repeatedly or place top-5 — candidates the seed is missing:`);
-				landscape.seedGaps.slice(0, 6).forEach((d) =>
-					console.log(`        ${d.domain} (${d.top10Slots} top-10 slot(s), best #${d.bestPosition ?? 'n/a'})`));
-			}
-			if (ls.paidSlotsSeen) {
-				const extra = ls.paidSlotsUnresolvedDomain ? `, ${ls.paidSlotsUnresolvedDomain} with an unparseable domain` : '';
-				console.log(`    ${ls.paidSlotsSeen} paid slot(s) seen from ${landscape.paidAdvertisers.length} advertiser(s)${extra}: `
-					+ landscape.paidAdvertisers.slice(0, 5).map((a) => a.domain).join(', '));
-			} else {
-				console.log('    no paid slots served in this sample (ad inventory varies by auction — a sample, not a census)');
-			}
-		}
-		console.log('');
-	}
-
-	console.log(`[ai]   AI presence — ${prompts.length} prompt(s) via ${engine.ai.engine}/${engine.ai.model}`);
-	const aiAnswers = [];
-	for (const prompt of prompts) {
-		try {
-			const result = await llmResponse(engine.ai.engine, prompt, { model: engine.ai.model });
-			const text = llmText(result);
-			aiAnswers.push({ prompt, text });
-			console.log(`    ✓ ${prompt.slice(0, 62)}${prompt.length > 62 ? '…' : ''} (${text.length} chars)`);
-		} catch (e) {
-			aiAnswers.push({ prompt, text: '' });
-			console.log(`    ! ${prompt.slice(0, 62)} — ${e.message}`);
-		}
-	}
-	console.log('');
-
-	/* ---- Phase 2: per-business Google Business Profile, batched ---- */
-
-	console.log(`[local] Local presence — ${businesses.length} business(es)`);
-
+	/* Paid signals are checkpointed; see fingerprintFor/loadSharedStore above.
+	   On a resume every phase below is skipped and nothing is re-bought. */
+	let serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, targetedErrors;
 	const gbpKeyFor = (biz) => biz.gbp_query || `${biz.name} ${indexCfg.town}`;
+	await mkdir(outDir, { recursive: true });
+	const resumed = await loadSharedStore(sharedStorePath, sharedFingerprint);
 
-	/* 3a. One listings sweep for the whole index. Primary source: it aggregates
-	   a firm's branches and resolves the multi-branch chains that a per-business
-	   profile lookup cannot. */
-	const listingMatches = new Map();
-	if (indexCfg.coordinate && sector.dfsCategories?.length) {
-		const sweep = await businessListings(sector.dfsCategories, indexCfg.coordinate, {
-			limit: engine.local.listingsLimit || 100,
-		});
-		console.log(`    sweep: ${sweep.returned} listing(s) of ${sweep.totalCount} in ${indexCfg.coordinate.split(',')[2]}km`);
-		for (const biz of businesses) {
-			const m = matchListings(sweep.items, { name: biz.name, url: biz.url });
-			if (m.items.length) listingMatches.set(gbpKeyFor(biz), m);
-		}
-		console.log(`    matched ${listingMatches.size}/${businesses.length} via listings sweep`);
+	if (resumed) {
+		({ serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, targetedErrors } = resumed);
+		console.log(`[resume] paid signals reloaded from _shared.json, checkpointed ${resumed.ageMin} min ago — nothing re-bought.\n`);
 	} else {
-		console.log('    ! no coordinate or dfsCategories configured — skipping sweep');
-	}
+		/* ---- Phase 1: shared per-index signals (bought once) ---- */
 
-	/* 3b. Fall back to a direct profile lookup for whatever the sweep missed.
-	   The two sources fail on different firms, so the union beats either. */
-	let gbpByQuery = new Map();
-	const unmatched = businesses.filter((b) => !listingMatches.has(gbpKeyFor(b)));
-	if (engine.local.profileFallback && unmatched.length) {
-		console.log(`    fallback: direct lookup for ${unmatched.length} unmatched`);
-		gbpByQuery = await myBusinessInfoBatch(
-			unmatched.map((biz) => ({
-				key: gbpKeyFor(biz),
-				keyword: gbpKeyFor(biz),
-				location_name: indexCfg.locationName,
-			})),
-			{ log: (m) => console.log(m) }
-		);
-		console.log(`    fallback resolved ${[...gbpByQuery.values()].filter(Boolean).length}/${unmatched.length}`);
-	}
+		const modeLabel = engine.serp.mode === 'queue' ? 'standard queue' : 'live';
+		console.log(`[serp] SERP — ${keywords.length} keyword(s), ${modeLabel}, depth ${engine.serp.depth}`);
 
-	/* 3c. Targeted title lookup for whatever the sweep and the direct lookup
-	   both missed. The sweep truncates (100 of 535 available for Bristol), so a
-	   firm can be absent from it purely by truncation. This tier is the most
-	   expensive per business (~$0.0127 flat) which is why it runs last, on the
-	   smallest residual. */
-	const targetedErrors = new Map();
-	const stillMissing = businesses.filter((b) => {
-		const k = gbpKeyFor(b);
-		return !listingMatches.has(k) && !gbpByQuery.get(k);
-	});
+		await mkdir(outDir, { recursive: true });
 
-	if (stillMissing.length && indexCfg.coordinate && sector.dfsCategories?.length) {
-		console.log(`    targeted: title lookup for ${stillMissing.length} still unmatched`);
-		for (const biz of stillMissing) {
-			const needle = searchNeedle(biz.name);
-			if (!needle) {
-				console.log(`        ${biz.name}: no distinctive name to search on — skipped`);
-				continue;
-			}
-			try {
-				const { items, totalCount } = await businessListingsByTitle(needle, indexCfg.coordinate);
-				if (totalCount !== null && totalCount > items.length) {
-					console.log(`        · ${biz.name}: ${items.length} of ${totalCount} candidates retrieved for "${needle}"`);
-				}
-				const m = matchTargeted(items, { name: biz.name, url: biz.url }, sector.dfsCategories);
-				if (m.items.length) {
-					listingMatches.set(gbpKeyFor(biz), m);
-					const note = m.matchedBy === 'name-category'
-						? ` (matched on name + category — its profile lists ${m.items[0].domain || 'no website'}, not ${biz.url})`
-						: '';
-					console.log(`        ✓ ${biz.name} — ${m.items.length} listing(s)${note}`);
-				} else if (m.ambiguous) {
-					targetedErrors.set(gbpKeyFor(biz), `ambiguous: "${needle}" matched several unrelated businesses (${m.ambiguous.join(', ')})`);
-					console.log(`        ? ${biz.name} — ambiguous, "${needle}" matched ${m.ambiguous.length} unrelated domains; not attributed`);
-				} else {
-					console.log(`        ✗ ${biz.name} — no listing found for "${needle}"`);
-				}
-			} catch (e) {
-				/* A lookup that ERRORED is not a firm with no profile. Recorded so
-				   the published record cannot assert an absence we never tested. */
-				targetedErrors.set(gbpKeyFor(biz), `targeted lookup failed: ${e.message}`);
-				console.log(`        ! ${biz.name} — targeted lookup failed: ${e.message}`);
-			}
-		}
-	}
+		/* A posted SERP task is already charged and stays retrievable for days, so
+		   the ids are persisted before harvesting. If a previous run posted this
+		   exact basket and died before collecting, resume it rather than paying
+		   again. */
+		const taskStorePath = join(outDir, '_serp-tasks.json');
+		const idToKeyword = new Map();
 
-	const foundCount = businesses.filter((b) => {
-		const k = gbpKeyFor(b);
-		return listingMatches.has(k) || gbpByQuery.get(k);
-	}).length;
-	console.log(`    LOCAL PRESENCE FOUND: ${foundCount}/${businesses.length}`);
-
-	/* 3d. Reviews, keyed by place_id wherever one was resolved. */
-	let reviewsByQuery = new Map();
-	if (engine.local.reviewVelocity) {
-		const reviewQueries = businesses.map((biz) => {
-			const key = gbpKeyFor(biz);
-			const m = listingMatches.get(key);
-			const placeId = m?.items?.[0]?.place_id
-				|| gbpByQuery.get(key)?.place_id
-				|| null;
-			return { key, place_id: placeId, keyword: key, location_name: indexCfg.locationName };
-		});
-		reviewsByQuery = await reviewsBatch(reviewQueries, {
-			depth: engine.local.reviewDepth,
-			log: (m) => console.log(m),
-		});
-		const viaPlaceId = reviewQueries.filter((q) => q.place_id).length;
-		console.log(`    ${[...reviewsByQuery.values()].filter(Boolean).length}/${businesses.length} review set(s) (${viaPlaceId} via place_id)`);
-	}
-	console.log('');
-
-	/* ---- Phase 4: index-level context (intent + geo grid) ----
-
-	   Both are per-index, not per-business, and both are cheap. They answer
-	   questions the pillar scores cannot: what the basket is actually asking,
-	   and where in the city a firm can be found at all. */
-
-	if (engine.intent?.enabled) {
-		console.log(`[intent] Search intent — ${keywords.length} keyword(s)`);
 		try {
-			const items = await searchIntent(keywords);
-			const mix = {};
-			items.forEach((i) => { if (i.intent) mix[i.intent] = (mix[i.intent] || 0) + 1; });
-			await writeFile(join(outDir, '_intent.json'),
-				JSON.stringify({ index: indexSlug, collectedAt: new Date().toISOString(), mix, keywords: items }, null, 2) + '\n');
-			const summary = Object.entries(mix).sort((a, b) => b[1] - a[1])
-				.map(([k, n]) => `${k} ${n}`).join(', ');
-			console.log(`    ${items.length} classified: ${summary || 'none'}`);
-			if (Object.keys(mix).length === 1 && items.length > 1) {
-				console.log(`    ! the whole basket is "${Object.keys(mix)[0]}" intent — the Visibility pillar measures one slice of the funnel`);
+			const store = JSON.parse(await readFile(taskStorePath, 'utf8'));
+			if (store.harvested === false && store.tasks) {
+				// Reuse only the tasks whose keyword is still in the current basket —
+				// an edited basket must not resurrect keywords that were dropped.
+				const wanted = new Set(keywords);
+				for (const [id, kw] of Object.entries(store.tasks)) {
+					if (wanted.has(kw)) idToKeyword.set(id, kw);
+				}
+				if (idToKeyword.size) {
+					const age = Math.round((Date.now() - Date.parse(store.postedAt)) / 60000);
+					console.log(`    resuming ${idToKeyword.size} task(s) posted ${age} min ago — not re-posting, not re-charging`);
+				}
 			}
+		} catch {
+			// no store, or unreadable — everything gets posted below
+		}
+
+		// Post whatever the store did not already cover. On a clean run that is the
+		// whole basket; on a resume it is only the gap.
+		const covered = new Set(idToKeyword.values());
+		const toPost = keywords.filter((k) => !covered.has(k));
+
+		if (toPost.length) {
+			const fresh = await serpPost(
+				toPost.map((keyword) => ({
+					keyword,
+					location_name: indexCfg.locationName,
+					language_code: engine.serp.languageCode,
+					device: engine.serp.device,
+					depth: engine.serp.depth,
+				})),
+				{ log: (m) => console.log(m) }
+			);
+			for (const [id, kw] of fresh) idToKeyword.set(id, kw);
+			console.log(`    posted ${fresh.size} new task(s)${covered.size ? ` (topping up the resumed ${covered.size})` : ''}`);
+		}
+
+		const writeStore = (harvested) => writeFile(taskStorePath, JSON.stringify({
+			postedAt: new Date().toISOString(),
+			keywords,
+			harvested,
+			tasks: Object.fromEntries(idToKeyword),
+		}, null, 2) + '\n');
+
+		// Persist ids BEFORE harvesting: they are charged the moment they are posted.
+		await writeStore(false);
+
+		serpByKeyword = await serpHarvest(idToKeyword, { log: (m) => console.log(m) });
+
+		// Only mark harvested once every task has actually been collected; a partial
+		// harvest must stay resumable.
+		const allHarvested = keywords.every((k) => serpByKeyword.get(k));
+		if (allHarvested) await writeStore(true);
+		console.log(`    ${[...serpByKeyword.values()].filter(Boolean).length}/${keywords.length} keyword(s) returned\n`);
+
+		/* ---- The wider landscape, extracted from SERPs already paid for ----
+
+		   Every organic result and every ad in these responses is data we have
+		   bought. Keeping only the seed's own positions throws away the competitive
+		   set, the directory share, and — most usefully — evidence that the seed
+		   itself is incomplete. This costs nothing per run. */
+		let landscape = null;
+		try {
+			landscape = buildLandscape(serpByKeyword, businesses.map((b) => b.url));
 		} catch (e) {
-			console.log(`    ! intent classification failed: ${e.message}`);
+			console.log(`    ! landscape extraction failed: ${e.message} (SERP data is unaffected)`);
+		}
+		if (landscape) {
+			await writeFile(
+				join(outDir, '_landscape.json'),
+				JSON.stringify({ index: indexSlug, collectedAt: new Date().toISOString(), ...landscape }, null, 2) + '\n'
+			);
+
+			const ls = landscape.summary;
+			if (!landscape.measuredKeywords) {
+				console.log('    no SERPs harvested — landscape not computed');
+			} else {
+				console.log(`    page-1 share: seed holds ${ls.heldBySeed}/${ls.slotsAvailable} top-10 slots (${ls.seedSharePct}%), ${ls.distinctDomains} distinct domains seen`);
+				if (landscape.seedGaps.length) {
+					console.log(`    ! ${landscape.seedGaps.length} untracked domain(s) rank top-10 repeatedly or place top-5 — candidates the seed is missing:`);
+					landscape.seedGaps.slice(0, 6).forEach((d) =>
+						console.log(`        ${d.domain} (${d.top10Slots} top-10 slot(s), best #${d.bestPosition ?? 'n/a'})`));
+				}
+				if (ls.paidSlotsSeen) {
+					const extra = ls.paidSlotsUnresolvedDomain ? `, ${ls.paidSlotsUnresolvedDomain} with an unparseable domain` : '';
+					console.log(`    ${ls.paidSlotsSeen} paid slot(s) seen from ${landscape.paidAdvertisers.length} advertiser(s)${extra}: `
+						+ landscape.paidAdvertisers.slice(0, 5).map((a) => a.domain).join(', '));
+				} else {
+					console.log('    no paid slots served in this sample (ad inventory varies by auction — a sample, not a census)');
+				}
+			}
+			console.log('');
+		}
+
+		console.log(`[ai]   AI presence — ${prompts.length} prompt(s) via ${engine.ai.engine}/${engine.ai.model}`);
+		aiAnswers = [];
+		for (const prompt of prompts) {
+			try {
+				const result = await llmResponse(engine.ai.engine, prompt, { model: engine.ai.model });
+				const text = llmText(result);
+				aiAnswers.push({ prompt, text });
+				console.log(`    ✓ ${prompt.slice(0, 62)}${prompt.length > 62 ? '…' : ''} (${text.length} chars)`);
+			} catch (e) {
+				aiAnswers.push({ prompt, text: '' });
+				console.log(`    ! ${prompt.slice(0, 62)} — ${e.message}`);
+			}
 		}
 		console.log('');
-	}
 
-	if (engine.geoGrid?.enabled && indexCfg.coordinate && sector.geoKeyword) {
-		const [lat, lng] = indexCfg.coordinate.split(',').map(Number);
-		const n = engine.geoGrid.size || 3;
-		/* One default, used for the grid, the log and the record alike. Applying
-		   it only at buildGrid() left the sidecar with an undefined radiusKm,
-		   which JSON.stringify drops and the page then rendered as "NaNkm". */
-		const radiusKm = engine.geoGrid.radiusKm || 6;
-		const pts = buildGrid(lat, lng, radiusKm, n);
-		console.log(`[geo] Local-pack grid — "${sector.geoKeyword}" from ${pts.length} points (${n}x${n}, ${radiusKm}km radius)`);
-		try {
-			const grid = await localPackGrid(sector.geoKeyword, pts, {
-				depth: engine.geoGrid.depth || 20,
-				radius: engine.geoGrid.radiusM || 1000,
-				languageCode: engine.serp.languageCode,
-				device: engine.serp.device,
+		/* ---- Phase 2: per-business Google Business Profile, batched ---- */
+
+		console.log(`[local] Local presence — ${businesses.length} business(es)`);
+
+
+		/* 3a. One listings sweep for the whole index. Primary source: it aggregates
+		   a firm's branches and resolves the multi-branch chains that a per-business
+		   profile lookup cannot. */
+		listingMatches = new Map();
+		if (indexCfg.coordinate && sector.dfsCategories?.length) {
+			const sweep = await businessListings(sector.dfsCategories, indexCfg.coordinate, {
+				limit: engine.local.listingsLimit || 100,
+			});
+			console.log(`    sweep: ${sweep.returned} listing(s) of ${sweep.totalCount} in ${indexCfg.coordinate.split(',')[2]}km`);
+			for (const biz of businesses) {
+				const m = matchListings(sweep.items, { name: biz.name, url: biz.url });
+				if (m.items.length) listingMatches.set(gbpKeyFor(biz), m);
+			}
+			console.log(`    matched ${listingMatches.size}/${businesses.length} via listings sweep`);
+		} else {
+			console.log('    ! no coordinate or dfsCategories configured — skipping sweep');
+		}
+
+		/* 3b. Fall back to a direct profile lookup for whatever the sweep missed.
+		   The two sources fail on different firms, so the union beats either. */
+		gbpByQuery = new Map();
+		const unmatched = businesses.filter((b) => !listingMatches.has(gbpKeyFor(b)));
+		if (engine.local.profileFallback && unmatched.length) {
+			console.log(`    fallback: direct lookup for ${unmatched.length} unmatched`);
+			gbpByQuery = await myBusinessInfoBatch(
+				unmatched.map((biz) => ({
+					key: gbpKeyFor(biz),
+					keyword: gbpKeyFor(biz),
+					location_name: indexCfg.locationName,
+				})),
+				{ log: (m) => console.log(m) }
+			);
+			console.log(`    fallback resolved ${[...gbpByQuery.values()].filter(Boolean).length}/${unmatched.length}`);
+		}
+
+		/* 3c. Targeted title lookup for whatever the sweep and the direct lookup
+		   both missed. The sweep truncates (100 of 535 available for Bristol), so a
+		   firm can be absent from it purely by truncation. This tier is the most
+		   expensive per business (~$0.0127 flat) which is why it runs last, on the
+		   smallest residual. */
+		targetedErrors = new Map();
+		const stillMissing = businesses.filter((b) => {
+			const k = gbpKeyFor(b);
+			return !listingMatches.has(k) && !gbpByQuery.get(k);
+		});
+
+		if (stillMissing.length && indexCfg.coordinate && sector.dfsCategories?.length) {
+			console.log(`    targeted: title lookup for ${stillMissing.length} still unmatched`);
+			for (const biz of stillMissing) {
+				const needle = searchNeedle(biz.name);
+				if (!needle) {
+					console.log(`        ${biz.name}: no distinctive name to search on — skipped`);
+					continue;
+				}
+				try {
+					const { items, totalCount } = await businessListingsByTitle(needle, indexCfg.coordinate);
+					if (totalCount !== null && totalCount > items.length) {
+						console.log(`        · ${biz.name}: ${items.length} of ${totalCount} candidates retrieved for "${needle}"`);
+					}
+					const m = matchTargeted(items, { name: biz.name, url: biz.url }, sector.dfsCategories);
+					if (m.items.length) {
+						listingMatches.set(gbpKeyFor(biz), m);
+						const note = m.matchedBy === 'name-category'
+							? ` (matched on name + category — its profile lists ${m.items[0].domain || 'no website'}, not ${biz.url})`
+							: '';
+						console.log(`        ✓ ${biz.name} — ${m.items.length} listing(s)${note}`);
+					} else if (m.ambiguous) {
+						targetedErrors.set(gbpKeyFor(biz), `ambiguous: "${needle}" matched several unrelated businesses (${m.ambiguous.join(', ')})`);
+						console.log(`        ? ${biz.name} — ambiguous, "${needle}" matched ${m.ambiguous.length} unrelated domains; not attributed`);
+					} else {
+						console.log(`        ✗ ${biz.name} — no listing found for "${needle}"`);
+					}
+				} catch (e) {
+					/* A lookup that ERRORED is not a firm with no profile. Recorded so
+					   the published record cannot assert an absence we never tested. */
+					targetedErrors.set(gbpKeyFor(biz), `targeted lookup failed: ${e.message}`);
+					console.log(`        ! ${biz.name} — targeted lookup failed: ${e.message}`);
+				}
+			}
+		}
+
+		const foundCount = businesses.filter((b) => {
+			const k = gbpKeyFor(b);
+			return listingMatches.has(k) || gbpByQuery.get(k);
+		}).length;
+		console.log(`    LOCAL PRESENCE FOUND: ${foundCount}/${businesses.length}`);
+
+		/* 3d. Reviews, keyed by place_id wherever one was resolved. */
+		reviewsByQuery = new Map();
+		if (engine.local.reviewVelocity) {
+			const reviewQueries = businesses.map((biz) => {
+				const key = gbpKeyFor(biz);
+				const m = listingMatches.get(key);
+				const placeId = m?.items?.[0]?.place_id
+					|| gbpByQuery.get(key)?.place_id
+					|| null;
+				return { key, place_id: placeId, keyword: key, location_name: indexCfg.locationName };
+			});
+			reviewsByQuery = await reviewsBatch(reviewQueries, {
+				depth: engine.local.reviewDepth,
 				log: (m) => console.log(m),
 			});
-			await writeFile(join(outDir, '_geogrid.json'),
-				JSON.stringify({
-					index: indexSlug, collectedAt: new Date().toISOString(),
-					keyword: sector.geoKeyword, size: n, radiusKm,
-					centre: { lat, lng }, points: grid,
-				}, null, 2) + '\n');
-			const ok = grid.filter((g) => g.pack).length;
-			const distinct = new Set(grid.flatMap((g) => (g.pack || []).map((p) => p.title))).size;
-			console.log(`    ${ok}/${pts.length} points returned a 3-pack, ${distinct} distinct businesses across the grid`);
-		} catch (e) {
-			console.log(`    ! geo grid failed: ${e.message}`);
+			const viaPlaceId = reviewQueries.filter((q) => q.place_id).length;
+			console.log(`    ${[...reviewsByQuery.values()].filter(Boolean).length}/${businesses.length} review set(s) (${viaPlaceId} via place_id)`);
 		}
 		console.log('');
+
+		/* ---- Phase 4: index-level context (intent + geo grid) ----
+
+		   Both are per-index, not per-business, and both are cheap. They answer
+		   questions the pillar scores cannot: what the basket is actually asking,
+		   and where in the city a firm can be found at all. */
+
+		if (engine.intent?.enabled) {
+			console.log(`[intent] Search intent — ${keywords.length} keyword(s)`);
+			try {
+				const items = await searchIntent(keywords);
+				const mix = {};
+				items.forEach((i) => { if (i.intent) mix[i.intent] = (mix[i.intent] || 0) + 1; });
+				await writeFile(join(outDir, '_intent.json'),
+					JSON.stringify({ index: indexSlug, collectedAt: new Date().toISOString(), mix, keywords: items }, null, 2) + '\n');
+				const summary = Object.entries(mix).sort((a, b) => b[1] - a[1])
+					.map(([k, n]) => `${k} ${n}`).join(', ');
+				console.log(`    ${items.length} classified: ${summary || 'none'}`);
+				if (Object.keys(mix).length === 1 && items.length > 1) {
+					console.log(`    ! the whole basket is "${Object.keys(mix)[0]}" intent — the Visibility pillar measures one slice of the funnel`);
+				}
+			} catch (e) {
+				console.log(`    ! intent classification failed: ${e.message}`);
+			}
+			console.log('');
+		}
+
+		if (engine.geoGrid?.enabled && indexCfg.coordinate && sector.geoKeyword) {
+			const [lat, lng] = indexCfg.coordinate.split(',').map(Number);
+			const n = engine.geoGrid.size || 3;
+			/* One default, used for the grid, the log and the record alike. Applying
+			   it only at buildGrid() left the sidecar with an undefined radiusKm,
+			   which JSON.stringify drops and the page then rendered as "NaNkm". */
+			const radiusKm = engine.geoGrid.radiusKm || 6;
+			const pts = buildGrid(lat, lng, radiusKm, n);
+			console.log(`[geo] Local-pack grid — "${sector.geoKeyword}" from ${pts.length} points (${n}x${n}, ${radiusKm}km radius)`);
+			try {
+				const grid = await localPackGrid(sector.geoKeyword, pts, {
+					depth: engine.geoGrid.depth || 20,
+					radius: engine.geoGrid.radiusM || 1000,
+					languageCode: engine.serp.languageCode,
+					device: engine.serp.device,
+					log: (m) => console.log(m),
+				});
+				await writeFile(join(outDir, '_geogrid.json'),
+					JSON.stringify({
+						index: indexSlug, collectedAt: new Date().toISOString(),
+						keyword: sector.geoKeyword, size: n, radiusKm,
+						centre: { lat, lng }, points: grid,
+					}, null, 2) + '\n');
+				const ok = grid.filter((g) => g.pack).length;
+				const distinct = new Set(grid.flatMap((g) => (g.pack || []).map((p) => p.title))).size;
+				console.log(`    ${ok}/${pts.length} points returned a 3-pack, ${distinct} distinct businesses across the grid`);
+			} catch (e) {
+				console.log(`    ! geo grid failed: ${e.message}`);
+			}
+			console.log('');
+		}
+
 	}
 
 	const shared = { sector, keywords, serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, gbpKeyFor, targetedErrors, town: indexCfg.town ?? null, coordinate: indexCfg.coordinate ?? null };
 
+	/* Checkpoint before the loop that keeps getting killed, not after it. */
+	if (!resumed) await saveSharedStore(sharedStorePath, sharedFingerprint, shared);
+
 	/* ---- Phase 3: per-business assembly ---- */
 
+	/* On a resume, a business already written by the interrupted run is left
+	   alone. The test is collectedAt against the checkpoint, not file presence:
+	   a record from an EARLIER run is stale for this basket and must be
+	   re-collected, and that is precisely the mixture regenerate-all.sh now
+	   refuses to publish. */
 	let ok = 0;
+	let carried = 0;
 	for (const biz of businesses) {
 		try {
+			if (resumed) {
+				const file = join(outDir, `${slugify(biz.name)}.json`);
+				let already = null;
+				try { already = JSON.parse(await readFile(file, 'utf8')); } catch { /* not collected yet */ }
+				const stamp = already ? Date.parse(already.collectedAt) : NaN;
+				if (Number.isFinite(stamp) && stamp >= Date.parse(resumed.collectedAt)) { carried++; continue; }
+			}
 			const record = await collectBusiness(biz, indexSlug, shared, engine);
 			const file = join(outDir, `${record.slug}.json`);
 			await writeFile(file, JSON.stringify(record, null, 2) + '\n');
@@ -1270,6 +1384,8 @@ async function main() {
 			console.error(`  ✗ ${biz.name} — FAILED: ${e?.message || e}`);
 		}
 	}
+
+	if (carried) console.log(`  (${carried} business(es) already collected by the interrupted run, left as they were)`);
 
 	/* ---- Cost ledger ---- */
 
@@ -1289,6 +1405,15 @@ async function main() {
 		businesses: businesses.length,
 		keywords: keywords.length,
 		prompts: prompts.length,
+
+		/* A resumed run buys almost nothing, so its ledger is near zero and
+		   would read as a cohort collected for free. Say so, and point at the
+		   run that actually paid, or the cost history of this index becomes a
+		   record of the last attempt rather than of the measurement. */
+		resumedFrom: resumed ? resumed.collectedAt : null,
+		resumedNote: resumed
+			? 'Paid signals were reloaded from _shared.json checkpointed at resumedFrom. The figures below cover only what THIS run bought; the SERP, AI, listings, profile, review, intent and geo-grid spend belongs to the earlier run.'
+			: null,
 
 		forecastUsd: Number(forecast.toFixed(5)),
 		ledgerUsd: Number(ledger.total.toFixed(5)),

@@ -109,6 +109,38 @@ for slug in "${SLUGS[@]}"; do
     echo "collection in progress or aborted - skipped"; skipped=$((skipped+1)); continue
   fi
 
+  # Presence is not freshness. A re-collect that dies partway leaves the
+  # directory holding records from TWO sweeps plus the previous run's
+  # _cost.json, and every check above passes: _cost.json exists, and the record
+  # count is the old run's, so it clears the 80% bar. That is how 39 records
+  # from a 12km Bristol sweep sat alongside 74 from a 15km one, 113 of 116,
+  # ready to be published as one cohort scored against two different SERP reads.
+  #
+  # The test is collectedAt, not mtime. mtime says nothing useful here: the
+  # enrichment backfill legitimately rewrites every record long after the
+  # collect, so an mtime rule skips every enriched index — which is all of
+  # them. collectedAt is stamped when the business is collected and no backfill
+  # touches it. _cost.json is written after the last business, so in a finished
+  # run every record predates it; a record stamped LATER belongs to a second,
+  # unfinished run.
+  ahead=$(node -e "
+    const fs = require('fs');
+    const dir = 'data/$slug';
+    const cost = Date.parse(JSON.parse(fs.readFileSync(dir + '/_cost.json', 'utf8')).collectedAt);
+    if (!Number.isFinite(cost)) { console.log(0); process.exit(0); }
+    let n = 0;
+    for (const f of fs.readdirSync(dir)) {
+      if (!f.endsWith('.json') || f.startsWith('_')) continue;
+      const t = Date.parse(JSON.parse(fs.readFileSync(dir + '/' + f, 'utf8')).collectedAt);
+      if (Number.isFinite(t) && t > cost) n++;
+    }
+    console.log(n);
+  ")
+  if [ "${ahead:-0}" -gt 0 ]; then
+    echo "$ahead record(s) collected after _cost.json - interrupted re-collect, skipped"
+    skipped=$((skipped+1)); continue
+  fi
+
   # Nor is "some records" enough. An interrupted collection left 2 of 41
   # Gloucester accountants on disk and this script cheerfully generated and
   # published a two-firm league table. A cohort missing a fifth of its
