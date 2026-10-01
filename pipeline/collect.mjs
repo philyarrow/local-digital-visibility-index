@@ -72,6 +72,7 @@ import {
 import { loadConfig, resolveIndex, buildKeywords, buildPrompts } from './lib/basket.mjs';
 import { findOrganicPosition, inLocalPack, matchReason, domainsMatch, buildLandscape, matchTargeted, searchNeedle } from './lib/match.mjs';
 import { crawlSite } from './lib/crawl.mjs';
+import { linksToPeople, aboutHref, peopleIntroduced } from './lib/people.mjs';
 import { collectCrux, collectCompaniesHouse, collectFsa } from './lib/enrich.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -249,14 +250,36 @@ function safeOrigin(u) {
 /* Pillar 6 — Content & trust (indexed-count still stubbed)                    */
 /* -------------------------------------------------------------------------- */
 
+/* One more page, for one signal. Any failure is "nothing found": the homepage's
+   answer stands, and a bad About page never fails the content check. */
+async function readForPeople(aboutUrl) {
+	try {
+		const res = await fetchWithTimeout(aboutUrl, { headers: { 'User-Agent': UA } }, 15000);
+		if (!res.ok || !(res.headers.get('content-type') || '').includes('html')) return null;
+		return peopleIntroduced(await res.text());
+	} catch {
+		return null;
+	}
+}
+
 /* Exported so a correction can re-run this one check without re-collecting
    everything. Re-measuring all six pillars to fix one signal would mix the fix
    with genuine drift and make the change unattributable. */
 export async function collectContent(url, sectorCfg) {
 	const out = {
-		source: 'Live homepage parse',
+		source: 'Live homepage parse, and the About page when the homepage introduces nobody',
 		hasAboutLink: null,
+		/* Whether the site introduces the people who do the work. The name is
+		   historical: it began as a check for a link called "team", and now also
+		   reads the homepage and the About page for somebody being introduced —
+		   see lib/people.mjs. Renaming it would break every snapshot already
+		   written and everything that reads them. */
 		hasTeamLink: null,
+		/* Where that answer came from when it is yes: 'homepage link',
+		   'homepage' or 'about page'. With teamEvidence, the words that were
+		   matched, so a published "yes" can be checked against the site. */
+		teamSource: null,
+		teamEvidence: null,
 		hasCredentialsLink: null, // sector-specific bodies, see credTerms below
 		hasBlogLink: null,
 		/* Visible words on the homepage. A thin homepage is the commonest shape
@@ -322,7 +345,8 @@ export async function collectContent(url, sectorCfg) {
 		const haystack = anchorText.join(' ') + ' ' + hrefs.join(' ');
 
 		out.hasAboutLink = /\babout\b|about-us|our-story|who-we-are/.test(haystack);
-		out.hasTeamLink = /\bteam\b|our-team|meet-the-team|our-people|staff/.test(haystack);
+		out.hasTeamLink = linksToPeople(haystack);
+		if (out.hasTeamLink) out.teamSource = 'homepage link';
 		/* Sector-specific, because a single property-sector regex was being
 		   applied to every index. It matched Propertymark/NAEA/ARLA/RICS and
 		   nothing else, so construction, law, accountancy and dental cohorts
@@ -346,6 +370,22 @@ export async function collectContent(url, sectorCfg) {
 		const tel = rawHtml.match(/href=["']tel:([^"']+)["']/i);
 		out.sitePhone = normalisePhone(tel?.[1]);
 		out.sitePostcode = extractPostcode(visible);
+
+		/* No link by a name we recognise is not the same as nobody introduced.
+		   Read the homepage itself, and then the About page if there is one,
+		   before publishing "no" about a named business. This is the last step
+		   so that a slow or broken About page can cost only this one signal:
+		   everything above is already recorded. */
+		if (!out.hasTeamLink) {
+			const onHomepage = peopleIntroduced(rawHtml);
+			if (onHomepage) {
+				out.hasTeamLink = true; out.teamSource = 'homepage'; out.teamEvidence = onHomepage;
+			} else {
+				const about = aboutHref(rawHtml, res.url || url);
+				const onAbout = about ? await readForPeople(about) : null;
+				if (onAbout) { out.hasTeamLink = true; out.teamSource = 'about page'; out.teamEvidence = onAbout; }
+			}
+		}
 	} catch (e) {
 		out.error = e?.name === 'AbortError' ? 'homepage timeout' : String(e?.message || e);
 	}

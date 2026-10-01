@@ -1013,7 +1013,7 @@ function topFixes(b, { schemaType = null, credentials = null } = {}) {
 		local: 'Restart Google review generation and complete the Business Profile to close the local-pack gap.',
 		visibility: 'Build local landing pages for the core keyword basket to lift organic and local-pack appearance.',
 		ai: 'Publish structured, citable content and entity schema so AI engines surface the business for core local queries.',
-		content: `Add about/team pages${credentials ? ` and the credentials that matter in this sector (${credentials})` : ''}, and refresh stale content.`,
+		content: `Introduce the people who do the work, on an about or team page${credentials ? ` and the credentials that matter in this sector (${credentials})` : ''}, and refresh stale content.`,
 	};
 	for (const p of order) {
 		if (b.pillarScores[p.key] === null) continue;
@@ -1298,7 +1298,13 @@ function whyThisScore(b) {
 	const rows = [];
 
 	const contentBits = [
-		`about page: ${yn(c.hasAboutLink)}`, `team page: ${yn(c.hasTeamLink)}`,
+		/* "Team page" is what the check was when it only looked for a link. It
+		   now also reads the homepage and the About page, and a yes earned that
+		   way says where, so the business can see what was counted. */
+		`about page: ${yn(c.hasAboutLink)}`,
+		c.hasTeamLink === true && (c.teamSource === 'homepage' || c.teamSource === 'about page')
+			? `people introduced: yes, on the ${c.teamSource}`
+			: `people introduced: ${yn(c.hasTeamLink)}`,
 		`credentials: ${yn(c.hasCredentialsLink)}`, `blog or news: ${yn(c.hasBlogLink)}`,
 	];
 	if (typeof c.wordCount === 'number') contentBits.push(`homepage: ${c.wordCount.toLocaleString('en-GB')} words`);
