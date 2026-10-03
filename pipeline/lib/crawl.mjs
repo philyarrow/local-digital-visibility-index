@@ -28,6 +28,17 @@ const DEFAULTS = {
 	perRequestTimeoutMs: 15000,
 	totalBudgetMs: 90000,
 	delayMs: 700,
+	/* The start page only. One dropped connection was scoring a firm as if it
+	   had no website: Technical fell from 100 to 0 and Content was excluded,
+	   and the firm dropped from 1st to 36th on a "fetch failed" that did not
+	   recur when the same URL was requested a day later. 21 firms across the
+	   October 2026 interim run went the same way. Inner pages are not retried:
+	   a missing deep link is a finding, and retrying it would only burn the
+	   time budget. */
+	startPageRetries: 2,
+	retryDelayMs: 2000,
+	/* Injectable so the retry can be tested without a network. */
+	fetchImpl: null,
 };
 
 /* Anchors that name nothing. The anchor is the strongest statement a link
@@ -45,11 +56,11 @@ const KEY_PAGE_PATTERNS = {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function fetchText(url, timeoutMs, { allowPlain = false } = {}) {
+async function fetchText(url, timeoutMs, { allowPlain = false, fetchImpl = null } = {}) {
 	const ctrl = new AbortController();
 	const t = setTimeout(() => ctrl.abort(), timeoutMs);
 	try {
-		const res = await fetch(url, {
+		const res = await (fetchImpl || fetch)(url, {
 			headers: { 'User-Agent': CRAWL_UA, Accept: 'text/html,application/xhtml+xml' },
 			redirect: 'follow',
 			signal: ctrl.signal,
@@ -66,6 +77,19 @@ async function fetchText(url, timeoutMs, { allowPlain = false } = {}) {
 	} finally {
 		clearTimeout(t);
 	}
+}
+
+/* Transient means a status of 0 (DNS, reset, timeout) or a 5xx. A 4xx is the
+   site's answer and asking again does not change it. */
+const isTransient = (res) => res.status === 0 || res.status >= 500;
+
+async function fetchStartPage(url, cfg) {
+	let res = await fetchText(url, cfg.perRequestTimeoutMs, { fetchImpl: cfg.fetchImpl });
+	for (let attempt = 0; attempt < cfg.startPageRetries && !res.ok && isTransient(res); attempt++) {
+		await sleep(cfg.retryDelayMs * (attempt + 1));
+		res = await fetchText(url, cfg.perRequestTimeoutMs, { fetchImpl: cfg.fetchImpl });
+	}
+	return res;
 }
 
 /* Minimal robots.txt: the rules for the most specific matching user-agent,
@@ -185,7 +209,7 @@ export async function crawlSite(startUrl, opts = {}) {
 
 	// ---- robots ----
 	let rules = [];
-	const rob = await fetchText(`${origin}/robots.txt`, cfg.perRequestTimeoutMs, { allowPlain: true });
+	const rob = await fetchText(`${origin}/robots.txt`, cfg.perRequestTimeoutMs, { allowPlain: true, fetchImpl: cfg.fetchImpl });
 	if (rob.ok) rules = parseRobots(rob.html, CRAWL_UA);
 	if (!robotsAllows(rules, '/')) {
 		out.robotsDisallowedAll = true;
@@ -218,7 +242,10 @@ export async function crawlSite(startUrl, opts = {}) {
 		}
 
 		if (out.pagesCrawled > 0) await sleep(cfg.delayMs);
-		const res = await fetchText(url, cfg.perRequestTimeoutMs);
+		const isStart = out.pagesCrawled === 0 && url === startUrl;
+		const res = isStart
+			? await fetchStartPage(url, cfg)
+			: await fetchText(url, cfg.perRequestTimeoutMs, { fetchImpl: cfg.fetchImpl });
 		if (!res.ok) {
 			/* The start page failing is the whole crawl failing, and it was being
 			   reported as a bare "0 pages" with no reason — indistinguishable
