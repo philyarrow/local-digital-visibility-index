@@ -185,6 +185,21 @@ jobs:
             node generate.mjs "$slug" --archive-only
           fi
 
+      # Keep the raw per-business signals the collect just paid for. Without
+      # this, only the reduced history snapshot survived the runner, and that
+      # snapshot drops the evidence generate.mjs needs — so an interim run
+      # could never be promoted to a published quarter, and October 2026 had
+      # to be collected twice. 90 days is the retention cap; a quarter is
+      # inside it.
+      - name: Keep the raw collection
+        if: always() && inputs.dry_run != true
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-${{ matrix.slug }}-${{ github.run_id }}
+          path: pipeline/data/${{ matrix.slug }}
+          retention-days: 90
+          if-no-files-found: warn
+
       - name: Summarise spend
         if: inputs.dry_run != true
         run: |
