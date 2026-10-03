@@ -170,3 +170,40 @@ test('a broken About page costs only this signal, never the check', async () => 
 		assert.equal(typeof out.wordCount, 'number');
 	}
 });
+
+/* --- what the first run across the published indices counted, and must not -- */
+
+test('a name-shaped phrase with a role somewhere near it is not a person', () => {
+	/* Real headings from the run: a role word was within 160 characters of
+	   every one of them. */
+	for (const [heading, after] of [
+		['Self Assessment', 'Whether you are a sole trader or the owner of a limited company, we can help.'],
+		['Structural Engineering', 'Our principal engineer has thirty years of experience.'],
+		['Zetland Vets', 'Every vet at our practice is RCVS registered.'],
+		['Anti-wrinkle Injections', 'Administered by our prescribing nurse.'],
+		['Rockdoor Doors', 'Fitted by an approved installer.'],
+		['Albert Museum', 'A project led by our director.'],
+		['COUNTRY PROJECTS', 'Architect-led design and build.'],
+	]) {
+		assert.equal(peopleIntroduced(`<h2>${heading}</h2><p>${after}</p>`), null, heading);
+	}
+});
+
+test('a role is only an introduction when it is the first thing said under the name', () => {
+	assert.equal(peopleIntroduced('<h3>Matthew Bailey</h3><p>Director</p>'), 'named with a role: "Matthew Bailey, director"');
+	assert.equal(peopleIntroduced('<h3>Matthew Bailey</h3><p>Managing Director</p>'), 'named with a role: "Matthew Bailey, director"');
+	assert.equal(peopleIntroduced('<h3>Matthew Bailey</h3><p>Matthew joined us in 2004 and became a director in 2010.</p>'), null);
+});
+
+test('letters a practice wears as a badge are not a person', () => {
+	for (const text of ['Chartered Architect RIBA', 'Latest News RIBA', 'Albert Museum, RIBA', 'Director Architect ARB', 'First Class BSc', 'Animal Science BSc', 'Chartered Physiotherapist HCPC', 'Resources Brochures FCA', 'Registered Osteopath BSc', 'Orthopaedic Medicine, MCSP']) {
+		assert.equal(peopleIntroduced(`<p>${text}</p>`), null, text);
+	}
+});
+
+test('letters directly after a name still count', () => {
+	assert.equal(peopleIntroduced('<p>Dr Simon Dunn BDS welcomes new patients.</p>'), 'named with a qualification: "Dr Simon Dunn BDS"');
+	assert.equal(peopleIntroduced('<p>Lawson Macdonald FCA founded the firm.</p>'), 'named with a qualification: "Lawson Macdonald FCA"');
+	assert.equal(peopleIntroduced('<p>Jodie Black DC</p>'), 'named with a qualification: "Jodie Black DC"');
+	assert.equal(peopleIntroduced('<p>Dr Gemma Nash MRCVS</p>'), 'named with a qualification: "Dr Gemma Nash MRCVS"');
+});
