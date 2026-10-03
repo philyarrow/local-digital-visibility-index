@@ -121,7 +121,7 @@
       "live": true
     },
     "content": {
-      "scored": 19,
+      "scored": 20,
       "total": 20,
       "live": true
     }
@@ -135,11 +135,227 @@
     "local": 78.5,
     "visibility": 4.5,
     "ai": 0,
-    "content": 53
+    "content": 55
   },
   "businesses": [
     {
       "rank": 1,
+      "name": "Madra Veterinary Clinic Cheltenham",
+      "url": "http://www.madravetscheltenham.co.uk/",
+      "digitalVisibilityScore": 78,
+      "pillarScores": {
+        "speed": 63,
+        "technical": 75,
+        "local": 91,
+        "visibility": 75,
+        "ai": 100,
+        "content": 55
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr Benjamin Dobson MVB\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 538,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJPzCEqYMbcUgRDIwtBV1ZoFY",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.madravetscheltenham.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 26,
+          "avgInternalLinksPerPage": 26,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": null,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 6,
+          "sitemapUrls": 7,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-23",
+          "sitemapStaleDays": 9,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 70,
+          "accessibility": 92,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 4983,
+          "tbtMs": 272,
+          "clsScore": 0,
+          "fcpMs": 2883,
+          "speedIndexMs": 3766,
+          "failing": [
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "duplicated-javascript-insight",
+              "title": "Duplicated JavaScript",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 25,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 85
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Emergency veterinarian service",
+            "Pet groomer",
+            "Veterinary pharmacy"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 66,
+          "placeTopics": {
+            "independent vets": 7,
+            "short notice appointments": 3,
+            "clean surgery": 2,
+            "family run vets": 2,
+            "nervous dog": 6,
+            "health check": 6,
+            "spaniel": 3,
+            "no nerves": 2,
+            "welcoming atmosphere": 5,
+            "options explained": 2
+          },
+          "firstSeen": "2026-06-26 09:33:54 +00:00",
+          "lastUpdated": "2026-06-26 09:33:54 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "madravetscheltenham.co.uk",
+          "rank": 97,
+          "backlinks": 48,
+          "referringDomains": 39,
+          "referringMainDomains": 38,
+          "referringPages": 44,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 44
+          },
+          "firstSeen": "2023-11-24 15:37:32 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 2,
       "name": "Arvonia Vets Churchdown Veterinary Centre",
       "url": "https://www.cheltenhamvets.co.uk/",
       "digitalVisibilityScore": 76,
@@ -171,10 +387,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 543,
-        "contentFreshnessDays": 14
+        "contentFreshnessDays": 10
       },
       "localMatch": {
         "placeId": "ChIJqaSwQ1gEcUgRMgiyP0HPRQo",
@@ -349,7 +567,7 @@
       }
     },
     {
-      "rank": 2,
+      "rank": 3,
       "name": "Cheltenham Animal Shelter",
       "url": "http://gawa.org.uk/",
       "digitalVisibilityScore": 76,
@@ -381,10 +599,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 833,
-        "contentFreshnessDays": 1159
+        "wordCount": 871,
+        "contentFreshnessDays": 1191
       },
       "localMatch": {
         "placeId": "ChIJq5t7KoIbcUgRN4sPPY5FUEI",
@@ -570,220 +790,6 @@
       }
     },
     {
-      "rank": 3,
-      "name": "Madra Veterinary Clinic Cheltenham",
-      "url": "http://www.madravetscheltenham.co.uk/",
-      "digitalVisibilityScore": 76,
-      "pillarScores": {
-        "speed": 63,
-        "technical": 75,
-        "local": 91,
-        "visibility": 75,
-        "ai": 100,
-        "content": 35
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 551,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJPzCEqYMbcUgRDIwtBV1ZoFY",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.madravetscheltenham.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 26,
-          "avgInternalLinksPerPage": 26,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": null,
-            "about": 1,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": 6,
-          "sitemapUrls": 7,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-23",
-          "sitemapStaleDays": 9,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 70,
-          "accessibility": 92,
-          "bestPractices": 81,
-          "seo": 100,
-          "lcpMs": 4983,
-          "tbtMs": 272,
-          "clsScore": 0,
-          "fcpMs": 2883,
-          "speedIndexMs": 3766,
-          "failing": [
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "duplicated-javascript-insight",
-              "title": "Duplicated JavaScript",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 25,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 85
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Emergency veterinarian service",
-            "Pet groomer",
-            "Veterinary pharmacy"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 66,
-          "placeTopics": {
-            "independent vets": 7,
-            "short notice appointments": 3,
-            "clean surgery": 2,
-            "family run vets": 2,
-            "nervous dog": 6,
-            "health check": 6,
-            "spaniel": 3,
-            "no nerves": 2,
-            "welcoming atmosphere": 5,
-            "options explained": 2
-          },
-          "firstSeen": "2026-06-26 09:33:54 +00:00",
-          "lastUpdated": "2026-06-26 09:33:54 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "madravetscheltenham.co.uk",
-          "rank": 97,
-          "backlinks": 48,
-          "referringDomains": 39,
-          "referringMainDomains": 38,
-          "referringPages": 44,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 44
-          },
-          "firstSeen": "2023-11-24 15:37:32 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 4,
       "name": "Folly Gardens Veterinary Clinic - Cheltenham",
       "url": "https://www.follygardens.com/",
@@ -817,6 +823,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 599,
@@ -1027,6 +1035,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 689,
@@ -1239,6 +1249,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 572,
@@ -1449,10 +1461,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1154,
-        "contentFreshnessDays": 943
+        "contentFreshnessDays": 975
       },
       "localMatch": {
         "placeId": "ChIJ5Rx8KoIbcUgRFZ-kh8oCW-g",
@@ -1639,33 +1653,34 @@
         "local": 98,
         "visibility": 61,
         "ai": 100,
-        "content": null
+        "content": 58
       },
       "includedPillars": [
         "speed",
         "technical",
         "local",
         "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
+        "ai",
         "content"
       ],
+      "excludedPillars": [],
       "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null,
-        "hasBlogLink": null,
-        "wordCount": null,
-        "contentFreshnessDays": null
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr David Tweedle BVetMed\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 390,
+        "contentFreshnessDays": 0
       },
       "localMatch": {
         "placeId": "ChIJtU20KYsbcUgRGJ0z9n9pCLI",
@@ -1863,6 +1878,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 334,
@@ -2069,10 +2086,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 349,
-        "contentFreshnessDays": 530
+        "contentFreshnessDays": 562
       },
       "localMatch": {
         "placeId": "ChIJy6BR2DQEcUgReEw5tm0Hs4o",
@@ -2283,10 +2302,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 3027,
-        "contentFreshnessDays": 1644
+        "wordCount": 3026,
+        "contentFreshnessDays": 1676
       },
       "localMatch": {
         "placeId": "ChIJq6y1b3UccUgRAQSHKsNXDP8",
@@ -2491,10 +2512,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 670,
-        "contentFreshnessDays": 878
+        "contentFreshnessDays": 910
       },
       "localMatch": {
         "placeId": "ChIJKYLkl7kFcUgROb1hDyK7qr4",
@@ -2704,10 +2727,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 543,
-        "contentFreshnessDays": 14
+        "contentFreshnessDays": 10
       },
       "localMatch": {
         "placeId": "ChIJy1No-pwbcUgRysc6N6874BU",
@@ -2885,14 +2910,14 @@
       "rank": 14,
       "name": "Cotswold Equine Physio",
       "url": "https://www.cotswoldequinephysio.co.uk/",
-      "digitalVisibilityScore": 51,
+      "digitalVisibilityScore": 53,
       "pillarScores": {
         "speed": 64,
         "technical": 100,
         "local": 69,
         "visibility": 0,
         "ai": 0,
-        "content": 40
+        "content": 60
       },
       "includedPillars": [
         "speed",
@@ -2913,7 +2938,9 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "introduces themselves: \"I'm Chloe Hull, founder of Cotswold Equine Physi…\"",
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 827,
@@ -3127,6 +3154,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 429,
@@ -3328,9 +3357,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 275,
+        "wordCount": 273,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -3534,6 +3565,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 941,
@@ -3708,211 +3741,16 @@
     },
     {
       "rank": 18,
-      "name": "CERES vets",
-      "url": "https://businformaps.org/details/ceres-vets-ChIJ8QE",
-      "digitalVisibilityScore": 46,
-      "pillarScores": {
-        "speed": 84,
-        "technical": 88,
-        "local": 50,
-        "visibility": 0,
-        "ai": 0,
-        "content": 17
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 8,
-        "contentFreshnessDays": 42
-      },
-      "localMatch": {
-        "placeId": "ChIJ8QE6eYcbcUgRyXnvqfC3v0I",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://businformaps.org/details/ceres-vets-ChIJ8QE",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": 0,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": false,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "15195833",
-          "companyName": "CERES VETS LTD",
-          "companyStatus": "active",
-          "incorporatedOn": "2023-10-09",
-          "ageYears": 2.9,
-          "sicCodes": [
-            "75000"
-          ],
-          "companyType": "ltd",
-          "accountsType": "total-exemption-full",
-          "accountsMadeUpTo": "2025-10-31",
-          "accountsOverdue": false,
-          "hasCharges": false,
-          "hasInsolvencyHistory": false,
-          "previousNames": null,
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "7 Cotswold Road, Cheltenham, United Kingdom, GL52 5EL",
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 66,
-          "accessibility": 84,
-          "bestPractices": 96,
-          "seo": 92,
-          "lcpMs": 5866,
-          "tbtMs": 129,
-          "clsScore": 0,
-          "fcpMs": 4045,
-          "speedIndexMs": 4992,
-          "failing": [
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 5,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": false,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2026-07-11 21:53:44 +00:00",
-          "lastUpdated": "2026-07-11 21:53:44 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "businformaps.org",
-          "rank": 116,
-          "backlinks": 345,
-          "referringDomains": 53,
-          "referringMainDomains": 42,
-          "referringPages": 181,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 180
-          },
-          "firstSeen": "2025-10-11 09:36:25 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 19,
       "name": "Pet Care Scheme at Casvet",
       "url": "https://www.pdsa.org.uk/pet-care-scheme-clients",
-      "digitalVisibilityScore": 45,
+      "digitalVisibilityScore": 47,
       "pillarScores": {
         "speed": 63,
         "technical": 75,
         "local": 65,
         "visibility": 4,
         "ai": 0,
-        "content": 35
+        "content": 55
       },
       "includedPillars": [
         "speed",
@@ -3933,7 +3771,9 @@
       },
       "contentChecks": {
         "hasAboutLink": false,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 538,
@@ -4101,6 +3941,203 @@
       }
     },
     {
+      "rank": 19,
+      "name": "CERES vets",
+      "url": "https://businformaps.org/details/ceres-vets-ChIJ8QE",
+      "digitalVisibilityScore": 46,
+      "pillarScores": {
+        "speed": 84,
+        "technical": 88,
+        "local": 50,
+        "visibility": 0,
+        "ai": 0,
+        "content": 17
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 8,
+        "contentFreshnessDays": 16
+      },
+      "localMatch": {
+        "placeId": "ChIJ8QE6eYcbcUgRyXnvqfC3v0I",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://businformaps.org/details/ceres-vets-ChIJ8QE",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "15195833",
+          "companyName": "CERES VETS LTD",
+          "companyStatus": "active",
+          "incorporatedOn": "2023-10-09",
+          "ageYears": 2.9,
+          "sicCodes": [
+            "75000"
+          ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-10-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "7 Cotswold Road, Cheltenham, United Kingdom, GL52 5EL",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 66,
+          "accessibility": 84,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 5866,
+          "tbtMs": 129,
+          "clsScore": 0,
+          "fcpMs": 4045,
+          "speedIndexMs": 4992,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 5,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-07-11 21:53:44 +00:00",
+          "lastUpdated": "2026-07-11 21:53:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "businformaps.org",
+          "rank": 116,
+          "backlinks": 345,
+          "referringDomains": 53,
+          "referringMainDomains": 42,
+          "referringPages": 181,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 180
+          },
+          "firstSeen": "2025-10-11 09:36:25 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 20,
       "name": "Sheila Jones Equine",
       "url": "https://www.sheilajonesequine.com/",
@@ -4133,10 +4170,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 231,
-        "contentFreshnessDays": 132
+        "contentFreshnessDays": 164
       },
       "localMatch": {
         "placeId": "ChIJ-SDTbKwZcUgR9JQFRyrfuKs",

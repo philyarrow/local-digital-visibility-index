@@ -121,7 +121,7 @@
       "live": true
     },
     "content": {
-      "scored": 78,
+      "scored": 79,
       "total": 80,
       "live": true
     }
@@ -142,14 +142,14 @@
       "rank": 1,
       "name": "Designscape Architects",
       "url": "http://www.dscape.co.uk/",
-      "digitalVisibilityScore": 80,
+      "digitalVisibilityScore": 82,
       "pillarScores": {
         "speed": 99,
         "technical": 100,
         "local": 90,
         "visibility": 53,
         "ai": 60,
-        "content": 53
+        "content": 70
       },
       "includedPillars": [
         "speed",
@@ -170,11 +170,13 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a role: \"Chris Mackenzie, founder\"",
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 1553,
-        "contentFreshnessDays": 2490
+        "contentFreshnessDays": 2523
       },
       "localMatch": {
         "placeId": "ChIJ6ymXAoyBcUgRTUbHiL1SlRs",
@@ -377,10 +379,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 2829,
-        "contentFreshnessDays": 3260
+        "contentFreshnessDays": 3293
       },
       "localMatch": {
         "placeId": "ChIJPUCR7jyBcUgR69uqnBNDArg",
@@ -596,6 +600,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 165,
@@ -801,10 +807,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 2543,
-        "contentFreshnessDays": 2242
+        "wordCount": 2547,
+        "contentFreshnessDays": 2275
       },
       "localMatch": {
         "placeId": "ChIJUchIefyAcUgRQSuRlvo-ihs",
@@ -985,42 +993,246 @@
     },
     {
       "rank": 5,
-      "name": "BBA Architects Ltd",
-      "url": "http://www.bba-architects.co.uk/",
+      "name": "DKA",
+      "url": "http://www.dka.co.uk/",
       "digitalVisibilityScore": 63,
       "pillarScores": {
-        "speed": 56,
+        "speed": 65,
         "technical": 100,
-        "local": 86,
-        "visibility": 38,
+        "local": 81,
+        "visibility": 31,
         "ai": 20,
-        "content": null
+        "content": 58
       },
       "includedPillars": [
         "speed",
         "technical",
         "local",
         "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
+        "ai",
         "content"
       ],
+      "excludedPillars": [],
       "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null,
-        "hasBlogLink": null,
-        "wordCount": null,
-        "contentFreshnessDays": null
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 182,
+        "contentFreshnessDays": 4806
+      },
+      "localMatch": {
+        "placeId": "ChIJtx8OGgmBcUgRSBIz64tCg_k",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.dka.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 99,
+          "avgInternalLinksPerPage": 99,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 25,
+          "sitemapUrls": 26,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-04-21",
+          "sitemapStaleDays": 132,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 73,
+          "accessibility": 69,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 8193,
+          "tbtMs": 106,
+          "clsScore": 0,
+          "fcpMs": 1235,
+          "speedIndexMs": 4046,
+          "failing": [
+            {
+              "id": "aria-required-children",
+              "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unminified-javascript",
+              "title": "Minify JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 6,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Interior designer"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 48,
+          "placeTopics": null,
+          "firstSeen": "2024-06-12 08:15:25 +00:00",
+          "lastUpdated": "2026-08-07 01:02:00 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "dka.co.uk",
+          "rank": 176,
+          "backlinks": 307,
+          "referringDomains": 116,
+          "referringMainDomains": 110,
+          "referringPages": 304,
+          "brokenBacklinks": 299,
+          "referringLinksTypes": {
+            "anchor": 290
+          },
+          "firstSeen": "2019-02-22 04:40:14 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "name": "BBA Architects Ltd",
+      "url": "http://www.bba-architects.co.uk/",
+      "digitalVisibilityScore": 62,
+      "pillarScores": {
+        "speed": 56,
+        "technical": 100,
+        "local": 86,
+        "visibility": 38,
+        "ai": 20,
+        "content": 53
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 36,
+        "contentFreshnessDays": 2355
       },
       "localMatch": {
         "placeId": "ChIJD7i6aw2BcUgR2hHCZ7YW5TA",
@@ -1191,17 +1403,17 @@
       }
     },
     {
-      "rank": 6,
-      "name": "DKA",
-      "url": "http://www.dka.co.uk/",
-      "digitalVisibilityScore": 63,
+      "rank": 7,
+      "name": "Maack Architects",
+      "url": "http://maack.co.uk/",
+      "digitalVisibilityScore": 62,
       "pillarScores": {
-        "speed": 65,
+        "speed": 46,
         "technical": 100,
-        "local": 81,
-        "visibility": 31,
+        "local": 83,
+        "visibility": 38,
         "ai": 20,
-        "content": 58
+        "content": 75
       },
       "includedPillars": [
         "speed",
@@ -1222,40 +1434,42 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a role: \"Richard Asbury, architect\"",
+        "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 182,
-        "contentFreshnessDays": 4773
+        "wordCount": 632,
+        "contentFreshnessDays": null
       },
       "localMatch": {
-        "placeId": "ChIJtx8OGgmBcUgRSBIz64tCg_k",
+        "placeId": "ChIJiTAnBG2BcUgR_OrvKbQmbak",
         "matchedBy": "domain"
       },
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.dka.co.uk/",
+          "startUrl": "http://maack.co.uk/",
           "pagesCrawled": 1,
           "pagesDiscovered": 0,
-          "internalLinks": 99,
-          "avgInternalLinksPerPage": 99,
+          "internalLinks": 26,
+          "avgInternalLinksPerPage": 26,
           "maxDepthReached": 0,
           "genericAnchors": 0,
           "genericAnchorRatio": 0,
           "keyPageDepth": {
-            "contact": 1,
-            "about": null,
+            "contact": null,
+            "about": 1,
             "team": null,
-            "services": 1
+            "services": null
           },
-          "orphanCandidates": 25,
-          "sitemapUrls": 26,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
+          "orphanCandidates": 37,
+          "sitemapUrls": 37,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
           "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-04-21",
-          "sitemapStaleDays": 132,
+          "sitemapNewestLastmod": "2020-09-29",
+          "sitemapStaleDays": 2163,
           "sitemapSampleChecked": 5,
           "sitemapSampleResolved": 5,
           "robotsDisallowedAll": false,
@@ -1299,19 +1513,24 @@
         "lighthouse": {
           "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
           "strategy": "mobile",
-          "performance": 73,
-          "accessibility": 69,
+          "performance": 54,
+          "accessibility": 100,
           "bestPractices": 81,
           "seo": 100,
-          "lcpMs": 8193,
-          "tbtMs": 106,
+          "lcpMs": 17179,
+          "tbtMs": 206,
           "clsScore": 0,
-          "fcpMs": 1235,
-          "speedIndexMs": 4046,
+          "fcpMs": 4844,
+          "speedIndexMs": 9528,
           "failing": [
             {
-              "id": "aria-required-children",
-              "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
               "score": 0
             },
             {
@@ -1320,33 +1539,28 @@
               "score": 0
             },
             {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
               "score": 0
             },
             {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
+              "id": "font-display-insight",
+              "title": "Font display",
               "score": 0
             },
             {
-              "id": "html-has-lang",
-              "title": "`<html>` element does not have a `[lang]` attribute",
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
               "score": 0
             },
             {
               "id": "network-dependency-tree-insight",
               "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "unminified-javascript",
-              "title": "Minify JavaScript",
               "score": 0
             }
           ],
@@ -1354,45 +1568,43 @@
         },
         "gbpDetail": {
           "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 6,
+          "totalPhotos": 11,
           "ratingDistribution": {
             "1": 0,
             "2": 0,
             "3": 0,
-            "4": 1,
-            "5": 2
+            "4": 0,
+            "5": 3
           },
           "priceLevel": null,
           "isClaimed": true,
-          "additionalCategories": [
-            "Interior designer"
-          ],
+          "additionalCategories": null,
           "hasDescription": true,
           "hasHours": true,
-          "services": 48,
+          "services": 21,
           "placeTopics": null,
-          "firstSeen": "2024-06-12 08:15:25 +00:00",
-          "lastUpdated": "2026-08-07 01:02:00 +00:00"
+          "firstSeen": "2024-08-05 18:39:35 +00:00",
+          "lastUpdated": "2026-07-11 07:04:34 +00:00"
         },
         "backlinks": {
           "source": "DataForSEO backlinks/summary",
-          "target": "dka.co.uk",
-          "rank": 176,
-          "backlinks": 307,
-          "referringDomains": 116,
-          "referringMainDomains": 110,
-          "referringPages": 304,
-          "brokenBacklinks": 299,
+          "target": "maack.co.uk",
+          "rank": 119,
+          "backlinks": 66,
+          "referringDomains": 56,
+          "referringMainDomains": 52,
+          "referringPages": 63,
+          "brokenBacklinks": 4,
           "referringLinksTypes": {
-            "anchor": 290
+            "anchor": 60
           },
-          "firstSeen": "2019-02-22 04:40:14 +00:00",
+          "firstSeen": "2023-10-30 19:59:44 +00:00",
           "lostDate": null
         }
       }
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "Mark Wray Architects",
       "url": "https://markwray.co.uk/",
       "digitalVisibilityScore": 62,
@@ -1425,6 +1637,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 583,
@@ -1598,7 +1812,7 @@
       }
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Mitchell Eley Gould Architects",
       "url": "http://www.mitchelleleygould.co.uk/",
       "digitalVisibilityScore": 61,
@@ -1630,6 +1844,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 244,
@@ -1797,7 +2013,7 @@
       }
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "TEA Architects",
       "url": "http://www.tea-architects.co.uk/",
       "digitalVisibilityScore": 61,
@@ -1829,10 +2045,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 635,
-        "contentFreshnessDays": 571
+        "contentFreshnessDays": 604
       },
       "localMatch": {
         "placeId": "ChIJAbCSlxCBcUgRlXwIdL6wh9k",
@@ -2009,7 +2227,7 @@
       }
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Bright Studio Architects",
       "url": "http://www.brightstudioarchitects.co.uk/",
       "digitalVisibilityScore": 60,
@@ -2041,10 +2259,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 498,
-        "contentFreshnessDays": 1545
+        "wordCount": 497,
+        "contentFreshnessDays": 1578
       },
       "localMatch": {
         "placeId": "ChIJ8ciNNG6BcUgRGCznd3UpA6A",
@@ -2213,205 +2433,6 @@
       }
     },
     {
-      "rank": 11,
-      "name": "Maack Architects",
-      "url": "http://maack.co.uk/",
-      "digitalVisibilityScore": 60,
-      "pillarScores": {
-        "speed": 46,
-        "technical": 100,
-        "local": 83,
-        "visibility": 38,
-        "ai": 20,
-        "content": 55
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 632,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJiTAnBG2BcUgR_OrvKbQmbak",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://maack.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 26,
-          "avgInternalLinksPerPage": 26,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": null,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 37,
-          "sitemapUrls": 37,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2020-09-29",
-          "sitemapStaleDays": 2163,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 54,
-          "accessibility": 100,
-          "bestPractices": 81,
-          "seo": 100,
-          "lcpMs": 17179,
-          "tbtMs": 206,
-          "clsScore": 0,
-          "fcpMs": 4844,
-          "speedIndexMs": 9528,
-          "failing": [
-            {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 0
-            },
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 11,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 3
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 21,
-          "placeTopics": null,
-          "firstSeen": "2024-08-05 18:39:35 +00:00",
-          "lastUpdated": "2026-07-11 07:04:34 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "maack.co.uk",
-          "rank": 119,
-          "backlinks": 66,
-          "referringDomains": 56,
-          "referringMainDomains": 52,
-          "referringPages": 63,
-          "brokenBacklinks": 4,
-          "referringLinksTypes": {
-            "anchor": 60
-          },
-          "firstSeen": "2023-10-30 19:59:44 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 12,
       "name": "Stride Treglown Bath",
       "url": "http://stridetreglown.com/contact/bath/",
@@ -2422,7 +2443,7 @@
         "local": 81,
         "visibility": 8,
         "ai": 0,
-        "content": 79
+        "content": 75
       },
       "includedPillars": [
         "speed",
@@ -2444,10 +2465,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 476,
-        "contentFreshnessDays": 0
+        "contentFreshnessDays": null
       },
       "localMatch": {
         "placeId": "ChIJD9HKPSOBcUgRTPFnRiw-DSo",
@@ -2646,6 +2669,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 320,
@@ -2847,10 +2872,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 1572,
-        "contentFreshnessDays": 3268
+        "wordCount": 1312,
+        "contentFreshnessDays": 3301
       },
       "localMatch": {
         "placeId": "ChIJBT_MWwmBcUgR1QDVm5AXG-0",
@@ -3051,6 +3078,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 651,
@@ -3232,6 +3261,213 @@
     },
     {
       "rank": 16,
+      "name": "Studio Four Point Ten Architects",
+      "url": "http://www.fourpointten.co.uk/",
+      "digitalVisibilityScore": 59,
+      "pillarScores": {
+        "speed": 55,
+        "technical": 100,
+        "local": 85,
+        "visibility": 0,
+        "ai": 20,
+        "content": 75
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a role: \"Lee Holcombe, architect\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 702,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJMTB82CMpckgR2xFPR8VYaZ8",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.fourpointten.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 38,
+          "avgInternalLinksPerPage": 38,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 156,
+          "sitemapUrls": 156,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-19",
+          "sitemapStaleDays": 13,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 96,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 12801,
+          "tbtMs": 121,
+          "clsScore": 0,
+          "fcpMs": 7365,
+          "speedIndexMs": 8331,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 34,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 5
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 41,
+          "placeTopics": {
+            "presentation and proposal": 2,
+            "sensitivity to needs": 2,
+            "attention to detail": 2,
+            "expertise": 3,
+            "attention": 2
+          },
+          "firstSeen": "2024-08-13 07:18:34 +00:00",
+          "lastUpdated": "2026-07-11 17:06:50 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "fourpointten.co.uk",
+          "rank": 0,
+          "backlinks": 64,
+          "referringDomains": 46,
+          "referringMainDomains": 43,
+          "referringPages": 63,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 62
+          },
+          "firstSeen": "2023-06-16 14:08:06 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 17,
       "name": "Nick Shipp Architects",
       "url": "http://www.nickshipp.com/",
       "digitalVisibilityScore": 58,
@@ -3263,10 +3499,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 437,
-        "contentFreshnessDays": 3
+        "contentFreshnessDays": 1
       },
       "localMatch": {
         "placeId": "ChIJKWR-KECBcUgRPatQDNDfldQ",
@@ -3437,7 +3675,7 @@
       }
     },
     {
-      "rank": 17,
+      "rank": 18,
       "name": "Etons Of Bath",
       "url": "https://www.etonsofbath.com/",
       "digitalVisibilityScore": 57,
@@ -3470,10 +3708,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1243,
-        "contentFreshnessDays": 118
+        "wordCount": 1282,
+        "contentFreshnessDays": 151
       },
       "localMatch": {
         "placeId": "ChIJpaNY_pfQdUgR3K9VieTjew8",
@@ -3652,7 +3892,7 @@
       }
     },
     {
-      "rank": 18,
+      "rank": 19,
       "name": "Hetreed Ross Architects",
       "url": "http://www.hetreedross.com/",
       "digitalVisibilityScore": 57,
@@ -3684,10 +3924,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 143,
-        "contentFreshnessDays": 3513
+        "contentFreshnessDays": 3546
       },
       "localMatch": {
         "placeId": "ChIJ6ymXAoyBcUgRAqESwFmJBc8",
@@ -3857,1040 +4099,17 @@
       }
     },
     {
-      "rank": 19,
-      "name": "Sicolo Webb Architects",
-      "url": "https://www.sicolowebb.com/",
-      "digitalVisibilityScore": 57,
-      "pillarScores": {
-        "speed": 61,
-        "technical": 100,
-        "local": 84,
-        "visibility": 0,
-        "ai": 20,
-        "content": 45
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true,
-        "hasBlogLink": false,
-        "wordCount": 146,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJhV1dAPSBcUgRKDCrYbzIEfE",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.sicolowebb.com/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 25,
-          "internalLinks": 684,
-          "avgInternalLinksPerPage": 27.4,
-          "maxDepthReached": 2,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 23,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-07-27",
-          "sitemapStaleDays": 36,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 61,
-          "accessibility": 94,
-          "bestPractices": 100,
-          "seo": 92,
-          "lcpMs": 9924,
-          "tbtMs": 177,
-          "clsScore": 0,
-          "fcpMs": 3999,
-          "speedIndexMs": 5002,
-          "failing": [
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 11,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 4
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Interior designer"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 26,
-          "placeTopics": {
-            "communication": 2,
-            "space": 2,
-            "floor": 2,
-            "ideas": 2,
-            "bath": 2,
-            "budget": 2
-          },
-          "firstSeen": "2024-07-17 06:03:43 +00:00",
-          "lastUpdated": "2026-06-30 01:29:57 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "sicolowebb.com",
-          "rank": 0,
-          "backlinks": 150,
-          "referringDomains": 48,
-          "referringMainDomains": 44,
-          "referringPages": 150,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 149
-          },
-          "firstSeen": "2023-08-31 00:44:40 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 20,
-      "name": "SRA Architects",
-      "url": "http://www.sra-architects.co.uk/",
-      "digitalVisibilityScore": 57,
-      "pillarScores": {
-        "speed": 44,
-        "technical": 100,
-        "local": 82,
-        "visibility": 23,
-        "ai": 0,
-        "content": 80
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true,
-        "hasBlogLink": true,
-        "wordCount": 829,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJW2IxIW2BcUgR2dnyWqHwBZw",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.sra-architects.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 111,
-          "avgInternalLinksPerPage": 111,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": null,
-            "team": 1,
-            "services": 1
-          },
-          "orphanCandidates": 970,
-          "sitemapUrls": 970,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-24",
-          "sitemapStaleDays": 8,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "14336944",
-          "companyName": "SRA ARCHITECTS LTD",
-          "companyStatus": "active",
-          "incorporatedOn": "2022-09-05",
-          "ageYears": 4,
-          "sicCodes": [
-            "71111"
-          ],
-          "companyType": "ltd",
-          "accountsType": "total-exemption-full",
-          "accountsMadeUpTo": "2025-09-30",
-          "accountsOverdue": false,
-          "hasCharges": false,
-          "hasInsolvencyHistory": false,
-          "previousNames": [
-            "SRA ARCHITECTS BATH LTD"
-          ],
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "1st Floor 30-32 Westgate Buildings, Bath, England, BA1 1EF",
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 48,
-          "accessibility": 94,
-          "bestPractices": 78,
-          "seo": 100,
-          "lcpMs": 16178,
-          "tbtMs": 175,
-          "clsScore": 0.157,
-          "fcpMs": 8473,
-          "speedIndexMs": 8799,
-          "failing": [
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "landmark-one-main",
-              "title": "Document does not have a main landmark.",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 1,
-            "5": 5
-          },
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": [
-            "Architectural Designer"
-          ],
-          "hasDescription": false,
-          "hasHours": true,
-          "services": 4,
-          "placeTopics": null,
-          "firstSeen": "2024-07-17 01:24:14 +00:00",
-          "lastUpdated": "2026-06-27 22:45:40 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "sra-architects.co.uk",
-          "rank": 172,
-          "backlinks": 337,
-          "referringDomains": 229,
-          "referringMainDomains": 221,
-          "referringPages": 308,
-          "brokenBacklinks": 23,
-          "referringLinksTypes": {
-            "anchor": 297
-          },
-          "firstSeen": "2019-02-22 21:00:30 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 21,
-      "name": "Studio Four Point Ten Architects",
-      "url": "http://www.fourpointten.co.uk/",
-      "digitalVisibilityScore": 57,
-      "pillarScores": {
-        "speed": 55,
-        "technical": 100,
-        "local": 85,
-        "visibility": 0,
-        "ai": 20,
-        "content": 55
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 702,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJMTB82CMpckgR2xFPR8VYaZ8",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.fourpointten.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 38,
-          "avgInternalLinksPerPage": 38,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 156,
-          "sitemapUrls": 156,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-19",
-          "sitemapStaleDays": 13,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 56,
-          "accessibility": 96,
-          "bestPractices": 81,
-          "seo": 100,
-          "lcpMs": 12801,
-          "tbtMs": 121,
-          "clsScore": 0,
-          "fcpMs": 7365,
-          "speedIndexMs": 8331,
-          "failing": [
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 34,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 5
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 41,
-          "placeTopics": {
-            "presentation and proposal": 2,
-            "sensitivity to needs": 2,
-            "attention to detail": 2,
-            "expertise": 3,
-            "attention": 2
-          },
-          "firstSeen": "2024-08-13 07:18:34 +00:00",
-          "lastUpdated": "2026-07-11 17:06:50 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "fourpointten.co.uk",
-          "rank": 0,
-          "backlinks": 64,
-          "referringDomains": 46,
-          "referringMainDomains": 43,
-          "referringPages": 63,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 62
-          },
-          "firstSeen": "2023-06-16 14:08:06 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 22,
-      "name": "Bath Heritage Building ltd",
-      "url": "https://www.bathheritagebuilding.co.uk/",
-      "digitalVisibilityScore": 56,
-      "pillarScores": {
-        "speed": 58,
-        "technical": 71,
-        "local": 90,
-        "visibility": 21,
-        "ai": 40,
-        "content": 28
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 294,
-        "contentFreshnessDays": 3386
-      },
-      "localMatch": {
-        "placeId": "ChIJnR9rNXqBcUgR8wFr48ZIphY",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.bathheritagebuilding.co.uk/",
-          "pagesCrawled": 8,
-          "pagesDiscovered": 7,
-          "internalLinks": 269,
-          "avgInternalLinksPerPage": 33.6,
-          "maxDepthReached": 1,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 0,
-          "sitemapUrls": 8,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2024-08-07",
-          "sitemapStaleDays": 754,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Bath"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 62,
-          "accessibility": 87,
-          "bestPractices": 92,
-          "seo": 92,
-          "lcpMs": 7795,
-          "tbtMs": 106,
-          "clsScore": 0.026,
-          "fcpMs": 3034,
-          "speedIndexMs": 7788,
-          "failing": [
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "unminified-javascript",
-              "title": "Minify JavaScript",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "meta-description",
-              "title": "Document does not have a meta description",
-              "score": 0
-            },
-            {
-              "id": "meta-viewport",
-              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "unminified-css",
-              "title": "Minify CSS",
-              "score": 0
-            },
-            {
-              "id": "mainthread-work-breakdown",
-              "title": "Minimize main-thread work",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 239,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 15
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Architecture firm"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 40,
-          "placeTopics": {
-            "bathroom renovation": 2,
-            "friendly team": 4,
-            "tiling": 2,
-            "home renovation": 2,
-            "attention to detail": 5,
-            "project management": 3,
-            "refurbishment": 4,
-            "quality of work": 2,
-            "property": 3,
-            "job": 3
-          },
-          "firstSeen": "2026-06-26 18:01:56 +00:00",
-          "lastUpdated": "2026-06-26 18:01:56 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "bathheritagebuilding.co.uk",
-          "rank": 36,
-          "backlinks": 227,
-          "referringDomains": 36,
-          "referringMainDomains": 36,
-          "referringPages": 226,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 224
-          },
-          "firstSeen": "2021-10-16 22:17:36 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 23,
-      "name": "Donald Insall Associates",
-      "url": "http://www.donaldinsallassociates.co.uk/",
-      "digitalVisibilityScore": 55,
-      "pillarScores": {
-        "speed": 79,
-        "technical": 75,
-        "local": 67,
-        "visibility": 0,
-        "ai": 20,
-        "content": 75
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 671,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJk8uxfBOBcUgRtloZHhamWvo",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.donaldinsallassociates.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": 0,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-28",
-          "sitemapStaleDays": 4,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Bath"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 66,
-          "accessibility": 88,
-          "bestPractices": 81,
-          "seo": 92,
-          "lcpMs": 16157,
-          "tbtMs": 57,
-          "clsScore": 0,
-          "fcpMs": 3782,
-          "speedIndexMs": 3782,
-          "failing": [
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "link-text",
-              "title": "Links do not have descriptive text",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "button-name",
-              "title": "Buttons do not have an accessible name",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 2,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 18,
-          "placeTopics": null,
-          "firstSeen": "2026-06-29 03:36:52 +00:00",
-          "lastUpdated": "2026-06-29 03:36:52 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "donaldinsallassociates.co.uk",
-          "rank": 227,
-          "backlinks": 1627,
-          "referringDomains": 608,
-          "referringMainDomains": 565,
-          "referringPages": 1412,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 1330
-          },
-          "firstSeen": "2019-01-18 22:47:11 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 24,
       "name": "Marptree Design & Build limited",
       "url": "http://www.marptree.com/",
-      "digitalVisibilityScore": 55,
+      "digitalVisibilityScore": 57,
       "pillarScores": {
         "speed": 58,
         "technical": 100,
         "local": 90,
         "visibility": 8,
         "ai": 0,
-        "content": 45
+        "content": 62
       },
       "includedPillars": [
         "speed",
@@ -4911,11 +4130,13 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a role: \"Oliver Wilding, director\"",
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 236,
-        "contentFreshnessDays": 3407
+        "contentFreshnessDays": 3440
       },
       "localMatch": {
         "placeId": "ChIJfQc1HQspckgRJcLpLDIK-50",
@@ -5095,6 +4316,832 @@
       }
     },
     {
+      "rank": 21,
+      "name": "Sicolo Webb Architects",
+      "url": "https://www.sicolowebb.com/",
+      "digitalVisibilityScore": 57,
+      "pillarScores": {
+        "speed": 61,
+        "technical": 100,
+        "local": 84,
+        "visibility": 0,
+        "ai": 20,
+        "content": 45
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": false,
+        "wordCount": 146,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJhV1dAPSBcUgRKDCrYbzIEfE",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.sicolowebb.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 25,
+          "internalLinks": 684,
+          "avgInternalLinksPerPage": 27.4,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 23,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-07-27",
+          "sitemapStaleDays": 36,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 61,
+          "accessibility": 94,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 9924,
+          "tbtMs": 177,
+          "clsScore": 0,
+          "fcpMs": 3999,
+          "speedIndexMs": 5002,
+          "failing": [
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 11,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 4
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Interior designer"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 26,
+          "placeTopics": {
+            "communication": 2,
+            "space": 2,
+            "floor": 2,
+            "ideas": 2,
+            "bath": 2,
+            "budget": 2
+          },
+          "firstSeen": "2024-07-17 06:03:43 +00:00",
+          "lastUpdated": "2026-06-30 01:29:57 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "sicolowebb.com",
+          "rank": 0,
+          "backlinks": 150,
+          "referringDomains": 48,
+          "referringMainDomains": 44,
+          "referringPages": 150,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 149
+          },
+          "firstSeen": "2023-08-31 00:44:40 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 22,
+      "name": "SRA Architects",
+      "url": "http://www.sra-architects.co.uk/",
+      "digitalVisibilityScore": 57,
+      "pillarScores": {
+        "speed": 44,
+        "technical": 100,
+        "local": 82,
+        "visibility": 23,
+        "ai": 0,
+        "content": 80
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 833,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJW2IxIW2BcUgR2dnyWqHwBZw",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.sra-architects.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 111,
+          "avgInternalLinksPerPage": 111,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": 970,
+          "sitemapUrls": 970,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-24",
+          "sitemapStaleDays": 8,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "14336944",
+          "companyName": "SRA ARCHITECTS LTD",
+          "companyStatus": "active",
+          "incorporatedOn": "2022-09-05",
+          "ageYears": 4,
+          "sicCodes": [
+            "71111"
+          ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2025-09-30",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": [
+            "SRA ARCHITECTS BATH LTD"
+          ],
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "1st Floor 30-32 Westgate Buildings, Bath, England, BA1 1EF",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 48,
+          "accessibility": 94,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 16178,
+          "tbtMs": 175,
+          "clsScore": 0.157,
+          "fcpMs": 8473,
+          "speedIndexMs": 8799,
+          "failing": [
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 5
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Architectural Designer"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 4,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 01:24:14 +00:00",
+          "lastUpdated": "2026-06-27 22:45:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "sra-architects.co.uk",
+          "rank": 172,
+          "backlinks": 337,
+          "referringDomains": 229,
+          "referringMainDomains": 221,
+          "referringPages": 308,
+          "brokenBacklinks": 23,
+          "referringLinksTypes": {
+            "anchor": 297
+          },
+          "firstSeen": "2019-02-22 21:00:30 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 23,
+      "name": "Bath Heritage Building ltd",
+      "url": "https://www.bathheritagebuilding.co.uk/",
+      "digitalVisibilityScore": 56,
+      "pillarScores": {
+        "speed": 58,
+        "technical": 71,
+        "local": 90,
+        "visibility": 21,
+        "ai": 40,
+        "content": 28
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 272,
+        "contentFreshnessDays": 3419
+      },
+      "localMatch": {
+        "placeId": "ChIJnR9rNXqBcUgR8wFr48ZIphY",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.bathheritagebuilding.co.uk/",
+          "pagesCrawled": 8,
+          "pagesDiscovered": 7,
+          "internalLinks": 269,
+          "avgInternalLinksPerPage": 33.6,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 0,
+          "sitemapUrls": 8,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2024-08-07",
+          "sitemapStaleDays": 754,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Bath"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 62,
+          "accessibility": 87,
+          "bestPractices": 92,
+          "seo": 92,
+          "lcpMs": 7795,
+          "tbtMs": 106,
+          "clsScore": 0.026,
+          "fcpMs": 3034,
+          "speedIndexMs": 7788,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unminified-javascript",
+              "title": "Minify JavaScript",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 239,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 15
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architecture firm"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 40,
+          "placeTopics": {
+            "bathroom renovation": 2,
+            "friendly team": 4,
+            "tiling": 2,
+            "home renovation": 2,
+            "attention to detail": 5,
+            "project management": 3,
+            "refurbishment": 4,
+            "quality of work": 2,
+            "property": 3,
+            "job": 3
+          },
+          "firstSeen": "2026-06-26 18:01:56 +00:00",
+          "lastUpdated": "2026-06-26 18:01:56 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bathheritagebuilding.co.uk",
+          "rank": 36,
+          "backlinks": 227,
+          "referringDomains": 36,
+          "referringMainDomains": 36,
+          "referringPages": 226,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 224
+          },
+          "firstSeen": "2021-10-16 22:17:36 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 24,
+      "name": "Donald Insall Associates",
+      "url": "http://www.donaldinsallassociates.co.uk/",
+      "digitalVisibilityScore": 55,
+      "pillarScores": {
+        "speed": 79,
+        "technical": 75,
+        "local": 67,
+        "visibility": 0,
+        "ai": 20,
+        "content": 75
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 671,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJk8uxfBOBcUgRtloZHhamWvo",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.donaldinsallassociates.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-28",
+          "sitemapStaleDays": 4,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Bath"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 66,
+          "accessibility": 88,
+          "bestPractices": 81,
+          "seo": 92,
+          "lcpMs": 16157,
+          "tbtMs": 57,
+          "clsScore": 0,
+          "fcpMs": 3782,
+          "speedIndexMs": 3782,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 18,
+          "placeTopics": null,
+          "firstSeen": "2026-06-29 03:36:52 +00:00",
+          "lastUpdated": "2026-06-29 03:36:52 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "donaldinsallassociates.co.uk",
+          "rank": 227,
+          "backlinks": 1627,
+          "referringDomains": 608,
+          "referringMainDomains": 565,
+          "referringPages": 1412,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 1330
+          },
+          "firstSeen": "2019-01-18 22:47:11 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 25,
       "name": "Stonewood Design",
       "url": "http://www.stonewooddesign.co.uk/",
@@ -5127,6 +5174,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 16,
@@ -5320,10 +5369,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 2829,
-        "contentFreshnessDays": 3260
+        "contentFreshnessDays": 3293
       },
       "localMatch": {
         "placeId": "ChIJp1Y5nNWGcUgR7_P3zBmEKxI",
@@ -5513,6 +5564,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 2,
@@ -5714,10 +5767,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 376,
-        "contentFreshnessDays": 1928
+        "contentFreshnessDays": 1961
       },
       "localMatch": {
         "placeId": "ChIJHdyR3NZ6cUgRWP3rEwJf9r8",
@@ -5926,6 +5981,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 146,
@@ -6094,6 +6151,203 @@
     },
     {
       "rank": 30,
+      "name": "Paragon Structures",
+      "url": "https://www.paragonstructures.com/",
+      "digitalVisibilityScore": 53,
+      "pillarScores": {
+        "speed": 64,
+        "technical": 100,
+        "local": 67,
+        "visibility": 0,
+        "ai": 0,
+        "content": 66
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 426,
+        "contentFreshnessDays": 3585
+      },
+      "localMatch": {
+        "placeId": "ChIJMe3VgJSBcUgRbFfYBXYgfLk",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.paragonstructures.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 44,
+          "internalLinks": 1012,
+          "avgInternalLinksPerPage": 40.5,
+          "maxDepthReached": 1,
+          "genericAnchors": 98,
+          "genericAnchorRatio": 0.097,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 47,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2023-04-05",
+          "sitemapStaleDays": 1244,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "10451927",
+          "companyName": "PARAGON STRUCTURES LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2016-10-28",
+          "ageYears": 9.8,
+          "sicCodes": [
+            "41201"
+          ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2024-12-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "14 Rockliffe Avenue, Bath, England, BA2 6QP",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 62,
+          "accessibility": 83,
+          "bestPractices": 73,
+          "seo": 85,
+          "lcpMs": 3451,
+          "tbtMs": 609,
+          "clsScore": 0.022,
+          "fcpMs": 3015,
+          "speedIndexMs": 9994,
+          "failing": [
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 5,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 10,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 14:44:47 +00:00",
+          "lastUpdated": "2026-06-30 14:44:47 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "paragonstructures.com",
+          "rank": 112,
+          "backlinks": 113,
+          "referringDomains": 78,
+          "referringMainDomains": 73,
+          "referringPages": 99,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 96
+          },
+          "firstSeen": "2021-12-06 02:55:59 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 31,
       "name": "Collaborative Design and Build Ltd.",
       "url": "http://co-db.uk/",
       "digitalVisibilityScore": 52,
@@ -6125,6 +6379,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 470,
@@ -6294,7 +6550,7 @@
       }
     },
     {
-      "rank": 31,
+      "rank": 32,
       "name": "Dimension 22 Ltd",
       "url": "http://www.dimension22.co.uk/",
       "digitalVisibilityScore": 52,
@@ -6327,6 +6583,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 236,
@@ -6510,7 +6768,7 @@
       }
     },
     {
-      "rank": 32,
+      "rank": 33,
       "name": "Flawless",
       "url": "http://flawlessdesignandbuild.co.uk/",
       "digitalVisibilityScore": 52,
@@ -6542,10 +6800,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1324,
-        "contentFreshnessDays": 2198
+        "contentFreshnessDays": 2231
       },
       "localMatch": {
         "placeId": "ChIJ_27DUOyGcUgRbWrmbH62GOs",
@@ -6703,7 +6963,210 @@
       }
     },
     {
-      "rank": 33,
+      "rank": 34,
+      "name": "Sims Hilditch",
+      "url": "https://www.simshilditch.com/",
+      "digitalVisibilityScore": 52,
+      "pillarScores": {
+        "speed": 53,
+        "technical": 100,
+        "local": 87,
+        "visibility": 0,
+        "ai": 0,
+        "content": 35
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 425,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJVXuw8AWDcUgRFNwBuQdtVCE",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.simshilditch.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 96,
+          "internalLinks": 753,
+          "avgInternalLinksPerPage": 30.1,
+          "maxDepthReached": 2,
+          "genericAnchors": 11,
+          "genericAnchorRatio": 0.015,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 2,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 110,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 2280,
+          "inpMs": 135,
+          "cls": 0.01,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Bath"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 45,
+          "accessibility": 97,
+          "bestPractices": 77,
+          "seo": 100,
+          "lcpMs": 52087,
+          "tbtMs": 424,
+          "clsScore": 0,
+          "fcpMs": 10362,
+          "speedIndexMs": 10362,
+          "failing": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "unminified-javascript",
+              "title": "Minify JavaScript",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 29,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 9
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Architectural Designer"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 68,
+          "placeTopics": null,
+          "firstSeen": "2026-06-25 21:29:38 +00:00",
+          "lastUpdated": "2026-06-25 21:29:38 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "simshilditch.com",
+          "rank": 242,
+          "backlinks": 3656,
+          "referringDomains": 485,
+          "referringMainDomains": 479,
+          "referringPages": 3383,
+          "brokenBacklinks": 2055,
+          "referringLinksTypes": {
+            "anchor": 3322
+          },
+          "firstSeen": "2019-01-16 10:46:35 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 35,
       "name": "Woolf Interior Architecture & Design",
       "url": "https://www.woolfinterior.com/",
       "digitalVisibilityScore": 52,
@@ -6735,9 +7198,11 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 484,
+        "wordCount": 485,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -6910,7 +7375,7 @@
       }
     },
     {
-      "rank": 34,
+      "rank": 36,
       "name": "Alex Tart Architects, Bath",
       "url": "https://www.alextartarchitects.com/",
       "digitalVisibilityScore": 51,
@@ -6942,6 +7407,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 337,
@@ -7103,7 +7570,7 @@
       }
     },
     {
-      "rank": 35,
+      "rank": 37,
       "name": "Lord Architecture Ltd",
       "url": "http://www.lordarchitecture.co.uk/",
       "digitalVisibilityScore": 51,
@@ -7135,10 +7602,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 17,
-        "contentFreshnessDays": 1159
+        "contentFreshnessDays": 1192
       },
       "localMatch": {
         "placeId": "ChIJtRgThhCBcUgRWy4AcJ4MjBg",
@@ -7304,402 +7773,6 @@
       }
     },
     {
-      "rank": 36,
-      "name": "Paragon Structures",
-      "url": "https://www.paragonstructures.com/",
-      "digitalVisibilityScore": 51,
-      "pillarScores": {
-        "speed": 64,
-        "technical": 100,
-        "local": 67,
-        "visibility": 0,
-        "ai": 0,
-        "content": 49
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 426,
-        "contentFreshnessDays": 3553
-      },
-      "localMatch": {
-        "placeId": "ChIJMe3VgJSBcUgRbFfYBXYgfLk",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.paragonstructures.com/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 44,
-          "internalLinks": 1012,
-          "avgInternalLinksPerPage": 40.5,
-          "maxDepthReached": 1,
-          "genericAnchors": 98,
-          "genericAnchorRatio": 0.097,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 47,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2023-04-05",
-          "sitemapStaleDays": 1244,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "10451927",
-          "companyName": "PARAGON STRUCTURES LIMITED",
-          "companyStatus": "active",
-          "incorporatedOn": "2016-10-28",
-          "ageYears": 9.8,
-          "sicCodes": [
-            "41201"
-          ],
-          "companyType": "ltd",
-          "accountsType": "micro-entity",
-          "accountsMadeUpTo": "2024-12-31",
-          "accountsOverdue": false,
-          "hasCharges": false,
-          "hasInsolvencyHistory": false,
-          "previousNames": null,
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "14 Rockliffe Avenue, Bath, England, BA2 6QP",
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 62,
-          "accessibility": 83,
-          "bestPractices": 73,
-          "seo": 85,
-          "lcpMs": 3451,
-          "tbtMs": 609,
-          "clsScore": 0.022,
-          "fcpMs": 3015,
-          "speedIndexMs": 9994,
-          "failing": [
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "image-alt",
-              "title": "Image elements do not have `[alt]` attributes",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "mainthread-work-breakdown",
-              "title": "Minimize main-thread work",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 5,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 10,
-          "placeTopics": null,
-          "firstSeen": "2026-06-30 14:44:47 +00:00",
-          "lastUpdated": "2026-06-30 14:44:47 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "paragonstructures.com",
-          "rank": 112,
-          "backlinks": 113,
-          "referringDomains": 78,
-          "referringMainDomains": 73,
-          "referringPages": 99,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 96
-          },
-          "firstSeen": "2021-12-06 02:55:59 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 37,
-      "name": "Sims Hilditch",
-      "url": "https://www.simshilditch.com/",
-      "digitalVisibilityScore": 51,
-      "pillarScores": {
-        "speed": 53,
-        "technical": 100,
-        "local": 87,
-        "visibility": 0,
-        "ai": 0,
-        "content": 30
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 394,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJVXuw8AWDcUgRFNwBuQdtVCE",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.simshilditch.com/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 96,
-          "internalLinks": 753,
-          "avgInternalLinksPerPage": 30.1,
-          "maxDepthReached": 2,
-          "genericAnchors": 11,
-          "genericAnchorRatio": 0.015,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": 2,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 110,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": false,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 2280,
-          "inpMs": 135,
-          "cls": 0.01,
-          "lcpGood": true,
-          "inpGood": true,
-          "clsGood": true,
-          "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Bath"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 45,
-          "accessibility": 97,
-          "bestPractices": 77,
-          "seo": 100,
-          "lcpMs": 52087,
-          "tbtMs": 424,
-          "clsScore": 0,
-          "fcpMs": 10362,
-          "speedIndexMs": 10362,
-          "failing": [
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "unminified-javascript",
-              "title": "Minify JavaScript",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "interactive",
-              "title": "Time to Interactive",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 29,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 1,
-            "4": 0,
-            "5": 9
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Architectural Designer"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 68,
-          "placeTopics": null,
-          "firstSeen": "2026-06-25 21:29:38 +00:00",
-          "lastUpdated": "2026-06-25 21:29:38 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "simshilditch.com",
-          "rank": 242,
-          "backlinks": 3656,
-          "referringDomains": 485,
-          "referringMainDomains": 479,
-          "referringPages": 3383,
-          "brokenBacklinks": 2055,
-          "referringLinksTypes": {
-            "anchor": 3322
-          },
-          "firstSeen": "2019-01-16 10:46:35 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 38,
       "name": "Smartarch Ltd",
       "url": "http://www.smartarch.co.uk/",
@@ -7732,6 +7805,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 1046,
@@ -7927,10 +8002,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1232,
-        "contentFreshnessDays": 1956
+        "wordCount": 1541,
+        "contentFreshnessDays": 1989
       },
       "localMatch": {
         "placeId": "ChIJNZsvgZqBcUgRml6GKgk-pCg",
@@ -8129,10 +8206,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 587,
-        "contentFreshnessDays": 1931
+        "contentFreshnessDays": 1964
       },
       "localMatch": {
         "placeId": "ChIJ99xDo_uBcUgRqGpkFIHfvsA",
@@ -8322,6 +8401,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 82,
@@ -8523,10 +8604,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 662,
-        "contentFreshnessDays": 4504
+        "contentFreshnessDays": 4537
       },
       "localMatch": {
         "placeId": "ChIJr6eEi9yBcUgRVTkbzG0lU94",
@@ -8727,6 +8810,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 255,
@@ -8931,6 +9016,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 1017,
@@ -9137,6 +9224,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 82,
@@ -9330,10 +9419,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 32,
-        "contentFreshnessDays": 3484
+        "contentFreshnessDays": 3517
       },
       "localMatch": {
         "placeId": "ChIJGfUN650qckgR72lJwsJ1n-w",
@@ -9529,9 +9620,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 361,
+        "wordCount": 362,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -9692,10 +9785,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 63,
-        "contentFreshnessDays": 0
+        "wordCount": 30,
+        "contentFreshnessDays": 5
       },
       "localMatch": {
         "placeId": "ChIJTy3pbIz9iogRTKxgdPggte0",
@@ -9887,10 +9982,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 84,
-        "contentFreshnessDays": 1426
+        "contentFreshnessDays": 1459
       },
       "localMatch": {
         "placeId": "ChIJGXYr30SBcUgR_IxMXtRUxjQ",
@@ -10089,6 +10186,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 162,
@@ -10299,6 +10398,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 104,
@@ -10495,6 +10596,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 182,
@@ -10657,6 +10760,201 @@
     },
     {
       "rank": 53,
+      "name": "Ailtire Architects",
+      "url": "http://www.ailtire.com.au/",
+      "digitalVisibilityScore": 46,
+      "pillarScores": {
+        "speed": 62,
+        "technical": 88,
+        "local": 59,
+        "visibility": 0,
+        "ai": 0,
+        "content": 37
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a role: \"John Andrews, associate\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 64,
+        "contentFreshnessDays": 1593
+      },
+      "localMatch": {
+        "placeId": "ChIJnxp0xWyBcUgR_7LctKJkzeo",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.ailtire.com.au/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 14,
+          "avgInternalLinksPerPage": 14,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 64,
+          "accessibility": 100,
+          "bestPractices": 81,
+          "seo": 85,
+          "lcpMs": 5037,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3818,
+          "speedIndexMs": 20832,
+          "failing": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "speed-index",
+              "title": "Speed Index",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-08-04 09:34:53 +00:00",
+          "lastUpdated": "2026-08-04 09:34:53 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "ailtire.com.au",
+          "rank": 0,
+          "backlinks": 21,
+          "referringDomains": 19,
+          "referringMainDomains": 19,
+          "referringPages": 21,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 21
+          },
+          "firstSeen": "2024-10-19 23:06:07 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 54,
       "name": "Burnford Architecture",
       "url": "http://burnfordarchitecture.com/",
       "digitalVisibilityScore": 46,
@@ -10688,6 +10986,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 6,
@@ -10861,7 +11161,7 @@
       }
     },
     {
-      "rank": 54,
+      "rank": 55,
       "name": "Carter Hughes Davies",
       "url": "https://carterhughesdavies.co.uk/",
       "digitalVisibilityScore": 46,
@@ -10893,10 +11193,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 829,
-        "contentFreshnessDays": 1652
+        "contentFreshnessDays": 1685
       },
       "localMatch": {
         "placeId": "ChIJ2S2tWxSBcUgRNunc2LszLBU",
@@ -11054,7 +11356,7 @@
       }
     },
     {
-      "rank": 55,
+      "rank": 56,
       "name": "Fairfield Banks",
       "url": "http://www.fairfieldbanks.co.uk/",
       "digitalVisibilityScore": 46,
@@ -11086,9 +11388,11 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 445,
+        "wordCount": 444,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -11255,7 +11559,7 @@
       }
     },
     {
-      "rank": 56,
+      "rank": 57,
       "name": "Moon DESIGN",
       "url": "https://www.designbymoon.co.uk/",
       "digitalVisibilityScore": 46,
@@ -11287,10 +11591,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 316,
-        "contentFreshnessDays": 1987
+        "contentFreshnessDays": 2020
       },
       "localMatch": {
         "placeId": "ChIJoZpo4g-BcUgRx29tbgTEeSY",
@@ -11453,7 +11759,7 @@
       }
     },
     {
-      "rank": 57,
+      "rank": 58,
       "name": "The Rez Group",
       "url": "https://www.therez.group/",
       "digitalVisibilityScore": 46,
@@ -11485,6 +11791,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 230,
@@ -11654,7 +11962,7 @@
       }
     },
     {
-      "rank": 58,
+      "rank": 59,
       "name": "Hambury Hird Design Ltd",
       "url": "https://www.hamburyhird.co.uk/",
       "digitalVisibilityScore": 45,
@@ -11686,6 +11994,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 240,
@@ -11852,7 +12162,7 @@
       }
     },
     {
-      "rank": 59,
+      "rank": 60,
       "name": "INK Architecture",
       "url": "http://ink-architecture.co.uk/",
       "digitalVisibilityScore": 45,
@@ -11884,10 +12194,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 724,
-        "contentFreshnessDays": 2567
+        "contentFreshnessDays": 2600
       },
       "localMatch": {
         "placeId": "ChIJz2orpA8rckgRL9UuLtljT-Y",
@@ -12045,7 +12357,7 @@
       }
     },
     {
-      "rank": 60,
+      "rank": 61,
       "name": "mimetico",
       "url": "http://mimetico.uk/",
       "digitalVisibilityScore": 45,
@@ -12077,10 +12389,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 147,
-        "contentFreshnessDays": 2294
+        "contentFreshnessDays": 2327
       },
       "localMatch": {
         "placeId": "ChIJcwaM4E6BcUgRlc0DmgJRcjI",
@@ -12240,199 +12554,6 @@
       }
     },
     {
-      "rank": 61,
-      "name": "Ailtire Architects",
-      "url": "http://www.ailtire.com.au/",
-      "digitalVisibilityScore": 44,
-      "pillarScores": {
-        "speed": 62,
-        "technical": 88,
-        "local": 59,
-        "visibility": 0,
-        "ai": 0,
-        "content": 20
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 64,
-        "contentFreshnessDays": 1560
-      },
-      "localMatch": {
-        "placeId": "ChIJnxp0xWyBcUgR_7LctKJkzeo",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.ailtire.com.au/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 14,
-          "avgInternalLinksPerPage": 14,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": null,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 64,
-          "accessibility": 100,
-          "bestPractices": 81,
-          "seo": 85,
-          "lcpMs": 5037,
-          "tbtMs": 0,
-          "clsScore": 0,
-          "fcpMs": 3818,
-          "speedIndexMs": 20832,
-          "failing": [
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "meta-description",
-              "title": "Document does not have a meta description",
-              "score": 0
-            },
-            {
-              "id": "speed-index",
-              "title": "Speed Index",
-              "score": 0
-            },
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            },
-            {
-              "id": "lcp-breakdown-insight",
-              "title": "LCP breakdown",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 3,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": false,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2026-08-04 09:34:53 +00:00",
-          "lastUpdated": "2026-08-04 09:34:53 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "ailtire.com.au",
-          "rank": 0,
-          "backlinks": 21,
-          "referringDomains": 19,
-          "referringMainDomains": 19,
-          "referringPages": 21,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 21
-          },
-          "firstSeen": "2024-10-19 23:06:07 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 62,
       "name": "Atelier 17 Ltd",
       "url": "http://www.atelier17.co.uk/",
@@ -12465,6 +12586,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 46,
@@ -12633,199 +12756,6 @@
     },
     {
       "rank": 63,
-      "name": "James Gallie",
-      "url": "http://jamesgallie.com/",
-      "digitalVisibilityScore": 44,
-      "pillarScores": {
-        "speed": 85,
-        "technical": 50,
-        "local": 59,
-        "visibility": 0,
-        "ai": 0,
-        "content": 50
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 29,
-        "contentFreshnessDays": 80
-      },
-      "localMatch": {
-        "placeId": "ChIJKZVk2h6BcUgRA2XwmN8xdaA",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://jamesgallie.com/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 44,
-          "internalLinks": 573,
-          "avgInternalLinksPerPage": 22.9,
-          "maxDepthReached": 2,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": null,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 90,
-          "accessibility": 88,
-          "bestPractices": 74,
-          "seo": 85,
-          "lcpMs": 3028,
-          "tbtMs": 0,
-          "clsScore": 0,
-          "fcpMs": 2725,
-          "speedIndexMs": 3012,
-          "failing": [
-            {
-              "id": "meta-description",
-              "title": "Document does not have a meta description",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            },
-            {
-              "id": "document-title",
-              "title": "Document doesn't have a `<title>` element",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": false,
-          "services": 7,
-          "placeTopics": null,
-          "firstSeen": "2024-08-04 19:02:33 +00:00",
-          "lastUpdated": "2026-07-10 11:18:54 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "jamesgallie.com",
-          "rank": 7,
-          "backlinks": 44,
-          "referringDomains": 40,
-          "referringMainDomains": 36,
-          "referringPages": 44,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 44
-          },
-          "firstSeen": "2023-11-13 05:20:16 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 64,
       "name": "Anthony Paine Limited",
       "url": "http://www.anthonypaine.com/",
       "digitalVisibilityScore": 43,
@@ -12857,6 +12787,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 205,
@@ -13018,6 +12950,201 @@
       }
     },
     {
+      "rank": 64,
+      "name": "James Gallie",
+      "url": "http://jamesgallie.com/",
+      "digitalVisibilityScore": 43,
+      "pillarScores": {
+        "speed": 85,
+        "technical": 50,
+        "local": 59,
+        "visibility": 0,
+        "ai": 0,
+        "content": 46
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 29,
+        "contentFreshnessDays": 113
+      },
+      "localMatch": {
+        "placeId": "ChIJKZVk2h6BcUgRA2XwmN8xdaA",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://jamesgallie.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 44,
+          "internalLinks": 573,
+          "avgInternalLinksPerPage": 22.9,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 90,
+          "accessibility": 88,
+          "bestPractices": 74,
+          "seo": 85,
+          "lcpMs": 3028,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 2725,
+          "speedIndexMs": 3012,
+          "failing": [
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "document-title",
+              "title": "Document doesn't have a `<title>` element",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 7,
+          "placeTopics": null,
+          "firstSeen": "2024-08-04 19:02:33 +00:00",
+          "lastUpdated": "2026-07-10 11:18:54 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "jamesgallie.com",
+          "rank": 7,
+          "backlinks": 44,
+          "referringDomains": 40,
+          "referringMainDomains": 36,
+          "referringPages": 44,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 44
+          },
+          "firstSeen": "2023-11-13 05:20:16 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 65,
       "name": "Kashdan Brown Architects",
       "url": "http://www.kashdanbrown.co.uk/",
@@ -13050,6 +13177,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 32,
@@ -13212,6 +13341,209 @@
     },
     {
       "rank": 66,
+      "name": "Watson Bertram & Fell",
+      "url": "http://www.wbf-bath.co.uk/",
+      "digitalVisibilityScore": 43,
+      "pillarScores": {
+        "speed": 39,
+        "technical": 63,
+        "local": 79,
+        "visibility": 0,
+        "ai": 0,
+        "content": 65
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a role: \"Mark Watson, director\"",
+        "hasCredentialsLink": true,
+        "hasBlogLink": false,
+        "wordCount": 101,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJfznOlBSBcUgR9AydArs2nDA",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.wbf-bath.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 16,
+          "avgInternalLinksPerPage": 16,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "05948742",
+          "companyName": "WATSON BERTRAM & FELL LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2006-09-27",
+          "ageYears": 19.9,
+          "sicCodes": [
+            "71129"
+          ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2024-12-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Ground Floor, 11 Manvers Street, Bath, BA1 1JQ",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 49,
+          "accessibility": 84,
+          "bestPractices": 81,
+          "seo": 61,
+          "lcpMs": 9272,
+          "tbtMs": 0,
+          "clsScore": 1.629,
+          "fcpMs": 1258,
+          "speedIndexMs": 3335,
+          "failing": [
+            {
+              "id": "is-crawlable",
+              "title": "Page is blocked from indexing",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "cumulative-layout-shift",
+              "title": "Cumulative Layout Shift",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 6,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 5,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 13:56:39 +00:00",
+          "lastUpdated": "2026-06-30 14:06:23 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "wbf-bath.co.uk",
+          "rank": 96,
+          "backlinks": 95,
+          "referringDomains": 85,
+          "referringMainDomains": 78,
+          "referringPages": 94,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 91
+          },
+          "firstSeen": "2019-04-19 02:25:20 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 67,
       "name": "MOORE YACHT DESIGN",
       "url": "http://mooreyachtdesign.com/",
       "digitalVisibilityScore": 42,
@@ -13243,6 +13575,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 67,
@@ -13406,7 +13740,7 @@
       }
     },
     {
-      "rank": 67,
+      "rank": 68,
       "name": "Chedburn Dudley",
       "url": "https://www.chedburn.com/",
       "digitalVisibilityScore": 41,
@@ -13438,10 +13772,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 69,
-        "contentFreshnessDays": 2575
+        "contentFreshnessDays": 2608
       },
       "localMatch": {
         "placeId": "ChIJ6ymXAoyBcUgRQESLLN5Utuw",
@@ -13605,7 +13941,7 @@
       }
     },
     {
-      "rank": 68,
+      "rank": 69,
       "name": "GBH Historic Building Advice",
       "url": "https://gbhhbadvice.wixsite.com/mysite",
       "digitalVisibilityScore": 41,
@@ -13637,6 +13973,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 233,
@@ -13812,7 +14150,7 @@
       }
     },
     {
-      "rank": 69,
+      "rank": 70,
       "name": "LaBox Design",
       "url": "http://www.laboxdesign.com/",
       "digitalVisibilityScore": 41,
@@ -13844,6 +14182,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 258,
@@ -14011,207 +14351,6 @@
       }
     },
     {
-      "rank": 70,
-      "name": "Watson Bertram & Fell",
-      "url": "http://www.wbf-bath.co.uk/",
-      "digitalVisibilityScore": 41,
-      "pillarScores": {
-        "speed": 39,
-        "technical": 63,
-        "local": 79,
-        "visibility": 0,
-        "ai": 0,
-        "content": 45
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true,
-        "hasBlogLink": false,
-        "wordCount": 101,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJfznOlBSBcUgR9AydArs2nDA",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.wbf-bath.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 16,
-          "avgInternalLinksPerPage": 16,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": null,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "05948742",
-          "companyName": "WATSON BERTRAM & FELL LIMITED",
-          "companyStatus": "active",
-          "incorporatedOn": "2006-09-27",
-          "ageYears": 19.9,
-          "sicCodes": [
-            "71129"
-          ],
-          "companyType": "ltd",
-          "accountsType": "total-exemption-full",
-          "accountsMadeUpTo": "2024-12-31",
-          "accountsOverdue": false,
-          "hasCharges": false,
-          "hasInsolvencyHistory": false,
-          "previousNames": null,
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "Ground Floor, 11 Manvers Street, Bath, BA1 1JQ",
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 49,
-          "accessibility": 84,
-          "bestPractices": 81,
-          "seo": 61,
-          "lcpMs": 9272,
-          "tbtMs": 0,
-          "clsScore": 1.629,
-          "fcpMs": 1258,
-          "speedIndexMs": 3335,
-          "failing": [
-            {
-              "id": "is-crawlable",
-              "title": "Page is blocked from indexing",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "layout-shifts",
-              "title": "Avoid large layout shifts",
-              "score": 0
-            },
-            {
-              "id": "cumulative-layout-shift",
-              "title": "Cumulative Layout Shift",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "button-name",
-              "title": "Buttons do not have an accessible name",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 6,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 1
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 5,
-          "placeTopics": null,
-          "firstSeen": "2024-07-19 13:56:39 +00:00",
-          "lastUpdated": "2026-06-30 14:06:23 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "wbf-bath.co.uk",
-          "rank": 96,
-          "backlinks": 95,
-          "referringDomains": 85,
-          "referringMainDomains": 78,
-          "referringPages": 94,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 91
-          },
-          "firstSeen": "2019-04-19 02:25:20 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 71,
       "name": "Architectural Services Bath - Architects Loft Conversions Bath - Philip Clifford Design",
       "url": "https://www.philipclifforddesign.co.uk/",
@@ -14222,7 +14361,7 @@
         "local": 59,
         "visibility": 25,
         "ai": 20,
-        "content": 42
+        "content": 38
       },
       "includedPillars": [
         "speed",
@@ -14244,10 +14383,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 204,
-        "contentFreshnessDays": 61
+        "contentFreshnessDays": 93
       },
       "localMatch": {
         "placeId": "ChIJfUwKOHqBcUgRCOt-ehxnKrU",
@@ -14437,6 +14578,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 12,
@@ -14641,6 +14784,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 510,
@@ -14836,6 +14981,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 178,
@@ -15035,6 +15182,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 535,
@@ -15235,6 +15384,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 78,
@@ -15387,6 +15538,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 39,
@@ -15580,6 +15733,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 42,
@@ -15768,10 +15923,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 130,
-        "contentFreshnessDays": 5339
+        "contentFreshnessDays": 5372
       },
       "localMatch": {
         "placeId": "ChIJBRt-GUKBcUgRQZg4_ShR6rU",
@@ -15962,6 +16119,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,

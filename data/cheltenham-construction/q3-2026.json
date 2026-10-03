@@ -171,10 +171,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 2271,
-        "contentFreshnessDays": 473
+        "wordCount": 2277,
+        "contentFreshnessDays": 507
       },
       "localMatch": {
         "placeId": "ChIJTZdUEKUdcUgRzX6oC06j7tw",
@@ -383,6 +385,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 1155,
@@ -589,6 +593,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 527,
@@ -795,10 +801,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 2362,
-        "contentFreshnessDays": 4
+        "contentFreshnessDays": 1
       },
       "localMatch": {
         "placeId": "ChIJj3q97S0vRS8RIY2qKzz3pKs",
@@ -1001,10 +1009,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 811,
-        "contentFreshnessDays": 411
+        "wordCount": 814,
+        "contentFreshnessDays": 445
       },
       "localMatch": {
         "placeId": "ChIJfSWWR64bcUgR09J5wZGynMk",
@@ -1197,10 +1207,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 440,
-        "contentFreshnessDays": 1385
+        "contentFreshnessDays": 1419
       },
       "localMatch": {
         "placeId": "ChIJH4wV00QccUgRukFNNW_WSJo",
@@ -1396,10 +1408,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 1534,
-        "contentFreshnessDays": 1405
+        "wordCount": 1541,
+        "contentFreshnessDays": 1439
       },
       "localMatch": {
         "placeId": "ChIJ7x6RXb0bcUgR19RoVF7gNRI",
@@ -1567,404 +1581,16 @@
     },
     {
       "rank": 8,
-      "name": "Perks Building Contractors Ltd",
-      "url": "http://www.perksbuilders.co.uk/",
-      "digitalVisibilityScore": 56,
-      "pillarScores": {
-        "speed": 61,
-        "technical": 100,
-        "local": 67,
-        "visibility": 21,
-        "ai": 20,
-        "content": 40
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true,
-        "hasBlogLink": false,
-        "wordCount": 1086,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJDcgtFw0bcUgR3ggkWM-OgKU",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.perksbuilders.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 47,
-          "avgInternalLinksPerPage": 47,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": null,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": 11,
-          "sitemapUrls": 12,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Cheltenham"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 71,
-          "accessibility": 92,
-          "bestPractices": 78,
-          "seo": 100,
-          "lcpMs": 6644,
-          "tbtMs": 36,
-          "clsScore": 0,
-          "fcpMs": 2431,
-          "speedIndexMs": 4546,
-          "failing": [
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "unminified-css",
-              "title": "Minify CSS",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Building consultant",
-            "Building firm",
-            "Carpenter",
-            "Construction Company",
-            "Joiner",
-            "Stair contractor"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 99,
-          "placeTopics": null,
-          "firstSeen": "2024-08-13 06:26:28 +00:00",
-          "lastUpdated": "2026-07-11 16:27:43 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "perksbuilders.co.uk",
-          "rank": 0,
-          "backlinks": 34,
-          "referringDomains": 29,
-          "referringMainDomains": 26,
-          "referringPages": 33,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 33
-          },
-          "firstSeen": "2025-02-09 08:52:39 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 9,
-      "name": "KFM Construction",
-      "url": "https://kfmconstruction.co.uk/",
-      "digitalVisibilityScore": 55,
-      "pillarScores": {
-        "speed": 100,
-        "technical": 67,
-        "local": 79,
-        "visibility": 0,
-        "ai": 0,
-        "content": null
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
-        "content"
-      ],
-      "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
-      },
-      "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null,
-        "hasBlogLink": null,
-        "wordCount": null,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJ_x6lkqcZcUgRXmjYfejOp7U",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://kfmconstruction.co.uk/",
-          "pagesCrawled": 0,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": null,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 4,
-          "sitemapUrls": 4,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": "homepage HTTP 500"
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 100,
-          "accessibility": 95,
-          "bestPractices": 96,
-          "seo": 36,
-          "lcpMs": 785,
-          "tbtMs": 0,
-          "clsScore": 0,
-          "fcpMs": 785,
-          "speedIndexMs": 1778,
-          "failing": [
-            {
-              "id": "landmark-one-main",
-              "title": "Document does not have a main landmark.",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "is-crawlable",
-              "title": "Page is blocked from indexing",
-              "score": 0
-            },
-            {
-              "id": "robots-txt",
-              "title": "robots.txt is not valid",
-              "score": 0
-            },
-            {
-              "id": "http-status-code",
-              "title": "Page has unsuccessful HTTP status code",
-              "score": 0
-            },
-            {
-              "id": "meta-description",
-              "title": "Document does not have a meta description",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 50
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 129,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 1
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Concrete contractor",
-            "Custom home builder",
-            "Drainage service",
-            "Flooring contractor",
-            "General Contractor",
-            "Paving contractor"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 28,
-          "placeTopics": null,
-          "firstSeen": "2024-07-15 17:27:22 +00:00",
-          "lastUpdated": "2026-06-28 17:08:39 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "kfmconstruction.co.uk",
-          "rank": 0,
-          "backlinks": 46,
-          "referringDomains": 32,
-          "referringMainDomains": 30,
-          "referringPages": 46,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 46
-          },
-          "firstSeen": "2023-11-14 14:14:15 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 10,
       "name": "Newland Homes Ltd",
       "url": "http://www.newlandhomes.co.uk/",
-      "digitalVisibilityScore": 54,
+      "digitalVisibilityScore": 56,
       "pillarScores": {
         "speed": 50,
         "technical": 88,
         "local": 83,
         "visibility": 31,
         "ai": 0,
-        "content": 53
+        "content": 70
       },
       "includedPillars": [
         "speed",
@@ -1985,11 +1611,13 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1350,
-        "contentFreshnessDays": 1698
+        "wordCount": 1241,
+        "contentFreshnessDays": 1732
       },
       "localMatch": {
         "placeId": "ChIJdYZv_6AbcUgRbPyn6r93sw8",
@@ -2153,6 +1781,398 @@
       }
     },
     {
+      "rank": 9,
+      "name": "Perks Building Contractors Ltd",
+      "url": "http://www.perksbuilders.co.uk/",
+      "digitalVisibilityScore": 56,
+      "pillarScores": {
+        "speed": 61,
+        "technical": 100,
+        "local": 67,
+        "visibility": 21,
+        "ai": 20,
+        "content": 40
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": false,
+        "wordCount": 1086,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJDcgtFw0bcUgR3ggkWM-OgKU",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.perksbuilders.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 47,
+          "avgInternalLinksPerPage": 47,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": 11,
+          "sitemapUrls": 12,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 71,
+          "accessibility": 92,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 6644,
+          "tbtMs": 36,
+          "clsScore": 0,
+          "fcpMs": 2431,
+          "speedIndexMs": 4546,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Building consultant",
+            "Building firm",
+            "Carpenter",
+            "Construction Company",
+            "Joiner",
+            "Stair contractor"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 99,
+          "placeTopics": null,
+          "firstSeen": "2024-08-13 06:26:28 +00:00",
+          "lastUpdated": "2026-07-11 16:27:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "perksbuilders.co.uk",
+          "rank": 0,
+          "backlinks": 34,
+          "referringDomains": 29,
+          "referringMainDomains": 26,
+          "referringPages": 33,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 33
+          },
+          "firstSeen": "2025-02-09 08:52:39 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 10,
+      "name": "KFM Construction",
+      "url": "https://kfmconstruction.co.uk/",
+      "digitalVisibilityScore": 55,
+      "pillarScores": {
+        "speed": 100,
+        "technical": 67,
+        "local": 79,
+        "visibility": 0,
+        "ai": 0,
+        "content": null
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai"
+      ],
+      "excludedPillars": [
+        "content"
+      ],
+      "effectiveWeights": {
+        "speed": 22.22,
+        "technical": 22.22,
+        "local": 22.22,
+        "visibility": 16.67,
+        "ai": 16.67,
+        "content": 0
+      },
+      "contentChecks": {
+        "hasAboutLink": null,
+        "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": null,
+        "hasBlogLink": null,
+        "wordCount": null,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJ_x6lkqcZcUgRXmjYfejOp7U",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://kfmconstruction.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 4,
+          "sitemapUrls": 4,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 500"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 100,
+          "accessibility": 95,
+          "bestPractices": 96,
+          "seo": 36,
+          "lcpMs": 785,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 785,
+          "speedIndexMs": 1778,
+          "failing": [
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "is-crawlable",
+              "title": "Page is blocked from indexing",
+              "score": 0
+            },
+            {
+              "id": "robots-txt",
+              "title": "robots.txt is not valid",
+              "score": 0
+            },
+            {
+              "id": "http-status-code",
+              "title": "Page has unsuccessful HTTP status code",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 50
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 129,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Concrete contractor",
+            "Custom home builder",
+            "Drainage service",
+            "Flooring contractor",
+            "General Contractor",
+            "Paving contractor"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 28,
+          "placeTopics": null,
+          "firstSeen": "2024-07-15 17:27:22 +00:00",
+          "lastUpdated": "2026-06-28 17:08:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kfmconstruction.co.uk",
+          "rank": 0,
+          "backlinks": 46,
+          "referringDomains": 32,
+          "referringMainDomains": 30,
+          "referringPages": 46,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 46
+          },
+          "firstSeen": "2023-11-14 14:14:15 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 11,
       "name": "Ryan Meadows Group LTD",
       "url": "https://www.ryanmeadowsgroup.co.uk/",
@@ -2185,10 +2205,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1474,
-        "contentFreshnessDays": 977
+        "contentFreshnessDays": 1011
       },
       "localMatch": {
         "placeId": "ChIJP0vgA6L1oCAR-S3Z8aIBy5o",
@@ -2391,10 +2413,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 1087,
-        "contentFreshnessDays": 571
+        "contentFreshnessDays": 605
       },
       "localMatch": {
         "placeId": "ChIJa1x87LUHcUgR9QKehl1WAp4",
@@ -2593,6 +2617,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -2779,10 +2805,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 1180,
-        "contentFreshnessDays": 2263
+        "contentFreshnessDays": 2297
       },
       "localMatch": {
         "placeId": "ChIJ21XaOYAbcUgRoIMsDygnL5A",
@@ -2948,6 +2976,200 @@
     },
     {
       "rank": 15,
+      "name": "Corinium Construction Ltd",
+      "url": "https://coriniumconstruction.co.uk/",
+      "digitalVisibilityScore": 50,
+      "pillarScores": {
+        "speed": 63,
+        "technical": 100,
+        "local": 68,
+        "visibility": 0,
+        "ai": 0,
+        "content": 37
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage",
+        "teamEvidence": "named with a role: \"Jonathan Stanley, director\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 70,
+        "contentFreshnessDays": 3491
+      },
+      "localMatch": {
+        "placeId": "ChIJzcc8s28ZcUgRLrxdvkBv1M8",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://coriniumconstruction.co.uk/",
+          "pagesCrawled": 17,
+          "pagesDiscovered": 16,
+          "internalLinks": 539,
+          "avgInternalLinksPerPage": 31.7,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": 3
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Cheltenham"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 68,
+          "accessibility": 93,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 7393,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 3494,
+          "speedIndexMs": 3494,
+          "failing": [
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": null,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-08-04 23:37:29 +00:00",
+          "lastUpdated": "2026-07-10 14:29:12 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "coriniumconstruction.co.uk",
+          "rank": 82,
+          "backlinks": 32,
+          "referringDomains": 30,
+          "referringMainDomains": 30,
+          "referringPages": 30,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 28
+          },
+          "firstSeen": "2020-04-09 07:12:39 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 16,
       "name": "Cranatt Construction Ltd",
       "url": "http://www.cranattconstruction.co.uk/",
       "digitalVisibilityScore": 50,
@@ -2979,10 +3201,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 407,
-        "contentFreshnessDays": 545
+        "wordCount": 413,
+        "contentFreshnessDays": 579
       },
       "localMatch": {
         "placeId": "ChIJq6qqqpcPcUgRc2PaCbLTvcs",
@@ -3138,7 +3362,7 @@
       }
     },
     {
-      "rank": 16,
+      "rank": 17,
       "name": "Meliora Renovations",
       "url": "https://meliora-renovations.co.uk/",
       "digitalVisibilityScore": 50,
@@ -3170,10 +3394,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 565,
-        "contentFreshnessDays": 1147
+        "contentFreshnessDays": 1181
       },
       "localMatch": {
         "placeId": "ChIJpXMayW0GcUgRdQXkfeL79aU",
@@ -3332,7 +3558,7 @@
       }
     },
     {
-      "rank": 17,
+      "rank": 18,
       "name": "Easy Construction",
       "url": "https://easy-construction.ueniweb.com/?utm_campaign=gmb",
       "digitalVisibilityScore": 49,
@@ -3364,6 +3590,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 295,
@@ -3520,7 +3748,206 @@
       }
     },
     {
-      "rank": 18,
+      "rank": 19,
+      "name": "Hemming Architectural and Surveying Services Ltd",
+      "url": "http://www.haass.co.uk/",
+      "digitalVisibilityScore": 49,
+      "pillarScores": {
+        "speed": 100,
+        "technical": 63,
+        "local": 76,
+        "visibility": 0,
+        "ai": 0,
+        "content": 13
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 0,
+        "contentFreshnessDays": 263
+      },
+      "localMatch": {
+        "placeId": "ChIJV6aRD6MbcUgRCY4Jn7ccGJU",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.haass.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "08162566",
+          "companyName": "HEMMING ARCHITECTURAL AND SURVEYING SERVICES LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2012-07-31",
+          "ageYears": 14.1,
+          "sicCodes": [
+            "41100",
+            "71111"
+          ],
+          "companyType": "ltd",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2022-07-31",
+          "accountsOverdue": true,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "8a Lansdown Place, Cheltenham, United Kingdom, GL50 2HU",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 100,
+          "accessibility": 47,
+          "bestPractices": 78,
+          "seo": 82,
+          "lcpMs": 1359,
+          "tbtMs": 0,
+          "clsScore": 0.01,
+          "fcpMs": 1359,
+          "speedIndexMs": 1359,
+          "failing": [
+            {
+              "id": "meta-viewport",
+              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "robots-txt",
+              "title": "robots.txt is not valid",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "redirects-http",
+              "title": "Does not redirect HTTP traffic to HTTPS",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Home builder"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 33,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 03:40:44 +00:00",
+          "lastUpdated": "2026-06-30 03:40:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "haass.co.uk",
+          "rank": 73,
+          "backlinks": 65,
+          "referringDomains": 47,
+          "referringMainDomains": 44,
+          "referringPages": 58,
+          "brokenBacklinks": 2,
+          "referringLinksTypes": {
+            "anchor": 58
+          },
+          "firstSeen": "2021-09-12 20:15:57 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 20,
       "name": "LPD Building Services Limited",
       "url": "https://lpd-buildingservices.co.uk/",
       "digitalVisibilityScore": 49,
@@ -3552,10 +3979,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 501,
-        "contentFreshnessDays": 193
+        "contentFreshnessDays": 227
       },
       "localMatch": {
         "placeId": "ChIJj14fcDREOGERGm6lJTn2LLo",
@@ -3727,7 +4156,7 @@
       }
     },
     {
-      "rank": 19,
+      "rank": 21,
       "name": "R and S Building Services Engineers",
       "url": "http://www.thisisrs.co.uk/",
       "digitalVisibilityScore": 49,
@@ -3760,10 +4189,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 663,
-        "contentFreshnessDays": 466
+        "contentFreshnessDays": 500
       },
       "localMatch": {
         "placeId": "ChIJO2BpwLkEcUgRsq_z-pWSscY",
@@ -3879,7 +4310,7 @@
       }
     },
     {
-      "rank": 20,
+      "rank": 22,
       "name": "APEX Groundworks",
       "url": "http://apexgroundworks.co.uk/",
       "digitalVisibilityScore": 48,
@@ -3911,10 +4342,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 449,
-        "contentFreshnessDays": 23
+        "contentFreshnessDays": 11
       },
       "localMatch": {
         "placeId": "ChIJ93CTPH0bcUgRcKE6ixOl7RE",
@@ -4068,7 +4501,7 @@
       }
     },
     {
-      "rank": 21,
+      "rank": 23,
       "name": "Centaur Homes",
       "url": "http://www.centaurhomes.co.uk/",
       "digitalVisibilityScore": 48,
@@ -4100,10 +4533,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 583,
-        "contentFreshnessDays": 18
+        "wordCount": 542,
+        "contentFreshnessDays": 3
       },
       "localMatch": {
         "placeId": "ChIJtWmf0lsccUgRfQyR9c7lwN0",
@@ -4264,395 +4699,6 @@
       }
     },
     {
-      "rank": 22,
-      "name": "Corinium Construction Ltd",
-      "url": "https://coriniumconstruction.co.uk/",
-      "digitalVisibilityScore": 48,
-      "pillarScores": {
-        "speed": 63,
-        "technical": 100,
-        "local": 68,
-        "visibility": 0,
-        "ai": 0,
-        "content": 20
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 70,
-        "contentFreshnessDays": 3457
-      },
-      "localMatch": {
-        "placeId": "ChIJzcc8s28ZcUgRLrxdvkBv1M8",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://coriniumconstruction.co.uk/",
-          "pagesCrawled": 17,
-          "pagesDiscovered": 16,
-          "internalLinks": 539,
-          "avgInternalLinksPerPage": 31.7,
-          "maxDepthReached": 2,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": null,
-            "team": null,
-            "services": 3
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Cheltenham"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 68,
-          "accessibility": 93,
-          "bestPractices": 96,
-          "seo": 100,
-          "lcpMs": 7393,
-          "tbtMs": 0,
-          "clsScore": 0,
-          "fcpMs": 3494,
-          "speedIndexMs": 3494,
-          "failing": [
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "landmark-one-main",
-              "title": "Document does not have a main landmark.",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": null,
-          "ratingDistribution": {
-            "1": 1,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 2
-          },
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": false,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2024-08-04 23:37:29 +00:00",
-          "lastUpdated": "2026-07-10 14:29:12 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "coriniumconstruction.co.uk",
-          "rank": 82,
-          "backlinks": 32,
-          "referringDomains": 30,
-          "referringMainDomains": 30,
-          "referringPages": 30,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 28
-          },
-          "firstSeen": "2020-04-09 07:12:39 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 23,
-      "name": "Hemming Architectural and Surveying Services Ltd",
-      "url": "http://www.haass.co.uk/",
-      "digitalVisibilityScore": 48,
-      "pillarScores": {
-        "speed": 100,
-        "technical": 63,
-        "local": 76,
-        "visibility": 0,
-        "ai": 0,
-        "content": 0
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 16,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJV6aRD6MbcUgRCY4Jn7ccGJU",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.haass.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": 0,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "08162566",
-          "companyName": "HEMMING ARCHITECTURAL AND SURVEYING SERVICES LIMITED",
-          "companyStatus": "active",
-          "incorporatedOn": "2012-07-31",
-          "ageYears": 14.1,
-          "sicCodes": [
-            "41100",
-            "71111"
-          ],
-          "companyType": "ltd",
-          "accountsType": "total-exemption-full",
-          "accountsMadeUpTo": "2022-07-31",
-          "accountsOverdue": true,
-          "hasCharges": false,
-          "hasInsolvencyHistory": false,
-          "previousNames": null,
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "8a Lansdown Place, Cheltenham, United Kingdom, GL50 2HU",
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 100,
-          "accessibility": 47,
-          "bestPractices": 78,
-          "seo": 82,
-          "lcpMs": 1359,
-          "tbtMs": 0,
-          "clsScore": 0.01,
-          "fcpMs": 1359,
-          "speedIndexMs": 1359,
-          "failing": [
-            {
-              "id": "meta-viewport",
-              "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "robots-txt",
-              "title": "robots.txt is not valid",
-              "score": 0
-            },
-            {
-              "id": "landmark-one-main",
-              "title": "Document does not have a main landmark.",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "redirects-http",
-              "title": "Does not redirect HTTP traffic to HTTPS",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "html-has-lang",
-              "title": "`<html>` element does not have a `[lang]` attribute",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 1,
-            "5": 1
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Home builder"
-          ],
-          "hasDescription": false,
-          "hasHours": true,
-          "services": 33,
-          "placeTopics": null,
-          "firstSeen": "2026-06-30 03:40:44 +00:00",
-          "lastUpdated": "2026-06-30 03:40:44 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "haass.co.uk",
-          "rank": 73,
-          "backlinks": 65,
-          "referringDomains": 47,
-          "referringMainDomains": 44,
-          "referringPages": 58,
-          "brokenBacklinks": 2,
-          "referringLinksTypes": {
-            "anchor": 58
-          },
-          "firstSeen": "2021-09-12 20:15:57 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 24,
       "name": "Stallard Construction",
       "url": "http://www.stallardconstruction.co.uk/",
@@ -4685,6 +4731,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 2,
@@ -4877,10 +4925,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 496,
-        "contentFreshnessDays": 1406
+        "contentFreshnessDays": 1440
       },
       "localMatch": {
         "placeId": "ChIJe_Vq44dDGUAR9IrQQMt10rs",
@@ -5071,6 +5121,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 189,
@@ -5281,10 +5333,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 272,
-        "contentFreshnessDays": 124
+        "contentFreshnessDays": 158
       },
       "localMatch": {
         "placeId": "ChIJqQESMqMbcUgR2JwxHGHmpK8",
@@ -5475,10 +5529,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 395,
-        "contentFreshnessDays": 4588
+        "contentFreshnessDays": 4622
       },
       "localMatch": {
         "placeId": "ChIJh8v5qRUdcUgRLv-J6j5JKtg",
@@ -5638,204 +5694,6 @@
     },
     {
       "rank": 29,
-      "name": "BKS Bathroom and Kitchen Specialists",
-      "url": "http://www.bksdesigns.co.uk/",
-      "digitalVisibilityScore": 44,
-      "pillarScores": {
-        "speed": 52,
-        "technical": 75,
-        "local": 78,
-        "visibility": 0,
-        "ai": 0,
-        "content": 30
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true,
-        "hasBlogLink": false,
-        "wordCount": 372,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJpRzfMDYbcUgReIFQxboz0os",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.bksdesigns.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": 0,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 67,
-          "accessibility": 96,
-          "bestPractices": 59,
-          "seo": 100,
-          "lcpMs": 5709,
-          "tbtMs": 163,
-          "clsScore": 0.003,
-          "fcpMs": 3190,
-          "speedIndexMs": 5140,
-          "failing": [
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "bootup-time",
-              "title": "Reduce JavaScript execution time",
-              "score": 0
-            },
-            {
-              "id": "inspector-issues",
-              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            },
-            {
-              "id": "third-party-cookies",
-              "title": "Uses third-party cookies",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 2,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 2
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Construction Company",
-            "Interior designer",
-            "Kitchen Renovator"
-          ],
-          "hasDescription": false,
-          "hasHours": true,
-          "services": null,
-          "placeTopics": {
-            "results": 2
-          },
-          "firstSeen": "2024-06-04 07:45:35 +00:00",
-          "lastUpdated": "2026-07-12 10:09:52 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "bksdesigns.co.uk",
-          "rank": 0,
-          "backlinks": 11,
-          "referringDomains": 11,
-          "referringMainDomains": 11,
-          "referringPages": 11,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 11
-          },
-          "firstSeen": "2022-09-16 14:59:49 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 30,
       "name": "Buildtec Construction",
       "url": "http://www.buildtecconstruction.co.uk/",
       "digitalVisibilityScore": 44,
@@ -5867,6 +5725,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 403,
@@ -6032,7 +5892,7 @@
       }
     },
     {
-      "rank": 31,
+      "rank": 30,
       "name": "Regency Contracting Cheltenham Ltd",
       "url": "http://www.regencycontracting.co.uk/",
       "digitalVisibilityScore": 44,
@@ -6064,10 +5924,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 938,
-        "contentFreshnessDays": 1958
+        "contentFreshnessDays": 1992
       },
       "localMatch": {
         "placeId": "ChIJiaEzfLcFcUgRmxaESw_lLK4",
@@ -6223,7 +6085,7 @@
       }
     },
     {
-      "rank": 32,
+      "rank": 31,
       "name": "A P P",
       "url": "http://appgeneralbuilding.co.uk/",
       "digitalVisibilityScore": 42,
@@ -6255,6 +6117,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 244,
@@ -6415,6 +6279,206 @@
       }
     },
     {
+      "rank": 32,
+      "name": "BKS Bathroom and Kitchen Specialists",
+      "url": "http://www.bksdesigns.co.uk/",
+      "digitalVisibilityScore": 42,
+      "pillarScores": {
+        "speed": 52,
+        "technical": 75,
+        "local": 78,
+        "visibility": 0,
+        "ai": 0,
+        "content": 10
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 372,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJpRzfMDYbcUgReIFQxboz0os",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.bksdesigns.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 67,
+          "accessibility": 96,
+          "bestPractices": 59,
+          "seo": 100,
+          "lcpMs": 5709,
+          "tbtMs": 163,
+          "clsScore": 0.003,
+          "fcpMs": 3190,
+          "speedIndexMs": 5140,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "inspector-issues",
+              "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 2
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Construction Company",
+            "Interior designer",
+            "Kitchen Renovator"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "results": 2
+          },
+          "firstSeen": "2024-06-04 07:45:35 +00:00",
+          "lastUpdated": "2026-07-12 10:09:52 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bksdesigns.co.uk",
+          "rank": 0,
+          "backlinks": 11,
+          "referringDomains": 11,
+          "referringMainDomains": 11,
+          "referringPages": 11,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 11
+          },
+          "firstSeen": "2022-09-16 14:59:49 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 33,
       "name": "KW Construction Group",
       "url": "http://www.kw-construction.co.uk/",
@@ -6447,6 +6511,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 27,
@@ -6641,10 +6707,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 1032,
-        "contentFreshnessDays": 561
+        "contentFreshnessDays": 595
       },
       "localMatch": {
         "placeId": "ChIJpwc6MTTOdkgR1pemk5Ikz78",
@@ -6827,6 +6895,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 484,
@@ -7014,6 +7084,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -7210,6 +7282,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -7404,10 +7478,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1807,
-        "contentFreshnessDays": 2894
+        "contentFreshnessDays": 2928
       },
       "localMatch": {
         "placeId": "ChIJbRA3LIIbcUgRUMcJ7UsKzM4",
@@ -7592,10 +7668,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 3,
-        "contentFreshnessDays": 808
+        "contentFreshnessDays": 842
       },
       "localMatch": {
         "placeId": "ChIJH2BHSbgFcUgR422OwNdbdpQ",
@@ -7778,6 +7856,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 3,
@@ -7983,6 +8063,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 123,
@@ -8173,6 +8255,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -8330,6 +8414,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -8490,6 +8576,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -8642,6 +8730,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -8837,6 +8927,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -8998,6 +9090,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -9144,6 +9238,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -9290,6 +9386,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -9442,6 +9540,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -9588,6 +9688,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -9734,6 +9836,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,

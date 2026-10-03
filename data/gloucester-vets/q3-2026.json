@@ -121,7 +121,7 @@
       "live": true
     },
     "content": {
-      "scored": 19,
+      "scored": 21,
       "total": 21,
       "live": true
     }
@@ -135,7 +135,7 @@
     "local": 76,
     "visibility": 21,
     "ai": 0,
-    "content": 70
+    "content": 60
   },
   "businesses": [
     {
@@ -171,10 +171,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 349,
-        "contentFreshnessDays": 530
+        "contentFreshnessDays": 562
       },
       "localMatch": {
         "placeId": "ChIJYaWoA4IIcUgR7YR6UljNjCE",
@@ -344,6 +346,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 334,
@@ -554,10 +558,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 670,
-        "contentFreshnessDays": 878
+        "contentFreshnessDays": 910
       },
       "localMatch": {
         "placeId": "ChIJKYLkl7kFcUgROb1hDyK7qr4",
@@ -697,14 +703,14 @@
       "rank": 4,
       "name": "SPA Veterinary Services",
       "url": "http://www.spavets.co.uk/",
-      "digitalVisibilityScore": 74,
+      "digitalVisibilityScore": 75,
       "pillarScores": {
         "speed": 82,
         "technical": 75,
         "local": 95,
         "visibility": 73,
         "ai": 40,
-        "content": 70
+        "content": 75
       },
       "includedPillars": [
         "speed",
@@ -726,9 +732,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
-        "wordCount": 385,
+        "wordCount": 410,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -941,9 +949,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 1866,
+        "wordCount": 1870,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -1151,9 +1161,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 704,
+        "wordCount": 724,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -1363,10 +1375,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 633,
-        "contentFreshnessDays": 12
+        "contentFreshnessDays": 23
       },
       "localMatch": {
         "placeId": "ChIJ3RH0MT0HcUgRFq-pMOC0yds",
@@ -1544,199 +1558,6 @@
     },
     {
       "rank": 8,
-      "name": "Vale Vets",
-      "url": "https://www.valevets.co.uk/about-us/useful-links",
-      "digitalVisibilityScore": 56,
-      "pillarScores": {
-        "speed": 62,
-        "technical": 100,
-        "local": 47,
-        "visibility": 42,
-        "ai": 0,
-        "content": 75
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true,
-        "hasBlogLink": false,
-        "wordCount": 598,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJc8EhDYkIcUgR3YoMIfs3Uz8",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.valevets.co.uk/about-us/useful-links",
-          "pagesCrawled": 24,
-          "pagesDiscovered": 23,
-          "internalLinks": 654,
-          "avgInternalLinksPerPage": 27.3,
-          "maxDepthReached": 2,
-          "genericAnchors": 4,
-          "genericAnchorRatio": 0.006,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": 1,
-            "services": 1
-          },
-          "orphanCandidates": 7,
-          "sitemapUrls": 27,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-06-01",
-          "sitemapStaleDays": 92,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Gloucester"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 22,
-          "accessibility": 93,
-          "bestPractices": 96,
-          "seo": 92,
-          "lcpMs": 21448,
-          "tbtMs": 810,
-          "clsScore": 0.292,
-          "fcpMs": 5298,
-          "speedIndexMs": 12969,
-          "failing": [
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "mainthread-work-breakdown",
-              "title": "Minimize main-thread work",
-              "score": 0
-            },
-            {
-              "id": "layout-shifts",
-              "title": "Avoid large layout shifts",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": false,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2026-04-03 15:02:59 +00:00",
-          "lastUpdated": "2026-04-03 15:02:59 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "valevets.co.uk",
-          "rank": 156,
-          "backlinks": 289,
-          "referringDomains": 125,
-          "referringMainDomains": 117,
-          "referringPages": 265,
-          "brokenBacklinks": 21,
-          "referringLinksTypes": {
-            "anchor": 237
-          },
-          "firstSeen": "2020-05-26 17:48:02 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 9,
       "name": "Arvonia Vets Churchdown Veterinary Centre",
       "url": "https://www.cheltenhamvets.co.uk/",
       "digitalVisibilityScore": 55,
@@ -1768,10 +1589,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 543,
-        "contentFreshnessDays": 14
+        "contentFreshnessDays": 10
       },
       "localMatch": {
         "placeId": "ChIJqaSwQ1gEcUgRMgiyP0HPRQo",
@@ -1946,436 +1769,17 @@
       }
     },
     {
-      "rank": 10,
-      "name": "Cheltenham Equine Vets",
-      "url": "http://www.cheltenhamequinevets.co.uk/",
-      "digitalVisibilityScore": 52,
-      "pillarScores": {
-        "speed": 55,
-        "technical": 100,
-        "local": 76,
-        "visibility": 0,
-        "ai": 0,
-        "content": 53
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 3027,
-        "contentFreshnessDays": 1644
-      },
-      "localMatch": {
-        "placeId": "ChIJq6y1b3UccUgRAQSHKsNXDP8",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.cheltenhamequinevets.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 44,
-          "avgInternalLinksPerPage": 44,
-          "maxDepthReached": 0,
-          "genericAnchors": 6,
-          "genericAnchorRatio": 0.136,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": 1,
-            "services": 1
-          },
-          "orphanCandidates": 10,
-          "sitemapUrls": 11,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-05-20",
-          "sitemapStaleDays": 104,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "OC397448",
-          "companyName": "CHELTENHAM EQUINE VETS LLP",
-          "companyStatus": "active",
-          "incorporatedOn": "2015-01-12",
-          "ageYears": 11.6,
-          "sicCodes": null,
-          "companyType": "llp",
-          "accountsType": "total-exemption-full",
-          "accountsMadeUpTo": "2026-03-31",
-          "accountsOverdue": false,
-          "hasCharges": false,
-          "hasInsolvencyHistory": false,
-          "previousNames": null,
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "Unit 14 Twigworth Court Business Centre, Twigworth, Gloucester, England, GL2 9PG",
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 47,
-          "accessibility": 89,
-          "bestPractices": 78,
-          "seo": 83,
-          "lcpMs": 16618,
-          "tbtMs": 696,
-          "clsScore": 0.003,
-          "fcpMs": 4283,
-          "speedIndexMs": 4564,
-          "failing": [
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "link-in-text-block",
-              "title": "Links rely on color to be distinguishable.",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 3,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 2,
-            "5": 26
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 50,
-          "placeTopics": {
-            "horse": 8,
-            "team": 2,
-            "kindness": 3,
-            "vets": 3,
-            "vet care": 2,
-            "understanding": 2,
-            "care": 3,
-            "advice": 2
-          },
-          "firstSeen": "2024-07-19 08:42:22 +00:00",
-          "lastUpdated": "2026-06-26 03:11:40 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "cheltenhamequinevets.co.uk",
-          "rank": 123,
-          "backlinks": 139,
-          "referringDomains": 72,
-          "referringMainDomains": 70,
-          "referringPages": 123,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 117
-          },
-          "firstSeen": "2022-08-10 20:33:39 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 11,
-      "name": "K Wakeman Veterinary Physiotherapy",
-      "url": "https://www.kwakemanvetphysio.co.uk/",
-      "digitalVisibilityScore": 52,
-      "pillarScores": {
-        "speed": 61,
-        "technical": 88,
-        "local": 71,
-        "visibility": 0,
-        "ai": 0,
-        "content": 80
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 5844,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJFfCzDbziXEERK9KAR-WooHE",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.kwakemanvetphysio.co.uk/",
-          "pagesCrawled": 14,
-          "pagesDiscovered": 14,
-          "internalLinks": 191,
-          "avgInternalLinksPerPage": 13.6,
-          "maxDepthReached": 2,
-          "genericAnchors": 5,
-          "genericAnchorRatio": 0.026,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": 1,
-            "services": 1
-          },
-          "orphanCandidates": 1,
-          "sitemapUrls": 15,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-10",
-          "sitemapStaleDays": 22,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 61,
-          "accessibility": 87,
-          "bestPractices": 96,
-          "seo": 69,
-          "lcpMs": 8433,
-          "tbtMs": 4,
-          "clsScore": 0.091,
-          "fcpMs": 4828,
-          "speedIndexMs": 4828,
-          "failing": [
-            {
-              "id": "meta-description",
-              "title": "Document does not have a meta description",
-              "score": 0
-            },
-            {
-              "id": "link-text",
-              "title": "Links do not have descriptive text",
-              "score": 0
-            },
-            {
-              "id": "image-alt",
-              "title": "Image elements do not have `[alt]` attributes",
-              "score": 0
-            },
-            {
-              "id": "crawlable-anchors",
-              "title": "Links are not crawlable",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 7,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 12
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Veterinarian"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 9,
-          "placeTopics": {
-            "horse treatment": 4,
-            "massage": 2,
-            "legs": 2,
-            "muscles": 2,
-            "considerate": 2,
-            "health": 2,
-            "physiotherapy": 2,
-            "horse": 5,
-            "exercises": 5
-          },
-          "firstSeen": "2026-06-28 12:51:43 +00:00",
-          "lastUpdated": "2026-06-28 12:51:43 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "kwakemanvetphysio.co.uk",
-          "rank": 18,
-          "backlinks": 21,
-          "referringDomains": 16,
-          "referringMainDomains": 16,
-          "referringPages": 21,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 20
-          },
-          "firstSeen": "2023-10-17 21:14:59 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 12,
+      "rank": 9,
       "name": "Cotswold Equine Physio",
       "url": "https://www.cotswoldequinephysio.co.uk/",
-      "digitalVisibilityScore": 51,
+      "digitalVisibilityScore": 53,
       "pillarScores": {
         "speed": 65,
         "technical": 100,
         "local": 69,
         "visibility": 0,
         "ai": 0,
-        "content": 40
+        "content": 60
       },
       "includedPillars": [
         "speed",
@@ -2396,7 +1800,9 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "introduces themselves: \"I'm Chloe Hull, founder of Cotswold Equine Physi…\"",
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 827,
@@ -2578,6 +1984,624 @@
       }
     },
     {
+      "rank": 10,
+      "name": "Vale Vets",
+      "url": "https://www.valevets.co.uk/about-us/useful-links",
+      "digitalVisibilityScore": 53,
+      "pillarScores": {
+        "speed": 62,
+        "technical": 100,
+        "local": 47,
+        "visibility": 42,
+        "ai": 0,
+        "content": 50
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 1145,
+        "contentFreshnessDays": 0
+      },
+      "localMatch": {
+        "placeId": "ChIJc8EhDYkIcUgR3YoMIfs3Uz8",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.valevets.co.uk/about-us/useful-links",
+          "pagesCrawled": 24,
+          "pagesDiscovered": 23,
+          "internalLinks": 654,
+          "avgInternalLinksPerPage": 27.3,
+          "maxDepthReached": 2,
+          "genericAnchors": 4,
+          "genericAnchorRatio": 0.006,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": 7,
+          "sitemapUrls": 27,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-06-01",
+          "sitemapStaleDays": 92,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Gloucester"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 22,
+          "accessibility": 93,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 21448,
+          "tbtMs": 810,
+          "clsScore": 0.292,
+          "fcpMs": 5298,
+          "speedIndexMs": 12969,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-04-03 15:02:59 +00:00",
+          "lastUpdated": "2026-04-03 15:02:59 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "valevets.co.uk",
+          "rank": 156,
+          "backlinks": 289,
+          "referringDomains": 125,
+          "referringMainDomains": 117,
+          "referringPages": 265,
+          "brokenBacklinks": 21,
+          "referringLinksTypes": {
+            "anchor": 237
+          },
+          "firstSeen": "2020-05-26 17:48:02 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 11,
+      "name": "Cheltenham Equine Vets",
+      "url": "http://www.cheltenhamequinevets.co.uk/",
+      "digitalVisibilityScore": 52,
+      "pillarScores": {
+        "speed": 55,
+        "technical": 100,
+        "local": 76,
+        "visibility": 0,
+        "ai": 0,
+        "content": 53
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 3026,
+        "contentFreshnessDays": 1676
+      },
+      "localMatch": {
+        "placeId": "ChIJq6y1b3UccUgRAQSHKsNXDP8",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.cheltenhamequinevets.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 44,
+          "avgInternalLinksPerPage": 44,
+          "maxDepthReached": 0,
+          "genericAnchors": 6,
+          "genericAnchorRatio": 0.136,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": 10,
+          "sitemapUrls": 11,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-05-20",
+          "sitemapStaleDays": 104,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "OC397448",
+          "companyName": "CHELTENHAM EQUINE VETS LLP",
+          "companyStatus": "active",
+          "incorporatedOn": "2015-01-12",
+          "ageYears": 11.6,
+          "sicCodes": null,
+          "companyType": "llp",
+          "accountsType": "total-exemption-full",
+          "accountsMadeUpTo": "2026-03-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Unit 14 Twigworth Court Business Centre, Twigworth, Gloucester, England, GL2 9PG",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 47,
+          "accessibility": 89,
+          "bestPractices": 78,
+          "seo": 83,
+          "lcpMs": 16618,
+          "tbtMs": 696,
+          "clsScore": 0.003,
+          "fcpMs": 4283,
+          "speedIndexMs": 4564,
+          "failing": [
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 2,
+            "5": 26
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 50,
+          "placeTopics": {
+            "horse": 8,
+            "team": 2,
+            "kindness": 3,
+            "vets": 3,
+            "vet care": 2,
+            "understanding": 2,
+            "care": 3,
+            "advice": 2
+          },
+          "firstSeen": "2024-07-19 08:42:22 +00:00",
+          "lastUpdated": "2026-06-26 03:11:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "cheltenhamequinevets.co.uk",
+          "rank": 123,
+          "backlinks": 139,
+          "referringDomains": 72,
+          "referringMainDomains": 70,
+          "referringPages": 123,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 117
+          },
+          "firstSeen": "2022-08-10 20:33:39 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 12,
+      "name": "K Wakeman Veterinary Physiotherapy",
+      "url": "https://www.kwakemanvetphysio.co.uk/",
+      "digitalVisibilityScore": 52,
+      "pillarScores": {
+        "speed": 61,
+        "technical": 88,
+        "local": 71,
+        "visibility": 0,
+        "ai": 0,
+        "content": 80
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 5844,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJFfCzDbziXEERK9KAR-WooHE",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.kwakemanvetphysio.co.uk/",
+          "pagesCrawled": 14,
+          "pagesDiscovered": 14,
+          "internalLinks": 191,
+          "avgInternalLinksPerPage": 13.6,
+          "maxDepthReached": 2,
+          "genericAnchors": 5,
+          "genericAnchorRatio": 0.026,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": 1,
+          "sitemapUrls": 15,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-10",
+          "sitemapStaleDays": 22,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 61,
+          "accessibility": 87,
+          "bestPractices": 96,
+          "seo": 69,
+          "lcpMs": 8433,
+          "tbtMs": 4,
+          "clsScore": 0.091,
+          "fcpMs": 4828,
+          "speedIndexMs": 4828,
+          "failing": [
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 7,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 12
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Veterinarian"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 9,
+          "placeTopics": {
+            "horse treatment": 4,
+            "massage": 2,
+            "legs": 2,
+            "muscles": 2,
+            "considerate": 2,
+            "health": 2,
+            "physiotherapy": 2,
+            "horse": 5,
+            "exercises": 5
+          },
+          "firstSeen": "2026-06-28 12:51:43 +00:00",
+          "lastUpdated": "2026-06-28 12:51:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "kwakemanvetphysio.co.uk",
+          "rank": 18,
+          "backlinks": 21,
+          "referringDomains": 16,
+          "referringMainDomains": 16,
+          "referringPages": 21,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 20
+          },
+          "firstSeen": "2023-10-17 21:14:59 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 13,
       "name": "Even Stride Veterinary Physiotherapy - Cheltenham",
       "url": "https://www.evenstridevetphysio.co.uk/",
@@ -2610,6 +2634,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 429,
@@ -2780,6 +2806,203 @@
     },
     {
       "rank": 14,
+      "name": "BCVA Ltd",
+      "url": "https://www.bcva.org.uk/",
+      "digitalVisibilityScore": 48,
+      "pillarScores": {
+        "speed": 69,
+        "technical": 75,
+        "local": 47,
+        "visibility": 0,
+        "ai": 0,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 847,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJkcyeOY0IcUgRptHukcu-20s",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.bcva.org.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 132,
+          "internalLinks": 2653,
+          "avgInternalLinksPerPage": 106.1,
+          "maxDepthReached": 1,
+          "genericAnchors": 7,
+          "genericAnchorRatio": 0.003,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 342,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-28",
+          "sitemapStaleDays": 4,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1013,
+          "inpMs": null,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": null,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "07344554",
+          "companyName": "BCVA",
+          "companyStatus": "active",
+          "incorporatedOn": "2010-08-12",
+          "ageYears": 16.1,
+          "sicCodes": [
+            "82990"
+          ],
+          "companyType": "private-limited-guarant-nsc-limited-exemption",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-12-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "17 The Glenmore Centre, Waterwells Busness Park, Quedgeley, Gloucestershire, GL2 2AP",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 45,
+          "accessibility": 84,
+          "bestPractices": 100,
+          "seo": 75,
+          "lcpMs": 19228,
+          "tbtMs": 512,
+          "clsScore": 0,
+          "fcpMs": 5763,
+          "speedIndexMs": 8003,
+          "failing": [
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 8,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 09:37:04 +00:00",
+          "lastUpdated": "2026-06-30 11:12:55 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bcva.org.uk",
+          "rank": 210,
+          "backlinks": 823,
+          "referringDomains": 267,
+          "referringMainDomains": 253,
+          "referringPages": 783,
+          "brokenBacklinks": 10,
+          "referringLinksTypes": {
+            "anchor": 622
+          },
+          "firstSeen": "2020-02-23 02:12:18 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 15,
       "name": "Four Wet Paws Hydrotherapy and Physiotherapy",
       "url": "http://www.fourwetpaws.com/",
       "digitalVisibilityScore": 48,
@@ -2811,6 +3034,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 941,
@@ -2984,7 +3209,7 @@
       }
     },
     {
-      "rank": 15,
+      "rank": 16,
       "name": "Poultry Health Services (at Wood Vets)",
       "url": "https://www.poultryhealthservices.com/",
       "digitalVisibilityScore": 48,
@@ -3016,10 +3241,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 457,
-        "contentFreshnessDays": 446
+        "contentFreshnessDays": 478
       },
       "localMatch": {
         "placeId": "ChIJfx_84EkJcUgRb7aiTJdnFmg",
@@ -3146,17 +3373,220 @@
       }
     },
     {
-      "rank": 16,
-      "name": "BCVA Ltd",
-      "url": "https://www.bcva.org.uk/",
-      "digitalVisibilityScore": 46,
+      "rank": 17,
+      "name": "Pet Care Scheme at SPA Vets Painswick Road",
+      "url": "https://www.pdsa.org.uk/pet-care-scheme-clients",
+      "digitalVisibilityScore": 47,
       "pillarScores": {
-        "speed": 69,
+        "speed": 63,
         "technical": 75,
-        "local": 47,
+        "local": 69,
         "visibility": 0,
         "ai": 0,
-        "content": 80
+        "content": 55
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 538,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJpQvNIyUFcUgRoBkqPj15epE",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.pdsa.org.uk/pet-care-scheme-clients",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 267,
+          "internalLinks": 3038,
+          "avgInternalLinksPerPage": 121.5,
+          "maxDepthReached": 1,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 2,
+            "team": 2,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1188,
+          "inpMs": 186,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 32,
+          "accessibility": 69,
+          "bestPractices": 77,
+          "seo": 85,
+          "lcpMs": 20348,
+          "tbtMs": 1107,
+          "clsScore": 0,
+          "fcpMs": 11343,
+          "speedIndexMs": 11343,
+          "failing": [
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "valid-source-maps",
+              "title": "Missing source maps for large first-party JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 4
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 41,
+          "placeTopics": {
+            "care": 2
+          },
+          "firstSeen": "2024-07-15 12:30:20 +00:00",
+          "lastUpdated": "2026-07-08 18:36:46 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "pdsa.org.uk",
+          "rank": 415,
+          "backlinks": 99530,
+          "referringDomains": 13781,
+          "referringMainDomains": 12347,
+          "referringPages": 83946,
+          "brokenBacklinks": 2745,
+          "referringLinksTypes": {
+            "anchor": 71804
+          },
+          "firstSeen": "2019-01-16 00:07:27 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 18,
+      "name": "Dragon Vets, Kingsway",
+      "url": "https://www.dragonvet.co.uk/?utm_source=gmb&utm_medium=organic",
+      "digitalVisibilityScore": 46,
+      "pillarScores": {
+        "speed": 57,
+        "technical": 0,
+        "local": 99,
+        "visibility": 42,
+        "ai": 20,
+        "content": 58
       },
       "includedPillars": [
         "speed",
@@ -3177,207 +3607,13 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true,
-        "hasBlogLink": true,
-        "wordCount": 837,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJkcyeOY0IcUgRptHukcu-20s",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.bcva.org.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 132,
-          "internalLinks": 2653,
-          "avgInternalLinksPerPage": 106.1,
-          "maxDepthReached": 1,
-          "genericAnchors": 7,
-          "genericAnchorRatio": 0.003,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 342,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-28",
-          "sitemapStaleDays": 4,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 1013,
-          "inpMs": null,
-          "cls": 0,
-          "lcpGood": true,
-          "inpGood": null,
-          "clsGood": true,
-          "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "07344554",
-          "companyName": "BCVA",
-          "companyStatus": "active",
-          "incorporatedOn": "2010-08-12",
-          "ageYears": 16.1,
-          "sicCodes": [
-            "82990"
-          ],
-          "companyType": "private-limited-guarant-nsc-limited-exemption",
-          "accountsType": "micro-entity",
-          "accountsMadeUpTo": "2025-12-31",
-          "accountsOverdue": false,
-          "hasCharges": false,
-          "hasInsolvencyHistory": false,
-          "previousNames": null,
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "17 The Glenmore Centre, Waterwells Busness Park, Quedgeley, Gloucestershire, GL2 2AP",
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 45,
-          "accessibility": 84,
-          "bestPractices": 100,
-          "seo": 75,
-          "lcpMs": 19228,
-          "tbtMs": 512,
-          "clsScore": 0,
-          "fcpMs": 5763,
-          "speedIndexMs": 8003,
-          "failing": [
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "meta-description",
-              "title": "Document does not have a meta description",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": true,
-          "services": 8,
-          "placeTopics": null,
-          "firstSeen": "2024-07-19 09:37:04 +00:00",
-          "lastUpdated": "2026-06-30 11:12:55 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "bcva.org.uk",
-          "rank": 210,
-          "backlinks": 823,
-          "referringDomains": 267,
-          "referringMainDomains": 253,
-          "referringPages": 783,
-          "brokenBacklinks": 10,
-          "referringLinksTypes": {
-            "anchor": 622
-          },
-          "firstSeen": "2020-02-23 02:12:18 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 17,
-      "name": "Dragon Vets, Kingsway",
-      "url": "https://www.dragonvet.co.uk/?utm_source=gmb&utm_medium=organic",
-      "digitalVisibilityScore": 45,
-      "pillarScores": {
-        "speed": 57,
-        "technical": 0,
-        "local": 99,
-        "visibility": 42,
-        "ai": 20,
-        "content": null
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
-        "content"
-      ],
-      "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
-      },
-      "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null,
-        "hasBlogLink": null,
-        "wordCount": null,
-        "contentFreshnessDays": null
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr David Tweedle BVetMed\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 390,
+        "contentFreshnessDays": 0
       },
       "localMatch": {
         "placeId": "ChIJ58woEI8IcUgRq9qnLhDKiuQ",
@@ -3552,17 +3788,17 @@
       }
     },
     {
-      "rank": 18,
+      "rank": 19,
       "name": "Gloucester Laboratories at Wood Veterinary Group",
       "url": "http://www.woodvet.co.uk/",
-      "digitalVisibilityScore": 45,
+      "digitalVisibilityScore": 46,
       "pillarScores": {
         "speed": 95,
         "technical": 38,
         "local": 61,
         "visibility": 39,
         "ai": 0,
-        "content": 3
+        "content": 17
       },
       "includedPillars": [
         "speed",
@@ -3584,10 +3820,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 40,
-        "contentFreshnessDays": 3541
+        "contentFreshnessDays": 25
       },
       "localMatch": {
         "placeId": "ChIJYaWoA4IIcUgRlhYA6Ox9QQ0",
@@ -3753,218 +3991,17 @@
       }
     },
     {
-      "rank": 19,
-      "name": "Pet Care Scheme at SPA Vets Painswick Road",
-      "url": "https://www.pdsa.org.uk/pet-care-scheme-clients",
-      "digitalVisibilityScore": 45,
-      "pillarScores": {
-        "speed": 63,
-        "technical": 75,
-        "local": 69,
-        "visibility": 0,
-        "ai": 0,
-        "content": 35
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 538,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJpQvNIyUFcUgRoBkqPj15epE",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.pdsa.org.uk/pet-care-scheme-clients",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 267,
-          "internalLinks": 3038,
-          "avgInternalLinksPerPage": 121.5,
-          "maxDepthReached": 1,
-          "genericAnchors": 1,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 2,
-            "team": 2,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": null,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 1188,
-          "inpMs": 186,
-          "cls": 0,
-          "lcpGood": true,
-          "inpGood": true,
-          "clsGood": true,
-          "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 32,
-          "accessibility": 69,
-          "bestPractices": 77,
-          "seo": 85,
-          "lcpMs": 20348,
-          "tbtMs": 1107,
-          "clsScore": 0,
-          "fcpMs": 11343,
-          "speedIndexMs": 11343,
-          "failing": [
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "third-party-cookies",
-              "title": "Uses third-party cookies",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "button-name",
-              "title": "Buttons do not have an accessible name",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "valid-source-maps",
-              "title": "Missing source maps for large first-party JavaScript",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": {
-            "1": 1,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 4
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 41,
-          "placeTopics": {
-            "care": 2
-          },
-          "firstSeen": "2024-07-15 12:30:20 +00:00",
-          "lastUpdated": "2026-07-08 18:36:46 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "pdsa.org.uk",
-          "rank": 415,
-          "backlinks": 99530,
-          "referringDomains": 13781,
-          "referringMainDomains": 12347,
-          "referringPages": 83946,
-          "brokenBacklinks": 2745,
-          "referringLinksTypes": {
-            "anchor": 71804
-          },
-          "firstSeen": "2019-01-16 00:07:27 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 20,
-      "name": "Jollyes Pet Clinic - Gloucester",
-      "url": "https://www.jollyes.co.uk/services/community-pet-clinic?utm_source=google&utm_medium=organic&utm_campaign=local_listing_CPC_Gloucester",
-      "digitalVisibilityScore": 41,
+      "name": "Splash Canine Hydrotherapy Centre",
+      "url": "https://www.sundeanvets.co.uk/?utm_source=gmb&utm_medium=organic",
+      "digitalVisibilityScore": 43,
       "pillarScores": {
-        "speed": 36,
-        "technical": 75,
-        "local": 50,
-        "visibility": 4,
+        "speed": 71,
+        "technical": 0,
+        "local": 98,
+        "visibility": 21,
         "ai": 0,
-        "content": 83
+        "content": 58
       },
       "includedPillars": [
         "speed",
@@ -3986,206 +4023,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr David Tweedle BVetMed\"",
         "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 4904,
+        "hasBlogLink": false,
+        "wordCount": 333,
         "contentFreshnessDays": 0
-      },
-      "localMatch": {
-        "placeId": "ChIJXVzDqKoHcUgRFmpfoQUfblU",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.jollyes.co.uk/services/community-pet-clinic?utm_source=google&utm_medium=organic&utm_campaign=local_listing_CPC_Gloucester",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 2236,
-          "internalLinks": 16232,
-          "avgInternalLinksPerPage": 649.3,
-          "maxDepthReached": 1,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": null,
-            "about": 1,
-            "team": 1,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": null,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 3077,
-          "inpMs": 301,
-          "cls": 0.17,
-          "lcpGood": false,
-          "inpGood": false,
-          "clsGood": false,
-          "passesCwv": false,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 24,
-          "accessibility": 90,
-          "bestPractices": 96,
-          "seo": 100,
-          "lcpMs": 33319,
-          "tbtMs": 695,
-          "clsScore": 0.519,
-          "fcpMs": 2401,
-          "speedIndexMs": 16339,
-          "failing": [
-            {
-              "id": "duplicated-javascript-insight",
-              "title": "Duplicated JavaScript",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "target-size",
-              "title": "Touch targets do not have sufficient size or spacing.",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Pet Shop"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2026-06-30 09:47:58 +00:00",
-          "lastUpdated": "2026-06-30 09:47:58 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "jollyes.co.uk",
-          "rank": 305,
-          "backlinks": 14305,
-          "referringDomains": 1708,
-          "referringMainDomains": 1519,
-          "referringPages": 12978,
-          "brokenBacklinks": 147,
-          "referringLinksTypes": {
-            "anchor": 12289
-          },
-          "firstSeen": "2019-01-19 19:51:29 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 21,
-      "name": "Splash Canine Hydrotherapy Centre",
-      "url": "https://www.sundeanvets.co.uk/?utm_source=gmb&utm_medium=organic",
-      "digitalVisibilityScore": 41,
-      "pillarScores": {
-        "speed": 71,
-        "technical": 0,
-        "local": 98,
-        "visibility": 21,
-        "ai": 0,
-        "content": null
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
-        "content"
-      ],
-      "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
-      },
-      "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null,
-        "hasBlogLink": null,
-        "wordCount": null,
-        "contentFreshnessDays": null
       },
       "localMatch": {
         "placeId": "ChIJtZw3jNYAcUgRQWhSbLv-zbw",
@@ -4355,6 +4198,203 @@
             "anchor": 530
           },
           "firstSeen": "2019-03-20 00:42:22 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 21,
+      "name": "Jollyes Pet Clinic - Gloucester",
+      "url": "https://www.jollyes.co.uk/services/community-pet-clinic?utm_source=google&utm_medium=organic&utm_campaign=local_listing_CPC_Gloucester",
+      "digitalVisibilityScore": 41,
+      "pillarScores": {
+        "speed": 36,
+        "technical": 75,
+        "local": 50,
+        "visibility": 4,
+        "ai": 0,
+        "content": 83
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 4904,
+        "contentFreshnessDays": 0
+      },
+      "localMatch": {
+        "placeId": "ChIJXVzDqKoHcUgRFmpfoQUfblU",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.jollyes.co.uk/services/community-pet-clinic?utm_source=google&utm_medium=organic&utm_campaign=local_listing_CPC_Gloucester",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 2236,
+          "internalLinks": 16232,
+          "avgInternalLinksPerPage": 649.3,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": null,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 3077,
+          "inpMs": 301,
+          "cls": 0.17,
+          "lcpGood": false,
+          "inpGood": false,
+          "clsGood": false,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 24,
+          "accessibility": 90,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 33319,
+          "tbtMs": 695,
+          "clsScore": 0.519,
+          "fcpMs": 2401,
+          "speedIndexMs": 16339,
+          "failing": [
+            {
+              "id": "duplicated-javascript-insight",
+              "title": "Duplicated JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "target-size",
+              "title": "Touch targets do not have sufficient size or spacing.",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Pet Shop"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 09:47:58 +00:00",
+          "lastUpdated": "2026-06-30 09:47:58 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "jollyes.co.uk",
+          "rank": 305,
+          "backlinks": 14305,
+          "referringDomains": 1708,
+          "referringMainDomains": 1519,
+          "referringPages": 12978,
+          "brokenBacklinks": 147,
+          "referringLinksTypes": {
+            "anchor": 12289
+          },
+          "firstSeen": "2019-01-19 19:51:29 +00:00",
           "lostDate": null
         }
       }

@@ -171,9 +171,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 774,
+        "wordCount": 794,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -386,10 +388,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 3645,
-        "contentFreshnessDays": 1629
+        "wordCount": 3938,
+        "contentFreshnessDays": 1661
       },
       "localMatch": {
         "placeId": "ChIJ_34_iyakbUgR_XOEl9C2hog",
@@ -603,10 +607,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 764,
-        "contentFreshnessDays": 4245
+        "contentFreshnessDays": 4278
       },
       "localMatch": {
         "placeId": "ChIJlUAk6BahbUgR36DVcgm-Ego",
@@ -787,6 +793,182 @@
     },
     {
       "rank": 4,
+      "name": "Exeter Chiro & Physio",
+      "url": "https://www.exeterchiroandphysio.co.uk/",
+      "digitalVisibilityScore": 72,
+      "pillarScores": {
+        "speed": 62,
+        "technical": 100,
+        "local": 100,
+        "visibility": 33,
+        "ai": 40,
+        "content": 83
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr Richard Record MChiro\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 1917,
+        "contentFreshnessDays": 0
+      },
+      "localMatch": {
+        "placeId": "ChIJO3lLMHWkbUgRAU-X4IWKfjA",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.exeterchiroandphysio.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 37,
+          "internalLinks": 1710,
+          "avgInternalLinksPerPage": 68.4,
+          "maxDepthReached": 1,
+          "genericAnchors": 26,
+          "genericAnchorRatio": 0.015,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 12,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-24",
+          "sitemapStaleDays": 8,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI timeout"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 15,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 1,
+            "3": 0,
+            "4": 1,
+            "5": 118
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Massage therapist",
+            "Physiotherapist",
+            "Physical Therapy Clinic",
+            "Sports massage therapist"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 11,
+          "placeTopics": {
+            "sciatica treatment": 6,
+            "spinal decompression": 5,
+            "achilles tendon treatment": 2,
+            "slipped disk treatment": 2,
+            "laser treatment": 2,
+            "professional team": 16,
+            "precise diagnosis": 2,
+            "knee problem": 3,
+            "thorough assessment": 2,
+            "experienced physio": 2
+          },
+          "firstSeen": "2026-06-29 22:41:43 +00:00",
+          "lastUpdated": "2026-06-29 22:41:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "exeterchiroandphysio.co.uk",
+          "rank": 34,
+          "backlinks": 19,
+          "referringDomains": 14,
+          "referringMainDomains": 14,
+          "referringPages": 18,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 18
+          },
+          "firstSeen": "2025-05-22 18:55:57 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 5,
       "name": "Motion Physio",
       "url": "https://motion-clinic.co.uk/service/physiotherapy-exeter/",
       "digitalVisibilityScore": 72,
@@ -818,10 +1000,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1381,
-        "contentFreshnessDays": 883
+        "wordCount": 1855,
+        "contentFreshnessDays": 915
       },
       "localMatch": {
         "placeId": "ChIJW0xY96SlbUgRQc0LADvLVd0",
@@ -1001,7 +1185,7 @@
       }
     },
     {
-      "rank": 5,
+      "rank": 6,
       "name": "First Physiotherapy and Sports Injury Clinic",
       "url": "http://www.firstphysio.com/",
       "digitalVisibilityScore": 70,
@@ -1033,6 +1217,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 1486,
@@ -1211,180 +1397,6 @@
       }
     },
     {
-      "rank": 6,
-      "name": "Exeter Chiro & Physio",
-      "url": "https://www.exeterchiroandphysio.co.uk/",
-      "digitalVisibilityScore": 69,
-      "pillarScores": {
-        "speed": 62,
-        "technical": 100,
-        "local": 100,
-        "visibility": 33,
-        "ai": 40,
-        "content": 60
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 1774,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJO3lLMHWkbUgRAU-X4IWKfjA",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.exeterchiroandphysio.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 37,
-          "internalLinks": 1710,
-          "avgInternalLinksPerPage": 68.4,
-          "maxDepthReached": 1,
-          "genericAnchors": 26,
-          "genericAnchorRatio": 0.015,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 12,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-24",
-          "sitemapStaleDays": 8,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": null,
-          "accessibility": null,
-          "bestPractices": null,
-          "seo": null,
-          "lcpMs": null,
-          "tbtMs": null,
-          "clsScore": null,
-          "fcpMs": null,
-          "speedIndexMs": null,
-          "failing": null,
-          "error": "PSI timeout"
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 15,
-          "ratingDistribution": {
-            "1": 2,
-            "2": 1,
-            "3": 0,
-            "4": 1,
-            "5": 118
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Massage therapist",
-            "Physiotherapist",
-            "Physical Therapy Clinic",
-            "Sports massage therapist"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 11,
-          "placeTopics": {
-            "sciatica treatment": 6,
-            "spinal decompression": 5,
-            "achilles tendon treatment": 2,
-            "slipped disk treatment": 2,
-            "laser treatment": 2,
-            "professional team": 16,
-            "precise diagnosis": 2,
-            "knee problem": 3,
-            "thorough assessment": 2,
-            "experienced physio": 2
-          },
-          "firstSeen": "2026-06-29 22:41:43 +00:00",
-          "lastUpdated": "2026-06-29 22:41:43 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "exeterchiroandphysio.co.uk",
-          "rank": 34,
-          "backlinks": 19,
-          "referringDomains": 14,
-          "referringMainDomains": 14,
-          "referringPages": 18,
-          "brokenBacklinks": 1,
-          "referringLinksTypes": {
-            "anchor": 18
-          },
-          "firstSeen": "2025-05-22 18:55:57 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 7,
       "name": "Innate Health Chiropractic - Chiropractor Exeter",
       "url": "https://innatehealthchiro.co.uk/",
@@ -1417,10 +1429,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 8288,
-        "contentFreshnessDays": 1629
+        "wordCount": 3351,
+        "contentFreshnessDays": 1661
       },
       "localMatch": {
         "placeId": "ChIJjYIRG_ilbUgRowCJPvtKo_4",
@@ -1630,10 +1644,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 1267,
-        "contentFreshnessDays": 487
+        "wordCount": 1328,
+        "contentFreshnessDays": 519
       },
       "localMatch": {
         "placeId": "ChIJFWO7lGGhbUgR4BmF6PiBp24",
@@ -1813,16 +1829,228 @@
     },
     {
       "rank": 9,
+      "name": "The Good Physio",
+      "url": "https://www.thegoodphysio.co.uk/",
+      "digitalVisibilityScore": 64,
+      "pillarScores": {
+        "speed": 52,
+        "technical": 88,
+        "local": 78,
+        "visibility": 34,
+        "ai": 80,
+        "content": 35
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 554,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJoe3jaSulbUgR_V9K2Uh9ZBg",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.thegoodphysio.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 32,
+          "internalLinks": 811,
+          "avgInternalLinksPerPage": 32.4,
+          "maxDepthReached": 2,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.001,
+          "keyPageDepth": {
+            "contact": 2,
+            "about": 2,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 33,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-07-22",
+          "sitemapStaleDays": 41,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 53,
+          "accessibility": 94,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 14495,
+          "tbtMs": 195,
+          "clsScore": 0.034,
+          "fcpMs": 9377,
+          "speedIndexMs": 9377,
+          "failing": [
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-breakdown-insight",
+              "title": "LCP breakdown",
+              "score": 0
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 7,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 60
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 6,
+          "placeTopics": {
+            "back pain treatment": 11,
+            "knee pain treatment": 4,
+            "injury recovery": 6,
+            "calf pain treatment": 2,
+            "root cause identification": 4,
+            "frozen shoulder": 2,
+            "knee surgery": 2,
+            "exercise guidance": 5,
+            "clear plan": 2,
+            "quick recovery": 4
+          },
+          "firstSeen": "2024-07-17 09:28:30 +00:00",
+          "lastUpdated": "2026-06-30 04:09:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "thegoodphysio.co.uk",
+          "rank": 119,
+          "backlinks": 87,
+          "referringDomains": 77,
+          "referringMainDomains": 72,
+          "referringPages": 86,
+          "brokenBacklinks": 61,
+          "referringLinksTypes": {
+            "anchor": 86
+          },
+          "firstSeen": "2019-12-11 19:58:53 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 10,
       "name": "Magdalen Health",
       "url": "https://exeterosteopaths.co.uk/",
-      "digitalVisibilityScore": 64,
+      "digitalVisibilityScore": 63,
       "pillarScores": {
         "speed": 80,
         "technical": 100,
         "local": 84,
         "visibility": 31,
         "ai": 0,
-        "content": 70
+        "content": 53
       },
       "includedPillars": [
         "speed",
@@ -1844,10 +2072,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 1328,
-        "contentFreshnessDays": 1629
+        "hasBlogLink": false,
+        "wordCount": 1658,
+        "contentFreshnessDays": 1661
       },
       "localMatch": {
         "placeId": "ChIJI5w0TxekbUgRONitJ6fea_Y",
@@ -2035,216 +2265,6 @@
       }
     },
     {
-      "rank": 10,
-      "name": "The Good Physio",
-      "url": "https://www.thegoodphysio.co.uk/",
-      "digitalVisibilityScore": 64,
-      "pillarScores": {
-        "speed": 52,
-        "technical": 88,
-        "local": 78,
-        "visibility": 34,
-        "ai": 80,
-        "content": 35
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 554,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJoe3jaSulbUgR_V9K2Uh9ZBg",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.thegoodphysio.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 32,
-          "internalLinks": 811,
-          "avgInternalLinksPerPage": 32.4,
-          "maxDepthReached": 2,
-          "genericAnchors": 1,
-          "genericAnchorRatio": 0.001,
-          "keyPageDepth": {
-            "contact": 2,
-            "about": 2,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 33,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-07-22",
-          "sitemapStaleDays": 41,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": true,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 53,
-          "accessibility": 94,
-          "bestPractices": 100,
-          "seo": 100,
-          "lcpMs": 14495,
-          "tbtMs": 195,
-          "clsScore": 0.034,
-          "fcpMs": 9377,
-          "speedIndexMs": 9377,
-          "failing": [
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 0
-            },
-            {
-              "id": "lcp-breakdown-insight",
-              "title": "LCP breakdown",
-              "score": 0
-            },
-            {
-              "id": "first-contentful-paint",
-              "title": "First Contentful Paint",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 7,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 60
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 6,
-          "placeTopics": {
-            "back pain treatment": 11,
-            "knee pain treatment": 4,
-            "injury recovery": 6,
-            "calf pain treatment": 2,
-            "root cause identification": 4,
-            "frozen shoulder": 2,
-            "knee surgery": 2,
-            "exercise guidance": 5,
-            "clear plan": 2,
-            "quick recovery": 4
-          },
-          "firstSeen": "2024-07-17 09:28:30 +00:00",
-          "lastUpdated": "2026-06-30 04:09:44 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "thegoodphysio.co.uk",
-          "rank": 119,
-          "backlinks": 87,
-          "referringDomains": 77,
-          "referringMainDomains": 72,
-          "referringPages": 86,
-          "brokenBacklinks": 61,
-          "referringLinksTypes": {
-            "anchor": 86
-          },
-          "firstSeen": "2019-12-11 19:58:53 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 11,
       "name": "Wildheart Chiropractic Exeter",
       "url": "https://wildheartchiropractic.co.uk/",
@@ -2277,10 +2297,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1558,
-        "contentFreshnessDays": 1
+        "contentFreshnessDays": 2
       },
       "localMatch": {
         "placeId": "ChIJXRhab7umbUgRhubNZWCLGPg",
@@ -2487,9 +2509,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 316,
+        "wordCount": 314,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -2699,10 +2723,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 126,
-        "contentFreshnessDays": 692
+        "contentFreshnessDays": 725
       },
       "localMatch": {
         "placeId": "ChIJNUc1Du6lbUgRy7asvD-fh0A",
@@ -2909,10 +2935,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 761,
-        "contentFreshnessDays": 5030
+        "contentFreshnessDays": 5063
       },
       "localMatch": {
         "placeId": "ChIJoSUSthekbUgR6ONzCu19d8o",
@@ -3088,7 +3116,7 @@
         "local": 72,
         "visibility": 0,
         "ai": 0,
-        "content": 53
+        "content": 49
       },
       "includedPillars": [
         "speed",
@@ -3110,10 +3138,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 444,
-        "contentFreshnessDays": 705
+        "contentFreshnessDays": 738
       },
       "localMatch": {
         "placeId": "ChIJQ1gS6xOjbUgRGQzH6C01HFU",
@@ -3287,212 +3317,6 @@
     },
     {
       "rank": 16,
-      "name": "Proactive Osteopathy Exeter",
-      "url": "http://www.proactive-osteo.co.uk/",
-      "digitalVisibilityScore": 57,
-      "pillarScores": {
-        "speed": 80,
-        "technical": 75,
-        "local": 90,
-        "visibility": 4,
-        "ai": 0,
-        "content": 75
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true,
-        "hasBlogLink": false,
-        "wordCount": 471,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJEcFeYnahbUgR6Jo2ZDoxQuY",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.proactive-osteo.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 21,
-          "avgInternalLinksPerPage": 21,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 19,
-          "sitemapUrls": 20,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-06-23",
-          "sitemapStaleDays": 70,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 65,
-          "accessibility": 92,
-          "bestPractices": 78,
-          "seo": 85,
-          "lcpMs": 6889,
-          "tbtMs": 145,
-          "clsScore": 0,
-          "fcpMs": 3958,
-          "speedIndexMs": 4096,
-          "failing": [
-            {
-              "id": "crawlable-anchors",
-              "title": "Links are not crawlable",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "link-text",
-              "title": "Links do not have descriptive text",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "aria-prohibited-attr",
-              "title": "Elements use prohibited ARIA attributes",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 2,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 26
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": false,
-          "services": null,
-          "placeTopics": {
-            "shoulder": 5,
-            "suffering": 4,
-            "neck": 4,
-            "physio": 3,
-            "hip": 3,
-            "feel": 3
-          },
-          "firstSeen": "2024-02-18 07:27:11 +00:00",
-          "lastUpdated": "2024-02-18 07:27:11 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "proactive-osteo.co.uk",
-          "rank": 111,
-          "backlinks": 186,
-          "referringDomains": 64,
-          "referringMainDomains": 60,
-          "referringPages": 178,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 175
-          },
-          "firstSeen": "2022-12-11 12:38:19 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 17,
       "name": "Exeter Osteopaths",
       "url": "http://www.creditonosteopaths.co.uk/",
       "digitalVisibilityScore": 56,
@@ -3524,10 +3348,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 834,
-        "contentFreshnessDays": 1129
+        "contentFreshnessDays": 1162
       },
       "localMatch": {
         "placeId": "ChIJ130RRDykbUgRSpcl03S9I64",
@@ -3685,7 +3511,7 @@
       }
     },
     {
-      "rank": 18,
+      "rank": 17,
       "name": "Southwest Osteopathy | Health & Performance",
       "url": "http://www.southwestosteopathy.com/",
       "digitalVisibilityScore": 56,
@@ -3717,6 +3543,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 786,
@@ -3905,7 +3733,7 @@
       }
     },
     {
-      "rank": 19,
+      "rank": 18,
       "name": "Cathedral Chiropractic & Acupuncture Clinic",
       "url": "https://cathedralchiropractic.co.uk/",
       "digitalVisibilityScore": 55,
@@ -3937,9 +3765,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1194,
+        "wordCount": 1195,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -4118,7 +3948,7 @@
       }
     },
     {
-      "rank": 20,
+      "rank": 19,
       "name": "Hands Down Sports Therapy",
       "url": "https://www.handsdowntherapy.co.uk/",
       "digitalVisibilityScore": 55,
@@ -4128,7 +3958,7 @@
         "local": 83,
         "visibility": 4,
         "ai": 20,
-        "content": 30
+        "content": 35
       },
       "includedPillars": [
         "speed",
@@ -4150,9 +3980,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 395,
+        "wordCount": 415,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -4332,6 +4164,214 @@
       }
     },
     {
+      "rank": 20,
+      "name": "Proactive Osteopathy Exeter",
+      "url": "http://www.proactive-osteo.co.uk/",
+      "digitalVisibilityScore": 55,
+      "pillarScores": {
+        "speed": 80,
+        "technical": 75,
+        "local": 90,
+        "visibility": 4,
+        "ai": 0,
+        "content": 55
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 467,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJEcFeYnahbUgR6Jo2ZDoxQuY",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.proactive-osteo.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 21,
+          "avgInternalLinksPerPage": 21,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 19,
+          "sitemapUrls": 20,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-06-23",
+          "sitemapStaleDays": 70,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 65,
+          "accessibility": 92,
+          "bestPractices": 78,
+          "seo": 85,
+          "lcpMs": 6889,
+          "tbtMs": 145,
+          "clsScore": 0,
+          "fcpMs": 3958,
+          "speedIndexMs": 4096,
+          "failing": [
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "aria-prohibited-attr",
+              "title": "Elements use prohibited ARIA attributes",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 26
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": {
+            "shoulder": 5,
+            "suffering": 4,
+            "neck": 4,
+            "physio": 3,
+            "hip": 3,
+            "feel": 3
+          },
+          "firstSeen": "2024-02-18 07:27:11 +00:00",
+          "lastUpdated": "2024-02-18 07:27:11 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "proactive-osteo.co.uk",
+          "rank": 111,
+          "backlinks": 186,
+          "referringDomains": 64,
+          "referringMainDomains": 60,
+          "referringPages": 178,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 175
+          },
+          "firstSeen": "2022-12-11 12:38:19 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 21,
       "name": "Tim Edbrooke Physiotherapy Ltd.",
       "url": "http://www.flexphysicalhealth.co.uk/",
@@ -4364,10 +4404,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 442,
-        "contentFreshnessDays": 4520
+        "contentFreshnessDays": 4552
       },
       "localMatch": {
         "placeId": "ChIJNeqDzY6jbUgRBE_i3h3i2Yo",
@@ -4561,9 +4603,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 559,
+        "wordCount": 569,
         "contentFreshnessDays": 0
       },
       "localMatch": {
@@ -4773,10 +4817,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1183,
-        "contentFreshnessDays": 2197
+        "wordCount": 1489,
+        "contentFreshnessDays": 2229
       },
       "localMatch": {
         "placeId": "ChIJz7F-MxShbUgRXGlUrHp7J6U",
@@ -4989,10 +5035,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 183,
-        "contentFreshnessDays": 3546
+        "contentFreshnessDays": 3578
       },
       "localMatch": {
         "placeId": "ChIJQdQZpd-lbUgRAlWOfDyG43Q",
@@ -5204,10 +5252,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 642,
-        "contentFreshnessDays": 5040
+        "wordCount": 640,
+        "contentFreshnessDays": 5072
       },
       "localMatch": {
         "placeId": "ChIJeVGm4RShbUgR0a130EiNjvw",
@@ -5410,10 +5460,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1055,
-        "contentFreshnessDays": 1779
+        "wordCount": 1092,
+        "contentFreshnessDays": 1811
       },
       "localMatch": {
         "placeId": "ChIJa_JYPjCkbUgRI7PQ5OfKF64",
@@ -5627,6 +5679,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 857,
@@ -5832,10 +5886,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1151,
-        "contentFreshnessDays": 3231
+        "contentFreshnessDays": 3263
       },
       "localMatch": {
         "placeId": "ChIJebXuA56mbUgRt6EtNEPMgVY",
@@ -6050,6 +6106,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 772,
@@ -6262,6 +6320,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 2299,
@@ -6463,10 +6523,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 656,
-        "contentFreshnessDays": 4089
+        "contentFreshnessDays": 4121
       },
       "localMatch": {
         "placeId": "ChIJ13VlhmWhbUgRiKWK_iPWCHQ",
@@ -6676,10 +6738,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 810,
-        "contentFreshnessDays": 2302
+        "contentFreshnessDays": 2334
       },
       "localMatch": {
         "placeId": "ChIJeTclmJynbUgR1BOgpVnlA8Q",
@@ -6844,6 +6908,222 @@
     },
     {
       "rank": 33,
+      "name": "The Hip Physio",
+      "url": "http://www.thehipphysio.com/",
+      "digitalVisibilityScore": 50,
+      "pillarScores": {
+        "speed": 71,
+        "technical": 63,
+        "local": 82,
+        "visibility": 0,
+        "ai": 0,
+        "content": 63
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 796,
+        "contentFreshnessDays": 0
+      },
+      "localMatch": {
+        "placeId": "ChIJoTJACW-YZqURNIiYJU5Qi_c",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.thehipphysio.com/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 41,
+          "avgInternalLinksPerPage": 41,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Exeter"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 66,
+          "accessibility": 88,
+          "bestPractices": 78,
+          "seo": 100,
+          "lcpMs": 6931,
+          "tbtMs": 36,
+          "clsScore": 0,
+          "fcpMs": 4189,
+          "speedIndexMs": 4189,
+          "failing": [
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unminified-css",
+              "title": "Minify CSS",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "html-has-lang",
+              "title": "`<html>` element does not have a `[lang]` attribute",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 13,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 41
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Service establishment",
+            "Physical therapy clinic",
+            "Sports injury clinic"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": {
+            "hip issues": 21,
+            "hip replacement recovery": 7,
+            "virtual appointment": 7,
+            "rehab program": 9,
+            "mri scans": 3,
+            "femoroacetabular impingement": 10,
+            "hip specialist": 2,
+            "personalized plan": 3,
+            "rehab exercises": 3,
+            "football injury": 2
+          },
+          "firstSeen": "2026-05-03 14:48:32 +00:00",
+          "lastUpdated": "2026-05-03 14:48:32 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "thehipphysio.com",
+          "rank": 112,
+          "backlinks": 103,
+          "referringDomains": 72,
+          "referringMainDomains": 68,
+          "referringPages": 97,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 90
+          },
+          "firstSeen": "2023-03-23 03:07:41 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 34,
       "name": "Health House Osteopathy and Wellness Clinic",
       "url": "http://www.health-house.co.uk/",
       "digitalVisibilityScore": 49,
@@ -6875,9 +7155,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 214,
+        "wordCount": 210,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -7057,7 +7339,7 @@
       }
     },
     {
-      "rank": 34,
+      "rank": 35,
       "name": "Optimal Movement Physio",
       "url": "https://www.optimalmovementphysio.com/",
       "digitalVisibilityScore": 49,
@@ -7089,6 +7371,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 52,
@@ -7270,7 +7554,7 @@
       }
     },
     {
-      "rank": 35,
+      "rank": 36,
       "name": "St. David's Osteopathic Clinic",
       "url": "http://www.sdosteopaths.co.uk/",
       "digitalVisibilityScore": 49,
@@ -7302,10 +7586,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 462,
-        "contentFreshnessDays": 6
+        "wordCount": 602,
+        "contentFreshnessDays": 1
       },
       "localMatch": {
         "placeId": "ChIJzYMKVTakbUgRfaSiaTgU-o4",
@@ -7480,7 +7766,7 @@
       }
     },
     {
-      "rank": 36,
+      "rank": 37,
       "name": "Urban Health Exeter",
       "url": "https://www.urbanhealthexeter.co.uk/",
       "digitalVisibilityScore": 49,
@@ -7512,6 +7798,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 205,
@@ -7690,7 +7978,7 @@
       }
     },
     {
-      "rank": 37,
+      "rank": 38,
       "name": "Daniela Stoeffin Osteopath, FSCCO",
       "url": "http://dsosteopath.co.uk/",
       "digitalVisibilityScore": 48,
@@ -7722,6 +8010,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 394,
@@ -7889,7 +8179,7 @@
       }
     },
     {
-      "rank": 38,
+      "rank": 39,
       "name": "Human Movement Chiropractic",
       "url": "https://www.humanmovementchiropractic.co.uk/",
       "digitalVisibilityScore": 48,
@@ -7921,6 +8211,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 130,
@@ -8088,231 +8380,17 @@
       }
     },
     {
-      "rank": 39,
-      "name": "The Hip Physio",
-      "url": "http://www.thehipphysio.com/",
+      "rank": 40,
+      "name": "Topsham Chiropractic",
+      "url": "http://topshamchiro.com/",
       "digitalVisibilityScore": 48,
       "pillarScores": {
-        "speed": 71,
-        "technical": 63,
-        "local": 82,
-        "visibility": 0,
+        "speed": 44,
+        "technical": 88,
+        "local": 77,
+        "visibility": 4,
         "ai": 0,
-        "content": 46
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 796,
-        "contentFreshnessDays": 7
-      },
-      "localMatch": {
-        "placeId": "ChIJoTJACW-YZqURNIiYJU5Qi_c",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.thehipphysio.com/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 41,
-          "avgInternalLinksPerPage": 41,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": null,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Exeter"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 66,
-          "accessibility": 88,
-          "bestPractices": 78,
-          "seo": 100,
-          "lcpMs": 6931,
-          "tbtMs": 36,
-          "clsScore": 0,
-          "fcpMs": 4189,
-          "speedIndexMs": 4189,
-          "failing": [
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "unminified-css",
-              "title": "Minify CSS",
-              "score": 0
-            },
-            {
-              "id": "landmark-one-main",
-              "title": "Document does not have a main landmark.",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "html-has-lang",
-              "title": "`<html>` element does not have a `[lang]` attribute",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 13,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 41
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Service establishment",
-            "Physical therapy clinic",
-            "Sports injury clinic"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": null,
-          "placeTopics": {
-            "hip issues": 21,
-            "hip replacement recovery": 7,
-            "virtual appointment": 7,
-            "rehab program": 9,
-            "mri scans": 3,
-            "femoroacetabular impingement": 10,
-            "hip specialist": 2,
-            "personalized plan": 3,
-            "rehab exercises": 3,
-            "football injury": 2
-          },
-          "firstSeen": "2026-05-03 14:48:32 +00:00",
-          "lastUpdated": "2026-05-03 14:48:32 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "thehipphysio.com",
-          "rank": 112,
-          "backlinks": 103,
-          "referringDomains": 72,
-          "referringMainDomains": 68,
-          "referringPages": 97,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 90
-          },
-          "firstSeen": "2023-03-23 03:07:41 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 40,
-      "name": "philgetsyou.fit",
-      "url": "https://www.philgetsyou.fit/",
-      "digitalVisibilityScore": 47,
-      "pillarScores": {
-        "speed": 52,
-        "technical": 100,
-        "local": 47,
-        "visibility": 0,
-        "ai": 0,
-        "content": 75
+        "content": 55
       },
       "includedPillars": [
         "speed",
@@ -8334,209 +8412,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 529,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJS_fRNiClbUgRHWSQ4VIT6qI",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.philgetsyou.fit/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 42,
-          "internalLinks": 998,
-          "avgInternalLinksPerPage": 39.9,
-          "maxDepthReached": 2,
-          "genericAnchors": 22,
-          "genericAnchorRatio": 0.022,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 54,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-06-21",
-          "sitemapStaleDays": 72,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": true,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 63,
-          "accessibility": 91,
-          "bestPractices": 96,
-          "seo": 100,
-          "lcpMs": 11567,
-          "tbtMs": 228,
-          "clsScore": 0,
-          "fcpMs": 2856,
-          "speedIndexMs": 4873,
-          "failing": [
-            {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": [
-            "Athletic Club",
-            "Coaching center",
-            "Fitness centre",
-            "Health consultant",
-            "Physical Fitness Programme",
-            "Physiotherapist"
-          ],
-          "hasDescription": false,
-          "hasHours": true,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2024-07-17 01:51:19 +00:00",
-          "lastUpdated": "2026-06-29 22:11:43 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "philgetsyou.fit",
-          "rank": 10,
-          "backlinks": 35,
-          "referringDomains": 33,
-          "referringMainDomains": 33,
-          "referringPages": 35,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 35
-          },
-          "firstSeen": "2022-02-20 10:01:12 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 41,
-      "name": "Topsham Chiropractic",
-      "url": "http://topshamchiro.com/",
-      "digitalVisibilityScore": 46,
-      "pillarScores": {
-        "speed": 44,
-        "technical": 88,
-        "local": 77,
-        "visibility": 4,
-        "ai": 0,
-        "content": 35
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
+        "teamSource": "homepage",
+        "teamEvidence": "named with a qualification: \"Dr Paul Anastasiou MChiro\"",
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 677,
+        "wordCount": 681,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -8712,6 +8592,208 @@
       }
     },
     {
+      "rank": 41,
+      "name": "philgetsyou.fit",
+      "url": "https://www.philgetsyou.fit/",
+      "digitalVisibilityScore": 47,
+      "pillarScores": {
+        "speed": 52,
+        "technical": 100,
+        "local": 47,
+        "visibility": 0,
+        "ai": 0,
+        "content": 75
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 529,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJS_fRNiClbUgRHWSQ4VIT6qI",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.philgetsyou.fit/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 42,
+          "internalLinks": 998,
+          "avgInternalLinksPerPage": 39.9,
+          "maxDepthReached": 2,
+          "genericAnchors": 22,
+          "genericAnchorRatio": 0.022,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 54,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-06-21",
+          "sitemapStaleDays": 72,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 63,
+          "accessibility": 91,
+          "bestPractices": 96,
+          "seo": 100,
+          "lcpMs": 11567,
+          "tbtMs": 228,
+          "clsScore": 0,
+          "fcpMs": 2856,
+          "speedIndexMs": 4873,
+          "failing": [
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": [
+            "Athletic Club",
+            "Coaching center",
+            "Fitness centre",
+            "Health consultant",
+            "Physical Fitness Programme",
+            "Physiotherapist"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-07-17 01:51:19 +00:00",
+          "lastUpdated": "2026-06-29 22:11:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "philgetsyou.fit",
+          "rank": 10,
+          "backlinks": 35,
+          "referringDomains": 33,
+          "referringMainDomains": 33,
+          "referringPages": 35,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 35
+          },
+          "firstSeen": "2022-02-20 10:01:12 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 42,
       "name": "Elite Osteo Clinic Exeter",
       "url": "https://www.eliteosteoclinic.com/",
@@ -8744,6 +8826,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1647,
@@ -8937,9 +9021,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 554,
+        "wordCount": 555,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -9151,10 +9237,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 653,
-        "contentFreshnessDays": 652
+        "contentFreshnessDays": 684
       },
       "localMatch": {
         "placeId": "ChIJh6vPss-mbUgRoVF9TZ5tOdo",
@@ -9325,6 +9413,207 @@
     },
     {
       "rank": 45,
+      "name": "Exeter McTimoney Chiropractic Clinic",
+      "url": "https://www.exeter-mct-chiro.co.uk/",
+      "digitalVisibilityScore": 43,
+      "pillarScores": {
+        "speed": 40,
+        "technical": 88,
+        "local": 59,
+        "visibility": 4,
+        "ai": 0,
+        "content": 53
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage",
+        "teamEvidence": "named with a role: \"Science-Based Nutrition Support, therapist\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 578,
+        "contentFreshnessDays": 400
+      },
+      "localMatch": {
+        "placeId": "ChIJL1Xdw-GjbUgRQA4LVntBHa4",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.exeter-mct-chiro.co.uk/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 20,
+          "avgInternalLinksPerPage": 20,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": null,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 1,
+          "sitemapUrls": 2,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2025-11-13",
+          "sitemapStaleDays": 292,
+          "sitemapSampleChecked": 2,
+          "sitemapSampleResolved": 2,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 94,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 4992,
+          "tbtMs": 19,
+          "clsScore": 0.85,
+          "fcpMs": 1701,
+          "speedIndexMs": 2918,
+          "failing": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "layout-shifts",
+              "title": "Avoid large layout shifts",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 13:11:09 +00:00",
+          "lastUpdated": "2026-06-30 13:11:09 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "exeter-mct-chiro.co.uk",
+          "rank": 54,
+          "backlinks": 70,
+          "referringDomains": 57,
+          "referringMainDomains": 55,
+          "referringPages": 70,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 70
+          },
+          "firstSeen": "2022-11-15 19:54:47 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 46,
       "name": "The Sustainable Health Centre",
       "url": "https://www.plantguides.net/sustainable-health-centre/",
       "digitalVisibilityScore": 43,
@@ -9356,10 +9645,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 309,
-        "contentFreshnessDays": 3
+        "contentFreshnessDays": 0
       },
       "localMatch": {
         "placeId": "ChIJaeppazykbUgR74jCGprmshU",
@@ -9528,205 +9819,6 @@
       }
     },
     {
-      "rank": 46,
-      "name": "Exeter McTimoney Chiropractic Clinic",
-      "url": "https://www.exeter-mct-chiro.co.uk/",
-      "digitalVisibilityScore": 42,
-      "pillarScores": {
-        "speed": 40,
-        "technical": 88,
-        "local": 59,
-        "visibility": 4,
-        "ai": 0,
-        "content": 37
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 578,
-        "contentFreshnessDays": 368
-      },
-      "localMatch": {
-        "placeId": "ChIJL1Xdw-GjbUgRQA4LVntBHa4",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.exeter-mct-chiro.co.uk/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 20,
-          "avgInternalLinksPerPage": 20,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": null,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 1,
-          "sitemapUrls": 2,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2025-11-13",
-          "sitemapStaleDays": 292,
-          "sitemapSampleChecked": 2,
-          "sitemapSampleResolved": 2,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 56,
-          "accessibility": 94,
-          "bestPractices": 100,
-          "seo": 100,
-          "lcpMs": 4992,
-          "tbtMs": 19,
-          "clsScore": 0.85,
-          "fcpMs": 1701,
-          "speedIndexMs": 2918,
-          "failing": [
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "layout-shifts",
-              "title": "Avoid large layout shifts",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 1
-          },
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": false,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2026-06-30 13:11:09 +00:00",
-          "lastUpdated": "2026-06-30 13:11:09 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "exeter-mct-chiro.co.uk",
-          "rank": 54,
-          "backlinks": 70,
-          "referringDomains": 57,
-          "referringMainDomains": 55,
-          "referringPages": 70,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 70
-          },
-          "firstSeen": "2022-11-15 19:54:47 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 47,
       "name": "Heavitree Road Chiropractic Centre",
       "url": "http://www.hrcc.co.uk/",
@@ -9759,10 +9851,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 359,
-        "contentFreshnessDays": 1089
+        "contentFreshnessDays": 1121
       },
       "localMatch": {
         "placeId": "ChIJKWnLfxakbUgRsIYmpPRynMg",
@@ -9968,6 +10062,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -10182,6 +10278,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 565,
@@ -10387,6 +10485,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 162,
@@ -10599,6 +10699,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -10754,6 +10856,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -10919,6 +11023,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,

@@ -171,10 +171,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 11153,
-        "contentFreshnessDays": 2872
+        "contentFreshnessDays": 2906
       },
       "localMatch": {
         "placeId": "ChIJcacp8sSNcUgR8gBKPITxII0",
@@ -350,10 +352,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 345,
-        "contentFreshnessDays": 1441
+        "contentFreshnessDays": 1475
       },
       "localMatch": {
         "placeId": "ChIJYW97vsKNcUgRp4duDAcdMps",
@@ -560,9 +564,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
-        "wordCount": 930,
+        "wordCount": 837,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -779,10 +785,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 742,
-        "contentFreshnessDays": 3795
+        "contentFreshnessDays": 3829
       },
       "localMatch": {
         "placeId": "ChIJCThedN-NcUgRe3YRcoPOOCQ",
@@ -958,10 +966,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1270,
-        "contentFreshnessDays": 935
+        "contentFreshnessDays": 969
       },
       "localMatch": {
         "placeId": "ChIJAQCEjtqNcUgRubOXeZEoxBU",
@@ -1145,226 +1155,16 @@
     },
     {
       "rank": 6,
-      "name": "Windmill Hill Smiles",
-      "url": "https://www.windmillhillsmiles.com/",
-      "digitalVisibilityScore": 54,
-      "pillarScores": {
-        "speed": 56,
-        "technical": 75,
-        "local": 91,
-        "visibility": 29,
-        "ai": 0,
-        "content": 55
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 438,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJCWRvoV2PcUgRmWqTzcL6lAE",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.windmillhillsmiles.com/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 29,
-          "internalLinks": 731,
-          "avgInternalLinksPerPage": 29.2,
-          "maxDepthReached": 2,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 25,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2025-08-27",
-          "sitemapStaleDays": 368,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": true,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 1200,
-          "inpMs": 163,
-          "cls": 0,
-          "lcpGood": true,
-          "inpGood": true,
-          "clsGood": true,
-          "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 65,
-          "accessibility": 96,
-          "bestPractices": 100,
-          "seo": 100,
-          "lcpMs": 6253,
-          "tbtMs": 153,
-          "clsScore": 0.008,
-          "fcpMs": 3914,
-          "speedIndexMs": 4806,
-          "failing": [
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "mainthread-work-breakdown",
-              "title": "Minimize main-thread work",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "bootup-time",
-              "title": "Reduce JavaScript execution time",
-              "score": 0
-            },
-            {
-              "id": "interactive",
-              "title": "Time to Interactive",
-              "score": 6
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 11
-            },
-            {
-              "id": "first-contentful-paint",
-              "title": "First Contentful Paint",
-              "score": 25
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 23,
-          "ratingDistribution": {
-            "1": 2,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 115
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 5,
-          "placeTopics": {
-            "welcoming staff": 19,
-            "root canal extraction": 2,
-            "emergency appointment": 6,
-            "private dentist": 2,
-            "hygienist": 7,
-            "dental emergency": 4,
-            "friendly team": 9,
-            "comfortable atmosphere": 14,
-            "dental nurse": 3,
-            "clear explanations": 10
-          },
-          "firstSeen": "2026-06-26 02:58:39 +00:00",
-          "lastUpdated": "2026-06-26 02:58:39 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "windmillhillsmiles.com",
-          "rank": 131,
-          "backlinks": 97,
-          "referringDomains": 52,
-          "referringMainDomains": 47,
-          "referringPages": 78,
-          "brokenBacklinks": 1,
-          "referringLinksTypes": {
-            "anchor": 78
-          },
-          "firstSeen": "2023-10-14 17:54:34 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 7,
       "name": "Zetland Road Dental Practice",
       "url": "https://www.zetlanddental.co.uk/",
-      "digitalVisibilityScore": 53,
+      "digitalVisibilityScore": 55,
       "pillarScores": {
         "speed": 82,
         "technical": 88,
         "local": 70,
         "visibility": 4,
         "ai": 0,
-        "content": 46
+        "content": 63
       },
       "includedPillars": [
         "speed",
@@ -1385,7 +1185,9 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr Simon Dunn BDS\"",
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 469,
@@ -1566,6 +1368,218 @@
       }
     },
     {
+      "rank": 7,
+      "name": "Windmill Hill Smiles",
+      "url": "https://www.windmillhillsmiles.com/",
+      "digitalVisibilityScore": 54,
+      "pillarScores": {
+        "speed": 56,
+        "technical": 75,
+        "local": 91,
+        "visibility": 29,
+        "ai": 0,
+        "content": 55
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 440,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJCWRvoV2PcUgRmWqTzcL6lAE",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.windmillhillsmiles.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 29,
+          "internalLinks": 731,
+          "avgInternalLinksPerPage": 29.2,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 25,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2025-08-27",
+          "sitemapStaleDays": 368,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1200,
+          "inpMs": 163,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 65,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 6253,
+          "tbtMs": 153,
+          "clsScore": 0.008,
+          "fcpMs": 3914,
+          "speedIndexMs": 4806,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 6
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 11
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 25
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 23,
+          "ratingDistribution": {
+            "1": 2,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 115
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 5,
+          "placeTopics": {
+            "welcoming staff": 19,
+            "root canal extraction": 2,
+            "emergency appointment": 6,
+            "private dentist": 2,
+            "hygienist": 7,
+            "dental emergency": 4,
+            "friendly team": 9,
+            "comfortable atmosphere": 14,
+            "dental nurse": 3,
+            "clear explanations": 10
+          },
+          "firstSeen": "2026-06-26 02:58:39 +00:00",
+          "lastUpdated": "2026-06-26 02:58:39 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "windmillhillsmiles.com",
+          "rank": 131,
+          "backlinks": 97,
+          "referringDomains": 52,
+          "referringMainDomains": 47,
+          "referringPages": 78,
+          "brokenBacklinks": 1,
+          "referringLinksTypes": {
+            "anchor": 78
+          },
+          "firstSeen": "2023-10-14 17:54:34 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 8,
       "name": "Promenade Dental",
       "url": "https://promenade-dental.co.uk/",
@@ -1598,10 +1612,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1453,
-        "contentFreshnessDays": 411
+        "contentFreshnessDays": 445
       },
       "localMatch": {
         "placeId": "ChIJY0LrQAmOcUgREAXOO3S-BAc",
@@ -1778,9 +1794,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 1905,
+        "wordCount": 1911,
         "contentFreshnessDays": null
       },
       "localMatch": {

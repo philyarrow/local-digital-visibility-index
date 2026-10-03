@@ -121,12 +121,12 @@
       "live": true
     },
     "content": {
-      "scored": 8,
+      "scored": 9,
       "total": 10,
       "live": true
     }
   },
-  "overallMedian": 49,
+  "overallMedian": 50,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
@@ -135,47 +135,257 @@
     "local": 74.5,
     "visibility": 0,
     "ai": 0,
-    "content": 30
+    "content": 33
   },
   "businesses": [
     {
       "rank": 1,
+      "name": "Bath Veterinary Centre",
+      "url": "http://www.bathveterinarycentre.co.uk/",
+      "digitalVisibilityScore": 64,
+      "pillarScores": {
+        "speed": 66,
+        "technical": 29,
+        "local": 80,
+        "visibility": 56,
+        "ai": 100,
+        "content": 53
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 607,
+        "contentFreshnessDays": 561
+      },
+      "localMatch": {
+        "placeId": "ChIJsVlaEWuBcUgR7kslCtYOJ80",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.bathveterinarycentre.co.uk/",
+          "pagesCrawled": 2,
+          "pagesDiscovered": 1,
+          "internalLinks": 24,
+          "avgInternalLinksPerPage": 12,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "05861459",
+          "companyName": "BATH VETERINARY CENTRE LIMITED",
+          "companyStatus": "active",
+          "incorporatedOn": "2006-06-29",
+          "ageYears": 20.2,
+          "sicCodes": [
+            "75000"
+          ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-06-30",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "Purcells, 342 Bloomfield Road, Bath, Somerset, BA2 2PB",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 60,
+          "accessibility": 73,
+          "bestPractices": 78,
+          "seo": 91,
+          "lcpMs": 12165,
+          "tbtMs": 37,
+          "clsScore": 0,
+          "fcpMs": 5865,
+          "speedIndexMs": 5865,
+          "failing": [
+            {
+              "id": "redirects-http",
+              "title": "Does not redirect HTTP traffic to HTTPS",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "meta-description",
+              "title": "Document does not have a meta description",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 3,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 14
+          },
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 6,
+          "placeTopics": {
+            "kind vet": 3,
+            "kind staff": 4,
+            "vets": 2,
+            "pet care": 2
+          },
+          "firstSeen": "2024-07-16 23:41:35 +00:00",
+          "lastUpdated": "2026-06-29 20:30:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "bathveterinarycentre.co.uk",
+          "rank": 147,
+          "backlinks": 1693,
+          "referringDomains": 62,
+          "referringMainDomains": 60,
+          "referringPages": 1684,
+          "brokenBacklinks": 1781,
+          "referringLinksTypes": {
+            "anchor": 1682
+          },
+          "firstSeen": "2019-01-18 10:19:15 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 2,
       "name": "Bath Veterinary Group, Rosemary Lodge Veterinary Hospital",
       "url": "https://www.bathvetgroup.co.uk/about-us/practices/rosemary-lodge?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
-      "digitalVisibilityScore": 65,
+      "digitalVisibilityScore": 63,
       "pillarScores": {
         "speed": null,
         "technical": 0,
         "local": 98,
         "visibility": 73,
         "ai": 100,
-        "content": null
+        "content": 50
       },
       "includedPillars": [
         "technical",
         "local",
         "visibility",
-        "ai"
+        "ai",
+        "content"
       ],
       "excludedPillars": [
-        "speed",
-        "content"
+        "speed"
       ],
       "effectiveWeights": {
         "speed": 0,
-        "technical": 28.57,
-        "local": 28.57,
-        "visibility": 21.43,
-        "ai": 21.43,
-        "content": 0
+        "technical": 25,
+        "local": 25,
+        "visibility": 18.75,
+        "ai": 18.75,
+        "content": 12.5
       },
       "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null,
-        "hasBlogLink": null,
-        "wordCount": null,
-        "contentFreshnessDays": null
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 1269,
+        "contentFreshnessDays": 0
       },
       "localMatch": {
         "placeId": "ChIJoZjy_NuAcUgRB4486IEFGBE",
@@ -350,17 +560,17 @@
       }
     },
     {
-      "rank": 2,
-      "name": "Bath Veterinary Centre",
-      "url": "http://www.bathveterinarycentre.co.uk/",
-      "digitalVisibilityScore": 64,
+      "rank": 3,
+      "name": "Kelston Vets",
+      "url": "http://www.kelstonvets.co.uk/",
+      "digitalVisibilityScore": 63,
       "pillarScores": {
-        "speed": 66,
-        "technical": 29,
-        "local": 80,
-        "visibility": 56,
-        "ai": 100,
-        "content": 53
+        "speed": 71,
+        "technical": 100,
+        "local": 84,
+        "visibility": 32,
+        "ai": 0,
+        "content": 70
       },
       "includedPillars": [
         "speed",
@@ -382,215 +592,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 607,
-        "contentFreshnessDays": 529
-      },
-      "localMatch": {
-        "placeId": "ChIJsVlaEWuBcUgR7kslCtYOJ80",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.bathveterinarycentre.co.uk/",
-          "pagesCrawled": 2,
-          "pagesDiscovered": 1,
-          "internalLinks": 24,
-          "avgInternalLinksPerPage": 12,
-          "maxDepthReached": 1,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": null,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "05861459",
-          "companyName": "BATH VETERINARY CENTRE LIMITED",
-          "companyStatus": "active",
-          "incorporatedOn": "2006-06-29",
-          "ageYears": 20.2,
-          "sicCodes": [
-            "75000"
-          ],
-          "companyType": "ltd",
-          "accountsType": "micro-entity",
-          "accountsMadeUpTo": "2025-06-30",
-          "accountsOverdue": false,
-          "hasCharges": false,
-          "hasInsolvencyHistory": false,
-          "previousNames": null,
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "Purcells, 342 Bloomfield Road, Bath, Somerset, BA2 2PB",
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 60,
-          "accessibility": 73,
-          "bestPractices": 78,
-          "seo": 91,
-          "lcpMs": 12165,
-          "tbtMs": 37,
-          "clsScore": 0,
-          "fcpMs": 5865,
-          "speedIndexMs": 5865,
-          "failing": [
-            {
-              "id": "redirects-http",
-              "title": "Does not redirect HTTP traffic to HTTPS",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "button-name",
-              "title": "Buttons do not have an accessible name",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "meta-description",
-              "title": "Document does not have a meta description",
-              "score": 0
-            },
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 3,
-          "ratingDistribution": {
-            "1": 1,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 14
-          },
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": true,
-          "services": 6,
-          "placeTopics": {
-            "kind vet": 3,
-            "kind staff": 4,
-            "vets": 2,
-            "pet care": 2
-          },
-          "firstSeen": "2024-07-16 23:41:35 +00:00",
-          "lastUpdated": "2026-06-29 20:30:42 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "bathveterinarycentre.co.uk",
-          "rank": 147,
-          "backlinks": 1693,
-          "referringDomains": 62,
-          "referringMainDomains": 60,
-          "referringPages": 1684,
-          "brokenBacklinks": 1781,
-          "referringLinksTypes": {
-            "anchor": 1682
-          },
-          "firstSeen": "2019-01-18 10:19:15 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 3,
-      "name": "Kelston Vets",
-      "url": "http://www.kelstonvets.co.uk/",
-      "digitalVisibilityScore": 61,
-      "pillarScores": {
-        "speed": 71,
-        "technical": 100,
-        "local": 84,
-        "visibility": 32,
-        "ai": 0,
-        "content": 50
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Holly Jenner BVetMed\"",
         "hasCredentialsLink": true,
         "hasBlogLink": false,
-        "wordCount": 231,
+        "wordCount": 250,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -767,174 +773,16 @@
     },
     {
       "rank": 4,
-      "name": "Croft Vets Ltd",
-      "url": "https://businformaps.org/details/croft-vets-ltd-ChIJS6W",
-      "digitalVisibilityScore": 51,
-      "pillarScores": {
-        "speed": 80,
-        "technical": 88,
-        "local": 76,
-        "visibility": 0,
-        "ai": 0,
-        "content": 17
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": false,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 8,
-        "contentFreshnessDays": 42
-      },
-      "localMatch": {
-        "placeId": "ChIJS6WIzzWBcUgRQVWWpPaUfUA",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://businformaps.org/details/croft-vets-ltd-ChIJS6W",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": 0,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": false,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Bath"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": null,
-          "accessibility": null,
-          "bestPractices": null,
-          "seo": null,
-          "lcpMs": null,
-          "tbtMs": null,
-          "clsScore": null,
-          "fcpMs": null,
-          "speedIndexMs": null,
-          "failing": null,
-          "error": "PSI HTTP 500"
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 1
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": false,
-          "services": null,
-          "placeTopics": null,
-          "firstSeen": "2024-06-06 05:16:31 +00:00",
-          "lastUpdated": "2026-07-16 16:32:44 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "businformaps.org",
-          "rank": 116,
-          "backlinks": 345,
-          "referringDomains": 53,
-          "referringMainDomains": 42,
-          "referringPages": 181,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 180
-          },
-          "firstSeen": "2025-10-11 09:36:25 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 5,
       "name": "Cadence Equine Vets Ltd",
       "url": "https://www.cadenceequinevets.co.uk/",
-      "digitalVisibilityScore": 49,
+      "digitalVisibilityScore": 51,
       "pillarScores": {
         "speed": 64,
         "technical": 100,
         "local": 73,
         "visibility": 0,
         "ai": 0,
-        "content": 16
+        "content": 33
       },
       "includedPillars": [
         "speed",
@@ -955,11 +803,13 @@
       },
       "contentChecks": {
         "hasAboutLink": false,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage",
+        "teamEvidence": "named with a qualification: \"Dr Charlie Tomlinson MRCVS\"",
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 480,
-        "contentFreshnessDays": 911
+        "contentFreshnessDays": 944
       },
       "localMatch": {
         "placeId": "ChIJ7Vhc8vZns2IR9LZU7rFWlAM",
@@ -1138,6 +988,166 @@
       }
     },
     {
+      "rank": 5,
+      "name": "Croft Vets Ltd",
+      "url": "https://businformaps.org/details/croft-vets-ltd-ChIJS6W",
+      "digitalVisibilityScore": 51,
+      "pillarScores": {
+        "speed": 80,
+        "technical": 88,
+        "local": 76,
+        "visibility": 0,
+        "ai": 0,
+        "content": 17
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 8,
+        "contentFreshnessDays": 16
+      },
+      "localMatch": {
+        "placeId": "ChIJS6WIzzWBcUgRQVWWpPaUfUA",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://businformaps.org/details/croft-vets-ltd-ChIJS6W",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Bath"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 500"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": null,
+          "firstSeen": "2024-06-06 05:16:31 +00:00",
+          "lastUpdated": "2026-07-16 16:32:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "businformaps.org",
+          "rank": 116,
+          "backlinks": 345,
+          "referringDomains": 53,
+          "referringMainDomains": 42,
+          "referringPages": 181,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 180
+          },
+          "firstSeen": "2025-10-11 09:36:25 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 6,
       "name": "Vee the Vet",
       "url": "https://www.veethevet.co.uk/",
@@ -1170,6 +1180,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 619,
@@ -1369,6 +1381,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 335,
@@ -1572,6 +1586,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 269,
@@ -1773,6 +1789,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 150,
@@ -1974,6 +1992,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,

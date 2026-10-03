@@ -121,7 +121,7 @@
       "live": true
     },
     "content": {
-      "scored": 18,
+      "scored": 19,
       "total": 21,
       "live": true
     }
@@ -135,7 +135,7 @@
     "local": 68,
     "visibility": 0,
     "ai": 0,
-    "content": 58.5
+    "content": 66
   },
   "businesses": [
     {
@@ -171,6 +171,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 907,
@@ -383,10 +385,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 644,
-        "contentFreshnessDays": 286
+        "contentFreshnessDays": 318
       },
       "localMatch": {
         "placeId": "ChIJq1AhiaymbUgRNSV2D_70HDM",
@@ -593,10 +597,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 3912,
-        "contentFreshnessDays": 1336
+        "contentFreshnessDays": 1368
       },
       "localMatch": {
         "placeId": "ChIJ1ZmXcZejbUgRmpVszIJ_1Jw",
@@ -808,10 +814,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 365,
-        "contentFreshnessDays": 491
+        "contentFreshnessDays": 523
       },
       "localMatch": {
         "placeId": "ChIJ4xVDG7ihbUgRY84fkOKZg38",
@@ -987,6 +995,214 @@
     },
     {
       "rank": 5,
+      "name": "HeartVets @City Vets",
+      "url": "http://www.heartvets.co.uk/",
+      "digitalVisibilityScore": 59,
+      "pillarScores": {
+        "speed": 92,
+        "technical": 100,
+        "local": 67,
+        "visibility": 2,
+        "ai": 0,
+        "content": 70
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 1076,
+        "contentFreshnessDays": 2587
+      },
+      "localMatch": {
+        "placeId": "ChIJSRGltLqhcUgRSfuc2LMahy4",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.heartvets.co.uk/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 67,
+          "sitemapUrls": 67,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-26",
+          "sitemapStaleDays": 6,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 0,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 500"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 38,
+          "accessibility": 100,
+          "bestPractices": 41,
+          "seo": 92,
+          "lcpMs": 12211,
+          "tbtMs": 186,
+          "clsScore": 0.308,
+          "fcpMs": 4589,
+          "speedIndexMs": 13989,
+          "failing": [
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "deprecations",
+              "title": "Uses deprecated APIs",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "cls-culprits-insight",
+              "title": "Layout shift culprits",
+              "score": 0
+            },
+            {
+              "id": "third-party-cookies",
+              "title": "Uses third-party cookies",
+              "score": 0
+            },
+            {
+              "id": "crawlable-anchors",
+              "title": "Links are not crawlable",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 13,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 7
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Emergency veterinarian service",
+            "Veterinarian"
+          ],
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 22,
+          "placeTopics": {
+            "informative team": 2,
+            "caring staff": 2,
+            "staff": 2
+          },
+          "firstSeen": "2026-06-25 17:46:51 +00:00",
+          "lastUpdated": "2026-06-25 17:46:51 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "heartvets.co.uk",
+          "rank": 146,
+          "backlinks": 143,
+          "referringDomains": 105,
+          "referringMainDomains": 99,
+          "referringPages": 136,
+          "brokenBacklinks": 94,
+          "referringLinksTypes": {
+            "anchor": 115
+          },
+          "firstSeen": "2021-09-21 22:35:37 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 6,
       "name": "Beaumont Veterinary Centre, Exeter",
       "url": "https://www.beaumont-vets.co.uk/?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
       "digitalVisibilityScore": 58,
@@ -1018,10 +1234,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 821,
-        "contentFreshnessDays": 1
+        "wordCount": 990,
+        "contentFreshnessDays": 0
       },
       "localMatch": {
         "placeId": "ChIJw2ZpPLujbUgRIq9SxFWMhk0",
@@ -1196,224 +1414,17 @@
       }
     },
     {
-      "rank": 6,
-      "name": "HeartVets @City Vets",
-      "url": "http://www.heartvets.co.uk/",
-      "digitalVisibilityScore": 58,
-      "pillarScores": {
-        "speed": 92,
-        "technical": 100,
-        "local": 67,
-        "visibility": 2,
-        "ai": 0,
-        "content": null
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
-        "content"
-      ],
-      "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
-      },
-      "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null,
-        "hasBlogLink": null,
-        "wordCount": null,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJSRGltLqhcUgRSfuc2LMahy4",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.heartvets.co.uk/",
-          "pagesCrawled": 0,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": null,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 67,
-          "sitemapUrls": 67,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-26",
-          "sitemapStaleDays": 6,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 0,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": "homepage HTTP 500"
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 38,
-          "accessibility": 100,
-          "bestPractices": 41,
-          "seo": 92,
-          "lcpMs": 12211,
-          "tbtMs": 186,
-          "clsScore": 0.308,
-          "fcpMs": 4589,
-          "speedIndexMs": 13989,
-          "failing": [
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            },
-            {
-              "id": "deprecations",
-              "title": "Uses deprecated APIs",
-              "score": 0
-            },
-            {
-              "id": "mainthread-work-breakdown",
-              "title": "Minimize main-thread work",
-              "score": 0
-            },
-            {
-              "id": "cls-culprits-insight",
-              "title": "Layout shift culprits",
-              "score": 0
-            },
-            {
-              "id": "third-party-cookies",
-              "title": "Uses third-party cookies",
-              "score": 0
-            },
-            {
-              "id": "crawlable-anchors",
-              "title": "Links are not crawlable",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 13,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 7
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Emergency veterinarian service",
-            "Veterinarian"
-          ],
-          "hasDescription": false,
-          "hasHours": true,
-          "services": 22,
-          "placeTopics": {
-            "informative team": 2,
-            "caring staff": 2,
-            "staff": 2
-          },
-          "firstSeen": "2026-06-25 17:46:51 +00:00",
-          "lastUpdated": "2026-06-25 17:46:51 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "heartvets.co.uk",
-          "rank": 146,
-          "backlinks": 143,
-          "referringDomains": 105,
-          "referringMainDomains": 99,
-          "referringPages": 136,
-          "brokenBacklinks": 94,
-          "referringLinksTypes": {
-            "anchor": 115
-          },
-          "firstSeen": "2021-09-21 22:35:37 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 7,
       "name": "Rainbow Bridge Vets",
       "url": "https://www.rainbowbridgevets.co.uk/",
-      "digitalVisibilityScore": 56,
+      "digitalVisibilityScore": 58,
       "pillarScores": {
         "speed": 54,
         "technical": 88,
         "local": 94,
         "visibility": 25,
         "ai": 0,
-        "content": 55
+        "content": 75
       },
       "includedPillars": [
         "speed",
@@ -1434,10 +1445,12 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "introduces themselves: \"I'm Sara, the founder of Rainbow Bridge Vets. I'…\"",
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 572,
+        "wordCount": 576,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -1647,10 +1660,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 3594,
-        "contentFreshnessDays": 826
+        "wordCount": 3683,
+        "contentFreshnessDays": 858
       },
       "localMatch": {
         "placeId": "ChIJ_5V0WFqgbUgRBSpVYs5UUJU",
@@ -1846,10 +1861,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 313,
-        "contentFreshnessDays": 735
+        "contentFreshnessDays": 767
       },
       "localMatch": {
         "placeId": "ChIJAw4ZU76lbUgRudo5gWuCinU",
@@ -2049,10 +2066,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 4110,
-        "contentFreshnessDays": 2065
+        "wordCount": 4171,
+        "contentFreshnessDays": 2098
       },
       "localMatch": {
         "placeId": "ChIJe363f5ChbUgRCfJ18MWgZhI",
@@ -2242,10 +2261,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 161,
-        "contentFreshnessDays": 299
+        "contentFreshnessDays": 331
       },
       "localMatch": {
         "placeId": "ChIJLTwhP7ujbUgRHMhbR1rb-D0",
@@ -2444,6 +2465,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 664,
@@ -2648,10 +2671,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 324,
-        "contentFreshnessDays": 4095
+        "contentFreshnessDays": 4127
       },
       "localMatch": {
         "placeId": "ChIJZzR0WVqgbUgRY9IkD0dDYYU",
@@ -2848,6 +2873,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -3049,10 +3076,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
-        "wordCount": 818,
-        "contentFreshnessDays": 22
+        "wordCount": 826,
+        "contentFreshnessDays": 3
       },
       "localMatch": {
         "placeId": "ChIJ45XHUjakbUgRkkyByOLOpHE",
@@ -3260,6 +3289,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 423,
@@ -3459,6 +3490,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 142,
@@ -3658,6 +3691,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 553,
@@ -3851,10 +3886,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 411,
-        "contentFreshnessDays": 1155
+        "contentFreshnessDays": 1187
       },
       "localMatch": {
         "placeId": "ChIJJQ1KWVqgbUgRrmXqoZIeMQI",
@@ -4044,6 +4081,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 430,
@@ -4244,6 +4283,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
