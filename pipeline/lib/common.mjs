@@ -92,14 +92,53 @@ export function toCsv(rows, columns) {
 
 /* ---- fetch with timeout, never throws on timeout shape ---- */
 
-export async function fetchWithTimeout(url, opts = {}, timeoutMs = 15000) {
+export async function fetchWithTimeout(url, opts = {}, timeoutMs = 15000, fetchImpl = null) {
 	const ctrl = new AbortController();
 	const t = setTimeout(() => ctrl.abort(), timeoutMs);
 	try {
-		return await fetch(url, { ...opts, signal: ctrl.signal, redirect: 'follow' });
+		return await (fetchImpl || fetch)(url, { ...opts, signal: ctrl.signal, redirect: 'follow' });
 	} finally {
 		clearTimeout(t);
 	}
+}
+
+/* ---- the homepage fetch behind a scored pillar: one more chance ---- */
+
+export const HOMEPAGE_RETRIES = 2;
+export const HOMEPAGE_RETRY_DELAY_MS = 2000;
+
+/* Transient means the request never got an answer (DNS, reset, timeout — the
+   fetch throws) or the server answered 5xx. A 4xx is the site's answer and
+   asking again does not change it. Same rule as the crawler's start page in
+   lib/crawl.mjs. */
+export const isTransientFailure = (res, err) => Boolean(err) || (res?.status ?? 0) >= 500;
+
+/* Technical and Content & trust are both scored from one fetch of the
+   homepage. The crawler (lib/crawl.mjs) retried its start page from 3 October
+   2026; these two fetches did not, so a single dropped connection could still
+   score a firm as if it had no website — Technical to 0, Content excluded.
+   Retries the same way: on a transient failure only, with a growing pause.
+   The last answer stands: the final response is returned, the final error
+   thrown, so callers read the result exactly as they read fetchWithTimeout. */
+export async function fetchHomepage(url, opts = {}, timeoutMs = 15000, {
+	retries = HOMEPAGE_RETRIES,
+	retryDelayMs = HOMEPAGE_RETRY_DELAY_MS,
+	fetchImpl = null,
+	sleep = (ms) => new Promise((r) => setTimeout(r, ms)),
+} = {}) {
+	let last = { res: null, err: null };
+	for (let attempt = 0; attempt <= retries; attempt++) {
+		if (attempt > 0) await sleep(retryDelayMs * attempt);
+		try {
+			const res = await fetchWithTimeout(url, opts, timeoutMs, fetchImpl);
+			last = { res, err: null };
+		} catch (err) {
+			last = { res: null, err };
+		}
+		if (!isTransientFailure(last.res, last.err)) break;
+	}
+	if (last.err) throw last.err;
+	return last.res;
 }
 
 /* clamp a number into [0,100] */
