@@ -121,12 +121,12 @@
       "live": true
     },
     "content": {
-      "scored": 6,
+      "scored": 7,
       "total": 8,
       "live": true
     }
   },
-  "overallMedian": 64.5,
+  "overallMedian": 65.5,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
@@ -135,7 +135,7 @@
     "local": 77,
     "visibility": 38,
     "ai": 30,
-    "content": 77
+    "content": 83
   },
   "businesses": [
     {
@@ -171,9 +171,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 2092,
+        "wordCount": 2159,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -383,6 +385,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -533,14 +537,14 @@
       "rank": 3,
       "name": "Pembridge Solicitors",
       "url": "https://pembridgesolicitors.co.uk/",
-      "digitalVisibilityScore": 67,
+      "digitalVisibilityScore": 69,
       "pillarScores": {
         "speed": 59,
         "technical": 100,
         "local": 81,
         "visibility": 46,
         "ai": 40,
-        "content": 58
+        "content": 83
       },
       "includedPillars": [
         "speed",
@@ -561,11 +565,13 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 922,
-        "contentFreshnessDays": 512
+        "wordCount": 1411,
+        "contentFreshnessDays": 45
       },
       "localMatch": {
         "placeId": "ChIJs2EahegbcUgRPzkHT20zCgE",
@@ -744,10 +750,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 2850,
-        "contentFreshnessDays": 3233
+        "wordCount": 2875,
+        "contentFreshnessDays": 3267
       },
       "localMatch": {
         "placeId": null,
@@ -894,14 +902,14 @@
       "rank": 5,
       "name": "Hine Solicitors",
       "url": "https://www.hinesolicitors.com/",
-      "digitalVisibilityScore": 63,
+      "digitalVisibilityScore": 65,
       "pillarScores": {
         "speed": 81,
         "technical": 100,
         "local": 73,
         "visibility": 33,
         "ai": 0,
-        "content": 75
+        "content": 95
       },
       "includedPillars": [
         "speed",
@@ -922,10 +930,12 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 734,
+        "wordCount": 735,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -1102,10 +1112,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 438,
-        "contentFreshnessDays": 3
+        "contentFreshnessDays": 2
       },
       "localMatch": {
         "placeId": "ChIJ5ZOO0p4bcUgRP0wBC2WvO4k",
@@ -1283,9 +1295,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1960,
+        "wordCount": 1962,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -1435,40 +1449,41 @@
       "rank": 8,
       "name": "HCR Law",
       "url": "https://www.hcrlaw.com/",
-      "digitalVisibilityScore": 51,
+      "digitalVisibilityScore": 55,
       "pillarScores": {
         "speed": 95,
         "technical": 33,
         "local": 71,
         "visibility": 0,
         "ai": 40,
-        "content": null
+        "content": 87
       },
       "includedPillars": [
         "speed",
         "technical",
         "local",
         "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
+        "ai",
         "content"
       ],
+      "excludedPillars": [],
       "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null,
-        "hasBlogLink": null,
-        "wordCount": null,
-        "contentFreshnessDays": null
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 1932,
+        "contentFreshnessDays": 1034
       },
       "localMatch": {
         "placeId": "ChIJTxwZYb0bcUgRvYXwN9J9TsE",

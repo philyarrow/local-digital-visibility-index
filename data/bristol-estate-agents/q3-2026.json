@@ -135,21 +135,21 @@
     "local": 80,
     "visibility": 29,
     "ai": 10,
-    "content": 66
+    "content": 62
   },
   "businesses": [
     {
       "rank": 1,
       "name": "CJ Hole",
       "url": "https://www.cjhole.co.uk/",
-      "digitalVisibilityScore": 79,
+      "digitalVisibilityScore": 77,
       "pillarScores": {
         "speed": 77,
         "technical": 100,
         "local": 86,
         "visibility": 52,
         "ai": 80,
-        "content": 66
+        "content": 49
       },
       "includedPillars": [
         "speed",
@@ -169,12 +169,14 @@
         "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": true,
+        "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 690,
-        "contentFreshnessDays": 870
+        "wordCount": 697,
+        "contentFreshnessDays": 904
       },
       "localMatch": {
         "placeId": "ChIJmQC1VwyScUgR8eWXgcNIbZU",
@@ -383,6 +385,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 796,
@@ -571,14 +575,14 @@
       "rank": 3,
       "name": "Allen & Harris",
       "url": "https://www.allenandharris.co.uk/",
-      "digitalVisibilityScore": 67,
+      "digitalVisibilityScore": 69,
       "pillarScores": {
         "speed": 74,
         "technical": 88,
         "local": 89,
         "visibility": 37,
         "ai": 20,
-        "content": 80
+        "content": 100
       },
       "includedPillars": [
         "speed",
@@ -599,10 +603,12 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 1068,
+        "wordCount": 1073,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -779,9 +785,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 1110,
+        "wordCount": 1121,
         "contentFreshnessDays": 0
       },
       "localMatch": {
@@ -986,10 +994,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1977,
-        "contentFreshnessDays": 2
+        "wordCount": 1997,
+        "contentFreshnessDays": 1
       },
       "localMatch": {
         "placeId": "ChIJq6pqE0GOcUgR1aIgJ8-I2UQ",
@@ -1167,9 +1177,11 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 429,
+        "wordCount": 417,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -1349,16 +1361,16 @@
     },
     {
       "rank": 7,
-      "name": "Knight Frank Bristol",
-      "url": "https://www.knightfrank.co.uk/offices/bristol-estate-agents",
-      "digitalVisibilityScore": 61,
+      "name": "Elephant Estate Agents",
+      "url": "https://www.elephantlovesbristol.co.uk/",
+      "digitalVisibilityScore": 60,
       "pillarScores": {
-        "speed": 45,
+        "speed": 77,
         "technical": 88,
-        "local": 78,
-        "visibility": 32,
-        "ai": 60,
-        "content": 50
+        "local": 80,
+        "visibility": 26,
+        "ai": 20,
+        "content": 41
       },
       "includedPillars": [
         "speed",
@@ -1379,40 +1391,42 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a role: \"Matthew Bailey, director\"",
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 989,
-        "contentFreshnessDays": 11
+        "wordCount": 167,
+        "contentFreshnessDays": 3677
       },
       "localMatch": {
-        "placeId": "ChIJ-YTZSOiNcUgRDDVqWsKAo70",
+        "placeId": "ChIJuRoBdL6NcUgRp2SQKbbmpr0",
         "matchedBy": "domain"
       },
       "context": {
         "crawl": {
           "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.knightfrank.co.uk/offices/bristol-estate-agents",
+          "startUrl": "https://www.elephantlovesbristol.co.uk/",
           "pagesCrawled": 25,
-          "pagesDiscovered": 322,
-          "internalLinks": 1883,
-          "avgInternalLinksPerPage": 75.3,
-          "maxDepthReached": 1,
-          "genericAnchors": 1,
-          "genericAnchorRatio": 0.001,
+          "pagesDiscovered": 54,
+          "internalLinks": 476,
+          "avgInternalLinksPerPage": 19,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
           "keyPageDepth": {
             "contact": 1,
             "about": 1,
-            "team": 2,
-            "services": 2
+            "team": null,
+            "services": null
           },
           "orphanCandidates": null,
-          "sitemapUrls": 3181,
+          "sitemapUrls": 15,
           "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": false,
+          "sitemapIsIndex": true,
           "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-28",
-          "sitemapStaleDays": 2,
+          "sitemapNewestLastmod": "2026-08-26",
+          "sitemapStaleDays": 3,
           "sitemapSampleChecked": 5,
           "sitemapSampleResolved": 5,
           "robotsDisallowedAll": false,
@@ -1424,13 +1438,13 @@
           "source": "Chrome UX Report (field data, 28-day p75)",
           "available": true,
           "formFactor": "PHONE",
-          "lcpMs": 4003,
-          "inpMs": 219,
-          "cls": 0.13,
-          "lcpGood": false,
-          "inpGood": false,
-          "clsGood": false,
-          "passesCwv": false,
+          "lcpMs": 1315,
+          "inpMs": 120,
+          "cls": 0.06,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
           "error": null
         },
         "companies": {
@@ -1456,19 +1470,19 @@
         "lighthouse": {
           "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
           "strategy": "mobile",
-          "performance": 68,
-          "accessibility": 96,
-          "bestPractices": 100,
-          "seo": 100,
-          "lcpMs": 11460,
-          "tbtMs": 255,
-          "clsScore": 0,
-          "fcpMs": 1057,
-          "speedIndexMs": 4203,
+          "performance": 61,
+          "accessibility": 88,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 42100,
+          "tbtMs": 121,
+          "clsScore": 0.05,
+          "fcpMs": 5001,
+          "speedIndexMs": 5001,
           "failing": [
             {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
               "score": 0
             },
             {
@@ -1477,23 +1491,8 @@
               "score": 0
             },
             {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "bootup-time",
-              "title": "Reduce JavaScript execution time",
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
               "score": 0
             },
             {
@@ -1502,8 +1501,23 @@
               "score": 0
             },
             {
-              "id": "aria-dialog-name",
-              "title": "Elements with `role=\"dialog\"` or `role=\"alertdialog\"` do not have accessible names.",
+              "id": "list",
+              "title": "Lists do not contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
               "score": 0
             }
           ],
@@ -1511,17 +1525,17 @@
         },
         "backlinks": {
           "source": "DataForSEO backlinks/summary",
-          "target": "knightfrank.co.uk",
-          "rank": 426,
-          "backlinks": 134562,
-          "referringDomains": 6155,
-          "referringMainDomains": 5710,
-          "referringPages": 109316,
-          "brokenBacklinks": 9832,
+          "target": "elephantlovesbristol.co.uk",
+          "rank": 165,
+          "backlinks": 354,
+          "referringDomains": 76,
+          "referringMainDomains": 76,
+          "referringPages": 249,
+          "brokenBacklinks": 26,
           "referringLinksTypes": {
-            "anchor": 93157
+            "anchor": 171
           },
-          "firstSeen": "2019-01-16 02:23:57 +00:00",
+          "firstSeen": "2021-07-23 20:01:10 +00:00",
           "lostDate": null
         }
       }
@@ -1559,6 +1573,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 498,
@@ -1707,6 +1723,187 @@
     },
     {
       "rank": 9,
+      "name": "Knight Frank Bristol",
+      "url": "https://www.knightfrank.co.uk/offices/bristol-estate-agents",
+      "digitalVisibilityScore": 59,
+      "pillarScores": {
+        "speed": 45,
+        "technical": 88,
+        "local": 78,
+        "visibility": 32,
+        "ai": 60,
+        "content": 33
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 1537,
+        "contentFreshnessDays": 45
+      },
+      "localMatch": {
+        "placeId": "ChIJ-YTZSOiNcUgRDDVqWsKAo70",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.knightfrank.co.uk/offices/bristol-estate-agents",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 322,
+          "internalLinks": 1883,
+          "avgInternalLinksPerPage": 75.3,
+          "maxDepthReached": 1,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.001,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 2,
+            "services": 2
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 3181,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-28",
+          "sitemapStaleDays": 2,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 4003,
+          "inpMs": 219,
+          "cls": 0.13,
+          "lcpGood": false,
+          "inpGood": false,
+          "clsGood": false,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 68,
+          "accessibility": 96,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 11460,
+          "tbtMs": 255,
+          "clsScore": 0,
+          "fcpMs": 1057,
+          "speedIndexMs": 4203,
+          "failing": [
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "aria-dialog-name",
+              "title": "Elements with `role=\"dialog\"` or `role=\"alertdialog\"` do not have accessible names.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "knightfrank.co.uk",
+          "rank": 426,
+          "backlinks": 134562,
+          "referringDomains": 6155,
+          "referringMainDomains": 5710,
+          "referringPages": 109316,
+          "brokenBacklinks": 9832,
+          "referringLinksTypes": {
+            "anchor": 93157
+          },
+          "firstSeen": "2019-01-16 02:23:57 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 10,
       "name": "Maggs & Allen",
       "url": "https://www.maggsandallen.co.uk/",
       "digitalVisibilityScore": 59,
@@ -1738,9 +1935,11 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 1038,
+        "wordCount": 1031,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -1885,7 +2084,7 @@
       }
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Richard Harding",
       "url": "https://www.richardharding.co.uk/",
       "digitalVisibilityScore": 59,
@@ -1917,10 +2116,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 542,
-        "contentFreshnessDays": 1998
+        "wordCount": 547,
+        "contentFreshnessDays": 2032
       },
       "localMatch": {
         "placeId": "ChIJy1l7E-mNcUgRCN6NWGzWIWY",
@@ -2064,185 +2265,6 @@
       }
     },
     {
-      "rank": 11,
-      "name": "Elephant Estate Agents",
-      "url": "https://www.elephantlovesbristol.co.uk/",
-      "digitalVisibilityScore": 58,
-      "pillarScores": {
-        "speed": 77,
-        "technical": 88,
-        "local": 80,
-        "visibility": 26,
-        "ai": 20,
-        "content": 24
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 167,
-        "contentFreshnessDays": 3643
-      },
-      "localMatch": {
-        "placeId": "ChIJuRoBdL6NcUgRp2SQKbbmpr0",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.elephantlovesbristol.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 54,
-          "internalLinks": 476,
-          "avgInternalLinksPerPage": 19,
-          "maxDepthReached": 2,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 15,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-26",
-          "sitemapStaleDays": 3,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 1315,
-          "inpMs": 120,
-          "cls": 0.06,
-          "lcpGood": true,
-          "inpGood": true,
-          "clsGood": true,
-          "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 61,
-          "accessibility": 88,
-          "bestPractices": 96,
-          "seo": 92,
-          "lcpMs": 42100,
-          "tbtMs": 121,
-          "clsScore": 0.05,
-          "fcpMs": 5001,
-          "speedIndexMs": 5001,
-          "failing": [
-            {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "list",
-              "title": "Lists do not contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "elephantlovesbristol.co.uk",
-          "rank": 165,
-          "backlinks": 354,
-          "referringDomains": 76,
-          "referringMainDomains": 76,
-          "referringPages": 249,
-          "brokenBacklinks": 26,
-          "referringLinksTypes": {
-            "anchor": 171
-          },
-          "firstSeen": "2021-07-23 20:01:10 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 12,
       "name": "Besley Hill",
       "url": "https://www.besleyhill.co.uk/",
@@ -2275,10 +2297,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 816,
-        "contentFreshnessDays": 1017
+        "contentFreshnessDays": 1051
       },
       "localMatch": {
         "placeId": "ChIJ__-zgdyPcUgRQnEMxiyWZ_A",
@@ -2454,10 +2478,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 720,
-        "contentFreshnessDays": 140
+        "contentFreshnessDays": 174
       },
       "localMatch": {
         "placeId": "ChIJy_aDkgeScUgRH-n60RK-X4w",
@@ -2666,9 +2692,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1368,
+        "wordCount": 1378,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -2845,10 +2873,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 313,
-        "contentFreshnessDays": 1256
+        "contentFreshnessDays": 1290
       },
       "localMatch": {
         "placeId": "ChIJx5WgcumNcUgRjMjpBYkn8fQ",
@@ -3024,9 +3054,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 202,
+        "wordCount": 203,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -3240,6 +3272,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 530,
@@ -3420,10 +3454,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 34,
-        "contentFreshnessDays": 2283
+        "contentFreshnessDays": 2317
       },
       "localMatch": {
         "placeId": null,

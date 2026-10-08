@@ -126,7 +126,7 @@
       "live": true
     }
   },
-  "overallMedian": 66,
+  "overallMedian": 68,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
@@ -135,7 +135,7 @@
     "local": 84,
     "visibility": 42,
     "ai": 40,
-    "content": 70
+    "content": 80
   },
   "businesses": [
     {
@@ -171,10 +171,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 1797,
-        "contentFreshnessDays": 1607
+        "wordCount": 1807,
+        "contentFreshnessDays": 1641
       },
       "localMatch": {
         "placeId": "ChIJG2p3-3eBcUgRFi4ELV4VaBI",
@@ -385,9 +387,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 3839,
+        "wordCount": 3183,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -570,15 +574,216 @@
     },
     {
       "rank": 3,
-      "name": "Savills Bath",
-      "url": "https://www.savills.co.uk/estate-agents/south-west-england/somerset/savills-bath.aspx",
-      "digitalVisibilityScore": 74,
+      "name": "Madison Oakley",
+      "url": "https://www.madisonoakley.co.uk/",
+      "digitalVisibilityScore": 72,
       "pillarScores": {
-        "speed": 69,
-        "technical": 63,
-        "local": 83,
+        "speed": 75,
+        "technical": 88,
+        "local": 79,
         "visibility": 38,
-        "ai": 100,
+        "ai": 60,
+        "content": 87
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 1033,
+        "contentFreshnessDays": 3603
+      },
+      "localMatch": {
+        "placeId": "ChIJ8YvuwjqBcUgRPKPMkSveH5Y",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.madisonoakley.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 136,
+          "internalLinks": 866,
+          "avgInternalLinksPerPage": 34.6,
+          "maxDepthReached": 1,
+          "genericAnchors": 1,
+          "genericAnchorRatio": 0.001,
+          "keyPageDepth": {
+            "contact": null,
+            "about": 1,
+            "team": 1,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 207,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-07-18",
+          "sitemapStaleDays": 43,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1317,
+          "inpMs": 58,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 58,
+          "accessibility": 83,
+          "bestPractices": 100,
+          "seo": 85,
+          "lcpMs": 12226,
+          "tbtMs": 117,
+          "clsScore": 0,
+          "fcpMs": 6151,
+          "speedIndexMs": 6754,
+          "failing": [
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 17,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 3
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 2,
+          "placeTopics": null,
+          "firstSeen": "2024-07-19 14:52:26 +00:00",
+          "lastUpdated": "2026-06-30 14:45:37 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "madisonoakley.co.uk",
+          "rank": 165,
+          "backlinks": 1066,
+          "referringDomains": 155,
+          "referringMainDomains": 150,
+          "referringPages": 979,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 919
+          },
+          "firstSeen": "2019-02-17 07:32:47 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "name": "Martin & Co Bath",
+      "url": "https://www.martinco.com/estate-agents-and-letting-agents/branch/bath/",
+      "digitalVisibilityScore": 72,
+      "pillarScores": {
+        "speed": 56,
+        "technical": 100,
+        "local": 91,
+        "visibility": 46,
+        "ai": 40,
         "content": 100
       },
       "includedPillars": [
@@ -601,6 +806,222 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 1348,
+        "contentFreshnessDays": 43
+      },
+      "localMatch": {
+        "placeId": "ChIJfx9tkW2BcUgR6ewjU5kcxfI",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.martinco.com/estate-agents-and-letting-agents/branch/bath/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 315,
+          "internalLinks": 4005,
+          "avgInternalLinksPerPage": 160.2,
+          "maxDepthReached": 1,
+          "genericAnchors": 23,
+          "genericAnchorRatio": 0.006,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 2,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 1000,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-26",
+          "sitemapStaleDays": 3,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 1591,
+          "inpMs": 223,
+          "cls": 0.04,
+          "lcpGood": true,
+          "inpGood": false,
+          "clsGood": true,
+          "passesCwv": false,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 51,
+          "accessibility": 93,
+          "bestPractices": 73,
+          "seo": 100,
+          "lcpMs": 26861,
+          "tbtMs": 312,
+          "clsScore": 0,
+          "fcpMs": 4429,
+          "speedIndexMs": 8790,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "heading-order",
+              "title": "Heading elements are not in a sequentially-descending order",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 23,
+          "ratingDistribution": {
+            "1": 16,
+            "2": 0,
+            "3": 2,
+            "4": 8,
+            "5": 218
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": [
+            "Estate agent"
+          ],
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 23,
+          "placeTopics": {
+            "helpful staff": 103,
+            "informative staff": 13,
+            "property viewing": 8,
+            "quick responses": 23,
+            "efficient team": 13,
+            "letting agents": 12,
+            "tenancy": 26,
+            "accommodating staff": 17,
+            "moving in process": 4,
+            "feeling of security": 2
+          },
+          "firstSeen": "2026-06-25 07:46:42 +00:00",
+          "lastUpdated": "2026-06-25 07:46:42 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "martinco.com",
+          "rank": 470,
+          "backlinks": 62121,
+          "referringDomains": 1564,
+          "referringMainDomains": 1494,
+          "referringPages": 44380,
+          "brokenBacklinks": 47399,
+          "referringLinksTypes": {
+            "anchor": 39921
+          },
+          "firstSeen": "2019-01-16 06:15:40 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "name": "Savills Bath",
+      "url": "https://www.savills.co.uk/estate-agents/south-west-england/somerset/savills-bath.aspx",
+      "digitalVisibilityScore": 72,
+      "pillarScores": {
+        "speed": 69,
+        "technical": 63,
+        "local": 83,
+        "visibility": 38,
+        "ai": 100,
+        "content": 80
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 4036,
@@ -782,219 +1203,7 @@
       }
     },
     {
-      "rank": 4,
-      "name": "Martin & Co Bath",
-      "url": "https://www.martinco.com/estate-agents-and-letting-agents/branch/bath/",
-      "digitalVisibilityScore": 72,
-      "pillarScores": {
-        "speed": 56,
-        "technical": 100,
-        "local": 91,
-        "visibility": 46,
-        "ai": 40,
-        "content": 100
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true,
-        "hasBlogLink": true,
-        "wordCount": 1347,
-        "contentFreshnessDays": 9
-      },
-      "localMatch": {
-        "placeId": "ChIJfx9tkW2BcUgR6ewjU5kcxfI",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.martinco.com/estate-agents-and-letting-agents/branch/bath/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 315,
-          "internalLinks": 4005,
-          "avgInternalLinksPerPage": 160.2,
-          "maxDepthReached": 1,
-          "genericAnchors": 23,
-          "genericAnchorRatio": 0.006,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": 2,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 1000,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-26",
-          "sitemapStaleDays": 3,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 1591,
-          "inpMs": 223,
-          "cls": 0.04,
-          "lcpGood": true,
-          "inpGood": false,
-          "clsGood": true,
-          "passesCwv": false,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 51,
-          "accessibility": 93,
-          "bestPractices": 73,
-          "seo": 100,
-          "lcpMs": 26861,
-          "tbtMs": 312,
-          "clsScore": 0,
-          "fcpMs": 4429,
-          "speedIndexMs": 8790,
-          "failing": [
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "heading-order",
-              "title": "Heading elements are not in a sequentially-descending order",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 23,
-          "ratingDistribution": {
-            "1": 16,
-            "2": 0,
-            "3": 2,
-            "4": 8,
-            "5": 218
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": [
-            "Estate agent"
-          ],
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 23,
-          "placeTopics": {
-            "helpful staff": 103,
-            "informative staff": 13,
-            "property viewing": 8,
-            "quick responses": 23,
-            "efficient team": 13,
-            "letting agents": 12,
-            "tenancy": 26,
-            "accommodating staff": 17,
-            "moving in process": 4,
-            "feeling of security": 2
-          },
-          "firstSeen": "2026-06-25 07:46:42 +00:00",
-          "lastUpdated": "2026-06-25 07:46:42 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "martinco.com",
-          "rank": 470,
-          "backlinks": 62121,
-          "referringDomains": 1564,
-          "referringMainDomains": 1494,
-          "referringPages": 44380,
-          "brokenBacklinks": 47399,
-          "referringLinksTypes": {
-            "anchor": 39921
-          },
-          "firstSeen": "2019-01-16 06:15:40 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 5,
+      "rank": 6,
       "name": "Cobb Farr",
       "url": "https://www.cobbfarr.com/",
       "digitalVisibilityScore": 71,
@@ -1026,10 +1235,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1529,
-        "contentFreshnessDays": 1454
+        "wordCount": 1489,
+        "contentFreshnessDays": 1488
       },
       "localMatch": {
         "placeId": "ChIJQT-1LGuBcUgRPl6CmlJIVmY",
@@ -1132,216 +1343,17 @@
       }
     },
     {
-      "rank": 6,
-      "name": "Madison Oakley",
-      "url": "https://www.madisonoakley.co.uk/",
-      "digitalVisibilityScore": 70,
-      "pillarScores": {
-        "speed": 75,
-        "technical": 88,
-        "local": 79,
-        "visibility": 38,
-        "ai": 60,
-        "content": 70
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true,
-        "hasBlogLink": true,
-        "wordCount": 1025,
-        "contentFreshnessDays": 3569
-      },
-      "localMatch": {
-        "placeId": "ChIJ8YvuwjqBcUgRPKPMkSveH5Y",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.madisonoakley.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 136,
-          "internalLinks": 866,
-          "avgInternalLinksPerPage": 34.6,
-          "maxDepthReached": 1,
-          "genericAnchors": 1,
-          "genericAnchorRatio": 0.001,
-          "keyPageDepth": {
-            "contact": null,
-            "about": 1,
-            "team": 1,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 207,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-07-18",
-          "sitemapStaleDays": 43,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 1317,
-          "inpMs": 58,
-          "cls": 0,
-          "lcpGood": true,
-          "inpGood": true,
-          "clsGood": true,
-          "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 58,
-          "accessibility": 83,
-          "bestPractices": 100,
-          "seo": 85,
-          "lcpMs": 12226,
-          "tbtMs": 117,
-          "clsScore": 0,
-          "fcpMs": 6151,
-          "speedIndexMs": 6754,
-          "failing": [
-            {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 0
-            },
-            {
-              "id": "link-text",
-              "title": "Links do not have descriptive text",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "image-alt",
-              "title": "Image elements do not have `[alt]` attributes",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 17,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 3
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 2,
-          "placeTopics": null,
-          "firstSeen": "2024-07-19 14:52:26 +00:00",
-          "lastUpdated": "2026-06-30 14:45:37 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "madisonoakley.co.uk",
-          "rank": 165,
-          "backlinks": 1066,
-          "referringDomains": 155,
-          "referringMainDomains": 150,
-          "referringPages": 979,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 919
-          },
-          "firstSeen": "2019-02-17 07:32:47 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 7,
-      "name": "Strattons and Partners",
-      "url": "https://www.strattonsandpartners.com/",
+      "name": "Aspire To Move",
+      "url": "https://aspiretomove.co.uk/",
       "digitalVisibilityScore": 68,
       "pillarScores": {
-        "speed": 76,
-        "technical": 63,
-        "local": 84,
-        "visibility": 31,
-        "ai": 60,
-        "content": 95
+        "speed": 73,
+        "technical": 75,
+        "local": 100,
+        "visibility": 38,
+        "ai": 20,
+        "content": 100
       },
       "includedPillars": [
         "speed",
@@ -1363,219 +1375,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "introduces themselves: \"I'm Ella, I've recently started at Aspire as a p…\"",
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 799,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJK5YCVk-BcUgRiTp3zTNgTbQ",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.strattonsandpartners.com/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 280,
-          "internalLinks": 1178,
-          "avgInternalLinksPerPage": 47.1,
-          "maxDepthReached": 2,
-          "genericAnchors": 42,
-          "genericAnchorRatio": 0.036,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": null,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": true,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": true,
-          "formFactor": "PHONE",
-          "lcpMs": 977,
-          "inpMs": 81,
-          "cls": 0,
-          "lcpGood": true,
-          "inpGood": true,
-          "clsGood": true,
-          "passesCwv": true,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": "registered address does not mention Bath"
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 64,
-          "accessibility": 69,
-          "bestPractices": 92,
-          "seo": 92,
-          "lcpMs": 8131,
-          "tbtMs": 97,
-          "clsScore": 0,
-          "fcpMs": 3468,
-          "speedIndexMs": 5418,
-          "failing": [
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "link-in-text-block",
-              "title": "Links rely on color to be distinguishable.",
-              "score": 0
-            },
-            {
-              "id": "button-name",
-              "title": "Buttons do not have an accessible name",
-              "score": 0
-            },
-            {
-              "id": "errors-in-console",
-              "title": "Browser errors were logged to the console",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 8,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 1,
-            "3": 0,
-            "4": 0,
-            "5": 271
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": true,
-          "services": 6,
-          "placeTopics": {
-            "helpful staff": 110,
-            "supportive staff": 43,
-            "first house purchase": 15,
-            "solicitor recommendation": 15,
-            "selling property": 43,
-            "sale process": 17,
-            "regular updates": 11,
-            "quick responses": 13,
-            "issue resolution": 8,
-            "valuation": 7
-          },
-          "firstSeen": "2024-07-17 00:29:02 +00:00",
-          "lastUpdated": "2026-06-29 21:07:40 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "strattonsandpartners.com",
-          "rank": 185,
-          "backlinks": 1597,
-          "referringDomains": 64,
-          "referringMainDomains": 59,
-          "referringPages": 1472,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 1469
-          },
-          "firstSeen": "2023-11-13 16:53:12 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 8,
-      "name": "Aspire To Move",
-      "url": "https://aspiretomove.co.uk/",
-      "digitalVisibilityScore": 66,
-      "pillarScores": {
-        "speed": 73,
-        "technical": 75,
-        "local": 100,
-        "visibility": 38,
-        "ai": 20,
-        "content": 80
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true,
-        "hasBlogLink": true,
-        "wordCount": 1794,
+        "wordCount": 1776,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -1755,6 +1559,218 @@
       }
     },
     {
+      "rank": 8,
+      "name": "Strattons and Partners",
+      "url": "https://www.strattonsandpartners.com/",
+      "digitalVisibilityScore": 68,
+      "pillarScores": {
+        "speed": 76,
+        "technical": 63,
+        "local": 84,
+        "visibility": 31,
+        "ai": 60,
+        "content": 100
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 804,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJK5YCVk-BcUgRiTp3zTNgTbQ",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.strattonsandpartners.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 280,
+          "internalLinks": 1178,
+          "avgInternalLinksPerPage": 47.1,
+          "maxDepthReached": 2,
+          "genericAnchors": 42,
+          "genericAnchorRatio": 0.036,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": true,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": true,
+          "formFactor": "PHONE",
+          "lcpMs": 977,
+          "inpMs": 81,
+          "cls": 0,
+          "lcpGood": true,
+          "inpGood": true,
+          "clsGood": true,
+          "passesCwv": true,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": "registered address does not mention Bath"
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 64,
+          "accessibility": 69,
+          "bestPractices": 92,
+          "seo": 92,
+          "lcpMs": 8131,
+          "tbtMs": 97,
+          "clsScore": 0,
+          "fcpMs": 3468,
+          "speedIndexMs": 5418,
+          "failing": [
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "link-in-text-block",
+              "title": "Links rely on color to be distinguishable.",
+              "score": 0
+            },
+            {
+              "id": "button-name",
+              "title": "Buttons do not have an accessible name",
+              "score": 0
+            },
+            {
+              "id": "errors-in-console",
+              "title": "Browser errors were logged to the console",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 8,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 1,
+            "3": 0,
+            "4": 0,
+            "5": 271
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 6,
+          "placeTopics": {
+            "helpful staff": 110,
+            "supportive staff": 43,
+            "first house purchase": 15,
+            "solicitor recommendation": 15,
+            "selling property": 43,
+            "sale process": 17,
+            "regular updates": 11,
+            "quick responses": 13,
+            "issue resolution": 8,
+            "valuation": 7
+          },
+          "firstSeen": "2024-07-17 00:29:02 +00:00",
+          "lastUpdated": "2026-06-29 21:07:40 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "strattonsandpartners.com",
+          "rank": 185,
+          "backlinks": 1597,
+          "referringDomains": 64,
+          "referringMainDomains": 59,
+          "referringPages": 1472,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 1469
+          },
+          "firstSeen": "2023-11-13 16:53:12 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 9,
       "name": "Bath Stone Property",
       "url": "https://www.bathstoneproperty.com/",
@@ -1787,9 +1803,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
-        "wordCount": 1345,
+        "wordCount": 1348,
         "contentFreshnessDays": 0
       },
       "localMatch": {
@@ -2007,9 +2025,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 2870,
+        "wordCount": 2781,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -2222,10 +2242,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 1017,
-        "contentFreshnessDays": 1061
+        "contentFreshnessDays": 1095
       },
       "localMatch": {
         "placeId": "ChIJtQAFa3CBcUgRAJsxs1vtqbc",
@@ -2403,14 +2425,14 @@
       "rank": 12,
       "name": "Fine & Country Bath",
       "url": "https://www.fineandcountry.co.uk/bath-estate-agents",
-      "digitalVisibilityScore": 61,
+      "digitalVisibilityScore": 59,
       "pillarScores": {
         "speed": 55,
         "technical": 88,
         "local": 75,
         "visibility": 42,
         "ai": 40,
-        "content": 46
+        "content": 35
       },
       "includedPillars": [
         "speed",
@@ -2432,10 +2454,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 467,
-        "contentFreshnessDays": 81
+        "wordCount": 545,
+        "contentFreshnessDays": null
       },
       "localMatch": {
         "placeId": "ChIJmfB2kRSBcUgR4IdVSF2cP7o",
@@ -2611,9 +2635,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
-        "wordCount": 729,
+        "wordCount": 726,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -2799,7 +2825,7 @@
         "local": 91,
         "visibility": 42,
         "ai": 0,
-        "content": 45
+        "content": 50
       },
       "includedPillars": [
         "speed",
@@ -2821,9 +2847,11 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
-        "wordCount": 140,
+        "wordCount": 205,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -3031,9 +3059,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 811,
+        "wordCount": 807,
         "contentFreshnessDays": 0
       },
       "localMatch": {

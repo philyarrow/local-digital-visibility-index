@@ -135,7 +135,7 @@
     "local": 67,
     "visibility": 0,
     "ai": 0,
-    "content": 47.5
+    "content": 49.5
   },
   "businesses": [
     {
@@ -171,10 +171,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 2297,
-        "contentFreshnessDays": 3809
+        "contentFreshnessDays": 3841
       },
       "localMatch": {
         "placeId": "ChIJA4AkhD4FcUgRNId9sZ4MuMU",
@@ -364,10 +366,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 1041,
-        "contentFreshnessDays": 1104
+        "wordCount": 1042,
+        "contentFreshnessDays": 1136
       },
       "localMatch": {
         "placeId": "ChIJ6SSMPm8GcUgR8XtymY_YlBM",
@@ -536,14 +540,14 @@
       "rank": 3,
       "name": "PSK Architect",
       "url": "https://www.psk-architect.co.uk/",
-      "digitalVisibilityScore": 71,
+      "digitalVisibilityScore": 72,
       "pillarScores": {
         "speed": 51,
         "technical": 100,
         "local": 88,
         "visibility": 56,
         "ai": 60,
-        "content": 53
+        "content": 70
       },
       "includedPillars": [
         "speed",
@@ -564,11 +568,13 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a role: \"Paul Karlsson, architect\"",
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1294,
-        "contentFreshnessDays": 1086
+        "contentFreshnessDays": 1118
       },
       "localMatch": {
         "placeId": "ChIJIXUf3uQbcUgRKRSahZh0cdc",
@@ -773,10 +779,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 1629,
-        "contentFreshnessDays": 2332
+        "contentFreshnessDays": 2364
       },
       "localMatch": {
         "placeId": "ChIJh0fI4cMbcUgRkNwxe9GDqfo",
@@ -979,10 +987,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 1075,
-        "contentFreshnessDays": 1432
+        "wordCount": 1071,
+        "contentFreshnessDays": 1464
       },
       "localMatch": {
         "placeId": "ChIJ42bNqPAJcUgRANNLkB2suyQ",
@@ -1175,10 +1185,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1215,
-        "contentFreshnessDays": 1
+        "contentFreshnessDays": 3
       },
       "localMatch": {
         "placeId": "ChIJhwoWankGcUgR0xRVD_wd_C4",
@@ -1353,14 +1365,14 @@
       "rank": 7,
       "name": "Pier Architects Ltd.",
       "url": "https://www.pierarchitects.co.uk/",
-      "digitalVisibilityScore": 60,
+      "digitalVisibilityScore": 62,
       "pillarScores": {
         "speed": 78,
         "technical": 75,
         "local": 88,
         "visibility": 33,
         "ai": 0,
-        "content": 70
+        "content": 87
       },
       "includedPillars": [
         "speed",
@@ -1382,10 +1394,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": false,
+        "teamSource": "about page",
+        "teamEvidence": "named with a role: \"Bill Pier, director\"",
+        "hasCredentialsLink": true,
         "hasBlogLink": true,
-        "wordCount": 996,
-        "contentFreshnessDays": 790
+        "wordCount": 992,
+        "contentFreshnessDays": 822
       },
       "localMatch": {
         "placeId": "ChIJt5KbmJ1mcUgR1kBfQefVCTk",
@@ -1571,16 +1585,16 @@
     },
     {
       "rank": 8,
-      "name": "The Development Studio (TDS)",
-      "url": "https://www.tds.uk/",
+      "name": "Homeplan Drafting Services",
+      "url": "http://www.homeplanservices.co.uk/",
       "digitalVisibilityScore": 60,
       "pillarScores": {
-        "speed": 70,
-        "technical": 100,
-        "local": 67,
-        "visibility": 29,
+        "speed": 79,
+        "technical": 88,
+        "local": 80,
+        "visibility": 41,
         "ai": 0,
-        "content": 83
+        "content": 49
       },
       "includedPillars": [
         "speed",
@@ -1602,357 +1616,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": true,
-        "hasBlogLink": false,
-        "wordCount": 1678,
-        "contentFreshnessDays": 0
-      },
-      "localMatch": {
-        "placeId": "ChIJTSgUVs4HcUgREh3VaUVkNNQ",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.tds.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 26,
-          "internalLinks": 630,
-          "avgInternalLinksPerPage": 25.2,
-          "maxDepthReached": 2,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 10,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2024-02-16",
-          "sitemapStaleDays": 928,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 80,
-          "accessibility": 83,
-          "bestPractices": 100,
-          "seo": 92,
-          "lcpMs": 4877,
-          "tbtMs": 2,
-          "clsScore": 0.071,
-          "fcpMs": 1501,
-          "speedIndexMs": 3036,
-          "failing": [
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "aria-dialog-name",
-              "title": "Elements with `role=\"dialog\"` or `role=\"alertdialog\"` do not have accessible names.",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "listitem",
-              "title": "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements.",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            },
-            {
-              "id": "image-alt",
-              "title": "Image elements do not have `[alt]` attributes",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 24,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 27,
-          "placeTopics": null,
-          "firstSeen": "2026-06-30 13:04:12 +00:00",
-          "lastUpdated": "2026-06-30 13:04:12 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "tds.uk",
-          "rank": 3,
-          "backlinks": 37,
-          "referringDomains": 35,
-          "referringMainDomains": 33,
-          "referringPages": 37,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 37
-          },
-          "firstSeen": "2022-07-23 04:39:54 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 9,
-      "name": "A1 Architecture Ltd",
-      "url": "https://a1architectureltd.com/",
-      "digitalVisibilityScore": 59,
-      "pillarScores": {
-        "speed": 62,
-        "technical": 100,
-        "local": 63,
-        "visibility": 50,
-        "ai": 0,
-        "content": 66
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": true,
-        "hasBlogLink": true,
-        "wordCount": 431,
-        "contentFreshnessDays": 2836
-      },
-      "localMatch": {
-        "placeId": "ChIJecofpNYHcUgRgowhiCEBaZY",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://a1architectureltd.com/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 30,
-          "internalLinks": 700,
-          "avgInternalLinksPerPage": 28,
-          "maxDepthReached": 2,
-          "genericAnchors": 4,
-          "genericAnchorRatio": 0.006,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 3,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2024-09-19",
-          "sitemapStaleDays": 712,
-          "sitemapSampleChecked": 3,
-          "sitemapSampleResolved": 3,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": true,
-          "companyNumber": "11146876",
-          "companyName": "A1 ARCHITECTURE LTD",
-          "companyStatus": "active",
-          "incorporatedOn": "2018-01-12",
-          "ageYears": 8.6,
-          "sicCodes": [
-            "71111"
-          ],
-          "companyType": "ltd",
-          "accountsType": "micro-entity",
-          "accountsMadeUpTo": "2025-01-31",
-          "accountsOverdue": false,
-          "hasCharges": false,
-          "hasInsolvencyHistory": false,
-          "previousNames": null,
-          "matchConfidence": "unique-name-and-town",
-          "registeredAddress": "10 The Anchorage Hempsted, Gloucester, England, GL2 5JW",
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": null,
-          "accessibility": null,
-          "bestPractices": null,
-          "seo": null,
-          "lcpMs": null,
-          "tbtMs": null,
-          "clsScore": null,
-          "fcpMs": null,
-          "speedIndexMs": null,
-          "failing": null,
-          "error": "PSI HTTP 400"
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": true,
-          "services": 47,
-          "placeTopics": null,
-          "firstSeen": "2026-06-26 11:41:38 +00:00",
-          "lastUpdated": "2026-06-26 11:41:38 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "a1architectureltd.com",
-          "rank": 82,
-          "backlinks": 57,
-          "referringDomains": 53,
-          "referringMainDomains": 49,
-          "referringPages": 56,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 55
-          },
-          "firstSeen": "2023-11-13 13:42:17 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 10,
-      "name": "Homeplan Drafting Services",
-      "url": "http://www.homeplanservices.co.uk/",
-      "digitalVisibilityScore": 59,
-      "pillarScores": {
-        "speed": 79,
-        "technical": 88,
-        "local": 80,
-        "visibility": 41,
-        "ai": 0,
-        "content": 33
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
+        "teamSource": "about page",
+        "teamEvidence": "named with a role: \"Glenn Church, owner\"",
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 561,
-        "contentFreshnessDays": 2027
+        "contentFreshnessDays": 2059
       },
       "localMatch": {
         "placeId": "ChIJFRYO5vIFcUgRG26GfFg2Kwc",
@@ -2116,6 +1785,357 @@
       }
     },
     {
+      "rank": 9,
+      "name": "The Development Studio (TDS)",
+      "url": "https://www.tds.uk/",
+      "digitalVisibilityScore": 60,
+      "pillarScores": {
+        "speed": 70,
+        "technical": 100,
+        "local": 67,
+        "visibility": 29,
+        "ai": 0,
+        "content": 80
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": false,
+        "wordCount": 1678,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJTSgUVs4HcUgREh3VaUVkNNQ",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.tds.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 26,
+          "internalLinks": 630,
+          "avgInternalLinksPerPage": 25.2,
+          "maxDepthReached": 2,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 10,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2024-02-16",
+          "sitemapStaleDays": 928,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 80,
+          "accessibility": 83,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 4877,
+          "tbtMs": 2,
+          "clsScore": 0.071,
+          "fcpMs": 1501,
+          "speedIndexMs": 3036,
+          "failing": [
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "aria-dialog-name",
+              "title": "Elements with `role=\"dialog\"` or `role=\"alertdialog\"` do not have accessible names.",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "listitem",
+              "title": "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements.",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            },
+            {
+              "id": "image-alt",
+              "title": "Image elements do not have `[alt]` attributes",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 24,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 27,
+          "placeTopics": null,
+          "firstSeen": "2026-06-30 13:04:12 +00:00",
+          "lastUpdated": "2026-06-30 13:04:12 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "tds.uk",
+          "rank": 3,
+          "backlinks": 37,
+          "referringDomains": 35,
+          "referringMainDomains": 33,
+          "referringPages": 37,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 37
+          },
+          "firstSeen": "2022-07-23 04:39:54 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 10,
+      "name": "A1 Architecture Ltd",
+      "url": "https://a1architectureltd.com/",
+      "digitalVisibilityScore": 59,
+      "pillarScores": {
+        "speed": 62,
+        "technical": 100,
+        "local": 63,
+        "visibility": 50,
+        "ai": 0,
+        "content": 66
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 431,
+        "contentFreshnessDays": 2836
+      },
+      "localMatch": {
+        "placeId": "ChIJecofpNYHcUgRgowhiCEBaZY",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://a1architectureltd.com/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 30,
+          "internalLinks": 700,
+          "avgInternalLinksPerPage": 28,
+          "maxDepthReached": 2,
+          "genericAnchors": 4,
+          "genericAnchorRatio": 0.006,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 3,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2024-09-19",
+          "sitemapStaleDays": 712,
+          "sitemapSampleChecked": 3,
+          "sitemapSampleResolved": 3,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": true,
+          "companyNumber": "11146876",
+          "companyName": "A1 ARCHITECTURE LTD",
+          "companyStatus": "active",
+          "incorporatedOn": "2018-01-12",
+          "ageYears": 8.6,
+          "sicCodes": [
+            "71111"
+          ],
+          "companyType": "ltd",
+          "accountsType": "micro-entity",
+          "accountsMadeUpTo": "2025-01-31",
+          "accountsOverdue": false,
+          "hasCharges": false,
+          "hasInsolvencyHistory": false,
+          "previousNames": null,
+          "matchConfidence": "unique-name-and-town",
+          "registeredAddress": "10 The Anchorage Hempsted, Gloucester, England, GL2 5JW",
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": null,
+          "accessibility": null,
+          "bestPractices": null,
+          "seo": null,
+          "lcpMs": null,
+          "tbtMs": null,
+          "clsScore": null,
+          "fcpMs": null,
+          "speedIndexMs": null,
+          "failing": null,
+          "error": "PSI HTTP 400"
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 47,
+          "placeTopics": null,
+          "firstSeen": "2026-06-26 11:41:38 +00:00",
+          "lastUpdated": "2026-06-26 11:41:38 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "a1architectureltd.com",
+          "rank": 82,
+          "backlinks": 57,
+          "referringDomains": 53,
+          "referringMainDomains": 49,
+          "referringPages": 56,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 55
+          },
+          "firstSeen": "2023-11-13 13:42:17 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 11,
       "name": "SMAC Architecture",
       "url": "https://smacarchitecture.godaddysites.com/",
@@ -2148,6 +2168,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 237,
@@ -2363,6 +2385,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 70,
@@ -2544,199 +2568,6 @@
     },
     {
       "rank": 13,
-      "name": "Francesco Pierazzi Architects",
-      "url": "http://fparchitects.london/",
-      "digitalVisibilityScore": 53,
-      "pillarScores": {
-        "speed": 65,
-        "technical": 100,
-        "local": 56,
-        "visibility": 0,
-        "ai": 0,
-        "content": 83
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": true,
-        "hasBlogLink": true,
-        "wordCount": 610,
-        "contentFreshnessDays": 2188
-      },
-      "localMatch": {
-        "placeId": "ChIJz5bzyzcHcUgRYf_BfsJrh8c",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://fparchitects.london/",
-          "pagesCrawled": 0,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": null,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": null,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": "homepage HTTP 403"
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 61,
-          "accessibility": 87,
-          "bestPractices": 74,
-          "seo": 100,
-          "lcpMs": 19310,
-          "tbtMs": 286,
-          "clsScore": 0.001,
-          "fcpMs": 2914,
-          "speedIndexMs": 4808,
-          "failing": [
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "landmark-one-main",
-              "title": "Document does not have a main landmark.",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "interactive",
-              "title": "Time to Interactive",
-              "score": 0
-            },
-            {
-              "id": "bootup-time",
-              "title": "Reduce JavaScript execution time",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "mainthread-work-breakdown",
-              "title": "Minimize main-thread work",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 1,
-          "ratingDistribution": null,
-          "priceLevel": null,
-          "isClaimed": false,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": false,
-          "services": 5,
-          "placeTopics": null,
-          "firstSeen": "2026-07-09 23:13:58 +00:00",
-          "lastUpdated": "2026-07-09 23:13:58 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "fparchitects.london",
-          "rank": 155,
-          "backlinks": 383,
-          "referringDomains": 120,
-          "referringMainDomains": 119,
-          "referringPages": 364,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 362
-          },
-          "firstSeen": "2019-07-22 03:13:12 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 14,
       "name": "GSSArchitecture",
       "url": "https://www.gssarchitecture.com/",
       "digitalVisibilityScore": 52,
@@ -2768,6 +2599,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 1303,
@@ -2929,7 +2762,7 @@
       }
     },
     {
-      "rank": 15,
+      "rank": 14,
       "name": "Cotswold Architecture + Design | Contemporary Architecture & Extension Specialists",
       "url": "http://www.cotswoldarchitecture.co.uk/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=5118885251409332079",
       "digitalVisibilityScore": 51,
@@ -2961,6 +2794,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 191,
@@ -3141,6 +2976,201 @@
       }
     },
     {
+      "rank": 15,
+      "name": "Francesco Pierazzi Architects",
+      "url": "http://fparchitects.london/",
+      "digitalVisibilityScore": 51,
+      "pillarScores": {
+        "speed": 65,
+        "technical": 100,
+        "local": 56,
+        "visibility": 0,
+        "ai": 0,
+        "content": 66
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": true,
+        "hasBlogLink": true,
+        "wordCount": 604,
+        "contentFreshnessDays": 2220
+      },
+      "localMatch": {
+        "placeId": "ChIJz5bzyzcHcUgRYf_BfsJrh8c",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://fparchitects.london/",
+          "pagesCrawled": 0,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": null,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": null,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": "homepage HTTP 403"
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 61,
+          "accessibility": 87,
+          "bestPractices": 74,
+          "seo": 100,
+          "lcpMs": 19310,
+          "tbtMs": 286,
+          "clsScore": 0.001,
+          "fcpMs": 2914,
+          "speedIndexMs": 4808,
+          "failing": [
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "landmark-one-main",
+              "title": "Document does not have a main landmark.",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 0
+            },
+            {
+              "id": "bootup-time",
+              "title": "Reduce JavaScript execution time",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "mainthread-work-breakdown",
+              "title": "Minimize main-thread work",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 1,
+          "ratingDistribution": null,
+          "priceLevel": null,
+          "isClaimed": false,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": false,
+          "services": 5,
+          "placeTopics": null,
+          "firstSeen": "2026-07-09 23:13:58 +00:00",
+          "lastUpdated": "2026-07-09 23:13:58 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "fparchitects.london",
+          "rank": 155,
+          "backlinks": 383,
+          "referringDomains": 120,
+          "referringMainDomains": 119,
+          "referringPages": 364,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 362
+          },
+          "firstSeen": "2019-07-22 03:13:12 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 16,
       "name": "Joanna James Ltd",
       "url": "https://joanna-james.com/",
@@ -3173,10 +3203,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 1067,
-        "contentFreshnessDays": 31
+        "contentFreshnessDays": 64
       },
       "localMatch": {
         "placeId": "ChIJl436CN4ccUgRmY7iibEqNvI",
@@ -3373,6 +3405,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 391,
@@ -3574,10 +3608,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 44,
-        "contentFreshnessDays": 2804
+        "contentFreshnessDays": 2837
       },
       "localMatch": {
         "placeId": "ChIJKRVD_VEbcUgRLkeOdQbkInM",
@@ -3767,9 +3803,11 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 3026,
+        "wordCount": 3031,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -3970,6 +4008,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -4163,10 +4203,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 335,
-        "contentFreshnessDays": 2078
+        "contentFreshnessDays": 2110
       },
       "localMatch": {
         "placeId": "ChIJp4YuXMwHcUgRB7oU-bAJM6k",
@@ -4356,6 +4398,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 370,
@@ -4553,6 +4597,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 374,
@@ -4717,14 +4763,14 @@
       "rank": 24,
       "name": "Manifest Design Workshop Ltd",
       "url": "http://www.mademanifest.co.uk/",
-      "digitalVisibilityScore": 44,
+      "digitalVisibilityScore": 45,
       "pillarScores": {
         "speed": 36,
         "technical": 75,
         "local": 67,
         "visibility": 0,
         "ai": 20,
-        "content": 50
+        "content": 67
       },
       "includedPillars": [
         "speed",
@@ -4745,7 +4791,9 @@
       },
       "contentChecks": {
         "hasAboutLink": false,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage",
+        "teamEvidence": "named with a role: \"Hugh Conway Morris, director\"",
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 1257,
@@ -4944,6 +4992,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 52,
@@ -5140,6 +5190,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -5333,6 +5385,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 381,
@@ -5532,10 +5586,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 70,
-        "contentFreshnessDays": 2239
+        "contentFreshnessDays": 2271
       },
       "localMatch": {
         "placeId": "ChIJZRrCtncIcUgR8delb0123LA",
@@ -5733,6 +5789,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 654,
@@ -5939,6 +5997,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -6132,10 +6192,12 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 9,
-        "contentFreshnessDays": 4254
+        "contentFreshnessDays": 4286
       },
       "localMatch": {
         "placeId": "ChIJoaO8VbsEcUgRl1wUH_cSrb4",
@@ -6329,6 +6391,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -6523,6 +6587,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -6684,6 +6750,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -6847,6 +6915,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,

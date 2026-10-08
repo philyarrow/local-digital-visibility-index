@@ -272,6 +272,10 @@ function computeBusiness(record, ctx = {}) {
 			content: {
 				hasAboutLink: record.pillars?.content?.hasAboutLink ?? null,
 				hasTeamLink: record.pillars?.content?.hasTeamLink ?? null,
+				/* Where a "yes" came from, and the words that earned it. Null on
+				   snapshots collected before the page itself was read. */
+				teamSource: record.pillars?.content?.teamSource ?? null,
+				teamEvidence: record.pillars?.content?.teamEvidence ?? null,
 				hasCredentialsLink: record.pillars?.content?.hasCredentialsLink ?? null,
 				hasBlogLink: record.pillars?.content?.hasBlogLink ?? null,
 				wordCount: record.pillars?.content?.wordCount ?? null,

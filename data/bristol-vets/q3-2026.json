@@ -121,12 +121,12 @@
       "live": true
     },
     "content": {
-      "scored": 25,
+      "scored": 28,
       "total": 29,
       "live": true
     }
   },
-  "overallMedian": 56,
+  "overallMedian": 57,
   "contextNote": "The `context` block on each business is recorded alongside the measurement and carries NO weight in the Digital Visibility Score. See https://hub.pyc.agency/indices/methodology/.",
   "effectiveWeightsNote": "Weights are renormalised per business around its measured pillars. See each business's effectiveWeights; there is no index-level set.",
   "sectorMedians": {
@@ -135,7 +135,7 @@
     "local": 81,
     "visibility": 21,
     "ai": 0,
-    "content": 60
+    "content": 63
   },
   "businesses": [
     {
@@ -171,10 +171,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 609,
-        "contentFreshnessDays": 1546
+        "contentFreshnessDays": 1578
       },
       "localMatch": {
         "placeId": "ChIJQSwCGwmTcUgRbd3qNokmV4o",
@@ -381,9 +383,11 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 916,
+        "wordCount": 1079,
         "contentFreshnessDays": 0
       },
       "localMatch": {
@@ -591,10 +595,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
-        "wordCount": 616,
-        "contentFreshnessDays": 2489
+        "wordCount": 609,
+        "contentFreshnessDays": 2522
       },
       "localMatch": {
         "placeId": "ChIJNf3Hj5GPcUgRrv8tMIDHu-U",
@@ -801,10 +807,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1826,
-        "contentFreshnessDays": 137
+        "wordCount": 2093,
+        "contentFreshnessDays": 169
       },
       "localMatch": {
         "placeId": "ChIJDXlkIseOcUgR5qRoeERomjY",
@@ -942,16 +950,16 @@
     },
     {
       "rank": 5,
-      "name": "The Grove Vets",
-      "url": "http://www.thegrovevet.com/",
-      "digitalVisibilityScore": 64,
+      "name": "Avon Lodge Veterinary Group",
+      "url": "https://www.avonlodgevets.com/?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
+      "digitalVisibilityScore": 65,
       "pillarScores": {
-        "speed": 77,
-        "technical": 88,
-        "local": 88,
-        "visibility": 38,
-        "ai": 0,
-        "content": 75
+        "speed": 83,
+        "technical": 100,
+        "local": 97,
+        "visibility": 0,
+        "ai": 20,
+        "content": 58
       },
       "includedPillars": [
         "speed",
@@ -973,219 +981,11 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 662,
-        "contentFreshnessDays": null
-      },
-      "localMatch": {
-        "placeId": "ChIJwTbVxGaNcUgR5GkM94_WrWI",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "http://www.thegrovevet.com/",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 16,
-          "avgInternalLinksPerPage": 16,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": null,
-            "team": 1,
-            "services": 1
-          },
-          "orphanCandidates": 2,
-          "sitemapUrls": 2,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2023-02-11",
-          "sitemapStaleDays": 1298,
-          "sitemapSampleChecked": 2,
-          "sitemapSampleResolved": 2,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 70,
-          "accessibility": 100,
-          "bestPractices": 81,
-          "seo": 100,
-          "lcpMs": 5908,
-          "tbtMs": 82,
-          "clsScore": 0.007,
-          "fcpMs": 3343,
-          "speedIndexMs": 4131,
-          "failing": [
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "is-on-https",
-              "title": "Does not use HTTPS",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 14
-            },
-            {
-              "id": "interactive",
-              "title": "Time to Interactive",
-              "score": 15
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 25,
-          "ratingDistribution": {
-            "1": 1,
-            "2": 0,
-            "3": 1,
-            "4": 4,
-            "5": 134
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 41,
-          "placeTopics": {
-            "understanding vets": 5,
-            "social distancing": 4,
-            "independent practice": 4,
-            "nervous dog": 3,
-            "kitten care": 2,
-            "reassuring staff": 4,
-            "honest staff": 2,
-            "clean clinic": 2,
-            "quick appointments": 2,
-            "safe hands": 2
-          },
-          "firstSeen": "2026-06-25 21:02:43 +00:00",
-          "lastUpdated": "2026-06-25 21:02:43 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "thegrovevet.com",
-          "rank": 114,
-          "backlinks": 97,
-          "referringDomains": 58,
-          "referringMainDomains": 56,
-          "referringPages": 93,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 93
-          },
-          "firstSeen": "2022-01-15 05:24:29 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 6,
-      "name": "Avon Lodge Veterinary Group",
-      "url": "https://www.avonlodgevets.com/?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
-      "digitalVisibilityScore": 63,
-      "pillarScores": {
-        "speed": 83,
-        "technical": 100,
-        "local": 97,
-        "visibility": 0,
-        "ai": 20,
-        "content": 42
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr David Tweedle BVetMed\"",
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 314,
+        "wordCount": 320,
         "contentFreshnessDays": 0
       },
       "localMatch": {
@@ -1363,17 +1163,17 @@
       }
     },
     {
-      "rank": 7,
+      "rank": 6,
       "name": "Bristol Animal Rescue Centre Clinic",
       "url": "http://www.bristolarc.org.uk/",
-      "digitalVisibilityScore": 62,
+      "digitalVisibilityScore": 64,
       "pillarScores": {
         "speed": 83,
         "technical": 88,
         "local": 79,
         "visibility": 50,
         "ai": 0,
-        "content": 49
+        "content": 66
       },
       "includedPillars": [
         "speed",
@@ -1394,11 +1194,13 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 498,
-        "contentFreshnessDays": 1457
+        "wordCount": 400,
+        "contentFreshnessDays": 1489
       },
       "localMatch": {
         "placeId": "ChIJS4hPiWGOcUgRK2AOFXl2zcI",
@@ -1577,7 +1379,431 @@
       }
     },
     {
+      "rank": 7,
+      "name": "The Grove Vets",
+      "url": "http://www.thegrovevet.com/",
+      "digitalVisibilityScore": 64,
+      "pillarScores": {
+        "speed": 77,
+        "technical": 88,
+        "local": 88,
+        "visibility": 38,
+        "ai": 0,
+        "content": 75
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 664,
+        "contentFreshnessDays": null
+      },
+      "localMatch": {
+        "placeId": "ChIJwTbVxGaNcUgR5GkM94_WrWI",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "http://www.thegrovevet.com/",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 16,
+          "avgInternalLinksPerPage": 16,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": null,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": 2,
+          "sitemapUrls": 2,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2023-02-11",
+          "sitemapStaleDays": 1298,
+          "sitemapSampleChecked": 2,
+          "sitemapSampleResolved": 2,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 70,
+          "accessibility": 100,
+          "bestPractices": 81,
+          "seo": 100,
+          "lcpMs": 5908,
+          "tbtMs": 82,
+          "clsScore": 0.007,
+          "fcpMs": 3343,
+          "speedIndexMs": 4131,
+          "failing": [
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "is-on-https",
+              "title": "Does not use HTTPS",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 14
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "score": 15
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 25,
+          "ratingDistribution": {
+            "1": 1,
+            "2": 0,
+            "3": 1,
+            "4": 4,
+            "5": 134
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 41,
+          "placeTopics": {
+            "understanding vets": 5,
+            "social distancing": 4,
+            "independent practice": 4,
+            "nervous dog": 3,
+            "kitten care": 2,
+            "reassuring staff": 4,
+            "honest staff": 2,
+            "clean clinic": 2,
+            "quick appointments": 2,
+            "safe hands": 2
+          },
+          "firstSeen": "2026-06-25 21:02:43 +00:00",
+          "lastUpdated": "2026-06-25 21:02:43 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "thegrovevet.com",
+          "rank": 114,
+          "backlinks": 97,
+          "referringDomains": 58,
+          "referringMainDomains": 56,
+          "referringPages": 93,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 93
+          },
+          "firstSeen": "2022-01-15 05:24:29 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 8,
+      "name": "Zetland Vets, Westbury-On-Trym",
+      "url": "https://www.zetlandvets.co.uk/?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
+      "digitalVisibilityScore": 64,
+      "pillarScores": {
+        "speed": 79,
+        "technical": 100,
+        "local": 79,
+        "visibility": 22,
+        "ai": 20,
+        "content": 63
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr David Tweedle BVetMed\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 463,
+        "contentFreshnessDays": 0
+      },
+      "localMatch": {
+        "placeId": "ChIJ_fPMDBqScUgR43U1aFLQTZg",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.zetlandvets.co.uk/?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 60,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "lcpMs": 11939,
+          "tbtMs": 276,
+          "clsScore": 0.014,
+          "fcpMs": 3667,
+          "speedIndexMs": 4269,
+          "failing": [
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 78,
+          "ratingDistribution": {
+            "1": 8,
+            "2": 3,
+            "3": 2,
+            "4": 13,
+            "5": 119
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 75,
+          "placeTopics": {
+            "reassuring vet": 7,
+            "attentive treatment": 2,
+            "welcoming atmosphere": 3,
+            "euthanasia": 2,
+            "efficient staff": 2,
+            "caring staff": 22,
+            "clear explanations": 2,
+            "polite": 2,
+            "above and beyond": 2,
+            "receptionists": 5
+          },
+          "firstSeen": "2024-07-17 01:58:24 +00:00",
+          "lastUpdated": "2026-06-29 22:18:45 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "zetlandvets.co.uk",
+          "rank": 180,
+          "backlinks": 1157,
+          "referringDomains": 330,
+          "referringMainDomains": 278,
+          "referringPages": 1095,
+          "brokenBacklinks": 7,
+          "referringLinksTypes": {
+            "anchor": 1058
+          },
+          "firstSeen": "2019-01-18 09:27:53 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 9,
       "name": "Viking Vets",
       "url": "https://www.vikingvets.com/",
       "digitalVisibilityScore": 62,
@@ -1609,10 +1835,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 285,
-        "contentFreshnessDays": 738
+        "contentFreshnessDays": 771
       },
       "localMatch": {
         "placeId": "ChIJ96HbkkGScUgRHfQGg_pGjPo",
@@ -1790,227 +2018,17 @@
       }
     },
     {
-      "rank": 9,
-      "name": "Zetland Vets, Westbury-On-Trym",
-      "url": "https://www.zetlandvets.co.uk/?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
-      "digitalVisibilityScore": 62,
-      "pillarScores": {
-        "speed": 79,
-        "technical": 100,
-        "local": 79,
-        "visibility": 22,
-        "ai": 20,
-        "content": 46
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 457,
-        "contentFreshnessDays": 0
-      },
-      "localMatch": {
-        "placeId": "ChIJ_fPMDBqScUgR43U1aFLQTZg",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.zetlandvets.co.uk/?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": 0,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": false,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 60,
-          "accessibility": 100,
-          "bestPractices": 100,
-          "seo": 100,
-          "lcpMs": 11939,
-          "tbtMs": 276,
-          "clsScore": 0.014,
-          "fcpMs": 3667,
-          "speedIndexMs": 4269,
-          "failing": [
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "legacy-javascript-insight",
-              "title": "Legacy JavaScript",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 78,
-          "ratingDistribution": {
-            "1": 8,
-            "2": 3,
-            "3": 2,
-            "4": 13,
-            "5": 119
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 75,
-          "placeTopics": {
-            "reassuring vet": 7,
-            "attentive treatment": 2,
-            "welcoming atmosphere": 3,
-            "euthanasia": 2,
-            "efficient staff": 2,
-            "caring staff": 22,
-            "clear explanations": 2,
-            "polite": 2,
-            "above and beyond": 2,
-            "receptionists": 5
-          },
-          "firstSeen": "2024-07-17 01:58:24 +00:00",
-          "lastUpdated": "2026-06-29 22:18:45 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "zetlandvets.co.uk",
-          "rank": 180,
-          "backlinks": 1157,
-          "referringDomains": 330,
-          "referringMainDomains": 278,
-          "referringPages": 1095,
-          "brokenBacklinks": 7,
-          "referringLinksTypes": {
-            "anchor": 1058
-          },
-          "firstSeen": "2019-01-18 09:27:53 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
       "rank": 10,
       "name": "Zetland Vets, Clifton",
       "url": "https://www.cliftonvet.com/?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
-      "digitalVisibilityScore": 60,
+      "digitalVisibilityScore": 62,
       "pillarScores": {
         "speed": 78,
         "technical": 100,
         "local": 86,
         "visibility": 0,
         "ai": 20,
-        "content": 46
+        "content": 63
       },
       "includedPillars": [
         "speed",
@@ -2031,10 +2049,12 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr David Tweedle BVetMed\"",
         "hasCredentialsLink": false,
         "hasBlogLink": false,
-        "wordCount": 457,
+        "wordCount": 463,
         "contentFreshnessDays": 0
       },
       "localMatch": {
@@ -2211,637 +2231,16 @@
     },
     {
       "rank": 11,
-      "name": "Highcroft Referrals",
-      "url": "https://highcroftvetreferrals.co.uk/?utm_source=google&utm_medium=Yext",
-      "digitalVisibilityScore": 58,
-      "pillarScores": {
-        "speed": 77,
-        "technical": 100,
-        "local": 79,
-        "visibility": 0,
-        "ai": 0,
-        "content": 66
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false,
-        "hasBlogLink": true,
-        "wordCount": 609,
-        "contentFreshnessDays": 1546
-      },
-      "localMatch": {
-        "placeId": "ChIJ5Xwx1cOOcUgRFGQ5ePe30J4",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://highcroftvetreferrals.co.uk/?utm_source=google&utm_medium=Yext",
-          "pagesCrawled": 1,
-          "pagesDiscovered": 0,
-          "internalLinks": 0,
-          "avgInternalLinksPerPage": 0,
-          "maxDepthReached": 0,
-          "genericAnchors": 0,
-          "genericAnchorRatio": null,
-          "keyPageDepth": {
-            "contact": null,
-            "about": null,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": null,
-          "sitemapDeclaredInRobots": false,
-          "sitemapIsIndex": false,
-          "sitemapHasLastmod": false,
-          "sitemapNewestLastmod": null,
-          "sitemapStaleDays": null,
-          "sitemapSampleChecked": null,
-          "sitemapSampleResolved": null,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 47,
-          "accessibility": 100,
-          "bestPractices": 100,
-          "seo": 92,
-          "lcpMs": 13285,
-          "tbtMs": 418,
-          "clsScore": 0.04,
-          "fcpMs": 5132,
-          "speedIndexMs": 8546,
-          "failing": [
-            {
-              "id": "redirects",
-              "title": "Avoid multiple page redirects",
-              "score": 0
-            },
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "cache-insight",
-              "title": "Use efficient cache lifetimes",
-              "score": 0
-            },
-            {
-              "id": "document-latency-insight",
-              "title": "Document request latency",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "forced-reflow-insight",
-              "title": "Forced reflow",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 41,
-          "ratingDistribution": {
-            "1": 13,
-            "2": 7,
-            "3": 13,
-            "4": 57,
-            "5": 360
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": false,
-          "services": null,
-          "placeTopics": {
-            "surgery": 14,
-            "compassionate": 10,
-            "nurses": 9,
-            "rabbit": 9,
-            "expert": 7,
-            "reptiles": 6,
-            "pay": 6,
-            "felt": 6,
-            "mind": 5,
-            "insurance": 5
-          },
-          "firstSeen": "2023-11-29 17:11:02 +00:00",
-          "lastUpdated": "2023-11-29 17:11:02 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "highcroftvetreferrals.co.uk",
-          "rank": 94,
-          "backlinks": 74,
-          "referringDomains": 51,
-          "referringMainDomains": 51,
-          "referringPages": 69,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 55
-          },
-          "firstSeen": "2022-06-14 10:30:04 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 12,
-      "name": "Peaceful Paws Vet",
-      "url": "https://www.peacefulpawsvet.co.uk/",
-      "digitalVisibilityScore": 58,
-      "pillarScores": {
-        "speed": 73,
-        "technical": 100,
-        "local": 100,
-        "visibility": 0,
-        "ai": 0,
-        "content": 37
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": false,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 2164,
-        "contentFreshnessDays": 838
-      },
-      "localMatch": {
-        "placeId": "ChIJRYHgILmjlQQR7e035rp0tMo",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://www.peacefulpawsvet.co.uk/",
-          "pagesCrawled": 17,
-          "pagesDiscovered": 16,
-          "internalLinks": 839,
-          "avgInternalLinksPerPage": 49.4,
-          "maxDepthReached": 1,
-          "genericAnchors": 3,
-          "genericAnchorRatio": 0.004,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": null,
-            "services": null
-          },
-          "orphanCandidates": 32,
-          "sitemapUrls": 49,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2026-08-19",
-          "sitemapStaleDays": 13,
-          "sitemapSampleChecked": 5,
-          "sitemapSampleResolved": 5,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": null,
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 56,
-          "accessibility": 91,
-          "bestPractices": 96,
-          "seo": 92,
-          "lcpMs": 13016,
-          "tbtMs": 28,
-          "clsScore": 0,
-          "fcpMs": 10824,
-          "speedIndexMs": 10824,
-          "failing": [
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "image-delivery-insight",
-              "title": "Improve image delivery",
-              "score": 0
-            },
-            {
-              "id": "link-text",
-              "title": "Links do not have descriptive text",
-              "score": 0
-            },
-            {
-              "id": "first-contentful-paint",
-              "title": "First Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            },
-            {
-              "id": "largest-contentful-paint",
-              "title": "Largest Contentful Paint",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 183,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 0,
-            "4": 0,
-            "5": 133
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": true,
-          "hasHours": true,
-          "services": 14,
-          "placeTopics": {
-            "euthanasia": 30,
-            "peaceful atmosphere": 13,
-            "home visit": 6,
-            "explaining the process": 5,
-            "unhurried process": 4,
-            "peaceful passing": 18,
-            "genuine care": 9,
-            "dignified passing": 7,
-            "professional vet": 4,
-            "caring parting": 2
-          },
-          "firstSeen": "2026-06-28 06:00:50 +00:00",
-          "lastUpdated": "2026-06-28 06:00:50 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "peacefulpawsvet.co.uk",
-          "rank": 98,
-          "backlinks": 72,
-          "referringDomains": 58,
-          "referringMainDomains": 56,
-          "referringPages": 64,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 62
-          },
-          "firstSeen": "2024-12-13 10:33:25 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 13,
-      "name": "Golden Valley Vets",
-      "url": "https://goldenvalley.co.uk/",
-      "digitalVisibilityScore": 57,
-      "pillarScores": {
-        "speed": 70,
-        "technical": 100,
-        "local": 77,
-        "visibility": 21,
-        "ai": 0,
-        "content": 45
-      },
-      "includedPillars": [
-        "speed",
-        "technical",
-        "local",
-        "visibility",
-        "ai",
-        "content"
-      ],
-      "excludedPillars": [],
-      "effectiveWeights": {
-        "speed": 20,
-        "technical": 20,
-        "local": 20,
-        "visibility": 15,
-        "ai": 15,
-        "content": 10
-      },
-      "contentChecks": {
-        "hasAboutLink": true,
-        "hasTeamLink": true,
-        "hasCredentialsLink": false,
-        "hasBlogLink": false,
-        "wordCount": 324,
-        "contentFreshnessDays": 2644
-      },
-      "localMatch": {
-        "placeId": "ChIJBYcn78mLcUgReCcBgG7IXyI",
-        "matchedBy": "domain"
-      },
-      "context": {
-        "crawl": {
-          "source": "First-party crawl (robots-respecting)",
-          "startUrl": "https://goldenvalley.co.uk/",
-          "pagesCrawled": 25,
-          "pagesDiscovered": 28,
-          "internalLinks": 326,
-          "avgInternalLinksPerPage": 13,
-          "maxDepthReached": 1,
-          "genericAnchors": 0,
-          "genericAnchorRatio": 0,
-          "keyPageDepth": {
-            "contact": 1,
-            "about": 1,
-            "team": 1,
-            "services": 1
-          },
-          "orphanCandidates": null,
-          "sitemapUrls": 1,
-          "sitemapDeclaredInRobots": true,
-          "sitemapIsIndex": true,
-          "sitemapHasLastmod": true,
-          "sitemapNewestLastmod": "2019-06-05",
-          "sitemapStaleDays": 2644,
-          "sitemapSampleChecked": 1,
-          "sitemapSampleResolved": 1,
-          "robotsDisallowedAll": false,
-          "stoppedBecause": "page cap",
-          "depthLimited": false,
-          "error": null
-        },
-        "crux": {
-          "source": "Chrome UX Report (field data, 28-day p75)",
-          "available": false,
-          "formFactor": "PHONE",
-          "lcpMs": null,
-          "inpMs": null,
-          "cls": null,
-          "lcpGood": null,
-          "inpGood": null,
-          "clsGood": null,
-          "passesCwv": null,
-          "error": null
-        },
-        "companies": {
-          "source": "Companies House public register",
-          "matched": false,
-          "companyNumber": null,
-          "companyName": null,
-          "companyStatus": null,
-          "incorporatedOn": null,
-          "ageYears": null,
-          "sicCodes": null,
-          "companyType": null,
-          "accountsType": null,
-          "accountsMadeUpTo": null,
-          "accountsOverdue": null,
-          "hasCharges": null,
-          "hasInsolvencyHistory": null,
-          "previousNames": null,
-          "matchConfidence": null,
-          "registeredAddress": null,
-          "error": null
-        },
-        "lighthouse": {
-          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
-          "strategy": "mobile",
-          "performance": 87,
-          "accessibility": 66,
-          "bestPractices": 100,
-          "seo": 92,
-          "lcpMs": 3471,
-          "tbtMs": 0,
-          "clsScore": 0,
-          "fcpMs": 2751,
-          "speedIndexMs": 2751,
-          "failing": [
-            {
-              "id": "unused-javascript",
-              "title": "Reduce unused JavaScript",
-              "score": 0
-            },
-            {
-              "id": "lcp-discovery-insight",
-              "title": "LCP request discovery",
-              "score": 0
-            },
-            {
-              "id": "link-name",
-              "title": "Links do not have a discernible name",
-              "score": 0
-            },
-            {
-              "id": "color-contrast",
-              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-              "score": 0
-            },
-            {
-              "id": "render-blocking-insight",
-              "title": "Render-blocking requests",
-              "score": 0
-            },
-            {
-              "id": "network-dependency-tree-insight",
-              "title": "Network dependency tree",
-              "score": 0
-            },
-            {
-              "id": "unused-css-rules",
-              "title": "Reduce unused CSS",
-              "score": 0
-            },
-            {
-              "id": "font-display-insight",
-              "title": "Font display",
-              "score": 0
-            }
-          ],
-          "error": null
-        },
-        "gbpDetail": {
-          "source": "DataForSEO business_listings (area sweep)",
-          "totalPhotos": 2,
-          "ratingDistribution": {
-            "1": 0,
-            "2": 0,
-            "3": 1,
-            "4": 2,
-            "5": 10
-          },
-          "priceLevel": null,
-          "isClaimed": true,
-          "additionalCategories": null,
-          "hasDescription": false,
-          "hasHours": true,
-          "services": 30,
-          "placeTopics": {
-            "caring staff": 2
-          },
-          "firstSeen": "2026-06-27 17:57:44 +00:00",
-          "lastUpdated": "2026-06-27 17:57:44 +00:00"
-        },
-        "backlinks": {
-          "source": "DataForSEO backlinks/summary",
-          "target": "goldenvalley.co.uk",
-          "rank": 170,
-          "backlinks": 408,
-          "referringDomains": 97,
-          "referringMainDomains": 87,
-          "referringPages": 353,
-          "brokenBacklinks": 0,
-          "referringLinksTypes": {
-            "anchor": 350
-          },
-          "firstSeen": "2019-01-18 02:26:54 +00:00",
-          "lostDate": null
-        }
-      }
-    },
-    {
-      "rank": 14,
       "name": "PassPets Bristol",
       "url": "https://www.passpets.co.uk/",
-      "digitalVisibilityScore": 57,
+      "digitalVisibilityScore": 59,
       "pillarScores": {
         "speed": 68,
         "technical": 88,
         "local": 100,
         "visibility": 0,
         "ai": 0,
-        "content": 60
+        "content": 80
       },
       "includedPillars": [
         "speed",
@@ -2862,10 +2261,12 @@
       },
       "contentChecks": {
         "hasAboutLink": true,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr Gemma Nash MRCVS\"",
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 890,
+        "wordCount": 1310,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -3041,17 +2442,17 @@
       }
     },
     {
-      "rank": 15,
+      "rank": 12,
       "name": "Bristol PDSA Pet Hospital",
       "url": "https://www.pdsa.org.uk/",
-      "digitalVisibilityScore": 56,
+      "digitalVisibilityScore": 58,
       "pillarScores": {
         "speed": 69,
         "technical": 75,
         "local": 87,
         "visibility": 39,
         "ai": 0,
-        "content": 35
+        "content": 55
       },
       "includedPillars": [
         "speed",
@@ -3072,10 +2473,12 @@
       },
       "contentChecks": {
         "hasAboutLink": false,
-        "hasTeamLink": false,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 475,
+        "wordCount": 485,
         "contentFreshnessDays": null
       },
       "localMatch": {
@@ -3254,6 +2657,633 @@
       }
     },
     {
+      "rank": 13,
+      "name": "Highcroft Referrals",
+      "url": "https://highcroftvetreferrals.co.uk/?utm_source=google&utm_medium=Yext",
+      "digitalVisibilityScore": 58,
+      "pillarScores": {
+        "speed": 77,
+        "technical": 100,
+        "local": 79,
+        "visibility": 0,
+        "ai": 0,
+        "content": 66
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": true,
+        "wordCount": 609,
+        "contentFreshnessDays": 1578
+      },
+      "localMatch": {
+        "placeId": "ChIJ5Xwx1cOOcUgRFGQ5ePe30J4",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://highcroftvetreferrals.co.uk/?utm_source=google&utm_medium=Yext",
+          "pagesCrawled": 1,
+          "pagesDiscovered": 0,
+          "internalLinks": 0,
+          "avgInternalLinksPerPage": 0,
+          "maxDepthReached": 0,
+          "genericAnchors": 0,
+          "genericAnchorRatio": null,
+          "keyPageDepth": {
+            "contact": null,
+            "about": null,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": null,
+          "sitemapDeclaredInRobots": false,
+          "sitemapIsIndex": false,
+          "sitemapHasLastmod": false,
+          "sitemapNewestLastmod": null,
+          "sitemapStaleDays": null,
+          "sitemapSampleChecked": null,
+          "sitemapSampleResolved": null,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 47,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 13285,
+          "tbtMs": 418,
+          "clsScore": 0.04,
+          "fcpMs": 5132,
+          "speedIndexMs": 8546,
+          "failing": [
+            {
+              "id": "redirects",
+              "title": "Avoid multiple page redirects",
+              "score": 0
+            },
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "score": 0
+            },
+            {
+              "id": "document-latency-insight",
+              "title": "Document request latency",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 41,
+          "ratingDistribution": {
+            "1": 13,
+            "2": 7,
+            "3": 13,
+            "4": 57,
+            "5": 360
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": false,
+          "services": null,
+          "placeTopics": {
+            "surgery": 14,
+            "compassionate": 10,
+            "nurses": 9,
+            "rabbit": 9,
+            "expert": 7,
+            "reptiles": 6,
+            "pay": 6,
+            "felt": 6,
+            "mind": 5,
+            "insurance": 5
+          },
+          "firstSeen": "2023-11-29 17:11:02 +00:00",
+          "lastUpdated": "2023-11-29 17:11:02 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "highcroftvetreferrals.co.uk",
+          "rank": 94,
+          "backlinks": 74,
+          "referringDomains": 51,
+          "referringMainDomains": 51,
+          "referringPages": 69,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 55
+          },
+          "firstSeen": "2022-06-14 10:30:04 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 14,
+      "name": "Peaceful Paws Vet",
+      "url": "https://www.peacefulpawsvet.co.uk/",
+      "digitalVisibilityScore": 58,
+      "pillarScores": {
+        "speed": 73,
+        "technical": 100,
+        "local": 100,
+        "visibility": 0,
+        "ai": 0,
+        "content": 37
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 2196,
+        "contentFreshnessDays": 871
+      },
+      "localMatch": {
+        "placeId": "ChIJRYHgILmjlQQR7e035rp0tMo",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://www.peacefulpawsvet.co.uk/",
+          "pagesCrawled": 17,
+          "pagesDiscovered": 16,
+          "internalLinks": 839,
+          "avgInternalLinksPerPage": 49.4,
+          "maxDepthReached": 1,
+          "genericAnchors": 3,
+          "genericAnchorRatio": 0.004,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": null,
+            "services": null
+          },
+          "orphanCandidates": 32,
+          "sitemapUrls": 49,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2026-08-19",
+          "sitemapStaleDays": 13,
+          "sitemapSampleChecked": 5,
+          "sitemapSampleResolved": 5,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": null,
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 56,
+          "accessibility": 91,
+          "bestPractices": 96,
+          "seo": 92,
+          "lcpMs": 13016,
+          "tbtMs": 28,
+          "clsScore": 0,
+          "fcpMs": 10824,
+          "speedIndexMs": 10824,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "score": 0
+            },
+            {
+              "id": "link-text",
+              "title": "Links do not have descriptive text",
+              "score": 0
+            },
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 183,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 133
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": true,
+          "hasHours": true,
+          "services": 14,
+          "placeTopics": {
+            "euthanasia": 30,
+            "peaceful atmosphere": 13,
+            "home visit": 6,
+            "explaining the process": 5,
+            "unhurried process": 4,
+            "peaceful passing": 18,
+            "genuine care": 9,
+            "dignified passing": 7,
+            "professional vet": 4,
+            "caring parting": 2
+          },
+          "firstSeen": "2026-06-28 06:00:50 +00:00",
+          "lastUpdated": "2026-06-28 06:00:50 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "peacefulpawsvet.co.uk",
+          "rank": 98,
+          "backlinks": 72,
+          "referringDomains": 58,
+          "referringMainDomains": 56,
+          "referringPages": 64,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 62
+          },
+          "firstSeen": "2024-12-13 10:33:25 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
+      "rank": 15,
+      "name": "Golden Valley Vets",
+      "url": "https://goldenvalley.co.uk/",
+      "digitalVisibilityScore": 57,
+      "pillarScores": {
+        "speed": 70,
+        "technical": 100,
+        "local": 77,
+        "visibility": 21,
+        "ai": 0,
+        "content": 45
+      },
+      "includedPillars": [
+        "speed",
+        "technical",
+        "local",
+        "visibility",
+        "ai",
+        "content"
+      ],
+      "excludedPillars": [],
+      "effectiveWeights": {
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
+      },
+      "contentChecks": {
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 324,
+        "contentFreshnessDays": 2677
+      },
+      "localMatch": {
+        "placeId": "ChIJBYcn78mLcUgReCcBgG7IXyI",
+        "matchedBy": "domain"
+      },
+      "context": {
+        "crawl": {
+          "source": "First-party crawl (robots-respecting)",
+          "startUrl": "https://goldenvalley.co.uk/",
+          "pagesCrawled": 25,
+          "pagesDiscovered": 28,
+          "internalLinks": 326,
+          "avgInternalLinksPerPage": 13,
+          "maxDepthReached": 1,
+          "genericAnchors": 0,
+          "genericAnchorRatio": 0,
+          "keyPageDepth": {
+            "contact": 1,
+            "about": 1,
+            "team": 1,
+            "services": 1
+          },
+          "orphanCandidates": null,
+          "sitemapUrls": 1,
+          "sitemapDeclaredInRobots": true,
+          "sitemapIsIndex": true,
+          "sitemapHasLastmod": true,
+          "sitemapNewestLastmod": "2019-06-05",
+          "sitemapStaleDays": 2644,
+          "sitemapSampleChecked": 1,
+          "sitemapSampleResolved": 1,
+          "robotsDisallowedAll": false,
+          "stoppedBecause": "page cap",
+          "depthLimited": false,
+          "error": null
+        },
+        "crux": {
+          "source": "Chrome UX Report (field data, 28-day p75)",
+          "available": false,
+          "formFactor": "PHONE",
+          "lcpMs": null,
+          "inpMs": null,
+          "cls": null,
+          "lcpGood": null,
+          "inpGood": null,
+          "clsGood": null,
+          "passesCwv": null,
+          "error": null
+        },
+        "companies": {
+          "source": "Companies House public register",
+          "matched": false,
+          "companyNumber": null,
+          "companyName": null,
+          "companyStatus": null,
+          "incorporatedOn": null,
+          "ageYears": null,
+          "sicCodes": null,
+          "companyType": null,
+          "accountsType": null,
+          "accountsMadeUpTo": null,
+          "accountsOverdue": null,
+          "hasCharges": null,
+          "hasInsolvencyHistory": null,
+          "previousNames": null,
+          "matchConfidence": null,
+          "registeredAddress": null,
+          "error": null
+        },
+        "lighthouse": {
+          "source": "PageSpeed Insights / Lighthouse (lab, mobile)",
+          "strategy": "mobile",
+          "performance": 87,
+          "accessibility": 66,
+          "bestPractices": 100,
+          "seo": 92,
+          "lcpMs": 3471,
+          "tbtMs": 0,
+          "clsScore": 0,
+          "fcpMs": 2751,
+          "speedIndexMs": 2751,
+          "failing": [
+            {
+              "id": "unused-javascript",
+              "title": "Reduce unused JavaScript",
+              "score": 0
+            },
+            {
+              "id": "lcp-discovery-insight",
+              "title": "LCP request discovery",
+              "score": 0
+            },
+            {
+              "id": "link-name",
+              "title": "Links do not have a discernible name",
+              "score": 0
+            },
+            {
+              "id": "color-contrast",
+              "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+              "score": 0
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests",
+              "score": 0
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree",
+              "score": 0
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "score": 0
+            },
+            {
+              "id": "font-display-insight",
+              "title": "Font display",
+              "score": 0
+            }
+          ],
+          "error": null
+        },
+        "gbpDetail": {
+          "source": "DataForSEO business_listings (area sweep)",
+          "totalPhotos": 2,
+          "ratingDistribution": {
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 2,
+            "5": 10
+          },
+          "priceLevel": null,
+          "isClaimed": true,
+          "additionalCategories": null,
+          "hasDescription": false,
+          "hasHours": true,
+          "services": 30,
+          "placeTopics": {
+            "caring staff": 2
+          },
+          "firstSeen": "2026-06-27 17:57:44 +00:00",
+          "lastUpdated": "2026-06-27 17:57:44 +00:00"
+        },
+        "backlinks": {
+          "source": "DataForSEO backlinks/summary",
+          "target": "goldenvalley.co.uk",
+          "rank": 170,
+          "backlinks": 408,
+          "referringDomains": 97,
+          "referringMainDomains": 87,
+          "referringPages": 353,
+          "brokenBacklinks": 0,
+          "referringLinksTypes": {
+            "anchor": 350
+          },
+          "firstSeen": "2019-01-18 02:26:54 +00:00",
+          "lostDate": null
+        }
+      }
+    },
+    {
       "rank": 16,
       "name": "Community Vets",
       "url": "http://www.communityvets.co.uk/",
@@ -3286,10 +3316,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
         "wordCount": 452,
-        "contentFreshnessDays": 4167
+        "contentFreshnessDays": 4199
       },
       "localMatch": {
         "placeId": "ChIJx0N7002NcUgRX1d9F8KLmfI",
@@ -3498,10 +3530,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
-        "wordCount": 1504,
-        "contentFreshnessDays": 686
+        "wordCount": 1362,
+        "contentFreshnessDays": 719
       },
       "localMatch": {
         "placeId": "ChIJaxAca3WScUgRwCBq8aJMf5Y",
@@ -3708,10 +3742,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": true,
         "wordCount": 212,
-        "contentFreshnessDays": 808
+        "contentFreshnessDays": 840
       },
       "localMatch": {
         "placeId": "ChIJoz_BpbHzcUgRM6enGUdpH_s",
@@ -3918,10 +3954,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": "homepage link",
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 688,
-        "contentFreshnessDays": 3914
+        "contentFreshnessDays": 3946
       },
       "localMatch": {
         "placeId": "ChIJBwAgT_uPcUgRZGrdOhFQ9g8",
@@ -4130,6 +4168,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 711,
@@ -4342,10 +4382,12 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": true,
         "hasBlogLink": false,
-        "wordCount": 791,
-        "contentFreshnessDays": 22
+        "wordCount": 783,
+        "contentFreshnessDays": 3
       },
       "localMatch": {
         "placeId": "ChIJPS5FjPuOcUgRhJBSu-7DgAk",
@@ -4552,6 +4594,8 @@
       "contentChecks": {
         "hasAboutLink": false,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 11,
@@ -4763,6 +4807,8 @@
       "contentChecks": {
         "hasAboutLink": null,
         "hasTeamLink": null,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": null,
         "hasBlogLink": null,
         "wordCount": null,
@@ -4974,6 +5020,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": true,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 4904,
@@ -5173,6 +5221,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": false,
         "wordCount": 606,
@@ -5349,40 +5399,41 @@
       "rank": 26,
       "name": "Rowe Vet Group – Winterbourne",
       "url": "https://www.rowevetgroup.com/?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
-      "digitalVisibilityScore": 43,
+      "digitalVisibilityScore": 45,
       "pillarScores": {
         "speed": 68,
         "technical": 0,
         "local": 83,
         "visibility": 57,
         "ai": 0,
-        "content": null
+        "content": 63
       },
       "includedPillars": [
         "speed",
         "technical",
         "local",
         "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
+        "ai",
         "content"
       ],
+      "excludedPillars": [],
       "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null,
-        "hasBlogLink": null,
-        "wordCount": null,
-        "contentFreshnessDays": null
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr David Tweedle BVetMed\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 412,
+        "contentFreshnessDays": 0
       },
       "localMatch": {
         "placeId": "ChIJkyhL23eQcUgRNtXbE8_0CJU",
@@ -5560,40 +5611,41 @@
       "rank": 27,
       "name": "Bath Veterinary Group, Park Road Vets",
       "url": "https://www.bathvetgroup.co.uk/?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
-      "digitalVisibilityScore": 36,
+      "digitalVisibilityScore": 38,
       "pillarScores": {
         "speed": 62,
         "technical": 0,
         "local": 83,
         "visibility": 21,
         "ai": 0,
-        "content": null
+        "content": 63
       },
       "includedPillars": [
         "speed",
         "technical",
         "local",
         "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
+        "ai",
         "content"
       ],
+      "excludedPillars": [],
       "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null,
-        "hasBlogLink": null,
-        "wordCount": null,
-        "contentFreshnessDays": null
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr David Tweedle BVetMed\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 417,
+        "contentFreshnessDays": 0
       },
       "localMatch": {
         "placeId": "ChIJoXxE_lCPcUgRcYnSqXNMx8Y",
@@ -5800,6 +5852,8 @@
       "contentChecks": {
         "hasAboutLink": true,
         "hasTeamLink": false,
+        "teamSource": null,
+        "teamEvidence": null,
         "hasCredentialsLink": false,
         "hasBlogLink": true,
         "wordCount": 63,
@@ -5977,40 +6031,41 @@
       "rank": 29,
       "name": "Vale Vets",
       "url": "https://www.portisheadvets.co.uk/?utm_source=gmb&utm_medium=organic&utm_campaign=attribute",
-      "digitalVisibilityScore": 31,
+      "digitalVisibilityScore": 34,
       "pillarScores": {
         "speed": 59,
         "technical": 0,
         "local": 72,
         "visibility": 13,
         "ai": 0,
-        "content": null
+        "content": 58
       },
       "includedPillars": [
         "speed",
         "technical",
         "local",
         "visibility",
-        "ai"
-      ],
-      "excludedPillars": [
+        "ai",
         "content"
       ],
+      "excludedPillars": [],
       "effectiveWeights": {
-        "speed": 22.22,
-        "technical": 22.22,
-        "local": 22.22,
-        "visibility": 16.67,
-        "ai": 16.67,
-        "content": 0
+        "speed": 20,
+        "technical": 20,
+        "local": 20,
+        "visibility": 15,
+        "ai": 15,
+        "content": 10
       },
       "contentChecks": {
-        "hasAboutLink": null,
-        "hasTeamLink": null,
-        "hasCredentialsLink": null,
-        "hasBlogLink": null,
-        "wordCount": null,
-        "contentFreshnessDays": null
+        "hasAboutLink": true,
+        "hasTeamLink": true,
+        "teamSource": "about page",
+        "teamEvidence": "named with a qualification: \"Dr David Tweedle BVetMed\"",
+        "hasCredentialsLink": false,
+        "hasBlogLink": false,
+        "wordCount": 337,
+        "contentFreshnessDays": 0
       },
       "localMatch": {
         "placeId": "ChIJIxAoV1eNcUgRBHpwb3qjLiM",

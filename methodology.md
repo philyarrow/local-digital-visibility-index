@@ -15,7 +15,7 @@ The headline metric is the **Digital Visibility Score**, a 0–100 figure from s
 | Local presence | 20% | Google Business Profile completeness, review count, average rating, review velocity (new/90d), NAP consistency |
 | Visibility | 15% | Ranking visibility for a fixed local keyword basket; local-pack appearance |
 | AI search presence | 15% | Appearance in AI Overviews, ChatGPT search, Perplexity and Gemini for core local queries |
-| Content & trust | 10% | Indexed page count, about / team / credentials present, content freshness |
+| Content & trust | 10% | About / credentials / blog links present, whether the site introduces its people (a link, or the homepage or About page read for it), homepage depth, content freshness |
 
 Each pillar is scored 0–100, then combined by the weights above. Pillar scores are always published alongside the headline number, so a single figure never stands alone. Pillars with no available data for a given run are excluded and the remaining weights are renormalised (see `pipeline/score.mjs`).
 
