@@ -50,7 +50,7 @@ import {
 	parseSeed,
 	slugify,
 	indexSlugFromSeed,
-	fetchWithTimeout,
+	fetchWithTimeout, fetchHomepage,
 } from './lib/common.mjs';
 import {
 	loadEnv,
@@ -141,8 +141,9 @@ async function collectSpeed(url) {
 /* Pillar 2 — Technical foundation (HTTP fetch + parse)                        */
 /* -------------------------------------------------------------------------- */
 
-/* Returns flags about HTTPS, schema, sitemap, robots, viewport, indexability */
-async function collectTechnical(url) {
+/* Returns flags about HTTPS, schema, sitemap, robots, viewport, indexability.
+   Exported for backfill-technical.mjs, for the same reason collectContent is. */
+export async function collectTechnical(url) {
 	const out = {
 		source: 'Live HTTP fetch + parse',
 		https: null,
@@ -160,7 +161,7 @@ async function collectTechnical(url) {
 	};
 	let html = '';
 	try {
-		const res = await fetchWithTimeout(url, { headers: { 'User-Agent': UA } }, 20000);
+		const res = await fetchHomepage(url, { headers: { 'User-Agent': UA } }, 20000);
 		out.finalUrl = res.url || url;
 		out.https = (out.finalUrl || '').startsWith('https://');
 		// X-Robots-Tag header can also carry noindex
@@ -308,7 +309,7 @@ export async function collectContent(url, sectorCfg) {
 	   third-party businesses that was not true. Counting pages a site publishes
 	   is a different quantity and naming it "indexed" would repeat the error. */
 	try {
-		const res = await fetchWithTimeout(url, { headers: { 'User-Agent': UA } }, 20000);
+		const res = await fetchHomepage(url, { headers: { 'User-Agent': UA } }, 20000);
 		if (!res.ok) { out.error = `homepage HTTP ${res.status}`; return out; }
 		const rawHtml = await res.text();
 		const html = rawHtml.toLowerCase();
