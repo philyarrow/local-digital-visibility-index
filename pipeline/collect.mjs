@@ -948,7 +948,16 @@ export function fingerprintFor({ indexSlug, keywords, prompts, businesses, index
 	})).digest('hex');
 }
 
-export async function loadSharedStore(path, fingerprint) {
+/* When this index's last collect finished, from its receipt; null if never. */
+export async function lastCompletedAt(dir) {
+	try {
+		return JSON.parse(await readFile(join(dir, '_cost.json'), 'utf8')).collectedAt ?? null;
+	} catch {
+		return null;
+	}
+}
+
+export async function loadSharedStore(path, fingerprint, { completedAt = null } = {}) {
 	let store;
 	try {
 		store = JSON.parse(await readFile(path, 'utf8'));
@@ -957,6 +966,17 @@ export async function loadSharedStore(path, fingerprint) {
 	}
 	if (store.fingerprint !== fingerprint) {
 		console.log('    _shared.json is from a different basket, seed or radius — ignoring it and buying fresh.');
+		return null;
+	}
+	/* A checkpoint is only a resume point while the run that wrote it has not
+	   finished. Once _cost.json exists with a later stamp, the run completed and
+	   its checkpoint is simply the last measurement: reloading it, and then
+	   carrying every record stamped after it as "already collected", republished
+	   14 September's double glazing cohorts under an October date without buying
+	   or fetching anything. The fingerprint cannot catch that — the basket had
+	   not changed — only the receipt can. */
+	if (completedAt && Date.parse(store.collectedAt) <= Date.parse(completedAt)) {
+		console.log('    _shared.json predates the last completed run — it is a finished measurement, not an interrupted one. Buying fresh.');
 		return null;
 	}
 	const toMap = (pairs) => new Map(Array.isArray(pairs) ? pairs : []);
@@ -1065,7 +1085,7 @@ async function main() {
 		keywords.forEach((k, i) => console.log(`  ${String(i + 1).padStart(2)}. ${k}`));
 		console.log('\nAI prompts:');
 		prompts.forEach((p, i) => console.log(`  ${String(i + 1).padStart(2)}. ${p}`));
-		const checkpoint = await loadSharedStore(sharedStorePath, sharedFingerprint);
+		const checkpoint = await loadSharedStore(sharedStorePath, sharedFingerprint, { completedAt: await lastCompletedAt(outDir) });
 		console.log('');
 		console.log(checkpoint
 			? `Checkpoint: _shared.json matches this basket (${checkpoint.ageMin} min old) — a real run would reuse it and buy nothing.`
@@ -1084,7 +1104,7 @@ async function main() {
 	let serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, targetedErrors;
 	const gbpKeyFor = (biz) => biz.gbp_query || `${biz.name} ${indexCfg.town}`;
 	await mkdir(outDir, { recursive: true });
-	const resumed = await loadSharedStore(sharedStorePath, sharedFingerprint);
+	const resumed = await loadSharedStore(sharedStorePath, sharedFingerprint, { completedAt: await lastCompletedAt(outDir) });
 
 	if (resumed) {
 		({ serpByKeyword, aiAnswers, listingMatches, gbpByQuery, reviewsByQuery, targetedErrors } = resumed);

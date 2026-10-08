@@ -117,3 +117,23 @@ test('the store says what it is, so a human finding it knows it is disposable', 
 	assert.match(raw.note, /Safe to delete/);
 	assert.ok(raw.fingerprint && raw.collectedAt);
 });
+
+/* A checkpoint written BEFORE the last completed run's receipt belongs to that
+   finished run, not to an interrupted one. Reusing it re-publishes the old
+   measurement under a new date: on 5 October 2026 both double glazing indices
+   "collected" in minutes by reloading 14 September's checkpoint and carrying
+   every September record as already done. */
+test('refuses a checkpoint older than the last completed run', async () => {
+	const dir = await mkdtemp(join(tmpdir(), 'shared-'));
+	const path = join(dir, '_shared.json');
+	const fp = fingerprintFor(base());
+	await saveSharedStore(path, fp, shared());
+	const written = JSON.parse(await readFile(path, 'utf8'));
+	const later = new Date(Date.parse(written.collectedAt) + 60_000).toISOString();
+	assert.equal(await loadSharedStore(path, fp, { completedAt: later }), null);
+	// The same checkpoint is still fine when the last run finished BEFORE it.
+	const earlier = new Date(Date.parse(written.collectedAt) - 60_000).toISOString();
+	assert.ok(await loadSharedStore(path, fp, { completedAt: earlier }));
+	// And when no run has ever completed.
+	assert.ok(await loadSharedStore(path, fp, {}));
+});
