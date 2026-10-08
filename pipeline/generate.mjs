@@ -29,6 +29,7 @@ import { join, dirname, isAbsolute, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PILLARS, toCsv } from './lib/common.mjs';
 import { packFirms } from './lib/match.mjs';
+import { indexTitle, cohortNouns } from './lib/cohort.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA_ROOT = join(HERE, 'data');
@@ -166,14 +167,6 @@ function humanDate(iso) {
 
 function sectorLabel(indexSlug) {
 	return indexSlug.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
-}
-
-function indexTitle(indexSlug) {
-	// bristol-estate-agents -> "Bristol Estate Agent"
-	const words = indexSlug.split('-');
-	const city = words[0][0].toUpperCase() + words[0].slice(1);
-	const sector = words.slice(1).map((w) => w[0].toUpperCase() + w.slice(1)).join(' ').replace(/s$/, '');
-	return `${city} ${sector}`;
 }
 
 function reading(pillarKey, b, medians) {
@@ -2438,7 +2431,7 @@ function section(heading, body) {
 
 /* ---- index hub MDX ---- */
 
-function hubMdx(ranked, quarter, indexSlug, prior = null) {
+function hubMdx(ranked, quarter, indexSlug, prior = null, cohort = cohortNouns(indexSlug)) {
 	const idxTitle = indexTitle(indexSlug);
 	const date = new Date(ranked.measuredAt ?? ranked.scoredAt).toISOString();
 	const human = humanDate(ranked.measuredAt ?? ranked.scoredAt);
@@ -2508,7 +2501,7 @@ function hubMdx(ranked, quarter, indexSlug, prior = null) {
 		'@context': 'https://schema.org',
 		'@type': 'Dataset',
 		name: `PYC ${idxTitle} Digital Visibility Index ${quarter}`,
-		description: `League table scoring ${scored.length} ${idxTitle.toLowerCase()}s 0–100 on ${measuredOn}. Measured ${date}.${cov.partial ? ` v0: ${cov.live.length} of ${PILLARS.length} pillars measured.` : ''}`,
+		description: `League table scoring ${scored.length} ${cohort.plural} 0–100 on ${measuredOn}. Measured ${date}.${cov.partial ? ` v0: ${cov.live.length} of ${PILLARS.length} pillars measured.` : ''}`,
 		/* Reference the site-wide Organization node by @id rather than declaring a
 		   second one. The generated pages previously minted an Organization named
 		   "Phil Yarrow Consulting (PYC)" while astro.config.mjs declared one named
@@ -2549,9 +2542,9 @@ function hubMdx(ranked, quarter, indexSlug, prior = null) {
 
 	return `${fm}
 
-${hubBanner(cov, quarter)}The **PYC ${idxTitle} Digital Visibility Index** ranks ${scored.length} ${idxTitle.toLowerCase()}s on how well they perform online — ${measuredOn} — each scored 0–100 to a single **Digital Visibility Score**. Measured ${human} to the published [methodology](/indices/methodology/).
+${hubBanner(cov, quarter)}The **PYC ${idxTitle} Digital Visibility Index** ranks ${scored.length} ${cohort.plural} on how well they perform online — ${measuredOn} — each scored 0–100 to a single **Digital Visibility Score**. Measured ${human} to the published [methodology](/indices/methodology/).
 
-${pct !== null ? `> As of ${quarter}, ${pct}% of the ${speedDenom} ${idxTitle.toLowerCase()}s measured on Speed & Core Web Vitals score below 50 on mobile (PYC ${idxTitle} Digital Visibility Index, measured ${human}).\n` : ''}
+${pct !== null ? `> As of ${quarter}, ${pct}% of the ${speedDenom} ${cohort.plural} measured on Speed & Core Web Vitals score below 50 on mobile (PYC ${idxTitle} Digital Visibility Index, measured ${human}).\n` : ''}
 ${section('Who owns the first page', shareOfVoice(ranked))}
 ## The league table
 
@@ -2567,7 +2560,7 @@ ${section('Local pack coverage across the city', geoGrid(ranked))}
 ${section('What changed since last quarter', quarterMovement(ranked, prior, quarter))}
 ${hygieneCrossCheck(ranked)}
 ${registryMix(ranked)}
-## Which ${idxTitle.toLowerCase()} has the best website?
+## Which ${cohort.singular} has the best website?
 
 ${scored.length ? `${scored[0].name} tops the ${quarter} index with a Digital Visibility Score of ${scored[0].digitalVisibilityScore}/100.` : ''} Each firm has a full diagnostic scorecard linked from the table above.
 
@@ -2887,7 +2880,7 @@ async function main() {
 	await mkdir(PUBLIC_DATA, { recursive: true });
 
 	// hub
-	await writeFile(join(contentDir, 'index.md'), hubMdx(ranked, quarter, indexSlug, prior));
+	await writeFile(join(contentDir, 'index.md'), hubMdx(ranked, quarter, indexSlug, prior, cohortNouns(indexSlug, indexCfg, sectorCfg)));
 	// scorecards
 	let cards = 0;
 	for (const b of ranked.businesses) {
