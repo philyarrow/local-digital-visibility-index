@@ -23,7 +23,12 @@ export const HOLD_LIMITS = {
 	indexMedianShift: 15,
 	pillarMeanShift: 12,
 	unmeasuredRisePct: 10,
+	largeTechnicalDrops: 25,
 };
+
+/* A fall this large suggests the site was not really read. Genuine releases had
+   10 and 11 such falls; the unread November 2026 collection had 41. */
+const LARGE_TECHNICAL_DROP = 40;
 
 /* The files that decide a score. A change to any of them between two releases
    means a score can move because the ruler did, and the changelog's "nothing in
@@ -34,8 +39,11 @@ export const SCORING_FILES = [
 	'pipeline/lib/common.mjs',
 	'pipeline/lib/match.mjs',
 	'pipeline/lib/people.mjs',
+	'pipeline/lib/basket.mjs',
+	'pipeline/lib/dataforseo.mjs',
 	'pipeline/config/engine.json',
 	'pipeline/config/sectors.json',
+	'pipeline/config/indices.json',
 ];
 
 const PAID_ENRICHMENT = ['gbpDetail', 'backlinks'];
@@ -157,7 +165,7 @@ export function summariseRelease(pairs, { manualIds = null } = {}) {
 	const tally = Object.fromEntries(PILLARS.map(({ key }) => [key, emptyPillarTally()]));
 	const out = {
 		indexSlugs: [], firms: 0, changed: 0, higher: 0, lower: 0, rankChanged: 0,
-		newFirstPlaces: [], newTechnicalZeros: [], medians: [], joined: [], left: [],
+		largeTechnicalDrops: 0, newFirstPlaces: [], newTechnicalZeros: [], medians: [], joined: [], left: [],
 		priorLabel: labelOf(pairs[0]?.prior),
 	};
 
@@ -180,7 +188,8 @@ export function summariseRelease(pairs, { manualIds = null } = {}) {
 				if (delta > 0) out.higher += 1; else out.lower += 1;
 			}
 			if (row.rank.delta) out.rankChanged += 1;
-			const { a, b } = row.pillars.technical;
+			const { a, b, delta: technicalDelta } = row.pillars.technical;
+			if (technicalDelta !== null && technicalDelta <= -LARGE_TECHNICAL_DROP) out.largeTechnicalDrops += 1;
 			if (b === 0 && a !== 0) {
 				out.newTechnicalZeros.push({ title: pair.title, name: row.name, error: pair.technicalErrors?.[row.url] ?? null });
 			}
@@ -200,6 +209,8 @@ export function findHolds(summary, { expectedSlugs, scoringChanges, staleScoreca
 
 	const zeros = summary.newTechnicalZeros.length;
 	if (zeros > HOLD_LIMITS.newTechnicalZeros) holds.push(`${zeros} businesses newly score 0 on Technical (limit ${HOLD_LIMITS.newTechnicalZeros}). Possible crawler fault rather than ${zeros} failing sites.`);
+
+	if (summary.largeTechnicalDrops > HOLD_LIMITS.largeTechnicalDrops) holds.push(`${summary.largeTechnicalDrops} businesses lost ${LARGE_TECHNICAL_DROP} or more points on Technical (limit ${HOLD_LIMITS.largeTechnicalDrops}). Possible crawler fault.`);
 
 	for (const m of summary.medians) {
 		if (m.prior === null || m.current === null) continue;
@@ -230,11 +241,13 @@ function humanRange(from, to) {
 
 const escapeCell = (s) => String(s).replace(/\|/g, '\\|').replace(/</g, '&lt;');
 const escapeText = (s) => String(s).replace(/([*_`])/g, '\\$1').replace(/</g, '&lt;');
+const count = (n) => n.toLocaleString('en-GB');
 const signed = (n) => `${n > 0 ? '+' : ''}${n}`;
 
 /* Describes what we saw, never why. A 403 is a refusal of our crawler, and that
    is a fact about access rather than about the firm. */
 function describeFailure(error) {
+	if (!error) return 'no fetch failure recorded';
 	const status = String(error ?? '').match(/HTTP (\d{3})/)?.[1];
 	if (!status) return 'could not be reached';
 	if (['401', '403', '418', '429'].includes(status)) return `refused our crawler (HTTP ${status})`;
@@ -244,7 +257,7 @@ function describeFailure(error) {
 function zerosSection(zeros) {
 	if (!zeros.length) return 'No business newly scores 0 on Technical in this release.';
 	const lines = zeros.map((z) => `- ${escapeText(z.name)} (${escapeText(z.title)}): ${describeFailure(z.error)}`);
-	return `**${zeros.length} business${zeros.length === 1 ? '' : 'es'} newly score${zeros.length === 1 ? 's' : ''} 0 on Technical because the homepage could not be read.** We score only what we can read, so this is a fact about access on the day, not a judgement of the site. Each is measured again next month.\n\n${lines.join('\n')}`;
+	return `**${zeros.length} business${zeros.length === 1 ? '' : 'es'} newly score${zeros.length === 1 ? 's' : ''} 0 on Technical.** We score only what we can read, so where a homepage could not be read this is a fact about access on the day, not a judgement of the site. Each is measured again next month.\n\n${lines.join('\n')}`;
 }
 
 function pillarsSection(pillars) {
@@ -275,14 +288,22 @@ function cohortSection({ joined, left }) {
 	].filter(Boolean).join('\n\n');
 }
 
-export function changelogEntry(summary, { period, publishedOn, collectedFrom, collectedTo, recheckedOn }) {
+function scoringSentence(scoringChanges) {
+	if (scoringChanges?.length) return `The code that produces a score changed since the previous release: ${scoringChanges.join(', ')}. See the [methodology](/indices/methodology/). Some of this movement may come from that change rather than from the businesses.`;
+	return 'Nothing in the scoring changed between the two releases: the code that sets the weights, the pillar formulas, the keyword baskets and the way search results are matched to businesses is unchanged, and the release checks that before publishing.';
+}
+
+export function changelogEntry(summary, { period, publishedOn, collectedFrom, collectedTo, recheckedOn, scoringChanges = [], expectedCount = null }) {
 	const label = releaseLabel(period);
 	const indexCount = summary.indexSlugs.length;
-	const headline = `**${summary.changed} of ${summary.firms} businesses have a different Digital Visibility Score from ${summary.priorLabel} — ${summary.higher} higher, ${summary.lower} lower — ${summary.rankChanged} changed rank, and ${summary.newFirstPlaces.length} of ${indexCount} indices have a new first place.**`;
+	const complete = expectedCount === null || expectedCount === indexCount;
+	const scope = complete ? 'Every published index was' : `${indexCount} of the ${expectedCount} published indices were`;
+	const title = complete ? 'every index re-measured' : `${indexCount} of ${expectedCount} indices re-measured`;
+	const headline = `**${count(summary.changed)} of ${count(summary.firms)} businesses have a different Digital Visibility Score from ${summary.priorLabel} — ${count(summary.higher)} higher, ${count(summary.lower)} lower — ${count(summary.rankChanged)} changed rank, and ${summary.newFirstPlaces.length} of ${indexCount} indices have a new first place.**`;
 	return [
-		`### ${humanDate(publishedOn)} (release) — ${label}: every index re-measured`,
-		`Every published index was collected again ${humanRange(collectedFrom, collectedTo)}, scored, and published automatically as the ${label} release. Technical and Content & trust were re-read for every business on ${humanDate(recheckedOn)} from an ordinary connection, because some sites refuse or answer differently to the data-centre machine that runs the collection.`,
-		`${headline} Nothing in the scoring changed between the two releases: the code that sets the weights, the pillar formulas and the way search results are matched to businesses is unchanged, and the release checks that before publishing. We record the movement; we do not claim to know why any of it happened.`,
+		`### ${humanDate(publishedOn)} (release) — ${label}: ${title}`,
+		`${scope} collected again ${humanRange(collectedFrom, collectedTo)}, scored, and published automatically as the ${label} release. Technical and Content & trust were re-read for every business on ${humanDate(recheckedOn)} from an ordinary connection, because some sites refuse or answer differently to the data-centre machine that runs the collection.`,
+		`${headline} ${scoringSentence(scoringChanges)} We record the movement; we do not claim to know why any of it happened.`,
 		pillarsSection(summary.pillars),
 		zerosSection(summary.newTechnicalZeros),
 		cohortSection(summary),

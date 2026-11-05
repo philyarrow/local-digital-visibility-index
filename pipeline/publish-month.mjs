@@ -12,11 +12,12 @@
  *   node publish-month.mjs                 # what launchd runs daily
  *   node publish-month.mjs --dry-run       # everything except commit and push
  *   node publish-month.mjs --period 2026-11
- *   node publish-month.mjs --accept-holds  # a person has read the holds
+ *   node publish-month.mjs --clear-hold    # try again, with every check still on
+ *   node publish-month.mjs --accept-holds  # a person has read the holds; publish
  *
  * Anything found wrong becomes a hold: nothing is published, the measurement is
  * kept, and an issue on the private site repo emails Phil. A hold is remembered,
- * so a daily run does not repeat the work or the email. --accept-holds clears it.
+ * so a daily run does not repeat the work or the email.
  */
 
 import { spawnSync } from 'node:child_process';
@@ -46,6 +47,7 @@ const LIVE_POLL_MS = 60_000;
 const argv = process.argv.slice(2);
 const DRY_RUN = argv.includes('--dry-run');
 const ACCEPT_HOLDS = argv.includes('--accept-holds');
+const CLEAR_HOLD = argv.includes('--clear-hold');
 const periodAt = argv.indexOf('--period');
 const today = new Date().toISOString().slice(0, 10);
 const PERIOD = periodAt === -1 ? today.slice(0, 7) : argv[periodAt + 1];
@@ -98,14 +100,15 @@ function alert(title, body, { close = false } = {}) {
 
 function hold(reasons) {
 	const list = reasons.map((r) => `- ${r}`).join('\n');
+	/* Alert first: a marker without an alert would block every later run in silence. */
+	alert(`Index release held: ${releaseLabel(PERIOD)}`, `Nothing was published, and the site still shows the previous release. The measurement is kept.\n\n${list}\n\nRun from \`${PUBLISHER_HOME}/pipeline/pipeline\`, with \`PUBLISHER_HOME=${PUBLISHER_HOME}\`:\n\n- \`node publish-month.mjs --period ${PERIOD} --clear-hold\` once the cause is fixed. Every check runs again.\n- \`node publish-month.mjs --period ${PERIOD} --accept-holds\` to publish anyway. The changelog states any scoring change.`);
 	setMarker('held', list);
-	alert(`Index release held: ${releaseLabel(PERIOD)}`, `Nothing was published, and the site still shows the previous release. The measurement is kept.\n\n${list}\n\nOnce you are happy, run from \`${PUBLISHER_HOME}/pipeline/pipeline\`:\n\n\`\`\`\nPUBLISHER_HOME=${PUBLISHER_HOME} node publish-month.mjs --period ${PERIOD} --accept-holds\n\`\`\``);
 }
 
 function freshClones() {
 	for (const repo of [PIPELINE_REPO, SITE_REPO]) {
 		sh('git', ['fetch', '--quiet', '--tags', '--force', 'origin'], { cwd: repo });
-		sh('git', ['checkout', '--quiet', BRANCH], { cwd: repo });
+		sh('git', ['checkout', '--quiet', '-f', BRANCH], { cwd: repo });
 		sh('git', ['reset', '--quiet', '--hard', `origin/${BRANCH}`], { cwd: repo });
 		sh('git', ['clean', '-fdq', '-e', 'node_modules', '-e', 'pipeline/data'], { cwd: repo });
 	}
@@ -175,6 +178,8 @@ function carryPaidEnrichment(slugs) {
 	log(`Carried paid enrichment forward for ${carried} businesses`);
 }
 
+const receiptTagExists = () => sh('git', ['ls-remote', '--tags', 'origin', `refs/tags/${PERIOD}`], { cwd: PIPELINE_REPO }) !== '';
+
 function scoringChangesSinceLastRelease() {
 	const tags = sh('git', ['tag', '--list'], { cwd: PIPELINE_REPO }).split('\n').filter(Boolean);
 	const last = latestPriorSnapshot(tags.map((t) => `${t}.json`), { period: PERIOD })?.replace(/\.json$/, '');
@@ -209,7 +214,8 @@ function loadPairs(slugs) {
 		.filter((slug) => existsSync(join(SNAPSHOTS, slug, `${PERIOD}.json`)) && priorSnapshot(slug))
 		.map((slug) => {
 			const current = snapshot(slug);
-			const title = current.title.replace(/^PYC /, '').replace(/ Digital Visibility Index$/, '');
+			const words = slug.replace(/-/g, ' ');
+			const title = words[0].toUpperCase() + words.slice(1);
 			return { slug, title, prior: priorSnapshot(slug), current, technicalErrors: technicalErrors(slug) };
 		});
 }
@@ -247,15 +253,18 @@ function commitReceipt() {
 		sh('git', ['commit', '--quiet', '-m', `Release ${PERIOD}: published snapshot`, '-m',
 			`The figures on the site for ${releaseLabel(PERIOD)}, including Technical and Content & trust as re-read on ${today}. Automated.`], { cwd: PIPELINE_REPO });
 	}
+	/* Forced locally only: main() has checked the tag is not on the remote, and a
+	   local one can be left behind by a push that failed. */
 	sh('git', ['tag', '-f', PERIOD], { cwd: PIPELINE_REPO });
-	sh('git', ['push', '--quiet', 'origin', 'main'], { cwd: PIPELINE_REPO });
-	sh('git', ['push', '--quiet', '--force', 'origin', PERIOD], { cwd: PIPELINE_REPO });
+	sh('git', ['push', '--quiet', 'origin', 'main', `refs/tags/${PERIOD}`], { cwd: PIPELINE_REPO });
 }
 
 function commitSite(summary) {
 	sh('git', ['add', 'new/src/content/docs/indices', 'new/public/data', 'new/public/og'], { cwd: SITE_REPO });
 	sh('git', ['commit', '--quiet', '-m', `${releaseLabel(PERIOD)}: every index re-measured`, '-m',
 		`${summary.changed} of ${summary.firms} scores changed since ${summary.priorLabel}. Automated release; the receipt is tag ${PERIOD} in the pipeline repo.`], { cwd: SITE_REPO });
+	/* Someone may have pushed to the site during the half hour this takes. */
+	sh('git', ['pull', '--quiet', '--rebase', 'origin', 'main'], { cwd: SITE_REPO });
 	sh('git', ['push', '--quiet', 'origin', 'main'], { cwd: SITE_REPO });
 }
 
@@ -264,7 +273,7 @@ async function waitUntilLive() {
 	for (let attempt = 0; attempt < LIVE_POLL_ATTEMPTS; attempt += 1) {
 		await new Promise((r) => setTimeout(r, LIVE_POLL_MS));
 		const res = await fetch(`${LIVE_CHANGELOG}?release=${PERIOD}`).catch(() => null);
-		if (res?.ok && (await res.text()).includes(`${label}: every index re-measured`)) return true;
+		if (res?.ok && (await res.text()).includes(`${label}: `)) return true;
 	}
 	return false;
 }
@@ -284,18 +293,19 @@ function prepare(run, slugs, manualIds) {
 	const pairs = loadPairs(slugs);
 	const summary = summariseRelease(pairs, { manualIds });
 	const dates = measurementDates(pairs);
+	const scoringChanges = scoringChangesSinceLastRelease();
 	const holds = findHolds(summary, {
 		expectedSlugs: slugs,
 		period: PERIOD,
 		measuredPeriod: dates.collectedTo?.slice(0, 7) ?? 'nothing',
-		scoringChanges: scoringChangesSinceLastRelease(),
+		scoringChanges,
 		staleScorecards: staleScorecards(slugs),
 	});
-	return { summary, dates, holds };
+	return { summary, dates, holds, scoringChanges, expectedCount: slugs.length };
 }
 
-function writeChangelog({ summary, dates }) {
-	const entry = changelogEntry(summary, { period: PERIOD, publishedOn: today, recheckedOn: today, ...dates });
+function writeChangelog({ summary, dates, scoringChanges, expectedCount }) {
+	const entry = changelogEntry(summary, { period: PERIOD, publishedOn: today, recheckedOn: today, scoringChanges, expectedCount, ...dates });
 	writeFileSync(changelogPath(), insertChangelogEntry(readFileSync(changelogPath(), 'utf8'), entry, today));
 	return entry;
 }
@@ -303,8 +313,8 @@ function writeChangelog({ summary, dates }) {
 function noRunYet() {
 	const day = Number(today.slice(8, 10));
 	if (day > ALERT_IF_NO_RUN_AFTER_DAY && !hasMarker('no-run')) {
-		setMarker('no-run', today);
 		alert(`Index release: no measurement for ${releaseLabel(PERIOD)}`, `The monthly workflow has not produced a run this month. GitHub disables scheduled workflows on inactive repositories, so check the Actions tab of ${PIPELINE_SLUG} first.`);
+		setMarker('no-run', today);
 	}
 	log('No measurement run for this month yet');
 }
@@ -314,7 +324,11 @@ async function main() {
 	assertOwnClones();
 	freshClones();
 	if (alreadyPublished()) return log(`${PERIOD} is already published`);
-	if (hasMarker('held') && !ACCEPT_HOLDS) return log(`${PERIOD} is held. See the issue, or run with --accept-holds`);
+	if (CLEAR_HOLD) rmSync(markerPath('held'), { force: true });
+	if (hasMarker('held') && !ACCEPT_HOLDS) return log(`${PERIOD} is held. See the issue, or run with --clear-hold or --accept-holds`);
+	/* A public receipt with no matching page means an earlier run stopped halfway.
+	   A re-read now would give different numbers, so a person decides. */
+	if (receiptTagExists()) return hold([`Tag ${PERIOD} is already on the pipeline repo, but the site has no ${releaseLabel(PERIOD)} release. An earlier run stopped between the two pushes. Check the tag, delete it if the receipt is wrong, then run with --clear-hold.`]);
 
 	const run = findRun();
 	if (!run) return noRunYet();

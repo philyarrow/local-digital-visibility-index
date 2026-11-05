@@ -33,7 +33,7 @@ Every index is re-measured and republished each month, automatically and without
 
 Google profile detail and backlinks are bought in the first month of each quarter only, because they do not move meaningfully in thirty days. In other months the scorecard shows the last figures bought and says which release they came from. Neither is scored.
 
-No person reads a release before it goes out. It is held back instead, for a person to look at, if: an index is missing; the code that produces a score has changed since the last release; more than 15 businesses newly score 0 on Technical; an index median moves by more than 15 points; a pillar's average moves by more than 12 points across all indices; a pillar goes unmeasured for over 10% more businesses; a scorecard needs retiring; or the site fails to build.
+No person reads a release before it goes out. It is held back instead, for a person to look at, if: an index is missing; the code that produces a score has changed since the last release; more than 15 businesses newly score 0 on Technical; an index median moves by more than 15 points; a pillar's average moves by more than 12 points across all indices; a pillar goes unmeasured for over 10% more businesses; more than 25 businesses lose 40 or more Technical points; a scorecard needs retiring; or the site fails to build.
 
 ## Context data that is recorded but never scored
 

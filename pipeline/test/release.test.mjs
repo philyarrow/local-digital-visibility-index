@@ -48,6 +48,7 @@ function pairFor(overrides = {}) {
 	};
 }
 
+const ENTRY_DATES = { period: '2026-11', publishedOn: '2026-11-05', collectedFrom: '2026-11-01', collectedTo: '2026-11-02', recheckedOn: '2026-11-05' };
 const CLEAN_CONTEXT = { expectedSlugs: ['bath-vets'], scoringChanges: [], staleScorecards: [], measuredPeriod: '2026-11', period: '2026-11' };
 
 test('releaseLabel names the month and rejects anything that is not a period', () => {
@@ -229,6 +230,11 @@ test('changelogEntry states the headline, medians, zeros and how it was publishe
 	assert.match(entry, /published automatically/);
 });
 
+test('changelogEntry writes large counts with commas', () => {
+	const s = { ...summariseRelease([pairFor()]), changed: 1070, firms: 1371 };
+	assert.match(changelogEntry(s, ENTRY_DATES), /\*\*1,070 of 1,371 businesses/);
+});
+
 test('changelogEntry never asserts why scores moved', () => {
 	const entry = changelogEntry(summariseRelease([pairFor()]), {
 		period: '2026-11', publishedOn: '2026-11-05', collectedFrom: '2026-11-01', collectedTo: '2026-11-02', recheckedOn: '2026-11-05',
@@ -279,4 +285,40 @@ test('hasReleaseEntry recognises a published month only', () => {
 	assert.equal(hasReleaseEntry('### 5 November 2026 (release) — November 2026: x', '2026-11'), true);
 	assert.equal(hasReleaseEntry('### 5 November 2026 (methodology) — November 2026: x', '2026-11'), false);
 	assert.equal(hasReleaseEntry(CHANGELOG, '2026-11'), false);
+});
+
+test('changelogEntry does not say the scoring is unchanged when it changed', () => {
+	const entry = changelogEntry(summariseRelease([pairFor()]), { ...ENTRY_DATES, scoringChanges: ['pipeline/score.mjs'] });
+	assert.doesNotMatch(entry, /Nothing in the scoring changed/);
+	assert.match(entry, /code that produces a score changed since the previous release: pipeline\/score\.mjs/);
+});
+
+test('changelogEntry says the scoring is unchanged only when it was checked', () => {
+	const entry = changelogEntry(summariseRelease([pairFor()]), { ...ENTRY_DATES, scoringChanges: [] });
+	assert.match(entry, /Nothing in the scoring changed/);
+});
+
+test('changelogEntry does not claim every index when one is missing', () => {
+	const entry = changelogEntry(summariseRelease([pairFor()]), { ...ENTRY_DATES, scoringChanges: [], expectedCount: 2 });
+	assert.doesNotMatch(entry, /every index|Every published index/i);
+	assert.match(entry, /1 of the 2 published indices/);
+});
+
+test('changelogEntry does not claim a fetch failure it has no record of', () => {
+	const entry = changelogEntry(summariseRelease([pairFor({ technicalErrors: {} })]), { ...ENTRY_DATES, scoringChanges: [] });
+	assert.doesNotMatch(entry, /could not be reached/);
+	assert.match(entry, /Gamma Vets \(Bath vets\): no fetch failure recorded/);
+});
+
+test('summariseRelease counts large Technical drops, zero or not', () => {
+	const pair = pairFor();
+	const s = summariseRelease([pair]);
+	assert.equal(s.largeTechnicalDrops, 0, 'the fixture drops 10 points, under the line');
+	const prior = { ...pair.prior, businesses: pair.prior.businesses.map((b) => (b.name === 'Alpha Vets' ? { ...b, pillarScores: { ...b.pillarScores, technical: 95 } } : b)) };
+	assert.equal(summariseRelease([{ ...pair, prior }]).largeTechnicalDrops, 1);
+});
+
+test('findHolds stops a burst of large Technical drops', () => {
+	const s = { ...summariseRelease([pairFor()]), largeTechnicalDrops: 1000 };
+	assert.match(findHolds(s, CLEAN_CONTEXT).join(), /1000 businesses lost 40 or more points on Technical/);
 });

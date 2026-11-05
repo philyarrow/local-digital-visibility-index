@@ -17,8 +17,8 @@
  * monthly release gets both pillars from one connection. Collection runs on a
  * GitHub machine, and from there some sites refuse the request (403), drop it,
  * or answer 200 with a page that is not the site, which reads as a site with no
- * sitemap, viewport or schema. In November 2026 that wrongly zeroed 17 firms and
- * lowered about half of the rest of the fallers. A failed re-read never replaces
+ * sitemap, viewport or schema. In November 2026 that wrongly zeroed 17 listings, and
+ * about half of the other falls we tested went away on a re-read. A failed re-read never replaces
  * a good reading.
  *
  *   node backfill-technical.mjs            # every published index
