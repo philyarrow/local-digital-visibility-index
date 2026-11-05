@@ -38,6 +38,15 @@ export function runPath(dataRoot, indexSlug, ref) {
 
 async function loadRun(dataRoot, indexSlug, ref) {
 	const path = runPath(dataRoot, indexSlug, ref);
+	/* A month that was published has a receipt beside the quarters, and that is
+	   the run a firm was actually ranked on. history/ holds the raw measurement. */
+	if (PERIOD.test(ref)) {
+		try {
+			return JSON.parse(await readFile(join(dataRoot, indexSlug, `${ref}.json`), 'utf8'));
+		} catch (e) {
+			if (e?.code !== 'ENOENT') throw new Error(`could not read published ${ref} for ${indexSlug}: ${e.message}`);
+		}
+	}
 	try {
 		return JSON.parse(await readFile(path, 'utf8'));
 	} catch (e) {

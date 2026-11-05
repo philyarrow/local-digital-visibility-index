@@ -1,18 +1,22 @@
-# Monthly interim measurement.
+# Monthly measurement: the first half of a monthly release.
 #
 # Collects and scores every index, then archives a dated measurement to
 # data/<index>/history/<YYYY-MM>.json. It does NOT publish: no site pages are
-# generated, no ranking is updated, and data/<index>/<quarter>.json — the
-# receipt for what the site published — is never touched.
+# generated here, and no published snapshot is touched.
+#
+# Publishing is pipeline/publish-month.mjs, which runs on Phil's Mac once this
+# finishes. It restores the raw artifacts uploaded below, re-reads Technical and
+# Content, and publishes unless a check holds the release. It runs there because
+# some sites refuse or disguise their answer to a GitHub machine: in November
+# 2026 that zeroed 17 firms whose sites were working.
 #
 # Why it lives here and not in the site repo: this repo is public, so Actions
 # minutes are free; the site repo is private with Actions disabled. The split
 # also matches the boundary in CLAUDE.md — collection and snapshots belong to
 # the pipeline, publishing belongs to the site.
 #
-# Why publishing stays manual: collect.mjs spends real money, and a ranking
-# that businesses are judged by should have a human look at it before it goes
-# out. Both are deliberate, not unfinished.
+# No human reads a release before it goes out. findHolds in lib/release.mjs is
+# what stands in for that, so tighten it rather than loosen it.
 
 name: Monthly interim measurement
 

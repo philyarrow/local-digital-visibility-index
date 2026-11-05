@@ -30,6 +30,7 @@ import { fileURLToPath } from 'node:url';
 import { PILLARS, toCsv } from './lib/common.mjs';
 import { packFirms } from './lib/match.mjs';
 import { indexTitle, cohortNouns } from './lib/cohort.mjs';
+import { releaseLabel, calendarQuarter, isPeriod, latestPriorSnapshot } from './lib/release.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA_ROOT = join(HERE, 'data');
@@ -171,7 +172,7 @@ function sectorLabel(indexSlug) {
 
 function reading(pillarKey, b, medians) {
 	const score = b.pillarScores[pillarKey];
-	if (score === null) return 'Not measured this quarter';
+	if (score === null) return 'Not measured in this release';
 	const med = medians[pillarKey];
 	if (med === null) return `${score}/100`;
 	if (score >= med + 5) return `Above sector median`;
@@ -217,6 +218,10 @@ function coverage(ranked) {
 			: null,
 	};
 }
+
+/* Paid enrichment is bought quarterly and carried forward between, so the
+   scorecard says how old it is rather than implying it was read this month. */
+const carriedNote = (signal) => (signal?.carriedFrom ? ` (from ${signal.carriedFrom})` : '');
 
 function hubBanner(cov, quarter) {
 	if (cov.partial) {
@@ -739,7 +744,7 @@ function contextCard(b) {
 			   fours reads very differently from one built from fives and ones. */
 			if (total >= 5) parts.push(`${ones} of ${total} reviews are one star`);
 		}
-		if (parts.length) rows.push(['Google profile detail', parts.join(' · ')]);
+		if (parts.length) rows.push(['Google profile detail', parts.join(' · ') + carriedNote(g)]);
 	}
 
 	/* Backlinks: the only signal here bought per business rather than per index. */
@@ -749,7 +754,7 @@ function contextCard(b) {
 		if (bl.backlinks !== null && bl.backlinks !== undefined) parts.push(`${bl.backlinks} links`);
 		if (bl.rank !== null && bl.rank !== undefined) parts.push(`rank ${bl.rank}`);
 		if (bl.brokenBacklinks) parts.push(`${bl.brokenBacklinks} broken`);
-		rows.push(['Backlinks', parts.join(' · ')]);
+		rows.push(['Backlinks', parts.join(' · ') + carriedNote(bl)]);
 	}
 
 	const cr = e.crawl;
@@ -955,7 +960,7 @@ function keyFindings(b, ranked) {
 			out.push(`${p.label}: ${score}/100, below the sector median of ${med}.`);
 		}
 	}
-	if (!out.length) out.push('No pillar falls materially below the sector median this quarter.');
+	if (!out.length) out.push('No pillar falls materially below the sector median in this release.');
 	return out.slice(0, 6);
 }
 
@@ -2262,11 +2267,11 @@ function quarterMovement(ranked, prior, quarter) {
 	const firmsMoved = new Set(show.map((r) => r.name)).size;
 	const big = moved[0];
 	return `<figure class="pyc-fig">
-<figcaption>Change between ${esc(prior.quarter)} and ${esc(quarter)} on the ${shared.length === 1 ? 'one pillar' : `${shared.length} pillars`} measured in both quarters &mdash; ${esc(scope)}. The other pillars were not measured in ${esc(prior.quarter)}, so no comparison is possible and none is drawn.</figcaption>
+<figcaption>Change between ${esc(prior.quarter)} and ${esc(quarter)} on the ${shared.length === 1 ? 'one pillar' : `${shared.length} pillars`} measured in both releases &mdash; ${esc(scope)}. The other pillars were not measured in ${esc(prior.quarter)}, so no comparison is possible and none is drawn.</figcaption>
 <table class="pyc-movement"><tbody>${rows_}</tbody></table>
 <p class="pyc-key">Hollow mark is ${esc(prior.quarter)}, solid is ${esc(quarter)}.${moved.length > show.length ? ` Showing the ${show.length} largest of ${moved.length} changes.` : ''} ${flat} reading${flat === 1 ? '' : 's'} unchanged and not drawn, across ${firmsMoved} firm${firmsMoved === 1 ? '' : 's'} that moved.</p>
 </figure>
-${takeaway(`<strong>${esc(big.name)}</strong> moved furthest: ${esc(labels[big.key])} ${big.delta > 0 ? 'up' : 'down'} <strong>${Math.abs(big.delta)} points</strong> since ${esc(prior.quarter)}. ${moved.length} of ${rows.length} comparable readings changed at all &mdash; which is what a quarter of movement actually looks like.`)}`;
+${takeaway(`<strong>${esc(big.name)}</strong> moved furthest: ${esc(labels[big.key])} ${big.delta > 0 ? 'up' : 'down'} <strong>${Math.abs(big.delta)} points</strong> since ${esc(prior.quarter)}. ${moved.length} of ${rows.length} comparable readings changed at all &mdash; which is what real movement between two measurements looks like.`)}`;
 }
 
 /* What the keyword basket is actually asking. A basket that is all one intent
@@ -2557,7 +2562,7 @@ ${section('Closest to the first page', nearMisses(ranked))}
 ${section('Reputation: reviews against rating', reputationScatter(ranked))}
 ${section('What the keyword basket is asking', intentMix(ranked))}
 ${section('Local pack coverage across the city', geoGrid(ranked))}
-${section('What changed since last quarter', quarterMovement(ranked, prior, quarter))}
+${section('What changed since the last release', quarterMovement(ranked, prior, quarter))}
 ${hygieneCrossCheck(ranked)}
 ${registryMix(ranked)}
 ## Which ${cohort.singular} has the best website?
@@ -2709,16 +2714,17 @@ function exportCsv(ranked) {
 /* Flags that consume the following argument. Without this list a value like
    the --site-root path is mistaken for the index slug whenever the flag is
    written before the slug. */
-const VALUE_FLAGS = new Set(['--quarter', '--site-root']);
+const VALUE_FLAGS = new Set(['--quarter', '--release', '--site-root']);
 
 /* An unrecognised --flag used to be swallowed, so a typo'd or imagined flag
    ran a full generation while the operator believed something else happened.
    Fail loudly instead. */
 function parseArgs(argv) {
-	const args = { indexSlug: null, quarter: null };
+	const args = { indexSlug: null, quarter: null, release: null };
 	for (let i = 2; i < argv.length; i++) {
 		const a = argv[i];
 		if (a === '--quarter') args.quarter = argv[++i];
+		else if (a === '--release') args.release = argv[++i];
 		else if (VALUE_FLAGS.has(a)) i++; // consumed elsewhere; skip its value
 		else if (a === '--check-bridges' || a === '--archive-only') continue; // handled in main()
 		else if (a.startsWith('--')) {
@@ -2782,12 +2788,18 @@ async function main() {
 		return;
 	}
 
-	const { indexSlug, quarter: qArg } = parseArgs(process.argv);
+	const { indexSlug, quarter: qArg, release: period } = parseArgs(process.argv);
 	if (!indexSlug) {
-		console.error('Usage: node generate.mjs <index-slug> [--quarter Q2-2026]');
+		console.error('Usage: node generate.mjs <index-slug> [--release 2026-11 | --quarter Q2-2026]');
 		process.exit(1);
 	}
-	const quarter = qArg || defaultQuarter();
+	if (period && !isPeriod(period)) {
+		console.error(`--release must look like 2026-11, got '${period}'`);
+		process.exit(1);
+	}
+	/* A release is named for its month. The name is what every page prints;
+	   quarterly snapshots from before monthly publishing keep their Q4-2026. */
+	const quarter = period ? releaseLabel(period) : qArg || defaultQuarter();
 	const rankedFile = join(DATA_ROOT, indexSlug, '_ranked.json');
 
 	/* Index and sector config, so the exported dataset can state its own town
@@ -2827,52 +2839,43 @@ async function main() {
 	   So interim runs land in data/<index>/history/<YYYY-MM>.json, carry
 	   status: "interim", and say in the file that they are not the ranking. */
 	if (ARCHIVE_ONLY) {
-		const period = new Date(ranked.measuredAt ?? ranked.scoredAt).toISOString().slice(0, 7);
+		const measuredPeriod = new Date(ranked.measuredAt ?? ranked.scoredAt).toISOString().slice(0, 7);
 		const payload = {
 			...exportJson(ranked, quarter, indexSlug, indexCfg, sectorCfg),
 			status: 'interim',
-			period,
+			period: measuredPeriod,
 			statusNote:
-				'Interim monthly measurement, not a published ranking. The published index for '
-				+ `this quarter is data/${indexSlug}/${quarter.toLowerCase()}.json and on the site at `
-				+ `${SITE}/indices/${indexSlug}/. Interim files exist so movement over time can be `
-				+ 'analysed; they are not editorially reviewed and firms are not ranked on them.',
+				'The measurement as collected, before Technical and Content & trust are re-read from an '
+				+ 'ordinary connection for publication. The published figures for this month are '
+				+ `data/${indexSlug}/${measuredPeriod}.json, once that release is out, and on the site at `
+				+ `${SITE}/indices/${indexSlug}/. Firms are not ranked on this file.`,
 		};
 		const historyDir = join(SNAPSHOT_ROOT, indexSlug, 'history');
 		await mkdir(historyDir, { recursive: true });
-		await writeFile(join(historyDir, `${period}.json`), JSON.stringify(payload, null, 2) + '\n');
-		await writeFile(join(historyDir, `${period}.csv`), exportCsv(ranked));
-		console.log(`Archived interim measurement to data/${indexSlug}/history/${period}.{json,csv}`);
+		await writeFile(join(historyDir, `${measuredPeriod}.json`), JSON.stringify(payload, null, 2) + '\n');
+		await writeFile(join(historyDir, `${measuredPeriod}.csv`), exportCsv(ranked));
+		console.log(`Archived interim measurement to data/${indexSlug}/history/${measuredPeriod}.{json,csv}`);
 		return;
 	}
 
-	/* The previous quarter's published snapshot, if one exists. Read from this
-	   repo's own data/ — the site copy is overwritten each quarter. */
-	/* Filenames sort lexicographically, which puts quarter before year:
-	   [q1-2027, q3-2026, q4-2026] would pick q4-2026 as "latest". Parse and sort
-	   numerically, and only consider snapshots BEFORE the quarter being
-	   generated so regenerating an old quarter cannot pick a future one. */
+	/* The previous published snapshot, if one exists, read from this repo's own
+	   data/ because the site copy is overwritten by every release. Quarterly and
+	   monthly snapshots are ordered together, and only ones BEFORE this release
+	   count, so regenerating an old one cannot pick a future one.
+
+	   The parse sits outside the ENOENT guard: a malformed snapshot must not look
+	   like "no prior snapshot", which would silently drop the section from the
+	   published page. */
 	let prior = null;
-	const ord = (q, y) => Number(y) * 4 + Number(q);
-	const cur = quarter.match(/^Q(\d)-(\d{4})$/);
+	let priorFile = null;
 	try {
-		const files = (await readdir(join(SNAPSHOT_ROOT, indexSlug)))
-			.map((f) => {
-				const m = f.match(/^q(\d)-(\d{4})\.json$/);
-				return m ? { file: f, ord: ord(m[1], m[2]) } : null;
-			})
-			.filter(Boolean)
-			.filter((x) => !cur || x.ord < ord(cur[1], cur[2]))
-			.sort((a, b) => a.ord - b.ord);
-		if (files.length) {
-			const pick = files[files.length - 1].file;
-			// Parse OUTSIDE the ENOENT guard: a malformed snapshot must not be
-			// indistinguishable from "no prior snapshot", which would silently
-			// drop the whole section from the published page.
-			prior = JSON.parse(await readFile(join(SNAPSHOT_ROOT, indexSlug, pick), 'utf8'));
-		}
+		priorFile = latestPriorSnapshot(await readdir(join(SNAPSHOT_ROOT, indexSlug)), { period, quarter: qArg || defaultQuarter() });
 	} catch (e) {
 		if (e.code !== 'ENOENT') throw e;
+	}
+	if (priorFile) {
+		const parsed = JSON.parse(await readFile(join(SNAPSHOT_ROOT, indexSlug, priorFile), 'utf8'));
+		prior = { ...parsed, quarter: parsed.releaseLabel ?? parsed.quarter };
 	}
 
 	const contentDir = join(CONTENT_ROOT, indexSlug);
@@ -2923,7 +2926,11 @@ async function main() {
 	}
 
 	// exports — the site's "latest" copy, overwritten each quarter
-	const json = JSON.stringify(exportJson(ranked, quarter, indexSlug, indexCfg, sectorCfg), null, 2) + '\n';
+	/* `quarter` stays a calendar quarter in the public data, so anyone who already
+	   reads that field still gets one. `period` and `releaseLabel` name the month. */
+	const exported = exportJson(ranked, quarter, indexSlug, indexCfg, sectorCfg);
+	const payload = period ? { ...exported, quarter: calendarQuarter(period), period, releaseLabel: quarter } : exported;
+	const json = JSON.stringify(payload, null, 2) + '\n';
 	const csv = exportCsv(ranked);
 	await writeFile(join(PUBLIC_DATA, `${indexSlug}.json`), json);
 	await writeFile(join(PUBLIC_DATA, `${indexSlug}.csv`), csv);
@@ -2945,7 +2952,7 @@ async function main() {
 	   verifiable. Writing them here, in the same step that generates the pages,
 	   is deliberate: when this was a separate export script it was possible to
 	   publish an index to the site and forget the receipt. */
-	const q = quarter.toLowerCase();
+	const q = period ?? quarter.toLowerCase();
 	const snapshotDir = join(SNAPSHOT_ROOT, indexSlug);
 	await mkdir(snapshotDir, { recursive: true });
 	await writeFile(join(snapshotDir, `${q}.json`), json);
