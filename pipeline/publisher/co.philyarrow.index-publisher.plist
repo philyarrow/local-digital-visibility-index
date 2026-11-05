@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Installed by publisher/install.sh, which fills in the three placeholders.
+     Runs daily. publish-month.mjs exits at once unless a finished, unpublished
+     measurement is waiting. launchd runs a missed time when the Mac next wakes,
+     and caffeinate keeps it awake for the half hour the release takes. -->
+<plist version="1.0">
+<dict>
+	<key>Label</key><string>co.philyarrow.index-publisher</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/caffeinate</string>
+		<string>-i</string>
+		<string>__HOME__/pipeline/pipeline/publisher/run.sh</string>
+	</array>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key><string>__NODE_DIR__:/opt/homebrew/bin:/usr/bin:/bin</string>
+		<key>PUBLISHER_HOME</key><string>__HOME__</string>
+	</dict>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key><integer>9</integer>
+		<key>Minute</key><integer>20</integer>
+	</dict>
+	<key>StandardOutPath</key><string>__HOME__/publisher.log</string>
+	<key>StandardErrorPath</key><string>__HOME__/publisher.log</string>
+</dict>
+</plist>

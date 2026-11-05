@@ -34,8 +34,21 @@ cd pipeline
 node collect.mjs seeds/<index>.csv --dry-run   # basket + cost forecast, spends nothing
 node collect.mjs seeds/<index>.csv             # spends money
 node score.mjs <index-slug>
-node generate.mjs <index-slug> --quarter Q3-2026 --site-root ../../hub.philyarrow.co.uk
+node generate.mjs <index-slug> --release 2026-11 --site-root ../../hub.philyarrow.co.uk
 ```
+
+## The monthly release is automatic
+
+The GitHub workflow collects on the 1st and uploads the raw data as artifacts.
+`pipeline/publish-month.mjs` then runs daily on Phil's Mac under launchd
+(`publisher/install.sh`), in its own clones under
+`~/.local/share/pyc-index-publisher`. Once a run has finished it re-reads
+Technical and Content, scores, generates, writes the changelog entry, and pushes
+both repos, which deploys the site. It spends nothing.
+
+`findHolds` in `lib/release.mjs` decides when a release waits for a person. A hold
+raises an issue on the private site repo. A change to `SCORING_FILES` always holds:
+update the methodology page, then re-run with `--accept-holds`.
 
 Node 20+. No npm dependencies anywhere in the pipeline — keep it that way, it is
 part of the "anyone can verify this" promise.

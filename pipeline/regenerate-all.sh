@@ -7,7 +7,7 @@
 # are surfaced and a single failure fails the run.
 set -euo pipefail
 
-# usage: regenerate-all.sh [SITE_ROOT] [QUARTER] [--only slug...]
+# usage: regenerate-all.sh [SITE_ROOT] [QUARTER] [--release 2026-11] [--only slug...]
 #
 # Slugs go behind --only, never in a bare positional. The bare positionals are
 # SITE_ROOT then QUARTER, and a slug in either slot is not detectable after the
@@ -17,6 +17,7 @@ set -euo pipefail
 # complaint. Both positionals are therefore validated below rather than trusted.
 SITE_ROOT=""
 QUARTER=""
+RELEASE=""
 ONLY=()
 while [ "$#" -gt 0 ]; do
   case "$1" in
@@ -29,6 +30,7 @@ while [ "$#" -gt 0 ]; do
       ;;
     --site-root) SITE_ROOT="${2:?--site-root needs a path}"; shift 2 ;;
     --quarter)   QUARTER="${2:?--quarter needs a value}"; shift 2 ;;
+    --release)   RELEASE="${2:?--release needs a value}"; shift 2 ;;
     --*) echo "unknown option: $1" >&2; exit 1 ;;
     *)
       if   [ -z "$SITE_ROOT" ]; then SITE_ROOT="$1"
@@ -46,6 +48,10 @@ case "$QUARTER" in
   Q[1-4]-[0-9][0-9][0-9][0-9]) ;;
   *) echo "quarter must look like Q3-2026, got '$QUARTER'" >&2; exit 1 ;;
 esac
+
+# A monthly release replaces the quarter label. generate.mjs validates the value.
+LABEL_ARGS=(--quarter "$QUARTER")
+[ -z "$RELEASE" ] || LABEL_ARGS=(--release "$RELEASE")
 
 cd "$(dirname "$0")"
 
@@ -153,7 +159,7 @@ for slug in "${SLUGS[@]}"; do
       echo "partial ($have of $want) - skipped"; skipped=$((skipped+1)); continue
     fi
   fi
-  if node score.mjs "$slug" >/dev/null && node generate.mjs "$slug" --quarter "$QUARTER" --site-root "$SITE_ROOT" >/dev/null; then
+  if node score.mjs "$slug" >/dev/null && node generate.mjs "$slug" "${LABEL_ARGS[@]}" --site-root "$SITE_ROOT" >/dev/null; then
     echo "ok"
   else
     echo "FAILED"; fail=1

@@ -27,6 +27,14 @@ A signal is only used in a published index when it is:
 2. **Machine-measured** — produced by a documented tool or API, not a human judgement.
 3. **Dated** — every index carries its snapshot date and names the source.
 
+## How a release is published
+
+Every index is re-measured and republished each month, automatically and without anyone editing the figures. Collection runs on the 1st on a GitHub machine. Some sites refuse a data-centre machine or answer it differently, so **Technical and Content & trust are then re-read for every business from an ordinary connection**, which also means those two pillars come from the same kind of connection every month. A failed re-read never replaces a good reading.
+
+Google profile detail and backlinks are bought in the first month of each quarter only, because they do not move meaningfully in thirty days. In other months the scorecard shows the last figures bought and says which release they came from. Neither is scored.
+
+No person reads a release before it goes out. It is held back instead, for a person to look at, if: an index is missing; the code that produces a score has changed since the last release; more than 15 businesses newly score 0 on Technical; an index median moves by more than 15 points; a pillar's average moves by more than 12 points across all indices; a pillar goes unmeasured for over 10% more businesses; more than 25 businesses lose 40 or more Technical points; a scorecard needs retiring; or the site fails to build.
+
 ## Context data that is recorded but never scored
 
 Three further sources are collected alongside the pillars. **None of them carries any weight in the Digital Visibility Score, and none can move a ranking.** That separation is deliberate: a published score must never change because a third party enabled an API key, or because a business is small enough to be absent from someone else's dataset.
