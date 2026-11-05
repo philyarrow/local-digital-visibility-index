@@ -13,6 +13,10 @@
 		<string>-i</string>
 		<string>__HOME__/pipeline/pipeline/publisher/run.sh</string>
 	</array>
+	<!-- Without this, launchd throttles the job when the Mac is busy: gh took up to 21s
+	     per call and artifact downloads failed with HTTP 401. It also protects the
+	     Technical re-read, where a starved job could mistake a slow site for a failed one. -->
+	<key>ProcessType</key><string>Interactive</string>
 	<key>EnvironmentVariables</key>
 	<dict>
 		<key>PATH</key><string>__NODE_DIR__:/opt/homebrew/bin:/usr/bin:/bin</string>
